@@ -605,6 +605,7 @@
 	alt_desc = "Имеет улучшенную защиту от огнестрельного оружия, огнеустойчив. В боевом режиме."
 	icon_state = "hardsuit0-syndielite"
 	hardsuit_type = "syndielite"
+	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/syndi/elite
 	armor_type = /datum/armor/hardsuit_syngielite
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
