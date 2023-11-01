@@ -231,6 +231,31 @@ GLOBAL_LIST_INIT(chaplain_suit_allowed, list(
 	/obj/item/gun/ballistic/revolver/chaplain,
 ))
 
+//WD EDIT START
+GLOBAL_LIST_INIT(security_hardsuit_allowed, typecacheof(list(
+	/obj/item/ammo_box,
+	/obj/item/ammo_casing,
+	/obj/item/flashlight,
+	/obj/item/gun/ballistic,
+	/obj/item/gun/energy,
+	/obj/item/melee/baton,
+	/obj/item/reagent_containers/spray/pepper,
+	/obj/item/restraints/handcuffs,
+	/obj/item/tank/internals,
+	/obj/item/tank/jetpack)))
+
+GLOBAL_LIST_INIT(advanced_hardsuit_allowed, typecacheof(list(
+	/obj/item/ammo_box,
+	/obj/item/ammo_casing,
+	/obj/item/flashlight,
+	/obj/item/gun,
+	/obj/item/melee/baton,
+	/obj/item/reagent_containers/spray/pepper,
+	/obj/item/restraints/handcuffs,
+	/obj/item/tank/internals,
+	/obj/item/tank/jetpack)))
+//WD EDIT END
+
 /// String for items placed into the left pocket.
 #define LOCATION_LPOCKET "in your left pocket"
 /// String for items placed into the right pocket

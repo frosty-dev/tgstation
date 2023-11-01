@@ -52,6 +52,10 @@
 	// such that you never actually cared about checking if something is *edible*.
 	var/obj/item/food/clothing/moth_snack
 
+	var/alt_desc = null /// WD EDIT START
+	var/togglename = null
+	var/suittoggled = FALSE /// WD EDIT END :)
+
 /obj/item/clothing/Initialize(mapload)
 	if(clothing_flags & VOICEBOX_TOGGLABLE)
 		actions_types += /datum/action/item_action/toggle_voice_box
