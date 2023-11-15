@@ -1,11 +1,11 @@
 /datum/quirk/paraplegic
 	name = "Инвалид"
-	desc = "Мои ноги не функционируют и больше ничего не может помочь мне вновь встать на ноги. По крайней мере, у меня есть инвалидная коляска."
+	desc = "Мои ноги не функционируют и больше ничего не сможет помочь мне вновь встать на ноги. По крайней мере, у меня есть инвалидная коляска."
 	icon = FA_ICON_WHEELCHAIR
 	value = -12
 	gain_text = null // Handled by trauma.
 	lose_text = null
-	medical_record_text = "Пациент страдает параличом нижних конечностей."
+	medical_record_text = "Пациент страдает от паралича нижних конечностей."
 	hardcore_value = 15
 	mail_goodies = list(/obj/vehicle/ridden/wheelchair/motorized) //yes a fullsized unfolded motorized wheelchair does fit
 

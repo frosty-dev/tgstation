@@ -1,5 +1,5 @@
 /datum/quirk/poor_aim
-	name = "Плохо стреляющий"
+	name = "Мазила"
 	desc = "Мои навыки обращения с оружием оставляют желать лучшего."
 	icon = FA_ICON_BULLSEYE
 	value = -4

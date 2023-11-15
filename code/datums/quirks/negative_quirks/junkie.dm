@@ -17,7 +17,7 @@
 	var/obj/item/accessory_type //! If this is null, an accessory won't be spawned.
 	var/process_interval = 30 SECONDS //! how frequently the quirk processes
 	var/next_process = 0 //! ticker for processing
-	var/drug_flavour_text = "Better hope you don't run out..."
+	var/drug_flavour_text = "Надеюсь, мои таблетки не закончатся..."
 
 /datum/quirk/item_quirk/junkie/add_unique(client/client_source)
 	var/mob/living/carbon/human/human_holder = quirk_holder
@@ -84,7 +84,7 @@
 		if(deleted || missing_addiction)
 			if(deleted)
 				reagent_instance = new reagent_type()
-			to_chat(quirk_holder, span_danger("You thought you kicked it, but you feel like you're falling back onto bad habits.."))
+			to_chat(quirk_holder, span_danger("Я думал что завязал, но мои старые привычки взяли верх.."))
 			for(var/addiction in reagent_instance.addiction_types)
 				human_holder.last_mind?.add_addiction_points(addiction, 1000) ///Max that shit out
 
