@@ -1,6 +1,6 @@
 
 /datum/surgery/amputation
-	name = "Amputation"
+	name = "Ампутация"
 	requires_bodypart_type = NONE
 	surgery_flags = SURGERY_REQUIRE_RESTING | SURGERY_REQUIRE_LIMB | SURGERY_MORBID_CURIOSITY
 	possible_locs = list(
@@ -25,7 +25,7 @@
 	return ..()
 
 /datum/surgery_step/sever_limb
-	name = "sever limb (circular saw)"
+	name = "отпилите конечность (циркулярная пила)"
 	implements = list(
 		/obj/item/shears = 300,
 		TOOL_SCALPEL = 100,
@@ -43,22 +43,22 @@
 	display_results(
 		user,
 		target,
-		span_notice("You begin to sever [target]'s [parse_zone(target_zone)]..."),
-		span_notice("[user] begins to sever [target]'s [parse_zone(target_zone)]!"),
-		span_notice("[user] begins to sever [target]'s [parse_zone(target_zone)]!"),
+		span_notice("Начал отпиливать [target] [parse_zone(target_zone)]..."),
+		span_notice("[user] начал отпиливать [target] [parse_zone(target_zone)]!"),
+		span_notice("[user] начал отпиливать [target] [parse_zone(target_zone)]!"),
 	)
-	display_pain(target, "You feel a gruesome pain in your [parse_zone(target_zone)]'s joint!")
+	display_pain(target, "Чувствую ужасную боль в [parse_zone(target_zone)] суставе!")
 
 
 /datum/surgery_step/sever_limb/success(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results = FALSE)
 	display_results(
 		user,
 		target,
-		span_notice("You sever [target]'s [parse_zone(target_zone)]."),
-		span_notice("[user] severs [target]'s [parse_zone(target_zone)]!"),
-		span_notice("[user] severs [target]'s [parse_zone(target_zone)]!"),
+		span_notice("Отпилил [target] [parse_zone(target_zone)]."),
+		span_notice("[user] отпиливает [target] [parse_zone(target_zone)]!"),
+		span_notice("[user] отпиливает [target] [parse_zone(target_zone)]!"),
 	)
-	display_pain(target, "You can no longer feel your severed [parse_zone(target_zone)]!")
+	display_pain(target, "Больше не чувствую отпиленную [parse_zone(target_zone)]!")
 
 	if(HAS_MIND_TRAIT(user, TRAIT_MORBID) && ishuman(user))
 		var/mob/living/carbon/human/morbid_weirdo = user

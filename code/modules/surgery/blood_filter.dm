@@ -1,5 +1,5 @@
 /datum/surgery/blood_filter
-	name = "Filter blood"
+	name = "Фильтрация крови"
 	possible_locs = list(BODY_ZONE_CHEST)
 	steps = list(
 		/datum/surgery_step/incise,
@@ -45,7 +45,7 @@
 	return FALSE
 
 /datum/surgery_step/filter_blood
-	name = "Filter blood (blood filter)"
+	name = "Фильтрация крови (blood filter)"
 	implements = list(/obj/item/blood_filter = 95)
 	repeatable = TRUE
 	time = 2.5 SECONDS
@@ -55,11 +55,11 @@
 	display_results(
 		user,
 		target,
-		span_notice("You begin filtering [target]'s blood..."),
-		span_notice("[user] uses [tool] to filter [target]'s blood."),
-		span_notice("[user] uses [tool] on [target]'s chest."),
+		span_notice("Начинаю фильтровать кровь [target]..."),
+		span_notice("[user] вставляет [tool] в [target] грудь, начиная фильтровать его кровь."),
+		span_notice("[user] вставляет [tool] в [target] грудь, начиная фильтровать его кровь."),
 	)
-	display_pain(target, "You feel a throbbing pain in your chest!")
+	display_pain(target, "Чувствую пульсирующую боль в груди!")
 
 /datum/surgery_step/filter_blood/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results = FALSE)
 	var/obj/item/blood_filter/bloodfilter = tool
@@ -70,9 +70,9 @@
 	display_results(
 		user,
 		target,
-		span_notice(" [tool] pings as it finishes filtering [target]'s blood."),
-		span_notice(" [tool] pings as it stops pumping [target]'s blood."),
-		span_notice(" [tool] pings as it stops pumping."),
+		span_notice(" [tool] жужжит, заканчивая фильтровать кровь [target]."),
+		span_notice(" [tool] жужжит, прерывая фильтрацию крови [target]."),
+		span_notice(" [tool] жужжит, прерывая фильтрацию крови."),
 	)
 
 	if(locate(/obj/item/healthanalyzer) in user.held_items)
@@ -84,8 +84,8 @@
 	display_results(
 		user,
 		target,
-		span_warning("You screw up, bruising [target]'s chest!"),
-		span_warning("[user] screws up, brusing [target]'s chest!"),
-		span_warning("[user] screws up!"),
+		span_warning("Терплю неудачу, оставляя порезы на груди [target]!"),
+		span_warning("[user] ошибается, оставляя порезы на груди [target]!"),
+		span_warning("[user] ошибается!"),
 	)
 	target.adjustBruteLoss(5)
