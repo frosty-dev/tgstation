@@ -1,12 +1,12 @@
 /datum/quirk/item_quirk/deafness
-	name = "Глухонемой"
+	name = "Глухой"
 	desc = "Я перестану слышать какие-либо звуки."
 	icon = FA_ICON_DEAF
 	value = -8
 	mob_trait = TRAIT_DEAF
 	gain_text = span_danger("Не могу слышать.")
 	lose_text = span_notice("Теперь я снова слышу!")
-	medical_record_text = "Ушная улитка пациента повреждена и не подвергается лечению."
+	medical_record_text = "Ушная раковина пациента повреждена и не может быть вылечена хирургическим или иным путём."
 	hardcore_value = 12
 	mail_goodies = list(/obj/item/clothing/mask/whistle)
 
