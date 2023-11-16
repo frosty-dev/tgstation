@@ -5,7 +5,7 @@
 //SURGERY STEPS
 
 /datum/surgery_step/replace_limb
-	name = "replace limb"
+	name = "замените конечность"
 	implements = list(
 		/obj/item/bodypart = 100,
 		/obj/item/borg/apparatus/organ_storage = 100)
@@ -43,7 +43,7 @@
 //ACTUAL SURGERIES
 
 /datum/surgery/augmentation
-	name = "Augmentation"
+	name = "Аугментация"
 	surgery_flags = SURGERY_REQUIRE_RESTING | SURGERY_REQUIRE_LIMB | SURGERY_REQUIRES_REAL_LIMB
 	possible_locs = list(
 		BODY_ZONE_R_ARM,

@@ -5,7 +5,7 @@
 	surgeries = list(/datum/surgery/plastic_surgery/advanced)
 
 /datum/surgery/plastic_surgery
-	name = "Plastic surgery"
+	name = "Пластическая хирургия"
 	surgery_flags = SURGERY_REQUIRE_RESTING | SURGERY_REQUIRE_LIMB | SURGERY_REQUIRES_REAL_LIMB | SURGERY_MORBID_CURIOSITY
 	possible_locs = list(BODY_ZONE_HEAD)
 	steps = list(
@@ -52,7 +52,7 @@
 
 //reshape_face
 /datum/surgery_step/reshape_face
-	name = "reshape face (scalpel)"
+	name = "сформируйте лицо (скальпель)"
 	implements = list(
 		TOOL_SCALPEL = 100,
 		/obj/item/knife = 50,

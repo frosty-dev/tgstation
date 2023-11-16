@@ -1,5 +1,5 @@
 /datum/surgery/lipoplasty
-	name = "Lipoplasty"
+	name = "Липосакция"
 	possible_locs = list(BODY_ZONE_CHEST)
 	steps = list(
 		/datum/surgery_step/incise,
@@ -17,7 +17,7 @@
 
 //cut fat
 /datum/surgery_step/cut_fat
-	name = "cut excess fat (circular saw)"
+	name = "отпилите лишний жир (циркулярная пила)"
 	implements = list(
 		TOOL_SAW = 100,
 		/obj/item/shovel/serrated = 75,
@@ -49,7 +49,7 @@
 
 //remove fat
 /datum/surgery_step/remove_fat
-	name = "remove loose fat (retractor)"
+	name = "извлеките лишний жир (расширитель)"
 	implements = list(
 		TOOL_RETRACTOR = 100,
 		TOOL_SCREWDRIVER = 45,

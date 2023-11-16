@@ -1,5 +1,5 @@
 /datum/surgery/implant_removal
-	name = "Implant Removal"
+	name = "Извлечение импланта"
 	target_mobtypes = list(/mob/living)
 	possible_locs = list(BODY_ZONE_CHEST)
 	steps = list(
@@ -12,7 +12,7 @@
 
 //extract implant
 /datum/surgery_step/extract_implant
-	name = "extract implant (hemostat)"
+	name = "извлеките имплант (зажим)"
 	implements = list(
 		TOOL_HEMOSTAT = 100,
 		TOOL_CROWBAR = 65,
@@ -80,7 +80,7 @@
 	return ..()
 
 /datum/surgery/implant_removal/mechanic
-	name = "Implant Removal"
+	name = "Извлечение импланта"
 	requires_bodypart_type = BODYTYPE_ROBOTIC
 	target_mobtypes = list(/mob/living/carbon/human) // Simpler mobs don't have bodypart types
 	steps = list(

@@ -1,5 +1,5 @@
 /datum/surgery/eye_surgery
-	name = "Eye surgery"
+	name = "Глазная хирургия"
 	requires_bodypart_type = NONE
 	organ_to_manipulate = ORGAN_SLOT_EYES
 	possible_locs = list(BODY_ZONE_PRECISE_EYES)
@@ -13,7 +13,7 @@
 
 //fix eyes
 /datum/surgery_step/fix_eyes
-	name = "fix eyes (hemostat)"
+	name = "восстановите структуру глаза (зажим)"
 	implements = list(
 		TOOL_HEMOSTAT = 100,
 		TOOL_SCREWDRIVER = 45,

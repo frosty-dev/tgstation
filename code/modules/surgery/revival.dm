@@ -1,5 +1,5 @@
 /datum/surgery/revival
-	name = "Revival"
+	name = "Нейронная реанимация"
 	desc = "An experimental surgical procedure which involves reconstruction and reactivation of the patient's brain even long after death. \
 		The body must still be able to sustain life."
 	requires_bodypart_type = NONE
@@ -36,7 +36,7 @@
 	return TRUE
 
 /datum/surgery_step/revive
-	name = "shock brain (defibrillator)"
+	name = "произведите разряд на мозге (дефибриллятор)"
 	implements = list(
 		/obj/item/shockpaddles = 100,
 		/obj/item/melee/touch_attack/shock = 100,

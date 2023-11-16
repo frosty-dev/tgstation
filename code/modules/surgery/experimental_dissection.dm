@@ -2,8 +2,8 @@
 #define BASE_HUMAN_REWARD 500
 
 /datum/surgery/advanced/experimental_dissection
-	name = "Experimental Dissection"
-	desc = "A surgical procedure which analyzes the biology of a corpse, and automatically adds new findings to the research database."
+	name = "Экспериментальное вскрытие"
+	desc = "Хирургическая процедура, которая анализирует происхождение и морфологию трупа и автоматически добавляет новые результаты в базу данных исследований.."
 	steps = list(
 		/datum/surgery_step/incise,
 		/datum/surgery_step/retract_skin,

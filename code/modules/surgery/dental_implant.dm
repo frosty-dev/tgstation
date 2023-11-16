@@ -1,5 +1,5 @@
 /datum/surgery/dental_implant
-	name = "Dental implant"
+	name = "Зубной имплант"
 	possible_locs = list(BODY_ZONE_PRECISE_MOUTH)
 	steps = list(
 		/datum/surgery_step/drill,
@@ -7,7 +7,7 @@
 	)
 
 /datum/surgery_step/insert_pill
-	name = "insert pill"
+	name = "поместите таблетку"
 	implements = list(/obj/item/reagent_containers/pill = 100)
 	time = 16
 
@@ -43,7 +43,7 @@
 	return ..()
 
 /datum/action/item_action/hands_free/activate_pill
-	name = "Activate Pill"
+	name = "Раскусить таблетку"
 
 /datum/action/item_action/hands_free/activate_pill/Trigger(trigger_flags)
 	if(!..())

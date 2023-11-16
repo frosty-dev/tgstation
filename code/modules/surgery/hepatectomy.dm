@@ -1,5 +1,5 @@
 /datum/surgery/hepatectomy
-	name = "Hepatectomy"
+	name = "Гепатэктомия (резекция печени)"
 	surgery_flags = SURGERY_REQUIRE_RESTING | SURGERY_REQUIRE_LIMB | SURGERY_REQUIRES_REAL_LIMB
 	organ_to_manipulate = ORGAN_SLOT_LIVER
 	possible_locs = list(BODY_ZONE_CHEST)
@@ -23,7 +23,7 @@
 ////hepatectomy, removes damaged parts of the liver so that the liver may regenerate properly
 //95% chance of success, not 100 because organs are delicate
 /datum/surgery_step/hepatectomy
-	name = "remove damaged liver section (scalpel)"
+	name = "извлеките повреждённый участок печени (скальпель)"
 	implements = list(
 		TOOL_SCALPEL = 95,
 		/obj/item/melee/energy/sword = 65,

@@ -1,5 +1,5 @@
 /datum/surgery/cavity_implant
-	name = "Cavity implant"
+	name = "Установка имплантов"
 	possible_locs = list(BODY_ZONE_CHEST)
 	steps = list(
 		/datum/surgery_step/incise,
@@ -11,7 +11,7 @@
 
 //handle cavity
 /datum/surgery_step/handle_cavity
-	name = "implant item"
+	name = "имплантируйте предмет"
 	accept_hand = 1
 	implements = list(/obj/item = 100)
 	repeatable = TRUE

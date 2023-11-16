@@ -1,5 +1,5 @@
 /datum/surgery/prosthetic_replacement
-	name = "Prosthetic replacement"
+	name = "Замена протеза"
 	surgery_flags = NONE
 	requires_bodypart_type = NONE
 	possible_locs = list(
@@ -27,7 +27,7 @@
 
 
 /datum/surgery_step/add_prosthetic
-	name = "add prosthetic"
+	name = "установите протез"
 	implements = list(
 		/obj/item/bodypart = 100,
 		/obj/item/borg/apparatus/organ_storage = 100,

@@ -1,6 +1,6 @@
 /obj/item/retractor
-	name = "retractor"
-	desc = "Retracts stuff."
+	name = "расширитель"
+	desc = "Расширяет всякое."
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "retractor"
 	inhand_icon_state = "retractor"
@@ -19,13 +19,13 @@
 	return surgical_tray_overlay
 
 /obj/item/retractor/augment
-	desc = "Micro-mechanical manipulator for retracting stuff."
+	desc = "Микромеханический манипулятор для расширения штук."
 	toolspeed = 0.5
 
 
 /obj/item/hemostat
-	name = "hemostat"
-	desc = "You think you have seen this before."
+	name = "зажим"
+	desc = "Кажется это я уже где-то видел."
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "hemostat"
 	inhand_icon_state = "hemostat"
@@ -35,8 +35,8 @@
 	flags_1 = CONDUCT_1
 	item_flags = SURGICAL_TOOL
 	w_class = WEIGHT_CLASS_TINY
-	attack_verb_continuous = list("attacks", "pinches")
-	attack_verb_simple = list("attack", "pinch")
+	attack_verb_continuous = list("атакует", "щипает")
+	attack_verb_simple =  list("атакует", "щипает")
 	tool_behaviour = TOOL_HEMOSTAT
 	toolspeed = 1
 	/// How this looks when placed in a surgical tray
@@ -51,8 +51,8 @@
 
 
 /obj/item/cautery
-	name = "cautery"
-	desc = "This stops bleeding."
+	name = "прижигатель"
+	desc = "Останавливает кровотечения."
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "cautery"
 	inhand_icon_state = "cautery"
@@ -62,8 +62,8 @@
 	flags_1 = CONDUCT_1
 	item_flags = SURGICAL_TOOL
 	w_class = WEIGHT_CLASS_TINY
-	attack_verb_continuous = list("burns")
-	attack_verb_simple = list("burn")
+	attack_verb_continuous = list("жжет")
+	attack_verb_simple = list("жжет")
 	tool_behaviour = TOOL_CAUTERY
 	toolspeed = 1
 	heat = 500
@@ -81,8 +81,8 @@
 	toolspeed = 0.5
 
 /obj/item/cautery/advanced
-	name = "searing tool"
-	desc = "It projects a high power laser used for medical applications."
+	name = "запечатывающее устройство"
+	desc = "Фокусирует высокомощный луч лазера применяемый в медицинских целях."
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "e_cautery"
 	inhand_icon_state = "e_cautery"
@@ -121,17 +121,17 @@
 	SIGNAL_HANDLER
 
 	tool_behaviour = (active ? TOOL_DRILL : TOOL_CAUTERY)
-	balloon_alert(user, "lenses set to [active ? "drill" : "mend"]")
+	balloon_alert(user, "фокусирую линзу для [active ? "сверления" : "прижигания"]")
 	playsound(user ? user : src, 'sound/weapons/tap.ogg', 50, TRUE)
 	return COMPONENT_NO_DEFAULT_MESSAGE
 
 /obj/item/cautery/advanced/examine()
 	. = ..()
-	. += span_notice("It's set to [tool_behaviour == TOOL_CAUTERY ? "mending" : "drilling"] mode.")
+	. += span_notice("В режиме [tool_behaviour == TOOL_CAUTERY ? "прижигания" : "сверления"].")
 
 /obj/item/surgicaldrill
-	name = "surgical drill"
-	desc = "You can drill using this item. You dig?"
+	name = "хирургическая дрель"
+	desc = "Этим инструментом можно сверлить не только кости. Шаришь?"
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "drill"
 	inhand_icon_state = "drill"
@@ -144,8 +144,8 @@
 	force = 15
 	demolition_mod = 0.5
 	w_class = WEIGHT_CLASS_NORMAL
-	attack_verb_continuous = list("drills")
-	attack_verb_simple = list("drill")
+	attack_verb_continuous = list("сверлит")
+	attack_verb_simple = list("сверлит")
 	tool_behaviour = TOOL_DRILL
 	toolspeed = 1
 	sharpness = SHARP_POINTY
@@ -175,8 +175,8 @@
 	toolspeed = 0.5
 
 /obj/item/scalpel
-	name = "scalpel"
-	desc = "Cut, cut, and once more cut."
+	name = "скальпель"
+	desc = "Надрез, надрез, и ещё один надрез."
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "scalpel"
 	inhand_icon_state = "scalpel"
