@@ -1,5 +1,5 @@
 /obj/item/organ/internal/heart
-	name = "heart"
+	name = "сердце"
 	desc = "I feel bad for the heartless bastard who lost this."
 	icon_state = "heart-on"
 	base_icon_state = "heart"
@@ -99,7 +99,7 @@
 	return owner_species.mutantheart
 
 /obj/item/organ/internal/heart/cursed
-	name = "cursed heart"
+	name = "проклятое сердце"
 	desc = "A heart that, when inserted, will force you to pump it manually."
 	icon_state = "cursedheart-off"
 	base_icon_state = "cursedheart"
@@ -127,7 +127,7 @@
 	qdel(accursed.GetComponent(/datum/component/manual_heart))
 
 /obj/item/organ/internal/heart/cybernetic
-	name = "basic cybernetic heart"
+	name = "базовое кибирнетическое сердце"
 	desc = "A basic electronic device designed to mimic the functions of an organic human heart."
 	icon_state = "heart-c-on"
 	base_icon_state = "heart-c"
@@ -172,7 +172,7 @@
 	dose_available = FALSE
 
 /obj/item/organ/internal/heart/cybernetic/tier2
-	name = "cybernetic heart"
+	name = "кибирнетическое сердце"
 	desc = "An electronic device designed to mimic the functions of an organic human heart. Also holds an emergency dose of epinephrine, used automatically after facing severe trauma."
 	icon_state = "heart-c-u-on"
 	base_icon_state = "heart-c-u"
@@ -181,7 +181,7 @@
 	emp_vulnerability = 40
 
 /obj/item/organ/internal/heart/cybernetic/tier3
-	name = "upgraded cybernetic heart"
+	name = "продвинутое кибирнетическое сердце"
 	desc = "An electronic device designed to mimic the functions of an organic human heart. Also holds an emergency dose of epinephrine, used automatically after facing severe trauma. This upgraded model can regenerate its dose after use."
 	icon_state = "heart-c-u2-on"
 	base_icon_state = "heart-c-u2"
@@ -194,7 +194,7 @@
 	addtimer(VARSET_CALLBACK(src, dose_available, TRUE), 5 MINUTES)
 
 /obj/item/organ/internal/heart/cybernetic/surplus
-	name = "surplus prosthetic heart"
+	name = "дешевый протез сердца"
 	desc = "A fragile mockery of a human heart that resembles a water pump more than an actual heart. \
 		Offers no protection against EMPs."
 	icon_state = "heart-c-s-on"
@@ -208,7 +208,7 @@
 	AddElement(/datum/element/dangerous_surgical_removal)
 
 /obj/item/organ/internal/heart/freedom
-	name = "heart of freedom"
+	name = "сердце свободы"
 	desc = "This heart pumps with the passion to give... something freedom."
 	organ_flags = ORGAN_ROBOTIC  //the power of freedom prevents heart attacks
 	/// The cooldown until the next time this heart can give the host an adrenaline boost.

@@ -4,7 +4,7 @@
 #define MAX_TOXIN_LIVER_DAMAGE 2 //the max damage the liver can recieve per second (~1 min at max damage will destroy liver)
 
 /obj/item/organ/internal/liver
-	name = "liver"
+	name = "печень"
 	desc = "Pairing suggestion: chianti and fava beans."
 	icon_state = "liver"
 	visual = FALSE
@@ -264,7 +264,7 @@
 		organ_flags |= ORGAN_EMP //Starts organ faliure - gonna need replacing soon.
 
 /obj/item/organ/internal/liver/cybernetic/tier2
-	name = "cybernetic liver"
+	name = "кибернетическая печень"
 	desc = "An electronic device designed to mimic the functions of a human liver. Handles toxins slightly better than an organic liver."
 	icon_state = "liver-c-u"
 	maxHealth = 1.5 * STANDARD_ORGAN_THRESHOLD
@@ -273,7 +273,7 @@
 	emp_vulnerability = 40
 
 /obj/item/organ/internal/liver/cybernetic/tier3
-	name = "upgraded cybernetic liver"
+	name = "продвинутая кибернетическая печень"
 	desc = "An upgraded version of the cybernetic liver, designed to improve further upon organic livers. It is resistant to alcohol poisoning and is very robust at filtering toxins."
 	icon_state = "liver-c-u2"
 	alcohol_tolerance = ALCOHOL_RATE * 0.2
@@ -283,7 +283,7 @@
 	emp_vulnerability = 20
 
 /obj/item/organ/internal/liver/cybernetic/surplus
-	name = "surplus prosthetic liver"
+	name = "протез печени"
 	desc = "A very cheap prosthetic liver, mass produced for low-functioning alcoholics... It looks more like a water filter than \
 		an actual liver. \
 		Very fragile, absolutely terrible at filtering toxins and substantially weak to alcohol. \

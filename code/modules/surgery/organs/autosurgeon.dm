@@ -1,7 +1,7 @@
 /obj/item/autosurgeon
 	name = "autosurgeon"
-	desc = "A device that automatically inserts an implant, skillchip or organ into the user without the hassle of extensive surgery. \
-		It has a slot to insert implants or organs and a screwdriver slot for removing accidentally added items."
+	desc = "Устройство, которое автоматически вставляет пользователю имплантат, чип навыков или орган без хлопот, связанных с обширной хирургической операцией. \
+		Он имеет слот для вставки имплантатов или органов. Ошибочно установленные имплантаты или органы можно извлечь отвёрткой."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "autosurgeon"
 	inhand_icon_state = "nothing"
@@ -131,20 +131,20 @@
 	return TRUE
 
 /obj/item/autosurgeon/medical_hud
-	name = "autosurgeon"
-	desc = "A single use autosurgeon that contains a medical heads-up display augment. A screwdriver can be used to remove it, but implants can't be placed back in."
+	name = "автохирург"
+	desc = "Одноразовый автохирург, готовый установить внутрь пациента медицинский интерфейс. Для удаления интерфейса из автохирурга можно использовать отвертку, но зарядить такой автохирург будет нельзя."
 	uses = 1
 	starting_organ = /obj/item/organ/internal/cyberimp/eyes/hud/medical
 
 
 /obj/item/autosurgeon/syndicate
-	name = "suspicious autosurgeon"
+	name = "подозрительный автохирург"
 	icon_state = "autosurgeon_syndicate"
 	surgery_speed = 0.75
 	loaded_overlay = "autosurgeon_syndicate_loaded_overlay"
 
 /obj/item/autosurgeon/syndicate/laser_arm
-	desc = "A single use autosurgeon that contains a combat arms-up laser augment. A screwdriver can be used to remove it, but implants can't be placed back in."
+	desc = "Одноразовый автохирург, оснащенный боевым лазерным модулем. Для его удаления можно использовать отвертку, но имплантат нельзя вставить обратно.."
 	uses = 1
 	starting_organ = /obj/item/organ/internal/cyberimp/arm/gun/laser
 

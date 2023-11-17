@@ -1,5 +1,5 @@
 /obj/item/organ/internal/lungs
-	name = "lungs"
+	name = "легкие"
 	icon_state = "lungs"
 	visual = FALSE
 	zone = BODY_ZONE_CHEST
@@ -83,7 +83,7 @@
 	var/tritium_irradiation_probability_min = 10
 	var/tritium_irradiation_probability_max = 60
 
-	var/cold_message = "your face freezing and an icicle forming"
+	var/cold_message = "мое лицо чувствует мороз, а в легких начинают расти сосульки"
 	var/cold_level_1_threshold = 260
 	var/cold_level_2_threshold = 200
 	var/cold_level_3_threshold = 120
@@ -92,7 +92,7 @@
 	var/cold_level_3_damage = COLD_GAS_DAMAGE_LEVEL_3
 	var/cold_damage_type = BURN
 
-	var/hot_message = "your face burning and a searing heat"
+	var/hot_message = "моё лицо горит и пылает жаром"
 	var/heat_level_1_threshold = 360
 	var/heat_level_2_threshold = 400
 	var/heat_level_3_threshold = 1000
@@ -314,7 +314,7 @@
 	// CO2 side-effects.
 	// Give the mob a chance to notice.
 	if(prob(20))
-		breather.emote("cough")
+		breather.emote("кашляет")
 
 	if((world.time - breather.co2overloadtime) > 12 SECONDS)
 		breather.throw_alert(ALERT_TOO_MUCH_CO2, /atom/movable/screen/alert/too_much_co2)
@@ -387,7 +387,7 @@
 	if (prob(freon_pp))
 		to_chat(breather, span_alert("Your mouth feels like it's burning!"))
 	if (freon_pp > 40)
-		breather.emote("gasp")
+		breather.emote("задыхается")
 		breather.adjustFireLoss(15)
 		if (prob(freon_pp / 2))
 			to_chat(breather, span_alert("Your throat closes up!"))
@@ -412,7 +412,7 @@
 		if(prob(15))
 			to_chat(breather, span_alert("Your head starts spinning and your lungs burn!"))
 			healium_euphoria = EUPHORIA_ACTIVE
-			breather.emote("gasp")
+			breather.emote("задыхается")
 	else
 		healium_euphoria = EUPHORIA_INACTIVE
 	// Stun/Sleep side-effects.
@@ -513,7 +513,7 @@
 
 		if(prob(20))
 			n2o_euphoria = EUPHORIA_ACTIVE
-			breather.emote(pick("giggle", "laugh"))
+			breather.emote(pick("хихикает", "смеется"))
 			breather.set_drugginess(30 SECONDS)
 		else
 			n2o_euphoria = EUPHORIA_INACTIVE
@@ -727,7 +727,7 @@
 	suffocator.failed_last_breath = TRUE
 	// Give them a chance to notice something is wrong.
 	if(prob(20))
-		suffocator.emote("gasp")
+		suffocator.emote("задыхается")
 	// If mob is at critical health, check if they can be damaged further.
 	if(suffocator.health < suffocator.crit_threshold)
 		// Mob is immune to damage at critical health.
@@ -786,7 +786,7 @@
 	if(damage >= low_threshold)
 		var/do_i_cough = SPT_PROB((damage < high_threshold) ? 2.5 : 5, seconds_per_tick) // between : past high
 		if(do_i_cough)
-			owner.emote("cough")
+			owner.emote("кашляет")
 	if(organ_flags & ORGAN_FAILING && owner.stat == CONSCIOUS)
 		owner.visible_message(span_danger("[owner] grabs [owner.p_their()] throat, struggling for breath!"), span_userdanger("You suddenly feel like you can't breathe!"))
 		failed = TRUE
@@ -798,8 +798,8 @@
 #define SMOKER_LUNG_HEALING (STANDARD_ORGAN_HEALING * 0.75)
 
 /obj/item/organ/internal/lungs/plasmaman
-	name = "plasma filter"
-	desc = "A spongy rib-shaped mass for filtering plasma from the air."
+	name = "фильтр плазмы"
+	desc = "Губчатая масса в форме грудной клетки предназначена для фильтрации плазмы из воздуха."
 	icon_state = "lungs-plasma"
 	organ_traits = list(TRAIT_NOHUNGER) // A fresh breakfast of plasma is a great start to any morning.
 
@@ -808,7 +808,7 @@
 	safe_plasma_max = 0
 
 /obj/item/organ/internal/lungs/plasmaman/plasmaman_smoker
-	name = "smoker plasma filter"
+	name = "фильтр плазмы курильщика"
 	desc = "A plasma filter that look discolored, a result from smoking a lot."
 	icon_state = "lungs_plasma_smoker"
 
@@ -816,7 +816,7 @@
 	healing_factor = SMOKER_LUNG_HEALING
 
 /obj/item/organ/internal/lungs/slime
-	name = "vacuole"
+	name = "вакуоль"
 	desc = "A large organelle designed to store oxygen and other important gasses."
 
 	safe_plasma_max = 0 //We breathe this to gain POWER.
@@ -828,7 +828,7 @@
 		breather_slime.blood_volume += (0.2 * plasma_pp) // 10/s when breathing literally nothing but plasma, which will suffocate you.
 
 /obj/item/organ/internal/lungs/smoker_lungs
-	name = "smoker lungs"
+	name = "легкие курильщика"
 	desc = "A pair of lungs that look sickly, a result from smoking a lot."
 	icon_state = "lungs_smoker"
 
@@ -836,7 +836,7 @@
 	healing_factor = SMOKER_LUNG_HEALING
 
 /obj/item/organ/internal/lungs/cybernetic
-	name = "basic cybernetic lungs"
+	name = "базовые кибернетические легкие"
 	desc = "A basic cybernetic version of the lungs found in traditional humanoid entities."
 	failing_desc = "seems to be broken."
 	icon_state = "lungs-c"
@@ -855,7 +855,7 @@
 		organ_flags |= ORGAN_EMP //Starts organ faliure - gonna need replacing soon.
 
 /obj/item/organ/internal/lungs/cybernetic/tier2
-	name = "cybernetic lungs"
+	name = "кибернетические легкие"
 	desc = "A cybernetic version of the lungs found in traditional humanoid entities. Allows for greater intakes of oxygen than organic lungs, requiring slightly less pressure."
 	icon_state = "lungs-c-u"
 	maxHealth = 1.5 * STANDARD_ORGAN_THRESHOLD
@@ -863,7 +863,7 @@
 	emp_vulnerability = 40
 
 /obj/item/organ/internal/lungs/cybernetic/tier3
-	name = "upgraded cybernetic lungs"
+	name = "продвинутые кибернетические легкие"
 	desc = "A more advanced version of the stock cybernetic lungs. Features the ability to filter out lower levels of plasma and carbon dioxide."
 	icon_state = "lungs-c-u2"
 	safe_plasma_max = 20
@@ -877,7 +877,7 @@
 	cold_level_3_threshold = 100
 
 /obj/item/organ/internal/lungs/cybernetic/surplus
-	name = "surplus prosthetic lungs"
+	name = "протез легких"
 	desc = "Two fragile, inflatable sacks of air that only barely mimic the function of human lungs. \
 		Offer no protection against EMPs."
 	icon_state = "lungs-c-s"
@@ -890,7 +890,7 @@
 	AddElement(/datum/element/dangerous_surgical_removal)
 
 /obj/item/organ/internal/lungs/lavaland
-	name = "blackened frilled lungs" // blackened from necropolis exposure
+	name = "легкие пепельного ходока" // blackened from necropolis exposure
 	desc = "Exposure to the necropolis has mutated these lungs to breathe the air of Indecipheres, the lava-covered moon."
 	icon_state = "lungs-ashwalker"
 
@@ -950,7 +950,7 @@
 #undef GAS_TOLERANCE
 
 /obj/item/organ/internal/lungs/ethereal
-	name = "aeration reticulum"
+	name = "ретикулум аэратум"
 	desc = "These exotic lungs seem crunchier than most."
 	icon_state = "lungs_ethereal"
 	heat_level_1_threshold = FIRE_MINIMUM_TEMPERATURE_TO_SPREAD // 150C or 433k, in line with ethereal max safe body temperature
@@ -958,7 +958,7 @@
 	heat_level_3_threshold = 1073
 
 /obj/item/organ/internal/lungs/ethereal/ethereal_smoker
-	name = "smoker aeration reticulum"
+	name = "ретикулум аэратум курильщика"
 	desc = "A pair of exotic lungs that look pale and sickly, a result from smoking a lot."
 	icon_state = "lungs_ethereal_smoker"
 

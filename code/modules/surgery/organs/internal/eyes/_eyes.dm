@@ -658,32 +658,32 @@
 	flash_protect = FLASH_PROTECTION_SENSITIVE
 
 /obj/item/organ/internal/eyes/robotic/moth
-	name = "robotic moth eyes"
+	name = "кибернетические глаза мотылька"
 	eye_icon_state = "motheyes"
 	icon_state = "eyeballs-cybermoth"
 	desc = "Your vision is augmented. Much like actual moth eyes, very sensitive to bright lights."
 	flash_protect = FLASH_PROTECTION_SENSITIVE
 
 /obj/item/organ/internal/eyes/robotic/basic/moth
-	name = "basic robotic moth eyes"
+	name = "базовые кибернитические глаза мотылька"
 	eye_icon_state = "motheyes"
 	icon_state = "eyeballs-cybermoth"
 	flash_protect = FLASH_PROTECTION_SENSITIVE
 
 /obj/item/organ/internal/eyes/robotic/xray/moth
-	name = "robotic eyes"
+	name = "рентгеновские глаза мотылька"
 	eye_icon_state = "motheyes"
 	icon_state = "eyeballs-cybermoth"
 	desc = "These cybernetic imitation moth eyes will give you X-ray vision. Blinking is futile. Much like actual moth eyes, very sensitive to bright lights."
 	flash_protect = FLASH_PROTECTION_SENSITIVE
 
 /obj/item/organ/internal/eyes/robotic/shield/moth
-	name = "shielded robotic moth eyes"
+	name = "глаза мотылька-сварщика"
 	eye_icon_state = "motheyes"
 	icon_state = "eyeballs-cybermoth"
 
 /obj/item/organ/internal/eyes/robotic/glow/moth
-	name = "High Luminosity Moth Eyes"
+	name = "Люминисцентные глаза мотылька"
 	eye_icon_state = "motheyes"
 	base_eye_state = "eyes_mothglow"
 	icon_state = "eyeballs-cybermoth"
@@ -691,24 +691,24 @@
 	flash_protect = FLASH_PROTECTION_SENSITIVE
 
 /obj/item/organ/internal/eyes/robotic/thermals/moth //we inherit flash weakness from thermals
-	name = "thermal moth eyes"
+	name = "Термальные глаза мотылька"
 	eye_icon_state = "motheyes"
 	icon_state = "eyeballs-cybermoth"
 
 /obj/item/organ/internal/eyes/snail
-	name = "snail eyes"
+	name = "глаза улитки"
 	desc = "These eyes seem to have a large range, but might be cumbersome with glasses."
 	eye_icon_state = "snail_eyes"
 	icon_state = "snail_eyeballs"
 
 /obj/item/organ/internal/eyes/jelly
-	name = "jelly eyes"
+	name = "глаза слаймолюда"
 	desc = "These eyes are made of a soft jelly. Unlike all other eyes, though, there are three of them."
 	eye_icon_state = "jelleyes"
 	icon_state = "eyeballs-jelly"
 
 /obj/item/organ/internal/eyes/night_vision/maintenance_adapted
-	name = "adapted eyes"
+	name = "глаза сектанта техов"
 	desc = "These red eyes look like two foggy marbles. They give off a particularly worrying glow in the dark."
 	flash_protect = FLASH_PROTECTION_HYPER_SENSITIVE
 	eye_color_left = "f00"

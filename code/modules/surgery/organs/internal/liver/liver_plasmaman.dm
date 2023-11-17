@@ -3,7 +3,7 @@
  * Makes plasma and hot ice heal wounds, also makes gunpowder a hallucinogen.
  **/
 /obj/item/organ/internal/liver/bone/plasmaman
-	name = "reagent processing crystal"
+	name = "кристалл обрабатывающий реагенты"
 	desc = "A large crystal that is somehow capable of metabolizing chemicals, these are found in plasmamen."
 	icon_state = "liver-p"
 	organ_flags = ORGAN_MINERAL
