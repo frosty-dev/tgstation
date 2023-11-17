@@ -147,7 +147,7 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 
 	if(client && SSlag_switch.measures[SLOWMODE_SAY] && !HAS_TRAIT(src, TRAIT_BYPASS_MEASURES) && !forced && src == usr)
 		if(!COOLDOWN_FINISHED(client, say_slowmode))
-			to_chat(src, span_warning("Message not sent due to slowmode. Please wait [SSlag_switch.slowmode_cooldown/10] seconds between messages.\n\"[message]\""))
+			to_chat(src, span_warning("Сообщение не было отправлено из-за ограничений. Подождите [SSlag_switch.slowmode_cooldown/10] секунд перед отправкой нового.\n\"[message]\""))
 			return
 		COOLDOWN_START(client, say_slowmode, SSlag_switch.slowmode_cooldown)
 
@@ -310,10 +310,10 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 
 	if(speaker != src)
 		if(!radio_freq) //These checks have to be separate, else people talking on the radio will make "You can't hear yourself!" appear when hearing people over the radio while deaf.
-			deaf_message = "[span_name("[speaker]")] [speaker.verb_say] something but you cannot hear [speaker.p_them()]."
+			deaf_message = "[span_name("[speaker]")] [speaker.verb_say] что-то, но не могу понять что."
 			deaf_type = MSG_VISUAL
 	else
-		deaf_message = span_notice("You can't hear yourself!")
+		deaf_message = span_notice("Не слышу себя!")
 		deaf_type = MSG_AUDIBLE // Since you should be able to hear yourself without looking
 
 	// Create map text prior to modifying message for goonchat
@@ -523,25 +523,25 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 	if(message_mods[WHISPER_MODE] == MODE_WHISPER)
 		. = verb_whisper
 	else if(message_mods[WHISPER_MODE] == MODE_WHISPER_CRIT && !HAS_TRAIT(src, TRAIT_SUCCUMB_OVERRIDE))
-		. = "[verb_whisper] in [p_their()] last breath"
+		. = "[verb_whisper] на последнем дыхании"
 	else if(message_mods[MODE_SING])
 		. = verb_sing
 	// Any subtype of slurring in our status effects make us "slur"
 	else if(locate(/datum/status_effect/speech/slurring) in status_effects)
 		if (HAS_TRAIT(src, TRAIT_SIGN_LANG))
-			. = "loosely signs"
+			. = "резво поёт"
 		else
-			. = "slurs"
+			. = "заплетается"
 	else if(has_status_effect(/datum/status_effect/speech/stutter))
 		if(HAS_TRAIT(src, TRAIT_SIGN_LANG))
-			. = "shakily signs"
+			. = "резво поёт"
 		else
-			. = "stammers"
+			. = "заикается"
 	else if(has_status_effect(/datum/status_effect/speech/stutter/derpspeech))
 		if(HAS_TRAIT(src, TRAIT_SIGN_LANG))
-			. = "incoherently signs"
+			. = "баянит невнятно"
 		else
-			. = "gibbers"
+			. = "тараторит"
 	else
 		. = ..()
 

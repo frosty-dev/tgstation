@@ -219,7 +219,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 /datum/objective/assassinate/update_explanation_text()
 	..()
 	if(target?.current)
-		explanation_text = "Убить [target.name], на должности [ru_job_parse(!target_role_type ? target.assigned_role : target.special_role)]."
+		explanation_text = "Убить [target.name], на должности [ru_job_parse(!target_role_type ? target.assigned_role.title : target.special_role)]."
 	else
 		explanation_text = "Ничего."
 
@@ -269,7 +269,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 /datum/objective/mutiny/update_explanation_text()
 	..()
 	if(target?.current)
-		explanation_text = "Убить или проимплантировать и отправить в ссылку в гейтвей [target.name], на должности [ru_job_parse(!target_role_type ? target.assigned_role : target.special_role)]."
+		explanation_text = "Убить или проимплантировать и отправить в ссылку в гейтвей [target.name], на должности [ru_job_parse(!target_role_type ? target.assigned_role.title : target.special_role)]."
 	else
 		explanation_text = "Ничего."
 
@@ -291,7 +291,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 
 /datum/objective/maroon/update_explanation_text()
 	if(target?.current)
-		explanation_text = "Не дать [target.name], на должности [ru_job_parse(!target_role_type ? target.assigned_role : target.special_role)], покинуть станцию в живом виде."
+		explanation_text = "Не дать [target.name], на должности [ru_job_parse(!target_role_type ? target.assigned_role.title : target.special_role)], покинуть станцию в живом виде."
 	else
 		explanation_text = "Ничего."
 
@@ -322,7 +322,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 /datum/objective/debrain/update_explanation_text()
 	..()
 	if(target?.current)
-		explanation_text = "Украсть мозг [target.name], на должности [ru_job_parse(!target_role_type ? target.assigned_role : target.special_role)]."
+		explanation_text = "Украсть мозг [target.name], на должности [ru_job_parse(!target_role_type ? target.assigned_role.title : target.special_role)]."
 	else
 		explanation_text = "Ничего."
 
@@ -346,7 +346,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 /datum/objective/protect/update_explanation_text()
 	..()
 	if(target?.current)
-		explanation_text = "Защитить [target.name], на должности [ru_job_parse(!target_role_type ? target.assigned_role : target.special_role)]."
+		explanation_text = "Защитить [target.name], на должности [ru_job_parse(!target_role_type ? target.assigned_role.title : target.special_role)]."
 	else
 		explanation_text = "Ничего."
 
@@ -371,7 +371,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 /datum/objective/jailbreak/update_explanation_text()
 	..()
 	if(target?.current)
-		explanation_text = "Убедиться в том, что [target.name], на должности [ru_job_parse(!target_role_type ? target.assigned_role : target.special_role)] сбежит живым и вне заключения."
+		explanation_text = "Убедиться в том, что [target.name], на должности [ru_job_parse(!target_role_type ? target.assigned_role.title : target.special_role)] сбежит живым и вне заключения."
 	else
 		explanation_text = "Ничего."
 
@@ -387,7 +387,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 /datum/objective/jailbreak/detain/update_explanation_text()
 	..()
 	if(target?.current)
-		explanation_text = "Убедиться в том, что [target.name], на должности [ru_job_parse(!target_role_type ? target.assigned_role : target.special_role)] будет доставлен в зоне заключения и в наручниках."
+		explanation_text = "Убедиться в том, что [target.name], на должности [ru_job_parse(!target_role_type ? target.assigned_role.title : target.special_role)] будет доставлен в зоне заключения и в наручниках."
 	else
 		explanation_text = "Ничего."
 
@@ -509,7 +509,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 /datum/objective/escape/escape_with_identity/update_explanation_text()
 	if(target?.current)
 		target_real_name = target.current.real_name
-		explanation_text = "Сбежать на шаттле или спасательной капсуле под личностью [target_real_name], на должности [ru_job_parse(target.assigned_role)]"
+		explanation_text = "Сбежать на шаттле или спасательной капсуле под личностью [target_real_name], на должности [ru_job_parse(target.assigned_role.title)]"
 		var/mob/living/carbon/human/H
 		if(ishuman(target.current))
 			H = target.current
