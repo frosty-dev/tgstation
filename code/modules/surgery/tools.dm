@@ -176,7 +176,7 @@
 
 /obj/item/scalpel
 	name = "скальпель"
-	desc = "Надрез, надрез, и ещё один надрез."
+	desc = "Надрез, надрез, ещё надрез!"
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "scalpel"
 	inhand_icon_state = "scalpel"
@@ -191,8 +191,8 @@
 	throw_speed = 3
 	throw_range = 5
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*2, /datum/material/glass =HALF_SHEET_MATERIAL_AMOUNT)
-	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "cuts")
-	attack_verb_simple = list("attack", "slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "cut")
+	attack_verb_continuous = list("атакует", "рассекает", "пронзает", "режет", "кромсает", "иссекает", "царапает")
+	attack_verb_simple = list("атакует", "рассекает", "пронзает", "режет", "кромсает", "иссекает", "царапает")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	sharpness = SHARP_EDGED
 	tool_behaviour = TOOL_SCALPEL
@@ -219,12 +219,12 @@
 	return BRUTELOSS
 
 /obj/item/scalpel/augment
-	desc = "Ultra-sharp blade attached directly to your bone for extra-accuracy."
+	desc = "Ошеломительно острое лезвие прикрепленное напрямую к костям вашей руки для сверхточных движений."
 	toolspeed = 0.5
 
 /obj/item/circular_saw
-	name = "circular saw"
-	desc = "For heavy duty cutting."
+	name = "циркулярная пила"
+	desc = "Для тяжелых случаев."
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "saw"
 	inhand_icon_state = "saw"
@@ -240,8 +240,8 @@
 	throw_speed = 2
 	throw_range = 5
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*5, /datum/material/glass = SHEET_MATERIAL_AMOUNT*3)
-	attack_verb_continuous = list("attacks", "slashes", "saws", "cuts")
-	attack_verb_simple = list("attack", "slash", "saw", "cut")
+	attack_verb_continuous = list("атакует", "рубит", "пилит", "режет")
+	attack_verb_simple = list("атакует", "рубит", "пилит", "режет")
 	sharpness = SHARP_EDGED
 	tool_behaviour = TOOL_SAW
 	toolspeed = 1
@@ -276,8 +276,8 @@
 
 
 /obj/item/surgical_drapes
-	name = "surgical drapes"
-	desc = "Nanotrasen brand surgical drapes provide optimal safety and infection control."
+	name = "простынь"
+	desc = "Брендированная хирургическая простынь гарантирует максимальную безопасность и стерильность операционного поля."
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "surgical_drapes"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
@@ -292,7 +292,7 @@
 	AddComponent(/datum/component/surgery_initiator)
 
 /obj/item/surgical_processor //allows medical cyborgs to scan and initiate advanced surgeries
-	name = "surgical processor"
+	name = "хирургический процессор"
 	desc = "A device for scanning and initiating surgeries from a disk or operating computer."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "surgical_processor"
@@ -366,7 +366,7 @@
 		return COMPONENT_FORCE_SURGERY
 
 /obj/item/scalpel/advanced
-	name = "laser scalpel"
+	name = "лазерный скальпель"
 	desc = "An advanced scalpel which uses laser technology to cut."
 	icon_state = "e_scalpel"
 	inhand_icon_state = "e_scalpel"
@@ -424,7 +424,7 @@
 	. += span_notice("It's set to [tool_behaviour == TOOL_SCALPEL ? "scalpel" : "saw"] mode.")
 
 /obj/item/retractor/advanced
-	name = "mechanical pinches"
+	name = "механический зажим"
 	desc = "An agglomerate of rods and gears."
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*6, /datum/material/glass = SHEET_MATERIAL_AMOUNT*2, /datum/material/silver = SHEET_MATERIAL_AMOUNT*2, /datum/material/titanium =SHEET_MATERIAL_AMOUNT * 2.5)
@@ -469,7 +469,7 @@
 	. += span_notice("It resembles a [tool_behaviour == TOOL_RETRACTOR ? "retractor" : "hemostat"].")
 
 /obj/item/shears
-	name = "amputation shears"
+	name = "ампутационные ножницы"
 	desc = "A type of heavy duty surgical shears used for achieving a clean separation between limb and patient. Keeping the patient still is imperative to be able to secure and align the shears."
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "shears"
@@ -482,8 +482,8 @@
 	throw_speed = 2
 	throw_range = 5
 	custom_materials = list(/datum/material/iron=SHEET_MATERIAL_AMOUNT*4, /datum/material/titanium=SHEET_MATERIAL_AMOUNT*3)
-	attack_verb_continuous = list("shears", "snips")
-	attack_verb_simple = list("shear", "snip")
+	attack_verb_continuous = list("режет", "надрезает")
+	attack_verb_simple = list("режет", "надрезает")
 	sharpness = SHARP_EDGED
 	custom_premium_price = PAYCHECK_CREW * 14
 
@@ -552,8 +552,8 @@
 	return BRUTELOSS
 
 /obj/item/bonesetter
-	name = "bonesetter"
-	desc = "For setting things right."
+	name = "костоправ"
+	desc = "Расставляет всё по своим местам."
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "bonesetter"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
@@ -571,8 +571,8 @@
 	return "bonesetter" + (tray_extended ? "" : "_out")
 
 /obj/item/blood_filter
-	name = "blood filter"
-	desc = "For filtering the blood."
+	name = "фильтр крови"
+	desc = "Для фильтрации крови."
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "bloodfilter"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
@@ -642,28 +642,28 @@
  */
 
 /obj/item/retractor/cruel
-	name = "twisted retractor"
-	desc = "Helps reveal secrets that would rather stay buried."
+	name = "пыточный расширитель"
+	desc = "Помогает найти секреты которым лучше остаться в прошлом."
 	icon_state = "cruelretractor"
 	surgical_tray_overlay = "retractor_cruel"
 	item_flags = SURGICAL_TOOL | CRUEL_IMPLEMENT
 
 /obj/item/hemostat/cruel
-	name = "cruel hemostat"
-	desc = "Clamping bleeders, but not so good at fixing breathers."
+	name = "пыточный зажим"
+	desc = "Не сколько обычный зажим для проведения операций, сколько для доставления мук."
 	icon_state = "cruelhemostat"
 	surgical_tray_overlay = "hemostat_cruel"
 	item_flags = SURGICAL_TOOL | CRUEL_IMPLEMENT
 
 /obj/item/cautery/cruel
-	name = "savage cautery"
+	name = "пыточный прижигатель"
 	desc = "Chalk this one up as another successful vivisection."
 	icon_state = "cruelcautery"
 	surgical_tray_overlay = "cautery_cruel"
 	item_flags = SURGICAL_TOOL | CRUEL_IMPLEMENT
 
 /obj/item/scalpel/cruel
-	name = "hungry scalpel"
+	name = "пыточный скальпель"
 	desc = "I remember every time I hold you. My born companion..."
 	icon_state = "cruelscalpel"
 	surgical_tray_overlay = "scalpel_cruel"
