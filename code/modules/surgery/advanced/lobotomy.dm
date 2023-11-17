@@ -1,5 +1,5 @@
 /datum/surgery/advanced/lobotomy
-	name = "Lobotomy"
+	name = "Лоботомия"
 	desc = "An invasive surgical procedure which guarantees removal of almost all brain traumas, but might cause another permanent trauma in return."
 	possible_locs = list(BODY_ZONE_HEAD)
 	requires_bodypart_type = NONE
@@ -22,7 +22,7 @@
 	return TRUE
 
 /datum/surgery_step/lobotomize
-	name = "perform lobotomy (scalpel)"
+	name = "произведите лоботомию (скальпель)"
 	implements = list(
 		TOOL_SCALPEL = 85,
 		/obj/item/melee/energy/sword = 55,

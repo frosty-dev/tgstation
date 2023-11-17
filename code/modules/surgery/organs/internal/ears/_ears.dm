@@ -1,5 +1,5 @@
 /obj/item/organ/internal/ears
-	name = "ears"
+	name = "уши"
 	icon_state = "ears"
 	desc = "There are three parts to the ear. Inner, middle and outer. Only one of these parts should be normally visible."
 	zone = BODY_ZONE_HEAD
@@ -61,7 +61,7 @@
 	damage_multiplier = 0
 
 /obj/item/organ/internal/ears/cat
-	name = "cat ears"
+	name = "кошачьи ушки"
 	icon = 'icons/obj/clothing/head/costume.dmi'
 	worn_icon = 'icons/mob/clothing/head/costume.dmi'
 	icon_state = "kitty"
@@ -84,7 +84,7 @@
 		ear_owner.update_body()
 
 /obj/item/organ/internal/ears/penguin
-	name = "penguin ears"
+	name = "пингвиньи ушки"
 	desc = "The source of a penguin's happy feet."
 
 /obj/item/organ/internal/ears/penguin/on_insert(mob/living/carbon/human/ear_owner)
@@ -100,7 +100,7 @@
 		ear_owner.RemoveElement(/datum/element/waddling)
 
 /obj/item/organ/internal/ears/cybernetic
-	name = "cybernetic ears"
+	name = "базовый кохлеарный имплантат"
 	icon_state = "ears-c"
 	desc = "A basic cybernetic organ designed to mimic the operation of ears."
 	damage_multiplier = 0.9
@@ -108,7 +108,7 @@
 	failing_desc = "seems to be broken."
 
 /obj/item/organ/internal/ears/cybernetic/upgraded
-	name = "upgraded cybernetic ears"
+	name = "продвинутый кохлеарный имплантат"
 	icon_state = "ears-c-u"
 	desc =  "An advanced cybernetic ear, surpassing the performance of organic ears."
 	damage_multiplier = 0.5

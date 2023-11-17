@@ -1,5 +1,5 @@
 /datum/surgery/advanced/viral_bonding
-	name = "Viral Bonding"
+	name = "Вирусный симбиоз"
 	desc = "A surgical procedure that forces a symbiotic relationship between a virus and its host. The patient must be dosed with spaceacillin, virus food, and formaldehyde."
 	possible_locs = list(BODY_ZONE_CHEST)
 	steps = list(
@@ -20,7 +20,7 @@
 	return TRUE
 
 /datum/surgery_step/viral_bond
-	name = "viral bond (cautery)"
+	name = "установите связь (прижигатель)"
 	implements = list(
 		TOOL_CAUTERY = 100,
 		TOOL_WELDER = 50,

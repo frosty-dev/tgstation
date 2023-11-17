@@ -225,7 +225,7 @@
 
 
 /obj/item/organ/internal/cyberimp/arm/gun/laser
-	name = "arm-mounted laser implant"
+	name = "имплант лазерной винтовки"
 	desc = "A variant of the arm cannon implant that fires lethal laser beams. The cannon emerges from the subject's arm and remains inside when not in use."
 	icon_state = "arm_laser"
 	items_to_create = list(/obj/item/gun/energy/laser/mounted/augment)
@@ -234,7 +234,7 @@
 	zone = BODY_ZONE_L_ARM
 
 /obj/item/organ/internal/cyberimp/arm/gun/taser
-	name = "arm-mounted taser implant"
+	name = "имплант тазера"
 	desc = "A variant of the arm cannon implant that fires electrodes and disabler shots. The cannon emerges from the subject's arm and remains inside when not in use."
 	icon_state = "arm_taser"
 	items_to_create = list(/obj/item/gun/energy/e_gun/advtaser/mounted)
@@ -243,7 +243,7 @@
 	zone = BODY_ZONE_L_ARM
 
 /obj/item/organ/internal/cyberimp/arm/toolset
-	name = "integrated toolset implant"
+	name = "имплант ручных инструментов"
 	desc = "A stripped-down version of the engineering cyborg toolset, designed to be installed on subject's arm. Contain advanced versions of every tool."
 	actions_types = list(/datum/action/item_action/organ_action/toggle/toolkit)
 	items_to_create = list(
@@ -269,18 +269,18 @@
 	return TRUE
 
 /obj/item/organ/internal/cyberimp/arm/esword
-	name = "arm-mounted energy blade"
+	name = "имплант энергетического меча"
 	desc = "An illegal and highly dangerous cybernetic implant that can project a deadly blade of concentrated energy."
 	items_to_create = list(/obj/item/melee/energy/blade/hardlight)
 
 /obj/item/organ/internal/cyberimp/arm/medibeam
-	name = "integrated medical beamgun"
+	name = "имплант медицинского луча"
 	desc = "A cybernetic implant that allows the user to project a healing beam from their hand."
 	items_to_create = list(/obj/item/gun/medbeam)
 
 
 /obj/item/organ/internal/cyberimp/arm/flash
-	name = "integrated high-intensity photon projector" //Why not
+	name = "имплант вспышки" //Why not
 	desc = "An integrated projector mounted onto a user's arm that is able to be used as a powerful flash."
 	items_to_create = list(/obj/item/assembly/flash/armimplant)
 
@@ -304,12 +304,12 @@
 	return ..()
 
 /obj/item/organ/internal/cyberimp/arm/baton
-	name = "arm electrification implant"
+	name = "имплант полицейской дубинки"
 	desc = "An illegal combat implant that allows the user to administer disabling shocks from their arm."
 	items_to_create = list(/obj/item/borg/stun)
 
 /obj/item/organ/internal/cyberimp/arm/combat
-	name = "combat cybernetics implant"
+	name = "боевой кибернетический имплант"
 	desc = "A powerful cybernetic implant that contains combat modules built into the user's arm."
 	items_to_create = list(
 		/obj/item/melee/energy/blade/hardlight,
@@ -328,7 +328,7 @@
 		flash.arm = WEAKREF(src) // Todo: wipe single letter vars out of assembly code
 
 /obj/item/organ/internal/cyberimp/arm/surgery
-	name = "surgical toolset implant"
+	name = "имплант хирургических инструментов"
 	desc = "A set of surgical tools hidden behind a concealed panel on the user's arm."
 	actions_types = list(/datum/action/item_action/organ_action/toggle/toolkit)
 	items_to_create = list(
@@ -342,7 +342,7 @@
 	)
 
 /obj/item/organ/internal/cyberimp/arm/surgery/emagged
-	name = "hacked surgical toolset implant"
+	name = "взломанный набор хирургических инструментов"
 	desc = "A set of surgical tools hidden behind a concealed panel on the user's arm. This one seems to have been tampered with."
 	items_to_create = list(
 		/obj/item/retractor/augment,
@@ -356,7 +356,7 @@
 	)
 
 /obj/item/organ/internal/cyberimp/arm/muscle
-	name = "\proper Strong-Arm empowered musculature implant"
+	name = "имплант укрепления мускулатуры"
 	desc = "When implanted, this cybernetic implant will enhance the muscles of the arm to deliver more power-per-action."
 	icon_state = "muscle_implant"
 

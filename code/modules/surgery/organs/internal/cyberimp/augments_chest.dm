@@ -6,7 +6,7 @@
 	zone = BODY_ZONE_CHEST
 
 /obj/item/organ/internal/cyberimp/chest/nutriment
-	name = "Nutriment pump implant"
+	name = "Питательный насос"
 	desc = "This implant will synthesize and pump into your bloodstream a small amount of nutriment when you are starving."
 	icon_state = "chest_implant"
 	implant_color = "#00AA00"
@@ -37,7 +37,7 @@
 
 
 /obj/item/organ/internal/cyberimp/chest/nutriment/plus
-	name = "Nutriment pump implant PLUS"
+	name = "Питательный насос ПЛЮС"
 	desc = "This implant will synthesize and pump into your bloodstream a small amount of nutriment when you are hungry."
 	icon_state = "chest_implant"
 	implant_color = "#006607"
@@ -45,7 +45,7 @@
 	poison_amount = 10
 
 /obj/item/organ/internal/cyberimp/chest/reviver
-	name = "Reviver implant"
+	name = "Реаниматор"
 	desc = "This implant will attempt to revive and heal you if you lose consciousness. For the faint of heart!"
 	icon_state = "chest_implant"
 	implant_color = "#AD0000"
@@ -158,7 +158,7 @@
 
 
 /obj/item/organ/internal/cyberimp/chest/thrusters
-	name = "implantable thrusters set"
+	name = "имплант маневровых двигателей"
 	desc = "An implantable set of thruster ports. They use the gas from environment or subject's internals for propulsion in zero-gravity areas. \
 	Unlike regular jetpacks, this device has no stabilization system."
 	slot = ORGAN_SLOT_THRUSTERS

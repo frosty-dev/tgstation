@@ -244,25 +244,25 @@
 #undef NIGHTVISION_LIGHT_HIG
 
 /obj/item/organ/internal/eyes/night_vision/mushroom
-	name = "fung-eye"
+	name = "глаза гриболюдей"
 	desc = "While on the outside they look inert and dead, the eyes of mushroom people are actually very advanced."
 	low_light_cutoff = list(0, 15, 20)
 	medium_light_cutoff = list(0, 20, 35)
 	high_light_cutoff = list(0, 40, 50)
 
 /obj/item/organ/internal/eyes/zombie
-	name = "undead eyes"
+	name = "глаза нежити"
 	desc = "Somewhat counterintuitively, these half-rotten eyes actually have superior vision to those of a living human."
 	color_cutoffs = list(25, 35, 5)
 
 /obj/item/organ/internal/eyes/alien
-	name = "alien eyes"
+	name = "глаза пришельца"
 	desc = "It turned out they had them after all!"
 	sight_flags = SEE_MOBS
 	color_cutoffs = list(25, 5, 42)
 
 /obj/item/organ/internal/eyes/golem
-	name = "resonating crystal"
+	name = "резонирующие глаза"
 	icon_state = "adamantine_cords"
 	eye_icon_state = null
 	desc = "Golems somehow measure external light levels and detect nearby ore using this sensitive mineral lattice."
@@ -274,7 +274,7 @@
 
 /// Send an ore detection pulse on a cooldown
 /datum/action/cooldown/golem_ore_sight
-	name = "Ore Resonance"
+	name = "Резонанс руды"
 	desc = "Causes nearby ores to vibrate, revealing their location."
 	button_icon = 'icons/obj/device.dmi'
 	button_icon_state = "manual_mining"
@@ -288,7 +288,7 @@
 ///Robotic
 
 /obj/item/organ/internal/eyes/robotic
-	name = "robotic eyes"
+	name = "кибернетические глаза"
 	icon_state = "cybernetic_eyeballs"
 	desc = "Your vision is augmented."
 	organ_flags = ORGAN_ROBOTIC
@@ -304,7 +304,7 @@
 	owner.flash_act(visual = 1)
 
 /obj/item/organ/internal/eyes/robotic/basic
-	name = "basic robotic eyes"
+	name = "базовые кибернетические глаза"
 	desc = "A pair of basic cybernetic eyes that restore vision, but at some vulnerability to light."
 	eye_color_left = "5500ff"
 	eye_color_right = "5500ff"
@@ -321,7 +321,7 @@
 		owner.emote("scream")
 
 /obj/item/organ/internal/eyes/robotic/xray
-	name = "\improper X-ray eyes"
+	name = "рентгеновские глаза"
 	desc = "These cybernetic eyes will give you X-ray vision. Blinking is futile."
 	eye_color_left = "000"
 	eye_color_right = "000"
@@ -336,7 +336,7 @@
 	REMOVE_TRAIT(eye_owner, TRAIT_XRAY_VISION, ORGAN_TRAIT)
 
 /obj/item/organ/internal/eyes/robotic/thermals
-	name = "thermal eyes"
+	name = "термальные глаза"
 	desc = "These cybernetic eye implants will give you thermal vision. Vertical slit pupil included."
 	eye_color_left = "FC0"
 	eye_color_right = "FC0"
@@ -377,7 +377,7 @@
 
 // Welding shield implant
 /obj/item/organ/internal/eyes/robotic/shield
-	name = "shielded robotic eyes"
+	name = "кибернетические глаза сварщика"
 	desc = "These reactive micro-shields will protect you from welders and flashes without obscuring your vision."
 	flash_protect = FLASH_PROTECTION_WELDER
 
@@ -391,7 +391,7 @@
 #define UPDATE_EYES_RIGHT 2
 
 /obj/item/organ/internal/eyes/robotic/glow
-	name = "High Luminosity Eyes"
+	name = "Люминисцентные глаза"
 	desc = "Special glowing eyes, used by snowflakes who want to be special."
 	eye_color_left = "000"
 	eye_color_right = "000"
@@ -651,7 +651,7 @@
 #undef UPDATE_EYES_RIGHT
 
 /obj/item/organ/internal/eyes/moth
-	name = "moth eyes"
+	name = "глаза мотылька"
 	desc = "These eyes seem to have increased sensitivity to bright light, with no improvement to low light vision."
 	eye_icon_state = "motheyes"
 	icon_state = "eyeballs-moth"

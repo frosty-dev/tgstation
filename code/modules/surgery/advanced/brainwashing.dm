@@ -1,10 +1,10 @@
 /obj/item/disk/surgery/brainwashing
-	name = "Brainwashing Surgery Disk"
+	name = "Операция промывания разума"
 	desc = "The disk provides instructions on how to impress an order on a brain, making it the primary objective of the patient."
 	surgeries = list(/datum/surgery/advanced/brainwashing)
 
 /datum/surgery/advanced/brainwashing
-	name = "Brainwashing"
+	name = "Промывание разума"
 	desc = "A surgical procedure which directly implants a directive into the patient's brain, making it their absolute priority. It can be cleared using a mindshield implant."
 	possible_locs = list(BODY_ZONE_HEAD)
 	steps = list(
@@ -25,7 +25,7 @@
 	return TRUE
 
 /datum/surgery_step/brainwash
-	name = "brainwash (hemostat)"
+	name = "задайте установку (зажим)"
 	implements = list(
 		TOOL_HEMOSTAT = 85,
 		TOOL_WIRECUTTER = 50,

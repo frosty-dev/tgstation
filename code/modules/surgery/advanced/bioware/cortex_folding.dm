@@ -1,5 +1,5 @@
 /datum/surgery/advanced/bioware/cortex_folding
-	name = "Cortex Folding"
+	name = "Сгибание коры головного мозга"
 	desc = "A surgical procedure which modifies the cerebral cortex into a complex fold, giving space to non-standard neural patterns."
 	possible_locs = list(BODY_ZONE_HEAD)
 	steps = list(
@@ -21,7 +21,7 @@
 	return ..()
 
 /datum/surgery_step/fold_cortex
-	name = "fold cortex (hand)"
+	name = "сложите кору головного мозга (мануальное действие)"
 	accept_hand = TRUE
 	time = 125
 
@@ -64,7 +64,7 @@
 	return FALSE
 
 /datum/bioware/cortex_fold
-	name = "Cortex Fold"
+	name = "Сгибание коры головного мозга"
 	desc = "The cerebral cortex has been folded into a complex fractal pattern, and can support non-standard neural patterns."
 	mod_type = BIOWARE_CORTEX
 

@@ -3,7 +3,7 @@
 #define INFLAMATION_ADVANCEMENT_PROB 2
 
 /obj/item/organ/internal/appendix
-	name = "appendix"
+	name = "аппендикс"
 	icon_state = "appendix"
 	base_icon_state = "appendix"
 	visual = FALSE
@@ -21,7 +21,7 @@
 
 /obj/item/organ/internal/appendix/update_name()
 	. = ..()
-	name = "[inflamation_stage ? "inflamed " : null][initial(name)]"
+	name = "[inflamation_stage ? "воспаленный " : null][initial(name)]"
 
 /obj/item/organ/internal/appendix/update_icon_state()
 	icon_state = "[base_icon_state][inflamation_stage ? "inflamed" : ""]"

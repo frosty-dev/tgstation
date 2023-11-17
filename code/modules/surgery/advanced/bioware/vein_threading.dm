@@ -1,5 +1,5 @@
 /datum/surgery/advanced/bioware/vein_threading
-	name = "Vein Threading"
+	name = "Сплетение вен"
 	desc = "A surgical procedure which severely reduces the amount of blood lost in case of injury."
 	possible_locs = list(BODY_ZONE_CHEST)
 	steps = list(
@@ -15,7 +15,7 @@
 	bioware_target = BIOWARE_CIRCULATION
 
 /datum/surgery_step/thread_veins
-	name = "thread veins (hand)"
+	name = "переплетите вены (мануальное действие)"
 	accept_hand = TRUE
 	time = 125
 

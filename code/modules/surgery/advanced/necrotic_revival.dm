@@ -1,5 +1,5 @@
 /datum/surgery/advanced/necrotic_revival
-	name = "Necrotic Revival"
+	name = "Некротическое воскрешение"
 	desc = "An experimental surgical procedure that stimulates the growth of a Romerol tumor inside the patient's brain. Requires zombie powder or rezadone."
 	possible_locs = list(BODY_ZONE_HEAD)
 	steps = list(
@@ -18,7 +18,7 @@
 		return FALSE
 
 /datum/surgery_step/bionecrosis
-	name = "start bionecrosis (syringe)"
+	name = "введите химический компонент (шприц)"
 	implements = list(
 		/obj/item/reagent_containers/syringe = 100,
 		/obj/item/pen = 30)

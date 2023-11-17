@@ -1,5 +1,5 @@
 /datum/surgery/advanced/wing_reconstruction
-	name = "Wing Reconstruction"
+	name = "Восстановление крыльев"
 	desc = "An experimental surgical procedure that reconstructs the damaged wings of moth people. Requires Synthflesh."
 	possible_locs = list(BODY_ZONE_CHEST)
 	steps = list(
@@ -18,7 +18,7 @@
 	return ..() && wings?.burnt
 
 /datum/surgery_step/wing_reconstruction
-	name = "start wing reconstruction (hemostat)"
+	name = "приступите к восстановлению крыльев (зажим)"
 	implements = list(
 		TOOL_HEMOSTAT = 85,
 		TOOL_SCREWDRIVER = 35,

@@ -34,23 +34,23 @@
 		REMOVE_TRAIT(eye_owner, HUD_trait, ORGAN_TRAIT)
 
 /obj/item/organ/internal/cyberimp/eyes/hud/medical
-	name = "Medical HUD implant"
+	name = "Имплант медицинского интерфейса"
 	desc = "These cybernetic eye implants will display a medical HUD over everything you see."
 	HUD_type = DATA_HUD_MEDICAL_ADVANCED
 	HUD_trait = TRAIT_MEDICAL_HUD
 
 /obj/item/organ/internal/cyberimp/eyes/hud/security
-	name = "Security HUD implant"
+	name = "Имплант интерфейса СБ"
 	desc = "These cybernetic eye implants will display a security HUD over everything you see."
 	HUD_type = DATA_HUD_SECURITY_ADVANCED
 	HUD_trait = TRAIT_SECURITY_HUD
 
 /obj/item/organ/internal/cyberimp/eyes/hud/diagnostic
-	name = "Diagnostic HUD implant"
+	name = "Имплант диагностического интерфейса"
 	desc = "These cybernetic eye implants will display a diagnostic HUD over everything you see."
 	HUD_type = DATA_HUD_DIAGNOSTIC_ADVANCED
 
 /obj/item/organ/internal/cyberimp/eyes/hud/security/syndicate
-	name = "Contraband Security HUD Implant"
+	name = "Контрабандный имплант СБ интерфейса"
 	desc = "A Cybersun Industries brand Security HUD Implant. These illicit cybernetic eye implants will display a security HUD over everything you see."
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN

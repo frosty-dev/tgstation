@@ -1,5 +1,5 @@
 /datum/surgery/advanced/bioware/ligament_hook
-	name = "Ligament Hook"
+	name = "Крючкообразные связки"
 	desc = "A surgical procedure which reshapes the connections between torso and limbs, making it so limbs can be attached manually if severed. \
 		However this weakens the connection, making them easier to detach as well."
 	possible_locs = list(BODY_ZONE_CHEST)
@@ -15,7 +15,7 @@
 	bioware_target = BIOWARE_LIGAMENTS
 
 /datum/surgery_step/reshape_ligaments
-	name = "reshape ligaments (hand)"
+	name = "придайте связкам форму (мануальное действие)"
 	accept_hand = TRUE
 	time = 125
 

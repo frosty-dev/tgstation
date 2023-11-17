@@ -100,7 +100,7 @@
 
 /// Parent Type for arms, should not appear in game.
 /obj/item/bodypart/arm
-	name = "arm"
+	name = "рука"
 	desc = "Hey buddy give me a HAND and report this to the github because you shouldn't be seeing this."
 	attack_verb_continuous = list("slaps", "punches")
 	attack_verb_simple = list("slap", "punch")
@@ -128,7 +128,7 @@
 	return ..()
 
 /obj/item/bodypart/arm/left
-	name = "left arm"
+	name = "левая рука"
 	desc = "Did you know that the word 'sinister' stems originally from the \
 		Latin 'sinestra' (left hand), because the left hand was supposed to \
 		be possessed by the devil? This arm appears to be possessed by no \
@@ -235,7 +235,7 @@
 
 
 /obj/item/bodypart/arm/right
-	name = "right arm"
+	name = "правая рука"
 	desc = "Over 87% of humans are right handed. That figure is much lower \
 		among humans missing their right arm."
 	body_zone = BODY_ZONE_R_ARM
@@ -340,7 +340,7 @@
 
 /// Parent Type for legs, should not appear in game.
 /obj/item/bodypart/leg
-	name = "leg"
+	name = "нога"
 	desc = "This item shouldn't exist. Talk about breaking a leg. Badum-Tss!"
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
@@ -363,7 +363,7 @@
 	return ..()
 
 /obj/item/bodypart/leg/left
-	name = "left leg"
+	name = "левая нога"
 	desc = "Some athletes prefer to tie their left shoelaces first for good \
 		luck. In this instance, it probably would not have helped."
 	icon_state = "default_human_l_leg"
@@ -456,7 +456,7 @@
 	should_draw_greyscale = FALSE
 
 /obj/item/bodypart/leg/right
-	name = "right leg"
+	name = "правая нога"
 	desc = "You put your right leg in, your right leg out. In, out, in, out, \
 		shake it all about. And apparently then it detaches.\n\
 		The hokey pokey has certainly changed a lot since space colonisation."

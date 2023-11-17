@@ -1,6 +1,6 @@
 ///Tail parent, it doesn't do very much.
 /obj/item/organ/external/tail
-	name = "tail"
+	name = "хвост"
 	desc = "A severed tail. What did you cut this off of?"
 	icon_state = "severedtail"
 
@@ -113,7 +113,7 @@
 	return GLOB.tails_list_monkey
 
 /obj/item/organ/external/tail/lizard
-	name = "lizard tail"
+	name = "хвост ящера"
 	desc = "A severed lizard tail. Somewhere, no doubt, a lizard hater is very pleased with themselves."
 	preference = "feature_lizard_tail"
 

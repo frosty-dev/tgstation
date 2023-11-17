@@ -1,5 +1,5 @@
 /datum/surgery/advanced/bioware/nerve_splicing
-	name = "Nerve Splicing"
+	name = "Сращивание нервов"
 	desc = "A surgical procedure which splices the patient's nerves, making them more resistant to stuns."
 	possible_locs = list(BODY_ZONE_CHEST)
 	steps = list(
@@ -15,7 +15,7 @@
 	bioware_target = BIOWARE_NERVES
 
 /datum/surgery_step/splice_nerves
-	name = "splice nerves (hand)"
+	name = "соедините нервы (мануальное действие)"
 	accept_hand = TRUE
 	time = 155
 
@@ -40,7 +40,7 @@
 	display_pain(target, "You regain feeling in your body; It feels like everything's happening around you in slow motion!")
 	new /datum/bioware/spliced_nerves(target)
 	if(target.ckey)
-		SSblackbox.record_feedback("nested tally", "nerve_splicing", 1, list("[target.ckey]", "got")) 
+		SSblackbox.record_feedback("nested tally", "nerve_splicing", 1, list("[target.ckey]", "got"))
 	return ..()
 
 /datum/bioware/spliced_nerves

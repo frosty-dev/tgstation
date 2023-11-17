@@ -1,5 +1,5 @@
 /datum/surgery/advanced/bioware/nerve_grounding
-	name = "Nerve Grounding"
+	name = "Заземление нервов"
 	desc = "A surgical procedure which makes the patient's nerves act as grounding rods, protecting them from electrical shocks."
 	possible_locs = list(BODY_ZONE_CHEST)
 	steps = list(
@@ -15,7 +15,7 @@
 	bioware_target = BIOWARE_NERVES
 
 /datum/surgery_step/ground_nerves
-	name = "ground nerves (hand)"
+	name = "заземлите нервы (мануальное действие)"
 	accept_hand = TRUE
 	time = 155
 

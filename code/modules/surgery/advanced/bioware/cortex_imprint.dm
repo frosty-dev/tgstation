@@ -1,5 +1,5 @@
 /datum/surgery/advanced/bioware/cortex_imprint
-	name = "Cortex Imprint"
+	name = "Импринтинг коры головного мозга"
 	desc = "A surgical procedure which modifies the cerebral cortex into a redundant neural pattern, making the brain able to bypass impediments caused by minor brain traumas."
 	possible_locs = list(BODY_ZONE_HEAD)
 	steps = list(
@@ -21,7 +21,7 @@
 	return ..()
 
 /datum/surgery_step/imprint_cortex
-	name = "imprint cortex (hand)"
+	name = "проведите процедуру импринтинга (мануальное действие)"
 	accept_hand = TRUE
 	time = 125
 
@@ -64,7 +64,7 @@
 	return FALSE
 
 /datum/bioware/cortex_imprint
-	name = "Cortex Imprint"
+	name = "Импринтинг коры головного мозга"
 	desc = "The cerebral cortex has been reshaped into a redundant neural pattern, making the brain able to bypass impediments caused by minor brain traumas."
 	mod_type = BIOWARE_CORTEX
 	can_process = TRUE

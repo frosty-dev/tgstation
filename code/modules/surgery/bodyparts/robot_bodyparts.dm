@@ -12,7 +12,7 @@
 //Failure to follow this pattern will cause the hand's icons to be missing due to the way get_limb_icon() works to generate the mob's icons using the aux_zone var.
 
 /obj/item/bodypart/arm/left/robot
-	name = "cyborg left arm"
+	name = "левая рука киборга"
 	desc = "A skeletal limb wrapped in pseudomuscles, with a low-conductivity case."
 	limb_id = BODYPART_ID_ROBOTIC
 	attack_verb_simple = list("slapped", "punched")
@@ -44,7 +44,7 @@
 	disabling_threshold_percentage = 1
 
 /obj/item/bodypart/arm/right/robot
-	name = "cyborg right arm"
+	name = "правая рука киборга"
 	desc = "A skeletal limb wrapped in pseudomuscles, with a low-conductivity case."
 	attack_verb_simple = list("slapped", "punched")
 	inhand_icon_state = "buildpipe"
@@ -77,7 +77,7 @@
 	damage_examines = list(BRUTE = ROBOTIC_BRUTE_EXAMINE_TEXT, BURN = ROBOTIC_BURN_EXAMINE_TEXT, CLONE = DEFAULT_CLONE_EXAMINE_TEXT)
 
 /obj/item/bodypart/leg/left/robot
-	name = "cyborg left leg"
+	name = "левая нога киборга"
 	desc = "A skeletal limb wrapped in pseudomuscles, with a low-conductivity case."
 	attack_verb_simple = list("kicked", "stomped")
 	inhand_icon_state = "buildpipe"
@@ -123,7 +123,7 @@
 	to_chat(owner, span_danger("As your [plaintext_zone] unexpectedly malfunctions, it causes you to fall to the ground!"))
 
 /obj/item/bodypart/leg/right/robot
-	name = "cyborg right leg"
+	name = "правая нога киборга"
 	desc = "A skeletal limb wrapped in pseudomuscles, with a low-conductivity case."
 	attack_verb_simple = list("kicked", "stomped")
 	inhand_icon_state = "buildpipe"
@@ -169,7 +169,7 @@
 	to_chat(owner, span_danger("As your [plaintext_zone] unexpectedly malfunctions, it causes you to fall to the ground!"))
 
 /obj/item/bodypart/chest/robot
-	name = "cyborg torso"
+	name = "торс киборга"
 	desc = "A heavily reinforced case containing cyborg logic boards, with space for a standard power cell."
 	inhand_icon_state = "buildpipe"
 	icon_static =  'icons/mob/augmentation/augments.dmi'
@@ -342,7 +342,7 @@
 	return ..()
 
 /obj/item/bodypart/head/robot
-	name = "cyborg head"
+	name = "голова киборга"
 	desc = "A standard reinforced braincase, with spine-plugged neural socket and sensor gimbals."
 	inhand_icon_state = "buildpipe"
 	icon_static = 'icons/mob/augmentation/augments.dmi'
@@ -465,7 +465,7 @@
 // HP is also reduced just in case this isnt enough
 
 /obj/item/bodypart/arm/left/robot/surplus
-	name = "surplus prosthetic left arm"
+	name = "дешевый протез левой руки"
 	desc = "A skeletal, robotic limb. Outdated and fragile, but it's still better than nothing."
 	icon_static = 'icons/mob/augmentation/surplus_augments.dmi'
 	icon = 'icons/mob/augmentation/surplus_augments.dmi'
@@ -476,7 +476,7 @@
 	biological_state = (BIO_METAL|BIO_JOINTED)
 
 /obj/item/bodypart/arm/right/robot/surplus
-	name = "surplus prosthetic right arm"
+	name = "дешевый протез правой руки"
 	desc = "A skeletal, robotic limb. Outdated and fragile, but it's still better than nothing."
 	icon_static = 'icons/mob/augmentation/surplus_augments.dmi'
 	icon = 'icons/mob/augmentation/surplus_augments.dmi'
@@ -487,7 +487,7 @@
 	biological_state = (BIO_METAL|BIO_JOINTED)
 
 /obj/item/bodypart/leg/left/robot/surplus
-	name = "surplus prosthetic left leg"
+	name = "дешевый протез левой ноги"
 	desc = "A skeletal, robotic limb. Outdated and fragile, but it's still better than nothing."
 	icon_static = 'icons/mob/augmentation/surplus_augments.dmi'
 	icon = 'icons/mob/augmentation/surplus_augments.dmi'
@@ -498,7 +498,7 @@
 	biological_state = (BIO_METAL|BIO_JOINTED)
 
 /obj/item/bodypart/leg/right/robot/surplus
-	name = "surplus prosthetic right leg"
+	name = "дешевый протез правой ноги"
 	desc = "A skeletal, robotic limb. Outdated and fragile, but it's still better than nothing."
 	icon_static = 'icons/mob/augmentation/surplus_augments.dmi'
 	icon = 'icons/mob/augmentation/surplus_augments.dmi'

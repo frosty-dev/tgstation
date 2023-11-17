@@ -1,5 +1,5 @@
 /datum/surgery/advanced/pacify
-	name = "Pacification"
+	name = "Усмирение"
 	desc = "A surgical procedure which permanently inhibits the aggression center of the brain, making the patient unwilling to cause direct harm."
 	possible_locs = list(BODY_ZONE_HEAD)
 	requires_bodypart_type = NONE
@@ -19,7 +19,7 @@
 		return FALSE
 
 /datum/surgery_step/pacify
-	name = "rewire brain (hemostat)"
+	name = "произведите усмирение (зажим)"
 	implements = list(
 		TOOL_HEMOSTAT = 100,
 		TOOL_SCREWDRIVER = 35,

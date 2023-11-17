@@ -1,5 +1,5 @@
 /datum/surgery/advanced/bioware/muscled_veins
-	name = "Vein Muscle Membrane"
+	name = "Венозные мышцы"
 	desc = "A surgical procedure which adds a muscled membrane to blood vessels, allowing them to pump blood without a heart."
 	possible_locs = list(BODY_ZONE_CHEST)
 	steps = list(
@@ -15,7 +15,7 @@
 	bioware_target = BIOWARE_CIRCULATION
 
 /datum/surgery_step/muscled_veins
-	name = "shape vein muscles (hand)"
+	name = "сформируйте венозную сеть (мануальное действие)"
 	accept_hand = TRUE
 	time = 125
 
