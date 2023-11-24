@@ -3,9 +3,9 @@
 
 /obj/structure/grille
 	desc = "Хрупкий каркас из железных стержней."
-	name = "решетка"
-	icon = 'icons/obj/structures.dmi'
-	icon_state = "grille"
+	name = "решётка"
+	icon = 'icons/obj/smooth_structures/grille.dmi'
+	icon_state = "grille-0"
 	base_icon_state = "grille"
 	density = TRUE
 	anchored = TRUE
@@ -16,6 +16,13 @@
 	armor_type = /datum/armor/structure_grille
 	max_integrity = 50
 	integrity_failure = 0.4
+	appearance_flags = KEEP_TOGETHER
+	can_be_unanchored = TRUE
+	canSmoothWith = SMOOTH_GROUP_GRILLE
+	smoothing_groups = SMOOTH_GROUP_GRILLE
+	smoothing_flags = SMOOTH_BITMASK
+	var/holes = 0 //bitflag
+
 	var/rods_type = /obj/item/stack/rods
 	var/rods_amount = 2
 
@@ -36,19 +43,36 @@
 
 /obj/structure/grille/take_damage(damage_amount, damage_type = BRUTE, damage_flag = 0, sound_effect = 1, attack_dir)
 	. = ..()
+	var/ratio = atom_integrity / max_integrity
+	ratio = CEILING(ratio*4, 1) * 25
+
+	if(ratio > 75)
+		return
+
+	if(broken)
+		holes = (holes | 16) //16 is the biggest hole
+		update_icon()
+		return
+
+	holes = (holes | (1 << rand(0,3))) //add random holes between 1 and 8
+
 	update_appearance()
 
 /obj/structure/grille/update_appearance(updates)
-	if(QDELETED(src) || broken)
-		return
-
-	. = ..()
-	if((updates & UPDATE_SMOOTHING) && (smoothing_flags & (SMOOTH_CORNERS|SMOOTH_BITMASK)))
-		QUEUE_SMOOTH(src)
+	for(var/i = 0; i < 5; i++)
+		var/mask = 1 << i
+		if(holes & mask)
+			filters += filter(type="alpha", icon = icon('icons/obj/smooth_structures/grille.dmi', "broken_[i]"), flags = MASK_INVERSE)
+	return ..()
 
 /obj/structure/grille/update_icon_state()
-	icon_state = "[base_icon_state][((atom_integrity / max_integrity) <= 0.5) ? "50_[rand(0, 3)]" : null]"
-	return ..()
+	. = ..()
+	if(QDELETED(src))
+		return
+	for(var/i = 0; i < 5; i++)
+		var/mask = 1 << i
+		if(holes & mask)
+			filters += filter(type="alpha", icon = icon('icons/obj/smooth_structures/grille.dmi', "broken_[i]"), flags = MASK_INVERSE)
 
 /obj/structure/grille/examine(mob/user)
 	. = ..()
@@ -162,7 +186,7 @@
 		return
 	user.changeNext_move(CLICK_CD_MELEE)
 	user.do_attack_animation(src, ATTACK_EFFECT_KICK)
-	user.visible_message(span_warning("[user] hits [src]."), null, null, COMBAT_MESSAGE_RANGE)
+	user.visible_message(span_warning("[user] пинает [src]."), null, null, COMBAT_MESSAGE_RANGE)
 	log_combat(user, src, "hit")
 	if(!shock(user, 70))
 		take_damage(rand(5,10), BRUTE, MELEE, 1)
@@ -170,7 +194,7 @@
 /obj/structure/grille/attack_alien(mob/living/user, list/modifiers)
 	user.do_attack_animation(src)
 	user.changeNext_move(CLICK_CD_MELEE)
-	user.visible_message(span_warning("[user] mangles [src]."), null, null, COMBAT_MESSAGE_RANGE)
+	user.visible_message(span_warning("[user] царапает [src]."), null, null, COMBAT_MESSAGE_RANGE)
 	if(!shock(user, 70))
 		take_damage(20, BRUTE, MELEE, 1)
 
@@ -298,13 +322,12 @@
 /obj/structure/grille/atom_break()
 	. = ..()
 	if(!broken && !(flags_1 & NODECONSTRUCT_1))
-		icon_state = "brokengrille"
-		set_density(FALSE)
-		atom_integrity = 20
+		density = FALSE
 		broken = TRUE
-		rods_amount = 1
 		var/obj/item/dropped_rods = new rods_type(drop_location(), rods_amount)
 		transfer_fingerprints_to(dropped_rods)
+		rods_amount = 1
+		atom_integrity = 20
 
 /obj/structure/grille/proc/repair_grille()
 	if(broken)
@@ -312,9 +335,9 @@
 		set_density(TRUE)
 		atom_integrity = max_integrity
 		broken = FALSE
-		rods_amount = 2
 		return TRUE
 	return FALSE
+
 
 // shock user with probability prb (if all connections & power are working)
 // returns 1 if shocked, 0 otherwise
@@ -368,13 +391,15 @@
 	return null
 
 /obj/structure/grille/broken // Pre-broken grilles for map placement
-	icon_state = "brokengrille"
+	icon_state = "grille_broken"
 	density = FALSE
+	atom_integrity = 20
 	broken = TRUE
 	rods_amount = 1
 
 /obj/structure/grille/broken/Initialize(mapload)
 	. = ..()
-	take_damage(max_integrity * 0.6)
+	holes = (holes | 16)
+	update_icon()
 
 #undef CLEAR_TILE_MOVE_LIMIT

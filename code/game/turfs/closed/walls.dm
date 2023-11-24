@@ -2,8 +2,8 @@
 #define LEANING_OFFSET 11
 
 /turf/closed/wall
-	name = "wall"
-	desc = "A huge chunk of iron used to separate rooms."
+	name = "стена"
+	desc = "Огромный кусок железа, служивший для разделения комнат."
 	icon = 'icons/turf/walls/baywall.dmi'
 	icon_state = "wall-0"
 	base_icon_state = "wall"

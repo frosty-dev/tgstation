@@ -176,7 +176,7 @@
 
 	if(client)
 		if(client.prefs.muted & MUTE_IC)
-			to_chat(src, span_boldwarning("You cannot send IC messages (muted)."))
+			to_chat(src, span_boldwarning("Не могу говорить в IC (muted)."))
 			return
 		if (!(ignore_spam || forced) && client.handle_spam_prevention(message, MUTE_IC))
 			return
@@ -185,7 +185,7 @@
 		message = trim(copytext_char(sanitize(message), 1, MAX_MESSAGE_LEN))
 
 	log_talk(message, LOG_SAY)
-	var/rendered = span_deadsay("<b>UNDEAD: [src]</b> says, \"[message]\"")
+	var/rendered = span_deadsay("<b>НЕЖИТЬ: [src]</b> говорит, \"[message]\"")
 	relay_to_list_and_observers(rendered, GLOB.revenant_relay_mobs, src)
 
 /mob/living/basic/revenant/ClickOn(atom/A, params) //revenants can't interact with the world directly, so we gotta do some wacky override stuff

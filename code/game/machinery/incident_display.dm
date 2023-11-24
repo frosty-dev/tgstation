@@ -32,7 +32,7 @@ DEFINE_BITFIELD(sign_features, list(
 	icon = 'icons/obj/machines/incident_display.dmi'
 	icon_preview = "stat_display_delam"
 	icon_state = "stat_display_delam"
-	verb_say = "beeps"
+	verb_say = "констатирует"
 	verb_ask = "bloops"
 	verb_exclaim = "blares"
 	idle_power_usage = 450

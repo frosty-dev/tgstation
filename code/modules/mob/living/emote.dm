@@ -669,7 +669,7 @@
 		return FALSE
 
 	if(user.client && user.client.prefs.muted & MUTE_IC)
-		to_chat(user, span_boldwarning("You cannot send IC messages (muted)."))
+		to_chat(user, span_boldwarning("Вы не можете отправлять сообщения в IC (мут)."))
 		return FALSE
 
 	message = params ? params : get_custom_emote_from_user()

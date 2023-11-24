@@ -55,9 +55,9 @@
 	icon_state = "generic"
 	layer = BELOW_OBJ_LAYER
 	density = TRUE
-	verb_say = "beeps"
-	verb_ask = "beeps"
-	verb_exclaim = "beeps"
+	verb_say = "констатирует"
+	verb_ask = "констатирует"
+	verb_exclaim = "восклицает"
 	max_integrity = 300
 	integrity_failure = 0.33
 	armor_type = /datum/armor/machinery_vending

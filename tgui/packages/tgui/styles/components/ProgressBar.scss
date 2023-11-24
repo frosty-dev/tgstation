@@ -16,7 +16,7 @@ $bg-map: colors.$bg-map !default;
   display: inline-block;
   position: relative;
   width: 100%;
-  padding: 0 0.5em;
+  padding: 0.1em 0.5em;
   border-width: base.em(1px) !important;
   border-style: solid !important;
   border-radius: $border-radius;
@@ -40,7 +40,14 @@ $bg-map: colors.$bg-map !default;
   line-height: base.em(17px);
   width: 100%;
   text-align: right;
+  font-weight: bold;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 1),
+               1px -1px 0 rgba(0, 0, 0, 1),
+               -1px 1px 0 rgba(0, 0, 0, 1),
+               1px 1px 0 rgba(0, 0, 0, 1);
 }
+
 
 .ProgressBar--color--default {
   border: base.em(1px) solid $color-default-fill;

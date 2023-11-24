@@ -99,7 +99,7 @@
 #define JOB_ERT_JANITOR "Janitorial Response Officer"
 #define JOB_ERT_CLOWN "Entertainment Response Officer"
 //CentCom
-#define JOB_CENTCOM "Central Command"
+#define JOB_CENTCOM "Центральное Командование"
 #define JOB_CENTCOM_OFFICIAL "CentCom Official"
 #define JOB_CENTCOM_ADMIRAL "Admiral"
 #define JOB_CENTCOM_COMMANDER "CentCom Commander"

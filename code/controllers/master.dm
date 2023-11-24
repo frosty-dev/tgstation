@@ -183,10 +183,10 @@ GLOBAL_REAL(Master, /datum/controller/master)
 		LAZYINITLIST(BadBoy.failure_strikes)
 		switch(++BadBoy.failure_strikes[BadBoy.type])
 			if(2)
-				msg = "The [BadBoy.name] subsystem was the last to fire for 2 controller restarts. It will be recovered now and disabled if it happens again."
+				msg = "Подсистема [BadBoy.name] сработала последней при 2 перезагрузках контроллера. Она была перезапущена и будет отключена, если это произойдет в 3-й раз."
 				FireHim = TRUE
 			if(3)
-				msg = "The [BadBoy.name] subsystem seems to be destabilizing the MC and will be put offline."
+				msg = "Подсистема [BadBoy.name], похоже, дестабилизирует работу мастер-контроллера и будет вырублена с одного удара наъхуй."
 				BadBoy.flags |= SS_NO_FIRE
 		if(msg)
 			to_chat(GLOB.admins, span_boldannounce("[msg]"))
@@ -199,7 +199,7 @@ GLOBAL_REAL(Master, /datum/controller/master)
 		current_runlevel = Master.current_runlevel
 		StartProcessing(10)
 	else
-		to_chat(world, span_boldannounce("The Master Controller is having some issues, we will need to re-initialize EVERYTHING"))
+		to_chat(world, span_boldannounce("У мастер-контроллера возникли проблемы, инициализируем ВСЕ подсистемы"))
 		Initialize(20, TRUE, FALSE)
 
 // Please don't stuff random bullshit here,
@@ -216,7 +216,7 @@ GLOBAL_REAL(Master, /datum/controller/master)
 	init_stage_completed = 0
 	var/mc_started = FALSE
 
-	to_chat(world, span_boldannounce("Initializing subsystems..."))
+	to_chat(world, span_boldannounce("Инициализация подсистем..."))
 
 	var/list/stage_sorted_subsystems = new(INITSTAGE_MAX)
 	for (var/i in 1 to INITSTAGE_MAX)
@@ -255,12 +255,12 @@ GLOBAL_REAL(Master, /datum/controller/master)
 
 
 
-	var/msg = "Initializations complete within [time] second[time == 1 ? "" : "s"]!"
-	to_chat(world, span_boldannounce("[msg]"))
+	var/msg = "Инициализация завершена за [time] секунд[time == 1 ? "" : "ы"]!"
+	to_chat(world, span_green("[msg]"))
 	log_world(msg)
 
 
-	if(world.system_type == MS_WINDOWS && CONFIG_GET(flag/toast_notification_on_init) && !length(GLOB.clients))
+	if(world.system_type == MS_WINDOWS && CONFIG_GET(flag/toast_notification_on_init) && !length(GLOB.clients)) // backdur
 		world.shelleo("start /min powershell -ExecutionPolicy Bypass -File tools/initToast/initToast.ps1 -name \"[world.name]\" -icon %CD%\\icons\\ui_icons\\common\\tg_16.png -port [world.port]")
 
 	// Set world options.
@@ -310,11 +310,11 @@ GLOBAL_REAL(Master, /datum/controller/master)
 
 	// Gave invalid return value.
 	if(result && !(result in valid_results))
-		warning("[subsystem.name] subsystem initialized, returning invalid result [result]. This is a bug.")
+		warning("[subsystem.name] инициализирована, возвращается недопустимый результат [result]. блядь.")
 
 	// just returned ..() or didn't implement Initialize() at all
 	if(result == SS_INIT_NONE)
-		warning("[subsystem.name] subsystem does not implement Initialize() or it returns ..(). If the former is true, the SS_NO_INIT flag should be set for this subsystem.")
+		warning("[subsystem.name] подсистема не дергаёт Initialize() или возвращает ...(). Если верно первое, то для этой подсистемы должен быть установлен флаг SS_NO_INIT.")
 
 	if(result != SS_INIT_FAILURE)
 		// Some form of success, implicit failure, or the SS in unused.
@@ -334,19 +334,19 @@ GLOBAL_REAL(Master, /datum/controller/master)
 
 	switch(result)
 		if(SS_INIT_FAILURE)
-			message_prefix = "Failed to initialize [subsystem.name] subsystem after"
+			message_prefix = "Не удалось инициализировать подсистему [subsystem.name] после"
 			chat_warning = TRUE
 		if(SS_INIT_SUCCESS, SS_INIT_NO_MESSAGE)
-			message_prefix = "Initialized [subsystem.name] subsystem within"
+			message_prefix = "Инициализирована подсистема [subsystem.name] за"
 		if(SS_INIT_NO_NEED)
 			// This SS is disabled or is otherwise shy.
 			return
 		else
 			// SS_INIT_NONE or an invalid value.
-			message_prefix = "Initialized [subsystem.name] subsystem with errors within"
+			message_prefix = "!!!Инициализирована подсистема [subsystem.name] С ОШИБКАМИ за"
 			chat_warning = TRUE
 
-	var/message = "[message_prefix] [seconds] second[seconds == 1 ? "" : "s"]!"
+	var/message = "[message_prefix] [seconds] секунд[seconds == 1 ? "" : "ы"]!"
 	var/chat_message = chat_warning ? span_boldwarning(message) : span_boldannounce(message)
 
 	if(result != SS_INIT_NO_MESSAGE)
@@ -378,8 +378,8 @@ GLOBAL_REAL(Master, /datum/controller/master)
 	if (rtn >= MC_LOOP_RTN_GRACEFUL_EXIT || processing < 0)
 		return //this was suppose to happen.
 	//loop ended, restart the mc
-	log_game("MC crashed or runtimed, restarting")
-	message_admins("MC crashed or runtimed, restarting")
+	log_game("Мастер-контроллер аварийно завершил работу, перезапускаем")
+	message_admins("Мастер-контроллер аварийно завершил работу, перезапускаем")
 	var/rtn2 = Recreate_MC()
 	if (rtn2 <= 0)
 		log_game("Failed to recreate MC (Error code: [rtn2]), it's up to the failsafe now")
@@ -422,7 +422,7 @@ GLOBAL_REAL(Master, /datum/controller/master)
 				runlevel_sorted_subsystems[I] += SS
 				added_to_any = TRUE
 		if(!added_to_any)
-			WARNING("[SS.name] subsystem is not SS_NO_FIRE but also does not have any runlevels set!")
+			WARNING("У подсистемы [SS.name] не установлено SS_NO_FIRE, но и не имеет установленных уровней выполнения!")
 
 	queue_head = null
 	queue_tail = null

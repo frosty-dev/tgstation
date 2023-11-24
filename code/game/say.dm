@@ -110,6 +110,13 @@ GLOBAL_LIST_INIT(freqtospan, list(
 	var/spanpart1 = "<span class='[radio_freq ? get_radio_span(radio_freq) : "game say"]'>"
 	//Start name span.
 	var/spanpart2 = "<span class='name'>"
+	if(isliving(speaker))
+		var/mob/living/L = speaker
+		if(L.name != L.last_heard_name) // generate color based on name, skip if already generated
+			var/num = hex2num(copytext(md5(L.name), 1, 7))
+			L.last_used_color = hsv2rgb(num % 360, (num / 360) % 10 / 100 + 0.48, num / 360 / 10 % 15 / 100 + 0.35)
+			L.last_heard_name = L.name
+		spanpart2 = "<span class='name' [L.last_used_color ? "style='color: [L.last_used_color]'" : ""]>"
 	//Radio freq/name display
 	var/freqpart = radio_freq ? "\[[get_radio_name(radio_freq)]\] " : ""
 	//Speaker name
@@ -172,10 +179,7 @@ GLOBAL_LIST_INIT(freqtospan, list(
 		spans |= SPAN_YELL
 
 	var/spanned = attach_spans(input, spans)
-
-	var/random_mod = "<i>[pick(77;"[say_mod(input, message_mods)],", 25;" — ", 25;"молвит,", 25;"сообщает,")]</i>"
-
-	return "[random_mod] \"[spanned]\""
+	return "[say_mod], \"[spanned]\""
 
 /// Transforms the speech emphasis mods from [/atom/movable/proc/say_emphasis] into the appropriate HTML tags. Includes escaping.
 #define ENCODE_HTML_EMPHASIS(input, char, html, varname) \

@@ -47,19 +47,17 @@ function run_after_focus(callback) {
 function createStatusTab(name) {
 	if (name.indexOf(".") != -1) {
 		var splitName = name.split(".");
-		if (split_admin_tabs && splitName[0] === "Admin")
+		if (split_admin_tabs && splitName[0] === "Адм")
 			name = splitName[1];
 		else
 			name = splitName[0];
 	}
-	if (document.getElementById(name) || name.trim() == "") {
+	if(document.getElementById(name) || name.trim() == "")
 		return;
-	}
-	if (!verb_tabs.includes(name) && !permanent_tabs.includes(name)) {
+	if(!verb_tabs.includes(name) && !permanent_tabs.includes(name))
 		return;
-	}
 	var B = document.createElement("BUTTON");
-	B.onclick = function () {
+	B.onclick = function() {
 		tab_change(name);
 		this.blur();
 	};
@@ -74,7 +72,6 @@ function createStatusTab(name) {
 	//END ORDERING
 	menu.appendChild(B);
 	SendTabToByond(name);
-	under_menu.style.height = menu.clientHeight + 'px';
 }
 
 function removeStatusTab(name) {

@@ -99,7 +99,7 @@
 		if(gen_turf.turf_flags & NO_RUINS)
 			new_turf.turf_flags |= NO_RUINS
 
-	var/message = "[name] terrain generation finished in [(REALTIMEOFDAY - start_time)/10]s!"
+	var/message = "Генерация рельефа [name] завершено за [(REALTIMEOFDAY - start_time)/10] секунд!"
 	to_chat(world, span_boldannounce("[message]"))
 	log_world(message)
 

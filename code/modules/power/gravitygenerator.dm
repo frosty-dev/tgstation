@@ -20,8 +20,8 @@ GLOBAL_LIST_EMPTY(gravity_generators)
 //
 
 /obj/machinery/gravity_generator
-	name = "gravitational generator"
-	desc = "A device which produces a graviton field when set up."
+	name = "гравитационный генератор"
+	desc = "Устройство, создающее при настройке гравитационное поле."
 	icon = 'icons/obj/machines/gravity_generator.dmi'
 	density = TRUE
 	move_resist = INFINITY
@@ -148,9 +148,6 @@ GLOBAL_LIST_EMPTY(gravity_generators)
 	/// Audio for when the gravgen is on
 	var/datum/looping_sound/gravgen/soundloop
 
-	///Amount of shielding we offer against a radioactive nebula
-	var/radioactive_nebula_shielding = 4
-
 ///Station generator that spawns with gravity turned off.
 /obj/machinery/gravity_generator/main/off
 	on = FALSE
@@ -165,7 +162,6 @@ GLOBAL_LIST_EMPTY(gravity_generators)
 		enable()
 		center_part.add_overlay("activated")
 
-	add_to_nebula_shielding(src, /datum/station_trait/nebula/hostile/radiation, PROC_REF(get_radioactive_nebula_shielding))
 
 /obj/machinery/gravity_generator/main/Destroy() // If we somehow get deleted, remove all of our other parts.
 	investigate_log("was destroyed!", INVESTIGATE_GRAVITY)
@@ -472,9 +468,6 @@ GLOBAL_LIST_EMPTY(gravity_generators)
 	for(var/obj/machinery/gravity_generator/part as anything in generator_parts)
 		SET_PLANE(part, PLANE_TO_TRUE(part.plane), new_turf)
 
-/// Returns the radioactive shielding (if there's a radioactive nebula). Called from a callback set in add_to_nebula_shielding()
-/obj/machinery/gravity_generator/main/proc/get_radioactive_nebula_shielding()
-	return on ? radioactive_nebula_shielding : 0
 
 //prevents shuttles attempting to rotate this since it messes up sprites
 /obj/machinery/gravity_generator/main/shuttleRotate(rotation, params)

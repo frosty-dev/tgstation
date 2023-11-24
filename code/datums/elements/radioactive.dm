@@ -47,10 +47,10 @@
 
 		radiation_pulse(
 			radioactive_object,
-			max_range = range,
-			threshold = threshold,
-			chance = chance,
-			minimum_exposure_time = minimum_exposure_time,
+			max_range = 3,
+			threshold = RAD_LIGHT_INSULATION,
+			chance = URANIUM_IRRADIATION_CHANCE,
+			minimum_exposure_time = URANIUM_RADIATION_MINIMUM_EXPOSURE_TIME,
 		)
 
 		radioactive_objects[radioactive_object] = world.time

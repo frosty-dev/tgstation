@@ -152,8 +152,8 @@
 	return SHAME
 
 /obj/item/shovel/spade
-	name = "spade"
-	desc = "A small tool for digging and moving dirt."
+	name = "лопатка"
+	desc = "Маленькая лопатка для вскапывания земли."
 	icon_state = "spade"
 	inhand_icon_state = "spade"
 	lefthand_file = 'icons/mob/inhands/equipment/hydroponics_lefthand.dmi'

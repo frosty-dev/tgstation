@@ -414,8 +414,8 @@
 	return TOXLOSS
 
 /obj/item/cultivator
-	name = "cultivator"
-	desc = "It's used for removing weeds or scratching your back."
+	name = "тяпка"
+	desc = "Используется для удаления сорняков и чесания спины."
 	icon = 'icons/obj/service/hydroponics/equipment.dmi'
 	icon_state = "cultivator"
 	inhand_icon_state = "cultivator"
@@ -426,20 +426,20 @@
 	throwforce = 7
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT*0.5)
-	attack_verb_continuous = list("slashes", "slices", "cuts", "claws")
-	attack_verb_simple = list("slash", "slice", "cut", "claw")
+	attack_verb_continuous = list("разрубает", "разрыхляет", "режет", "культивирует")
+	attack_verb_simple = list("разрубает", "разрыхляет", "режет", "культивирует")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 
 /obj/item/cultivator/suicide_act(mob/living/user)
-	user.visible_message(span_suicide("[user] is scratching [user.p_their()] back as hard as [user.p_they()] can with  [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
+	user.visible_message(span_suicide("[user] чешет [user.ru_ego()] спину насколько сильно может [user.ru_who()] ,используя, <b>[src.name]</b>! Кажется, [user.p_theyre()] пытается покончить с собой!"))
 	return BRUTELOSS
 
 /obj/item/cultivator/rake
-	name = "rake"
+	name = "грабли"
 	icon_state = "rake"
 	w_class = WEIGHT_CLASS_NORMAL
-	attack_verb_continuous = list("slashes", "slices", "bashes", "claws")
-	attack_verb_simple = list("slash", "slice", "bash", "claw")
+	attack_verb_continuous = list("ударяет", "бьёт", "колотит", "царапает")
+	attack_verb_simple = list("ударяет", "бьёт", "колотит", "царапает")
 	hitsound = null
 	custom_materials = list(/datum/material/wood = SHEET_MATERIAL_AMOUNT * 1.5)
 	resistance_flags = FLAMMABLE
@@ -461,12 +461,12 @@
 		H.set_confusion_if_lower(10 SECONDS)
 		H.Stun(20)
 		playsound(src, 'sound/weapons/punch4.ogg', 50, TRUE)
-		H.visible_message(span_warning("[H] steps on [src] causing the handle to hit [H.p_them()] right in the face!"), \
-						  span_userdanger("You step on [src] causing the handle to hit you right in the face!"))
+		H.visible_message(span_warning("[H] наступает на [src], ударяя рукояткой [H.ru_na()] прямо в лицо!") , \
+						  span_userdanger("Наступаю на [src], ударяя рукояткой прямо по моему лицу!"))
 
 /obj/item/hatchet
-	name = "hatchet"
-	desc = "A very sharp axe blade upon a short fibremetal handle. It has a long history of chopping things, but now it is used for chopping wood."
+	name = "Топорик"
+	desc = "Очень острый топорик с короткой рукояткой. Имеет долгую историю, сначала он рубил много разных вещей, теперь только деревья."
 	icon = 'icons/obj/service/hydroponics/equipment.dmi'
 	icon_state = "hatchet"
 	inhand_icon_state = "hatchet"

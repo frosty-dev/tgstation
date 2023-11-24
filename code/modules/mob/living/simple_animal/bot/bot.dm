@@ -15,10 +15,10 @@
 	sentience_type = SENTIENCE_ARTIFICIAL
 	status_flags = NONE //no default canpush
 	pass_flags = PASSFLAPS
-	verb_say = "заключает"
-	verb_ask = "спрашивает"
-	verb_exclaim = "высказывает"
-	verb_yell = "восклицает"
+	verb_say = "констатирует"
+	verb_ask = "запрашивает"
+	verb_exclaim = "объявляет"
+	verb_yell = "тревожит"
 	initial_language_holder = /datum/language_holder/synthetic
 	bubble_icon = "machine"
 	speech_span = SPAN_ROBOT

@@ -1,6 +1,6 @@
 /turf/open/floor/glass
-	name = "glass floor"
-	desc = "Don't jump on it, or do, I'm not your mom."
+	name = "стеклянный пол"
+	desc = "Не стоит прыгать на ней. Или стоит. Какая разница, на самом-то деле?"
 	icon = 'white/icons/turf/floors/glass.dmi' // WD EDIT
 	icon_state = "glass-0"
 	base_icon_state = "glass"
