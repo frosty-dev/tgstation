@@ -41,6 +41,20 @@ export type MaterialCostSequenceProps = {
   SHEET_MATERIAL_AMOUNT: number;
 };
 
+const MATERIAL_RU_TO_EN: Record<string, string> = {
+  'стекло': 'glass',
+  'железо': 'iron',
+  'пластик': 'plastic',
+  'титан': 'titanium',
+  'плазма': 'plasma',
+  'серебро': 'silver',
+  'золото': 'gold',
+  'уран': 'uranium',
+  'алмаз': 'diamond',
+  'блюспейс кристалл': 'bluespace crystal',
+  'бананиум': 'bananium',
+};
+
 /**
  * A horizontal list of material costs, with labels.
  *
@@ -79,7 +93,7 @@ export const MaterialCostSequence = (
           <Flex direction={'column'} align="center">
             <Flex.Item>
               <MaterialIcon
-                materialName={material}
+                materialName={MATERIAL_RU_TO_EN[material] ?? material}
                 sheets={((amount || 1) * quantity) / SHEET_MATERIAL_AMOUNT}
               />
             </Flex.Item>
