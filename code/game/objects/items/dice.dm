@@ -4,8 +4,8 @@
 
 ///holding bag for dice
 /obj/item/storage/dice
-	name = "bag of dice"
-	desc = "Contains all the luck you'll ever need."
+	name = "мешок с игральными костями"
+	desc = "Содержит всю удачу, которая вам когда-либо понадобится."
 	icon = 'icons/obj/toys/dice.dmi'
 	icon_state = "dicebag"
 	w_class = WEIGHT_CLASS_SMALL
@@ -52,8 +52,8 @@
 
 ///this is a prototype for dice, for a real d6 use "/obj/item/dice/d6"
 /obj/item/dice
-	name = "die"
-	desc = "A die with six sides. Basic and serviceable."
+	name = "кубик"
+	desc = "Кубик с шестью сторонами. Основной."
 	icon = 'icons/obj/toys/dice.dmi'
 	icon_state = "d6"
 	w_class = WEIGHT_CLASS_TINY
@@ -77,7 +77,7 @@
 
 /obj/item/dice/d1
 	name = "d1"
-	desc = "A die with only one side. Deterministic!"
+	desc = "Кубик с одной стороной. Детерминированный!"
 	icon_state = "d1"
 	sides = 1
 

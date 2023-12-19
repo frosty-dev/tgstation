@@ -32,8 +32,8 @@
 
 ///the structure placed by the shrubs
 /obj/structure/hedge
-	name = "hedge"
-	desc = "A large bushy hedge."
+	name = "живая изгородь"
+	desc = "Огромная."
 	icon = 'icons/obj/smooth_structures/hedge.dmi'
 	icon_state = "hedge-0"
 	base_icon_state = "hedge"

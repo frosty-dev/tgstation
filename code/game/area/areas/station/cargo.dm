@@ -1,55 +1,59 @@
 /area/station/cargo
-	name = "Quartermasters"
+	name = "Завхоз"
 	icon_state = "quart"
 	airlock_wires = /datum/wires/airlock/service
 	sound_environment = SOUND_AREA_STANDARD_STATION
 
 /area/station/cargo/sorting
-	name = "\improper Delivery Office"
+	name = "Снабжение: Сортировка"
 	icon_state = "cargo_delivery"
 
 /area/station/cargo/warehouse
-	name = "\improper Warehouse"
+	name = "Снабжение: Склад"
 	icon_state = "cargo_warehouse"
 	sound_environment = SOUND_AREA_LARGE_ENCLOSED
 
+/area/station/cargo/warehouse/upper
+	name = "Снабжение: Верхний склад"
+
 /area/station/cargo/drone_bay
-	name = "\improper Drone Bay"
+	name = "Снабжение: Отдел дронов"
 	icon_state = "cargo_drone"
 
 /area/station/cargo/boutique
-	name = "\improper Boutique"
+	name = "Снабжение: Бутик"
 	icon_state = "cargo_delivery"
 	sound_environment = SOUND_AREA_WOODFLOOR
 
-/area/station/cargo/warehouse/upper
-	name = "\improper Upper Warehouse"
-
 /area/station/cargo/office
-	name = "\improper Cargo Office"
+	name = "Снабжение: Офис"
 	icon_state = "cargo_office"
 
 /area/station/cargo/storage
-	name = "\improper Cargo Bay"
+	name = "Снабжение: Грузовой отсек"
 	icon_state = "cargo_bay"
 	sound_environment = SOUND_AREA_LARGE_ENCLOSED
 
 /area/station/cargo/lobby
-	name = "\improper Cargo Lobby"
+	name = "Снабжение: Лобби"
 	icon_state = "cargo_lobby"
 
 /area/station/cargo/miningdock
-	name = "\improper Mining Dock"
+	name = "Снабжение: Шахтёрский док"
 	icon_state = "mining_dock"
 
 /area/station/cargo/miningdock/cafeteria
-	name = "\improper Mining Cafeteria"
+	name = "Снабжение: Шахтерское кафе"
 	icon_state = "mining_cafe"
 
 /area/station/cargo/miningdock/oresilo
-	name = "\improper Mining Ore Silo Storage"
+	name = "Снабжение: Шахтерское сило"
 	icon_state = "mining_silo"
 
 /area/station/cargo/miningoffice
-	name = "\improper Mining Office"
+	name = "Снабжение: Шахтёрский офис"
+	icon_state = "mining"
+
+/area/station/cargo/meeting_room
+	name = "Снабжение: Комната встреч"
 	icon_state = "mining"

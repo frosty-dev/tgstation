@@ -108,7 +108,10 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 				to_chat(receiver, "<span class='oocplain'><font color='[GLOB.OOC_COLOR]'><b>[span_prefix("OOC:")] <EM>[keyname]:</EM> <span class='message linkify'>[msg]</span></b></font></span>", avoid_highlighting = avoid_highlight)
 			else
 				to_chat(receiver, span_ooc(span_prefix("OOC:</span> <EM>[keyname]:</EM> <span class='message linkify'>[msg]")), avoid_highlighting = avoid_highlight)
-
+	if(isnewplayer(mob))
+		webhook_send_lobby(key, raw_msg)
+	else
+		webhook_send_ooc(key, raw_msg)
 
 /proc/toggle_ooc(toggle = null)
 	if(toggle != null) //if we're specifically en/disabling ooc

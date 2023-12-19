@@ -45,7 +45,7 @@
  * Magically fills ALL APCs and SMESs to capacity, and restores power to depowered areas.
  */
 /proc/power_restore()
-	priority_announce("Электроэнергия восстановлена на [station_name()]. Приносим свои извинения за доставленные неудобства.", "Электропитание стабилизировано", ANNOUNCER_POWEROFF)
+	priority_announce("Электроэнергия восстановлена на [station_name()]. Приносим свои извинения за доставленные неудобства.", "Электропитание стабилизировано", ANNOUNCER_POWERON)
 	for(var/obj/machinery/power/apc/C as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/power/apc))
 		if(C.cell && is_station_level(C.z))
 			C.cell.charge = C.cell.maxcharge

@@ -1,5 +1,5 @@
 /obj/item/reagent_containers/cup
-	name = "open container"
+	name = "открытая емкость"
 	amount_per_transfer_from_this = 10
 	possible_transfer_amounts = list(5, 10, 15, 20, 25, 30, 50)
 	volume = 50
@@ -44,15 +44,15 @@
 	var/food_taste_reaction = gourmand.get_food_taste_reaction(src, drink_type)
 	switch(food_taste_reaction)
 		if(FOOD_TOXIC)
-			to_chat(gourmand,span_warning("What the hell was that thing?!"))
+			to_chat(gourmand,span_warning("Что это за дрянь?!"))
 			gourmand.adjust_disgust(25 + 30 * fraction)
 			gourmand.add_mood_event("toxic_food", /datum/mood_event/disgusting_food)
 		if(FOOD_DISLIKED)
-			to_chat(gourmand,span_notice("That didn't taste very good..."))
+			to_chat(gourmand,span_notice("Это было не очень вкусно..."))
 			gourmand.adjust_disgust(11 + 15 * fraction)
 			gourmand.add_mood_event("gross_food", /datum/mood_event/gross_food)
 		if(FOOD_LIKED)
-			to_chat(gourmand,span_notice("I love this taste!"))
+			to_chat(gourmand,span_notice("Мне нравится этот вкус!"))
 			gourmand.adjust_disgust(-5 + -2.5 * fraction)
 			gourmand.add_mood_event("fav_food", /datum/mood_event/favorite_food)
 
@@ -64,24 +64,24 @@
 		return
 
 	if(!reagents || !reagents.total_volume)
-		to_chat(user, span_warning("[src] is empty!"))
+		to_chat(user, span_warning("[src] пуст!"))
 		return
 
 	if(!istype(target_mob))
 		return
 
 	if(target_mob != user)
-		target_mob.visible_message(span_danger("[user] attempts to feed [target_mob] something from [src]."), \
-					span_userdanger("[user] attempts to feed you something from [src]."))
+		target_mob.visible_message(span_danger("[user] пытается напоить [target_mob] из [src]."), \
+					span_userdanger("[user] пытается напоить меня из [src]."))
 		if(!do_after(user, 3 SECONDS, target_mob))
 			return
 		if(!reagents || !reagents.total_volume)
 			return // The drink might be empty after the delay, such as by spam-feeding
-		target_mob.visible_message(span_danger("[user] feeds [target_mob] something from [src]."), \
-					span_userdanger("[user] feeds you something from [src]."))
+		target_mob.visible_message(span_danger("[user] поит [target_mob] чем-то из [src]."), \
+					span_userdanger("[user] поит меня чем-то из [src]."))
 		log_combat(user, target_mob, "fed", reagents.get_reagent_log_string())
 	else
-		to_chat(user, span_notice("You swallow a gulp of [src]."))
+		to_chat(user, span_notice("Делаю глоток из [src]."))
 
 	SEND_SIGNAL(src, COMSIG_GLASS_DRANK, target_mob, user)
 	var/fraction = min(gulp_size/reagents.total_volume, 1)
@@ -116,27 +116,27 @@
 
 	if(target.is_refillable()) //Something like a glass. Player probably wants to transfer TO it.
 		if(!reagents.total_volume)
-			to_chat(user, span_warning("[src] is empty!"))
+			to_chat(user, span_warning("[capitalize(src.name)] пуст!"))
 			return
 
 		if(target.reagents.holder_full())
-			to_chat(user, span_warning("[target] is full."))
+			to_chat(user, span_warning("[target] полон."))
 			return
 
 		var/trans = reagents.trans_to(target, amount_per_transfer_from_this, transferred_by = user)
-		to_chat(user, span_notice("You transfer [round(trans, 0.01)] unit\s of the solution to [target]."))
+		to_chat(user, span_notice("Переливаю [round(trans, 0.01)] единиц в [target]."))
 
 	else if(target.is_drainable()) //A dispenser. Transfer FROM it TO us.
 		if(!target.reagents.total_volume)
-			to_chat(user, span_warning("[target] is empty and can't be refilled!"))
+			to_chat(user, span_warning("[target] пуст и не может быть заполнен!"))
 			return
 
 		if(reagents.holder_full())
-			to_chat(user, span_warning("[src] is full."))
+			to_chat(user, span_warning("[capitalize(src.name)] полон."))
 			return
 
 		var/trans = target.reagents.trans_to(src, amount_per_transfer_from_this, transferred_by = user)
-		to_chat(user, span_notice("You fill [src] with [round(trans, 0.01)] unit\s of the contents of [target]."))
+		to_chat(user, span_notice("Наполняю [src] [round(trans, 0.01)] единицами из [target]."))
 
 	target.update_appearance()
 
@@ -149,15 +149,15 @@
 
 	if(target.is_drainable()) //A dispenser. Transfer FROM it TO us.
 		if(!target.reagents.total_volume)
-			to_chat(user, span_warning("[target] is empty!"))
+			to_chat(user, span_warning("[target] пуст!"))
 			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 		if(reagents.holder_full())
-			to_chat(user, span_warning("[src] is full."))
+			to_chat(user, span_warning("[src] полон."))
 			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 		var/trans = target.reagents.trans_to(src, amount_per_transfer_from_this, transferred_by = user)
-		to_chat(user, span_notice("You fill [src] with [round(trans, 0.01)] unit\s of the contents of [target]."))
+		to_chat(user, span_notice("Наполняю [src] [round(trans, 0.01)] единицами из [target]."))
 
 	target.update_appearance()
 	return SECONDARY_ATTACK_CONTINUE_CHAIN
@@ -166,7 +166,7 @@
 	var/hotness = attacking_item.get_temperature()
 	if(hotness && reagents)
 		reagents.expose_temperature(hotness)
-		to_chat(user, span_notice("You heat [name] with [attacking_item]!"))
+		to_chat(user, span_notice("Нагреваю [name] с помощью [attacking_item]!"))
 		return
 
 	//Cooling method
@@ -175,11 +175,11 @@
 		if(extinguisher.safety)
 			return
 		if (extinguisher.reagents.total_volume < 1)
-			to_chat(user, span_warning(" [extinguisher] is empty!"))
+			to_chat(user, span_warning(" [extinguisher] пуст!"))
 			return
 		var/cooling = (0 - reagents.chem_temp) * extinguisher.cooling_power * 2
 		reagents.expose_temperature(cooling)
-		to_chat(user, span_notice("You cool the [name] with the [attacking_item]!"))
+		to_chat(user, span_notice("Охлаждаю [name] с помощью [attacking_item]!"))
 		playsound(loc, 'sound/effects/extinguish.ogg', 75, TRUE, -3)
 		extinguisher.reagents.remove_all(1)
 		return
@@ -189,9 +189,9 @@
 		if(!reagents)
 			return
 		if(reagents.total_volume >= reagents.maximum_volume)
-			to_chat(user, span_notice("[src] is full."))
+			to_chat(user, span_notice("[src] полон."))
 		else
-			to_chat(user, span_notice("You break [attacking_egg] in [src]."))
+			to_chat(user, span_notice("Раздавливаю [attacking_egg] в [src]."))
 			attacking_egg.reagents.trans_to(src, attacking_egg.reagents.total_volume, transferred_by = user)
 			qdel(attacking_egg)
 		return
@@ -217,8 +217,8 @@
 	drink_type = NONE
 
 /obj/item/reagent_containers/cup/beaker
-	name = "beaker"
-	desc = "A beaker. It can hold up to 50 units."
+	name = "химический стакан"
+	desc = "Химический стакан, вместимостью до 50 единиц."
 	icon = 'icons/obj/medical/chemical.dmi'
 	icon_state = "beaker"
 	inhand_icon_state = "beaker"
@@ -236,14 +236,14 @@
 	return reagents.maximum_volume
 
 /obj/item/reagent_containers/cup/beaker/jar
-	name = "honey jar"
-	desc = "A jar for honey. It can hold up to 50 units of sweet delight."
+	name = "банка мёда"
+	desc = "Банка для мёда. Она может вместить до 50 единиц сахарного наслаждения."
 	icon = 'icons/obj/medical/chemical.dmi'
 	icon_state = "vapour"
 
 /obj/item/reagent_containers/cup/beaker/large
-	name = "large beaker"
-	desc = "A large beaker. Can hold up to 100 units."
+	name = "большой химический стакан"
+	desc = "Большой химический стакан, вместимостью до 100 единиц."
 	icon_state = "beakerlarge"
 	custom_materials = list(/datum/material/glass= SHEET_MATERIAL_AMOUNT*1.25)
 	volume = 100
@@ -252,8 +252,8 @@
 	fill_icon_thresholds = list(0, 1, 20, 40, 60, 80, 100)
 
 /obj/item/reagent_containers/cup/beaker/plastic
-	name = "x-large beaker"
-	desc = "An extra-large beaker. Can hold up to 120 units."
+	name = "экстра-большой химический стакан"
+	desc = "Большой химический стакан, вместимостью до 120 единиц."
 	icon_state = "beakerwhite"
 	custom_materials = list(/datum/material/glass=SHEET_MATERIAL_AMOUNT*1.25, /datum/material/plastic=SHEET_MATERIAL_AMOUNT * 1.5)
 	volume = 120
@@ -262,8 +262,8 @@
 	fill_icon_thresholds = list(0, 1, 10, 20, 40, 60, 80, 100)
 
 /obj/item/reagent_containers/cup/beaker/meta
-	name = "metamaterial beaker"
-	desc = "A large beaker. Can hold up to 180 units."
+	name = "метаматериальный химический стакан"
+	desc = "Большой химический стакан, вместимостью до 180 единиц."
 	icon_state = "beakergold"
 	custom_materials = list(/datum/material/glass=SHEET_MATERIAL_AMOUNT*1.25, /datum/material/plastic=SHEET_MATERIAL_AMOUNT * 1.5, /datum/material/gold=HALF_SHEET_MATERIAL_AMOUNT, /datum/material/titanium=HALF_SHEET_MATERIAL_AMOUNT)
 	volume = 180
@@ -272,9 +272,8 @@
 	fill_icon_thresholds = list(0, 1, 10, 25, 35, 50, 60, 80, 100)
 
 /obj/item/reagent_containers/cup/beaker/noreact
-	name = "cryostasis beaker"
-	desc = "A cryostasis beaker that allows for chemical storage without \
-		reactions. Can hold up to 50 units."
+	name = "криостатический химический стакан"
+	desc = "Химический стакан криостазиса, позволяющий хранить химикаты не начиная реакцию. Имеет вместимость до 50 единиц."
 	icon_state = "beakernoreact"
 	custom_materials = list(/datum/material/iron=SHEET_MATERIAL_AMOUNT * 1.5)
 	reagent_flags = OPENCONTAINER | NO_REACT
@@ -282,10 +281,8 @@
 	amount_per_transfer_from_this = 10
 
 /obj/item/reagent_containers/cup/beaker/bluespace
-	name = "bluespace beaker"
-	desc = "A bluespace beaker, powered by experimental bluespace technology \
-		and Element Cuban combined with the Compound Pete. Can hold up to \
-		300 units."
+	name = "блюспейс химический стакан"
+	desc = "химический стакан разработанный с использованием экспериментальной блюспейс технологии и Элемента Кубана в сочетании с Составной Пита. Вмещает до 300 единиц."
 	icon_state = "beakerbluespace"
 	custom_materials = list(/datum/material/glass =SHEET_MATERIAL_AMOUNT * 2.5, /datum/material/plasma =SHEET_MATERIAL_AMOUNT * 1.5, /datum/material/diamond =HALF_SHEET_MATERIAL_AMOUNT, /datum/material/bluespace =HALF_SHEET_MATERIAL_AMOUNT)
 	volume = 300
@@ -342,8 +339,8 @@
 	list_reagents = list(/datum/reagent/medicine/c2/synthflesh = 50)
 
 /obj/item/reagent_containers/cup/bucket
-	name = "bucket"
-	desc = "It's a bucket."
+	name = "ведро"
+	desc = "Просто металлическое ведро."
 	icon = 'icons/obj/service/janitor.dmi'
 	worn_icon = 'icons/mob/clothing/head/utility.dmi'
 	icon_state = "bucket"

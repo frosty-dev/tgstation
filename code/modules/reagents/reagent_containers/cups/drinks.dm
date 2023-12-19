@@ -2,8 +2,8 @@
 /// Drinks.
 ////////////////////////////////////////////////////////////////////////////////
 /obj/item/reagent_containers/cup/glass
-	name = "drink"
-	desc = "yummy"
+	name = "напиток"
+	desc = "кодер пидар"
 	icon = 'icons/obj/drinks/drinks.dmi'
 	icon_state = "glass_empty"
 	possible_transfer_amounts = list(5,10,15,20,25,30,50)
@@ -100,8 +100,8 @@
 // Formatting is the same as food.
 
 /obj/item/reagent_containers/cup/glass/coffee
-	name = "robust coffee"
-	desc = "Careful, the beverage you're about to enjoy is extremely hot."
+	name = "робаст-кофе"
+	desc = "Очень горячий!"
 	icon = 'icons/obj/drinks/coffee.dmi'
 	icon_state = "coffee"
 	base_icon_state = "coffee"
@@ -134,8 +134,8 @@
 	return ..()
 
 /obj/item/reagent_containers/cup/glass/ice
-	name = "ice cup"
-	desc = "Careful, cold ice, do not chew."
+	name = "стаканчик со льдом"
+	desc = "Осторожно, холодный лед, не грызть."
 	custom_price = PAYCHECK_LOWER * 0.6
 	icon_state = "icecup"
 	list_reagents = list(/datum/reagent/consumable/ice = 30)
@@ -143,13 +143,13 @@
 	isGlass = FALSE
 
 /obj/item/reagent_containers/cup/glass/ice/prison
-	name = "dirty ice cup"
-	desc = "Either Nanotrasen's water supply is contaminated, or this machine actually vends lemon, chocolate, and cherry snow cones."
+	name = "стаканчик с грязным льдом"
+	desc = "Либо водопровод NanoTrasen загрязнен, либо этот автомат действительно продает лимонные, шоколадные и вишневые снежные рожки."
 	list_reagents = list(/datum/reagent/consumable/ice = 25, /datum/reagent/consumable/liquidgibs = 5)
 
 /obj/item/reagent_containers/cup/glass/mug // parent type is literally just so empty mug sprites are a thing
-	name = "mug"
-	desc = "A drink served in a classy mug."
+	name = "кружка"
+	desc = "Напиток, подаваемый в стильной кружке."
 	icon = 'icons/obj/drinks/coffee.dmi'
 	icon_state = "tea_empty"
 	base_icon_state = "tea"
@@ -161,14 +161,14 @@
 	return ..()
 
 /obj/item/reagent_containers/cup/glass/mug/tea
-	name = "Duke Purple tea"
-	desc = "An insult to Duke Purple is an insult to the Space Queen! Any proper gentleman will fight you, if you sully this tea."
+	name = "чай пупурного герцога"
+	desc = "Оскорбление герцога Пурпурного - это оскорбление Космической Королевы! Любой приличный джентльмен будет драться с вами, если вы запятнаете этот чай."
 	icon_state = "tea"
 	list_reagents = list(/datum/reagent/consumable/tea = 30)
 
 /obj/item/reagent_containers/cup/glass/mug/coco
-	name = "Dutch hot coco"
-	desc = "Made in Space South America."
+	name = "голландский горячий коко"
+	desc = "Сделано в космической Южной Америке."
 	icon_state = "tea"
 	list_reagents = list(/datum/reagent/consumable/hot_coco = 15, /datum/reagent/consumable/sugar = 5)
 	drink_type = SUGAR
@@ -176,14 +176,14 @@
 	custom_price = PAYCHECK_CREW * 1.2
 
 /obj/item/reagent_containers/cup/glass/mug/nanotrasen
-	name = "\improper Nanotrasen mug"
-	desc = "A mug to display your corporate pride."
+	name = "кружка NanoTrasen"
+	desc = "Кружка для демонстрации вашей корпоративной гордости."
 	icon_state = "mug_nt_empty"
 	base_icon_state = "mug_nt"
 
 /obj/item/reagent_containers/cup/glass/coffee_cup
-	name = "coffee cup"
-	desc = "A heat-formed plastic coffee cup. Can theoretically be used for other hot drinks, if you're feeling adventurous."
+	name = "кофейный стаканчик"
+	desc = "Пластиковый стаканчик для кофе, изготовленный методом термической формовки. Теоретически может использоваться для других горячих напитков, если вы чувствуете себя авантюристом."
 	icon = 'icons/obj/drinks/coffee.dmi'
 	icon_state = "coffee_cup_e"
 	base_icon_state = "coffee_cup"
@@ -197,8 +197,8 @@
 	return ..()
 
 /obj/item/reagent_containers/cup/glass/dry_ramen
-	name = "cup ramen"
-	desc = "Just add 5ml of water, self heats! A taste that reminds you of your school years. Now new with salty flavour!"
+	name = "чашка рамена"
+	desc = "Просто добавьте 5 ед. воды, с саморазогревом! Вкус, напоминающий о школьных годах. Теперь с новым соленым вкусом!"
 	icon_state = "ramen"
 	list_reagents = list(/datum/reagent/consumable/dry_ramen = 15, /datum/reagent/consumable/salt = 3)
 	drink_type = GRAIN
@@ -206,8 +206,8 @@
 	custom_price = PAYCHECK_CREW * 0.9
 
 /obj/item/reagent_containers/cup/glass/waterbottle
-	name = "bottle of water"
-	desc = "A bottle of water filled at an old Earth bottling facility."
+	name = "Бутылка воды"
+	desc = "Бутылка воды, наполненная на старом предприятии по розливу воды на Земле."
 	icon = 'icons/obj/drinks/bottles.dmi'
 	icon_state = "smallbottle"
 	inhand_icon_state = null
@@ -285,7 +285,7 @@
 		return
 
 	if(cap_on && reagents.total_volume && istype(target))
-		to_chat(user, span_warning("You must remove the cap before you can do that!"))
+		to_chat(user, span_warning("Для этого необходимо снять крышку!"))
 		return
 
 	return ..()
@@ -294,13 +294,13 @@
 	. |= AFTERATTACK_PROCESSED_ITEM
 
 	if(cap_on && (target.is_refillable() || target.is_drainable() || (reagents.total_volume && !user.combat_mode)))
-		to_chat(user, span_warning("You must remove the cap before you can do that!"))
+		to_chat(user, span_warning("Для этого необходимо снять крышку!"))
 		return
 
 	else if(istype(target, /obj/item/reagent_containers/cup/glass/waterbottle))
 		var/obj/item/reagent_containers/cup/glass/waterbottle/other_bottle = target
 		if(other_bottle.cap_on)
-			to_chat(user, span_warning("[other_bottle] has a cap firmly twisted on!"))
+			to_chat(user, span_warning("У [other_bottle] прочно закручена крышка!"))
 			return
 
 	return . | ..()
@@ -329,7 +329,7 @@
 	cap_on = FALSE
 
 /obj/item/reagent_containers/cup/glass/waterbottle/large
-	desc = "A fresh commercial-sized bottle of water."
+	desc = "Свежая бутылка воды коммерческого размера."
 	icon_state = "largebottle"
 	custom_materials = list(/datum/material/plastic=SHEET_MATERIAL_AMOUNT * 1.5)
 	list_reagents = list(/datum/reagent/water = 100)
@@ -344,8 +344,8 @@
 
 // Admin spawn
 /obj/item/reagent_containers/cup/glass/waterbottle/relic
-	name = "mysterious bottle"
-	desc = "A bottle quite similar to a water bottle, but with some words scribbled on with a marker. It seems to be radiating some kind of energy."
+	name = "таинственная бутылка"
+	desc = "Бутылка, очень похожая на бутылку с водой, но с какими-то словами, нацарапанными маркером. Кажется, что она излучает какую-то энергию."
 	flip_chance = 100 // FLIPP
 
 /obj/item/reagent_containers/cup/glass/waterbottle/relic/Initialize(mapload)
@@ -371,8 +371,8 @@
 	return ..()
 
 /obj/item/reagent_containers/cup/glass/bottle/juice/smallcarton
-	name = "small carton"
-	desc = "A small carton, intended for holding drinks."
+	name = "мелкая картонная коробка"
+	desc = "Небольшая картонная коробка, предназначенная для хранения напитков."
 	icon = 'icons/obj/drinks/boxes.dmi'
 	icon_state = "juicebox"
 	volume = 15
@@ -397,8 +397,8 @@
 	target.Bumped(bottle_shard)
 
 /obj/item/reagent_containers/cup/glass/colocup
-	name = "colo cup"
-	desc = "A cheap, mass produced style of cup, typically used at parties. They never seem to come out red, for some reason..."
+	name = "пластиковый стакан"
+	desc = "Дешевый стаканчик массового производства, обычно используемый на вечеринках. По какой-то причине они никогда не получаются красными."
 	icon = 'icons/obj/drinks/colo.dmi'
 	icon_state = "colocup"
 	inhand_icon_state = "colocup"
@@ -418,7 +418,7 @@
 		return
 	icon_state = "colocup[rand(0, 6)]"
 	if(icon_state == "colocup6")
-		desc = "A cheap, mass produced style of cup, typically used at parties. Woah, this one is in red! What the hell?"
+		desc = "Дешевый стаканчик массового производства, обычно используемый на вечеринках. Ого, эта красная! Какого хрена?"
 
 //////////////////////////drinkingglass and shaker//
 //Note by Darem: This code handles the mixing of drinks. New drinks go in three places: In Chemistry-Reagents.dm (for the drink
@@ -426,8 +426,8 @@
 // icon states.
 
 /obj/item/reagent_containers/cup/glass/shaker
-	name = "shaker"
-	desc = "A metal shaker to mix drinks in."
+	name = "шейкер"
+	desc = "Металлический шейкер для смешивания напитков."
 	icon = 'icons/obj/drinks/bottles.dmi'
 	icon_state = "shaker"
 	custom_materials = list(/datum/material/iron= HALF_SHEET_MATERIAL_AMOUNT * 1.5)
@@ -438,13 +438,13 @@
 /obj/item/reagent_containers/cup/glass/shaker/Initialize(mapload)
 	. = ..()
 	if(prob(10))
-		name = "\improper Nanotrasen 20th Anniversary Shaker"
-		desc += " It has an emblazoned Nanotrasen logo on it."
+		name = "шейкер NanoTrasen"
+		desc += " На нем изображен логотип NanoTrasen."
 		icon_state = "shaker_n"
 
 /obj/item/reagent_containers/cup/glass/flask
-	name = "flask"
-	desc = "Every good spaceman knows it's a good idea to bring along a couple of pints of whiskey wherever they go."
+	name = "фляжка"
+	desc = "Каждый хороший космонавт знает, что нелишним будет взять с собой пару пинт виски, куда бы он ни отправился."
 	custom_price = PAYCHECK_COMMAND * 2
 	icon = 'icons/obj/drinks/bottles.dmi'
 	icon_state = "flask"
@@ -453,14 +453,14 @@
 	isGlass = FALSE
 
 /obj/item/reagent_containers/cup/glass/flask/gold
-	name = "captain's flask"
-	desc = "A gold flask belonging to the captain."
+	name = "капитанская фляжка"
+	desc = "Золотая фляжка, принадлежащая капитану."
 	icon_state = "flask_gold"
 	custom_materials = list(/datum/material/gold=SMALL_MATERIAL_AMOUNT*5)
 
 /obj/item/reagent_containers/cup/glass/flask/det
-	name = "detective's flask"
-	desc = "The detective's only true friend."
+	name = "фляжка детектива"
+	desc = "Единственный верный друг детектива."
 	icon_state = "detflask"
 	list_reagents = list(/datum/reagent/consumable/ethanol/whiskey = 30)
 
@@ -468,8 +468,8 @@
 	list_reagents = list(/datum/reagent/consumable/applejuice = 30)
 
 /obj/item/reagent_containers/cup/glass/mug/britcup
-	name = "cup"
-	desc = "A cup with the british flag emblazoned on it."
+	name = "чашка"
+	desc = "Чашка с изображенным на ней британским флагом."
 	icon = 'icons/obj/drinks/coffee.dmi'
 	icon_state = "britcup_empty"
 	base_icon_state = "britcup"

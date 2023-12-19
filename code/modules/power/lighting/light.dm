@@ -722,3 +722,20 @@
 /obj/machinery/light/floor/broken
 	status = LIGHT_BROKEN
 	icon_state = "floor-broken"
+
+// -------- Directional presets
+// The directions are backwards on the lights we have now
+
+// ---- Floor tube
+/obj/machinery/light/floor/directional/north
+	dir = NORTH
+
+/obj/machinery/light/floor/directional/south
+	dir = SOUTH
+
+/obj/machinery/light/floor/directional/east
+	dir = EAST
+
+/obj/machinery/light/floor/directional/west
+	dir = WEST
+

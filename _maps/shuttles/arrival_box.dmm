@@ -18,7 +18,15 @@
 /area/shuttle/arrival)
 "e" = (
 /obj/structure/table,
-/obj/item/storage/medkit/regular,
+/obj/structure/window{
+	dir = 4
+	},
+/obj/item/storage/medkit/fire,
+/obj/item/storage/medkit/regular{
+	pixel_x = 3;
+	pixel_y = 4
+	},
+/obj/item/crowbar,
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/arrival)
 "f" = (
@@ -50,6 +58,7 @@
 	department = "Arrival shuttle";
 	name = "Arrival Shuttle Requests Console"
 	},
+/obj/structure/closet/firecloset,
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/arrival)
 "m" = (
@@ -66,12 +75,9 @@
 /turf/open/floor/plating/airless,
 /area/shuttle/arrival)
 "p" = (
-/obj/structure/chair/comfy/shuttle,
-/turf/open/floor/mineral/titanium/blue,
-/area/shuttle/arrival)
-"q" = (
-/obj/structure/chair/comfy/shuttle,
-/obj/machinery/light/small/directional/east,
+/obj/machinery/computer/crew{
+	dir = 4
+	},
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/arrival)
 "r" = (
@@ -100,14 +106,14 @@
 /turf/open/floor/plating/airless,
 /area/shuttle/arrival)
 "v" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 1
+/obj/machinery/modular_computer/preset/civilian{
+	dir = 4
 	},
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/arrival)
 "w" = (
 /obj/structure/chair/comfy/shuttle{
-	dir = 1
+	dir = 8
 	},
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/mineral/titanium/blue,
@@ -118,6 +124,7 @@
 /area/shuttle/arrival)
 "y" = (
 /obj/machinery/light/directional/south,
+/obj/machinery/vending/wallmed/directional/south,
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/arrival)
 "A" = (
@@ -126,8 +133,18 @@
 	},
 /turf/open/floor/plating/airless,
 /area/shuttle/arrival)
+"L" = (
+/turf/template_noop,
+/area/shuttle/arrival)
 "S" = (
 /turf/open/floor/mineral/titanium,
+/area/shuttle/arrival)
+"T" = (
+/obj/machinery/computer{
+	dir = 4;
+	name = "Shuttle computer"
+	},
+/turf/open/floor/mineral/titanium/blue,
 /area/shuttle/arrival)
 "U" = (
 /obj/item/radio/intercom/directional/south,
@@ -147,18 +164,18 @@ a
 a
 b
 p
-S
+T
 v
 b
 a
 "}
 (3,1,1) = {"
 a
-b
-q
+d
+w
 S
 w
-b
+d
 a
 "}
 (4,1,1) = {"
@@ -261,11 +278,11 @@ m
 b
 "}
 (15,1,1) = {"
-b
+L
 n
 s
 u
 s
 A
-b
+L
 "}

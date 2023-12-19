@@ -1,5 +1,5 @@
 /area/station/maintenance
-	name = "Generic Maintenance"
+	name = "Техтоннели"
 	ambience_index = AMBIENCE_MAINT
 	area_flags = BLOBS_ALLOWED | UNIQUE_AREA | CULT_PERMITTED | PERSISTENT_ENGRAVINGS
 	airlock_wires = /datum/wires/airlock/maint
@@ -13,86 +13,86 @@
 */
 
 /area/station/maintenance/department/chapel
-	name = "Chapel Maintenance"
+	name = "Техтоннели: Церковь"
 	icon_state = "maint_chapel"
 
 /area/station/maintenance/department/chapel/monastery
-	name = "Monastery Maintenance"
+	name = "Техтоннели: Монастырь"
 	icon_state = "maint_monastery"
 
 /area/station/maintenance/department/crew_quarters/bar
-	name = "Bar Maintenance"
+	name = "Техтоннели: Бар"
 	icon_state = "maint_bar"
 	sound_environment = SOUND_AREA_WOODFLOOR
 
 /area/station/maintenance/department/crew_quarters/dorms
-	name = "Dormitory Maintenance"
+	name = "Техтоннели: Дормитории"
 	icon_state = "maint_dorms"
 
 /area/station/maintenance/department/eva
-	name = "EVA Maintenance"
+	name = "Техтоннели: EVA"
 	icon_state = "maint_eva"
 
 /area/station/maintenance/department/eva/abandoned
-	name = "Abandoned EVA Storage"
+	name = "Заброшенное хранилище EVA"
 
 /area/station/maintenance/department/electrical
-	name = "Electrical Maintenance"
+	name = "Техтоннели электрообслуживания"
 	icon_state = "maint_electrical"
 
 /area/station/maintenance/department/engine/atmos
-	name = "Atmospherics Maintenance"
+	name = "Техтоннели: Атмосферный отдел"
 	icon_state = "maint_atmos"
 
 /area/station/maintenance/department/security
-	name = "Security Maintenance"
+	name = "Техтоннели: Охрана"
 	icon_state = "maint_sec"
 
 /area/station/maintenance/department/security/upper
-	name = "Upper Security Maintenance"
+	name = "Техтоннели: Верхний Бриг"
 
 /area/station/maintenance/department/security/brig
-	name = "Brig Maintenance"
+	name = "Техтоннели: Бриг"
 	icon_state = "maint_brig"
 
 /area/station/maintenance/department/medical
-	name = "Medbay Maintenance"
+	name = "Техтоннели: Медбей"
 	icon_state = "medbay_maint"
 
 /area/station/maintenance/department/medical/central
-	name = "Central Medbay Maintenance"
+	name = "Техтоннели: Центр Медбея"
 	icon_state = "medbay_maint_central"
 
 /area/station/maintenance/department/medical/morgue
-	name = "Morgue Maintenance"
+	name = "Техтоннели: Морг"
 	icon_state = "morgue_maint"
 
 /area/station/maintenance/department/science
-	name = "Science Maintenance"
+	name = "Техтоннели: Наука"
 	icon_state = "maint_sci"
 
 /area/station/maintenance/department/science/central
-	name = "Central Science Maintenance"
+	name = "Техтоннели: Центр РнД"
 	icon_state = "maint_sci_central"
 
 /area/station/maintenance/department/cargo
-	name = "Cargo Maintenance"
+	name = "Техтоннели: Карго"
 	icon_state = "maint_cargo"
 
 /area/station/maintenance/department/bridge
-	name = "Bridge Maintenance"
+	name = "Техтоннели: Мостик"
 	icon_state = "maint_bridge"
 
 /area/station/maintenance/department/engine
-	name = "Engineering Maintenance"
+	name = "Техтоннели: Инженерный отдел"
 	icon_state = "maint_engi"
 
 /area/station/maintenance/department/prison
-	name = "Prison Maintenance"
+	name = "Техтоннели: Тюрьма"
 	icon_state = "sec_prison"
 
 /area/station/maintenance/department/science/xenobiology
-	name = "Xenobiology Maintenance"
+	name = "Техтоннели: Ксенобиология"
 	icon_state = "xenomaint"
 	area_flags = VALID_TERRITORY | BLOBS_ALLOWED | UNIQUE_AREA | XENOBIOLOGY_COMPATIBLE | CULT_PERMITTED
 
@@ -101,11 +101,11 @@
 */
 
 /area/station/maintenance/aft
-	name = "Aft Maintenance"
+	name = "Техтоннели: Южные"
 	icon_state = "aftmaint"
 
 /area/station/maintenance/aft/upper
-	name = "Upper Aft Maintenance"
+	name = "Техтоннели: Верхние южные"
 	icon_state = "upperaftmaint"
 
 /* Use greater variants of area definitions for when the station has two different sections of maintenance on the same z-level.
@@ -113,7 +113,7 @@
 * This one means that this goes more fore/north than the "lesser" maintenance area.
 */
 /area/station/maintenance/aft/greater
-	name = "Greater Aft Maintenance"
+	name = "Техтоннели: Основные южные"
 	icon_state = "greateraftmaint"
 
 /* Use lesser variants of area definitions for when the station has two different sections of maintenance on the same z-level in conjunction with "greater".
@@ -122,110 +122,115 @@
 */
 
 /area/station/maintenance/aft/lesser
-	name = "Lesser Aft Maintenance"
+	name = "Техтоннели: Вторичные южные"
 	icon_state = "lesseraftmaint"
 
 /area/station/maintenance/central
-	name = "Central Maintenance"
+	name = "Техтоннели: Центральные"
 	icon_state = "centralmaint"
 
 /area/station/maintenance/central/greater
-	name = "Greater Central Maintenance"
+	name = "Техтоннели: Основные центральные"
 	icon_state = "greatercentralmaint"
 
 /area/station/maintenance/central/lesser
-	name = "Lesser Central Maintenance"
+	name = "Техтоннели: Вторичные центральные"
 	icon_state = "lessercentralmaint"
 
 /area/station/maintenance/fore
-	name = "Fore Maintenance"
+	name = "Техтоннели: Северные"
 	icon_state = "foremaint"
 
 /area/station/maintenance/fore/upper
-	name = "Upper Fore Maintenance"
+	name = "Техтоннели: Верхние северные"
 	icon_state = "upperforemaint"
 
 /area/station/maintenance/fore/greater
-	name = "Greater Fore Maintenance"
+	name = "Техтоннели: Основные северные"
 	icon_state = "greaterforemaint"
 
 /area/station/maintenance/fore/lesser
-	name = "Lesser Fore Maintenance"
+	name = "Техтоннели: Вторичные северные"
 	icon_state = "lesserforemaint"
 
 /area/station/maintenance/starboard
-	name = "Starboard Maintenance"
+	name = "Техтоннели: Восточные"
 	icon_state = "starboardmaint"
 
 /area/station/maintenance/starboard/upper
-	name = "Upper Starboard Maintenance"
+	name = "Техтоннели: Верхние восточные"
 	icon_state = "upperstarboardmaint"
 
 /area/station/maintenance/starboard/central
-	name = "Central Starboard Maintenance"
+	name = "Техтоннели: Центрально-восточные"
 	icon_state = "centralstarboardmaint"
 
 /area/station/maintenance/starboard/greater
-	name = "Greater Starboard Maintenance"
+	name = "Техтоннели: Основные восточные"
 	icon_state = "greaterstarboardmaint"
 
 /area/station/maintenance/starboard/lesser
-	name = "Lesser Starboard Maintenance"
+	name = "Техтоннели: Вторичные восточные"
 	icon_state = "lesserstarboardmaint"
 
 /area/station/maintenance/starboard/aft
-	name = "Aft Starboard Maintenance"
+	name = "Техтоннели: Юго-восточные"
 	icon_state = "asmaint"
 
+/area/maintenance/starboard/aft/secondary
+	name = "Техтоннели: Вторичные юго-восточные"
+	icon_state = "asmaint_2"
+
+
 /area/station/maintenance/starboard/fore
-	name = "Fore Starboard Maintenance"
+	name = "Техтоннели: Северо-восточные"
 	icon_state = "fsmaint"
 
 /area/station/maintenance/port
-	name = "Port Maintenance"
+	name = "Техтоннели: Западные"
 	icon_state = "portmaint"
 
 /area/station/maintenance/port/central
-	name = "Central Port Maintenance"
+	name = "Техтоннели: Центрально-западные"
 	icon_state = "centralportmaint"
 
 /area/station/maintenance/port/greater
-	name = "Greater Port Maintenance"
+	name = "Техтоннели: Основные западные"
 	icon_state = "greaterportmaint"
 
 /area/station/maintenance/port/lesser
-	name = "Lesser Port Maintenance"
+	name = "Техтоннели: Вторично-восточные"
 	icon_state = "lesserportmaint"
 
 /area/station/maintenance/port/aft
-	name = "Aft Port Maintenance"
+	name = "Техтоннели: Юго-западные"
 	icon_state = "apmaint"
 
 /area/station/maintenance/port/fore
-	name = "Fore Port Maintenance"
+	name = "Техтоннели: Северно-западные"
 	icon_state = "fpmaint"
 
 /area/station/maintenance/tram
-	name = "Primary Tram Maintenance"
+	name = "Техтоннели: Основные трамвайные"
 
 /area/station/maintenance/tram/left
-	name = "\improper Port Tram Underpass"
+	name = "Техтоннели: Западные подтрамвайные"
 	icon_state = "mainttramL"
 
 /area/station/maintenance/tram/mid
-	name = "\improper Central Tram Underpass"
+	name = "Техтоннели: Центральные подтрамвайные"
 	icon_state = "mainttramM"
 
 /area/station/maintenance/tram/right
-	name = "\improper Starboard Tram Underpass"
+	name = "Техтоннели: Восточные подтрамвайные"
 	icon_state = "mainttramR"
 
 /*
 * Discrete Maintenance Areas
 */
 
-/area/station/maintenance/disposal
-	name = "Waste Disposal"
+/area/maintenance/disposal
+	name = "Техтоннели: Утилизация отходов"
 	icon_state = "disposal"
 
 /area/station/maintenance/hallway/abandoned_command

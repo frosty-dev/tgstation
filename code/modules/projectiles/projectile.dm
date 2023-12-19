@@ -3,7 +3,7 @@
 #define MUZZLE_EFFECT_PIXEL_INCREMENT 17 //How many pixels to move the muzzle flash up so your character doesn't look like they're shitting out lasers.
 
 /obj/projectile
-	name = "projectile"
+	name = "снаряд"
 	icon = 'icons/obj/weapons/guns/projectiles.dmi'
 	icon_state = "bullet"
 	density = FALSE
@@ -341,7 +341,7 @@
 
 		var/organ_hit_text = ""
 		if(hit_limb_zone)
-			organ_hit_text = " in  [parse_zone(hit_limb_zone)]"
+			organ_hit_text = " in [parse_zone(hit_limb_zone)]" // todo: ru_parse_zone(limb_hit), надо глянуть старые коммиты projectile.dm за 2020-2021 год
 		if(suppressed == SUPPRESSED_VERY)
 			playsound(loc, hitsound, 5, TRUE, -1)
 		else if(suppressed)

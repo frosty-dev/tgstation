@@ -18,6 +18,66 @@
 	name = "\improper Starboard Primary Hallway"
 	icon_state = "starboardhall"
 
+/area/station/hallway/primary/starboard/medbay
+	name = "Коридоры: Медблок"
+	icon_state = "hallS1"
+
+/area/station/hallway/primary/starboard/botan
+	name = "Коридоры: Ботаника"
+	icon_state = "hallS2"
+
+/area/station/hallway/primary/starboard/rnd
+	name = "Коридоры: РнД"
+	icon_state = "hallS3"
+
+/area/station/hallway/primary/starboard/low_level_service
+	name = "Коридоры, низ: сервис"
+	icon_state = "hallSL1"
+
+/area/station/hallway/primary/port
+	name = "Коридоры: Западные"
+	icon_state = "hallP"
+
+/area/station/hallway/primary/port/to_arrival
+	name = "Коридоры: К прибытию"
+	icon_state = "hallP1"
+
+/area/station/hallway/primary/port/vault
+	name = "Коридоры: Ваулт"
+	icon_state = "hallP2"
+
+/area/station/hallway/primary/central
+	name = "Коридоры: Центральные"
+	icon_state = "hallC"
+
+/area/station/hallway/primary/central/north
+	name = "Коридоры: Центр, Север"
+	icon_state = "hallC1"
+
+/area/station/hallway/primary/central/west
+	name = "Коридоры: Центр, Запад"
+	icon_state = "hallC2"
+
+/area/station/hallway/primary/central/south
+	name = "Коридоры: Центр, Юг"
+	icon_state = "hallC3"
+
+/area/station/hallway/primary/central/east
+	name = "Коридоры: Центр, Восток"
+	icon_state = "hallC4"
+
+/area/station/hallway/primary/central/low_level_eva
+	name = "Коридоры, низ: ЕВА"
+	icon_state = "hallCL1"
+
+/area/station/hallway/primary/central/low_level_centre
+	name = "Коридоры, низ: Центр"
+	icon_state = "hallCL2"
+
+/area/station/hallway/primary/upper
+	name = "Коридоры: Верхние центральные"
+	icon_state = "hallC"
+
 /area/station/hallway/primary/port
 	name = "\improper Port Primary Hallway"
 	icon_state = "porthall"
@@ -77,13 +137,37 @@
 	icon_state = "escape_pods"
 
 /area/station/hallway/secondary/exit/departure_lounge
-	name = "\improper Departure Lounge"
+	name = "Коридоры, Эвакуация"
 	icon_state = "escape_lounge"
 
+/area/station/secondary/exit/departure_lounge/botan
+	name = "Коридоры, низ: Ботаника"
+	icon_state = "escape_lounge"
+
+/area/station/secondary/exit/departure_lounge/shop
+	name = "Коридоры, низ: Магазин"
+	icon_state = "escape_lounge2"
+
+/area/station/secondary/exit/departure_lounge/cryo
+	name = "Коридоры, низ: Криокапсулы"
+	icon_state = "escape_lounge3"
+
 /area/station/hallway/secondary/entry
-	name = "\improper Arrival Shuttle Hallway"
+	name = "Прибытие: Шаттл"
 	icon_state = "entry"
 	area_flags = UNIQUE_AREA | EVENT_PROTECTED
+
+/area/station/hallway/secondary/entry/public
+	name = "Прибытие: Публичный док"
+	icon_state = "entry2"
+
+/area/station/hallway/secondary/entry/south
+	name = "Прибытие: Южный коридор"
+	icon_state = "entry3"
+
+/area/station/hallway/secondary/entry/south_hall
+	name = "Прибытие: Южный зал"
+	icon_state = "entry4"
 
 /area/station/hallway/secondary/dock
 	name = "\improper Secondary Station Dock Hallway"

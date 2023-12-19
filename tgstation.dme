@@ -5879,4 +5879,13 @@
 #include "interface\fonts\spess_font.dm"
 #include "interface\fonts\tiny_unicode.dm"
 #include "interface\fonts\vcr_osd_mono.dm"
+#include "white\webhook.dm"
+#include "white\rebolution228\code\antimatter.dm"
+#include "white\rebolution228\code\punkt_priema.dm"
+#include "white\rebolution228\code\trash_pile.dm"
+#include "white\rebolution228\code\randomstation\landmarks.dm"
+#include "white\rebolution228\code\randomstation\maint.dm"
+#include "white\rebolution228\code\randomstation\maintenance.dm"
+#include "white\rebolution228\code\randomstation\mapping.dm"
+#include "white\rebolution228\code\randomstation\station.dm"
 // END_INCLUDE

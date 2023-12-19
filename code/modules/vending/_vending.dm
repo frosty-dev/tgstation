@@ -1725,6 +1725,28 @@
 	icon_state = "refill_custom"
 	custom_premium_price = PAYCHECK_CREW
 
+/obj/item/price_tagger
+	name = "разметоцен"
+	desc = "Используется для нанесения голографических ценников на предметы."
+	icon = 'icons/obj/device.dmi'
+	icon_state = "pricetagger"
+	custom_premium_price = PAYCHECK_LOWER * 0.5
+	///the price of the item
+	var/price = 1
+
+/obj/item/price_tagger/attack_self(mob/user)
+	price = max(1, round(input(user,"Установим цену","Цена") as num|null, 1))
+	to_chat(user, span_notice("Теперь [src] будет выставлять всем предметам цену в размере [price] кредитов."))
+
+/obj/item/price_tagger/afterattack(atom/target, mob/user, proximity)
+	. = ..()
+	if(!proximity)
+		return
+	if(isitem(target))
+		var/obj/item/I = target
+		I.custom_price = price
+		to_chat(user, span_notice("Устанавливаю цену [I] в величину [price] кредитов."))
+
 /obj/machinery/vending/custom/greed //name and like decided by the spawn
 	icon_state = "greed"
 	icon_deny = "greed-deny"

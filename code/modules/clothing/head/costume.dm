@@ -159,7 +159,7 @@
 	flash_protect = FLASH_PROTECTION_SENSITIVE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
-	var/has_fov = TRUE
+	var/has_fov = FALSE
 
 /datum/armor/costume_bronze
 	melee = 5

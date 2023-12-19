@@ -1,5 +1,5 @@
 /obj/projectile/bullet
-	name = "bullet"
+	name = "пуля"
 	icon_state = "bullet"
 	damage = 60
 	damage_type = BRUTE
@@ -14,5 +14,5 @@
 	embed_falloff_tile = -3
 
 /obj/projectile/bullet/smite
-	name = "divine retribution"
+	name = "божественное воздаяние"
 	damage = 10

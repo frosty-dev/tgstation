@@ -1,5 +1,5 @@
 /area/station/medical
-	name = "Medical"
+	name = "Медбей"
 	icon_state = "medbay"
 	ambience_index = AMBIENCE_MEDICAL
 	airlock_wires = /datum/wires/airlock/medbay
@@ -8,7 +8,7 @@
 	max_ambience_cooldown = 180 SECONDS
 
 /area/station/medical/abandoned
-	name = "\improper Abandoned Medbay"
+	name = "Медбей: Заброшенный"
 	icon_state = "abandoned_medbay"
 	ambientsounds = list(
 		'sound/ambience/signal.ogg',
@@ -16,110 +16,114 @@
 	sound_environment = SOUND_AREA_SMALL_ENCLOSED
 
 /area/station/medical/medbay/central
-	name = "Medbay Central"
+	name = "Медбей: Центр"
 	icon_state = "med_central"
 
 /area/station/medical/medbay/lobby
-	name = "\improper Medbay Lobby"
+	name = "Медбей: Лобби"
 	icon_state = "med_lobby"
 
 /area/station/medical/medbay/aft
-	name = "Medbay Aft"
+	name = "Медбей: Западный"
 	icon_state = "med_aft"
 
 /area/station/medical/storage
-	name = "Medbay Storage"
+	name = "Медбей: Хранилище"
 	icon_state = "med_storage"
 
 /area/station/medical/paramedic
-	name = "Paramedic Dispatch"
+	name = "Медбей: Фельдшер"
 	icon_state = "paramedic"
 
 /area/station/medical/office
-	name = "\improper Medical Office"
+	name = "Медбей: Офис"
 	icon_state = "med_office"
 
 /area/station/medical/break_room
-	name = "\improper Medical Break Room"
+	name = "Медбей: Комната отдыха"
 	icon_state = "med_break"
 
 /area/station/medical/coldroom
-	name = "\improper Medical Cold Room"
+	name = "Медбей: Морозилка"
 	icon_state = "kitchen_cold"
 
+/area/station/medical/zone2
+	name = "Мини-медбей: Прибытие"
+	icon_state = "medbay2"
+
 /area/station/medical/patients_rooms
-	name = "\improper Patients' Rooms"
+	name = "Медбей: Палаты"
 	icon_state = "patients"
 	sound_environment = SOUND_AREA_SMALL_SOFTFLOOR
 
 /area/station/medical/patients_rooms/room_a
-	name = "Patient Room A"
+	name = "Медбей: Палата пациента A"
 	icon_state = "patients"
 
 /area/station/medical/patients_rooms/room_b
-	name = "Patient Room B"
+	name = "Медбей: Палата пациента Б"
 	icon_state = "patients"
 
 /area/station/medical/virology
-	name = "Virology"
+	name = "Медбей: Вирусология"
 	icon_state = "virology"
 	ambience_index = AMBIENCE_VIROLOGY
 
 /area/station/medical/virology/isolation
-	name = "Virology Isolation"
+	name = "Медбей: Вирусология - Карантин"
 	icon_state = "virology_isolation"
 
 /area/station/medical/morgue
-	name = "\improper Morgue"
+	name = "Медбей: Морг"
 	icon_state = "morgue"
 	ambience_index = AMBIENCE_SPOOKY
 	sound_environment = SOUND_AREA_SMALL_ENCLOSED
 
 /area/station/medical/chemistry
-	name = "Chemistry"
+	name = "Медбей: Химия"
 	icon_state = "chem"
 
 /area/station/medical/pharmacy
-	name = "\improper Pharmacy"
+	name = "Медбей: Аптека"
 	icon_state = "pharmacy"
 
 /area/station/medical/chem_storage
-	name = "\improper Chemical Storage"
+	name = "Медбей: Хранилище химикатов"
 	icon_state = "chem_storage"
 
 /area/station/medical/surgery
-	name = "\improper Operating Room"
+	name = "Медбей: Операционная"
 	icon_state = "surgery"
 
 /area/station/medical/surgery/fore
-	name = "\improper Fore Operating Room"
+	name = "Медбей: Северная операционная"
 	icon_state = "foresurgery"
 
 /area/station/medical/surgery/aft
-	name = "\improper Aft Operating Room"
+	name = "Медбей: Южная операционная"
 	icon_state = "aftsurgery"
 
 /area/station/medical/surgery/theatre
-	name = "\improper Grand Surgery Theatre"
+	name = "Медбей: Большая операционная"
 	icon_state = "surgerytheatre"
 
 /area/station/medical/cryo
-	name = "Cryogenics"
+	name = "Медбей: Криогеника"
 	icon_state = "cryo"
 
 /area/station/medical/exam_room
-	name = "\improper Exam Room"
+	name = "Медбей: Экзаменационная комната"
 	icon_state = "exam_room"
 
 /area/station/medical/treatment_center
-	name = "\improper Medbay Treatment Center"
+	name = "Медбей: Лечебный центр"
 	icon_state = "exam_room"
 
 /area/station/medical/psychology
-	name = "\improper Psychology Office"
+	name = "Медбей: Психолог"
 	icon_state = "psychology"
 	mood_bonus = 3
-	mood_message = "I feel at ease here."
+	mood_message = "Чувствую себя тут спокойно."
 	ambientsounds = list(
 		'sound/ambience/aurora_caelus_short.ogg',
 		)

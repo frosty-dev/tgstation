@@ -348,46 +348,22 @@ GLOBAL_VAR(restart_counter)
 	auxcleanup()
 	. = ..()
 
+GLOBAL_VAR_INIT(hub_mimic, FALSE)
+GLOBAL_VAR_INIT(hub_mimic_desc, "GO! GO! GO!")
+
 /world/proc/update_status()
 
-	var/list/features = list()
+	var/s = ""
 
-	if(LAZYACCESS(SSlag_switch.measures, DISABLE_NON_OBSJOBS))
-		features += "closed"
+	if(!GLOB.hub_mimic)
+		s += "<big><b>White Dream TG: RU</b></big>\] <a href=\"http://station13.ru\">SITE</a> | <a href=\"https://discord.gg/whitedream\">DISCORD</a>\n\n"
+		s += "<img src='https://assets.station13.ru/l/w7.png'>\n\n"
+	else
+		s += "<big><b>[GLOB.hub_mimic]: RU</b></big>\] <a href=\"http://station13.ru\">SITE</a> | <a href=\"https://discord.gg/2WAsvv5B5v\">DISCORD</a>\n\n"
+		s += "<img src='https://assets.station13.ru/l/w[rand(4, 8)].gif'>\n\n"
+		s += "\[<big>[GLOB.hub_mimic_desc]</big>"
 
-	var/new_status = ""
-	var/hostedby
-	if(config)
-		var/server_name = CONFIG_GET(string/servername)
-		if (server_name)
-			new_status += "<b>[server_name]</b> "
-		if(CONFIG_GET(flag/allow_respawn))
-			features += "respawn" // show "respawn" regardless of "respawn as char" or "free respawn"
-		if(!CONFIG_GET(flag/allow_ai))
-			features += "AI disabled"
-		hostedby = CONFIG_GET(string/hostedby)
-
-	if (CONFIG_GET(flag/station_name_in_hub_entry))
-		new_status += " &#8212; <b>[station_name()]</b>"
-
-	var/players = GLOB.clients.len
-
-	game_state = (CONFIG_GET(number/extreme_popcap) && players >= CONFIG_GET(number/extreme_popcap)) //tells the hub if we are full
-
-	if (!host && hostedby)
-		features += "hosted by <b>[hostedby]</b>"
-
-	if(length(features))
-		new_status += ": [jointext(features, ", ")]"
-
-	new_status += "<br>Time: <b>[gameTimestamp("hh:mm")]</b>"
-	if(SSmapping.config)
-		new_status += "<br>Map: <b>[SSmapping.config.map_path == CUSTOM_MAP_PATH ? "Uncharted Territory" : SSmapping.config.map_name]</b>"
-	var/alert_text = SSsecurity_level.get_current_level_as_text()
-	if(alert_text)
-		new_status += "<br>Alert: <b>[capitalize(alert_text)]</b>"
-
-	status = new_status
+	status = s
 
 /world/proc/update_hub_visibility(new_visibility)
 	if(new_visibility == GLOB.hub_visibility)

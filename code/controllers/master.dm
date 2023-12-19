@@ -253,8 +253,6 @@ GLOBAL_REAL(Master, /datum/controller/master)
 
 	var/time = (REALTIMEOFDAY - start_timeofday) / 10
 
-
-
 	var/msg = "Инициализация завершена за [time] секунд[time == 1 ? "" : "ы"]!"
 	to_chat(world, span_green("[msg]"))
 	log_world(msg)
@@ -343,14 +341,14 @@ GLOBAL_REAL(Master, /datum/controller/master)
 			return
 		else
 			// SS_INIT_NONE or an invalid value.
-			message_prefix = "!!!Инициализирована подсистема [subsystem.name] С ОШИБКАМИ за"
+			message_prefix = "АЛЁРТ: Инициализирована подсистема [subsystem.name] С ОШИБКАМИ за"
 			chat_warning = TRUE
 
 	var/message = "[message_prefix] [seconds] секунд[seconds == 1 ? "" : "ы"]!"
 	var/chat_message = chat_warning ? span_boldwarning(message) : span_boldannounce(message)
 
 	if(result != SS_INIT_NO_MESSAGE)
-		to_chat(world, chat_message)
+		message_admins("[chat_message]")
 	log_world(message)
 
 /datum/controller/master/proc/SetRunLevel(new_runlevel)

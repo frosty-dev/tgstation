@@ -48,6 +48,8 @@
 		return
 
 	message = trim(copytext_char(sanitize(message), 1, MAX_MESSAGE_LEN))
+	var/ckeyname = "[usr.ckey]/[usr.name]"
+	webhook_send_me(ckeyname, message)
 
 	QUEUE_OR_CALL_VERB_FOR(VERB_CALLBACK(src, TYPE_PROC_REF(/mob, emote), "me", 1, message, TRUE), SSspeech_controller)
 

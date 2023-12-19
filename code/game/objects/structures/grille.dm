@@ -327,7 +327,7 @@
 		var/obj/item/dropped_rods = new rods_type(drop_location(), rods_amount)
 		transfer_fingerprints_to(dropped_rods)
 		rods_amount = 1
-		atom_integrity = 20
+		atom_integrity = max_integrity - 30
 
 /obj/structure/grille/proc/repair_grille()
 	if(broken)
@@ -393,12 +393,12 @@
 /obj/structure/grille/broken // Pre-broken grilles for map placement
 	icon_state = "grille_broken"
 	density = FALSE
-	atom_integrity = 20
 	broken = TRUE
 	rods_amount = 1
 
 /obj/structure/grille/broken/Initialize(mapload)
 	. = ..()
+	atom_integrity = 30
 	holes = (holes | 16)
 	update_icon()
 

@@ -158,8 +158,9 @@ SUBSYSTEM_DEF(ticker)
 				start_at = world.time + (CONFIG_GET(number/lobby_countdown) * 10)
 			for(var/client/C in GLOB.clients)
 				window_flash(C, ignorepref = TRUE) //let them know lobby has opened up.
-			to_chat(world, span_notice("<b>Добро пожаловать на [station_name()]!</b>"))
-			send2chat(new /datum/tgs_message_content("New round starting on [SSmapping.config.map_name]!"), CONFIG_GET(string/channel_announce_new_game))
+			to_chat(world, span_boldnotice("<b>Добро пожаловать на [station_name()]!</b>"))
+			//send2chat(new /datum/tgs_message_content("New round starting on [SSmapping.config.map_name]!"), CONFIG_GET(string/channel_announce_new_game))
+			webhook_send_roundstatus("lobby")
 			current_state = GAME_STATE_PREGAME
 			SEND_SIGNAL(src, COMSIG_TICKER_ENTER_PREGAME)
 
@@ -204,6 +205,8 @@ SUBSYSTEM_DEF(ticker)
 				timeLeft = null
 				Master.SetRunLevel(RUNLEVEL_LOBBY)
 				SEND_SIGNAL(src, COMSIG_TICKER_ERROR_SETTING_UP)
+			else
+				webhook_send_roundstatus("ingame")
 
 		if(GAME_STATE_PLAYING)
 			mode.process(wait * 0.1)
@@ -214,12 +217,13 @@ SUBSYSTEM_DEF(ticker)
 				toggle_ooc(TRUE) // Turn it on
 				toggle_dooc(TRUE)
 				declare_completion(force_ending)
+				webhook_send_roundstatus("ending")
 				check_maprotate()
 				Master.SetRunLevel(RUNLEVEL_POSTGAME)
 
 
 /datum/controller/subsystem/ticker/proc/setup()
-	to_chat(world, span_boldannounce("Starting game..."))
+	to_chat(world, span_green("-- Запускаем игру... --"))
 	var/init_start = world.timeofday
 
 	mode = new /datum/game_mode/dynamic
@@ -236,7 +240,7 @@ SUBSYSTEM_DEF(ticker)
 		if(!can_continue)
 			log_game("Game failed pre_setup")
 			QDEL_NULL(mode)
-			to_chat(world, "<B>Error setting up game.</B> Reverting to pre-game lobby.")
+			to_chat(world, "<B>Ничего не вышло!</B> Откатываем таймер назад.")
 			SSjob.ResetOccupations()
 			return FALSE
 	else

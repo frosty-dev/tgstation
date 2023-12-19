@@ -282,6 +282,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 
 	var/full_version = "[byond_version].[byond_build ? byond_build : "xxx"]"
 	log_access("Login: [key_name(src)] from [address ? address : "localhost"]-[computer_id] || BYOND v[full_version]")
+	webhook_send_status_update("client_login","[src.key]")
 
 	var/alert_mob_dupe_login = FALSE
 	var/alert_admin_multikey = FALSE
@@ -568,6 +569,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		QDEL_LIST(credits)
 	if(obj_window)
 		QDEL_NULL(obj_window)
+	webhook_send_status_update("client_logoff","[src.key]")
 	if(holder)
 		adminGreet(1)
 		holder.owner = null
@@ -588,7 +590,8 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 				"Forever alone :("\
 			)
 
-			send2adminchat("Server", "[cheesy_message] (No admins online)")
+			webhook_send_asay("Server", "[cheesy_message]")
+			//send2adminchat("Server", "[cheesy_message] (No admins online)")
 	QDEL_LIST_ASSOC_VAL(char_render_holders)
 
 	SSambience.remove_ambience_client(src)
