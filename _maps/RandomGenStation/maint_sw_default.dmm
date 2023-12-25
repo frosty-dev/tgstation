@@ -42,7 +42,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
 "l" = (
-/obj/item/stack/tile/plasteel,
+/obj/item/stack/tile/iron,
 /turf/template_noop,
 /area/template_noop)
 "n" = (
@@ -63,7 +63,7 @@
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "r" = (
-/obj/item/clothing/head/hardhat,
+/obj/item/clothing/head/utility/hardhat,
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 

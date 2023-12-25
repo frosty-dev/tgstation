@@ -1,6 +1,6 @@
 
 /obj/effect/landmark/stationroom
-	icon = 'white/rebolution228/icons/map_icon_templates.dmi'
+	icon = 'white/master/icons/map_icon_templates.dmi'
 	icon_state = "rdm_landmark"
 	var/list/template_names = list()
 	layer = BULLET_HOLE_LAYER

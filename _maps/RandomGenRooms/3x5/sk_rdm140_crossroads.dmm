@@ -67,7 +67,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/window/reinforced/fulltile/indestructable,
+/obj/structure/window/reinforced/fulltile/indestructible,
 /turf/open/floor/iron/grimy,
 /area/template_noop)
 "J" = (

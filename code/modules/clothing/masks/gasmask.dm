@@ -206,8 +206,8 @@ GLOBAL_LIST_INIT(clown_mask_options, list(
 // **** Welding gas mask ****
 
 /obj/item/clothing/mask/gas/welding
-	name = "welding mask"
-	desc = "A gas mask with built-in welding goggles and a face shield. Looks like a skull - clearly designed by a nerd."
+	name = "сварочная маска"
+	desc = "Закрепляемый на голове лицевой щиток, предназначеннай для полной защиты пользователя от космической дуги."
 	icon_state = "weldingmask"
 	flash_protect = FLASH_PROTECTION_WELDER
 	custom_materials = list(/datum/material/iron=SHEET_MATERIAL_AMOUNT*2, /datum/material/glass=SHEET_MATERIAL_AMOUNT)

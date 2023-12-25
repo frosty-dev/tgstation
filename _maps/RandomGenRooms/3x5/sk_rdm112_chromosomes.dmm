@@ -13,10 +13,7 @@
 /obj/item/sequence_scanner{
 	pixel_y = 3
 	},
-/obj/machinery/light/built{
-	dir = 8;
-	icon_state = "tube-empty"
-	},
+/obj/machinery/light/built/directional/west,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/template_noop)
@@ -35,10 +32,7 @@
 /area/template_noop)
 "f" = (
 /obj/structure/table/glass,
-/obj/machinery/light/broken{
-	dir = 4;
-	icon_state = "tube-broken"
-	},
+/obj/machinery/light/broken/directional/east,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/stack/sheet/plastic/five,
 /turf/open/floor/plating,

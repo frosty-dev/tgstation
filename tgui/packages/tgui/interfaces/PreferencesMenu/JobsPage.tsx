@@ -221,7 +221,7 @@ const JobRow = (
             className="job-name"
             width="50%"
             style={{
-              'padding-left': '0.3em',
+              paddingLeft: '0.3em',
             }}>
             {job.name_ru}
           </Stack.Item>

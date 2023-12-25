@@ -19,6 +19,10 @@
 	name = "Медбей: Центр"
 	icon_state = "med_central"
 
+/area/station/medical/medbay/extra
+	name = "Медбей: Дополнительный"
+	icon_state = "medbay"
+
 /area/station/medical/medbay/lobby
 	name = "Медбей: Лобби"
 	icon_state = "med_lobby"

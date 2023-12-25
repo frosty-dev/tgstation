@@ -5,7 +5,7 @@
 /area/template_noop)
 "d" = (
 /obj/effect/decal/cleanable/vomit/old,
-/obj/effect/mob_spawn/human/corpse/assistant,
+/obj/effect/mob_spawn/corpse/human/assistant,
 /obj/item/storage/pill_bottle,
 /turf/open/floor/plating,
 /area/template_noop)

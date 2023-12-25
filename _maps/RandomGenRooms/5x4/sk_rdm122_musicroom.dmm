@@ -24,15 +24,14 @@
 	},
 /area/template_noop)
 "c" = (
+/obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating{
-	icon_state = "wood-broken3"
+	icon_state = "wood"
 	},
 /area/template_noop)
 "d" = (
 /obj/structure/table/wood,
-/obj/machinery/light/small{
-	dir = 1
-	},
+/obj/machinery/light/small/directional/north,
 /obj/item/toy/plush/slimeplushie,
 /turf/open/floor/plating{
 	icon_state = "wood"
@@ -72,7 +71,7 @@
 /area/template_noop)
 "k" = (
 /obj/structure/table/wood,
-/obj/item/toy/plush/lizardplushie,
+/obj/item/toy/plush/lizard_plushie,
 /obj/item/storage/toolbox/mechanical,
 /turf/open/floor/plating{
 	icon_state = "wood"
@@ -80,7 +79,7 @@
 /area/template_noop)
 "l" = (
 /obj/structure/table/wood,
-/obj/machinery/light/small,
+/obj/machinery/light/small/directional/south,
 /obj/item/toy/plush/snakeplushie,
 /turf/open/floor/plating{
 	icon_state = "wood"

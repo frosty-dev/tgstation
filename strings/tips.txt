@@ -1,38 +1,38 @@
-@You can use the |, + and _ characters to emphasize parts of what you say in-game (e.g. say"my _ass_ |is| +heavy+." will be outputted as "my <u>ass</u> <i>is</i> <b>heavy</b>."). You can also escape these emphasizers by appending backslashes before them (e.g. say"1\+2\+3" will come out as "1+2+3" and not "1\<b>2\</b>3").
-♪ Hey, have you ever tried appending the % character before your messages when speaking in-game? ♫
-A Scientist will pay top dollar for your frogs!
-A thrown glass of water can make a slippery tile, allowing you to slow down your pursuers in a pinch.
-Anything you can light a cigarette with, you can use to cauterize a bleeding wound. Technically, that includes the Supermatter.
-As a Blobbernaut, you can communicate with overminds and other Blobbernauts via :b.
-As a Blobbernaut, your HUD shows your health and the core health of the overmind that created you.
-As a Botanist, you can combine production trait chemicals just like a Chemist. Hydrogen(grass) + water(peas) + sugar(grapes) equal mannitol!
-As a Botanist, you can combine production trait chemicals just like a Chemist. Potassium(bananas) + water(watermelons) equal... FUN!
-As a Botanist, you can hack the MegaSeed Vendor to get access to more exotic seeds. These seeds can alternatively be ordered from cargo.
-As a Botanist, you can mutate the plants growing in your hydroponics trays with Left 4 Zed from your NutriMax vendor.  Once you've ground up a few plants in the biogenerator, it can also produce Left 4 Zed.  Isn't science amazing?
-As a Botanist, you should look into increasing the potency of your plants. This increases the size, amount of chemicals, points gained from grinding them in the biogenerator, and lets people know you are a proficient botanist.
-As a Cargo Technician, you can earn more cargo points by shipping back crates from maintenance, liquid containers, plasma sheets, rare seeds from hydroponics, and more!
-As a Cargo Technician, you can hack MULEbots to make them faster, run over people in their way, and even let you ride them!
-As a Cargo Technician, you can order contraband items from the supply shuttle console by de-constructing it and using a multitool on the circuit board, the re-assembling it.
-As a Changeling, taking on someone else's appearance will also give you all of their scars. You can use Fleshmend to get rid of all scars.
-As a Changeling, the Extract DNA sting counts for your genome absorb objective, but does not let you respec your powers.
-As a Changeling, you can absorb someone by strangling them and using the Absorb verb; this gives you the ability to rechoose your powers, the DNA of whoever you absorbed, the memory of the absorbed, and some samples of things the absorbed said.
-As a Chemist, some chemicals can only be synthesized by heating up the contents with a chemical heater or manually with lighters and similar tools.
-As a Chemist, there are dozens of chemicals that can heal, and even more that can cause harm. Experiment!
-As a Chemist, Water and Potassium mixed together will create an explosion, with power scaling by amount used. Don't do it.
-As a Chemist, Holy Water and Potassium mixed together will create a HOLY explosion, with increased power scaling by amount used. If at least 75 units of both are used, the explosion will reveal, ignite, and paralyze any cultists, heretics, and revenants in sight. Do it!
-As a Chemist, you can quickly make 100u plastic bottles directly from plastic sheets, alongside being able to make 120u plastic beakers in the lathe. The ChemMaster can produce infinite 30u glass bottles as well and if researched the medical techfab can make beakers with capacity ranging from 120u to 300u.
-As a Chemist, you can recharge your chemical dispenser with an inducer or by replacing its cell.
-As a Chemist, you will be expected to supply crew with certain chemicals. For example, Clonexadone and Mannitol for the cryo tubes, Diethylamine and Saltpetre for botany, as well as healing pills and patches for the front desk.
-As a Cook, any food you make will be much healthier than the junk food found in vendors. Having the crew routinely eating from you will provide minor buffs.
-As a Cook, being in the kitchen will make you remember the basics of Close Quarters Cooking. It is highly effective at removing Assistants from your workplace.
-As a Cook, most non-custom foods will have a secondary effect, ranging from healing you to making you move at lightspeed. Experiment!
-As a Cook, you can create a very wide variety of food with the crafting menu. You can find it by looking for the hammer icon near your combat mode indicator.
-As a Cook, you can load your food into smartfridges and custom vending machines.
-As a Cook, you can rename your custom made food with a pen.
-As a Cultist, check the alert in the upper-right of your screen for all the details about your cult's current status and objective.
-As a Cultist, do not cause too much chaos before your objective is completed. If the shuttle gets called too soon, you may not have enough time to win.
-As a Cultist, the Blood Boil rune will deal massive amounts of brute damage to non-cultists, and some damage to fellow cultists of Nar'Sie nearby, but will create a fire where the rune stands on use.
-As a Cultist, your team starts off very weak, but if necessary can quickly convert everything they have into raw power. Make sure you have the numbers and equipment to support going loud, or the cult will fall flat on its face.
+@Вы можете использоватьсимволы |, + и _ для того, чтобы придать выразительность вашей речи в игре (пример. say"вайт _дрим_ |полное| +говно+." будет отображаться как "вайт <u>дрим</u> <i>полное</i> <b>говно</b>."). Вы также можете избежать этих подчеркиваний, добавив перед ними обратные косые черты (пример, say"1\+2\+3" будет отображено как "1+2+3", а не как "1\<b>2\</b>3").
+♪ Вы когда-нибудь пробовали добавлять символ % перед своими сообщениями, когда говорите в игре? ♫
+Ученый готов заплатить за ваших лягушек!
+Брошенный стакан воды сделает плитку скользкой, что позволит вам в случае необходимости замедлить преследователей.
+Все, чем можно прикурить сигарету, можно использовать для прижигания кровоточащей раны. Технически, к ним относится и суперматерия.
+Будучи Блоббернаутом, вы можете общаться с сверхразумами и другими Блоббернаутами нажатием на :b.
+Будучи Блоббернаутом, ваш интерфейс отображает ваше здоровье и здоровье ядра сверхразума, создавшего вас.
+Будучи ботаником, вы можете комбинировать химические вещества, как химик. Водород (трава) + вода (горох) + сахар (виноград) будут равны маннитолу!
+Будучи ботаником, вы можете комбинировать химические вещества, как химик. Калий (бананы) + вода (арбузы) равны... ВЕСЕЛЬЕ!
+Будучи ботаником, вы можете взломать MegaSeed Vendor, чтобы получить доступ к более экзотическим семенам. Кроме того, эти семена можно заказать в грузовом отделе.
+Будучи ботаником, вы можете мутировать растения, растущие в ваших гидропонных лотках, с помощью Left 4 Zed с вендомата NutriMax. Как только вы измельчите несколько растений в биогенераторе, он также сможет производить Left 4 Zed. Разве наука не удивительна?
+Будучи ботаником, вы должны позаботиться о повышении потенции своих растений. Это увеличит их размер, количество химикатов, очки, получаемые при измельчении в биогенераторе, и позволит людям понять, что вы опытный ботаник.
+Будучи грузчиком, вы можете заработать больше грузовых очков, отправляя ящики из технического обслуживания, контейнеры с жидкостью, листы плазмы, редкие семена из гидропоники и многое другое!
+Будучи грузчиком, вы можете взломать МУЛботов, чтобы они стали быстрее, давили людей на своем пути и даже позволили бы вам залезть на такой!
+Будучи грузчиком, вы можете заказать контрабандные предметы из консоли шаттла снабжения, разобрав ее и использовав мультитул на печатной плате, а затем собрав ее снова.
+Будучи генокрадом, если вы будете подражать чужой внешности, вы также получите все ее шрамы. Вы можете использовать Fleshmend, чтобы избавиться от всех шрамов.
+Будучи генокрадом, жало "Извлечение ДНК" засчитывается для достижения цели "Поглощение генома", но не позволит вам в дальнейшем обновить свои способности.
+Будучи генокрадом, вы можете поглотить кого-то, задушив его и использовав кнопку "Поглотить"; это даст вам возможность заново выбрать свои силы, ДНК того, кого вы поглотили, память поглощенного и некоторые образцы того, что он сказал.
+Будучи Химиком, у вас в распоряжении десятки химикатов, которые могут исцелять, но куда больше причиняющих вред. Экспериментируйте!
+Будучи Химиком знайте, что некоторые химические вещества могут быть синтезированы только нагреванием в химическом нагревателе или вручную с помощью зажигалок или похожих приспособлений.
+Будучи Химиком ожидайте, что экипаж рассчитывает, что вы будете снабжать их определенными химикатами. Например, клоноксадоном и маннитолом используемых в криотрубах, нестабильным мутагеном и селитрой, используемыми в ботанике, и также пластырями, лечебными пилюлями и бинтами для ресепшена.
+Будучи Химиком? вы можете создавать пластиковые бутылки емкостью 100 единиц из листов пластика. ХимМастер может бесконечно производить стеклянные бутыли емкостью 30 единиц, и если вы изучите медицинский техфабрикатор, то вы сможете создавать мензурки с емкостью от 120 единиц до 300.
+Будучи Химиком вы можете перезарядить ваш хим. раздатчик индуктором или заменой его элемента.
+Будучи Химиком учитывайте то, что смешивание Воды и Калия вызовет взрыв с мощностью, зависящей от их количества. Не делайте этого.
+Будучи Поваром, любая еда, которую вы приготовите, будет намного полезнее, чем нездоровая пища, которую можно найти в торговых автоматах. Если экипаж будет регулярно питаться у вас, это даст ей небольшие бонусы.
+Будучи Поваром, нахождение на кухне заставит вас вспомнить приемы Поварского Ближнего Боя. Это очень эффективное средство для устранения ассистентов с вашего рабочего места.
+Будучи Поваром, большинство нестандартных продуктов будут иметь дополнительный эффект, начиная от исцеления и заканчивая скоростью передвижения. Экспериментируйте!
+Будучи Поваром, вы можете загружать автомат со снеками своей едой.
+Будучи Поваром, вы можете готовить огромное количество еды, используя меню крафта. Его можно найти по похожей на молоток иконке рядом с намерениями.
+Будучи Поваром, вы можете менять название приготовленной вами еды, используя ручку.
+Будучи Культистом, не вызывайте слишком много хаоса до того, как ваша цель выполнена. Если шаттл будет вызван слишком рано, вам может не хватить времени для победы.
+Будучи Культистом, в начале ваша команда очень слаба, но быстро может преобразовать всё, что имеет, в грубую силу. Убедитесь что у вас есть члены и экипировка, чтобы поддерживать громкие действия, в противном случае культ падет ниц.
+Будучи Культистом, руна Кипения Крови наносит сильный brute урон всем не входящим в культ, урон по выносливости всем Ратварианским отбросам и небольшой урон культистам Нар'Си поблизости, но она начнет пожар в месте своего расположения при активации.
+Будучи Культистом, вы можете создать армию манифестных головорезов, используя комбинацию из руны Манифеста, которая создает гомункулов из призраков, и руны Истощения Крови, которая вытягивает жизнь из тех, кто стоит на одной из них.
+Будучи Культистом, проверяйте оповещения в верхнем правом углу экрана, чтобы знать детали о текущем состоянии вашего культа и цели.
 As a Cyborg, choose your model carefully, as only cutting and mending your reset wire will let you re-pick it. If possible, refrain from choosing a model until a situation that requires one occurs.
 As a Cyborg, you are extremely vulnerable to EMPs as EMPs both stun you and damage you. The ion rifle in the armory or a traitor with an EMP kit can kill you in seconds.
 As a Cyborg, you are immune to most forms of stunning, and excel at almost everything far better than humans. However, flashes can easily stunlock you and you cannot do any precision work as you lack hands.

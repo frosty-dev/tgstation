@@ -8,10 +8,10 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "c" = (
-/obj/item/stack/tile/plasteel,
-/obj/item/stack/tile/plasteel,
-/obj/item/stack/tile/plasteel,
-/obj/item/stack/tile/plasteel,
+/obj/item/stack/tile/iron,
+/obj/item/stack/tile/iron,
+/obj/item/stack/tile/iron,
+/obj/item/stack/tile/iron,
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/iron,
 /area/template_noop)
@@ -34,9 +34,8 @@
 /turf/open/floor/iron,
 /area/template_noop)
 "g" = (
-/turf/open/floor/plating{
-	icon_state = "platingdmg1"
-	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "h" = (
 /obj/effect/decal/cleanable/oil/slippery,
@@ -69,7 +68,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/machinery/light/broken,
+/obj/machinery/light/broken/directional/south,
 /turf/open/floor/iron,
 /area/template_noop)
 "o" = (

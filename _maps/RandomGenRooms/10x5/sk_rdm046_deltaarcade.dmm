@@ -276,7 +276,9 @@
 /area/template_noop)
 "y" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/random/entertainment/arcade,
+/obj/effect/spawner/random/entertainment/arcade{
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/template_noop)
 "z" = (
@@ -303,6 +305,58 @@
 	},
 /turf/open/floor/iron/dark,
 /area/template_noop)
+"F" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/spawner/random/entertainment/arcade{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/template_noop)
+"I" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/chair/stool/bar{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/template_noop)
+"J" = (
+/obj/structure/chair/stool/bar{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/template_noop)
+"M" = (
+/obj/effect/spawner/random/entertainment/arcade{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/template_noop)
+"Q" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/spawner/random/entertainment/arcade{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/template_noop)
 
 (1,1,1) = {"
 a
@@ -313,17 +367,17 @@ w
 "}
 (2,1,1) = {"
 b
-l
+J
 e
 u
-c
+F
 "}
 (3,1,1) = {"
 c
-m
+I
 n
 l
-g
+M
 "}
 (4,1,1) = {"
 d
@@ -351,7 +405,7 @@ g
 n
 n
 l
-b
+Q
 "}
 (8,1,1) = {"
 h

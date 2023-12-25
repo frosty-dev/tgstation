@@ -8,10 +8,7 @@
 /area/template_noop)
 "b" = (
 /obj/structure/table,
-/obj/machinery/light/small/broken{
-	dir = 1;
-	icon_state = "bulb-broken"
-	},
+/obj/machinery/light/small/broken/directional/north,
 /obj/effect/spawner/random/clothing/gloves,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/grimy,
@@ -34,7 +31,7 @@
 /area/template_noop)
 "g" = (
 /obj/structure/table,
-/obj/machinery/light/small/broken,
+/obj/machinery/light/small/broken/directional/south,
 /obj/effect/spawner/random/clothing/gloves,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/clothing/gloves/color/fyellow/old,

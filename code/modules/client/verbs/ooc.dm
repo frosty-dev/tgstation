@@ -170,17 +170,17 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 
 //Checks admin notice
 /client/verb/admin_notice()
-	set name = "Adminnotice"
+	set name = "📘 Заметки от педалей"
 	set category = "Admin"
 	set desc ="Check the admin notice if it has been set"
 
 	if(GLOB.admin_notice)
-		to_chat(src, "[span_boldnotice("Admin Notice:")]\n \t [GLOB.admin_notice]")
+		to_chat(src, "[span_boldnotice("ЗАМЕТКА АДМИНА:")]\n \t [GLOB.admin_notice]")
 	else
-		to_chat(src, span_notice("There are no admin notices at the moment."))
+		to_chat(src, span_notice("На данный момент педальных раундовых заметок нет."))
 
 /client/verb/motd()
-	set name = "MOTD"
+	set name = "📘 Приветствие"
 	set category = "OOC"
 	set desc ="Check the Message of the Day"
 
@@ -191,18 +191,18 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 		to_chat(src, span_notice("The Message of the Day has not been set."))
 
 /client/proc/self_notes()
-	set name = "View Admin Remarks"
+	set name = "📘 Просмотреть чем я отличился"
 	set category = "OOC"
-	set desc = "View the notes that admins have written about you"
+	set desc = "Просмотреть заметки, которые педали написали о вас"
 
 	if(!CONFIG_GET(flag/see_own_notes))
-		to_chat(usr, span_notice("Sorry, that function is not enabled on this server."))
+		to_chat(usr, span_notice("Эта функция отключена конфигурацией сервера."))
 		return
 
 	browse_messages(null, usr.ckey, null, TRUE)
 
 /client/proc/self_playtime()
-	set name = "View tracked playtime"
+	set name = "📘 Моё время игры"
 	set category = "OOC"
 	set desc = "View the amount of playtime for roles the server has tracked."
 
@@ -214,7 +214,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 
 // Ignore verb
 /client/verb/select_ignore()
-	set name = "Ignore"
+	set name = "❌ Игнорировать"
 	set category = "OOC"
 	set desc ="Ignore a player's messages on the OOC channel"
 
@@ -296,7 +296,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 
 // Unignore verb
 /client/verb/select_unignore()
-	set name = "Unignore"
+	set name = "❌ Не игнорировать"
 	set category = "OOC"
 	set desc = "Stop ignoring a player's messages on the OOC channel"
 
@@ -333,21 +333,21 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	to_chat(src, "<span class='infoplain'>You are no longer ignoring [selection] on the OOC channel.</span>")
 
 /client/proc/show_previous_roundend_report()
-	set name = "Your Last Round"
+	set name = "📘 Мой последний раунд"
 	set category = "OOC"
 	set desc = "View the last round end report you've seen"
 
 	SSticker.show_roundend_report(src, report_type = PERSONAL_LAST_ROUND)
 
 /client/proc/show_servers_last_roundend_report()
-	set name = "Server's Last Round"
+	set name = "📘 Последний раунд сервера"
 	set category = "OOC"
 	set desc = "View the last round end report from this server"
 
 	SSticker.show_roundend_report(src, report_type = SERVER_LAST_ROUND)
 
 /client/verb/fit_viewport()
-	set name = "Fit Viewport"
+	set name = "ПОЧИНИТЬ ЭКРАН"
 	set category = "OOC"
 	set desc = "Fit the width of the map window to match the viewport"
 
@@ -427,7 +427,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 		addtimer(CALLBACK(src, VERB_REF(fit_viewport), 1 SECONDS))
 
 /client/verb/policy()
-	set name = "Show Policy"
+	set name = "📘 Показать политику"
 	set desc = "Show special server rules related to your current character."
 	set category = "OOC"
 
@@ -448,13 +448,13 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	usr << browse(policytext.Join(""),"window=policy")
 
 /client/verb/fix_stat_panel()
-	set name = "Fix Stat Panel"
+	set name = "Починить верхнюю панель"
 	set hidden = TRUE
 
 	init_verbs()
 
 /client/proc/export_preferences()
-	set name = "Export Preferences"
+	set name = "Экспорт настроек"
 	set desc = "Export your current preferences to a file."
 	set category = "OOC"
 

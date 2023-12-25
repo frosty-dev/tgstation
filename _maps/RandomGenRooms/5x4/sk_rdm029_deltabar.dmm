@@ -6,19 +6,16 @@
 /obj/structure/sign/poster/contraband/random{
 	pixel_y = 32
 	},
-/obj/machinery/light/small{
-	dir = 1;
-	icon_state = "bulb"
-	},
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/plating,
 /area/template_noop)
 "b" = (
 /obj/structure/table/wood/poker,
-/obj/item/reagent_containers/food/drinks/bottle/rum{
+/obj/item/reagent_containers/cup/glass/bottle/rum{
 	pixel_x = 6;
 	pixel_y = 3
 	},
-/obj/item/reagent_containers/food/drinks/bottle/whiskey{
+/obj/item/reagent_containers/cup/glass/bottle/whiskey{
 	pixel_y = 7
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -31,16 +28,13 @@
 "d" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/vending/boozeomat/all_access,
-/obj/machinery/light/small{
-	dir = 1;
-	icon_state = "bulb"
-	},
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/plating,
 /area/template_noop)
 "e" = (
 /obj/structure/table/wood/poker,
-/obj/item/reagent_containers/food/drinks/shaker,
-/obj/item/reagent_containers/glass/beaker/cryoxadone,
+/obj/item/reagent_containers/cup/glass/shaker,
+/obj/item/reagent_containers/cup/beaker/cryoxadone,
 /obj/item/reagent_containers/dropper,
 /turf/open/floor/plating,
 /area/template_noop)
@@ -51,9 +45,8 @@
 "g" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/vomit/old,
-/turf/open/floor/wood{
-	icon_state = "wood-broken3"
-	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/wood,
 /area/template_noop)
 "h" = (
 /turf/open/floor/plating,
@@ -66,9 +59,8 @@
 "j" = (
 /obj/structure/table/wood/poker,
 /obj/effect/spawner/random/maintenance,
-/turf/open/floor/wood{
-	icon_state = "wood-broken5"
-	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/wood,
 /area/template_noop)
 "k" = (
 /obj/structure/table/wood/poker,
@@ -85,18 +77,23 @@
 /turf/open/floor/wood,
 /area/template_noop)
 "m" = (
-/obj/structure/chair/stool/bar,
+/obj/structure/chair/stool/bar{
+	dir = 1
+	},
 /turf/open/floor/wood,
 /area/template_noop)
 "n" = (
-/obj/structure/chair/stool/bar,
-/turf/open/floor/wood{
-	icon_state = "wood-broken"
+/obj/effect/mapping_helpers/broken_floor,
+/obj/structure/chair/stool/bar{
+	dir = 1
 	},
+/turf/open/floor/wood,
 /area/template_noop)
 "o" = (
-/obj/structure/chair/stool/bar,
 /obj/effect/decal/cleanable/vomit/old,
+/obj/structure/chair/stool/bar{
+	dir = 1
+	},
 /turf/open/floor/wood,
 /area/template_noop)
 

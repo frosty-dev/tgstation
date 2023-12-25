@@ -8,25 +8,18 @@
 /area/template_noop)
 "b" = (
 /obj/structure/closet/radiation,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/template_noop)
 "c" = (
 /obj/structure/closet/radiation,
-/obj/machinery/light/built{
-	dir = 1;
-	icon_state = "tube-empty"
-	},
+/obj/machinery/light/built/directional/north,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/template_noop)
 "d" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/template_noop)
@@ -42,7 +35,7 @@
 /turf/open/floor/iron,
 /area/template_noop)
 "g" = (
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
@@ -50,14 +43,11 @@
 /turf/open/floor/iron,
 /area/template_noop)
 "h" = (
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/machinery/light/broken{
-	dir = 1;
-	icon_state = "tube-broken"
-	},
+/obj/machinery/light/broken/directional/north,
 /obj/effect/turf_decal/caution/stand_clear{
 	dir = 1;
 	icon_state = "stand_clear"
@@ -66,7 +56,7 @@
 /turf/open/floor/iron,
 /area/template_noop)
 "i" = (
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/template_noop)
@@ -76,12 +66,9 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "k" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
+/obj/effect/mapping_helpers/burnt_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "l" = (
 /obj/effect/decal/cleanable/dirt,
@@ -96,35 +83,27 @@
 /turf/open/floor/mineral/uranium,
 /area/template_noop)
 "o" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/open/floor/plating{
-	icon_state = "platingdmg1"
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "p" = (
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
+/obj/effect/mapping_helpers/burnt_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "q" = (
 /obj/machinery/door/window/left/directional/west,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
+/obj/effect/mapping_helpers/burnt_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "r" = (
 /obj/item/surgicaldrill,
-/turf/open/floor/plating{
-	icon_state = "platingdmg1"
-	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "s" = (
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
 	},
@@ -137,9 +116,8 @@
 /area/template_noop)
 "u" = (
 /obj/effect/decal/cleanable/ash,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
+/obj/effect/mapping_helpers/burnt_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "v" = (
 /obj/effect/turf_decal/stripes/line{
@@ -161,14 +139,11 @@
 /area/template_noop)
 "x" = (
 /obj/item/scalpel,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
+/obj/effect/mapping_helpers/burnt_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "y" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/hemostat,
 /turf/open/floor/iron,
@@ -181,19 +156,13 @@
 /turf/open/floor/iron,
 /area/template_noop)
 "A" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/template_noop)
 "B" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -210,17 +179,15 @@
 "D" = (
 /obj/structure/table/optable,
 /obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
+/obj/effect/mapping_helpers/burnt_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "E" = (
 /obj/structure/table,
-/obj/machinery/light,
+/obj/machinery/light/directional/south,
 /obj/item/surgical_drapes,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
+/obj/effect/mapping_helpers/burnt_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "F" = (
 /obj/effect/decal/cleanable/dirt,
@@ -228,26 +195,20 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "G" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/template_noop)
 "H" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/effect/turf_decal/stripes/line,
-/obj/machinery/light/broken,
+/obj/machinery/light/broken/directional/south,
 /obj/effect/turf_decal/caution/stand_clear,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/template_noop)
 "I" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/cautery,
@@ -262,7 +223,7 @@
 /area/template_noop)
 "K" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/cat_butcherer,
+/mob/living/basic/cat_butcherer,
 /turf/open/floor/iron,
 /area/template_noop)
 "V" = (

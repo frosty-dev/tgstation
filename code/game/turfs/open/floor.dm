@@ -2,7 +2,7 @@
 /turf/open/floor
 	name = "пол"
 //	icon = 'icons/turf/floors.dmi' // WD EDIT
-	icon = 'white/rebolution228/icons/turf/floors.dmi'
+	icon = 'white/master/icons/turf/floors.dmi'
 	base_icon_state = "floor"
 	baseturfs = /turf/open/floor/plating
 
@@ -22,7 +22,7 @@
 
 	overfloor_placed = TRUE
 //	damaged_dmi = 'icons/turf/damaged.dmi'  // WD EDIT
-	damaged_dmi = 'white/rebolution228/icons/turf/damaged.dmi'
+	damaged_dmi = 'white/master/icons/turf/damaged.dmi'
 	/// Path of the tile that this floor drops
 	var/floor_tile = null
 	/// Determines if you can deconstruct this with a RCD

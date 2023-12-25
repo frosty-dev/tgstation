@@ -12,9 +12,7 @@
 /turf/open/floor/iron,
 /area/template_noop)
 "c" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
+/obj/machinery/light/small/directional/north,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/frame/machine,
 /turf/open/floor/plating,
@@ -33,15 +31,13 @@
 /obj/structure/rack,
 /obj/item/book/manual/wiki/robotics_cyborgs,
 /obj/item/storage/belt/utility,
-/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/cup/beaker/large,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/iron,
 /area/template_noop)
 "h" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
+/obj/machinery/light/small/directional/north,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/mecha_part_fabricator/maint{
 	name = "forgotten exosuit fabricator"
@@ -202,7 +198,7 @@
 /area/template_noop)
 "D" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/mech_bay_recharge_floor,
+/turf/open/floor/iron/recharge_floor,
 /area/template_noop)
 "E" = (
 /obj/effect/turf_decal/stripes/line,
@@ -216,7 +212,7 @@
 "G" = (
 /obj/structure/rack,
 /obj/item/storage/toolbox/mechanical,
-/obj/item/clothing/head/welding,
+/obj/item/clothing/head/utility/welding,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/template_noop)
@@ -228,16 +224,22 @@
 /obj/item/stack/cable_coil,
 /obj/item/flashlight/seclite,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/stack/sheet/mineral/diamond,
+/obj/item/stack/sheet/mineral/diamond{
+	pixel_x = -2;
+	pixel_y = -6
+	},
 /turf/open/floor/plating,
 /area/template_noop)
 "I" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/stack/sheet/mineral/diamond,
+/obj/item/stack/sheet/mineral/diamond{
+	pixel_x = 5;
+	pixel_y = 7
+	},
 /turf/open/floor/plating,
 /area/template_noop)
 "J" = (
-/obj/machinery/light/small,
+/obj/machinery/light/small/directional/south,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/delivery,
@@ -270,7 +272,7 @@
 /area/template_noop)
 "N" = (
 /obj/structure/frame/machine,
-/obj/machinery/light/small,
+/obj/machinery/light/small/directional/south,
 /obj/item/stack/sheet/glass,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -280,6 +282,14 @@
 /obj/item/clothing/gloves/color/black,
 /obj/item/storage/toolbox/electrical,
 /obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/template_noop)
+"P" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/sheet/mineral/diamond{
+	pixel_x = 10;
+	pixel_y = 17
+	},
 /turf/open/floor/plating,
 /area/template_noop)
 
@@ -323,7 +333,7 @@ f
 f
 v
 C
-I
+P
 "}
 (7,1,1) = {"
 g

@@ -47,9 +47,7 @@
 /turf/open/floor/wood,
 /area/station/service/bar)
 "bz" = (
-/obj/machinery/light{
-	dir = 8
-	},
+/obj/machinery/light/directional/west,
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_x = -31
 	},
@@ -57,9 +55,7 @@
 /turf/open/floor/glass/reinforced,
 /area/station/service/bar)
 "cg" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
+/obj/machinery/light/small/directional/east,
 /obj/machinery/vending/cigarette,
 /turf/open/floor/mineral/plastitanium,
 /area/station/service/bar)
@@ -68,9 +64,9 @@
 /obj/machinery/reagentgrinder,
 /obj/machinery/requests_console{
 	department = "Kitchen";
-	departmentType = 2;
 	pixel_x = 30
 	},
+/obj/effect/mapping_helpers/requests_console/supplies,
 /turf/open/floor/iron/kitchen/diagonal,
 /area/station/service/kitchen)
 "ct" = (
@@ -162,8 +158,7 @@
 /turf/open/floor/mineral/plastitanium,
 /area/station/service/bar)
 "fQ" = (
-/obj/structure/chair/stool{
-	dir = 8;
+/obj/structure/chair/stool/directional/west{
 	pixel_y = 8
 	},
 /turf/open/floor/mineral/plastitanium,
@@ -252,7 +247,7 @@
 /turf/open/floor/iron/showroomfloor,
 /area/station/service/kitchen)
 "hm" = (
-/obj/machinery/light,
+/obj/machinery/light/directional/south,
 /turf/open/floor/mineral/plastitanium,
 /area/station/service/bar)
 "hF" = (
@@ -318,9 +313,7 @@
 	req_access_txt = "28"
 	},
 /obj/effect/turf_decal/delivery,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/effect/spawner/random/trash/mess,
 /turf/open/floor/mineral/plastitanium,
 /area/station/service/bar)
@@ -348,9 +341,7 @@
 /turf/open/floor/iron/kitchen/diagonal,
 /area/station/service/kitchen)
 "kM" = (
-/obj/machinery/light{
-	dir = 4
-	},
+/obj/machinery/light/directional/east,
 /obj/structure/kitchenspike,
 /turf/open/floor/iron/showroomfloor,
 /area/station/service/kitchen)
@@ -408,15 +399,14 @@
 /area/station/hallway/primary/starboard)
 "mi" = (
 /obj/structure/table/wood,
-/obj/structure/sign/plaques{
-	pixel_x = -28;
-	pixel_y = -4
-	},
 /obj/machinery/chem_dispenser/drinks{
 	dir = 4
 	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 10
+	},
+/obj/structure/sign/picture_frame/portrait/bar{
+	pixel_x = -30
 	},
 /turf/open/floor/wood,
 /area/station/service/bar)
@@ -445,9 +435,7 @@
 /turf/open/floor/iron/kitchen/diagonal,
 /area/station/service/kitchen)
 "nT" = (
-/obj/machinery/light{
-	dir = 8
-	},
+/obj/machinery/light/directional/west,
 /obj/item/kirbyplants/random,
 /obj/effect/turf_decal/stripes/corner{
 	dir = 4
@@ -491,9 +479,7 @@
 /turf/open/floor/mineral/plastitanium,
 /area/station/service/bar)
 "pW" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
+/obj/machinery/light/small/directional/east,
 /obj/machinery/vending/coffee,
 /turf/open/floor/mineral/plastitanium,
 /area/station/service/bar)
@@ -592,9 +578,7 @@
 /area/station/service/bar)
 "uj" = (
 /obj/item/kirbyplants/random,
-/obj/structure/window/reinforced/survival_pod{
-	dir = 1
-	},
+/obj/structure/window/reinforced/survival_pod/spawner/directional/north,
 /turf/open/floor/mineral/plastitanium,
 /area/station/service/bar)
 "ul" = (
@@ -788,7 +772,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
 	},
-/obj/machinery/light,
+/obj/machinery/light/directional/south,
 /turf/open/floor/iron/showroomfloor,
 /area/station/service/kitchen)
 "BE" = (
@@ -869,9 +853,7 @@
 /turf/open/floor/wood,
 /area/station/service/bar)
 "Gc" = (
-/obj/machinery/light{
-	dir = 4
-	},
+/obj/machinery/light/directional/east,
 /turf/open/floor/mineral/plastitanium,
 /area/station/service/bar)
 "Gr" = (
@@ -903,9 +885,7 @@
 "Jt" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/light{
-	dir = 4
-	},
+/obj/machinery/light/directional/east,
 /turf/open/floor/mineral/plastitanium,
 /area/station/service/bar)
 "Jx" = (
@@ -961,9 +941,7 @@
 /obj/item/stack/cable_coil,
 /obj/item/stack/sheet/iron/fifty,
 /obj/item/flashlight/lamp,
-/obj/machinery/light/small{
-	dir = 8
-	},
+/obj/machinery/light/small/directional/west,
 /obj/machinery/airalarm/directional/west{
 	pixel_x = -23
 	},
@@ -1038,7 +1016,7 @@
 /turf/open/floor/mineral/plastitanium,
 /area/station/service/bar)
 "Mu" = (
-/obj/machinery/light,
+/obj/machinery/light/directional/south,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 4
 	},
@@ -1053,10 +1031,10 @@
 "MD" = (
 /obj/machinery/requests_console{
 	department = "Bar";
-	departmentType = 2;
-	pixel_x = 30;
-	receive_ore_updates = 1
+	pixel_x = 30
 	},
+/obj/effect/mapping_helpers/requests_console/ore_update,
+/obj/effect/mapping_helpers/requests_console/supplies,
 /obj/structure/ladder,
 /turf/open/floor/wood,
 /area/station/service/bar)
@@ -1214,7 +1192,7 @@
 /turf/open/floor/iron/kitchen/diagonal,
 /area/station/service/kitchen)
 "SM" = (
-/obj/machinery/light,
+/obj/machinery/light/directional/south,
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
@@ -1257,9 +1235,7 @@
 /obj/machinery/airalarm/directional/north{
 	pixel_y = 23
 	},
-/obj/machinery/light{
-	dir = 1
-	},
+/obj/machinery/light/directional/north,
 /obj/machinery/griddle,
 /turf/open/floor/iron/kitchen/diagonal,
 /area/station/service/kitchen)
@@ -1291,9 +1267,7 @@
 	},
 /obj/structure/table/wood,
 /obj/machinery/reagentgrinder,
-/obj/machinery/light{
-	dir = 1
-	},
+/obj/machinery/light/directional/north,
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
@@ -1316,9 +1290,7 @@
 /turf/open/floor/iron/kitchen/diagonal,
 /area/station/service/kitchen)
 "VV" = (
-/obj/machinery/light{
-	dir = 1
-	},
+/obj/machinery/light/directional/north,
 /turf/open/floor/mineral/plastitanium,
 /area/station/service/bar)
 "VW" = (

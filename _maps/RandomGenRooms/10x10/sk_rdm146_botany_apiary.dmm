@@ -11,7 +11,7 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "f" = (
-/obj/structure/flora/ausbushes/reedbush{
+/obj/structure/flora/bush/reed/style_random{
 	pixel_y = 5
 	},
 /turf/open/floor/grass,
@@ -26,9 +26,7 @@
 /turf/open/floor/grass,
 /area/template_noop)
 "i" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/plating,
 /area/template_noop)
 "j" = (
@@ -42,11 +40,9 @@
 /obj/item/cultivator{
 	pixel_x = 6
 	},
-/obj/item/reagent_containers/glass/bucket,
-/obj/item/reagent_containers/glass/bucket,
-/obj/machinery/light/small{
-	dir = 4
-	},
+/obj/item/reagent_containers/cup/bucket,
+/obj/item/reagent_containers/cup/bucket,
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/grass,
 /area/template_noop)
 "k" = (
@@ -55,7 +51,7 @@
 /turf/open/floor/grass,
 /area/template_noop)
 "l" = (
-/mob/living/simple_animal/butterfly,
+/mob/living/basic/butterfly,
 /turf/open/floor/grass,
 /area/template_noop)
 "m" = (
@@ -64,14 +60,12 @@
 /area/template_noop)
 "n" = (
 /obj/effect/spawner/structure/window,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
+/obj/effect/mapping_helpers/burnt_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "o" = (
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
+/obj/effect/mapping_helpers/burnt_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "q" = (
 /obj/structure/water_source/puddle,
@@ -80,9 +74,7 @@
 "r" = (
 /obj/machinery/hydroponics/soil,
 /obj/item/seeds/cabbage,
-/obj/machinery/light/small{
-	dir = 8
-	},
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/grass,
 /area/template_noop)
 "t" = (
@@ -90,9 +82,8 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "v" = (
-/turf/open/floor/plating{
-	icon_state = "platingdmg1"
-	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "x" = (
 /obj/effect/landmark/event_spawn,
@@ -100,7 +91,7 @@
 /area/template_noop)
 "A" = (
 /obj/effect/spawner/random/trash/grille_or_waste,
-/obj/machinery/light/small,
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/plating,
 /area/template_noop)
 "D" = (
@@ -110,13 +101,11 @@
 /area/template_noop)
 "E" = (
 /obj/effect/spawner/random/trash/grille_or_waste,
-/obj/machinery/light/small{
-	dir = 1
-	},
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/plating,
 /area/template_noop)
 "G" = (
-/obj/structure/flora/ausbushes/ppflowers,
+/obj/structure/flora/bush/flowers_pp/style_random,
 /turf/open/floor/grass,
 /area/template_noop)
 "H" = (
@@ -126,12 +115,12 @@
 /obj/structure/closet{
 	name = "beekeeping wardrobe"
 	},
-/obj/item/clothing/suit/beekeeper_suit,
-/obj/item/clothing/suit/beekeeper_suit,
-/obj/item/clothing/suit/beekeeper_suit,
-/obj/item/clothing/head/beekeeper_head,
-/obj/item/clothing/head/beekeeper_head,
-/obj/item/clothing/head/beekeeper_head,
+/obj/item/clothing/suit/utility/beekeeper_suit,
+/obj/item/clothing/suit/utility/beekeeper_suit,
+/obj/item/clothing/suit/utility/beekeeper_suit,
+/obj/item/clothing/head/utility/beekeeper_head,
+/obj/item/clothing/head/utility/beekeeper_head,
+/obj/item/clothing/head/utility/beekeeper_head,
 /obj/item/melee/flyswatter,
 /obj/item/melee/flyswatter,
 /obj/item/melee/flyswatter,
@@ -149,7 +138,7 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "M" = (
-/obj/structure/flora/ausbushes/ywflowers,
+/obj/structure/flora/bush/flowers_yw/style_random,
 /turf/open/floor/grass,
 /area/template_noop)
 "N" = (
@@ -190,7 +179,7 @@
 /turf/open/floor/iron/dark,
 /area/template_noop)
 "S" = (
-/obj/machinery/light/small,
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/plating,
 /area/template_noop)
 "T" = (

@@ -110,7 +110,7 @@
 
 
 	var/datum/antagonist/changeling/target_ling = target.mind.has_antag_datum(/datum/antagonist/changeling)
-	if(target_ling)//If the target was a changeling, suck out their extra juice and objective points!
+	if(target_ling)//If the target wБудучи генокрадом, suck out their extra juice and objective points!
 		to_chat(owner, span_boldnotice("[target] один из нас. Мы поглотили его силы также."))
 
 		// Gain half of their genetic points.

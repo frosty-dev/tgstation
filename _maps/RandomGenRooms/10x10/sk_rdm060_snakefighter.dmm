@@ -12,13 +12,10 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "c" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
+/obj/machinery/light/small/directional/north,
 /obj/structure/cable,
-/turf/open/floor/wood{
-	icon_state = "wood-broken5"
-	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/wood,
 /area/template_noop)
 "d" = (
 /obj/item/storage/fancy/cigarettes/cigpack_shadyjims,
@@ -32,19 +29,16 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "g" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/open/floor/wood{
-	icon_state = "wood-broken4"
-	},
+/obj/machinery/light/small/directional/north,
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/wood,
 /area/template_noop)
 "h" = (
 /obj/structure/closet/secure_closet/freezer/meat/open,
 /obj/structure/sign/departments/science{
 	pixel_y = 32
 	},
-/obj/item/kitchen/knife,
+/obj/item/knife/kitchen,
 /turf/open/floor/plating,
 /area/template_noop)
 "i" = (
@@ -97,9 +91,7 @@
 /turf/open/floor/wood,
 /area/template_noop)
 "s" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/plating,
 /area/template_noop)
 "t" = (
@@ -125,7 +117,7 @@
 /turf/open/floor/wood,
 /area/template_noop)
 "x" = (
-/obj/item/reagent_containers/food/drinks/bottle/vodka,
+/obj/item/reagent_containers/cup/glass/bottle/vodka,
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
@@ -187,7 +179,7 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "K" = (
-/mob/living/simple_animal/hostile/retaliate/poison/snake,
+/mob/living/basic/snake,
 /turf/open/floor/plating,
 /area/template_noop)
 "L" = (

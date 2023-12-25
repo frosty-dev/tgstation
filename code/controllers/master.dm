@@ -327,25 +327,20 @@ GLOBAL_REAL(Master, /datum/controller/master)
 	// The rest of this proc is printing the world log and chat message.
 	var/message_prefix
 
-	// If true, print the chat message with boldwarning text.
-	var/chat_warning = FALSE
-
 	switch(result)
 		if(SS_INIT_FAILURE)
 			message_prefix = "Не удалось инициализировать подсистему [subsystem.name] после"
-			chat_warning = TRUE
 		if(SS_INIT_SUCCESS, SS_INIT_NO_MESSAGE)
-			message_prefix = "Инициализирована подсистема [subsystem.name] за"
+			message_prefix = "Подсистема [subsystem.name] инициализирована за"
 		if(SS_INIT_NO_NEED)
 			// This SS is disabled or is otherwise shy.
 			return
 		else
 			// SS_INIT_NONE or an invalid value.
 			message_prefix = "АЛЁРТ: Инициализирована подсистема [subsystem.name] С ОШИБКАМИ за"
-			chat_warning = TRUE
 
 	var/message = "[message_prefix] [seconds] секунд[seconds == 1 ? "" : "ы"]!"
-	var/chat_message = chat_warning ? span_boldwarning(message) : span_boldannounce(message)
+	var/chat_message = message
 
 	if(result != SS_INIT_NO_MESSAGE)
 		message_admins("[chat_message]")

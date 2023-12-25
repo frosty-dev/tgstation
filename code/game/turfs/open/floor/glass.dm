@@ -1,7 +1,7 @@
 /turf/open/floor/glass
 	name = "стеклянный пол"
 	desc = "Не стоит прыгать на ней. Или стоит. Какая разница, на самом-то деле?"
-	icon = 'white/rebolution228/icons/turf/floors/glass.dmi' // WD EDIT
+	icon = 'white/master/icons/turf/floors/glass.dmi' // WD EDIT
 	icon_state = "glass-0"
 	base_icon_state = "glass"
 	baseturfs = /turf/baseturf_bottom
@@ -74,7 +74,7 @@
 /turf/open/floor/glass/reinforced
 	name = "укрепленный стеклянный пол"
 	desc = "А на этом можно прыгать."
-	icon = 'white/rebolution228/icons/turf/floors/reinf_glass.dmi' // WD EDIT
+	icon = 'white/master/icons/turf/floors/reinf_glass.dmi' // WD EDIT
 	icon_state = "reinf_glass-0"
 	base_icon_state = "reinf_glass"
 	floor_tile = /obj/item/stack/tile/rglass

@@ -7,9 +7,7 @@
 "b" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/vending/snack/green,
-/obj/machinery/light/small{
-	dir = 1
-	},
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/iron,
 /area/template_noop)
 "c" = (
@@ -39,7 +37,7 @@
 "i" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table,
-/obj/item/reagent_containers/food/drinks/mug,
+/obj/item/reagent_containers/cup/glass/mug,
 /turf/open/floor/iron,
 /area/template_noop)
 "j" = (
@@ -50,7 +48,7 @@
 /area/template_noop)
 "k" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/mopbucket,
+/obj/structure/mop_bucket,
 /obj/item/mop,
 /turf/open/floor/iron,
 /area/template_noop)

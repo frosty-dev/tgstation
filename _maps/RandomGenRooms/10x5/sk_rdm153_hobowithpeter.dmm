@@ -3,9 +3,8 @@
 /obj/structure/rack,
 /obj/item/storage/toolbox/mechanical,
 /obj/effect/spawner/random/maintenance/two,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
+/obj/effect/mapping_helpers/burnt_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "c" = (
 /obj/structure/window/reinforced/spawner,
@@ -21,9 +20,8 @@
 /area/template_noop)
 "h" = (
 /obj/effect/spawner/random/trash/grille_or_waste,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
+/obj/effect/mapping_helpers/burnt_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "j" = (
 /obj/item/plate,
@@ -38,9 +36,8 @@
 /turf/open/floor/iron,
 /area/template_noop)
 "n" = (
-/turf/open/floor/plating{
-	icon_state = "platingdmg1"
-	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "q" = (
 /obj/structure/chair/office{
@@ -52,7 +49,7 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "s" = (
-/obj/structure/window/reinforced/spawner/east,
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/grass,
 /area/template_noop)
 "t" = (
@@ -60,11 +57,11 @@
 /area/template_noop)
 "v" = (
 /obj/structure/table,
-/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass{
+/obj/item/reagent_containers/cup/glass/drinkingglass/shotglass{
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/reagent_containers/food/drinks/soda_cans/space_up,
+/obj/item/reagent_containers/cup/soda_cans/space_up,
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/plating,
 /area/template_noop)
@@ -76,13 +73,10 @@
 /obj/machinery/shower{
 	pixel_y = 16
 	},
-/obj/machinery/light/small{
-	dir = 8
-	},
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating,
 /area/template_noop)
 "z" = (
-/obj/item/wirerod,
 /obj/structure/table/wood,
 /obj/item/storage/belt/utility,
 /obj/effect/spawner/random/clothing/gloves,
@@ -94,19 +88,13 @@
 /turf/open/floor/grass,
 /area/template_noop)
 "B" = (
-/obj/machinery/modular_computer/console/preset/civilian,
+/obj/machinery/modular_computer/preset/civilian,
 /turf/open/floor/iron,
 /area/template_noop)
 "C" = (
 /obj/effect/spawner/random/maintenance/two,
-/turf/open/floor/plating{
-	icon_state = "platingdmg1"
-	},
-/area/template_noop)
-"D" = (
-/turf/open/floor/plating{
-	icon_state = "platingdmg2"
-	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "E" = (
 /obj/item/trash/can{
@@ -117,7 +105,7 @@
 /area/template_noop)
 "F" = (
 /obj/structure/window/reinforced/spawner,
-/obj/structure/flora/ausbushes/grassybush,
+/obj/structure/flora/bush/grassy/style_random,
 /turf/open/floor/grass,
 /area/template_noop)
 "G" = (
@@ -136,16 +124,15 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "J" = (
-/mob/living/simple_animal/hostile/retaliate/frog{
+/mob/living/basic/frog{
 	name = "Peter"
 	},
 /turf/open/floor/grass,
 /area/template_noop)
 "K" = (
 /obj/structure/grille/broken,
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
-	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "L" = (
 /obj/structure/bed,
@@ -160,9 +147,7 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "P" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
+/obj/machinery/light/small/directional/west,
 /obj/item/trash/can/food/beans,
 /turf/open/floor/carpet,
 /area/template_noop)
@@ -196,11 +181,6 @@
 	},
 /turf/open/floor/plating,
 /area/template_noop)
-"Y" = (
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
-	},
-/area/template_noop)
 "Z" = (
 /turf/open/floor/iron,
 /area/template_noop)
@@ -216,7 +196,7 @@ a
 H
 c
 v
-Y
+n
 U
 "}
 (3,1,1) = {"
@@ -237,7 +217,7 @@ R
 T
 Q
 l
-D
+n
 m
 "}
 (6,1,1) = {"

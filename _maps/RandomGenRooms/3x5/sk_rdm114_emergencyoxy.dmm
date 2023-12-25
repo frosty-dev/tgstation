@@ -17,10 +17,7 @@
 /area/template_noop)
 "d" = (
 /obj/structure/closet/emcloset,
-/obj/machinery/light/small/broken{
-	dir = 8;
-	icon_state = "bulb-broken"
-	},
+/obj/machinery/light/small/broken/directional/west,
 /turf/open/floor/iron,
 /area/template_noop)
 "e" = (
@@ -50,10 +47,7 @@
 /area/template_noop)
 "i" = (
 /obj/structure/closet/emcloset,
-/obj/machinery/light/small/built{
-	dir = 8;
-	icon_state = "bulb-empty"
-	},
+/obj/machinery/light/small/built/directional/west,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/template_noop)

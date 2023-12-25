@@ -294,6 +294,67 @@
 	if(.)
 		weapon_weight = WEAPON_MEDIUM
 
+/obj/item/gun/ballistic/shotgun/doublebarrel/improvised
+	name = "кустарный дробовик"
+	desc = "Труба, сделанная под дробовик."
+	icon_state = "ishotgun"
+	inhand_icon_state = "ishotgun"
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_MEDIUM
+	force = 10
+	slot_flags = null
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/improvised
+	sawn_desc = "Я приехал ради бензина."
+	unique_reskin = null
+	var/slung = FALSE
+
+/obj/item/gun/ballistic/shotgun/doublebarrel/improvised/attackby(obj/item/A, mob/user, params)
+	..()
+	if(istype(A, /obj/item/stack/cable_coil) && !sawn_off)
+		var/obj/item/stack/cable_coil/C = A
+		if(C.use(10))
+			slot_flags = ITEM_SLOT_BACK
+			to_chat(user, span_notice("Привязываю кабель к дробовику, теперь можно носить дробовик на спине."))
+			slung = TRUE
+			update_icon()
+		else
+			to_chat(user, span_warning("Требуется минимум десять длин кабеля, если мне нужно сделать стропу!"))
+
+/obj/item/gun/ballistic/shotgun/doublebarrel/improvised/update_icon_state()
+	. = ..()
+	if(slung)
+		inhand_icon_state = "ishotgunsling"
+	if(sawn_off)
+		inhand_icon_state = "ishotgun_sawn"
+
+/obj/item/gun/ballistic/shotgun/doublebarrel/improvised/update_overlays()
+	. = ..()
+	if(slung)
+		. += "ishotgunsling"
+	if(sawn_off)
+		. += "ishotgun_sawn"
+
+/obj/item/gun/ballistic/shotgun/doublebarrel/improvised/sawoff(mob/user)
+	. = ..()
+	if(. && slung) //sawing off the gun removes the sling
+		new /obj/item/stack/cable_coil(get_turf(src), 10)
+		slung = FALSE
+		update_icon()
+		lefthand_file = 'icons/mob/inhands/weapons/64x_guns_left.dmi'
+		righthand_file = 'icons/mob/inhands/weapons/64x_guns_right.dmi'
+
+/obj/item/gun/ballistic/shotgun/doublebarrel/improvised/sawn
+	name = "импровизированный обрез"
+	desc = "Делает одиночный выстрел. Не промахнись."
+	icon_state = "ishotgun_sawn"
+	inhand_icon_state = "ishotgun_sawn"
+	worn_icon_state = "gun"
+	worn_icon = null
+	w_class = WEIGHT_CLASS_NORMAL
+	sawn_off = TRUE
+	slot_flags = ITEM_SLOT_BELT
+
+
 /obj/item/gun/ballistic/shotgun/doublebarrel/slugs
 	name = "охотничий дробовик"
 	desc = "Охотничье ружье, используемое богачами для \"охоты\"."
@@ -342,3 +403,4 @@
 /obj/item/gun/ballistic/shotgun/hook/afterattack_secondary(atom/target, mob/user, proximity_flag, click_parameters)
 	hook.afterattack(target, user, proximity_flag, click_parameters)
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+

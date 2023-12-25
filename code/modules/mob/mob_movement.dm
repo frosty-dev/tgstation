@@ -517,7 +517,7 @@
 
 ///Moves a mob upwards in z level
 /mob/verb/up()
-	set name = "Move Upwards"
+	set name = "Выше"
 	set category = "IC"
 
 	var/turf/current_turf = get_turf(src)
@@ -525,7 +525,7 @@
 
 	var/ventcrawling_flag = HAS_TRAIT(src, TRAIT_MOVE_VENTCRAWLING) ? ZMOVE_VENTCRAWLING : 0
 	if(!above_turf)
-		to_chat(src, span_warning("There's nowhere to go in that direction!"))
+		to_chat(src, span_warning("Некуда выше."))
 		return
 
 	if(ismovable(loc)) //Inside an object, tell it we moved
@@ -534,23 +534,23 @@
 
 	if(can_z_move(DOWN, above_turf, current_turf, ZMOVE_FALL_FLAGS|ventcrawling_flag)) //Will we fall down if we go up?
 		if(buckled)
-			to_chat(src, span_warning("[buckled] is is not capable of flight."))
+			to_chat(src, span_warning("[buckled] не может летать."))
 		else
-			to_chat(src, span_warning("You are not Superman."))
+			to_chat(src, span_warning("Не могу летать."))
 		return
 
 	if(zMove(UP, z_move_flags = ZMOVE_FLIGHT_FLAGS|ZMOVE_FEEDBACK|ventcrawling_flag))
-		to_chat(src, span_notice("You move upwards."))
+		to_chat(src, span_notice("Поднимаюсь наверх."))
 
 ///Moves a mob down a z level
 /mob/verb/down()
-	set name = "Move Down"
+	set name = "Ниже"
 	set category = "IC"
 
 	var/turf/current_turf = get_turf(src)
 	var/turf/below_turf = GET_TURF_BELOW(current_turf)
 	if(!below_turf)
-		to_chat(src, span_warning("There's nowhere to go in that direction!"))
+		to_chat(src, span_warning("Ниже некуда."))
 		return
 
 	if(ismovable(loc)) //Inside an object, tell it we moved
@@ -559,7 +559,7 @@
 
 	var/ventcrawling_flag = HAS_TRAIT(src, TRAIT_MOVE_VENTCRAWLING) ? ZMOVE_VENTCRAWLING : 0
 	if(zMove(DOWN, z_move_flags = ZMOVE_FLIGHT_FLAGS|ZMOVE_FEEDBACK|ventcrawling_flag))
-		to_chat(src, span_notice("You move down."))
+		to_chat(src, span_notice("Спускаюсь вниз."))
 	return FALSE
 
 /mob/abstract_move(atom/destination)

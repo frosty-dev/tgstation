@@ -14,10 +14,7 @@
 /obj/structure/chair{
 	dir = 4
 	},
-/obj/machinery/light/built{
-	dir = 1;
-	icon_state = "tube-empty"
-	},
+/obj/machinery/light/built/directional/north,
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
@@ -32,9 +29,8 @@
 /area/template_noop)
 "d" = (
 /obj/structure/table_frame/wood,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
+/obj/effect/mapping_helpers/burnt_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "e" = (
 /obj/effect/turf_decal/tile/neutral{
@@ -58,17 +54,12 @@
 /turf/open/floor/iron,
 /area/template_noop)
 "g" = (
-/obj/machinery/light/broken{
-	dir = 1;
-	icon_state = "tube-broken"
-	},
+/obj/machinery/light/broken/directional/north,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/template_noop)
 "h" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/template_noop)
@@ -81,15 +72,13 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "k" = (
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
+/obj/effect/mapping_helpers/burnt_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "l" = (
 /obj/effect/decal/cleanable/ash,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
+/obj/effect/mapping_helpers/burnt_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "m" = (
 /obj/structure/table/wood,
@@ -118,10 +107,8 @@
 /obj/structure/chair{
 	dir = 8
 	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/west,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
@@ -202,15 +189,14 @@
 /area/template_noop)
 "v" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
-	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "w" = (
 /obj/structure/chair{
 	dir = 4
 	},
-/obj/machinery/light/built,
+/obj/machinery/light/built/directional/south,
 /obj/effect/turf_decal/tile/green{
 	dir = 1
 	},
@@ -251,7 +237,7 @@
 /turf/open/floor/iron,
 /area/template_noop)
 "A" = (
-/obj/machinery/light,
+/obj/machinery/light/directional/south,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/template_noop)

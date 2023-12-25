@@ -96,9 +96,7 @@
 /obj/machinery/light_switch{
 	pixel_y = 28
 	},
-/obj/machinery/light{
-	dir = 1
-	},
+/obj/machinery/light/directional/north,
 /turf/open/floor/wood/parquet,
 /area/station/service/theater)
 "ao" = (
@@ -120,9 +118,7 @@
 /turf/open/floor/wood/parquet,
 /area/station/service/theater)
 "ar" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/wood/parquet,
 /area/station/service/theater)
 "as" = (
@@ -202,9 +198,7 @@
 	req_access_txt = "28"
 	},
 /obj/effect/turf_decal/delivery,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/effect/spawner/random/trash/mess,
 /turf/open/floor/iron,
 /area/station/service/kitchen)
@@ -230,9 +224,7 @@
 /turf/open/floor/wood/parquet,
 /area/station/service/theater)
 "aH" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
 	},
@@ -272,9 +264,7 @@
 /obj/machinery/airalarm/directional/west{
 	pixel_x = -23
 	},
-/obj/machinery/light/small{
-	dir = 8
-	},
+/obj/machinery/light/small/directional/west,
 /obj/machinery/chem_master/condimaster{
 	desc = "Looks like a knock-off chem-master. Perhaps useful for separating liquids when mixing drinks precisely. Also dispenses condiments.";
 	name = "HoochMaster Deluxe";
@@ -377,9 +367,7 @@
 /area/station/service/bar)
 "ba" = (
 /obj/machinery/computer/slot_machine,
-/obj/machinery/light/small{
-	dir = 4
-	},
+/obj/machinery/light/small/directional/east,
 /obj/machinery/status_display/evac{
 	pixel_x = 32
 	},
@@ -413,9 +401,7 @@
 /area/station/service/bar)
 "be" = (
 /obj/structure/kitchenspike,
-/obj/machinery/light/small{
-	dir = 8
-	},
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/iron/showroomfloor,
 /area/station/service/kitchen)
 "bf" = (
@@ -434,9 +420,7 @@
 /turf/open/floor/iron/showroomfloor,
 /area/station/service/kitchen)
 "bh" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
+/obj/machinery/light/small/directional/east,
 /obj/machinery/airalarm/directional/east{
 	pixel_x = 23
 	},
@@ -444,20 +428,18 @@
 /turf/open/floor/iron/showroomfloor,
 /area/station/service/kitchen)
 "bi" = (
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/structure/table/wood,
 /obj/item/instrument/violin,
 /turf/open/floor/wood/parquet,
 /area/station/service/theater)
 "bj" = (
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/wood/parquet,
 /area/station/service/theater)
 "bk" = (
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/wood/parquet,
 /area/station/service/theater)
 "bl" = (
@@ -549,10 +531,6 @@
 /area/station/service/bar)
 "by" = (
 /obj/machinery/disposal/bin,
-/obj/structure/sign/plaques{
-	pixel_x = -28;
-	pixel_y = -4
-	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
@@ -567,6 +545,9 @@
 	name = "barman privacy";
 	pixel_x = -6;
 	pixel_y = 28
+	},
+/obj/structure/sign/picture_frame/portrait/bar{
+	pixel_x = -30
 	},
 /turf/open/floor/carpet/royalblack,
 /area/station/service/bar)
@@ -598,9 +579,7 @@
 /turf/open/floor/iron/showroomfloor,
 /area/station/service/kitchen)
 "bD" = (
-/obj/machinery/light{
-	dir = 8
-	},
+/obj/machinery/light/directional/west,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -646,9 +625,7 @@
 /turf/open/floor/carpet/royalblack,
 /area/station/service/bar)
 "bJ" = (
-/obj/machinery/light{
-	dir = 4
-	},
+/obj/machinery/light/directional/east,
 /turf/open/floor/carpet/royalblack,
 /area/station/service/bar)
 "bK" = (
@@ -693,9 +670,7 @@
 /obj/machinery/airalarm/directional/north{
 	pixel_y = 23
 	},
-/obj/machinery/light{
-	dir = 1
-	},
+/obj/machinery/light/directional/north,
 /obj/machinery/griddle,
 /turf/open/floor/iron/kitchen/diagonal,
 /area/station/service/kitchen)
@@ -875,10 +850,10 @@
 "cr" = (
 /obj/machinery/requests_console{
 	department = "Bar";
-	departmentType = 2;
-	pixel_x = 30;
-	receive_ore_updates = 1
+	pixel_x = 30
 	},
+/obj/effect/mapping_helpers/requests_console/ore_update,
+/obj/effect/mapping_helpers/requests_console/supplies,
 /obj/machinery/camera/directional/east{
 	c_tag = "Bar"
 	},
@@ -994,9 +969,7 @@
 /turf/open/floor/iron/kitchen/diagonal,
 /area/station/service/kitchen)
 "cF" = (
-/obj/machinery/light{
-	dir = 8
-	},
+/obj/machinery/light/directional/west,
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_x = -31
 	},
@@ -1048,9 +1021,9 @@
 /obj/machinery/reagentgrinder,
 /obj/machinery/requests_console{
 	department = "Kitchen";
-	departmentType = 2;
 	pixel_x = 30
 	},
+/obj/effect/mapping_helpers/requests_console/supplies,
 /turf/open/floor/iron/kitchen/diagonal,
 /area/station/service/kitchen)
 "cL" = (
@@ -1112,7 +1085,7 @@
 /turf/open/floor/carpet/royalblack,
 /area/station/service/bar)
 "cQ" = (
-/obj/machinery/light,
+/obj/machinery/light/directional/south,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 4
 	},
@@ -1185,7 +1158,7 @@
 /turf/open/floor/iron,
 /area/station/service/bar)
 "cX" = (
-/obj/machinery/light,
+/obj/machinery/light/directional/south,
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
@@ -1197,7 +1170,7 @@
 /turf/open/floor/iron,
 /area/station/service/bar)
 "cY" = (
-/obj/machinery/light,
+/obj/machinery/light/directional/south,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -1238,7 +1211,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
 	},
-/obj/machinery/light,
+/obj/machinery/light/directional/south,
 /obj/structure/table,
 /obj/item/storage/toolbox/artistic,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,

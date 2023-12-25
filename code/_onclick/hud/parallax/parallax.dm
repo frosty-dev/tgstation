@@ -321,7 +321,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/parallax_layer)
 	layer = 1
 	color = "#999999"
 
-/atom/movable/screen/parallax_layer/layer_1/Initialize()
+/atom/movable/screen/parallax_layer/layer_1/Initialize(mapload)
 	. = ..()
 	icon_state = "layer1_[rand(1,5)]"
 

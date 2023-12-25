@@ -48,9 +48,7 @@
 /area/template_noop)
 "d" = (
 /obj/structure/chair/stool,
-/obj/machinery/light/small{
-	dir = 1
-	},
+/obj/machinery/light/small/directional/north,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -110,20 +108,12 @@
 /area/template_noop)
 "i" = (
 /obj/structure/table,
-/obj/item/clothing/head/chefhat,
+/obj/item/clothing/head/utility/chefhat,
 /obj/item/clothing/suit/apron/chef,
-/obj/machinery/light/small{
-	dir = 1;
-	icon_state = "bulb"
-	},
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/iron/white/side,
 /area/template_noop)
 "j" = (
-/obj/structure/sink/kitchen{
-	desc = "A sink used for washing one's hands and face. It looks rusty and home-made";
-	name = "old sink";
-	pixel_y = 28
-	},
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/red,
@@ -222,11 +212,11 @@
 /area/template_noop)
 "s" = (
 /obj/structure/table/reinforced,
-/obj/item/reagent_containers/food/condiment/saltshaker{
+/obj/item/reagent_containers/condiment/saltshaker{
 	pixel_x = -8;
 	pixel_y = 5
 	},
-/obj/item/reagent_containers/food/condiment/peppermill{
+/obj/item/reagent_containers/condiment/peppermill{
 	pixel_x = -8
 	},
 /obj/effect/turf_decal/delivery,
@@ -269,7 +259,7 @@
 /turf/open/floor/iron,
 /area/template_noop)
 "w" = (
-/obj/machinery/light/small,
+/obj/machinery/light/small/directional/south,
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
@@ -296,13 +286,14 @@
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/storage/box/donkpockets,
-/obj/item/kitchen/knife/butcher,
+/obj/item/knife/butcher,
 /obj/item/stack/package_wrap,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron,
 /area/template_noop)
 "R" = (
 /obj/effect/decal/cleanable/blood/gibs/old,
+/obj/structure/sink/kitchen/directional/west,
 /turf/open/floor/iron/white,
 /area/template_noop)
 "Y" = (

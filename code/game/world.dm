@@ -359,8 +359,8 @@ GLOBAL_VAR_INIT(hub_mimic_desc, "GO! GO! GO!")
 		s += "<big><b>White Dream TG: RU</b></big>\] <a href=\"http://station13.ru\">SITE</a> | <a href=\"https://discord.gg/whitedream\">DISCORD</a>\n\n"
 		s += "<img src='https://assets.station13.ru/l/w7.png'>\n\n"
 	else
-		s += "<big><b>[GLOB.hub_mimic]: RU</b></big>\] <a href=\"http://station13.ru\">SITE</a> | <a href=\"https://discord.gg/2WAsvv5B5v\">DISCORD</a>\n\n"
-		s += "<img src='https://assets.station13.ru/l/w[rand(4, 8)].gif'>\n\n"
+		s += "<big><b>[GLOB.hub_mimic]: RU</b></big>\] <a href=\"http://station13.ru\">SITE</a> | <a href=\"https://discord.gg/whitedream\">DISCORD</a>\n\n"
+		s += "<img src='https://assets.station13.ru/l/w3.gif'>\n\n"
 		s += "\[<big>[GLOB.hub_mimic_desc]</big>"
 
 	status = s

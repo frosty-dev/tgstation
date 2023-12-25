@@ -18,7 +18,7 @@
 /obj/item/hemostat,
 /obj/item/healthanalyzer,
 /obj/item/clothing/glasses/eyepatch,
-/obj/item/reagent_containers/food/drinks/bottle/vodka{
+/obj/item/reagent_containers/cup/glass/bottle/vodka{
 	pixel_x = 3;
 	pixel_y = 2
 	},
@@ -38,7 +38,7 @@
 /area/template_noop)
 "f" = (
 /obj/structure/table,
-/obj/item/reagent_containers/glass/beaker{
+/obj/item/reagent_containers/cup/beaker{
 	pixel_x = 8;
 	pixel_y = 2
 	},
@@ -53,15 +53,14 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "i" = (
-/obj/item/clothing/gloves/color/latex/nitrile,
+/obj/item/clothing/gloves/latex/nitrile,
 /obj/structure/rack,
 /obj/item/clothing/suit/toggle/labcoat,
 /obj/item/clothing/suit/apron/surgical,
 /obj/item/clothing/mask/surgical,
 /obj/item/clothing/mask/breath/medical,
-/turf/open/floor/plating{
-	icon_state = "platingdmg2"
-	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 
 (1,1,1) = {"

@@ -39,14 +39,13 @@
 /area/template_noop)
 "d" = (
 /obj/structure/easel,
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
-	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "e" = (
 /obj/structure/closet,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
-/obj/item/reagent_containers/food/drinks/beer{
+/obj/item/reagent_containers/cup/glass/bottle/beer{
 	desc = "Takes you to a whole new level of thinking.";
 	name = "Meta-Cider"
 	},
@@ -61,15 +60,14 @@
 /area/template_noop)
 "g" = (
 /obj/structure/rack,
-/obj/item/clothing/suit/poncho,
-/obj/item/clothing/head/sombrero,
+/obj/item/clothing/suit/costume/poncho,
+/obj/item/clothing/head/costume/sombrero,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating,
 /area/template_noop)
 "h" = (
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
+/obj/effect/mapping_helpers/burnt_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "i" = (
 /obj/structure/rack,

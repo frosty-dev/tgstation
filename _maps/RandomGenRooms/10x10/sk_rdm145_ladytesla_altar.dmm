@@ -20,38 +20,28 @@
 /obj/structure/sign/poster/contraband/random{
 	pixel_y = 32
 	},
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
-	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "i" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/template_noop)
-"j" = (
-/turf/open/floor/wood{
-	icon_state = "wood-broken5"
-	},
-/area/template_noop)
 "k" = (
-/obj/machinery/light/small,
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/plating,
 /area/template_noop)
 "l" = (
 /obj/effect/spawner/random/trash/grille_or_waste,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
+/obj/effect/mapping_helpers/burnt_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "m" = (
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
+/obj/effect/mapping_helpers/burnt_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "o" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/plating,
 /area/template_noop)
 "p" = (
@@ -71,9 +61,7 @@
 /obj/item/stack/sheet/mineral/wood,
 /obj/structure/table_frame/wood,
 /obj/item/stack/cable_coil,
-/obj/machinery/light/small/built{
-	dir = 4
-	},
+/obj/machinery/light/small/built/directional/east,
 /turf/open/floor/plating,
 /area/template_noop)
 "u" = (
@@ -92,9 +80,7 @@
 /obj/structure/chair/pew{
 	dir = 8
 	},
-/obj/machinery/light/small/built{
-	dir = 4
-	},
+/obj/machinery/light/small/built/directional/east,
 /turf/open/floor/carpet/royalblue,
 /area/template_noop)
 "x" = (
@@ -104,7 +90,7 @@
 /turf/open/floor/carpet/royalblue,
 /area/template_noop)
 "y" = (
-/obj/item/candle,
+/obj/item/flashlight/flare/candle,
 /turf/open/floor/carpet/royalblue,
 /area/template_noop)
 "z" = (
@@ -113,30 +99,18 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "A" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/plating,
 /area/template_noop)
 "B" = (
 /obj/effect/decal/cleanable/oil,
-/obj/machinery/light/small{
-	dir = 8
-	},
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating,
 /area/template_noop)
 "C" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/open/floor/plating{
-	icon_state = "platingdmg1"
-	},
-/area/template_noop)
-"D" = (
-/turf/open/floor/wood{
-	icon_state = "wood-broken2"
-	},
+/obj/machinery/light/small/directional/east,
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "E" = (
 /obj/item/radio/intercom{
@@ -168,28 +142,19 @@
 /obj/structure/chair/pew{
 	dir = 1
 	},
-/obj/machinery/light/small/built,
+/obj/machinery/light/small/built/directional/south,
 /turf/open/floor/carpet/royalblue,
 /area/template_noop)
 "O" = (
-/turf/open/floor/plating{
-	icon_state = "platingdmg1"
-	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "Q" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating,
 /area/template_noop)
 "R" = (
-/obj/item/cardboard_cutout{
-	desc = "A cardboard cutout of the tesla ball generator. You could scribble over it easily.";
-	icon = 'icons/obj/tesla_engine/tesla_generator.dmi';
-	icon_state = "TheSingGen";
-	name = "energy ball generator";
-	pixel_y = 12
-	},
+/obj/item/toy/figure,
 /turf/open/floor/plating,
 /area/template_noop)
 "S" = (
@@ -218,14 +183,13 @@
 /turf/open/floor/carpet/royalblue,
 /area/template_noop)
 "X" = (
-/turf/open/floor/wood{
-	icon_state = "wood-broken"
-	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/wood,
 /area/template_noop)
 "Z" = (
 /obj/structure/table/wood,
 /obj/item/storage/fancy/candle_box,
-/obj/machinery/light/small/built,
+/obj/machinery/light/small/built/directional/south,
 /turf/open/floor/carpet/royalblue,
 /area/template_noop)
 
@@ -271,7 +235,7 @@ i
 y
 R
 y
-j
+X
 f
 N
 p
@@ -319,7 +283,7 @@ p
 u
 w
 W
-D
+X
 Z
 p
 p

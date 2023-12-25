@@ -262,6 +262,7 @@ SUBSYSTEM_DEF(mapping)
 		// Create a proportional budget by multiplying the amount of space ruin levels in the current map over the default amount
 		var/proportional_budget = round(CONFIG_GET(number/space_budget) * (space_ruins.len / DEFAULT_SPACE_RUIN_LEVELS))
 		seedRuins(space_ruins, proportional_budget, list(/area/space), themed_ruins[ZTRAIT_SPACE_RUINS])
+	seedStation() //yogs - random station rooms
 
 /// Sets up rivers, and things that behave like rivers. So lava/plasma rivers, and chasms
 /// It is important that this happens AFTER generating mineral walls and such, since we rely on them for river logic
@@ -606,6 +607,11 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 		if (!(R.ruin_type in themed_ruins))
 			themed_ruins[R.ruin_type] = list()
 		themed_ruins[R.ruin_type][R.name] = R
+
+		if (istype(R, /datum/map_template/ruin/station)) //yogs
+			station_room_templates[R.name] = R //yogs
+		else if (istype(R, /datum/map_template/ruin/maint)) // white
+			station_room_templates[R.name] = R // white
 
 /datum/controller/subsystem/mapping/proc/preloadShuttleTemplates()
 	var/list/unbuyable = generateMapList("unbuyableshuttles.txt")

@@ -12,9 +12,8 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "d" = (
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
-	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "e" = (
 /obj/structure/closet,
@@ -27,7 +26,9 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "g" = (
-/obj/structure/chair/stool,
+/obj/structure/chair/stool{
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/template_noop)
 "h" = (
@@ -51,6 +52,12 @@
 /obj/item/stack/spacecash/c10,
 /turf/open/floor/plating,
 /area/template_noop)
+"S" = (
+/obj/structure/chair/stool{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/template_noop)
 
 (1,1,1) = {"
 a
@@ -69,7 +76,7 @@ b
 "}
 (4,1,1) = {"
 d
-g
+S
 b
 "}
 (5,1,1) = {"

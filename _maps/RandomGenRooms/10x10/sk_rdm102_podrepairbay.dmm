@@ -35,7 +35,7 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "i" = (
-/obj/structure/shuttle/engine/propulsion{
+/obj/machinery/power/shuttle_engine/propulsion{
 	dir = 1
 	},
 /turf/closed/wall/mineral/titanium,
@@ -64,9 +64,7 @@
 /area/template_noop)
 "o" = (
 /obj/structure/chair/comfy/shuttle,
-/obj/machinery/light/small{
-	dir = 4
-	},
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/mineral/titanium/blue,
 /area/template_noop)
 "p" = (
@@ -78,7 +76,7 @@
 /turf/open/floor/mineral/titanium/blue,
 /area/template_noop)
 "t" = (
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
 /area/template_noop)
 "u" = (

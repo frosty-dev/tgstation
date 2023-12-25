@@ -28,7 +28,7 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "f" = (
-/turf/open/floor/mech_bay_recharge_floor,
+/turf/open/floor/iron/recharge_floor,
 /area/template_noop)
 "g" = (
 /obj/structure/closet,

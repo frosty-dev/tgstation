@@ -120,7 +120,7 @@
 			return TRUE
 		SSticker.start_immediately = FALSE
 		SSticker.SetTimeLeft(1800)
-		to_chat(world, "<span class='infoplain'><b>The game will start in 180 seconds.</b></span>")
+		to_chat(world, "<span class='infoplain'><b>Игра начнётся через 180 секунд.</b></span>")
 		SEND_SOUND(world, sound('sound/ai/default/attention.ogg'))
 		message_admins("<font color='blue'>[usr.key] has cancelled immediate game start. Game will start in 180 seconds.</font>")
 		log_admin("[usr.key] has cancelled immediate game start.")

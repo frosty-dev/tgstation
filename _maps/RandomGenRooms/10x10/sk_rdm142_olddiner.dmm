@@ -18,17 +18,15 @@
 /area/template_noop)
 "hL" = (
 /obj/structure/table_frame/wood,
-/turf/open/floor/plating{
-	icon_state = "platingdmg1"
-	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "ig" = (
 /obj/structure/chair/wood{
 	dir = 4
 	},
-/turf/open/floor/wood{
-	icon_state = "wood-broken5"
-	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/wood,
 /area/template_noop)
 "iU" = (
 /obj/structure/closet/firecloset/full,
@@ -42,15 +40,8 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/wood,
 /area/template_noop)
-"nt" = (
-/turf/open/floor/wood{
-	icon_state = "wood-broken5"
-	},
-/area/template_noop)
 "oV" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/wood,
 /area/template_noop)
 "pb" = (
@@ -72,16 +63,8 @@
 /area/template_noop)
 "ut" = (
 /obj/item/stack/sheet/mineral/wood,
-/obj/machinery/light/small{
-	brightness = 3;
-	dir = 8
-	},
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/iron/cafeteria,
-/area/template_noop)
-"uB" = (
-/turf/open/floor/wood{
-	icon_state = "wood-broken4"
-	},
 /area/template_noop)
 "uE" = (
 /obj/structure/closet,
@@ -112,7 +95,7 @@
 /turf/open/floor/carpet/royalblack,
 /area/template_noop)
 "xT" = (
-/obj/machinery/light/small,
+/obj/machinery/light/small/directional/south,
 /obj/machinery/processor,
 /turf/open/floor/iron/cafeteria,
 /area/template_noop)
@@ -129,9 +112,8 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "yH" = (
-/turf/open/floor/plating{
-	icon_state = "platingdmg1"
-	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "ze" = (
 /turf/open/floor/plating,
@@ -155,14 +137,11 @@
 /obj/structure/sign/poster/contraband/random{
 	pixel_x = 32
 	},
-/turf/open/floor/wood{
-	icon_state = "wood-broken"
-	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/wood,
 /area/template_noop)
 "Bw" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/carpet,
 /area/template_noop)
 "Ch" = (
@@ -171,30 +150,26 @@
 "Dz" = (
 /obj/structure/table_frame/wood,
 /obj/item/stack/sheet/mineral/wood,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
+/obj/effect/mapping_helpers/burnt_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "Eg" = (
-/turf/open/floor/wood{
-	icon_state = "wood-broken"
-	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/wood,
 /area/template_noop)
 "FF" = (
 /obj/structure/sign/warning/no_smoking/circle,
 /turf/closed/wall,
 /area/template_noop)
 "FK" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
+/obj/machinery/light/small/directional/north,
 /obj/structure/table/wood,
 /obj/machinery/chem_dispenser/drinks,
 /turf/open/floor/iron/cafeteria,
 /area/template_noop)
 "Hd" = (
 /obj/structure/table/wood,
-/obj/item/kitchen/knife,
+/obj/item/knife/kitchen,
 /turf/open/floor/plating,
 /area/template_noop)
 "Il" = (
@@ -214,9 +189,8 @@
 /turf/open/floor/carpet,
 /area/template_noop)
 "Ok" = (
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
+/obj/effect/mapping_helpers/burnt_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "Os" = (
 /obj/item/chair/wood,
@@ -231,9 +205,7 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "RI" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/carpet/royalblack,
 /area/template_noop)
 "RQ" = (
@@ -257,7 +229,7 @@
 /turf/open/floor/carpet,
 /area/template_noop)
 "UO" = (
-/obj/structure/window/reinforced/spawner/west,
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/structure/table/wood,
 /obj/machinery/microwave,
 /turf/open/floor/plating,
@@ -265,11 +237,6 @@
 "Wn" = (
 /obj/item/stack/sheet/mineral/wood,
 /turf/open/floor/carpet/royalblack,
-/area/template_noop)
-"XA" = (
-/turf/open/floor/wood{
-	icon_state = "wood-broken7"
-	},
 /area/template_noop)
 "XO" = (
 /obj/structure/closet/crate,
@@ -286,11 +253,11 @@
 "Yr" = (
 /obj/structure/table/wood,
 /obj/machinery/microwave,
-/obj/structure/window/reinforced/spawner/west,
+/obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/plating,
 /area/template_noop)
 "Yt" = (
-/obj/machinery/light/small,
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/iron/white,
 /area/template_noop)
 "Zp" = (
@@ -305,7 +272,7 @@
 /area/template_noop)
 "ZH" = (
 /obj/structure/table/wood/fancy/black,
-/obj/item/reagent_containers/food/drinks/soda_cans/dr_gibb{
+/obj/item/reagent_containers/cup/soda_cans/dr_gibb{
 	pixel_x = -2;
 	pixel_y = 12
 	},
@@ -337,7 +304,7 @@ SJ
 iU
 "}
 (3,1,1) = {"
-uB
+Eg
 Os
 SJ
 SJ
@@ -353,7 +320,7 @@ ze
 Zp
 SJ
 qm
-nt
+Eg
 Pi
 Ch
 Ch
@@ -361,7 +328,7 @@ QG
 Ch
 "}
 (5,1,1) = {"
-XA
+Eg
 Dz
 Wn
 tO

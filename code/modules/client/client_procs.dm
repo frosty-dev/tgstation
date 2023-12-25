@@ -1186,7 +1186,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	observer.ManualFollow(target)
 
 /client/verb/stop_client_sounds()
-	set name = "Stop Sounds"
+	set name = "Остановить звуки"
 	set category = "OOC"
 	set desc = "Stop Current Sounds"
 	SEND_SOUND(usr, sound(null))
@@ -1194,7 +1194,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Stop Self Sounds"))
 
 /client/verb/toggle_fullscreen()
-	set name = "Toggle Fullscreen"
+	set name = "Полный экран"
 	set category = "OOC"
 
 	fullscreen = !fullscreen
@@ -1214,7 +1214,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		winset(usr, "mainwindow", "on-size=attempt_auto_fit_viewport")
 
 /client/verb/toggle_status_bar()
-	set name = "Toggle Status Bar"
+	set name = "Включить панель состояния"
 	set category = "OOC"
 
 	show_status_bar = !show_status_bar

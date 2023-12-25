@@ -6,7 +6,7 @@
 /obj/item/stack/rods/ten,
 /obj/item/stock_parts/capacitor,
 /obj/item/circuitboard/machine/stasis,
-/obj/item/stock_parts/manipulator,
+/obj/item/stock_parts/servo,
 /turf/open/floor/iron,
 /area/template_noop)
 "b" = (
@@ -117,8 +117,8 @@
 /obj/machinery/status_display/evac{
 	pixel_y = -32
 	},
-/obj/item/storage/firstaid/regular,
-/obj/item/clothing/gloves/color/latex,
+/obj/item/storage/medkit,
+/obj/item/clothing/gloves/latex,
 /obj/item/clothing/suit/apron/surgical,
 /obj/item/clothing/mask/surgical,
 /obj/effect/turf_decal/tile/neutral{
@@ -152,7 +152,7 @@
 /area/template_noop)
 "q" = (
 /obj/structure/table/reinforced,
-/obj/machinery/light/small,
+/obj/machinery/light/small/directional/south,
 /obj/structure/bedsheetbin,
 /obj/item/gun/syringe,
 /obj/effect/decal/cleanable/dirt,

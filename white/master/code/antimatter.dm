@@ -42,7 +42,7 @@
 /obj/item/am_containment
 	name = "сосуд для антивещества"
 	desc = "Удерживает антивещество."
-	icon = 'white/rebolution228/icons/antimatter.dmi'
+	icon = 'white/master/icons/antimatter.dmi'
 	icon_state = "jar"
 	density = FALSE
 	anchored = FALSE
@@ -83,7 +83,7 @@
 /obj/machinery/power/am_control_unit
 	name = "блок управления АМ"
 	desc = "Это устройство вводит антивещество в подключенные экранирующие устройства, чем больше антивещества вводится, тем больше вырабатывается энергии. Разверните устройство, чтобы настроить его."
-	icon = 'white/rebolution228/icons/antimatter.dmi'
+	icon = 'white/master/icons/antimatter.dmi'
 	icon_state = "control"
 	anchored = FALSE
 	density = TRUE
@@ -129,7 +129,7 @@
 
 /obj/machinery/power/am_control_unit/process()
 	if(exploding)
-		explosion(get_turf(src),8,12,18,12)
+		explosion(src, devastation_range = 8, heavy_impact_range = 12, light_impact_range = 18, flame_range = 12)
 		if(src)
 			qdel(src)
 
@@ -142,7 +142,7 @@
 
 	if(!fueljar)//No fuel but we are on, shutdown
 		toggle_power()
-		playsound(src.loc, 'white/rebolution228/sounds/error1.ogg', 50, 0)
+		playsound(src.loc, 'white/master/sounds/error1.ogg', 50, 0)
 		return
 
 	add_avail(stored_power)
@@ -228,7 +228,8 @@
 	return
 
 
-/obj/machinery/power/am_control_unit/update_appearance()
+/obj/machinery/power/am_control_unit/update_icon()
+	. = ..()
 	if(active)
 		icon_state = "control_on"
 	else icon_state = "control"
@@ -422,7 +423,7 @@
 	name = "реакторная секция антивещества"
 	desc = "Это устройство было построено с использованием плазменной формы жизни, которая, по-видимому, увеличивает естественную способность плазмы реагировать с нейтрино при одновременном снижении горючести."
 
-	icon = 'white/rebolution228/icons/antimatter.dmi'
+	icon = 'white/master/icons/antimatter.dmi'
 	icon_state = "shield"
 	density = TRUE
 	dir = NORTH
@@ -438,17 +439,18 @@
 	var/dirs = 0
 
 
-/obj/machinery/am_shielding/Initialize()
+/obj/machinery/am_shielding/Initialize(mapload)
 	. = ..()
-	addtimer(CALLBACK(src, .proc/controllerscan), 10)
+	addtimer(CALLBACK(src, PROC_REF(controllerscan)), 10)
+	AddElement(/datum/element/climbable)
 
 /obj/machinery/am_shielding/proc/overheat()
-	visible_message(span_danger("<b>[src]</b> тает!"))
+	visible_message(span_danger("<b>[capitalize(src)]</b> тает!"))
 	new /obj/effect/hotspot(loc)
 	qdel(src)
 
 /obj/machinery/am_shielding/proc/collapse()
-	visible_message(span_notice("<b>[src]</b> схлопывается обратно в контейнер!"))
+	visible_message(span_notice("<b>[capitalize(src)]</b> схлопывается обратно в контейнер!"))
 	new /obj/item/am_shielding_container(drop_location())
 	qdel(src)
 
@@ -475,10 +477,9 @@
 
 	if(!control_unit)
 		if(!priorscan)
-			addtimer(CALLBACK(src, .proc/controllerscan, 1), 20)
+			addtimer(CALLBACK(src, PROC_REF(controllerscan), 1), 20)
 			return
 		collapse()
-
 
 /obj/machinery/am_shielding/Destroy()
 	if(control_unit)
@@ -517,7 +518,8 @@
 		check_stability()
 
 
-/obj/machinery/am_shielding/update_appearance()
+/obj/machinery/am_shielding/update_icon()
+	. = ..()
 	dirs = 0
 	coredirs = 0
 	cut_overlays()
@@ -641,9 +643,9 @@
 
 
 /obj/item/am_shielding_container
-	name = "секция реактора с насадкой из антивещества"
-	desc = "Небольшая единица хранения, содержащая секцию реактора антиматерии. Использовать место возле блока управления антивеществом или развернутой секции реактора антивещества. Используйте мультитул для активации этого пакета."
-	icon = 'white/rebolution228/icons/antimatter.dmi'
+	name = "экранирующий блок АМ"
+	desc = "Небольшой модуль, содержащий секцию реактора антиматерии. Устанавливается рядом с блоком управления антивеществом или другим экранирующим блоком. Используйте мультитул для подключения этого блока к другим."
+	icon = 'white/master/icons/antimatter.dmi'
 	icon_state = "box"
 	inhand_icon_state = "electronic"
 	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'

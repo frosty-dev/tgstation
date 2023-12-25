@@ -45,9 +45,7 @@
 /turf/open/floor/iron/white,
 /area/template_noop)
 "e" = (
-/obj/machinery/light{
-	dir = 1
-	},
+/obj/machinery/light/directional/north,
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},

@@ -18,20 +18,16 @@
 /area/template_noop)
 "g" = (
 /obj/structure/reagent_dispensers/watertank/high,
-/obj/item/reagent_containers/glass/bucket,
-/obj/item/reagent_containers/glass/bucket,
-/obj/machinery/light/small{
-	dir = 4
-	},
+/obj/item/reagent_containers/cup/bucket,
+/obj/item/reagent_containers/cup/bucket,
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/plating,
 /area/template_noop)
 "h" = (
 /obj/machinery/vending/hydroseeds{
 	slogan_delay = 700
 	},
-/obj/machinery/light/small{
-	dir = 4
-	},
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/plating,
 /area/template_noop)
 "i" = (
@@ -56,9 +52,7 @@
 /area/template_noop)
 "o" = (
 /obj/item/seeds/glowshroom,
-/obj/machinery/light/small{
-	dir = 1
-	},
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/plating,
 /area/template_noop)
 "q" = (
@@ -84,9 +78,7 @@
 /turf/closed/wall,
 /area/template_noop)
 "x" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating,
 /area/template_noop)
 "A" = (
@@ -96,10 +88,8 @@
 /area/template_noop)
 "C" = (
 /obj/structure/table/wood,
-/obj/item/storage/box/disks_plantgene,
-/obj/machinery/light/small{
-	dir = 8
-	},
+/obj/machinery/light/small/directional/west,
+/obj/item/disk/tech_disk,
 /turf/open/floor/plating,
 /area/template_noop)
 "E" = (
@@ -119,9 +109,7 @@
 "H" = (
 /obj/structure/closet/firecloset/full,
 /obj/item/storage/box/fakesyndiesuit,
-/obj/machinery/light/small{
-	dir = 1
-	},
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/plating,
 /area/template_noop)
 "I" = (
@@ -163,22 +151,17 @@
 /area/template_noop)
 "Q" = (
 /obj/effect/spawner/random/decoration/glowstick,
-/obj/machinery/light/small{
-	dir = 8
-	},
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating,
 /area/template_noop)
 "T" = (
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
+/obj/effect/mapping_helpers/burnt_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "U" = (
 /obj/structure/table/wood,
 /obj/item/storage/toolbox/mechanical,
-/obj/machinery/light/small{
-	dir = 8
-	},
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating,
 /area/template_noop)
 "V" = (
@@ -196,7 +179,7 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "Z" = (
-/obj/machinery/light/small,
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/plating,
 /area/template_noop)
 

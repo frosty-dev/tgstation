@@ -63261,11 +63261,6 @@
 /obj/machinery/firealarm/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
-"wtY" = (
-/obj/structure/cable,
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
-/area/station/security/prison/safe)
 "wtZ" = (
 /obj/effect/landmark/start/hangover,
 /obj/effect/turf_decal/tile/red{
@@ -89322,7 +89317,7 @@ aXa
 myH
 cUf
 tqW
-wtY
+ejG
 nAN
 sjP
 had
@@ -89585,10 +89580,10 @@ cji
 srO
 ejR
 kZF
-wtY
-wtY
-wtY
-wtY
+ejG
+ejG
+ejG
+ejG
 aaa
 aaa
 jXu
@@ -89842,7 +89837,7 @@ qAX
 bhN
 wBe
 mmV
-wtY
+ejG
 gEl
 tMJ
 ejG
@@ -90102,7 +90097,7 @@ kre
 flk
 fpj
 nxU
-wtY
+ejG
 aaa
 aaa
 jXu
@@ -90356,10 +90351,10 @@ oDX
 dfB
 aCQ
 mmA
-wtY
-wtY
-wtY
-wtY
+ejG
+ejG
+ejG
+ejG
 lMJ
 lMJ
 jXu
@@ -90616,7 +90611,7 @@ kre
 hfA
 fpj
 nxU
-wtY
+ejG
 aaa
 aaa
 aaa
@@ -90870,10 +90865,10 @@ jxS
 mQr
 aCQ
 mmV
-wtY
+ejG
 gEl
 eWA
-wtY
+ejG
 aaa
 aaa
 bxr

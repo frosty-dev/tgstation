@@ -6,6 +6,7 @@
 /obj/machinery/camera/autoname {dir=@UNSET} : /obj/machinery/camera/directional/north {@OLD}
 /obj/machinery/camera/autoname {dir=1} : /obj/machinery/camera/autoname/directional/south {@OLD;dir=@SKIP}
 /obj/machinery/camera/autoname {dir=2} : /obj/machinery/camera/autoname/directional/north {@OLD;dir=@SKIP}
+/obj/machinery/camera/autoname {dir=5} : /obj/machinery/camera/autoname/directional/north {@OLD;dir=@SKIP}
 /obj/machinery/camera/autoname {dir=4} : /obj/machinery/camera/autoname/directional/west {@OLD;dir=@SKIP}
 /obj/machinery/camera/autoname {dir=8} : /obj/machinery/camera/autoname/directional/east {@OLD;dir=@SKIP}
 /obj/machinery/camera/emp_proof {dir=@UNSET} : /obj/machinery/camera/directional/north {@OLD}

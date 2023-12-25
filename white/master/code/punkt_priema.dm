@@ -2,7 +2,7 @@
 /obj/machinery/priem_steklotara
 	name = "пункт приёма стеклотары"
 	desc = "Позволяет за пустые алкобутылки получать деньги. Как кэшбек, только лучше!"
-	icon = 'white/rebolution228/icons/punkt_priema.dmi'
+	icon = 'white/master/icons/punkt_priema.dmi'
 	icon_state = "open"
 	density = TRUE
 	anchored = TRUE

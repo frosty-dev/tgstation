@@ -38,7 +38,7 @@
 /area/template_noop)
 "j" = (
 /obj/item/clothing/head/collectable/police,
-/turf/open/floor/mech_bay_recharge_floor,
+/turf/open/floor/iron/recharge_floor,
 /area/template_noop)
 "k" = (
 /obj/machinery/computer/mech_bay_power_console{

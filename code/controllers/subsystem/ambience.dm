@@ -62,8 +62,8 @@ SUBSYSTEM_DEF(ambience)
 	currentrun -= to_remove
 
 /area/station/maintenance
-	min_ambience_cooldown = 20 SECONDS
-	max_ambience_cooldown = 35 SECONDS
+	min_ambience_cooldown = 60 SECONDS // WD EDIT, INITIAL WAS 20
+	max_ambience_cooldown = 120 SECONDS // WD EDIT, INITIAL WAS 35
 
 	///A list of rare sound effects to fuck with players. No, it does not contain actual minecraft sounds anymore.
 	var/static/list/minecraft_cave_noises = list(

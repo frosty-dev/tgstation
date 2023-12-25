@@ -50,9 +50,7 @@
 	pixel_x = -2;
 	pixel_y = 6
 	},
-/obj/machinery/light/small{
-	dir = 8
-	},
+/obj/machinery/light/small/directional/west,
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
 	},
@@ -107,18 +105,13 @@
 	dir = 8
 	},
 /obj/structure/table/wood,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/item/instrument/eguitar,
 /obj/item/instrument/guitar{
 	pixel_x = 11
 	},
 /obj/effect/turf_decal/bot/left,
-/obj/machinery/light/small{
-	dir = 1;
-	pixel_y = 0
-	},
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/wood,
 /area/station/service/theater)
 "ao" = (
@@ -140,9 +133,7 @@
 /obj/item/kirbyplants{
 	icon_state = "plant-24"
 	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/airalarm/directional/north{
 	pixel_y = 32
 	},
@@ -223,9 +214,7 @@
 /obj/structure/sign/poster/contraband/space_cube{
 	pixel_x = 31
 	},
-/obj/machinery/light/small{
-	dir = 4
-	},
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/iron/grimy,
 /area/station/service/bar)
 "az" = (
@@ -252,9 +241,7 @@
 	req_access_txt = "28"
 	},
 /obj/effect/turf_decal/delivery,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/effect/spawner/random/trash/mess,
 /turf/open/floor/iron,
 /area/station/service/kitchen)
@@ -428,9 +415,7 @@
 	dir = 10
 	},
 /obj/machinery/vending/cigarette,
-/obj/machinery/light/small{
-	dir = 4
-	},
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/service/bar)
 "bb" = (
@@ -463,9 +448,7 @@
 /area/station/service/bar)
 "be" = (
 /obj/structure/kitchenspike,
-/obj/machinery/light/small{
-	dir = 8
-	},
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/iron/showroomfloor,
 /area/station/service/kitchen)
 "bf" = (
@@ -484,9 +467,7 @@
 /turf/open/floor/iron/showroomfloor,
 /area/station/service/kitchen)
 "bh" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
+/obj/machinery/light/small/directional/east,
 /obj/machinery/airalarm/directional/east{
 	pixel_x = 23
 	},
@@ -503,9 +484,7 @@
 /obj/machinery/airalarm/directional/west{
 	pixel_x = -24
 	},
-/obj/machinery/light/small{
-	dir = 8
-	},
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/service/bar)
 "bj" = (
@@ -583,10 +562,7 @@
 /obj/machinery/newscaster{
 	pixel_y = 29
 	},
-/obj/machinery/light/small{
-	dir = 1;
-	pixel_y = 0
-	},
+/obj/machinery/light/small/directional/north,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -596,10 +572,7 @@
 /obj/machinery/light_switch{
 	pixel_y = 26
 	},
-/obj/machinery/light/small{
-	dir = 1;
-	pixel_y = 0
-	},
+/obj/machinery/light/small/directional/north,
 /obj/effect/turf_decal/siding/wood{
 	dir = 9
 	},
@@ -653,9 +626,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/machinery/camera/autoname{
-	dir = 8
-	},
+/obj/machinery/camera/autoname/directional/east,
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_x = -32
 	},
@@ -717,6 +688,9 @@
 /area/station/service/bar)
 "bK" = (
 /obj/machinery/vending/boozeomat,
+/obj/structure/sign/picture_frame/portrait/bar{
+	pixel_x = 32
+	},
 /turf/open/floor/wood,
 /area/station/service/bar)
 "bL" = (
@@ -757,9 +731,7 @@
 /obj/machinery/airalarm/directional/north{
 	pixel_y = 23
 	},
-/obj/machinery/light{
-	dir = 1
-	},
+/obj/machinery/light/directional/north,
 /obj/machinery/griddle,
 /turf/open/floor/iron/kitchen/diagonal,
 /area/station/service/kitchen)
@@ -986,9 +958,7 @@
 	dir = 8
 	},
 /obj/item/kirbyplants/random,
-/obj/machinery/light/small{
-	dir = 8
-	},
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/service/bar)
 "cG" = (
@@ -1023,9 +993,9 @@
 /obj/machinery/reagentgrinder,
 /obj/machinery/requests_console{
 	department = "Kitchen";
-	departmentType = 2;
 	pixel_x = 30
 	},
+/obj/effect/mapping_helpers/requests_console/supplies,
 /turf/open/floor/iron/kitchen/diagonal,
 /area/station/service/kitchen)
 "cL" = (
@@ -1090,7 +1060,7 @@
 /turf/open/floor/wood,
 /area/station/service/bar)
 "cQ" = (
-/obj/machinery/light,
+/obj/machinery/light/directional/south,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 4
 	},
@@ -1182,7 +1152,7 @@
 	pixel_y = -24
 	},
 /obj/structure/closet/crate/bin,
-/obj/machinery/light/small,
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/service/bar)
 "cY" = (
@@ -1199,7 +1169,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 1
 	},
-/obj/machinery/light/small,
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/service/bar)
 "da" = (
@@ -1219,7 +1189,7 @@
 /obj/item/radio/intercom{
 	pixel_y = -30
 	},
-/obj/machinery/light/small,
+/obj/machinery/light/small/directional/south,
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/wood,
 /area/station/service/bar)
@@ -1339,9 +1309,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/item/kirbyplants{
 	icon_state = "plant-21"
 	},
@@ -1569,12 +1537,10 @@
 	dir = 10
 	},
 /obj/structure/table/wood,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/item/instrument/violin,
 /obj/item/instrument/piano_synth,
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/effect/turf_decal/bot/left,
 /turf/open/floor/wood,
 /area/station/service/theater)
@@ -1723,9 +1689,7 @@
 /obj/structure/musician/piano{
 	icon_state = "piano"
 	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/wood,
 /area/station/service/theater)
 "Ro" = (

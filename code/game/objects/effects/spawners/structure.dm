@@ -12,6 +12,9 @@ again.
 	. = ..()
 	for(var/spawn_type in spawn_list)
 		new spawn_type(loc)
+	if(check_holidays(CHRISTMAS))
+		if(prob(10))
+			new /obj/structure/snowflakes(get_turf(src))
 
 //normal windows
 

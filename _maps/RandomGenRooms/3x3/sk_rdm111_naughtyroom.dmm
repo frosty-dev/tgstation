@@ -8,9 +8,7 @@
 /area/template_noop)
 "c" = (
 /obj/structure/table/wood,
-/obj/machinery/light/small{
-	dir = 1
-	},
+/obj/machinery/light/small/directional/north,
 /obj/item/clothing/glasses/blindfold,
 /obj/item/clothing/mask/muzzle,
 /turf/open/floor/carpet/purple,
@@ -18,7 +16,7 @@
 "d" = (
 /obj/structure/bed,
 /obj/item/bedsheet/random,
-/mob/living/simple_animal/hostile/cat_butcherer,
+/mob/living/basic/cat_butcherer,
 /turf/open/floor/carpet/purple,
 /area/template_noop)
 "e" = (
@@ -27,7 +25,7 @@
 /area/template_noop)
 "f" = (
 /obj/structure/closet/crate/wooden,
-/obj/item/clothing/head/kitty,
+/obj/item/clothing/head/costume/kitty,
 /obj/item/clothing/under/costume/schoolgirl,
 /turf/open/floor/carpet/purple,
 /area/template_noop)

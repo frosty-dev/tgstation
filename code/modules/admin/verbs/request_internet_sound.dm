@@ -1,13 +1,13 @@
 /mob/verb/request_internet_sound()
 	set category = "OOC"
-	set name = "Request Internet Sound"
+	set name = "Запросить звук"
 
 	if(GLOB.say_disabled) //This is here to try to identify lag problems
 		to_chat(usr, span_danger("Speech is currently admin-disabled."), confidential = TRUE)
 		return
 
 	if (!CONFIG_GET(flag/request_internet_sound))
-		to_chat(usr, span_danger("This server has disabled internet sound requests."), confidential = TRUE)
+		to_chat(usr, span_danger("Сервер отключил возможность делать запросы на воспроизведение звуков из интернета."), confidential = TRUE)
 		return
 
 	var/request_url = tgui_input_text(usr, "Please Input a URL", "Only certain sites are allowed, such as YouTube, SoundCloud, and Bandcamp.", "")

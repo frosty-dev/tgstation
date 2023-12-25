@@ -17,14 +17,12 @@
 "c" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/closet,
-/obj/item/nanite_remote,
-/obj/item/nanite_scanner,
 /turf/open/floor/plating,
 /area/template_noop)
 "d" = (
-/obj/machinery/nanite_chamber,
 /obj/effect/turf_decal/delivery,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/trash_pile,
 /turf/open/floor/iron/dark,
 /area/template_noop)
 "e" = (
@@ -39,10 +37,7 @@
 "f" = (
 /obj/effect/turf_decal/bot,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/light/built{
-	dir = 8;
-	icon_state = "tube-empty"
-	},
+/obj/machinery/light/built/directional/west,
 /obj/structure/frame/machine,
 /turf/open/floor/iron/dark,
 /area/template_noop)
@@ -56,29 +51,11 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/dark,
 /area/template_noop)
-"h" = (
-/obj/machinery/computer/nanite_chamber_control,
-/obj/effect/turf_decal/bot,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron/dark,
-/area/template_noop)
 "i" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/item/storage/box/disks_nanite{
-	pixel_y = 5
-	},
-/obj/machinery/light/broken{
-	dir = 4;
-	icon_state = "tube-broken"
-	},
+/obj/machinery/light/broken/directional/east,
 /turf/open/floor/plating,
-/area/template_noop)
-"j" = (
-/obj/machinery/nanite_program_hub,
-/obj/effect/turf_decal/bot,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/iron/dark,
 /area/template_noop)
 "k" = (
 /obj/effect/turf_decal/stripes/line{
@@ -98,9 +75,9 @@
 /turf/open/floor/iron/dark,
 /area/template_noop)
 "m" = (
-/obj/machinery/nanite_programmer,
 /obj/effect/turf_decal/bot,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/trash_pile,
 /turf/open/floor/iron/dark,
 /area/template_noop)
 
@@ -108,7 +85,7 @@
 a
 b
 f
-j
+m
 "}
 (2,1,1) = {"
 b
@@ -119,7 +96,7 @@ k
 (3,1,1) = {"
 b
 d
-h
+m
 l
 "}
 (4,1,1) = {"

@@ -1,7 +1,7 @@
 /obj/structure/trash_pile
 	name = "мусор"
 	desc = "Гора мусора. Здесь есть что-то интересное, верно?"
-	icon = 'white/rebolution228/icons/obj/trash_piles.dmi'
+	icon = 'white/master/icons/obj/trash_piles.dmi'
 	icon_state = "randompile"
 	density = TRUE
 	anchored = TRUE

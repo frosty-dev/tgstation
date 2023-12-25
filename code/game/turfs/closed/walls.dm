@@ -3,7 +3,7 @@
 
 /turf/closed/wall
 	name = "стена"
-	desc = "Огромный кусок железа, служивший для разделения комнат."
+	desc = "Огромный кусок железа, служащий для разделения комнат."
 	icon = 'icons/turf/walls/baywall.dmi'
 	icon_state = "wall-0"
 	base_icon_state = "wall"

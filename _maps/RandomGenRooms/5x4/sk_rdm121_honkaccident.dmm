@@ -5,37 +5,34 @@
 /turf/open/floor/iron,
 /area/template_noop)
 "b" = (
+/obj/effect/mapping_helpers/burnt_floor,
 /turf/open/floor/plating{
-	heat_capacity = 1e+006;
-	icon_state = "panelscorched"
+	heat_capacity = 1e+006
 	},
 /area/template_noop)
 "c" = (
 /obj/item/grown/bananapeel,
+/obj/effect/mapping_helpers/burnt_floor,
 /turf/open/floor/plating{
-	heat_capacity = 1e+006;
-	icon_state = "panelscorched"
+	heat_capacity = 1e+006
 	},
 /area/template_noop)
 "d" = (
 /obj/structure/mecha_wreckage/honker,
+/obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating{
-	heat_capacity = 1e+006;
-	icon_state = "platingdmg1"
+	heat_capacity = 1e+006
 	},
 /area/template_noop)
 "e" = (
 /obj/effect/decal/cleanable/ash,
+/obj/effect/mapping_helpers/burnt_floor,
 /turf/open/floor/plating{
-	heat_capacity = 1e+006;
-	icon_state = "panelscorched"
+	heat_capacity = 1e+006
 	},
 /area/template_noop)
 "f" = (
-/obj/machinery/light{
-	dir = 8;
-	light_color = "#e8eaff"
-	},
+/obj/machinery/light/directional/west,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
@@ -45,12 +42,10 @@
 /area/template_noop)
 "g" = (
 /obj/item/grown/bananapeel,
-/obj/machinery/light/broken{
-	dir = 4
-	},
+/obj/machinery/light/broken/directional/east,
+/obj/effect/mapping_helpers/burnt_floor,
 /turf/open/floor/plating{
-	heat_capacity = 1e+006;
-	icon_state = "panelscorched"
+	heat_capacity = 1e+006
 	},
 /area/template_noop)
 "h" = (

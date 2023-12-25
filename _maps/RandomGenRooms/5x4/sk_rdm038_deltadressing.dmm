@@ -4,7 +4,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/clothing/gloves/color/white,
-/obj/item/clothing/head/rabbitears,
+/obj/item/clothing/head/costume/rabbitears,
 /turf/open/floor/plating,
 /area/template_noop)
 "b" = (
@@ -95,7 +95,7 @@
 /turf/open/floor/iron,
 /area/template_noop)
 "l" = (
-/obj/machinery/light/small,
+/obj/machinery/light/small/directional/south,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/vending/autodrobe/all_access,
 /obj/effect/turf_decal/tile/red{

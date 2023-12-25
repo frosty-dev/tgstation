@@ -210,13 +210,13 @@ SUBSYSTEM_DEF(vote)
 
 	log_vote(to_display)
 	to_chat(world, span_infoplain(vote_font("\n[span_bold(to_display)]\n\
-		Type <b>vote</b> or click <a href='byond://winset?command=vote'>here</a> to place your votes.\n\
-		You have [DisplayTimeText(duration)] to vote.")))
+		Нажмите <a href='byond://winset?command=vote'>сюда</a> для голосования.\n\
+		У вас [DisplayTimeText(duration)] для того, чтобы проголосовать.")))
 
 	// And now that it's going, give everyone a voter action
 	for(var/client/new_voter as anything in GLOB.clients)
 		var/datum/action/vote/voting_action = new()
-		voting_action.name = "Vote: [current_vote.override_question || current_vote.name]"
+		voting_action.name = "Голосование: [current_vote.override_question || current_vote.name]"
 		voting_action.Grant(new_voter.mob)
 
 		new_voter.player_details.player_actions += voting_action
@@ -342,7 +342,7 @@ SUBSYSTEM_DEF(vote)
 
 /// Datum action given to mobs that allows players to vote on the current vote.
 /datum/action/vote
-	name = "Vote!"
+	name = "Голосовать!"
 	button_icon_state = "vote"
 	show_to_observers = FALSE
 

@@ -10,13 +10,13 @@
 /area/template_noop)
 "d" = (
 /obj/structure/closet/toolcloset,
-/obj/item/clothing/suit/straight_jacket,
+/obj/item/clothing/suit/jacket/straight_jacket,
 /turf/open/floor/plating,
 /area/template_noop)
 "k" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/structure/table,
-/obj/structure/window/reinforced/spawner/north,
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/item/gun/syringe,
 /turf/open/floor/plating,
 /area/template_noop)
@@ -39,13 +39,12 @@
 /turf/closed/wall,
 /area/template_noop)
 "w" = (
-/turf/open/floor/plating{
-	icon_state = "platingdmg1"
-	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "x" = (
 /obj/machinery/gibber,
-/obj/structure/window/reinforced/spawner/north,
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/effect/decal/cleanable/oil,
 /turf/open/floor/plating,
 /area/template_noop)
@@ -58,17 +57,12 @@
 "z" = (
 /obj/structure/table,
 /obj/machinery/microwave,
-/obj/structure/window/reinforced/spawner/north,
+/obj/structure/window/reinforced/spawner/directional/north,
 /turf/open/floor/plating,
 /area/template_noop)
 "B" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/plating,
-/area/template_noop)
-"C" = (
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
-	},
 /area/template_noop)
 "E" = (
 /obj/structure/closet/secure_closet/freezer/meat,
@@ -110,7 +104,7 @@
 "N" = (
 /obj/structure/closet/secure_closet/freezer/meat,
 /obj/effect/decal/cleanable/blood/old,
-/obj/item/kitchen/knife/butcher,
+/obj/item/knife/butcher,
 /obj/item/food/meat/slab/human,
 /turf/open/floor/plating,
 /area/template_noop)
@@ -125,9 +119,8 @@
 /area/template_noop)
 "Q" = (
 /obj/effect/spawner/random/trash/grille_or_waste,
-/turf/open/floor/plating{
-	icon_state = "platingdmg1"
-	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "R" = (
 /obj/effect/landmark/event_spawn,
@@ -139,9 +132,8 @@
 /area/template_noop)
 "W" = (
 /obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plating{
-	icon_state = "platingdmg1"
-	},
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/plating,
 /area/template_noop)
 "X" = (
 /obj/effect/decal/cleanable/blood/old,
@@ -149,7 +141,7 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "Y" = (
-/obj/machinery/computer/med_data{
+/obj/machinery/computer/records/medical{
 	dir = 4
 	},
 /turf/open/floor/plating,
@@ -191,7 +183,7 @@ c
 F
 "}
 (6,1,1) = {"
-C
+w
 J
 R
 W

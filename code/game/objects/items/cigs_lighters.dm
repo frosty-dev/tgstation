@@ -795,7 +795,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/lighter/ignition_effect(atom/A, mob/user)
 	if(get_temperature())
 		. = span_infoplain(span_rose("With a single flick of [user.p_their()] wrist, [user] smoothly lights [A] with [src]. Damn [user.p_theyre()] cool."))
-		playsound(src, 'white/rebolution228/sounds/smoking.ogg', 50, TRUE)
+		playsound(src, 'white/master/sounds/smoking.ogg', 50, TRUE)
 
 /obj/item/lighter/proc/set_lit(new_lit)
 	if(lit == new_lit)
@@ -832,7 +832,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 				span_notice("You hear a quiet click, as [user] shuts off [src] without even looking at what [user.p_theyre()] doing. Wow."),
 				span_notice("You quietly shut off [src] without even looking at what you're doing. Wow.")
 			)
-			playsound(src, 'white/rebolution228/sounds/zippo_opening.ogg', 50, TRUE)
+			playsound(src, 'white/master/sounds/zippo_opening.ogg', 50, TRUE)
 		else
 			user.visible_message(
 				span_notice("[user] quietly shuts off [src]."),
@@ -846,7 +846,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 			span_notice("Without even breaking stride, [user] flips open and lights [src] in one smooth movement."),
 			span_notice("Without even breaking stride, you flip open and light [src] in one smooth movement.")
 		)
-		playsound(src, 'white/rebolution228/sounds/zippo_opening.ogg', 50, TRUE)
+		playsound(src, 'white/master/sounds/zippo_opening.ogg', 50, TRUE)
 		return
 
 	var/hand_protected = FALSE
@@ -865,7 +865,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 			span_notice("After a few attempts, [user] manages to light [src]."),
 			span_notice("After a few attempts, you manage to light [src].")
 		)
-		playsound(src, 'white/rebolution228/sounds/lighter_ignition.ogg', 50, TRUE)
+		playsound(src, 'white/master/sounds/lighter_ignition.ogg', 50, TRUE)
 		return
 
 	var/hitzone = user.held_index_to_dir(user.active_hand_index) == "r" ? BODY_ZONE_PRECISE_R_HAND : BODY_ZONE_PRECISE_L_HAND
@@ -874,7 +874,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		span_warning("After a few attempts, [user] manages to light [src] - however, [user.p_they()] burn [user.p_their()] finger in the process."),
 		span_warning("You burn yourself while lighting the lighter!")
 	)
-	playsound(src, 'white/rebolution228/sounds/lighter_ignition.ogg', 50, TRUE)
+	playsound(src, 'white/master/sounds/lighter_ignition.ogg', 50, TRUE)
 	user.add_mood_event("burnt_thumb", /datum/mood_event/burnt_thumb)
 
 
@@ -954,7 +954,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/lighter/greyscale/ignition_effect(atom/A, mob/user)
 	if(get_temperature())
 		. = span_notice("After some fiddling, [user] manages to light [A] with [src].")
-		playsound(src, 'white/rebolution228/sounds/smoking.ogg', 50, TRUE)
+		playsound(src, 'white/master/sounds/smoking.ogg', 50, TRUE)
 
 
 /obj/item/lighter/slime
@@ -985,7 +985,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/lighter/mime/ignition_effect(atom/A, mob/user)
 	. = span_infoplain("[user] lifts the [name] to the [A], which miraculously lights!")
-	playsound(src, 'white/rebolution228/sounds/smoking.ogg', 50, TRUE)
+	playsound(src, 'white/master/sounds/smoking.ogg', 50, TRUE)
 
 /obj/item/lighter/bright
 	name = "illuminative zippo"
@@ -1010,7 +1010,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		. = span_infoplain(span_rose("[user] lifts the [src] to the [A], igniting it with a brilliant flash of light!"))
 		var/mob/living/current_viewer = user
 		current_viewer.flash_act(4)
-		playsound(src, 'white/rebolution228/sounds/smoking.ogg', 50, TRUE)
+		playsound(src, 'white/master/sounds/smoking.ogg', 50, TRUE)
 
 /obj/effect/spawner/random/special_lighter
 	name = "special lighter spawner"
@@ -1144,7 +1144,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		return
 
 	to_chat(user, span_notice("Начинаю парить."))
-	playsound(src, 'white/rebolution228/sounds/vape_ignition.ogg', 60, TRUE)
+	playsound(src, 'white/master/sounds/vape_ignition.ogg', 60, TRUE)
 	reagents.flags &= ~(NO_REACT)
 	START_PROCESSING(SSobj, src)
 

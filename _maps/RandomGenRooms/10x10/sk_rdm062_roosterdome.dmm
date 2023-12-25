@@ -13,9 +13,7 @@
 /obj/item/stack/sheet/iron/fifty,
 /obj/item/stack/sheet/iron/fifty,
 /obj/item/stack/sheet/glass/fifty,
-/obj/machinery/light/small{
-	dir = 1
-	},
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/iron/dark,
 /area/template_noop)
 "d" = (
@@ -43,12 +41,8 @@
 	icon_state = "left";
 	name = "Arena"
 	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/plating,
 /area/template_noop)
 "i" = (
@@ -56,14 +50,10 @@
 /turf/open/floor/iron/dark,
 /area/template_noop)
 "j" = (
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/mob/living/simple_animal/chicken{
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/window/reinforced/spawner/directional/west,
+/obj/structure/window/reinforced/spawner/directional/east,
+/mob/living/basic/chicken{
 	name = "Roscoe Reichard"
 	},
 /turf/open/floor/plating,
@@ -74,10 +64,8 @@
 	icon_state = "left";
 	name = "Arena"
 	},
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/plating,
 /area/template_noop)
 "l" = (
@@ -186,34 +174,24 @@
 	icon_state = "left";
 	name = "Arena"
 	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/chair/stool,
 /turf/open/floor/plating,
 /area/template_noop)
 "v" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/mob/living/simple_animal/chicken{
+/obj/structure/window/reinforced/spawner/directional/north,
+/mob/living/basic/chicken{
 	name = "Ali Rezun"
 	},
 /turf/open/floor/plating,
 /area/template_noop)
 "w" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /turf/open/floor/plating,
 /area/template_noop)
 "x" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/window/reinforced/spawner/directional/north,
 /turf/open/floor/plating,
 /area/template_noop)
 "y" = (
@@ -238,18 +216,14 @@
 /turf/open/floor/iron/dark,
 /area/template_noop)
 "B" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/plating,
 /area/template_noop)
 "C" = (
 /turf/open/floor/plating,
 /area/template_noop)
 "D" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/plating,
 /area/template_noop)
 "E" = (
@@ -271,16 +245,10 @@
 /turf/open/floor/iron/dark,
 /area/template_noop)
 "H" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/mob/living/simple_animal/chicken{
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/west,
+/mob/living/basic/chicken{
 	name = "Adam Jensen"
 	},
 /turf/open/floor/plating,
@@ -290,19 +258,17 @@
 /turf/open/floor/iron/dark,
 /area/template_noop)
 "J" = (
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/plating,
 /area/template_noop)
 "K" = (
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/plating,
 /area/template_noop)
 "L" = (
-/obj/structure/window/reinforced,
-/mob/living/simple_animal/chicken{
+/obj/structure/window/reinforced/spawner/directional/south,
+/mob/living/basic/chicken{
 	name = "Mikhail Tarkov"
 	},
 /turf/open/floor/plating,
@@ -313,7 +279,7 @@
 	icon_state = "left";
 	name = "Arena"
 	},
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/structure/chair/stool,
 /turf/open/floor/plating,
 /area/template_noop)
@@ -338,7 +304,7 @@
 /turf/open/floor/iron/dark,
 /area/template_noop)
 "Q" = (
-/obj/structure/mopbucket,
+/obj/structure/mop_bucket,
 /obj/item/mop,
 /turf/open/floor/iron/dark,
 /area/template_noop)

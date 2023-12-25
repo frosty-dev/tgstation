@@ -1,14 +1,12 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
 /turf/open/space/basic,
-/area/space)
+/area/template_noop)
 "b" = (
 /turf/open/floor/plating,
 /area/template_noop)
 "c" = (
-/obj/machinery/light{
-	dir = 1
-	},
+/obj/machinery/light/directional/north,
 /turf/open/floor/plating,
 /area/template_noop)
 "d" = (
@@ -31,8 +29,8 @@
 "g" = (
 /obj/machinery/door/window,
 /obj/machinery/door/window/left/directional/north,
-/obj/structure/window/reinforced/spawner/east,
-/obj/structure/window/reinforced/spawner/west,
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/template_noop)
@@ -43,7 +41,7 @@
 /area/template_noop)
 "i" = (
 /obj/structure/window/reinforced/spawner,
-/obj/structure/window/reinforced/spawner/west,
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/structure/rack,
 /obj/item/stack/cable_coil,
 /obj/item/stack/cable_coil,
@@ -62,63 +60,59 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "l" = (
-/obj/structure/window/reinforced/spawner/east,
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/structure/closet/secure_closet/chemical,
 /turf/open/floor/plating,
 /area/template_noop)
 "m" = (
 /obj/structure/lattice,
 /turf/open/space/basic,
-/area/space)
+/area/template_noop)
 "n" = (
-/obj/structure/window/reinforced/spawner/west,
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/open/floor/plating,
 /area/template_noop)
 "o" = (
-/obj/machinery/light{
-	dir = 8
-	},
+/obj/machinery/light/directional/west,
 /turf/open/floor/plating,
 /area/template_noop)
 "p" = (
-/obj/structure/window/reinforced/spawner/east,
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/structure/table,
 /obj/effect/spawner/random/maintenance/five,
 /turf/open/floor/plating,
 /area/template_noop)
 "q" = (
-/obj/structure/window/reinforced/spawner/west,
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/structure/table,
 /obj/effect/spawner/random/maintenance/eight,
 /turf/open/floor/plating,
 /area/template_noop)
 "r" = (
-/obj/machinery/light{
-	dir = 4
-	},
+/obj/machinery/light/directional/east,
 /turf/open/floor/plating,
 /area/template_noop)
 "s" = (
-/obj/structure/window/reinforced/spawner/east,
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/structure/table,
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/plating,
 /area/template_noop)
 "t" = (
-/obj/structure/window/reinforced/spawner/west,
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/structure/table,
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/plating,
 /area/template_noop)
 "u" = (
-/obj/structure/window/reinforced/spawner/east,
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/structure/table,
 /obj/item/storage/toolbox/mechanical,
 /turf/open/floor/plating,
 /area/template_noop)
 "v" = (
-/obj/structure/window/reinforced/spawner/west,
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/structure/table,
 /obj/item/electronics/airlock,
 /obj/item/electronics/airlock,
@@ -127,28 +121,28 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "w" = (
-/obj/structure/window/reinforced/spawner/east,
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/structure/table,
 /obj/effect/spawner/random/maintenance/seven,
 /turf/open/floor/plating,
 /area/template_noop)
 "x" = (
-/obj/structure/window/reinforced/spawner/west,
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/structure/table,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating,
 /area/template_noop)
 "y" = (
-/obj/structure/window/reinforced/spawner/east,
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/portable_atmospherics/scrubber,
 /turf/open/floor/plating,
 /area/template_noop)
 "A" = (
-/obj/structure/window/reinforced/spawner/north,
+/obj/structure/window/reinforced/spawner/directional/north,
 /turf/open/floor/plating,
 /area/template_noop)
 "B" = (
-/obj/machinery/light,
+/obj/machinery/light/directional/south,
 /turf/open/floor/plating,
 /area/template_noop)
 

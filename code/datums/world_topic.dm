@@ -27,7 +27,11 @@
 
 /datum/world_topic/proc/TryRun(list/input)
 	key_valid = config && (CONFIG_GET(string/comms_key) == input["key"])
+	var/key_cvalid = config && (CONFIG_GET(string/cross_key) == input["key"])
 	input -= "key"
+	if(require_comms_key && !key_valid)
+		if(!key_cvalid) //хочу спать
+			return "Bad Key"
 	if(require_comms_key && !key_valid)
 		. = "Bad Key"
 		if (input["format"] == "json")

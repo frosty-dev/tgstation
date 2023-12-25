@@ -46,3 +46,9 @@
 	name = "triple-barrel shotgun internal magazine"
 	ammo_type = /obj/item/ammo_casing/shotgun/incapacitate
 	max_ammo = 3
+
+/obj/item/ammo_box/magazine/internal/shot/improvised
+	name = "improvised shotgun internal magazine"
+	ammo_type = /obj/item/ammo_casing/shotgun/improvised
+	max_ammo = 1
+

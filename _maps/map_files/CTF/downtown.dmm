@@ -271,13 +271,6 @@
 	},
 /turf/open/floor/carpet/blue,
 /area/centcom/ctf)
-"go" = (
-/obj/structure/chair/stool/bar/directional/east{
-	item_chair = null;
-	resistance_flags = 64
-	},
-/turf/open/floor/wood,
-/area/centcom/ctf)
 "gu" = (
 /obj/structure/barricade/security/ctf,
 /obj/effect/turf_decal/tile/blue/fourcorners,
@@ -1333,7 +1326,7 @@
 /area/centcom/ctf)
 "Dm" = (
 /obj/effect/turf_decal/siding/wood,
-/obj/structure/chair/stool/bar/directional/north{
+/obj/structure/chair/stool/bar/directional/south{
 	item_chair = null;
 	resistance_flags = 64
 	},
@@ -3217,9 +3210,9 @@ xs
 td
 lL
 ql
-go
+hU
 ql
-go
+hU
 QC
 td
 mB
@@ -3369,9 +3362,9 @@ BH
 Am
 Ug
 ql
-go
+hU
 ql
-go
+hU
 QC
 Am
 Ad
@@ -3714,7 +3707,7 @@ dO
 sZ
 Dm
 ql
-go
+hU
 td
 Ij
 yX

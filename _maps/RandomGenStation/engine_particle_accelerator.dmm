@@ -7,8 +7,8 @@
 /area/station/engineering/main)
 "ae" = (
 /obj/structure/table,
-/obj/item/clothing/suit/radiation,
-/obj/item/clothing/head/radiation,
+/obj/item/clothing/suit/utility/radiation,
+/obj/item/clothing/head/utility/radiation,
 /obj/item/clothing/glasses/meson,
 /turf/open/floor/iron,
 /area/station/engineering/main)
@@ -405,9 +405,7 @@
 /area/station/engineering/main)
 "bn" = (
 /obj/machinery/power/grounding_rod,
-/obj/machinery/light{
-	dir = 8
-	},
+/obj/machinery/light/directional/west,
 /obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -419,24 +417,18 @@
 /area/station/engineering/main)
 "bq" = (
 /obj/effect/turf_decal/stripes/line,
-/obj/machinery/light{
-	pixel_y = 0
-	},
+/obj/machinery/light/directional/south,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible/layer1,
 /obj/machinery/camera/autoname/directional/south,
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "br" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
+/obj/machinery/light/small/directional/west,
 /obj/structure/closet/emcloset/anchored,
 /turf/open/floor/engine,
 /area/station/engineering/main)
 "bs" = (
-/obj/machinery/light{
-	dir = 4
-	},
+/obj/machinery/light/directional/east,
 /obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
@@ -459,9 +451,7 @@
 /turf/open/floor/plating,
 /area/station/engineering/main)
 "bw" = (
-/obj/machinery/light{
-	pixel_y = 0
-	},
+/obj/machinery/light/directional/south,
 /obj/structure/cable,
 /turf/open/floor/engine,
 /area/station/engineering/main)
@@ -475,7 +465,7 @@
 /turf/template_noop,
 /area/space/nearstation)
 "bz" = (
-/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/effect/spawner/structure/window/reinforced/plasma/reinforced,
 /obj/structure/cable,
 /obj/machinery/door/poddoor/shutters/radiation/preopen{
 	id = "engsm";
@@ -509,11 +499,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/machinery/light{
-	dir = 1;
-	light_color = "#c1caff";
-	pixel_y = 0
-	},
+/obj/machinery/light/directional/north,
 /obj/machinery/camera/directional/north{
 	c_tag = "Engineering Particle Accelerator";
 	network = list("ss13","engine")
@@ -570,9 +556,7 @@
 /area/station/engineering/main)
 "bL" = (
 /obj/effect/turf_decal/stripes/line,
-/obj/machinery/light{
-	pixel_y = 0
-	},
+/obj/machinery/light/directional/south,
 /obj/machinery/camera/autoname/directional/south,
 /turf/open/floor/iron,
 /area/station/engineering/main)
@@ -737,7 +721,7 @@
 /turf/open/floor/plating,
 /area/station/engineering/main)
 "io" = (
-/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/effect/spawner/structure/window/reinforced/plasma/reinforced,
 /obj/machinery/door/poddoor/shutters/radiation/preopen{
 	id = "engsm";
 	name = "Radiation Chamber Shutters"
@@ -834,9 +818,7 @@
 /area/station/engineering/main)
 "sF" = (
 /obj/structure/closet/emcloset/anchored,
-/obj/machinery/light/small{
-	dir = 4
-	},
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/engine,
 /area/station/engineering/main)
 "th" = (
@@ -1009,7 +991,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/main)
 "OM" = (
-/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/effect/spawner/structure/window/reinforced/plasma/reinforced,
 /turf/open/floor/plating,
 /area/station/engineering/main)
 "PY" = (
@@ -1038,7 +1020,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/main)
 "WL" = (
-/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/effect/spawner/structure/window/reinforced/plasma/reinforced,
 /obj/machinery/door/poddoor/shutters/radiation/preopen{
 	id = "engsm";
 	name = "Radiation Chamber Shutters"

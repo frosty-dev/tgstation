@@ -1,31 +1,29 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/obj/structure/flora/ausbushes/sunnybush,
+/obj/structure/flora/bush/sunny/style_random,
 /mob/living/carbon/human/species/monkey,
 /turf/open/floor/grass,
 /area/template_noop)
 "b" = (
-/obj/structure/flora/ausbushes/sparsegrass,
+/obj/structure/flora/bush/sparsegrass/style_random,
 /turf/open/floor/grass,
 /area/template_noop)
 "c" = (
-/obj/structure/flora/ausbushes/ywflowers,
+/obj/structure/flora/bush/flowers_yw/style_random,
 /turf/open/floor/grass,
 /area/template_noop)
 "d" = (
-/obj/structure/flora/ausbushes/ppflowers,
+/obj/structure/flora/bush/flowers_pp/style_random,
 /mob/living/carbon/human/species/monkey,
 /turf/open/floor/grass,
 /area/template_noop)
 "e" = (
-/obj/structure/flora/junglebush/large,
+/obj/structure/flora/bush/large,
 /turf/open/floor/grass,
 /area/template_noop)
 "f" = (
 /obj/structure/flora/grass/jungle,
-/obj/machinery/light{
-	dir = 4
-	},
+/obj/machinery/light/directional/east,
 /mob/living/carbon/human/species/monkey{
 	name = "mankey"
 	},
@@ -36,14 +34,14 @@
 /turf/open/floor/grass,
 /area/template_noop)
 "h" = (
-/obj/structure/sink,
-/obj/structure/flora/ausbushes/reedbush{
+/obj/structure/flora/bush/reed/style_random{
 	pixel_y = 5
 	},
+/obj/structure/sink/directional/east,
 /turf/open/floor/grass,
 /area/template_noop)
 "i" = (
-/obj/structure/flora/junglebush/b,
+/obj/structure/flora/bush/jungle/b/style_random,
 /mob/living/carbon/human/species/monkey,
 /turf/open/floor/grass,
 /area/template_noop)
@@ -60,7 +58,7 @@
 /area/template_noop)
 "J" = (
 /obj/structure/water_source/puddle,
-/obj/structure/flora/ausbushes/reedbush{
+/obj/structure/flora/bush/reed/style_random{
 	pixel_y = 5
 	},
 /turf/open/floor/grass,
