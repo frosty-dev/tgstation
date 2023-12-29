@@ -91,8 +91,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible/layer1,
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Engine Room";
-	req_access_txt = "10"
+	name = "Engine Room"
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 8
@@ -744,8 +743,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Engine Room";
-	req_access_txt = "10"
+	name = "Engine Room"
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
@@ -867,8 +865,7 @@
 "AB" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Engine Room";
-	req_access_txt = "10"
+	name = "Engine Room"
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
@@ -935,8 +932,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible/layer1,
 /obj/machinery/door/airlock/external{
-	name = "Engineering External Access";
-	req_access_txt = "10;13"
+	name = "Engineering External Access"
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -1024,8 +1020,7 @@
 /obj/structure/fans/tiny,
 /obj/effect/turf_decal/stripes/full,
 /obj/machinery/door/airlock/external{
-	name = "Engineering External Access";
-	req_access_txt = "10;13"
+	name = "Engineering External Access"
 	},
 /turf/open/floor/engine/airless,
 /area/station/engineering/supermatter)
@@ -1543,8 +1538,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/external{
-	name = "Engineering External Access";
-	req_access_txt = "10;13"
+	name = "Engineering External Access"
 	},
 /obj/machinery/airalarm/engine{
 	pixel_x = 0;
@@ -1620,8 +1614,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Engine Room";
-	req_access_txt = "10"
+	name = "Engine Room"
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/firedoor/border_only{
@@ -1762,8 +1755,7 @@
 /obj/structure/fans/tiny,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible/layer1,
 /obj/machinery/door/airlock/external{
-	name = "Engineering External Access";
-	req_access_txt = "10;13"
+	name = "Engineering External Access"
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,

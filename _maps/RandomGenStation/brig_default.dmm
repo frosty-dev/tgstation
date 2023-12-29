@@ -425,7 +425,7 @@
 /area/station/ai_monitored/security/armory)
 "cv" = (
 /obj/machinery/power/apc/auto_name{
-	areastring = "/area/ai_monitored/security/armory";
+	areastring = "/area/station/ai_monitored/security/armory";
 	dir = 4;
 	name = "Armory APC";
 	pixel_x = 24
@@ -571,14 +571,7 @@
 /area/station/ai_monitored/security/armory)
 "cM" = (
 /obj/effect/landmark/event_spawn,
-/mob/living/simple_animal/bot/secbot{
-	arrest_type = 1;
-	health = 45;
-	icon_state = "secbot1";
-	idcheck = 1;
-	name = "Sergeant-at-Armsky";
-	weaponscheck = 1
-	},
+/mob/living/simple_animal/bot/secbot/beepsky/armsky,
 /turf/open/floor/iron/large,
 /area/station/ai_monitored/security/armory)
 "cN" = (
@@ -589,15 +582,16 @@
 /turf/open/floor/iron/large,
 /area/station/ai_monitored/security/armory)
 "cO" = (
-/obj/machinery/door/window/left/directional/east{
-	name = "armoury desk";
-	req_access_txt = "1"
-	},
-/obj/machinery/door/window/left/directional/west{
-	name = "armoury desk";
-	req_access_txt = "3"
-	},
 /obj/structure/table/reinforced,
+/obj/machinery/door/window/brigdoor{
+	dir = 8;
+	name = "Weapon Distribution";
+	req_access = list("armory")
+	},
+/obj/machinery/door/window/left/directional/south{
+	dir = 4;
+	name = "Requests Window"
+	},
 /turf/open/floor/iron,
 /area/station/ai_monitored/security/armory)
 "cR" = (
@@ -680,8 +674,7 @@
 	id = "armory";
 	name = "Armory Shutters";
 	pixel_x = 26;
-	pixel_y = -26;
-	req_access_txt = "3"
+	pixel_y = -26
 	},
 /obj/structure/cable,
 /turf/open/floor/iron/large,
@@ -931,6 +924,7 @@
 	name = "Escape Pod Four";
 	shuttledocked = 1
 	},
+/obj/effect/mapping_helpers/airlock/access/any/security/general,
 /turf/open/floor/plating,
 /area/station/security)
 "eg" = (
@@ -954,31 +948,30 @@
 /turf/open/floor/iron,
 /area/station/security/brig)
 "ei" = (
-/obj/machinery/door/window/left/directional/south{
-	name = "Armory";
-	req_access_txt = "3"
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
 	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
-/turf/open/floor/iron/large,
+/obj/machinery/door/window/brigdoor{
+	name = "Armory";
+	req_access = list("brig")
+	},
+/turf/open/floor/iron,
 /area/station/ai_monitored/security/armory)
 "ej" = (
-/obj/machinery/door/window/left/directional/south{
-	base_state = "right";
-	icon_state = "right";
-	name = "Armory";
-	req_access_txt = "3"
-	},
 /obj/machinery/light/directional/east,
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/firedoor,
-/turf/open/floor/iron/large,
+/obj/machinery/door/window/brigdoor/right/directional/north{
+	dir = 2;
+	name = "Armory";
+	req_access = list("armory")
+	},
+/turf/open/floor/iron,
 /area/station/ai_monitored/security/armory)
 "ek" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -998,12 +991,12 @@
 /area/station/security)
 "en" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Equipment Room";
-	req_access_txt = "1"
+	name = "Equipment Room"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/any/security/general,
 /turf/open/floor/iron/showroomfloor,
 /area/station/security)
 "eo" = (
@@ -1083,10 +1076,6 @@
 /turf/closed/wall/r_wall,
 /area/station/security/warden)
 "eD" = (
-/obj/machinery/requests_console{
-	department = "Security";
-	pixel_x = -30
-	},
 /obj/effect/mapping_helpers/requests_console/information,
 /obj/effect/mapping_helpers/requests_console/assistance,
 /obj/machinery/camera/directional/west{
@@ -1103,6 +1092,7 @@
 	pixel_x = 3;
 	pixel_y = -3
 	},
+/obj/machinery/requests_console/auto_name/directional/north,
 /turf/open/floor/iron/showroomfloor,
 /area/station/security/warden)
 "eE" = (
@@ -1176,10 +1166,6 @@
 /turf/open/floor/iron,
 /area/station/security)
 "eO" = (
-/obj/machinery/requests_console{
-	department = "Security";
-	pixel_y = 30
-	},
 /obj/effect/mapping_helpers/requests_console/information,
 /obj/effect/mapping_helpers/requests_console/assistance,
 /obj/effect/turf_decal/tile/red{
@@ -1190,6 +1176,10 @@
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/machinery/light/directional/north,
+/obj/machinery/requests_console/directional/north{
+	department = "Security";
+	name = "Security Requests Console"
+	},
 /turf/open/floor/iron,
 /area/station/security)
 "eP" = (
@@ -1465,13 +1455,6 @@
 /turf/open/floor/iron,
 /area/station/security)
 "fx" = (
-/obj/machinery/door/window/right/directional/east{
-	base_state = "left";
-	dir = 8;
-	icon_state = "left";
-	name = "Security Delivery";
-	req_access_txt = "1"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -1480,13 +1463,17 @@
 	id = "briggateteh";
 	name = "security blast door"
 	},
+/obj/machinery/door/window/brigdoor{
+	dir = 8;
+	name = "Security Delivery";
+	req_access = list("brig")
+	},
 /turf/open/floor/iron,
 /area/station/security)
 "fy" = (
 /obj/machinery/navbeacon{
 	codes_txt = "delivery;dir=8";
 	dir = 8;
-	freq = 1400;
 	location = "Security"
 	},
 /obj/structure/plasticflaps/opaque,
@@ -1557,7 +1544,7 @@
 /area/station/security/brig)
 "fG" = (
 /obj/machinery/power/apc/auto_name/directional/west{
-	areastring = "/area/security/warden"
+	areastring = "/area/station/security/warden"
 	},
 /obj/structure/cable,
 /turf/open/floor/iron/showroomfloor,
@@ -1601,11 +1588,11 @@
 "fL" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Brig Control";
-	req_access_txt = "3";
 	security_level = 0
 	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/all/security/armory,
 /turf/open/floor/iron/showroomfloor,
 /area/station/security/warden)
 "fM" = (
@@ -1698,7 +1685,7 @@
 /area/station/security)
 "fU" = (
 /obj/machinery/power/apc{
-	areastring = "/area/security/main";
+	areastring = "/area/station/security";
 	dir = 4;
 	name = "Security Office APC";
 	pixel_x = 24
@@ -1777,8 +1764,7 @@
 	id = "Prison Gate";
 	name = "Prison Wing Lockdown";
 	pixel_x = -27;
-	pixel_y = 8;
-	req_access_txt = "2"
+	pixel_y = 8
 	},
 /obj/machinery/button/door{
 	id = "Secure Gate";
@@ -2037,12 +2023,10 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/obj/machinery/stasis{
-	handbeltsmod = 1
-	},
 /obj/machinery/defibrillator_mount{
 	pixel_y = -28
 	},
+/obj/machinery/stasis,
 /turf/open/floor/iron/white,
 /area/station/security/brig)
 "gG" = (
@@ -2069,15 +2053,6 @@
 /area/station/security/warden)
 "gI" = (
 /obj/structure/table/reinforced,
-/obj/machinery/door/window/brigdoor{
-	dir = 1;
-	name = "Armory Desk";
-	req_access_txt = "3"
-	},
-/obj/machinery/door/window/left/directional/south{
-	name = "Reception Desk";
-	req_access_txt = "63"
-	},
 /obj/item/paper_bin{
 	pixel_x = -3;
 	pixel_y = 7
@@ -2086,40 +2061,48 @@
 	pixel_x = 4;
 	pixel_y = 4
 	},
+/obj/machinery/door/window/brigdoor{
+	dir = 1;
+	name = "Warden Desk";
+	req_access = list("armory")
+	},
+/obj/machinery/door/window/left/directional/north{
+	dir = 2;
+	name = "Warden Desk"
+	},
 /turf/open/floor/iron/showroomfloor,
 /area/station/security/warden)
 "gJ" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Brig Control";
-	req_access_txt = "3";
 	security_level = 0
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/all/security/armory,
 /turf/open/floor/iron/showroomfloor,
 /area/station/security/warden)
 "gK" = (
 /obj/machinery/door/airlock/security{
-	name = "Security Office";
-	req_access_txt = null;
-	req_one_access_txt = "1;4"
+	name = "Security Office"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/any/security/general,
 /turf/open/floor/iron,
 /area/station/security)
 "gO" = (
 /obj/machinery/door/airlock/security{
-	name = "Interrogation";
-	req_access_txt = "63"
+	name = "Interrogation"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/any/security/general,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/security/brig)
 "gP" = (
@@ -2209,7 +2192,7 @@
 /area/station/security/brig)
 "hm" = (
 /obj/machinery/power/apc{
-	areastring = "/area/security/brig";
+	areastring = "/area/station/security/brig";
 	dir = 1;
 	name = "Brig APC";
 	pixel_y = 23
@@ -2350,8 +2333,7 @@
 /area/station/security/brig)
 "hJ" = (
 /obj/machinery/door/airlock/security{
-	name = "Labor Shuttle";
-	req_access_txt = "2"
+	name = "Labor Shuttle"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
@@ -2361,6 +2343,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/any/security/general,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "hK" = (
@@ -2498,14 +2481,14 @@
 /area/station/security/brig)
 "ik" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Evidence Storage";
-	req_access_txt = "63"
+	name = "Evidence Storage"
 	},
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/any/security/general,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "im" = (
@@ -2555,10 +2538,10 @@
 /area/station/security/brig)
 "iq" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Brig Desk";
-	req_access_txt = "1"
+	name = "Brig Desk"
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/any/security/general,
 /turf/open/floor/iron/dark,
 /area/station/security/brig)
 "ir" = (
@@ -2580,10 +2563,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/airlock/security/glass{
 	id_tag = "innerbrig";
-	name = "Brig";
-	req_access_txt = "63"
+	name = "Brig"
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/all/security/entrance,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "it" = (
@@ -2598,10 +2581,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/airlock/security/glass{
 	id_tag = "innerbrig";
-	name = "Brig";
-	req_access_txt = "63"
+	name = "Brig"
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/all/security/entrance,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "iu" = (
@@ -2661,13 +2644,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
-/obj/item/radio/intercom{
-	desc = "Talk through this. It looks like it has been modified to not broadcast.";
-	name = "Prison Intercom (General)";
-	pixel_x = 25;
-	pixel_y = -2;
-	prison_radio = 1
-	},
+/obj/item/radio/intercom/prison/directional/east,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "iG" = (
@@ -2706,15 +2683,15 @@
 	id = "briggate";
 	name = "security shutters"
 	},
-/obj/machinery/door/window/left/directional/east{
-	name = "Brig Desk";
-	req_access_txt = "1"
-	},
 /obj/item/paper_bin{
 	pixel_x = -3;
 	pixel_y = 7
 	},
 /obj/item/pen,
+/obj/machinery/door/window/left/directional/east{
+	name = "Brig Desk";
+	req_access = list("security")
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/brig)
 "iK" = (
@@ -2780,11 +2757,11 @@
 /area/station/security/brig)
 "iR" = (
 /obj/machinery/door/airlock/external{
-	name = "Security External Airlock";
-	req_access_txt = "63"
+	name = "Security External Airlock"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/structure/fans/tiny,
+/obj/effect/mapping_helpers/airlock/access/any/security/general,
 /turf/open/floor/plating,
 /area/station/security)
 "iS" = (
@@ -2795,12 +2772,12 @@
 /area/station/security)
 "iT" = (
 /obj/machinery/door/airlock/external{
-	name = "Security External Airlock";
-	req_access_txt = "63"
+	name = "Security External Airlock"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
 	},
+/obj/effect/mapping_helpers/airlock/access/any/security/general,
 /turf/open/floor/plating,
 /area/station/security)
 "iU" = (
@@ -2820,6 +2797,7 @@
 	name = "Escape Pod Four";
 	shuttledocked = 1
 	},
+/obj/effect/mapping_helpers/airlock/access/any/security/general,
 /turf/open/floor/plating,
 /area/station/security)
 "iX" = (
@@ -2914,8 +2892,7 @@
 	name = "Brig Exterior Doors Control";
 	normaldoorcontrol = 1;
 	pixel_x = -26;
-	pixel_y = -5;
-	req_access_txt = "63"
+	pixel_y = -5
 	},
 /obj/machinery/button/door{
 	desc = "A remote control switch for the medbay foyer.";
@@ -2923,8 +2900,7 @@
 	name = "Brig Interior Doors Control";
 	normaldoorcontrol = 1;
 	pixel_x = -26;
-	pixel_y = 5;
-	req_access_txt = "63"
+	pixel_y = 5
 	},
 /turf/open/floor/iron/dark,
 /area/station/security/brig)
@@ -2940,12 +2916,12 @@
 	id = "briggate";
 	name = "security shutters"
 	},
-/obj/machinery/door/window/right/directional/east{
-	name = "Brig Desk";
-	req_access_txt = "2"
-	},
 /obj/item/restraints/handcuffs,
 /obj/item/radio/off,
+/obj/machinery/door/window/right/directional/east{
+	name = "Brig Desk";
+	req_access = list("security")
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/brig)
 "jk" = (
@@ -2986,22 +2962,15 @@
 /turf/open/floor/iron,
 /area/station/security/brig)
 "jn" = (
-/obj/docking_port/stationary{
-	dir = 4;
-	dwidth = 1;
-	height = 4;
-	name = "NT SS13: escape pod #4 loader";
-	roundstart_template = /datum/map_template/shuttle/escape_pod/default;
-	width = 3
+/obj/docking_port/stationary/escape_pod{
+	dir = 4
 	},
 /turf/open/floor/plating,
 /area/station/security)
 "jo" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/docking_port/stationary/random/icemoon{
-	dir = 4;
-	id = "pod_3_lavaland";
-	name = "lavaland"
+/obj/docking_port/stationary/escape_pod{
+	dir = 4
 	},
 /turf/open/floor/plating,
 /area/station/security)
@@ -3060,9 +3029,10 @@
 	id = "briggate";
 	name = "security shutters"
 	},
-/obj/machinery/door/window/left/directional/south{
+/obj/machinery/door/window/left/directional/east{
+	dir = 2;
 	name = "Brig Desk";
-	req_access_txt = "1"
+	req_access = list("security")
 	},
 /turf/open/floor/iron/dark,
 /area/station/security/brig)
@@ -3072,11 +3042,10 @@
 	id = "briggate";
 	name = "security shutters"
 	},
-/obj/machinery/door/window/left/directional/south{
-	base_state = "right";
-	icon_state = "right";
+/obj/machinery/door/window/right/directional/east{
+	dir = 2;
 	name = "Brig Desk";
-	req_access_txt = "1"
+	req_access = list("security")
 	},
 /turf/open/floor/iron/dark,
 /area/station/security/brig)
@@ -3103,18 +3072,18 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/airlock/security/glass{
 	id_tag = "outerbrig";
-	name = "Brig";
-	req_access_txt = "63"
+	name = "Brig"
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/all/security/entrance,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "le" = (
 /obj/machinery/door/airlock/security{
-	name = "Interrogation";
-	req_access_txt = "63"
+	name = "Interrogation"
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/any/security/general,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/security/brig)
 "nI" = (
@@ -3156,8 +3125,7 @@
 	},
 /obj/machinery/door/airlock/security/glass{
 	id_tag = "outerbrig";
-	name = "Brig";
-	req_access_txt = "63"
+	name = "Brig"
 	},
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -3172,6 +3140,7 @@
 /obj/effect/landmark/navigate_destination,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/all/security/entrance,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "pO" = (
@@ -3179,12 +3148,6 @@
 /area/station/security/brig)
 "qL" = (
 /obj/structure/table/wood,
-/obj/machinery/requests_console{
-	announcementConsole = 1;
-	department = "Head of Security's Desk";
-	name = "Head of Security RC";
-	pixel_y = 30
-	},
 /obj/effect/mapping_helpers/requests_console/information,
 /obj/effect/mapping_helpers/requests_console/assistance,
 /obj/machinery/computer/records/medical/laptop,
@@ -3195,6 +3158,11 @@
 /obj/machinery/camera/directional/north{
 	c_tag = "Head of Security's Office"
 	},
+/obj/machinery/requests_console/directional/north{
+	department = "Head of Security's Desk";
+	name = "Head of Security Requests Console"
+	},
+/obj/effect/mapping_helpers/requests_console/announcement,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/hos)
 "sT" = (
@@ -3279,13 +3247,13 @@
 "Lf" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/command{
-	name = "Head of Security's Office";
-	req_access_txt = "58"
+	name = "Head of Security's Office"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/all/security/hos,
 /turf/open/floor/carpet,
 /area/station/command/heads_quarters/hos)
 "Oi" = (
@@ -3335,7 +3303,7 @@
 "Vh" = (
 /obj/machinery/photocopier,
 /obj/machinery/power/apc{
-	areastring = "/area/command/heads_quarters/hos";
+	areastring = "/area/station/command/heads_quarters/hos";
 	dir = 4;
 	name = "Head of Security's Office APC";
 	pixel_x = 24

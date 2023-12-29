@@ -216,7 +216,7 @@ GLOBAL_REAL(Master, /datum/controller/master)
 	init_stage_completed = 0
 	var/mc_started = FALSE
 
-	to_chat(world, span_boldannounce("Инициализация подсистем..."))
+	to_chat(world, span_green("Инициализация подсистем..."))
 
 	var/list/stage_sorted_subsystems = new(INITSTAGE_MAX)
 	for (var/i in 1 to INITSTAGE_MAX)

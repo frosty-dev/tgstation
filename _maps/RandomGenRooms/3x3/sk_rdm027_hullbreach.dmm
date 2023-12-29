@@ -1,31 +1,42 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "b" = (
-/turf/open/floor/plating/airless,
+/obj/structure/table,
+/obj/effect/spawner/random/maintenance/three,
+/turf/open/floor/wood,
 /area/template_noop)
 "c" = (
-/obj/item/paper/crumpled,
-/obj/effect/mapping_helpers/broken_floor,
-/turf/open/floor/iron/airless,
+/obj/structure/table,
+/obj/effect/spawner/random/maintenance/two,
+/turf/open/floor/wood,
 /area/template_noop)
 "d" = (
-/obj/item/airlock_painter,
-/obj/structure/lattice,
-/obj/structure/closet,
-/turf/open/space/basic,
+/turf/open/floor/wood,
 /area/template_noop)
 "e" = (
+/obj/effect/decal/cleanable/cobweb,
+/obj/effect/spawner/random/structure/crate,
 /obj/effect/mapping_helpers/broken_floor,
-/turf/open/floor/iron/airless,
+/turf/open/floor/wood,
 /area/template_noop)
 "f" = (
-/obj/structure/lattice,
-/turf/open/space/basic,
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/plating,
+/area/template_noop)
+"s" = (
+/obj/structure/sink/directional/east,
+/turf/open/floor/iron,
+/area/template_noop)
+"K" = (
+/obj/structure/bed/pod,
+/obj/item/bedsheet/random,
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/wood,
 /area/template_noop)
 
 (1,1,1) = {"
 e
-b
-e
+d
+s
 "}
 (2,1,1) = {"
 b
@@ -34,6 +45,6 @@ f
 "}
 (3,1,1) = {"
 c
-e
-e
+d
+K
 "}

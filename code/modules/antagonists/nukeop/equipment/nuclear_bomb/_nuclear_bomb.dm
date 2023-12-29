@@ -4,8 +4,8 @@ GLOBAL_VAR_INIT(station_was_nuked, FALSE)
 GLOBAL_VAR(station_nuke_source)
 
 /obj/machinery/nuclearbomb
-	name = "nuclear fission explosive"
-	desc = "You probably shouldn't stick around to see if this is armed."
+	name = "термоядерная бомба"
+	desc = "Пожалуй, тебе не стоит задерживаться рядом с этой хренью, чтобы проверить, взведена ли она."
 	icon = 'icons/obj/machines/nuke.dmi'
 	icon_state = "nuclearbomb_base"
 	anchored = FALSE
@@ -75,14 +75,14 @@ GLOBAL_VAR(station_nuke_source)
 /obj/machinery/nuclearbomb/examine(mob/user)
 	. = ..()
 	if(exploding)
-		. += span_bolddanger("It is in the process of exploding. Perhaps reviewing your affairs is in order.")
+		. += span_danger("Бомба в процессе взрыва. Возможно, вам следует подумать над оформлением завещания.")
 	if(timing)
-		. += span_danger("There are [get_time_left()] seconds until detonation.")
+		. += span_danger("До взрыва осталось [get_time_left()] [getnoun(get_time_left(), "секунда", "секунды", "секунд")].")
 
 /// Checks if the disk inserted is a real nuke disk or not.
 /obj/machinery/nuclearbomb/proc/disk_check(obj/item/disk/nuclear/inserted_disk)
 	if(inserted_disk.fake)
-		say("Authentication failure; disk not recognised.")
+		say("Сбой аутентификации; диск не распознан.")
 		return FALSE
 
 	return TRUE
@@ -484,6 +484,7 @@ GLOBAL_VAR(station_nuke_source)
 	countdown.stop()
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_NUKE_DEVICE_DISARMED, src)
 	update_appearance()
+	playsound(world, "white/master/sounds/nuke_disarmed.ogg", 100, TRUE)
 
 /// If the nuke is active, gets how much time is left until it detonates, in seconds.
 /// If the nuke is not active, gets how much time the nuke is set for, in seconds.

@@ -574,7 +574,7 @@
 		if(examine_time && (world.time - examine_time < EXAMINE_MORE_WINDOW))
 			result = examinify.examine_more(src)
 			if(!length(result))
-				result += span_notice("<i>You examine [examinify] closer, but find nothing of interest...</i>")
+				result += span_notice("<i>Осматриваю <b>[examinify]</b> тщательно, но не могу найти что-то ещё интересное...</i>")
 		else
 			result = examinify.examine(src)
 			client.recent_examines[ref_to_atom] = world.time // set to when we last normal examine'd them
@@ -598,7 +598,7 @@
 /mob/living/blind_examine_check(atom/examined_thing)
 	//need to be next to something and awake
 	if(!Adjacent(examined_thing) || incapacitated())
-		to_chat(src, span_warning("Something is there, but you can't see it!"))
+		to_chat(src, span_warning("Что-то есть, но не могу разглядеть!"))
 		return FALSE
 
 	//you can examine things you're holding directly, but you can't examine other things if your hands are full
@@ -609,14 +609,14 @@
 		if(HAS_TRAIT(active_item, TRAIT_BLIND_TOOL))
 			boosted = TRUE
 		else if(active_item != examined_thing)
-			to_chat(src, span_warning("Your hands are too full to examine this!"))
+			to_chat(src, span_warning("Мои руки заняты!"))
 			return FALSE
 
 	//you can only initiate exaimines if you have a hand, it's not disabled, and only as many examines as you have hands
 	/// our active hand, to check if it's disabled/detatched
 	var/obj/item/bodypart/active_hand = has_active_hand()? get_active_hand() : null
 	if(!active_hand || active_hand.bodypart_disabled || do_after_count() >= usable_hands)
-		to_chat(src, span_warning("You don't have a free hand to examine this!"))
+		to_chat(src, span_warning("Нет свободной руки для осмотра!"))
 		return FALSE
 
 	//you can only queue up one examine on something at a time

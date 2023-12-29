@@ -1,9 +1,8 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "b" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access_txt = "12"
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/effect/mapping_helpers/airlock/abandoned,
+/obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
 "c" = (
@@ -26,22 +25,22 @@
 	name = "wooden barricade (CLOSED)"
 	},
 /obj/machinery/door/airlock/maintenance{
-	dir = 8;
-	req_access_txt = "12"
+	dir = 8
 	},
 /obj/effect/mapping_helpers/airlock/abandoned,
+/obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
 "k" = (
 /obj/machinery/door/airlock/maintenance{
 	dir = 4;
-	name = "Incinerator Access";
-	req_access_txt = "12"
+	name = "Incinerator Access"
 	},
 /obj/effect/mapping_helpers/airlock/abandoned,
 /obj/structure/barricade/wooden{
 	name = "wooden barricade (CLOSED)"
 	},
+/obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
 "m" = (
@@ -57,10 +56,10 @@
 	name = "wooden barricade (CLOSED)"
 	},
 /obj/machinery/door/airlock/maintenance{
-	dir = 4;
-	req_access_txt = "12"
+	dir = 4
 	},
 /obj/effect/mapping_helpers/airlock/abandoned,
+/obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
 "x" = (

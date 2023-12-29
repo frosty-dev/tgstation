@@ -7,13 +7,13 @@
 /area/station/engineering/main)
 "as" = (
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Supermatter Engine Room";
-	req_access_txt = "10"
+	name = "Supermatter Engine Room"
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
 	},
+/obj/effect/mapping_helpers/mail_sorting/engineering/general,
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "at" = (
@@ -22,18 +22,17 @@
 /area/station/engineering/main)
 "bY" = (
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Supermatter Engine Room";
-	req_access_txt = "10"
+	name = "Supermatter Engine Room"
 	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/effect/mapping_helpers/mail_sorting/engineering/general,
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "cn" = (
-/obj/effect/spawner/structure/window/reinforced/plasma/reinforced,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
 /area/station/engineering/main)
@@ -127,8 +126,7 @@
 /area/station/engineering/main)
 "ja" = (
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Supermatter Engine Room";
-	req_access_txt = "10"
+	name = "Supermatter Engine Room"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
@@ -141,6 +139,7 @@
 /obj/machinery/door/firedoor/border_only{
 	dir = 8
 	},
+/obj/effect/mapping_helpers/mail_sorting/engineering/general,
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "kH" = (
@@ -151,8 +150,7 @@
 /area/station/engineering/main)
 "mt" = (
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Supermatter Engine Room";
-	req_access_txt = "10"
+	name = "Supermatter Engine Room"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
@@ -163,6 +161,7 @@
 /obj/machinery/door/firedoor/border_only{
 	dir = 8
 	},
+/obj/effect/mapping_helpers/mail_sorting/engineering/general,
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "oz" = (
@@ -272,13 +271,13 @@
 /area/station/engineering/main)
 "zS" = (
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Supermatter Engine Room";
-	req_access_txt = "10"
+	name = "Supermatter Engine Room"
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/effect/mapping_helpers/mail_sorting/engineering/general,
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "Be" = (
@@ -356,10 +355,10 @@
 "Ie" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/machinery/door/airlock/external{
-	name = "Engineering External Access";
-	req_access_txt = "10;13"
+	name = "Engineering External Access"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/mail_sorting/engineering/general,
 /turf/open/floor/engine,
 /area/station/engineering/main)
 "IK" = (
@@ -464,10 +463,10 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/external{
-	name = "Engineering External Access";
-	req_access_txt = "10;13"
+	name = "Engineering External Access"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/mail_sorting/engineering/general,
 /turf/open/floor/engine,
 /area/station/engineering/main)
 "Ry" = (
@@ -484,10 +483,6 @@
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/engineering/main)
-"Sn" = (
-/obj/effect/spawner/structure/window/reinforced/plasma/reinforced,
-/turf/open/floor/plating,
 /area/station/engineering/main)
 "Ss" = (
 /obj/effect/turf_decal/tile/yellow,
@@ -911,9 +906,9 @@ to
 to
 to
 to
-Sn
-Sn
-Sn
+yf
+yf
+yf
 Le
 Le
 ZT
@@ -929,8 +924,8 @@ YZ
 ZT
 "}
 (14,1,1) = {"
-Sn
-Sn
+yf
+yf
 mt
 to
 to
@@ -985,7 +980,7 @@ YZ
 ZT
 "}
 (16,1,1) = {"
-Sn
+yf
 Ka
 Zg
 WX
@@ -998,7 +993,7 @@ WX
 Zg
 gG
 Ss
-Sn
+yf
 Le
 Rh
 Rh
@@ -1013,7 +1008,7 @@ YZ
 ZT
 "}
 (17,1,1) = {"
-Sn
+yf
 Ka
 Zg
 WX
@@ -1026,7 +1021,7 @@ WX
 Zg
 gG
 Ss
-Sn
+yf
 Le
 ZT
 Rh
@@ -1054,7 +1049,7 @@ WX
 Zg
 gG
 Ss
-Sn
+yf
 Le
 ZT
 Rh
@@ -1110,7 +1105,7 @@ Ck
 Vf
 iA
 Ss
-Sn
+yf
 Le
 Rh
 Rh
@@ -1125,7 +1120,7 @@ YZ
 ZT
 "}
 (21,1,1) = {"
-Sn
+yf
 Ka
 Vf
 Da
@@ -1138,7 +1133,7 @@ Da
 Da
 iA
 KJ
-Sn
+yf
 Le
 ZT
 Rh
@@ -1166,7 +1161,7 @@ Ck
 Vf
 iA
 Ss
-Sn
+yf
 Le
 Rh
 Rh
@@ -1222,7 +1217,7 @@ WX
 Zg
 gG
 Ss
-Sn
+yf
 Le
 Rh
 Rh
@@ -1250,7 +1245,7 @@ WX
 Zg
 gG
 Ss
-Sn
+yf
 Le
 ZT
 Rh
@@ -1265,7 +1260,7 @@ YZ
 ZT
 "}
 (26,1,1) = {"
-Sn
+yf
 Ka
 Zg
 WX
@@ -1278,7 +1273,7 @@ WX
 Zg
 gG
 Ss
-Sn
+yf
 Le
 ZT
 Rh
@@ -1321,8 +1316,8 @@ YZ
 ZT
 "}
 (28,1,1) = {"
-Sn
-Sn
+yf
+yf
 tg
 sn
 Jz
@@ -1334,7 +1329,7 @@ sA
 sA
 sA
 Ss
-Sn
+yf
 Le
 ZT
 Rh
@@ -1350,9 +1345,9 @@ ZT
 "}
 (29,1,1) = {"
 cx
-Sn
+yf
 ja
-Sn
+yf
 to
 to
 Un
@@ -1362,7 +1357,7 @@ sA
 sA
 sA
 Ss
-Sn
+yf
 Le
 Rh
 Rh
@@ -1382,7 +1377,7 @@ xD
 tY
 GS
 LC
-Sn
+yf
 sA
 sA
 sA
@@ -1390,7 +1385,7 @@ sA
 sA
 sA
 Ss
-Sn
+yf
 Le
 ZT
 ZT
@@ -1443,9 +1438,9 @@ to
 to
 to
 to
-Sn
-Sn
-Sn
+yf
+yf
+yf
 to
 Le
 ZT

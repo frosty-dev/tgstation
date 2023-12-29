@@ -137,22 +137,22 @@ GLOBAL_LIST_INIT(skin_tones, sort_list(list(
 	)))
 
 GLOBAL_LIST_INIT(skin_tone_names, list(
-	"african1" = "Medium brown",
-	"african2" = "Dark brown",
-	"albino" = "Albino",
-	"arab" = "Light brown",
-	"asian1" = "Ivory",
-	"asian2" = "Beige",
-	"caucasian1" = "Porcelain",
-	"caucasian2" = "Light peach",
-	"caucasian3" = "Peach",
-	"indian" = "Brown",
-	"latino" = "Light beige",
-	"mediterranean" = "Olive",
-	"mixed1" = "Chestnut",
-	"mixed2" = "Walnut",
-	"mixed3" = "Coffee",
-	"mixed4" = "Macadamia",
+	"african1" = "Средне-коричневый",
+	"african2" = "Темно-коричневый",
+	"albino" = "Альбино",
+	"arab" = "Арабский",
+	"asian1" = "Азиатский 1",
+	"asian2" = "Азиатский 2",
+	"caucasian1" = "Европеоид 1",
+	"caucasian2" = "Европеоид 2",
+	"caucasian3" = "Европеоид 3",
+	"indian" = "Коричневый",
+	"latino" = "Латино",
+	"mediterranean" = "Средиземноморский",
+	"mixed1" = "Смешанный 1",
+	"mixed2" = "Смешанный 2",
+	"mixed3" = "Смешанный 3",
+	"mixed4" = "Смешанный 4",
 ))
 
 /// An assoc list of species IDs to type paths

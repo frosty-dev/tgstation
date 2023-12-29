@@ -15,8 +15,9 @@
 #define SMES_INPUT_ATTEMPT 9
 
 /obj/machinery/power/smes
-	name = "power storage unit"
-	desc = "A high-capacity superconducting magnetic energy storage (SMES) unit."
+	name = "Сверхмощный аккумуляторный каскад (СМЕС)"
+	desc = "Огромная батарея аккумуляторов, предназначеная для длительного хранения энергии, получаемой от источника питания и ее дальнейшего распределения по электрической сети."
+	icon = 'white/master/icons/power.dmi'
 	icon_state = "smes"
 	density = TRUE
 	use_power = NO_POWER_USE
@@ -43,7 +44,7 @@
 /obj/machinery/power/smes/examine(user)
 	. = ..()
 	if(!terminal)
-		. += span_warning("This SMES has no power terminal!")
+		. += span_warning("Терминала питания нет!")
 
 /obj/machinery/power/smes/Initialize(mapload)
 	. = ..()
@@ -82,7 +83,7 @@
 
 /obj/machinery/power/smes/cable_layer_change_checks(mob/living/user, obj/item/tool)
 	if(!QDELETED(terminal))
-		balloon_alert(user, "cut the terminal first!")
+		balloon_alert(user, "надо срезать терминал!")
 		return FALSE
 	return TRUE
 
@@ -100,10 +101,10 @@
 			if(term && term.dir == REVERSE_DIR(dir))
 				terminal = term
 				terminal.master = src
-				to_chat(user, span_notice("Terminal found."))
+				to_chat(user, span_notice("Терминал найден."))
 				break
 		if(!terminal)
-			to_chat(user, span_alert("No power terminal found."))
+			to_chat(user, span_alert("Терминал питания не найден."))
 			return
 		set_machine_stat(machine_stat & ~BROKEN)
 		update_appearance()
@@ -116,32 +117,32 @@
 			return
 
 		if(terminal) //is there already a terminal ?
-			to_chat(user, span_warning("This SMES already has a power terminal!"))
+			to_chat(user, span_warning("Этот СМЕС имеет терминал питания!"))
 			return
 
 		if(!panel_open) //is the panel open ?
-			to_chat(user, span_warning("You must open the maintenance panel first!"))
+			to_chat(user, span_warning("Стоит открыть техническую панель сначала!"))
 			return
 
 		var/turf/T = get_turf(user)
 		if (T.underfloor_accessibility < UNDERFLOOR_INTERACTABLE) //can we get to the underfloor?
-			to_chat(user, span_warning("You must first remove the floor plating!"))
+			to_chat(user, span_warning("Нужно убрать плитку прежде чем делать это!"))
 			return
 
 
 		var/obj/item/stack/cable_coil/C = I
 		if(C.get_amount() < 10)
-			to_chat(user, span_warning("You need more wires!"))
+			to_chat(user, span_warning("Нужно больше проводов!"))
 			return
 
 		var/terminal_cable_layer
 		if(LAZYACCESS(params2list(params), RIGHT_CLICK))
-			var/choice = tgui_input_list(user, "Select Power Input Cable Layer", "Select Cable Layer", GLOB.cable_name_to_layer)
+			var/choice = tgui_input_list(user, "Выберите слой кабеля терминала питания", "Select Cable Layer", GLOB.cable_name_to_layer)
 			if(isnull(choice))
 				return
 			terminal_cable_layer = GLOB.cable_name_to_layer[choice]
 
-		to_chat(user, span_notice("You start building the power terminal..."))
+		to_chat(user, span_notice("Начинаю делать терминал питания..."))
 		playsound(src.loc, 'sound/items/deconstruct.ogg', 50, TRUE)
 
 		if(do_after(user, 20, target = src))
@@ -153,8 +154,8 @@
 				return
 			if(!terminal)
 				C.use(10)
-				user.visible_message(span_notice("[user.name] builds a power terminal."),\
-					span_notice("You build the power terminal."))
+				user.visible_message(span_notice("[user.name] сделал терминал питания."),\
+					span_notice("Делаю терминал питания."))
 
 				//build the terminal and link it to the network
 				make_terminal(T, terminal_cable_layer)
@@ -184,7 +185,7 @@
 
 /obj/machinery/power/smes/default_deconstruction_crowbar(obj/item/crowbar/C)
 	if(istype(C) && terminal)
-		to_chat(usr, span_warning("You must first remove the power terminal!"))
+		to_chat(usr, span_warning("Нужно сначала убрать терминал питания!"))
 		return FALSE
 
 	return ..()
@@ -423,12 +424,12 @@
 	log_smes()
 
 /obj/machinery/power/smes/engineering
-	charge = 2.5e6 // Engineering starts with some charge for singulo //sorry little one, singulo as engine is gone
+	charge = 4e6  // Engineering starts with some charge for singulo //sorry little one, singulo as engine is gone // sorry for what?
 	output_level = 90000
 
 /obj/machinery/power/smes/magical
-	name = "magical power storage unit"
-	desc = "A high-capacity superconducting magnetic energy storage (SMES) unit. Magically produces power."
+	name = "Магический СМЕС"
+	desc = "Сверхпроводящий накопитель магнитной энергии (СМЕС). Производит энергию магическим способом."
 
 /obj/machinery/power/smes/magical/process()
 	capacity = INFINITY

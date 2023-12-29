@@ -28,10 +28,10 @@
 /datum/world_topic/proc/TryRun(list/input)
 	key_valid = config && (CONFIG_GET(string/comms_key) == input["key"])
 	var/key_cvalid = config && (CONFIG_GET(string/cross_key) == input["key"])
-	input -= "key"
 	if(require_comms_key && !key_valid)
 		if(!key_cvalid) //хочу спать
 			return "Bad Key"
+	input -= "key"
 	if(require_comms_key && !key_valid)
 		. = "Bad Key"
 		if (input["format"] == "json")
@@ -293,14 +293,14 @@
 	require_comms_key = TRUE
 
 /datum/world_topic/ooc/Run(list/input)
-	if(!GLOB.ooc_allowed&&!input["isadmin"])
+	if(!GLOB.ooc_allowed && !input["isadmin"])
 		return "globally muted"
 
 	if(is_banned_from(ckey(input["ckey"]), "OOC"))
 		return "you are retard"
 
 	for(var/client/C in GLOB.clients)
-		if(C.prefs.chat_toggles & CHAT_OOC) // ooc ignore
+		if(get_chat_toggles(C) & CHAT_OOC) // ooc ignore
 			to_chat(C, "<font color='[GLOB.OOC_COLOR]'><span class='ooc'><span class='prefix'>DOOC</span> <EM>[input["ckey"]]:</EM> <span class='message linkify'>[input["ooc"]]</span></span></font>")
 
 /datum/world_topic/ahelp

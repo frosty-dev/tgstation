@@ -21,9 +21,8 @@
 	name = "wooden barricade (CLOSED)"
 	},
 /obj/structure/cable,
-/obj/machinery/door/airlock/external{
-	req_access_txt = "12"
-	},
+/obj/machinery/door/airlock/external,
+/obj/effect/mapping_helpers/airlock/access/all/engineering,
 /turf/open/floor/plating,
 /area/station/engineering/main)
 "FH" = (

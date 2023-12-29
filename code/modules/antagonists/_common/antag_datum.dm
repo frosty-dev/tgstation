@@ -5,7 +5,7 @@ GLOBAL_LIST_EMPTY(antagonists)
 
 /datum/antagonist
 	///Public name for this antagonist. Appears for player prompts and round-end reports.
-	var/name = "\improper Antagonist"
+	var/name = "Antagonist"
 	///Section of roundend report, datums with same category will be displayed together, also default header for the section
 	var/roundend_category = "другие антаги"
 	///Set to false to hide the antagonists from roundend report
@@ -251,8 +251,8 @@ GLOBAL_LIST_EMPTY(antagonists)
 	if(!silent)
 		greet()
 		if(ui_name)
-			to_chat(owner.current, span_boldnotice("For more info, read the panel. \
-				You can always come back to it using the button in the top left."))
+			to_chat(owner.current, span_boldnotice("Для получения дополнительной информации прочитайте панель. \
+											Вы всегда можете вернуться к ней с помощью кнопки в левом верхнем углу."))
 			info_button.Trigger()
 		var/type_policy = get_policy("[type]") // path to text
 		if(type_policy)

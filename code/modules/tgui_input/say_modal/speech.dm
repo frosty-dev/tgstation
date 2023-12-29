@@ -47,6 +47,9 @@
 		if(ADMIN_CHANNEL)
 			client.cmd_admin_say(entry)
 			return TRUE
+		if(LOOC_CHANNEL)
+			client.looc(entry)
+			return TRUE
 	return FALSE
 
 /**

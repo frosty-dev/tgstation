@@ -63,6 +63,7 @@
 		"Theatre Bar" = 8,
 		"Lava Bar" = 3,
 		"Neon Bar" = 4,
+		"Dark Bar" = 4,
 	)
 	icon_state = "bar_template"
 

@@ -273,10 +273,8 @@
 
 /atom/movable/screen/lobby/button/observe/Initialize(mapload, datum/hud/hud_owner)
 	. = ..()
-	if(SSticker.current_state > GAME_STATE_STARTUP)
-		set_button_status(TRUE)
-	else
-		RegisterSignal(SSticker, COMSIG_TICKER_ENTER_PREGAME, PROC_REF(enable_observing))
+	set_button_status(TRUE)
+	RegisterSignal(SSticker, COMSIG_TICKER_ENTER_PREGAME, PROC_REF(enable_observing))
 
 /atom/movable/screen/lobby/button/observe/Click(location, control, params)
 	. = ..()

@@ -1,6 +1,6 @@
 /turf/open/openspace
-	name = "open space"
-	desc = "Watch your step!"
+	name = "открытое пространство"
+	desc = "Смотри под ноги!"
 	// We don't actually draw openspace, but it needs to have color
 	// In its icon state so we can count it as a "non black" tile
 	icon_state = MAP_SWITCH("pure_white", "invisible")

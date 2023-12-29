@@ -106,11 +106,11 @@
 /area/station/service/theater)
 "fE" = (
 /obj/machinery/door/airlock{
-	name = "Bar Storage";
-	req_access_txt = "25"
+	name = "Bar Storage"
 	},
 /obj/structure/disposalpipe/segment,
 /obj/effect/landmark/navigate_destination,
+/obj/effect/mapping_helpers/airlock/access/all/service/bar,
 /turf/open/floor/wood,
 /area/station/service/bar)
 "gc" = (
@@ -177,12 +177,11 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock{
-	name = "Kitchen Service Hall";
-	req_access_txt = "28";
-	req_one_access_txt = null
+	name = "Kitchen Service Hall"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/access/all/service/kitchen,
 /turf/open/floor/iron/showroomfloor,
 /area/station/hallway/secondary/service)
 "hz" = (
@@ -194,8 +193,7 @@
 	id = "kitchenhydro";
 	name = "Service Shutter Control";
 	pixel_x = 24;
-	pixel_y = 7;
-	req_access_txt = "28"
+	pixel_y = 7
 	},
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen)
@@ -209,13 +207,15 @@
 /turf/open/floor/plating,
 /area/station/service/bar)
 "il" = (
-/obj/machinery/door/window/left/directional/south{
-	name = "Kitchen Delivery";
-	req_access_txt = "28"
-	},
 /obj/effect/turf_decal/delivery,
 /obj/structure/window/reinforced/spawner/directional/west,
 /obj/effect/spawner/random/trash/mess,
+/obj/machinery/door/window/left/directional/north{
+	desc = "??????? ??????.";
+	dir = 2;
+	name = "Kitchen Delivery";
+	req_access = list("kitchen")
+	},
 /turf/open/floor/iron,
 /area/station/service/kitchen)
 "it" = (
@@ -249,8 +249,7 @@
 	id = "kitchen";
 	name = "Kitchen Shutters Control";
 	pixel_x = -1;
-	pixel_y = -24;
-	req_access_txt = "28"
+	pixel_y = -24
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 9
@@ -300,10 +299,10 @@
 	name = "Service Shutter"
 	},
 /obj/machinery/door/airlock/medical/glass{
-	name = "Service Door";
-	req_one_access_txt = "35;28"
+	name = "Service Door"
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/all/service/kitchen,
 /turf/open/floor/iron/cafeteria{
 	dir = 5
 	},
@@ -370,9 +369,7 @@
 /turf/open/floor/iron,
 /area/station/service/bar)
 "mr" = (
-/obj/structure/closet/secure_closet/bar{
-	req_access_txt = "25"
-	},
+/obj/structure/closet/secure_closet/bar,
 /turf/open/floor/wood,
 /area/station/service/bar)
 "mv" = (
@@ -589,12 +586,12 @@
 "uR" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock{
-	name = "Bar Service Hall";
-	req_one_access_txt = "25"
+	name = "Bar Service Hall"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/all/service/bar,
 /turf/open/floor/wood,
 /area/station/hallway/secondary/service)
 "vg" = (
@@ -661,7 +658,6 @@
 "xK" = (
 /obj/machinery/navbeacon{
 	codes_txt = "delivery;dir=2";
-	freq = 1400;
 	location = "Bar"
 	},
 /obj/structure/plasticflaps/opaque,
@@ -671,7 +667,6 @@
 "xY" = (
 /obj/machinery/navbeacon{
 	codes_txt = "delivery;dir=2";
-	freq = 1400;
 	location = "Kitchen"
 	},
 /obj/structure/plasticflaps/opaque,
@@ -691,11 +686,6 @@
 /turf/open/floor/wood,
 /area/station/service/theater)
 "zd" = (
-/obj/machinery/door/window/right/directional/south{
-	dir = 8;
-	name = "Bar Door";
-	req_one_access_txt = "25;28"
-	},
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
 	},
@@ -704,6 +694,11 @@
 	dir = 8;
 	id = "barmanpriv";
 	name = "bar shutters"
+	},
+/obj/machinery/door/window/right/directional/south{
+	dir = 8;
+	name = "Bar Door";
+	req_access = list("bar")
 	},
 /turf/open/floor/iron,
 /area/station/service/bar)
@@ -800,8 +795,7 @@
 "Di" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock{
-	name = "Service Hall";
-	req_one_access_txt = "22;25;26;28;35;37;38;46;70"
+	name = "Service Hall"
 	},
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -810,6 +804,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/access/all/service/theatre,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/service)
 "Dm" = (
@@ -820,11 +815,11 @@
 /turf/open/floor/iron,
 /area/station/service/bar)
 "DB" = (
+/obj/effect/turf_decal/delivery,
 /obj/machinery/door/window/left/directional/south{
 	name = "Bar Delivery";
-	req_access_txt = "25"
+	req_access = list("bar")
 	},
-/obj/effect/turf_decal/delivery,
 /turf/open/floor/iron,
 /area/station/service/bar)
 "DS" = (
@@ -903,10 +898,10 @@
 /area/station/service/theater)
 "HC" = (
 /obj/machinery/door/airlock{
-	name = "Theatre Backstage";
-	req_access_txt = "46"
+	name = "Theatre Backstage"
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/all/service/theatre,
 /turf/open/floor/iron,
 /area/station/service/theater)
 "HI" = (
@@ -964,8 +959,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/public/glass{
-	name = "Kitchen";
-	req_access_txt = "28"
+	name = "Kitchen"
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/shutters/preopen{
@@ -973,6 +967,7 @@
 	id = "barmanpriv";
 	name = "bar shutters"
 	},
+/obj/effect/mapping_helpers/airlock/access/all/service/kitchen,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen)
 "IW" = (
@@ -1019,11 +1014,11 @@
 /area/station/service/bar)
 "Kw" = (
 /obj/machinery/door/airlock{
-	name = "Kitchen";
-	req_access_txt = "28"
+	name = "Kitchen"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/landmark/navigate_destination,
+/obj/effect/mapping_helpers/airlock/access/all/service/kitchen,
 /turf/open/floor/iron,
 /area/station/service/kitchen)
 "Lh" = (
@@ -1125,11 +1120,11 @@
 /area/station/service/theater)
 "NC" = (
 /obj/machinery/door/airlock{
-	name = "Kitchen cold room";
-	req_access_txt = "28"
+	name = "Kitchen cold room"
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/all/service/kitchen,
 /turf/open/floor/iron/showroomfloor,
 /area/station/service/kitchen)
 "NN" = (

@@ -23,6 +23,11 @@
 	suffix = "bar_default.dmm"
 	name = "Default Bar"
 
+/datum/map_template/ruin/station/bar/dark
+	id = "dark_bar"
+	suffix = "bar_dark.dmm"
+	name = "Dark Bar"
+
 /datum/map_template/ruin/station/bar/neon
 	id = "neon_bar"
 	suffix = "bar_neon.dmm"

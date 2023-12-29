@@ -71,12 +71,12 @@ HUMANS_NEED_SURNAMES
 
 
 ## ALERT LEVELS ###
-ALERT_GREEN All threats to the station have passed. Security may not have weapons visible, privacy laws are once again fully enforced.
-ALERT_BLUE_UPTO The station has received reliable information about possible hostile activity on the station. Security staff may have weapons visible, random searches are permitted.
-ALERT_BLUE_DOWNTO The immediate threat has passed. Security may no longer have weapons drawn at all times, but may continue to have them visible. Random searches are still allowed.
-ALERT_RED_UPTO There is an immediate serious threat to the station. Security may have weapons unholstered at all times. Random searches are allowed and advised. Additionally, access requirements on some doors have been lifted.
-ALERT_RED_DOWNTO The station's destruction has been averted. There is still however an immediate serious threat to the station. Security may have weapons unholstered at all times, random searches are allowed and advised.
-ALERT_DELTA Destruction of the station is imminent. All crew are instructed to obey all instructions given by heads of staff. Any violations of these orders can be punished by death. This is not a drill.
+ALERT_GREEN Все угрозы для жизни персонала ликвидированы. Сотрудникам службы безопасности нельзя открыто носить оружие, права на неприкосновенность частной жизни действуют в полную силу.
+ALERT_BLUE_UPTO Получена информация о возможной вражеской активности на станции. Сотрудники службы безопасности имеют право открыто носить оружие и проводить произвольные обыски.
+ALERT_BLUE_DOWNTO Прямая угроза станции устранена. Сотрудникам службы безопасности не позволено ходить с оружием в руках, но открытое ношение разрешено. Произвольные обыски по-прежнему разрешены.
+ALERT_RED_UPTO Возникла серьезная угроза жизни персонала. Сотрудникам службы безопасности разрешено ходить с оружием наизготовку, а также расширен доступ во все отделы. Произвольные обыски персонала разрешены и настоятельно рекомендуются.
+ALERT_RED_DOWNTO Механизм самоуничтожения станции деактивирован, но все еще существует серьезная угроза жизни персонала. Сотрудникам службы безопасности разрешено ходить с оружием наизготовку, а также расширен доступ во все отделы. Произвольные обыски персонала разрешены и настоятельно рекомендуются.
+ALERT_DELTA Запущен механизм самоуничтожения станции. Персонал обязан подчиняться всем инструкциям и распоряжениям со стороны руководительского состава. Любое нарушение подобного приказа может караться смертью. Это не учения.
 
 ## The total weight of station goals possible for a round (allows multiple goals)
 STATION_GOAL_BUDGET 1

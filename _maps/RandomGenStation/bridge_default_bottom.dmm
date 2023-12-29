@@ -21,10 +21,10 @@
 /area/station/maintenance/bottom_station_maints)
 "xZ" = (
 /obj/machinery/door/airlock/external{
-	name = "External Access";
-	req_access_txt = "13"
+	name = "External Access"
 	},
 /obj/structure/fans/tiny,
+/obj/effect/mapping_helpers/airlock/access/all/engineering,
 /turf/open/floor/plating,
 /area/station/maintenance/bottom_station_maints)
 "BR" = (

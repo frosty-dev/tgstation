@@ -3,10 +3,9 @@
 /turf/closed/wall,
 /area/station/maintenance/port/aft)
 "b" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access_txt = "12"
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/effect/mapping_helpers/airlock/abandoned,
+/obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
 "c" = (
@@ -32,13 +31,13 @@
 "k" = (
 /obj/machinery/door/airlock/maintenance{
 	dir = 4;
-	name = "Incinerator Access";
-	req_access_txt = "12"
+	name = "Incinerator Access"
 	},
 /obj/effect/mapping_helpers/airlock/abandoned,
 /obj/structure/barricade/wooden{
 	name = "wooden barricade (CLOSED)"
 	},
+/obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
 "l" = (

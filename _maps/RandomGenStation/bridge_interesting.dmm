@@ -201,45 +201,45 @@
 /area/station/hallway/primary/central/north)
 "aB" = (
 /obj/effect/turf_decal/plaque{
-	icon_state = "W1"
+	icon_state = "L1"
 	},
-/turf/open/floor/iron/large,
+/turf/open/floor/iron,
 /area/station/hallway/primary/central/north)
 "aC" = (
 /obj/effect/turf_decal/plaque{
-	icon_state = "W2"
+	icon_state = "L3"
 	},
-/turf/open/floor/iron/large,
+/turf/open/floor/iron,
 /area/station/hallway/primary/central/north)
 "aD" = (
 /obj/effect/turf_decal/plaque{
-	icon_state = "W3"
+	icon_state = "L5"
 	},
-/turf/open/floor/iron/large,
+/turf/open/floor/iron,
 /area/station/hallway/primary/central/north)
 "aE" = (
 /obj/effect/turf_decal/plaque{
-	icon_state = "W4"
+	icon_state = "L7"
 	},
-/turf/open/floor/iron/large,
+/turf/open/floor/iron,
 /area/station/hallway/primary/central/north)
 "aF" = (
 /obj/effect/turf_decal/plaque{
-	icon_state = "W5"
+	icon_state = "L9"
 	},
-/turf/open/floor/iron/large,
+/turf/open/floor/iron,
 /area/station/hallway/primary/central/north)
 "aG" = (
 /obj/effect/turf_decal/plaque{
-	icon_state = "W6"
+	icon_state = "L11"
 	},
-/turf/open/floor/iron/large,
+/turf/open/floor/iron,
 /area/station/hallway/primary/central/north)
 "aH" = (
 /obj/effect/turf_decal/plaque{
-	icon_state = "W7"
+	icon_state = "L13"
 	},
-/turf/open/floor/iron/large,
+/turf/open/floor/iron,
 /area/station/hallway/primary/central/north)
 "aI" = (
 /obj/structure/reagent_dispensers/watertank,
@@ -301,7 +301,7 @@
 /area/station/hallway/primary/central/west)
 "aQ" = (
 /obj/machinery/power/apc/auto_name/directional/west{
-	areastring = "/area/engineering/gravity_generator";
+	areastring = "/area/station/engineering/gravity_generator";
 	pixel_y = 1
 	},
 /obj/structure/table,
@@ -345,83 +345,83 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/north)
 "aV" = (
-/obj/effect/turf_decal/plaque{
-	icon_state = "W8"
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 6
 	},
-/turf/open/floor/iron/large,
+/obj/effect/turf_decal/plaque{
+	icon_state = "L2"
+	},
+/turf/open/floor/iron,
 /area/station/hallway/primary/central/north)
 "aW" = (
-/obj/effect/turf_decal/plaque{
-	icon_state = "W9"
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 6
 	},
-/turf/open/floor/iron/large,
+/obj/effect/turf_decal/plaque{
+	icon_state = "L4"
+	},
+/turf/open/floor/iron,
 /area/station/hallway/primary/central/north)
 "aX" = (
 /obj/machinery/navbeacon{
 	codes_txt = "patrol;next_patrol=Lockers";
 	location = "EVA"
 	},
-/obj/effect/turf_decal/plaque{
-	icon_state = "W10"
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 6
 	},
-/turf/open/floor/iron/large,
+/obj/effect/turf_decal/plaque{
+	icon_state = "L6"
+	},
+/turf/open/floor/iron,
 /area/station/hallway/primary/central/north)
 "aY" = (
 /obj/effect/landmark/observer_start,
-/obj/effect/turf_decal/plaque{
-	icon_state = "W11"
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 6
 	},
-/turf/open/floor/iron/large,
+/obj/effect/turf_decal/plaque{
+	icon_state = "L8"
+	},
+/turf/open/floor/iron,
 /area/station/hallway/primary/central/north)
 "aZ" = (
 /obj/machinery/navbeacon{
 	codes_txt = "patrol;next_patrol=Security";
 	location = "EVA2"
 	},
-/obj/effect/turf_decal/plaque{
-	icon_state = "W12"
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 6
 	},
-/turf/open/floor/iron/large,
+/obj/effect/turf_decal/plaque{
+	icon_state = "L10"
+	},
+/turf/open/floor/iron,
 /area/station/hallway/primary/central/north)
 "ba" = (
-/obj/effect/turf_decal/plaque{
-	icon_state = "W13"
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 6
 	},
-/turf/open/floor/iron/large,
+/obj/effect/turf_decal/plaque{
+	icon_state = "L12"
+	},
+/turf/open/floor/iron,
 /area/station/hallway/primary/central/north)
 "bb" = (
-/obj/effect/turf_decal/plaque{
-	icon_state = "W14"
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 6
 	},
-/turf/open/floor/iron/large,
+/obj/effect/turf_decal/plaque{
+	icon_state = "L14"
+	},
+/turf/open/floor/iron,
 /area/station/hallway/primary/central/north)
 "bc" = (
 /obj/effect/landmark/event_spawn,
@@ -526,8 +526,7 @@
 /area/station/engineering/gravity_generator)
 "bp" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Gravity Generator";
-	req_access_txt = "11"
+	name = "Gravity Generator"
 	},
 /obj/effect/turf_decal/delivery,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -538,6 +537,7 @@
 	dir = 6
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/any/engineering/general,
 /turf/open/floor/iron/large,
 /area/station/engineering/gravity_generator)
 "bq" = (
@@ -571,14 +571,14 @@
 /area/station/engineering/gravity_generator)
 "bu" = (
 /obj/machinery/door/airlock/command{
-	name = "Conference Room";
-	req_access_txt = "19"
+	name = "Conference Room"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 6
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/any/command/general,
 /turf/open/floor/wood,
 /area/station/command/meeting_room)
 "bv" = (
@@ -612,6 +612,14 @@
 /area/station/command/meeting_room)
 "by" = (
 /obj/structure/table/reinforced,
+/obj/machinery/flasher{
+	id = "hopflash";
+	pixel_y = 28
+	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "hop";
+	name = "Privacy Shutters"
+	},
 /obj/machinery/door/window/left/directional/north{
 	dir = 8;
 	name = "Reception Window"
@@ -621,15 +629,7 @@
 	dir = 4;
 	icon_state = "rightsecure";
 	name = "Head of Personnel's Desk";
-	req_access_txt = "57"
-	},
-/obj/machinery/flasher{
-	id = "hopflash";
-	pixel_y = 28
-	},
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "hop";
-	name = "Privacy Shutters"
+	req_access = list("hop")
 	},
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/hop)
@@ -667,7 +667,7 @@
 /obj/item/stamp/head/captain,
 /obj/machinery/light/directional/north,
 /obj/machinery/power/apc{
-	areastring = "/area/command/heads_quarters/captain";
+	areastring = "/area/station/command/heads_quarters/captain";
 	dir = 1;
 	name = "Captain's Office APC";
 	pixel_y = 23
@@ -679,7 +679,6 @@
 /obj/structure/cable,
 /obj/machinery/door/airlock/command/glass{
 	name = "Bridge";
-	req_access_txt = "19";
 	security_level = 6
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -687,6 +686,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/any/command/general,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/command)
 "bE" = (
@@ -715,7 +715,7 @@
 /obj/machinery/light/directional/north,
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name{
-	areastring = "/area/command";
+	areastring = "/area/station/command";
 	dir = 1;
 	name = "Bridge APC";
 	pixel_y = 23
@@ -744,12 +744,6 @@
 /turf/open/floor/iron/dark,
 /area/station/command)
 "bK" = (
-/obj/machinery/requests_console{
-	announcementConsole = 1;
-	department = "Bridge";
-	name = "Bridge RC";
-	pixel_y = 30
-	},
 /obj/effect/mapping_helpers/requests_console/information,
 /obj/effect/mapping_helpers/requests_console/assistance,
 /obj/structure/cable,
@@ -759,6 +753,8 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
+/obj/effect/mapping_helpers/requests_console/announcement,
+/obj/machinery/requests_console/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/command)
 "bL" = (
@@ -822,6 +818,10 @@
 /obj/structure/disposalpipe/segment{
 	dir = 10
 	},
+/obj/machinery/requests_console/auto_name/directional/east,
+/obj/effect/mapping_helpers/requests_console/announcement,
+/obj/effect/mapping_helpers/requests_console/information,
+/obj/effect/mapping_helpers/requests_console/assistance,
 /turf/open/floor/carpet,
 /area/station/command/heads_quarters/hop)
 "bS" = (
@@ -897,13 +897,6 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain)
 "cb" = (
-/obj/machinery/door/window{
-	base_state = "right";
-	dir = 1;
-	icon_state = "right";
-	name = "Captain's Desk Door";
-	req_access_txt = "20"
-	},
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -912,6 +905,13 @@
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/window{
+	base_state = "right";
+	dir = 1;
+	icon_state = "right";
+	name = "Captain's Desk Door";
+	req_access = list("captain")
+	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain)
 "cc" = (
@@ -990,9 +990,7 @@
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/hop)
 "cn" = (
-/obj/machinery/door/airlock/external{
-	req_one_access_txt = "20"
-	},
+/obj/machinery/door/airlock/external,
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/station/command/heads_quarters/captain)
@@ -1042,14 +1040,14 @@
 /area/station/hallway/primary/central/north)
 "cu" = (
 /obj/machinery/door/airlock/command{
-	name = "Captain's Quarters";
-	req_access_txt = "20"
+	name = "Captain's Quarters"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/all/command/captain,
 /turf/open/floor/carpet,
 /area/station/command/heads_quarters/captain)
 "cv" = (
@@ -1097,10 +1095,10 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/airlock/command{
-	name = "Captain's Office";
-	req_access_txt = "20"
+	name = "Captain's Office"
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/all/command/captain,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain)
 "cD" = (
@@ -1141,10 +1139,9 @@
 /turf/open/floor/iron/large,
 /area/station/command/teleporter)
 "cI" = (
-/obj/machinery/door/airlock/external{
-	req_one_access_txt = "20"
-	},
+/obj/machinery/door/airlock/external,
 /obj/structure/fans/tiny,
+/obj/effect/mapping_helpers/airlock/access/any/command/general,
 /turf/open/floor/plating,
 /area/station/command/teleporter)
 "cJ" = (
@@ -1157,8 +1154,7 @@
 /area/station/command/heads_quarters/hop)
 "cK" = (
 /obj/machinery/door/airlock/command{
-	name = "Head of Personnel";
-	req_access_txt = "57"
+	name = "Head of Personnel"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -1168,6 +1164,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/all/command/hop,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/hop)
 "cL" = (
@@ -1244,7 +1241,7 @@
 "cT" = (
 /obj/structure/reagent_dispensers/water_cooler,
 /obj/machinery/power/apc{
-	areastring = "/area/command/meeting_room";
+	areastring = "/area/station/command/meeting_room";
 	dir = 4;
 	name = "Conference Room APC";
 	pixel_x = 24
@@ -1371,14 +1368,10 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/requests_console{
-	announcementConsole = 1;
-	department = "Bridge";
-	name = "Bridge RC";
-	pixel_y = -30
-	},
 /obj/effect/mapping_helpers/requests_console/information,
 /obj/effect/mapping_helpers/requests_console/assistance,
+/obj/effect/mapping_helpers/requests_console/announcement,
+/obj/machinery/requests_console/auto_name/directional/south,
 /turf/open/floor/wood,
 /area/station/command/meeting_room)
 "di" = (
@@ -1436,7 +1429,7 @@
 "dp" = (
 /obj/structure/closet/secure_closet/hop,
 /obj/machinery/power/apc{
-	areastring = "/area/command/heads_quarters/hop";
+	areastring = "/area/station/command/heads_quarters/hop";
 	name = "Head of Personnel APC";
 	pixel_y = -23
 	},
@@ -1452,8 +1445,7 @@
 /area/station/hallway/primary/central/north)
 "dr" = (
 /obj/machinery/door/airlock/command{
-	name = "Conference Room";
-	req_access_txt = "19"
+	name = "Conference Room"
 	},
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
@@ -1462,6 +1454,7 @@
 	dir = 6
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/any/command/general,
 /turf/open/floor/wood,
 /area/station/command/meeting_room)
 "ds" = (
@@ -1533,6 +1526,7 @@
 /obj/structure/window/reinforced/spawner/directional/west,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/trapdoor_placer,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/hop)
 "dB" = (
@@ -1999,19 +1993,19 @@
 /obj/structure/table,
 /obj/item/ai_module/core/full/asimov,
 /obj/item/ai_module/core/freeformcore,
-/obj/machinery/door/window{
-	base_state = "right";
-	dir = 4;
-	icon_state = "right";
-	name = "Core Modules";
-	req_access_txt = "20"
-	},
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/effect/spawner/random/aimodule/harmless,
 /obj/effect/spawner/random/aimodule/neutral,
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/window/reinforced/spawner/directional/west,
 /obj/item/ai_module/core/full/custom,
+/obj/machinery/door/window{
+	base_state = "right";
+	dir = 4;
+	icon_state = "right";
+	name = "Core Modules";
+	req_access = list("captain")
+	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/ai_monitored/turret_protected/ai_upload)
 "hR" = (
@@ -2026,7 +2020,7 @@
 /area/station/ai_monitored/turret_protected/ai_upload)
 "hS" = (
 /obj/machinery/power/apc/auto_name{
-	areastring = "/area/ai_monitored/turret_protected/ai_upload";
+	areastring = "/area/station/ai_monitored/turret_protected/ai_upload";
 	name = "Upload APC";
 	pixel_y = -23
 	},
@@ -2051,17 +2045,17 @@
 /obj/structure/table,
 /obj/item/ai_module/supplied/oxygen,
 /obj/item/ai_module/zeroth/onehuman,
-/obj/machinery/door/window{
-	dir = 8;
-	name = "High-Risk Modules";
-	req_access_txt = "20"
-	},
 /obj/item/ai_module/reset/purge,
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/effect/spawner/random/aimodule/harmful,
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/item/ai_module/supplied/protect_station,
+/obj/machinery/door/window/brigdoor/left/directional/south{
+	dir = 8;
+	name = "High-Risk Modules";
+	req_access = list("captain")
+	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/ai_monitored/turret_protected/ai_upload)
 "ic" = (
@@ -2125,25 +2119,21 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/command/glass{
-	name = "Bridge";
-	req_access_txt = "19"
+	name = "Bridge"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 6
 	},
+/obj/effect/mapping_helpers/airlock/access/any/command/general,
 /turf/open/floor/iron,
 /area/station/command)
 "iM" = (
-/obj/machinery/requests_console{
-	announcementConsole = 1;
-	department = "Captain's Desk";
-	name = "Captain RC";
-	pixel_x = -30
-	},
 /obj/effect/mapping_helpers/requests_console/information,
 /obj/effect/mapping_helpers/requests_console/assistance,
 /obj/structure/filingcabinet,
+/obj/effect/mapping_helpers/requests_console/announcement,
+/obj/machinery/requests_console/directional/west,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain)
 "iP" = (
@@ -2273,6 +2263,7 @@
 /obj/machinery/door/airlock{
 	name = "Private Restroom"
 	},
+/obj/effect/mapping_helpers/airlock/access/all/command/captain,
 /turf/open/floor/iron/freezer,
 /area/station/command/heads_quarters/captain)
 "jQ" = (
@@ -2299,15 +2290,13 @@
 	id = "hop";
 	name = "Privacy Shutters Control";
 	pixel_x = 6;
-	pixel_y = 25;
-	req_access_txt = "57"
+	pixel_y = 25
 	},
 /obj/machinery/button/door{
 	id = "hopqueue";
 	name = "Queue Shutters Control";
 	pixel_x = -4;
-	pixel_y = 25;
-	req_access_txt = "57"
+	pixel_y = 25
 	},
 /obj/machinery/light_switch{
 	pixel_x = -4;
@@ -2489,8 +2478,7 @@
 /area/station/engineering/gravity_generator)
 "lz" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Gravity Generator";
-	req_access_txt = "11"
+	name = "Gravity Generator"
 	},
 /obj/effect/turf_decal/delivery,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -2500,6 +2488,7 @@
 	dir = 6
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/any/engineering/general,
 /turf/open/floor/iron,
 /area/station/engineering/gravity_generator)
 "lD" = (
@@ -2523,8 +2512,7 @@
 /area/station/command/teleporter)
 "lF" = (
 /obj/machinery/door/airlock/command{
-	name = "Teleport Access";
-	req_access_txt = "17"
+	name = "Teleport Access"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -2532,6 +2520,7 @@
 	dir = 6
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/any/command/general,
 /turf/open/floor/iron,
 /area/station/command/teleporter)
 "lJ" = (
@@ -2639,23 +2628,24 @@
 /area/station/hallway/primary/central/south)
 "nl" = (
 /obj/machinery/door/airlock/highsecurity{
-	name = "AI Upload Access";
-	req_access_txt = "16"
+	name = "AI Upload Access"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/all/command/ai_upload,
 /turf/open/floor/iron/large,
 /area/station/ai_monitored/turret_protected/ai_upload)
 "nm" = (
 /obj/machinery/door/airlock/highsecurity{
-	name = "AI Upload Access";
-	req_access_txt = "16"
+	name = "AI Upload Access"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 6
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/all/command/ai_upload,
+/obj/effect/mapping_helpers/airlock/access/all/command/ai_upload,
 /turf/open/floor/iron/large,
 /area/station/ai_monitored/turret_protected/ai_upload)
 "nn" = (
@@ -2724,7 +2714,7 @@
 	dir = 1
 	},
 /obj/machinery/power/apc/auto_name/directional/west{
-	areastring = "/area/command/teleporter"
+	areastring = "/area/station/command/teleporter"
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -3062,8 +3052,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/command/glass{
-	name = "Bridge";
-	req_access_txt = "19"
+	name = "Bridge"
 	},
 /obj/structure/cable,
 /obj/structure/sign/warning/secure_area{
@@ -3076,6 +3065,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 6
 	},
+/obj/effect/mapping_helpers/airlock/access/any/command/general,
 /turf/open/floor/iron,
 /area/station/command)
 "ot" = (
@@ -3108,8 +3098,7 @@
 	id = "bridge blast";
 	name = "Bridge Blast Door Control";
 	pixel_x = 28;
-	pixel_y = -2;
-	req_access_txt = "19"
+	pixel_y = -2
 	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/command)
@@ -3156,8 +3145,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/command/glass{
-	name = "Bridge";
-	req_access_txt = "19"
+	name = "Bridge"
 	},
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -3167,6 +3155,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 6
 	},
+/obj/effect/mapping_helpers/airlock/access/any/command/general,
 /turf/open/floor/iron,
 /area/station/command)
 "oD" = (
@@ -3720,9 +3709,9 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/command/glass{
-	name = "Bridge";
-	req_access_txt = "19"
+	name = "Bridge"
 	},
+/obj/effect/mapping_helpers/airlock/access/any/command/general,
 /turf/open/floor/iron,
 /area/station/command)
 "pQ" = (
@@ -3901,8 +3890,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/command/glass{
-	name = "Bridge";
-	req_access_txt = "19"
+	name = "Bridge"
 	},
 /obj/structure/sign/warning/secure_area{
 	pixel_y = 32
@@ -3911,6 +3899,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 6
 	},
+/obj/effect/mapping_helpers/airlock/access/any/command/general,
 /turf/open/floor/iron,
 /area/station/command)
 "qr" = (
@@ -3918,9 +3907,9 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/command/glass{
-	name = "Bridge";
-	req_access_txt = "19"
+	name = "Bridge"
 	},
+/obj/effect/mapping_helpers/airlock/access/any/command/general,
 /turf/open/floor/iron,
 /area/station/command)
 "qs" = (
@@ -3995,7 +3984,7 @@
 /area/station/hallway/primary/central/south)
 "qE" = (
 /obj/machinery/turretid{
-	control_area = "/area/ai_monitored/turret_protected/ai_upload";
+	control_area = "/area/station/ai_monitored/turret_protected/ai_upload";
 	name = "AI Upload turret control";
 	pixel_y = -25
 	},

@@ -15,7 +15,6 @@
 	},
 /obj/machinery/door/airlock/highsecurity{
 	req_access = null;
-	req_access_txt = "10";
 	security_level = 6
 	},
 /turf/open/floor/iron/dark,
@@ -224,8 +223,7 @@
 "xg" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/external{
-	name = "External Access";
-	req_access_txt = "13"
+	name = "External Access"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/turf_decal/bot{
@@ -285,8 +283,7 @@
 /obj/machinery/button/door{
 	id = "engi_reactor_shutters";
 	name = "бронеставни выхода в теха";
-	pixel_y = 32;
-	req_access_txt = "10"
+	pixel_y = 32
 	},
 /turf/open/floor/iron,
 /area/station/engineering/main)

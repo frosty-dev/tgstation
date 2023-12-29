@@ -188,10 +188,10 @@
 /area/station/engineering/main)
 "lA" = (
 /obj/machinery/door/airlock/external{
-	name = "Engineering External Access";
-	req_access_txt = "10;13"
+	name = "Engineering External Access"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/obj/effect/mapping_helpers/mail_sorting/engineering/general,
 /turf/open/floor/plating,
 /area/station/engineering/main)
 "lC" = (
@@ -242,8 +242,7 @@
 	dir = 8;
 	id = "engsm";
 	name = "Radiation Shutters Control";
-	pixel_x = -24;
-	req_access_txt = "10"
+	pixel_x = -24
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -354,7 +353,6 @@
 /area/station/engineering/main)
 "xJ" = (
 /obj/structure/table,
-/obj/item/book/manual/wiki/engineering_singulo_tesla,
 /obj/item/geiger_counter,
 /turf/open/floor/iron,
 /area/station/engineering/main)
@@ -368,7 +366,6 @@
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "yU" = (
-/obj/effect/spawner/structure/window/reinforced/plasma/reinforced,
 /obj/machinery/door/poddoor/shutters/radiation/preopen{
 	id = "engsm";
 	name = "Radiation Chamber Shutters"
@@ -424,13 +421,13 @@
 /area/station/engineering/main)
 "DM" = (
 /obj/machinery/door/airlock/external{
-	name = "Engineering External Access";
-	req_access_txt = "10;13"
+	name = "Engineering External Access"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
 	},
 /obj/structure/fans/tiny,
+/obj/effect/mapping_helpers/mail_sorting/engineering/general,
 /turf/open/floor/plating,
 /area/station/engineering/main)
 "DO" = (
@@ -483,13 +480,13 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /obj/machinery/door/airlock/engineering{
-	name = "Engine Room";
-	req_access_txt = "10"
+	name = "Engine Room"
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/effect/mapping_helpers/mail_sorting/engineering/general,
 /turf/open/floor/engine,
 /area/station/engineering/main)
 "HQ" = (
@@ -516,13 +513,13 @@
 "Jb" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/engineering{
-	name = "Engine Room";
-	req_access_txt = "10"
+	name = "Engine Room"
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/effect/mapping_helpers/mail_sorting/engineering/general,
 /turf/open/floor/plating,
 /area/station/engineering/main)
 "Js" = (
@@ -656,8 +653,7 @@
 	dir = 4;
 	id = "engsm";
 	name = "Radiation Shutters Control";
-	pixel_x = 24;
-	req_access_txt = "10"
+	pixel_x = 24
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
@@ -685,8 +681,7 @@
 	dir = 4;
 	id = "engsm";
 	name = "Radiation Shutters Control";
-	pixel_x = 24;
-	req_access_txt = "10"
+	pixel_x = 24
 	},
 /turf/open/floor/engine,
 /area/station/engineering/main)
@@ -695,8 +690,7 @@
 	dir = 8;
 	id = "engsm";
 	name = "Radiation Shutters Control";
-	pixel_x = -24;
-	req_access_txt = "10"
+	pixel_x = -24
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
@@ -776,13 +770,13 @@
 "XY" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/airlock/engineering{
-	name = "Engine Room";
-	req_access_txt = "10"
+	name = "Engine Room"
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
 	},
+/obj/effect/mapping_helpers/mail_sorting/engineering/general,
 /turf/open/floor/engine,
 /area/station/engineering/main)
 "Yt" = (

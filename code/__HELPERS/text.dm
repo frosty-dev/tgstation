@@ -803,17 +803,17 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 	switch(macro)
 		//prefixes/agnostic
 		if("the")
-			rest = " [rest]"
+			rest = "[rest]"
 		if("a")
-			rest = "\a [rest]"
+			rest = "[rest]"
 		if("an")
-			rest = "\an [rest]"
+			rest = "[rest]"
 		if("proper")
-			rest = "\proper [rest]"
+			rest = "[rest]"
 		if("improper")
-			rest = "\improper [rest]"
+			rest = "[rest]"
 		if("roman")
-			rest = "\roman [rest]"
+			rest = "[rest]"
 		//postfixes
 		if("th")
 			base = "[rest]\th"
@@ -1502,3 +1502,38 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 					return ""
 				if(2 to 4)
 					return "а"
+
+/mob/living/carbon/human/proc/get_race_text(viewer_skin_tone)
+	switch(skin_tone)
+		if("asian1", "asian2")
+			. = pick("ускоглазый", "узкопленочный", "чалма", "чурка", "чучмек", "кырдым-бырдым", "самурай")
+		if("arab")
+			. = pick("хач", "сарацин", "палестинец")
+		if("indian")
+			. = pick("цыган", "индус")
+		if("african1", "african2")
+			. = pick("негр", "черномазый", "уголёк", "черножопая гнида", "негативчик", "сникерс", "черный", "копченый", "негритос", "мумба-юмба", "трюфель")
+
+	if(viewer_skin_tone && .)
+		var/static/regex/remove_fucking_numbas_regex = new(@"[0-9]","g")
+		if(replacetext(viewer_skin_tone, remove_fucking_numbas_regex, "") == replacetext(skin_tone, remove_fucking_numbas_regex, ""))
+			. = pick("браток", "братан", "брат")
+
+	return .
+
+/mob/living/carbon/human/proc/get_age_text()
+	switch(age)
+		if(-INFINITY to 16)
+			return "ребёнок"
+		if(17 to 21)
+			return "подросток"
+		if(22 to 35)
+			return gender == FEMALE ? "девушка" : "парень"
+		if(36 to 44)
+			return gender == FEMALE ? "женщина" : "мужчина"
+		if(45 to 60)
+			return gender == FEMALE ? "зрелая женщина" : "зрелый мужчина"
+		if(61 to 75)
+			return gender == FEMALE ? "пожилая женщина" : "пожилой мужчина"
+		if(76 to INFINITY)
+			return gender == FEMALE ? "старушка" : "старик"

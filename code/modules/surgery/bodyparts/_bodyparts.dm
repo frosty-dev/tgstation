@@ -114,13 +114,13 @@
 	var/bleed_overlay_icon
 
 	//Damage messages used by help_shake_act()
-	var/light_brute_msg = "bruised"
-	var/medium_brute_msg = "battered"
-	var/heavy_brute_msg = "mangled"
+	var/light_brute_msg = "травмирована"
+	var/medium_brute_msg = "повреждена"
+	var/heavy_brute_msg = "разорвана"
 
-	var/light_burn_msg = "numb"
-	var/medium_burn_msg = "blistered"
-	var/heavy_burn_msg = "peeling away"
+	var/light_burn_msg = "обгорела"
+	var/medium_burn_msg = "поджарена"
+	var/heavy_burn_msg = "отваливается"
 
 	//Damage messages used by examine(). the desc that is most common accross all bodyparts gets shown
 	var/list/damage_examines = list(
@@ -262,9 +262,9 @@
 
 	. = ..()
 	if(brute_dam > DAMAGE_PRECISION)
-		. += span_warning("This limb has [brute_dam > 30 ? "severe" : "minor"] bruising.")
+		. += span_warning("Конечность имеет [brute_dam > 30 ? "серьёзные" : "незначительные"] травмы.")
 	if(burn_dam > DAMAGE_PRECISION)
-		. += span_warning("This limb has [burn_dam > 30 ? "severe" : "minor"] burns.")
+		. += span_warning("Конечность имеет [burn_dam > 30 ? "серьёзные" : "незначительные"] ожоги.")
 
 	for(var/datum/wound/wound as anything in wounds)
 		var/wound_desc = wound.get_limb_examine_description()
@@ -290,9 +290,9 @@
 
 	if(self_aware)
 		if(!shown_brute && !shown_burn)
-			status = "no damage"
+			status = "не имеет повреждений"
 		else
-			status = "[shown_brute] brute damage and [shown_burn] burn damage"
+			status = "[shown_brute] физического урона и [shown_burn] ожогового урона"
 
 	else
 		if(shown_brute > (max_damage * 0.8))
@@ -303,7 +303,7 @@
 			status += light_brute_msg
 
 		if(shown_brute > DAMAGE_PRECISION && shown_burn > DAMAGE_PRECISION)
-			status += " and "
+			status += " и "
 
 		if(shown_burn > (max_damage * 0.8))
 			status += heavy_burn_msg
@@ -316,29 +316,29 @@
 			status = "OK"
 
 	var/no_damage
-	if(status == "OK" || status == "no damage")
+	if(status == "OK" || status == "не имеет повреждений")
 		no_damage = TRUE
 
 	var/is_disabled = ""
 	if(bodypart_disabled)
-		is_disabled = " is disabled"
+		is_disabled = "\[ПАРАЛИЗОВАНА\]"
 		if(no_damage)
-			is_disabled += " but otherwise"
+			is_disabled += " но"
 		else
-			is_disabled += " and"
+			is_disabled += " и"
 
-	check_list += "\t <span class='[no_damage ? "notice" : "warning"]'>Your [name][is_disabled][self_aware ? " has " : " is "][status].</span>"
+	check_list += "\t <span class='[no_damage ? "notice" : "warning"]'>Моя [name][is_disabled][status].</span>"
 
 	for(var/datum/wound/wound as anything in wounds)
 		switch(wound.severity)
 			if(WOUND_SEVERITY_TRIVIAL)
-				check_list += "\t [span_danger("Your [name] is suffering [wound.a_or_from] [lowertext(wound.name)].")]"
+				check_list += "\t [span_danger("Моя [name] имеет [wound.a_or_from] [lowertext(wound.name)].")]"
 			if(WOUND_SEVERITY_MODERATE)
-				check_list += "\t [span_warning("Your [name] is suffering [wound.a_or_from] [lowertext(wound.name)]!")]"
+				check_list += "\t [span_warning("Моя [name] имеет [wound.a_or_from] [lowertext(wound.name)]!")]"
 			if(WOUND_SEVERITY_SEVERE)
-				check_list += "\t [span_boldwarning("Your [name] is suffering [wound.a_or_from] [lowertext(wound.name)]!!")]"
+				check_list += "\t [span_boldwarning("Моя [name] имеет [wound.a_or_from] [lowertext(wound.name)]!!")]"
 			if(WOUND_SEVERITY_CRITICAL)
-				check_list += "\t [span_boldwarning("Your [name] is suffering [wound.a_or_from] [lowertext(wound.name)]!!!")]"
+				check_list += "\t [span_boldwarning("Моя [name] имеет [wound.a_or_from] [lowertext(wound.name)]!!!")]"
 
 	for(var/obj/item/embedded_thing in embedded_objects)
 		var/stuck_word = embedded_thing.isEmbedHarmless() ? "stuck" : "embedded"
