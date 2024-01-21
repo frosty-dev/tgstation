@@ -1348,3 +1348,35 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /// Adminabuse
 #define TRAIT_ULTRA "trait_ultra"
 #define ULTRA_TRAIT_LIST list(TRAIT_ULTRA, TRAIT_NO_SLIP_ALL, TRAIT_RESISTHEAT, TRAIT_RESISTCOLD, TRAIT_RESISTHEATHANDS, TRAIT_RESISTHIGHPRESSURE, TRAIT_RESISTLOWPRESSURE, TRAIT_NOHUNGER, TRAIT_NOBREATH, TRAIT_NOFIRE, TRAIT_RADIMMUNE)
+
+/// Trait given to foam darts that have an insert in them
+#define TRAIT_DART_HAS_INSERT "dart_has_insert"
+
+/// Trait determines if this mob has examined an eldritch painting
+#define TRAIT_ELDRITCH_PAINTING_EXAMINE "eldritch_painting_examine"
+
+/// Trait used by the /datum/brain_trauma/severe/flesh_desire trauma to change their preferences of what they eat
+#define TRAIT_FLESH_DESIRE "flesh_desire"
+
+///Trait granted by janitor skillchip, allows communication with cleanbots
+#define TRAIT_CLEANBOT_WHISPERER "cleanbot_whisperer"
+
+/// Trait given when a mob is currently in invisimin mode
+#define TRAIT_INVISIMIN "invisimin"
+
+///Trait given when a mob has been tipped
+#define TRAIT_MOB_TIPPED "mob_tipped"
+
+/// Trait which self-identifies as an enemy of the law
+#define TRAIT_ALWAYS_WANTED "always_wanted"
+
+/// Trait which means whatever has this is dancing by a dance machine
+#define TRAIT_DISCO_DANCER "disco_dancer"
+
+/// That which allows mobs to instantly break down boulders.
+#define TRAIT_INSTANTLY_PROCESSES_BOULDERS "instantly_processes_boulders"
+
+/// Trait applied to objects and mobs that can attack a boulder and break it down. (See /obj/item/boulder/manual_process())
+#define TRAIT_BOULDER_BREAKER "boulder_breaker"
+
+// END TRAIT DEFINES

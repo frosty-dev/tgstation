@@ -57,3 +57,7 @@
 /area/station/cargo/meeting_room
 	name = "Снабжение: Комната встреч"
 	icon_state = "mining"
+
+/area/station/cargo/miningfoundry
+	name = "\improper Mining Foundry"
+	icon_state = "mining_foundry"
