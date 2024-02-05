@@ -360,3 +360,10 @@
 /datum/mood_event/madness_elation
 	description = "Madness truly is the greatest of blessings..."
 	mood_change = 200
+
+/datum/mood_event/nanite_happiness
+	description = "<span class='nicegreen robot'>+++++++HAPPINESS ENHANCEMENT+++++++</span>\n"
+	mood_change = 7
+
+/datum/mood_event/nanite_happiness/add_effects(message)
+	description = "<span class='nicegreen robot'>+++++++[message]+++++++</span>\n"

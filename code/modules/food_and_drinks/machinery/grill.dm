@@ -4,8 +4,8 @@
 #define GRILL_FUELUSAGE_ACTIVE 5
 
 /obj/machinery/grill
-	name = "grill"
-	desc = "Just like the old days."
+	name = "гриль"
+	desc = "Как в старые времена."
 	icon = 'icons/obj/machines/kitchen.dmi'
 	icon_state = "grill_open"
 	density = TRUE
@@ -40,7 +40,7 @@
 	if(istype(I, /obj/item/stack/sheet/mineral/coal) || istype(I, /obj/item/stack/sheet/mineral/wood))
 		var/obj/item/stack/S = I
 		var/stackamount = S.get_amount()
-		to_chat(user, span_notice("You put [stackamount] [I]s in [src]."))
+		to_chat(user, span_notice("Закидываю [stackamount] [I] в [src]."))
 		if(istype(I, /obj/item/stack/sheet/mineral/coal))
 			grill_fuel += (500 * stackamount)
 		else
@@ -49,12 +49,12 @@
 		update_appearance()
 		return
 	if(I.resistance_flags & INDESTRUCTIBLE)
-		to_chat(user, span_warning("You don't feel it would be wise to grill [I]..."))
+		to_chat(user, span_warning("Что-то я не очень хочу жарить [I]..."))
 		return ..()
 	if(istype(I, /obj/item/reagent_containers/cup/glass))
 		if(I.reagents.has_reagent(/datum/reagent/consumable/monkey_energy))
 			grill_fuel += (20 * (I.reagents.get_reagent_amount(/datum/reagent/consumable/monkey_energy)))
-			to_chat(user, span_notice("You pour the Monkey Energy in [src]."))
+			to_chat(user, span_notice("Выплёскиваю напиток на [src]."))
 			I.reagents.remove_reagent(/datum/reagent/consumable/monkey_energy, I.reagents.get_reagent_amount(/datum/reagent/consumable/monkey_energy))
 			update_appearance()
 			return
@@ -62,15 +62,15 @@
 		if(HAS_TRAIT(I, TRAIT_NODROP) || (I.item_flags & (ABSTRACT | DROPDEL)))
 			return ..()
 		else if(HAS_TRAIT(I, TRAIT_FOOD_GRILLED))
-			to_chat(user, span_notice("[I] has already been grilled!"))
+			to_chat(user, span_notice("[I] уже пожарено!"))
 			return
 		else if(grill_fuel <= 0)
-			to_chat(user, span_warning("There is not enough fuel!"))
+			to_chat(user, span_warning("Недостаточно топлива!"))
 			return
 		else if(!grilled_item && user.transferItemToLoc(I, src))
 			grilled_item = I
 			RegisterSignal(grilled_item, COMSIG_ITEM_GRILLED, PROC_REF(GrillCompleted))
-			to_chat(user, span_notice("You put the [grilled_item] on [src]."))
+			to_chat(user, span_notice("Нежно укладываю [grilled_item] на [src]."))
 			update_appearance()
 			grill_loop.start()
 			return
@@ -119,7 +119,7 @@
 
 /obj/machinery/grill/attack_hand(mob/user, list/modifiers)
 	if(grilled_item)
-		to_chat(user, span_notice("You take out [grilled_item] from [src]."))
+		to_chat(user, span_notice("Достаю [grilled_item] из [src]."))
 		grilled_item.forceMove(drop_location())
 		update_appearance()
 		return

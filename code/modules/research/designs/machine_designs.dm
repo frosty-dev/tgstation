@@ -1136,3 +1136,43 @@
 		RND_CATEGORY_MACHINE + RND_SUBCATEGORY_MACHINE_SERVICE
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SERVICE | DEPARTMENT_BITFLAG_CARGO | DEPARTMENT_BITFLAG_SCIENCE
+
+/datum/design/board/nanite_chamber
+	name = "Нанитная камера"
+	desc = "Устройство для инъекции, мониторинга и базовой настройки нанитных облаков."
+	id = "nanite_chamber"
+	build_path = /obj/item/circuitboard/machine/nanite_chamber
+	category = list(
+		RND_CATEGORY_MACHINE + RND_SUBCATEGORY_MACHINE_RESEARCH
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
+/datum/design/board/public_nanite_chamber
+	name = "Публичная нанитная камера"
+	desc = "Устройство для автоматической инъекции нанитного облака с заданым номером. Объем вводимых нанитов значительно ниже чем у стандартной камеры."
+	id = "public_nanite_chamber"
+	build_path = /obj/item/circuitboard/machine/public_nanite_chamber
+	category = list(
+		RND_CATEGORY_MACHINE + RND_SUBCATEGORY_MACHINE_RESEARCH
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
+/datum/design/board/nanite_programmer
+	name = "Программатор нанитов"
+	desc = "Устройство для изменения настроек нанитных программ хранимых на дисках."
+	id = "nanite_programmer"
+	build_path = /obj/item/circuitboard/machine/nanite_programmer
+	category = list(
+		RND_CATEGORY_MACHINE + RND_SUBCATEGORY_MACHINE_RESEARCH
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
+/datum/design/board/nanite_program_hub
+	name = "Программный центр нанитов"
+	desc = "Компилирует нанитные программы с веб-серверов и записывает их на диски."
+	id = "nanite_program_hub"
+	build_path = /obj/item/circuitboard/machine/nanite_program_hub
+	category = list(
+		RND_CATEGORY_MACHINE + RND_SUBCATEGORY_MACHINE_RESEARCH
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE

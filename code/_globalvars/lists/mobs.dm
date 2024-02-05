@@ -110,6 +110,8 @@ GLOBAL_LIST_INIT(construct_radial_images, list(
 	CONSTRUCT_ARTIFICER = image(icon = 'icons/mob/nonhuman-player/cult.dmi', icon_state = "artificer")
 ))
 
+GLOBAL_LIST_EMPTY(nanite_sensors_list) //app people with nanite monitoring program
+
 /proc/update_config_movespeed_type_lookup(update_mobs = TRUE)
 	var/list/mob_types = list()
 	var/list/entry_value = CONFIG_GET(keyed_list/multiplicative_movespeed)
@@ -153,3 +155,4 @@ GLOBAL_LIST_INIT(construct_radial_images, list(
 		if(mind)
 			minds += mind
 	return minds
+

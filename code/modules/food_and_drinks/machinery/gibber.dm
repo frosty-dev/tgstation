@@ -1,6 +1,6 @@
 /obj/machinery/gibber
-	name = "gibber"
-	desc = "The name isn't descriptive enough?"
+	name = "мясорубка"
+	desc = "Полагаю в более подробном описании не нуждается."
 	icon = 'icons/obj/machines/kitchen.dmi'
 	icon_state = "grinder"
 	density = TRUE
@@ -15,12 +15,12 @@
 
 /obj/machinery/gibber/Initialize(mapload)
 	. = ..()
-	if(prob(5))
+	/*if(prob(5)) Эту шизофазию я переводить не буду, она мне вообще незнакома, и скорее всего, я сломаю весь прикол этого текста
 		name = "meat grinder"
 		desc = "Okay, if I... if I chop you up in a meat grinder, and the only thing that comes out, that's left of you, is your eyeball, \
 			you'r- you're PROBABLY DEAD! You're probably going to - not you, I'm just sayin', like, if you- if somebody were to, like, \
 			push you into a meat grinder, and, like, your- one of your finger bones is still intact, they're not gonna pick it up and go, \
-			Well see, yeah it wasn't deadly, it wasn't an instant kill move! You still got, like, this part of your finger left!"
+			Well see, yeah it wasn't deadly, it wasn't an instant kill move! You still got, like, this part of your finger left!" */
 	add_overlay("grjam")
 
 /obj/machinery/gibber/RefreshParts()
@@ -37,10 +37,10 @@
 /obj/machinery/gibber/examine(mob/user)
 	. = ..()
 	if(in_range(user, src) || isobserver(user))
-		. += span_notice("Дисплей: Outputting <b>[meat_produced]</b> meat slab(s) after <b>[gibtime*0.1]</b> seconds of processing.")
+		. += span_notice("Дисплей: Вывод <b>[meat_produced]</b> кусков мяса после <b>[gibtime*0.1]</b> секунд обработки.")
 		for(var/datum/stock_part/servo/servo in component_parts)
 			if(servo.tier >= 2)
-				. += span_notice("[src] has been upgraded to process inorganic materials.")
+				. += span_notice("Мясорубка была улучшена для обработки неорганики.")
 
 /obj/machinery/gibber/update_overlays()
 	. = ..()
@@ -72,36 +72,36 @@
 	if(machine_stat & (NOPOWER|BROKEN))
 		return
 	if(operating)
-		to_chat(user, span_danger("It's locked and running."))
+		to_chat(user, span_danger("Заблокирована во время работы!"))
 		return
 
 	if(!anchored)
-		to_chat(user, span_warning("[src] cannot be used unless bolted to the ground!"))
+		to_chat(user, span_warning("[src] не может быть использована, пока не прикручена к полу!"))
 		return
 
 	if(user.pulling && isliving(user.pulling))
 		var/mob/living/L = user.pulling
 		if(!iscarbon(L))
-			to_chat(user, span_warning("This item is not suitable for [src]!"))
+			to_chat(user, span_warning("Этот предмет не может быть обработан!"))
 			return
 		var/mob/living/carbon/C = L
 		if(C.buckled || C.has_buckled_mobs())
-			to_chat(user, span_warning("[C] is attached to something!"))
+			to_chat(user, span_warning("[C] привязан к чему-то!"))
 			return
 
 		if(!ignore_clothing)
 			for(var/obj/item/I in C.held_items + C.get_equipped_items())
 				if(!HAS_TRAIT(I, TRAIT_NODROP))
-					to_chat(user, span_warning("Subject may not have abiotic items on!"))
+					to_chat(user, span_warning("На [C] есть что-то, что не может быть обработано!"))
 					return
 
-		user.visible_message(span_danger("[user] starts to put [C] into [src]!"))
+		user.visible_message(span_danger("[user] суёт [C] в мясорубку!"))
 
 		add_fingerprint(user)
 
 		if(do_after(user, gibtime, target = src))
 			if(C && user.pulling == C && !C.buckled && !C.has_buckled_mobs() && !occupant)
-				user.visible_message(span_danger("[user] stuffs [C] into [src]!"))
+				user.visible_message(span_danger("[user] засунул [C] в мясорубку!"))
 				C.forceMove(src)
 				set_occupant(C)
 				update_appearance()
@@ -126,7 +126,7 @@
 		return ..()
 
 /obj/machinery/gibber/verb/eject()
-	set category = "Object"
+	set category = "Объект"
 	set name = "Empty gibber"
 	set src in oview(1)
 	if (usr.stat != CONSCIOUS || HAS_TRAIT(usr, TRAIT_HANDS_BLOCKED))
@@ -145,11 +145,11 @@
 	if(operating)
 		return
 	if(!occupant)
-		audible_message(span_hear("You hear a loud metallic grinding sound."))
+		audible_message(span_hear("Слышу громкий металлический скрежет."))
 		return
 
 	use_power(active_power_usage)
-	audible_message(span_hear("You hear a loud squelchy grinding sound."))
+	audible_message(span_hear("Слышу громкое хлюпанье."))
 	playsound(loc, 'sound/machines/juicer.ogg', 50, TRUE)
 	operating = TRUE
 	update_appearance()
