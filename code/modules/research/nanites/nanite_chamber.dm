@@ -25,7 +25,7 @@
 	. = ..()
 	scan_level = 0
 	for(var/datum/stock_part/scanning_module/P in component_parts)
-		scan_level += P.rating
+		scan_level += P.tier
 
 /obj/machinery/nanite_chamber/examine(mob/user)
 	. = ..()
