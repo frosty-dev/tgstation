@@ -6,6 +6,8 @@
 		html = msg,
 		confidential = TRUE)
 
+	webhook_send_garbage("ADMIN LOG", msg)
+
 /proc/relay_msg_admins(msg)
 	msg = "<span class=\"admin\"><span class=\"prefix\">RELAY:</span> <span class=\"message\">[msg]</span></span>"
 	to_chat(GLOB.admins,

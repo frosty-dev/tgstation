@@ -1,6 +1,6 @@
 /obj/effect/mine
-	name = "dummy mine"
-	desc = "Better stay away from that thing."
+	name = "обычная мина"
+	desc = "Лучше держаться подальше от этой штуки!"
 	density = FALSE
 	anchored = TRUE
 	icon = 'icons/obj/weapons/grenade.dmi'
@@ -34,13 +34,13 @@
 /obj/effect/mine/examine(mob/user)
 	. = ..()
 	if(!armed)
-		. += span_info("It appears to be inactive...")
+		. += span_info("Похоже, она неактивна...")
 
 	var/atom/movable/unlucky_sod = foot_on_mine?.resolve()
 	if(user == unlucky_sod)
-		. += span_bolddanger("The pressure plate is depressed. Any movement you make will set it off now.")
+		. += span_bolddanger("Мина взведена. Любое движение на ней заставит её взорваться прямо сейчас.")
 	else if(!isnull(unlucky_sod))
-		. += span_danger("The pressure plate is depressed by [unlucky_sod]. Any move they make'll set it off now.")
+		. += span_danger("Мина взведена [unlucky_sod]. Любое движение на ней заставит её взорваться прямо сейчас.")
 
 /obj/effect/mine/update_icon_state()
 	. = ..()
@@ -58,7 +58,7 @@
 	armed = TRUE
 	update_appearance(UPDATE_ICON_STATE)
 	playsound(src, 'sound/machines/nuke/angry_beep.ogg', 40, FALSE, -2)
-	visible_message(span_danger(" [src] beeps softly, indicating it is now active."), vision_distance = COMBAT_MESSAGE_RANGE)
+	visible_message(span_danger(" [src] мягко бипает, демонстрируя что она сейчас активна."), vision_distance = COMBAT_MESSAGE_RANGE)
 
 /// Can this mine trigger on the passed movable?
 /obj/effect/mine/proc/can_trigger(atom/movable/on_who)
@@ -86,7 +86,7 @@
 		return
 
 	foot_on_mine = WEAKREF(arrived)
-	visible_message(span_danger("[icon2html(src, viewers(src))] *click*"))
+	visible_message(span_danger("[icon2html(src, viewers(src))] *щёлк*"))
 	playsound(src, 'sound/machines/click.ogg', 60, TRUE)
 
 /obj/effect/mine/proc/on_exited(datum/source, atom/movable/gone)
@@ -110,9 +110,9 @@
 	if(triggered) //too busy detonating to detonate again
 		return
 	if(triggerer)
-		visible_message(span_danger("[triggerer] sets off [icon2html(src, viewers(src))] [src]!"))
+		visible_message(span_danger("[triggerer] устанавливает [icon2html(src, viewers(src))] [src]!"))
 	else
-		visible_message(span_danger("[icon2html(src, viewers(src))] [src] detonates!"))
+		visible_message(span_danger("[icon2html(src, viewers(src))] [src] детонирует!"))
 
 	var/datum/effect_system/spark_spread/s = new /datum/effect_system/spark_spread
 	s.set_up(3, 1, src)
@@ -124,7 +124,7 @@
 	qdel(src)
 
 /obj/effect/mine/explosive
-	name = "explosive mine"
+	name = "осколочная мина"
 	/// The devastation range of the resulting explosion.
 	var/range_devastation = 0
 	/// The heavy impact range of the resulting explosion.
@@ -140,25 +140,25 @@
 	explosion(src, range_devastation, range_heavy, range_light, range_flame, range_flash)
 
 /obj/effect/mine/explosive/light
-	name = "low-yield explosive mine"
+	name = "слабая осколочная мина"
 	range_heavy = 0
 	range_light = 3
 	range_flash = 2
 
 /obj/effect/mine/explosive/flame
-	name = "incendiary explosive mine"
+	name = "зажигательная мина"
 	range_heavy = 0
 	range_light = 1
 	range_flame = 3
 
 /obj/effect/mine/explosive/flash
-	name = "blinding explosive mine"
+	name = "ослепляющая мина"
 	range_heavy = 0
 	range_light = 1
 	range_flash = 6
 
 /obj/effect/mine/stun
-	name = "stun mine"
+	name = "оглушающая"
 	var/stun_time = 80
 
 /obj/effect/mine/stun/mineEffect(mob/living/victim)
@@ -166,15 +166,15 @@
 		victim.Paralyze(stun_time)
 
 /obj/effect/mine/kickmine
-	name = "kick mine"
+	name = "админабьюз мина"
 
 /obj/effect/mine/kickmine/mineEffect(mob/victim)
 	if(isliving(victim) && victim.client && Adjacent(victim))
-		to_chat(victim, span_userdanger("You have been kicked FOR NO REISIN!"))
+		to_chat(victim, span_userdanger("Кикает тебя с сервера БЕЗ ПРИЧИНЫ!"))
 		qdel(victim.client)
 
 /obj/effect/mine/gas
-	name = "oxygen mine"
+	name = "кислородная мина"
 	var/gas_amount = 360
 	var/gas_type = GAS_O2
 
@@ -182,20 +182,20 @@
 	atmos_spawn_air("[gas_type]=[gas_amount]")
 
 /obj/effect/mine/gas/plasma
-	name = "plasma mine"
+	name = "плазменная мина"
 	gas_type = GAS_PLASMA
 
 /obj/effect/mine/gas/n2o
-	name = "\improper N2O mine"
+	name = "мина с закисью азота"
 	gas_type = GAS_N2O
 
 /obj/effect/mine/gas/water_vapor
-	name = "chilled vapor mine"
+	name = "мина с охлаждённым водяным паром"
 	gas_amount = 500
 	gas_type = GAS_WATER_VAPOR
 
 /obj/effect/mine/sound
-	name = "honkblaster 1000"
+	name = "ХОНКбластер 9000"
 	var/sound = 'sound/items/bikehorn.ogg'
 
 /obj/effect/mine/sound/mineEffect(mob/victim)
@@ -207,7 +207,7 @@
 
 /// These mines spawn pellet_clouds around them when triggered
 /obj/effect/mine/shrapnel
-	name = "shrapnel mine"
+	name = "осколочно-фугасная мина"
 	/// The type of projectiles we're shooting out of this
 	var/shrapnel_type = /obj/projectile/bullet/shrapnel
 	/// Broadly, how many pellets we're spawning, the total is n! - (n-1)! pellets, so don't set it too high. For reference, 15 is probably pushing it at MAX
@@ -223,12 +223,12 @@
 	return ..()
 
 /obj/effect/mine/shrapnel/sting
-	name = "stinger mine"
+	name = "мина с шипами"
 	shrapnel_type = /obj/projectile/bullet/pellet/stingball
 
 /obj/effect/mine/shrapnel/capspawn
-	name = "\improper AP mine"
-	desc = "A defensive landmine filled with 'AP shrapnel', good for defending cramped spaces without breaching hulls. The AP stands for 'Asset Protection', though it's still plenty nasty against any fool who sets it off."
+	name = "бронебойная мина"
+	desc = "Мина оборонительного действия начинённая бронебойной шрапнелью."
 	shrapnel_type = /obj/projectile/bullet/pellet/capmine
 	shrapnel_magnitude = 4
 	shred_triggerer = TRUE
@@ -242,8 +242,8 @@
 	set_light_on(TRUE)
 
 /obj/item/minespawner
-	name = "landmine deployment device"
-	desc = "When activated, will deploy an Asset Protection landmine after 3 seconds passes, perfect for high ranking NT officers looking to cover their assets from afar."
+	name = "устройство установки наземных мин"
+	desc = "Через 3 секунды после активации будет развернута бронебойная мина. Устройство идеально подходит для высокопоставленных офицеров NT, желающих прикрыть свои задницы находясь в безопасном месте."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "beacon"
 
@@ -256,7 +256,7 @@
 		return
 
 	playsound(src, 'sound/weapons/armbomb.ogg', 70, TRUE)
-	to_chat(user, span_warning("You arm  [src], causing it to shake! It will deploy in 3 seconds."))
+	to_chat(user, span_warning("Твоя рука начинает трястись из-за [src]! Запуск через 3 секунды."))
 	active = TRUE
 	addtimer(CALLBACK(src, PROC_REF(deploy_mine)), 3 SECONDS)
 
@@ -265,7 +265,7 @@
 	do_alert_animation()
 	playsound(loc, 'sound/machines/chime.ogg', 30, FALSE, -3)
 	var/obj/effect/mine/new_mine = new mine_type(get_turf(src))
-	visible_message(span_danger(" [src] releases a puff of smoke, revealing \a [new_mine]!"))
+	visible_message(span_danger(" [src] выпускает облачко дыма, раскрывая \a [new_mine]!"))
 	var/obj/effect/particle_effect/fluid/smoke/poof = new (get_turf(src))
 	poof.lifetime = 3
 	qdel(src)

@@ -97,7 +97,7 @@ GLOBAL_VAR_INIT(rollovercheck_last_timeofday, 0)
 /proc/DisplayTimeText(time_value, round_seconds_to = 0.1)
 	var/second = FLOOR(time_value * 0.1, round_seconds_to)
 	if(!second)
-		return "right now"
+		return "прямо сейчас"
 	if(second < 60)
 		return "[second] second[(second != 1)? "s":""]"
 	var/minute = FLOOR(second / 60, 1)

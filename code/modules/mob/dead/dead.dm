@@ -18,9 +18,9 @@ INITIALIZE_IMMEDIATE(/mob/dead)
 	add_to_mob_list()
 
 	prepare_huds()
-
+/*
 	if(length(CONFIG_GET(keyed_list/cross_server)))
-		add_verb(src, /mob/dead/proc/server_hop)
+		add_verb(src, /mob/dead/proc/server_hop)*/
 	set_focus(src)
 	become_hearing_sensitive()
 	log_mob_tag("TAG: [tag] CREATED: [key_name(src)] \[[src.type]\]")
@@ -35,17 +35,17 @@ INITIALIZE_IMMEDIATE(/mob/dead)
 		return
 	var/time_remaining = SSticker.GetTimeLeft()
 	if(time_remaining > 0)
-		. += "Time To Start: [round(time_remaining/10)]s"
+		. += "Время до старта: [round(time_remaining/10)] с."
 	else if(time_remaining == -10)
-		. += "Time To Start: DELAYED"
+		. += "Время до старта: ОТСРОЧЕНО."
 	else
-		. += "Time To Start: SOON"
+		. += "Время до старта: СКОРО!"
 
-	. += "Players: [LAZYLEN(GLOB.clients)]"
+	. += "• Игроков всего: [LAZYLEN(GLOB.clients)]"
 	if(client.holder)
-		. += "Players Ready: [SSticker.totalPlayersReady]"
-		. += "Admins Ready: [SSticker.total_admins_ready] / [length(GLOB.admins)]"
-
+		. += "✓ | Игроков приготовлено: [SSticker.totalPlayersReady]"
+		. += "✓ | Админов приготовлено: [SSticker.total_admins_ready] / [length(GLOB.admins)]"
+/*
 #define SERVER_HOPPER_TRAIT "server_hopper"
 
 /mob/dead/proc/server_hop()
@@ -90,7 +90,7 @@ INITIALIZE_IMMEDIATE(/mob/dead)
 	C << link("[addr]")
 
 #undef SERVER_HOPPER_TRAIT
-
+*/
 /mob/dead/proc/update_z(new_z) // 1+ to register, null to unregister
 	if (registered_z != new_z)
 		if (registered_z)

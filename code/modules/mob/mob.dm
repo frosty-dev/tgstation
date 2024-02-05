@@ -545,7 +545,7 @@
  * for why this isn't atom/verb/examine()
  */
 /mob/verb/examinate(atom/examinify as mob|obj|turf in view()) //It used to be oview(12), but I can't really say why
-	set name = "Examine"
+	set name = "Осмотреть"
 	set category = "IC"
 
 	DEFAULT_QUEUE_OR_CALL_VERB(VERB_CALLBACK(src, PROC_REF(run_examinate), examinify))
@@ -574,7 +574,7 @@
 		if(examine_time && (world.time - examine_time < EXAMINE_MORE_WINDOW))
 			result = examinify.examine_more(src)
 			if(!length(result))
-				result += span_notice("<i>You examine [examinify] closer, but find nothing of interest...</i>")
+				result += span_notice("<i>Осматриваю <b>[examinify]</b> тщательно, но не могу найти что-то ещё интересное...</i>")
 		else
 			result = examinify.examine(src)
 			client.recent_examines[ref_to_atom] = world.time // set to when we last normal examine'd them
@@ -598,7 +598,7 @@
 /mob/living/blind_examine_check(atom/examined_thing)
 	//need to be next to something and awake
 	if(!Adjacent(examined_thing) || incapacitated())
-		to_chat(src, span_warning("Something is there, but you can't see it!"))
+		to_chat(src, span_warning("Что-то есть, но не могу разглядеть!"))
 		return FALSE
 
 	//you can examine things you're holding directly, but you can't examine other things if your hands are full
@@ -609,14 +609,14 @@
 		if(HAS_TRAIT(active_item, TRAIT_BLIND_TOOL))
 			boosted = TRUE
 		else if(active_item != examined_thing)
-			to_chat(src, span_warning("Your hands are too full to examine this!"))
+			to_chat(src, span_warning("Мои руки заняты!"))
 			return FALSE
 
 	//you can only initiate exaimines if you have a hand, it's not disabled, and only as many examines as you have hands
 	/// our active hand, to check if it's disabled/detatched
 	var/obj/item/bodypart/active_hand = has_active_hand()? get_active_hand() : null
 	if(!active_hand || active_hand.bodypart_disabled || do_after_count() >= usable_hands)
-		to_chat(src, span_warning("You don't have a free hand to examine this!"))
+		to_chat(src, span_warning("Нет свободной руки для осмотра!"))
 		return FALSE
 
 	//you can only queue up one examine on something at a time
@@ -741,8 +741,8 @@
  * Calls attack self on the item and updates the inventory hud for hands
  */
 /mob/verb/mode()
-	set name = "Activate Held Object"
-	set category = "Object"
+	set name = "Использовать предмет в руке"
+	set category = "IC"
 	set src = usr
 
 	DEFAULT_QUEUE_OR_CALL_VERB(VERB_CALLBACK(src, PROC_REF(execute_mode)))
@@ -771,12 +771,12 @@
  * Only works if flag/allow_respawn is allowed in config
  */
 /mob/verb/abandon_mob()
-	set name = "Respawn"
+	set name = "❗ Переродиться"
 	set category = "OOC"
 
 	switch(CONFIG_GET(flag/allow_respawn))
 		if(RESPAWN_FLAG_NEW_CHARACTER)
-			if(tgui_alert(usr, "Note, respawning is only allowed as another character. If you don't have another free slot you may not be able to respawn.", "Respawn", list("Ok", "Nevermind")) != "Ok")
+			if(tgui_alert(usr, "Обратите внимание, что перерождаться можно только другим персонажем. Если у вас нет другого свободного слота, вы не сможете переродиться.", "Respawn", list("Ok", "Nevermind")) != "Ok")
 				return
 
 		if(RESPAWN_FLAG_FREE)
@@ -784,13 +784,13 @@
 
 		if(RESPAWN_FLAG_DISABLED)
 			if (!check_rights_for(usr.client, R_ADMIN))
-				to_chat(usr, span_boldnotice("Respawning is not enabled!"))
+				to_chat(usr, span_boldnotice("Перерождение не включено!"))
 				return
-			if (tgui_alert(usr, "Respawning is currently disabled, do you want to use your permissions to circumvent it?", "Respawn", list("Yes", "No")) != "Yes")
+			if (tgui_alert(usr, "В настоящее время респаун отключен, но вы гандончик с кнопками. Хотите ли вы заабузить свои права и зареспавниться?", "Respawn", list("Yes", "No")) != "Yes")
 				return
 
 	if (stat != DEAD)
-		to_chat(usr, span_boldnotice("You must be dead to use this!"))
+		to_chat(usr, span_boldnotice("Я довольно живой для этого."))
 		return
 
 	if(!check_respawn_delay())
@@ -798,7 +798,7 @@
 
 	usr.log_message("used the respawn button.", LOG_GAME)
 
-	to_chat(usr, span_boldnotice("Please roleplay correctly!"))
+	to_chat(usr, span_boldnotice("Поменяй имя или я приду к тебе ночью и вырву твою печень!"))
 
 	if(!client)
 		usr.log_message("respawn failed due to disconnect.", LOG_GAME)
@@ -839,7 +839,7 @@
  * Sometimes helps if the user is stuck in another perspective or camera
  */
 /mob/verb/cancel_camera()
-	set name = "Cancel Camera View"
+	set name = "❗ Выйти из режима камеры"
 	set category = "OOC"
 	reset_perspective(null)
 	unset_machine()
@@ -1479,7 +1479,7 @@
 
 ///Show the language menu for this mob
 /mob/verb/open_language_menu_verb()
-	set name = "Open Language Menu"
+	set name = "Мои языки"
 	set category = "IC"
 
 	get_language_holder().open_language_menu(usr)
@@ -1573,11 +1573,11 @@
 
 ///Shows a tgui window with memories
 /mob/verb/memory()
-	set name = "Memories"
+	set name = "Воспоминания"
 	set category = "IC"
 	set desc = "View your character's memories."
 	if(!mind)
-		var/fail_message = "You have no mind!"
+		var/fail_message = "Удивительно! У меня нет разума"
 		if(isobserver(src))
 			fail_message += " You have to be in the current round at some point to have one."
 		to_chat(src, span_warning(fail_message))
@@ -1628,6 +1628,6 @@
 
 /mob/verb/view_skills()
 	set category = "IC"
-	set name = "View Skills"
+	set name = "Посмотреть навыки"
 
 	mind?.print_levels(src)

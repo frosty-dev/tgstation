@@ -8,8 +8,8 @@
  * Batteries.
  */
 /obj/item/stock_parts/cell
-	name = "power cell"
-	desc = "A rechargeable electrochemical power cell."
+	name = "базовая батарея"
+	desc = "Перезаряжаемый электрохимический элемент питания, вмещающий 1 МДж энергии."
 	icon = 'icons/obj/machines/cell_charger.dmi'
 	icon_state = "cell"
 	inhand_icon_state = "cell"
@@ -329,24 +329,34 @@
 	maxcharge = STANDARD_CELL_CHARGE * 2
 
 /obj/item/stock_parts/cell/ninja
-	name = "black power cell"
+	name = "черная батарея"
 	icon_state = "bscell"
 	maxcharge = STANDARD_CELL_CHARGE * 10
 	custom_materials = list(/datum/material/glass=SMALL_MATERIAL_AMOUNT*0.6)
 	chargerate = STANDARD_CELL_CHARGE * 2
 
 /obj/item/stock_parts/cell/high
-	name = "high-capacity power cell"
+	name = "батарея увеличенной емкости"
+	desc = "Перезаряжаемый электрохимический элемент питания, вмещающий 10 МДж энергии."
 	icon_state = "hcell"
 	maxcharge = STANDARD_CELL_CHARGE * 10
 	custom_materials = list(/datum/material/glass=SMALL_MATERIAL_AMOUNT*0.6)
 	chargerate = STANDARD_CELL_CHARGE * 1.5
 
+/obj/item/stock_parts/cell/high/plus
+	name = "батарея увеличенной емкости+"
+	desc = "Усовершенстованный перезаряжаемый электрохимический элемент питания, вмещающий 15 МДж энергии."
+	icon_state = "hcell"
+	maxcharge = STANDARD_CELL_CHARGE * 15
+	custom_materials = list(/datum/material/glass=SMALL_MATERIAL_AMOUNT*0.8)
+	chargerate = STANDARD_CELL_CHARGE * 1.75
+
 /obj/item/stock_parts/cell/high/empty
 	empty = TRUE
 
 /obj/item/stock_parts/cell/super
-	name = "super-capacity power cell"
+	name = "батарея сверхувеличенной емкости"
+	desc = "Усовершенстованный перезаряжаемый электрохимический элемент питания, вмещающий 20 МДж энергии."
 	icon_state = "scell"
 	maxcharge = STANDARD_CELL_CHARGE * 20
 	custom_materials = list(/datum/material/glass=SMALL_MATERIAL_AMOUNT * 3)
@@ -356,7 +366,8 @@
 	empty = TRUE
 
 /obj/item/stock_parts/cell/hyper
-	name = "hyper-capacity power cell"
+	name = "батарея гиперувеличенной емкости"
+	desc = "Усовершенстованный перезаряжаемый электрохимический элемент питания, вмещающий 30 МДж энергии."
 	icon_state = "hpcell"
 	maxcharge = STANDARD_CELL_CHARGE * 30
 	custom_materials = list(/datum/material/glass=SMALL_MATERIAL_AMOUNT * 4)
@@ -366,8 +377,8 @@
 	empty = TRUE
 
 /obj/item/stock_parts/cell/bluespace
-	name = "bluespace power cell"
-	desc = "A rechargeable transdimensional power cell."
+	name = "блюспейс батарея"
+	desc = "Экспериментальный перезаряжаемый межпространственный элемент питания, вмещающий 40 МДж энергии."
 	icon_state = "bscell"
 	maxcharge = STANDARD_CELL_CHARGE * 40
 	custom_materials = list(/datum/material/glass=SMALL_MATERIAL_AMOUNT*6)

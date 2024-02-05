@@ -14,8 +14,8 @@
 #define MEDBOT_FREAKOUT_DELAY (15 SECONDS)
 
 /mob/living/simple_animal/bot/medbot
-	name = "\improper Medibot"
-	desc = "A little medical robot. He looks somewhat underwhelmed."
+	name = "Медбот"
+	desc = "Маленький медицинский робот. Он немного расстроен."
 	icon = 'icons/mob/silicon/aibots.dmi'
 	icon_state = "medibot0"
 	base_icon_state = "medibot"
@@ -33,7 +33,7 @@
 	data_hud_type = DATA_HUD_MEDICAL_ADVANCED
 	hackables = "health processor circuits"
 	path_image_color = "#DDDDFF"
-	possessed_message = "You are a medbot! Ensure good health among the crew to the best of your ability!"
+	possessed_message = "Ты медбот! Убереги всех ассистентов и остальной экипаж от ран как можно лучше!"
 
 	automated_announcements = list(
 		MEDIBOT_VOICED_HOLD_ON = 'sound/voice/medbot/coming.ogg',
@@ -119,15 +119,15 @@
 	medical_mode_flags = MEDBOT_DECLARE_CRIT | MEDBOT_STATIONARY_MODE | MEDBOT_SPEAK_MODE
 
 /mob/living/simple_animal/bot/medbot/mysterious
-	name = "\improper Mysterious Medibot"
-	desc = "International Medibot of mystery."
+	name = "Загадочный Медбот"
+	desc = "Межпространственный Загадочный Медбот."
 	skin = "bezerk"
 	damagetype_healer = "all"
 	heal_amount = 10
 
 /mob/living/simple_animal/bot/medbot/derelict
-	name = "\improper Old Medibot"
-	desc = "Looks like it hasn't been modified since the late 2080s."
+	name = "Старый Медбот "
+	desc = "Кажется его не улучшали со времён Бостон Роботикс..."
 	skin = "bezerk"
 	damagetype_healer = "all"
 	medical_mode_flags = MEDBOT_SPEAK_MODE
@@ -135,8 +135,8 @@
 	heal_amount = 5
 
 /mob/living/simple_animal/bot/medbot/nukie
-	name = "Oppenheimer"
-	desc = "A medibot stolen from a Nanotrasen station and upgraded by the Syndicate. Despite their best efforts at reprogramming, it still appears visibly upset near nuclear explosives."
+	name = "Оппенгеймер"
+	desc = "Медбот, украденный со станции Нанотрейзен и модернизированный Синдикатом. Несмотря на все усилия по перепрограммированию, он по-прежнему выглядит очень грустным рядом с ядерной боеголовкой."
 	skin = "bezerk"
 	health = 40
 	maxHealth = 40
@@ -176,15 +176,15 @@
 
 	switch(tipped_status)
 		if(MEDBOT_PANIC_NONE to MEDBOT_PANIC_LOW)
-			. += "It appears to be tipped over, and is quietly waiting for someone to set it right."
+			. += "Кажется, он опрокинут и тихо ждёт, когда его соизволят перевернуть."
 		if(MEDBOT_PANIC_LOW to MEDBOT_PANIC_MED)
-			. += "It is tipped over and requesting help."
+			. += "Он опрокинут и ждёт помощи."
 		if(MEDBOT_PANIC_MED to MEDBOT_PANIC_HIGH)
-			. += "They are tipped over and appear visibly distressed." // now we humanize the medbot as a they, not an it
+			. += "Он опрокинут и очень расстроен." // now we humanize the medbot as a they, not an it
 		if(MEDBOT_PANIC_HIGH to MEDBOT_PANIC_FUCK)
-			. += span_warning("They are tipped over and visibly panicking!")
+			. += span_warning("Он опрокинут и горько плачет!")
 		if(MEDBOT_PANIC_FUCK to INFINITY)
-			. += span_warning("<b>They are freaking out from being tipped over!</b>")
+			. += span_warning("<b>Он просто в ярости от того что все видят его пузико!</b>")
 
 /mob/living/simple_animal/bot/medbot/update_icon_state()
 	. = ..()
@@ -293,7 +293,7 @@
 			path = list()
 		if("sync_tech")
 			if(!linked_techweb)
-				to_chat(usr, span_notice("No research techweb connected."))
+				to_chat(usr, span_notice("Никакие исследования не подключены."))
 				return
 			var/oldheal_amount = heal_amount
 			var/tech_boosters
@@ -305,7 +305,7 @@
 			if(tech_boosters)
 				heal_amount = (round(tech_boosters/2,0.1)*initial(heal_amount))+initial(heal_amount) //every 2 tend wounds tech gives you an extra 100% healing, adjusting for unique branches (combo is bonus)
 				if(oldheal_amount < heal_amount)
-					speak("New knowledge found! Surgical efficacy improved to [round(heal_amount/initial(heal_amount)*100)]%!")
+					speak("Обнаружены новые протоколы лечения! Эффективность лечения улучшена на [round(heal_amount/initial(heal_amount)*100)]%!")
 
 	update_appearance()
 
@@ -320,8 +320,8 @@
 	if(!(bot_cover_flags & BOT_COVER_EMAGGED))
 		return
 	medical_mode_flags &= ~MEDBOT_DECLARE_CRIT
-	balloon_alert(user, "reagent synthesis circuits shorted")
-	audible_message(span_danger("[src] buzzes oddly!"))
+	balloon_alert(user, "плата синтеза химикатов взломана!")
+	audible_message(span_danger("[src] странно жужжит!"))
 	flick("medibot_spark", src)
 	playsound(src, SFX_SPARKS, 75, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
 	if(user)
@@ -340,9 +340,9 @@
 	if(COOLDOWN_FINISHED(src, last_newpatient_speak))
 		COOLDOWN_START(src, last_newpatient_speak, MEDBOT_NEW_PATIENTSPEAK_DELAY)
 		var/list/messagevoice = list(
-			"Hey, [H.name]! Hold on, I'm coming." = 'sound/voice/medbot/coming.ogg',
-			"Wait [H.name]! I want to help!" = 'sound/voice/medbot/help.ogg',
-			"[H.name], you appear to be injured!" = 'sound/voice/medbot/injured.ogg',
+			"Эй, [H.name]! Погоди, я иду." = 'sound/voice/medbot/coming.ogg',
+			"Постой, [H.name]! Я хочу помочь!" = 'sound/voice/medbot/help.ogg',
+			"[H.name], кажется, ты ранен!" = 'sound/voice/medbot/injured.ogg',
 		)
 		var/message = pick(messagevoice)
 		speak(message)
@@ -417,7 +417,7 @@
 		if(MEDBOT_PANIC_ENDING)
 			messagevoice = list(MEDIBOT_VOICED_THE_END, MEDIBOT_VOICED_NOOO)
 		if(MEDBOT_PANIC_END)
-			speak("PSYCH ALERT: Crewmember [tipper_name] recorded displaying antisocial tendencies torturing bots in [get_area(src)]. Please schedule psych evaluation.", radio_channel)
+			speak("ФИЗИЧЕСКОЕ НАСИЛИЕ: [tipper_name] зафиксировано проявление антисоциальных тенденций с пытками ботов в [get_area(src)]. Пожалуйста, запишите его к психологу.", radio_channel)
 
 	if(prob(tipped_status))
 		do_jitter_animation(tipped_status * 0.1)
@@ -632,7 +632,7 @@
 
 		if(!treatment_method && !(bot_cover_flags & BOT_COVER_EMAGGED)) //If they don't need any of that they're probably cured!
 			if(C.maxHealth - C.get_organic_health() < heal_threshold)
-				to_chat(src, span_notice("[C] is healthy! Your programming prevents you from tending the wounds of anyone without at least [heal_threshold] damage of any one type ([heal_threshold + 5] for oxygen damage.)"))
+				to_chat(src, span_notice("[C] выглядит здоровым! Моя программа ограничивает меня от лечения кого-либо без явных повреждений в количестве [heal_threshold] любого типа ([heal_threshold + 5] для кислородного голодания.)"))
 
 			var/static/list/success_lines = list(
 				MEDIBOT_VOICED_ALL_PATCHED_UP,
@@ -643,8 +643,8 @@
 			bot_reset()
 			tending = FALSE
 		else if(patient)
-			C.visible_message(span_danger("[src] is trying to tend the wounds of [patient]!"), \
-				span_userdanger("[src] is trying to tend your wounds!"))
+			C.visible_message(span_danger("[src] пытается вылечить раны [patient]!"), \
+				span_userdanger("[src] пытается тебя вылечить!"))
 
 			if(do_after(src, 2 SECONDS, patient)) //Slightly faster than default tend wounds, but does less HPS
 				if((get_dist(src, patient) <= 1) && (bot_mode_flags & BOT_MODE_ON) && assess_patient(patient))
@@ -655,12 +655,12 @@
 					if(bot_cover_flags & BOT_COVER_EMAGGED)
 						patient.reagents.add_reagent(/datum/reagent/toxin/chloralhydrate, 5)
 						patient.apply_damage((healies * 1), treatment_method, spread_damage = TRUE)
-						log_combat(src, patient, "pretended to tend wounds on", "internal tools", "([uppertext(treatment_method)]) (EMAGGED)")
+						log_combat(src, patient, "притворился, что обрабатывает раны", "внутренние инструменты", "([uppertext(treatment_method)]) (EMAGGED)")
 					else
 						patient.heal_damage_type((healies * 1), treatment_method) //don't need to check treatment_method since we know by this point that they were actually damaged.
-						log_combat(src, patient, "tended the wounds of", "internal tools", "([uppertext(treatment_method)])")
-					C.visible_message(span_notice("[src] tends the wounds of [patient]!"), \
-						"<span class='infoplain'>[span_green("[src] tends your wounds!")]</span>")
+						log_combat(src, patient, "лечил раны", "внутренние инструменты", "([uppertext(treatment_method)])")
+					C.visible_message(span_notice("[src] лечит раны [patient]!"), \
+						"<span class='infoplain'>[span_green("[src] лечит твои раны!")]</span>")
 					ADD_TRAIT(patient,TRAIT_MEDIBOTCOMINGTHROUGH,tag)
 					addtimer(TRAIT_CALLBACK_REMOVE(patient, TRAIT_MEDIBOTCOMINGTHROUGH, tag), (30 SECONDS))
 				else
@@ -670,7 +670,7 @@
 
 			update_appearance()
 			if(!tending)
-				visible_message("<span class='infoplain'>[src] places its tools back into itself.</span>")
+				visible_message("<span class='infoplain'>[src] убирает свои инструменты внутрь корпуса.</span>")
 				soft_reset()
 		else
 			tending = FALSE
@@ -691,7 +691,7 @@
 		return
 	COOLDOWN_START(src, last_patient_message, MEDBOT_PATIENTSPEAK_DELAY)
 	var/area/location = get_area(src)
-	speak("Medical emergency! [crit_patient || "A patient"] is in critical condition at [location]!", radio_channel)
+	speak("Медицинская помощь! [crit_patient || "Пациент"] в критическом состоянии в [location]!", radio_channel)
 
 #undef MEDBOT_NEW_PATIENTSPEAK_DELAY
 #undef MEDBOT_PATIENTSPEAK_DELAY

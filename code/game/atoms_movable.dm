@@ -26,7 +26,7 @@
 	var/verb_exclaim = "восклицает"
 	var/verb_whisper = "шепчет"
 	var/verb_sing = "поёт"
-	var/verb_yell = "выкрикивает"
+	var/verb_yell = "орёт"
 	var/speech_span
 	///Are we moving with inertia? Mostly used as an optimization
 	var/inertia_moving = FALSE

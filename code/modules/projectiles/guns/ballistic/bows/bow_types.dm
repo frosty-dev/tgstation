@@ -1,13 +1,13 @@
 
 ///basic bow, used for medieval sim
 /obj/item/gun/ballistic/bow/longbow
-	name = "longbow"
-	desc = "While pretty finely crafted, surely you can find something better to use in the current year."
+	name = "длинный лук"
+	desc = "Великолепно изготовленный лук мог бы стать предметом гордости владельца лет так 1000 назад. В наше время стоит найти что-то получше."
 
 ///chaplain's divine archer bow
 /obj/item/gun/ballistic/bow/divine
-	name = "divine bow"
-	desc = "Holy armament to pierce the souls of sinners."
+	name = "божественный лук"
+	desc = "Святое оружие для уничтожения душ грешников."
 	icon_state = "holybow"
 	inhand_icon_state = "holybow"
 	base_icon_state = "holybow"
@@ -17,16 +17,16 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/bow/holy
 
 /obj/item/ammo_box/magazine/internal/bow/holy
-	name = "divine bowstring"
+	name = "божественная тетива"
 	ammo_type = /obj/item/ammo_casing/arrow/holy
 
 /obj/item/gun/ballistic/bow/divine/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/anti_magic, MAGIC_RESISTANCE|MAGIC_RESISTANCE_HOLY)
 	AddComponent(/datum/component/effect_remover, \
-		success_feedback = "You disrupt the magic of %THEEFFECT with %THEWEAPON.", \
-		success_forcesay = "BOW-GONE FOUL MAGIKS!!", \
-		tip_text = "Clear rune", \
+		success_feedback = "Вы разрушаете магию %THEEFFECT из %THEWEAPON.", \
+		success_forcesay = "ТЫ НЕ ПРОЙДЕШЬ!!", \
+		tip_text = "Очистить руну", \
 		on_clear_callback = CALLBACK(src, PROC_REF(on_cult_rune_removed)), \
 		effects_we_clear = list(/obj/effect/rune, /obj/effect/heretic_rune) \
 	)
@@ -39,7 +39,7 @@
 
 	var/obj/effect/rune/target_rune = target
 	if(target_rune.log_when_erased)
-		user.log_message("erased [target_rune.cultist_name] rune using [src]", LOG_GAME)
+		user.log_message("стёр [target_rune.cultist_name] руну с помощью [src]", LOG_GAME)
 	SSshuttle.shuttle_purchase_requirements_met[SHUTTLE_UNLOCK_NARNAR] = TRUE
 
 /obj/item/gun/ballistic/bow/divine/with_quiver/Initialize(mapload)

@@ -5,7 +5,7 @@
 /datum/wound/pierce
 
 /datum/wound/pierce/bleed
-	name = "Piercing Wound"
+	name = "Колотая рана"
 	sound_effect = 'sound/weapons/slice.ogg'
 	processes = TRUE
 	treatable_by = list(/obj/item/stack/medical/suture)
@@ -49,7 +49,7 @@
 			new /obj/effect/temp_visual/dir_setting/bloodsplatter(victim.loc, victim.dir)
 			victim.bleed(blood_bled)
 		if(20 to INFINITY)
-			victim.visible_message(span_smalldanger("Неконтроллируемая струя крови начинает хлестать из [ru_otkuda_zone(limb.name)] [victim]!"), span_danger("<b>Из моей [ru_otkuda_zone(limb.name)] начинает выходить кровь ужасным темпом!</b>") , vision_distance=COMBAT_MESSAGE_RANGE)
+			victim.visible_message(span_smalldanger("Неконтролируемая струя крови начинает хлестать из [ru_otkuda_zone(limb.name)] [victim]!"), span_danger("<b>Из моей [ru_otkuda_zone(limb.name)] начинает выходить кровь ужасным темпом!</b>") , vision_distance=COMBAT_MESSAGE_RANGE)
 			victim.bleed(blood_bled)
 			new /obj/effect/temp_visual/dir_setting/bloodsplatter(victim.loc, victim.dir)
 			victim.add_splatter_floor(get_step(victim.loc, victim.dir))
@@ -171,7 +171,7 @@
 	wound_series = WOUND_SERIES_FLESH_PUNCTURE_BLEED
 
 /datum/wound/pierce/get_limb_examine_description()
-	return span_warning("The flesh on this limb appears badly perforated.")
+	return span_warning("Плоть на этой конечности выглядит ужасающе растерзанной.")
 
 /datum/wound/pierce/bleed/moderate
 	name = "Незначительная колотая рана"
@@ -237,7 +237,7 @@
 /datum/wound/pierce/bleed/critical
 	name = "Полостная рана"
 	desc = "Внутренние ткани и система кровообращения пациента разорваны, что сопровождается значительным внутренним кровотечением. Высок риск повреждения внутренних органов."
-	treat_text = "Срочное хирургическое вмешательство с последующим переливанием крови при тяжёлой потери крови."
+	treat_text = "Срочное хирургическое вмешательство с последующим переливанием крови при большой кровопотере."
 	examine_desc = "разорвана насквозь, едва удерживаясь костями"
 	occur_text = "разрывается на куски мяса, летящие во всех направлениях"
 	sound_effect = 'sound/effects/wounds/pierce3.ogg'

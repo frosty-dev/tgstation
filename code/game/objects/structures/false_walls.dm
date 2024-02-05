@@ -179,7 +179,7 @@
 	walltype = /turf/closed/wall/mineral/uranium
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = SMOOTH_GROUP_URANIUM_WALLS + SMOOTH_GROUP_WALLS
-	canSmoothWith = SMOOTH_GROUP_URANIUM_WALLS + SMOOTH_GROUP_WINDOW_FULLTILE
+	canSmoothWith =  SMOOTH_GROUP_WINDOW_FULLTILE + SMOOTH_GROUP_URANIUM_WALLS
 
 	/// Mutex to prevent infinite recursion when propagating radiation pulses
 	var/active = null

@@ -1,17 +1,17 @@
 /// Some defines for items the cult archives can create.
-#define CULT_BLINDFOLD "Zealot's Blindfold"
-#define CURSE_ORB "Shuttle Curse"
-#define VEIL_WALKER "Veil Walker Set"
+#define CULT_BLINDFOLD "Повязка зилота"
+#define CURSE_ORB "Проклятие шаттла"
+#define VEIL_WALKER "Комплект для ходьбы по вуали"
 
 // Cult archives. Gives out utility items.
 /obj/structure/destructible/cult/item_dispenser/archives
-	name = "archives"
-	desc = "A desk covered in arcane manuscripts and tomes in unknown languages. Looking at the text makes your skin crawl."
-	cult_examine_tip = "Can be used to create zealot's blindfolds, shuttle curse orbs, and veil walker equipment."
+	name = "архивы"
+	desc = "Письменный стол, заваленный заумными манускриптами и томами на неизвестных языках. При взгляде на текст по коже бегут мурашки."
+	cult_examine_tip = "Можно использовать для создания повязок зелота, шаттловых орбов проклятия и комплектов для ходьбы по вуали."
 	icon_state = "tomealtar"
 	light_range = 1.5
 	light_color = LIGHT_COLOR_FIRE
-	break_message = "<span class='warning'>The books and tomes of the archives burn into ash as the desk shatters!</span>"
+	break_message = "<span class='warning'>Книги и тома архива сгорают в пепел, а стол разбивается вдребезги!</span>"
 
 /obj/structure/destructible/cult/item_dispenser/archives/setup_options()
 	var/static/list/archive_items = list(
@@ -32,7 +32,7 @@
 	options = archive_items
 
 /obj/structure/destructible/cult/item_dispenser/archives/succcess_message(mob/living/user, obj/item/spawned_item)
-	to_chat(user, span_cultitalic("You summon [spawned_item] from [src]!"))
+	to_chat(user, span_cultitalic("Призываю [spawned_item] с [src]!"))
 
 // Preset for the library that doesn't spawn runed metal on destruction.
 /obj/structure/destructible/cult/item_dispenser/archives/library

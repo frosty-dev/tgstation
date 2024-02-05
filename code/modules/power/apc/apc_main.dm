@@ -6,8 +6,8 @@
 // three different channels (lighting/equipment/environ) - may each be set to on, off, or auto
 
 /obj/machinery/power/apc
-	name = "area power controller"
-	desc = "A control terminal for the area's electrical systems."
+	name = "энергощиток АПЦ"
+	desc = "Терминал управления для электрических систем отсека."
 	icon = 'icons/obj/machines/wallmounts.dmi'
 	icon_state = "apc0"
 	use_power = NO_POWER_USE

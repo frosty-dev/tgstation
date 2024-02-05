@@ -657,34 +657,15 @@
 
 /datum/holiday/xmas
 	name = CHRISTMAS
-	begin_day = 23
+	begin_day = 22
 	begin_month = DECEMBER
-	end_day = 27
+	end_day = 3
+	end_month = JANUARY
 	holiday_hat = /obj/item/clothing/head/costume/santa
 	mail_holiday = TRUE
 
-/datum/holiday/xmas/getStationPrefix()
-	return pick(
-		"Bible",
-		"Birthday",
-		"Chimney",
-		"Claus",
-		"Crucifixion",
-		"Elf",
-		"Fir",
-		"Ho Ho Ho",
-		"Jesus",
-		"Jolly",
-		"Merry",
-		"Present",
-		"Sack",
-		"Santa",
-		"Sleigh",
-		"Yule",
-	)
-
 /datum/holiday/xmas/greet()
-	return "Have a merry Christmas!"
+	return "Счастливого Рождества!"
 
 /datum/holiday/boxing
 	name = "Boxing Day"
@@ -701,7 +682,7 @@
 	mail_holiday = TRUE
 
 /datum/holiday/new_year/getStationPrefix()
-	return pick("Party","New","Hangover","Resolution", "Auld")
+	return pick("Праздничный","Новый","Похмельный","Новогодний")
 
 // MOVING DATES
 

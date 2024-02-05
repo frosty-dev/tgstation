@@ -88,9 +88,9 @@
 	///The volume of the ambient buzz
 	var/ambient_buzz_vol = 35
 	///Used to decide what the minimum time between ambience is
-	var/min_ambience_cooldown = 30 SECONDS
+	var/min_ambience_cooldown = 90 SECONDS // WD EDIT, INITIAL WAS 30
 	///Used to decide what the maximum time between ambience is
-	var/max_ambience_cooldown = 60 SECONDS
+	var/max_ambience_cooldown = 240 SECONDS // WD EDIT, INITIAL WAS 60
 
 	flags_1 = CAN_BE_DIRTY_1
 
@@ -108,7 +108,7 @@
 	var/datum/map_generator/map_generator
 
 	///Used to decide what kind of reverb the area makes sound have
-	var/sound_environment = SOUND_ENVIRONMENT_NONE
+	var/sound_environment = SOUND_ENVIRONMENT_HANGAR // WD EDIT, WAS SOUND_ENVIRONMENT_NONE
 
 	/// List of all air vents in the area
 	var/list/obj/machinery/atmospherics/components/unary/vent_pump/air_vents = list()
@@ -459,9 +459,12 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 	if(!L.ckey)
 		return
 
-	if(ambient_buzz != old_area.ambient_buzz)
-		L.refresh_looping_ambience()
+	if(longambient_type != old_area.longambient_type)
+		play_long_ambient(L.client)
 
+//	if(ambient_buzz != old_area.ambient_buzz)
+//		L.refresh_looping_ambience()
+/* // WD EDIT, REPLACED BY white_ambience.dm
 ///Tries to play looping ambience to the mobs.
 /mob/proc/refresh_looping_ambience()
 	SIGNAL_HANDLER
@@ -473,7 +476,7 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 		return
 
 	SEND_SOUND(src, sound(my_area.ambient_buzz, repeat = 1, wait = 0, volume = my_area.ambient_buzz_vol, channel = CHANNEL_BUZZ))
-
+*/
 
 /**
  * Called when an atom exits an area

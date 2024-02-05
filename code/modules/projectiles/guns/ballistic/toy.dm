@@ -1,6 +1,6 @@
 /obj/item/gun/ballistic/automatic/toy
-	name = "foam force SMG"
-	desc = "A prototype three-round burst toy submachine gun. Ages 8 and up."
+	name = "игрушечный пистолет-пулемет"
+	desc = "Пистолет-пулемет стреляющий трехзарядными очередями. Для детей от 8 лет."
 	icon_state = "saber"
 	selector_switch_icon = TRUE
 	inhand_icon_state = "gun"
@@ -19,8 +19,8 @@
 	pin = /obj/item/firing_pin
 
 /obj/item/gun/ballistic/automatic/pistol/toy
-	name = "foam force pistol"
-	desc = "A small, easily concealable toy handgun. Ages 8 and up."
+	name = "игрушечный пистолет"
+	desc = "Маленький игрушечный пистолетик. Для детей от 8 лет."
 	accepted_magazine_type = /obj/item/ammo_box/magazine/toy/pistol
 	fire_sound = 'sound/items/syringeproj.ogg'
 	gun_flags = TOY_FIREARM_OVERLAY | NOT_A_REAL_GUN
@@ -33,8 +33,8 @@
 	return ..()
 
 /obj/item/gun/ballistic/shotgun/toy
-	name = "foam force shotgun"
-	desc = "A toy shotgun with wood furniture and a four-shell capacity underneath. Ages 8 and up."
+	name = "игрушечный дробовик"
+	desc = "Игрушечный дробовик с деревянным прикладом и цевьем. Вмещает в себя 4 пенных дротика. Для детей от 8 лет."
 	force = 0
 	throwforce = 0
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/toy
@@ -56,8 +56,8 @@
 	pin = /obj/item/firing_pin
 
 /obj/item/gun/ballistic/shotgun/toy/crossbow
-	name = "foam force crossbow"
-	desc = "A weapon favored by many overactive children. Ages 8 and up."
+	name = "игрушечный арбалет"
+	desc = "Любимое оружие всех гиперактивных детей. Для детей от 8 и старше."
 	icon = 'icons/obj/toys/toy.dmi'
 	icon_state = "foamcrossbow"
 	inhand_icon_state = "crossbow"
@@ -74,8 +74,8 @@
 	gun_flags = NONE
 
 /obj/item/gun/ballistic/automatic/c20r/toy //This is the syndicate variant with syndicate firing pin and riot darts.
-	name = "donksoft SMG"
-	desc = "A bullpup three-round burst toy SMG, designated 'C-20r'. Ages 8 and up."
+	name = "игрушечный C-20r"
+	desc = "Игрушечный пистолет-пулемет с трехзарядной очередью булл-пап, получивший обозначение C-20r. Для детей от 8 и старше."
 	can_suppress = TRUE
 	item_flags = NONE
 	accepted_magazine_type = /obj/item/ammo_box/magazine/toy/smgm45
@@ -92,8 +92,8 @@
 	spawn_magazine_type = /obj/item/ammo_box/magazine/toy/smgm45/riot
 
 /obj/item/gun/ballistic/automatic/l6_saw/toy //This is the syndicate variant with syndicate firing pin and riot darts.
-	name = "donksoft LMG"
-	desc = "A heavily modified toy light machine gun, designated 'L6 SAW'. Ages 8 and up."
+	name = "игрушечный пулемет L6"
+	desc = "Очень прокачанный игрушечный пулемет'L6 SAW'. Для детей от 8 и старше."
 	fire_sound = 'sound/items/syringeproj.ogg'
 	can_suppress = FALSE
 	item_flags = NONE

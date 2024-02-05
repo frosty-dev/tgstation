@@ -16,9 +16,9 @@
 	desc = null
 	icon = 'icons/obj/machines/status_display.dmi'
 	icon_state = "frame"
-	verb_say = "beeps"
-	verb_ask = "beeps"
-	verb_exclaim = "beeps"
+	verb_say = "констатирует"
+	verb_ask = "констатирует"
+	verb_exclaim = "восклицает"
 	density = FALSE
 	layer = ABOVE_WINDOW_LAYER
 

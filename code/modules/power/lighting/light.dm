@@ -1,9 +1,9 @@
 // the standard tube light fixture
 /obj/machinery/light
-	name = "light fixture"
+	name = "лампочка"
 	icon = 'icons/obj/lighting.dmi'
 	icon_state = "tube"
-	desc = "A lighting fixture."
+	desc = "Лампочка продолговатой формы, которая светится. Угу."
 	layer = WALL_OBJ_LAYER
 	plane = GAME_PLANE_UPPER
 	max_integrity = 100
@@ -26,7 +26,7 @@
 	///Basically the alpha of the emitted light source
 	var/bulb_power = 1
 	///Default colour of the light.
-	var/bulb_colour = LIGHT_COLOR_DEFAULT
+	var/bulb_colour = "#f3fffa"
 	///LIGHT_OK, _EMPTY, _BURNED or _BROKEN
 	var/status = LIGHT_OK
 	///Should we flicker?
@@ -171,8 +171,6 @@
 	. = ..()
 	if(!on || status != LIGHT_OK)
 		return
-
-	. += emissive_appearance(overlay_icon, "[base_state]", src, alpha = src.alpha)
 
 	var/area/local_area = get_room_area(src)
 
@@ -724,3 +722,20 @@
 /obj/machinery/light/floor/broken
 	status = LIGHT_BROKEN
 	icon_state = "floor-broken"
+
+// -------- Directional presets
+// The directions are backwards on the lights we have now
+
+// ---- Floor tube
+/obj/machinery/light/floor/directional/north
+	dir = NORTH
+
+/obj/machinery/light/floor/directional/south
+	dir = SOUTH
+
+/obj/machinery/light/floor/directional/east
+	dir = EAST
+
+/obj/machinery/light/floor/directional/west
+	dir = WEST
+

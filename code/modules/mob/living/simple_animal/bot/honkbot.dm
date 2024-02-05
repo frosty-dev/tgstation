@@ -1,6 +1,6 @@
 /mob/living/simple_animal/bot/secbot/honkbot
-	name = "\improper Honkbot"
-	desc = "A little robot. It looks happy with its bike horn."
+	name = "ХОНКбот"
+	desc = "Маленький робот. Выглядит счастливым когда дудит в свой рог."
 	icon_state = "honkbot"
 	damage_coeff = list(BRUTE = 1, BURN = 1, TOX = 0, CLONE = 0, STAMINA = 0, OXY = 0)
 	combat_mode = FALSE
@@ -17,7 +17,7 @@
 	baton_type = /obj/item/bikehorn
 	cuff_type = /obj/item/restraints/handcuffs/cable/zipties/fake/used
 	security_mode_flags = SECBOT_CHECK_WEAPONS | SECBOT_HANDCUFF_TARGET
-	possessed_message = "You are a honkbot! Make sure the crew are having a great time!"
+	possessed_message = "Ты ХОНКбот! Позаботься о том чтобы экипаж здорово провёл время на борту станции!"
 
 	automated_announcements = list(
 		HONKBOT_VOICED_HONK_HAPPY = 'sound/items/bikehorn.ogg',
@@ -93,11 +93,11 @@
 		threatlevel -= 6
 	addtimer(CALLBACK(src, PROC_REF(limiting_spam_false)), cooldowntime)
 
-	log_combat(src, current_target, "honked")
+	log_combat(src, current_target, "ХОНКнут")
 
 	current_target.visible_message(
-		span_danger("[src] honks [current_target]!"), \
-		span_userdanger("[src] honks you!"), \
+		span_danger("[src] ХОНКает [current_target]!"), \
+		span_userdanger("[src] ХОНКает меня!"), \
 	)
 
 	target_lastloc = target.loc

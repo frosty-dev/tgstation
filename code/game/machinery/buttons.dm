@@ -1,6 +1,6 @@
 /obj/machinery/button
-	name = "button"
-	desc = "A remote control switch."
+	name = "кнопка"
+	desc = "Переключатель с дистанционным управлением."
 	icon = 'icons/obj/machines/wallmounts.dmi'
 	base_icon_state = "button"
 	icon_state = "button"
@@ -88,9 +88,6 @@
 			. += "[base_icon_state]-overlay-signaler"
 		else
 			. += "[base_icon_state]-overlay-device"
-
-	if(!(machine_stat & (NOPOWER|BROKEN)) && !panel_open)
-		. += emissive_appearance(icon, "[base_icon_state]-light-mask", src, alpha = src.alpha)
 
 /obj/machinery/button/screwdriver_act(mob/living/user, obj/item/tool)
 	if(panel_open || allowed(user))
@@ -222,7 +219,6 @@
 		return
 
 	if(!allowed(user))
-		balloon_alert(user, "access denied")
 		flick_overlay_view("[base_icon_state]-overlay-error", 1 SECONDS)
 		return
 

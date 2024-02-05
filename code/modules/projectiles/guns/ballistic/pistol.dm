@@ -1,6 +1,6 @@
 /obj/item/gun/ballistic/automatic/pistol
-	name = "\improper Makarov pistol"
-	desc = "A small, easily concealable 9mm handgun. Has a threaded barrel for suppressors."
+	name = "Пистолет Макарова"
+	desc = "Небольшой пистолет калибра 9мм. На стволе есть резьба для глушителя."
 	icon_state = "pistol"
 	w_class = WEIGHT_CLASS_SMALL
 	accepted_magazine_type = /obj/item/ammo_box/magazine/m9mm
@@ -20,7 +20,7 @@
 	lock_back_sound = 'sound/weapons/gun/pistol/lock_small.ogg'
 	bolt_drop_sound = 'sound/weapons/gun/pistol/drop_small.ogg'
 	fire_sound_volume = 90
-	bolt_wording = "slide"
+	bolt_wording = "передергивает затвор"
 	suppressor_x_offset = 10
 	suppressor_y_offset = -1
 
@@ -36,16 +36,16 @@
 	install_suppressor(S)
 
 /obj/item/gun/ballistic/automatic/pistol/clandestine
-	name = "\improper Ansem pistol"
-	desc = "The spiritual successor of the Makarov, or maybe someone just dropped their gun in a bucket of paint. The gun is chambered in 10mm."
+	name = "пистолет Ярыгина"
+	desc = "Духовный наследник пистолета Макарова. Снаряжен 10мм патронами."
 	icon_state = "pistol_evil"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/m10mm
 	empty_indicator = TRUE
 	suppressor_x_offset = 12
 
 /obj/item/gun/ballistic/automatic/pistol/m1911
-	name = "\improper M1911"
-	desc = "A classic .45 handgun with a small magazine capacity."
+	name = "Кольт M1911"
+	desc = "Классика галактического масштаба. Знаменит так же своим калибром .45 и небольшой вместимостью магазина."
 	icon_state = "m1911"
 	w_class = WEIGHT_CLASS_NORMAL
 	accepted_magazine_type = /obj/item/ammo_box/magazine/m45
@@ -60,8 +60,8 @@
  * 15 damage every.. second? 7 shots to kill. Not fast.
  */
 /obj/item/gun/ballistic/automatic/pistol/m1911/chimpgun
-	name = "\improper CH1M911"
-	desc = "For the monkey mafioso on-the-go. Uses .45 rounds and has the distinct smell of bananas."
+	name = "CH1M911"
+	desc = "Для членов обезьян-мафиозо и приближенных к Семье. Использует патроны калибра .45 и слегка пахнет бананами."
 	projectile_damage_multiplier = 0.5
 	projectile_wound_bonus = -12
 	pin = /obj/item/firing_pin/monkey
@@ -71,8 +71,8 @@
 	spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/automatic/pistol/deagle
-	name = "\improper Desert Eagle"
-	desc = "A robust .50 AE handgun."
+	name = "Desert Eagle"
+	desc = "Мощный пистолет .50 AE калибра."
 	icon_state = "deagle"
 	force = 14
 	accepted_magazine_type = /obj/item/ammo_box/magazine/m50
@@ -84,20 +84,20 @@
 	bolt_drop_sound = 'sound/weapons/gun/pistol/slide_drop.ogg'
 
 /obj/item/gun/ballistic/automatic/pistol/deagle/gold
-	desc = "A gold plated Desert Eagle folded over a million times by superior martian gunsmiths. Uses .50 AE ammo."
+	desc = "Позолоченный Desert Eagle созданный лучшими марсианскими оружейниками. Калибр .50 AE."
 	icon_state = "deagleg"
 	inhand_icon_state = "deagleg"
 
 /obj/item/gun/ballistic/automatic/pistol/deagle/camo
-	desc = "A Deagle brand Deagle for operators operating operationally. Uses .50 AE ammo."
+	desc = "Особый вид пистолетов для всех тактикульных операторов оперирующих операционно во время операций. Калибр 50 AE."
 	icon_state = "deaglecamo"
 	inhand_icon_state = "deagleg"
 
 /obj/item/gun/ballistic/automatic/pistol/deagle/regal
-	name = "\improper Regal Condor"
-	desc = "Unlike the Desert Eagle, this weapon seems to utilize some kind of advanced internal stabilization system to significantly \
-		reduce felt recoil and increase overall accuracy, at the cost of using a smaller caliber. \
-		This does allow it to fire a very quick 2-round burst. Uses 10mm ammo."
+	name = "Regal Condor"
+	desc = "В отличие от Desert Eagle, в этом пистолете используется особая внутренняя система стабилизации позволяющая значительно \
+		уменьшить отдачу и увеличить точность, ценой использования меньшего калибра. \
+		Это позволило стрелять быстрыми очередями по 2 выстрела за раз. Калибр 10мм."
 	icon_state = "reagle"
 	inhand_icon_state = "deagleg"
 	burst_size = 2
@@ -108,8 +108,8 @@
 	obj_flags = UNIQUE_RENAME // if you did the sidequest, you get the customization
 
 /obj/item/gun/ballistic/automatic/pistol/aps
-	name = "\improper Stechkin APS machine pistol"
-	desc = "An old Soviet machine pistol. It fires quickly, but kicks like a mule. Uses 9mm ammo. Has a threaded barrel for suppressors."
+	name = "Пистолет Стечкина"
+	desc = "Старый советский пистолет. Высокая скорострельность ценой конской отдачи. Калибр 9мм. Ствол имеет резьбу для глушителей."
 	icon_state = "aps"
 	w_class = WEIGHT_CLASS_NORMAL
 	accepted_magazine_type = /obj/item/ammo_box/magazine/m9mm_aps
@@ -121,19 +121,19 @@
 	suppressor_x_offset = 6
 
 /obj/item/gun/ballistic/automatic/pistol/stickman
-	name = "flat gun"
-	desc = "A 2 dimensional gun.. what?"
+	name = "пистолетик"
+	desc = "Плоский 2д пистолет...Что?"
 	icon_state = "flatgun"
 	mag_display = FALSE
 	show_bolt_icon = FALSE
 
 /obj/item/gun/ballistic/automatic/pistol/stickman/equipped(mob/user, slot)
 	..()
-	to_chat(user, span_notice("As you try to manipulate [src], it slips out of your possession.."))
+	to_chat(user, span_notice("Пытаясь взять [src], упускаю его из рук..."))
 	if(prob(50))
-		to_chat(user, span_notice("..and vanishes from your vision! Where the hell did it go?"))
+		to_chat(user, span_notice("..и теряю из виду! Куда, чёрт возьми, он запропастился?"))
 		qdel(src)
 		user.update_icons()
 	else
-		to_chat(user, span_notice("..and falls into view. Whew, that was a close one."))
+		to_chat(user, span_notice("..и замечаю куда он упал. Фух, чуть не потерял."))
 		user.dropItemToGround(src)

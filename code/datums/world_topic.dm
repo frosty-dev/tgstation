@@ -27,6 +27,10 @@
 
 /datum/world_topic/proc/TryRun(list/input)
 	key_valid = config && (CONFIG_GET(string/comms_key) == input["key"])
+	var/key_cvalid = config && (CONFIG_GET(string/cross_key) == input["key"])
+	if(require_comms_key && !key_valid)
+		if(!key_cvalid) //хочу спать
+			return "Bad Key"
 	input -= "key"
 	if(require_comms_key && !key_valid)
 		. = "Bad Key"
@@ -239,3 +243,136 @@
 		// Shuttle status, see /__DEFINES/stat.dm
 		.["shuttle_timer"] = SSshuttle.emergency.timeLeft()
 		// Shuttle timer, in seconds
+
+/datum/world_topic/players
+	keyword = "players"
+	log = FALSE
+
+/datum/world_topic/players/Run(list/input)
+	return GLOB.whitelist.len + GLOB.player_list.len
+
+/datum/world_topic/adminwho
+	keyword = "adminwho"
+	log = FALSE
+
+/datum/world_topic/adminwho/Run(list/input)
+	var/msg = "Педали:\n"
+	for(var/adm in GLOB.admins)
+		var/client/C = adm
+		if(!C.holder.fakekey)
+			msg += "\t[C] - [C.holder.rank_names()]"
+			msg += "\n"
+	return msg
+
+/datum/world_topic/who
+	keyword = "who"
+	log = FALSE
+
+/datum/world_topic/who/Run(list/input)
+	var/msg = "Текущие игроки:\n"
+	var/n = 0
+	for(var/client/C in GLOB.clients)
+		n++
+		if(C.holder && C.holder.fakekey)
+			msg += "\t[C.holder.fakekey]\n"
+		else
+			msg += "\t[C.key]\n"
+	msg += "Всего: [n]"
+	return msg
+
+/datum/world_topic/asay
+	keyword = "asay"
+	require_comms_key = TRUE
+
+/datum/world_topic/asay/Run(list/input)
+	var/msg = "<font color='[GLOB.OOC_COLOR]'><span class='adminobserver'><span class='prefix'>DASAY</span> <EM>[input["admin"]]</EM>: <span class='message linkify'>[input["asay"]]</span></span></font>"
+	to_chat(GLOB.admins, msg)
+
+/datum/world_topic/ooc
+	keyword = "ooc"
+	require_comms_key = TRUE
+
+/datum/world_topic/ooc/Run(list/input)
+	if(!GLOB.ooc_allowed && !input["isadmin"])
+		return "globally muted"
+
+	if(is_banned_from(ckey(input["ckey"]), "OOC"))
+		return "you are retard"
+
+	for(var/client/C in GLOB.clients)
+		if(get_chat_toggles(C) & CHAT_OOC) // ooc ignore
+			to_chat(C, "<font color='[GLOB.OOC_COLOR]'><span class='ooc'><span class='prefix'>DOOC</span> <EM>[input["ckey"]]:</EM> <span class='message linkify'>[input["ooc"]]</span></span></font>")
+
+/datum/world_topic/ahelp
+	keyword = "adminhelp"
+	require_comms_key = TRUE
+
+/datum/world_topic/ahelp/Run(list/input)
+	var/r_ckey = ckey(input["ckey"])
+	var/s_admin = input["admin"]
+	var/msg = input["response"]
+	var/keywordparsedmsg = keywords_lookup(msg)
+	var/client/recipient = GLOB.directory[r_ckey]
+	if(!recipient)
+		return "FAIL"
+	if(!recipient.current_ticket)
+		new /datum/admin_help(msg, recipient, TRUE)
+	to_chat(recipient, "<font color='red' size='4'><b>-- Сообщение администратора из Discord --</b></font>")
+	to_chat(recipient, span_red("Сообщение от <b>[s_admin]</b>: [msg]"))
+	to_chat(recipient, span_red("<i>Нажми на имя администратора для ответа.</i>"))
+	to_chat(src, span_blue("Сообщение для <b>[key_name(recipient, 1, 1)]</b>: [msg]"))
+
+	recipient.giveadminhelpverb() //reset ahelp CD to allow fast reply
+
+	admin_ticket_log(recipient, span_blue("PM From [s_admin]: [keywordparsedmsg]"))
+	SEND_SOUND(recipient, sound('sound/effects/adminhelp.ogg'))
+	log_admin_private("PM: IRC -> [r_ckey]: [sanitize(msg)]")
+	for(var/client/X in GLOB.admins)
+		to_chat(X, span_blue("<B>PM: DISCORD([s_admin]) -&gt; [key_name(recipient, X, 0)]</B> [keywordparsedmsg]"))
+	webhook_send_ahelp("[input["admin"]] -> [ckey(input["ckey"])]", input["response"])
+
+/datum/world_topic/special_cmd
+	keyword = "special_cmd"
+	require_comms_key = TRUE
+
+/datum/world_topic/special_cmd/Run(list/input)
+	if(!input["proc"])
+		return "WHERE IS PROC"
+
+	var/list/proclist = splittext(input["proc"], "/")
+	if (!length(proclist))
+		return "WHAT THE FUCK"
+
+	var/procname = proclist[proclist.len]
+	var/proctype = ("verb" in proclist) ? "verb" : "proc"
+
+	var/procpath = "/[proctype]/[procname]"
+	if(!text2path(procpath))
+		return "Error: callproc(): [procpath] does not exist."
+	var/list/lst = json_decode(input["args"])
+	if(!lst)
+		return "NO ARGS ARRRRGH NIGGER"
+
+	log_admin("InCon -> [procname]() -> [lst.len ? "[list2params(lst)]":"0 args"].")
+	message_admins("InCon -> [procname]() -> [lst.len ? "[list2params(lst)]":"0 args"].")
+
+	return call("/proc/[procname]")(arglist(lst))
+
+/**
+ * Отправляет админ-анноунс
+ */
+/proc/global_fucking_announce(text, userkey = null)
+	to_chat(world, "<span class='adminnotice'><b>[userkey ? userkey : "Администратор"] делает объявление:</b></span>\n \t [text]")
+	return TRUE
+
+/datum/world_topic/socket
+	keyword = "socket"
+	require_comms_key = TRUE
+
+/datum/world_topic/socket/Run(list/input)
+	if(!input)
+		return json_encode(list("ERROR"))
+
+	var/mob/living/L = pick(GLOB.mob_living_list)
+
+	return json_encode(view(7, L))

@@ -64,7 +64,7 @@
 	if(!legend)
 		var/area/A = get_area(user)
 		if(get_area_type() == AREA_STATION)
-			. += "<p>Судя по \the [src], я сейчас в <b>\"[html_encode(A.name)]\"</b>.</p>"
+			. += "<p>Судя по [src], я сейчас в <b>\"[html_encode(A.name)]\"</b>.</p>"
 			. += "<p><a href='?src=[REF(src)];edit_area=1'>Изменить название области</a></p>"
 		. += "<p><a href='?src=[REF(src)];view_legend=1'>Просмотр цветовой легенды кабелей</a></p>"
 		if(!viewing)

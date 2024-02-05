@@ -7,7 +7,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	set category = "OOC"
 
 	if(GLOB.say_disabled) //This is here to try to identify lag problems
-		to_chat(usr, span_danger("Speech is currently admin-disabled."))
+		to_chat(usr, span_danger("Речь в настоящее время отключена администратором."))
 		return
 
 	if(!mob)
@@ -17,16 +17,16 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 
 	if(!holder)
 		if(!GLOB.ooc_allowed)
-			to_chat(src, span_danger("OOC is globally muted."))
+			to_chat(src, span_danger("OOC выключен."))
 			return
 		if(!GLOB.dooc_allowed && (mob.stat == DEAD))
-			to_chat(usr, span_danger("OOC for dead mobs has been turned off."))
+			to_chat(usr, span_danger("OOC трупам не разрешён."))
 			return
 		if(prefs.muted & MUTE_OOC)
-			to_chat(src, span_danger("You cannot use OOC (muted)."))
+			to_chat(src, span_danger("Вы не можете использовать ООС (muted)."))
 			return
 	if(is_banned_from(ckey, "OOC"))
-		to_chat(src, span_danger("You have been banned from OOC."))
+		to_chat(src, span_danger("Да вас же забанили с OOC!"))
 		return
 	if(QDELETED(src))
 		return
@@ -63,13 +63,13 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 		if(handle_spam_prevention(msg,MUTE_OOC))
 			return
 		if(findtext(msg, "byond://"))
-			to_chat(src, span_boldannounce("<B>Advertising other servers is not allowed.</B>"))
+			to_chat(src, "<B>Привет, ты что, охуел?</B>")
 			log_admin("[key_name(src)] has attempted to advertise in OOC: [msg]")
 			message_admins("[key_name_admin(src)] has attempted to advertise in OOC: [msg]")
 			return
 
 	if(!(get_chat_toggles(src) & CHAT_OOC))
-		to_chat(src, span_danger("You have OOC muted."))
+		to_chat(src, span_danger("Тебе нельзя."))
 		return
 
 	mob.log_talk(raw_msg, LOG_OOC)
@@ -108,7 +108,10 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 				to_chat(receiver, "<span class='oocplain'><font color='[GLOB.OOC_COLOR]'><b>[span_prefix("OOC:")] <EM>[keyname]:</EM> <span class='message linkify'>[msg]</span></b></font></span>", avoid_highlighting = avoid_highlight)
 			else
 				to_chat(receiver, span_ooc(span_prefix("OOC:</span> <EM>[keyname]:</EM> <span class='message linkify'>[msg]")), avoid_highlighting = avoid_highlight)
-
+	if(isnewplayer(mob))
+		webhook_send_lobby(key, raw_msg)
+	else
+		webhook_send_ooc(key, raw_msg)
 
 /proc/toggle_ooc(toggle = null)
 	if(toggle != null) //if we're specifically en/disabling ooc
@@ -118,7 +121,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 			return
 	else //otherwise just toggle it
 		GLOB.ooc_allowed = !GLOB.ooc_allowed
-	to_chat(world, "<span class='oocplain'><B>The OOC channel has been globally [GLOB.ooc_allowed ? "enabled" : "disabled"].</B></span>")
+	to_chat(world, "<B>Чат ООС был глобально [GLOB.ooc_allowed ? "включен" : "отключен"]!</B>")
 
 /proc/toggle_dooc(toggle = null)
 	if(toggle != null)
@@ -167,17 +170,17 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 
 //Checks admin notice
 /client/verb/admin_notice()
-	set name = "Adminnotice"
+	set name = "📘 Заметки от педалей"
 	set category = "Admin"
 	set desc ="Check the admin notice if it has been set"
 
 	if(GLOB.admin_notice)
-		to_chat(src, "[span_boldnotice("Admin Notice:")]\n \t [GLOB.admin_notice]")
+		to_chat(src, "[span_boldnotice("ЗАМЕТКА АДМИНА:")]\n \t [GLOB.admin_notice]")
 	else
-		to_chat(src, span_notice("There are no admin notices at the moment."))
+		to_chat(src, span_notice("На данный момент педальных раундовых заметок нет."))
 
 /client/verb/motd()
-	set name = "MOTD"
+	set name = "📘 Приветствие"
 	set category = "OOC"
 	set desc ="Check the Message of the Day"
 
@@ -188,18 +191,18 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 		to_chat(src, span_notice("The Message of the Day has not been set."))
 
 /client/proc/self_notes()
-	set name = "View Admin Remarks"
+	set name = "📘 Просмотреть чем я отличился"
 	set category = "OOC"
-	set desc = "View the notes that admins have written about you"
+	set desc = "Просмотреть заметки, которые педали написали о вас"
 
 	if(!CONFIG_GET(flag/see_own_notes))
-		to_chat(usr, span_notice("Sorry, that function is not enabled on this server."))
+		to_chat(usr, span_notice("Эта функция отключена конфигурацией сервера."))
 		return
 
 	browse_messages(null, usr.ckey, null, TRUE)
 
 /client/proc/self_playtime()
-	set name = "View tracked playtime"
+	set name = "📘 Моё время игры"
 	set category = "OOC"
 	set desc = "View the amount of playtime for roles the server has tracked."
 
@@ -211,7 +214,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 
 // Ignore verb
 /client/verb/select_ignore()
-	set name = "Ignore"
+	set name = "❌ Игнорировать"
 	set category = "OOC"
 	set desc ="Ignore a player's messages on the OOC channel"
 
@@ -293,7 +296,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 
 // Unignore verb
 /client/verb/select_unignore()
-	set name = "Unignore"
+	set name = "❌ Не игнорировать"
 	set category = "OOC"
 	set desc = "Stop ignoring a player's messages on the OOC channel"
 
@@ -330,21 +333,21 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	to_chat(src, "<span class='infoplain'>You are no longer ignoring [selection] on the OOC channel.</span>")
 
 /client/proc/show_previous_roundend_report()
-	set name = "Your Last Round"
+	set name = "📘 Мой последний раунд"
 	set category = "OOC"
 	set desc = "View the last round end report you've seen"
 
 	SSticker.show_roundend_report(src, report_type = PERSONAL_LAST_ROUND)
 
 /client/proc/show_servers_last_roundend_report()
-	set name = "Server's Last Round"
+	set name = "📘 Последний раунд сервера"
 	set category = "OOC"
 	set desc = "View the last round end report from this server"
 
 	SSticker.show_roundend_report(src, report_type = SERVER_LAST_ROUND)
 
 /client/verb/fit_viewport()
-	set name = "Fit Viewport"
+	set name = "ПОЧИНИТЬ ЭКРАН"
 	set category = "OOC"
 	set desc = "Fit the width of the map window to match the viewport"
 
@@ -424,7 +427,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 		addtimer(CALLBACK(src, VERB_REF(fit_viewport), 1 SECONDS))
 
 /client/verb/policy()
-	set name = "Show Policy"
+	set name = "📘 Показать политику"
 	set desc = "Show special server rules related to your current character."
 	set category = "OOC"
 
@@ -445,13 +448,13 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	usr << browse(policytext.Join(""),"window=policy")
 
 /client/verb/fix_stat_panel()
-	set name = "Fix Stat Panel"
+	set name = "Починить верхнюю панель"
 	set hidden = TRUE
 
 	init_verbs()
 
 /client/proc/export_preferences()
-	set name = "Export Preferences"
+	set name = "Экспорт настроек"
 	set desc = "Export your current preferences to a file."
 	set category = "OOC"
 

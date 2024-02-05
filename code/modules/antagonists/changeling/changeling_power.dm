@@ -107,6 +107,6 @@ the same goes for Remove(). if you override Remove(), call parent or else your p
 	if(!ishuman(user))
 		return FALSE
 	if(req_human && ismonkey(user))
-		user.balloon_alert(user, "становлюсь человеком!")
+		user.balloon_alert(user, "стань человеком!")
 		return FALSE
 	return TRUE

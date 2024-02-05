@@ -32,6 +32,7 @@
 #define span_clown(str) ("<span class='clown'>" + str + "</span>")
 #define span_colossus(str) ("<span class='colossus'>" + str + "</span>")
 #define span_command_headset(str) ("<span class='command_headset'>" + str + "</span>")
+#define span_italics(str) ("<span class='italics'>" + str + "</span>")
 #define span_comradio(str) ("<span class='comradio'>" + str + "</span>")
 #define span_cult(str) ("<span class='cult'>" + str + "</span>")
 #define span_cultbold(str) ("<span class='cultbold'>" + str + "</span>")

@@ -23,7 +23,7 @@
 
 /datum/reagent/blob/energized_jelly
 	name = "Заряженное желе"
-	enname = "Energized Jelly"
+	enname = "Energized Blob Jelly"
 	taste_description = "желатин"
 	color = "#EFD65A"
 

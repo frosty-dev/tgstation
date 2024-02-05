@@ -35,19 +35,19 @@
 	if(!select)
 		burst_size = 1
 		fire_delay = 0
-		balloon_alert(user, "switched to semi-automatic")
+		balloon_alert(user, "переключил на полуавтомат")
 	else
 		burst_size = initial(burst_size)
 		fire_delay = initial(fire_delay)
-		balloon_alert(user, "switched to [burst_size]-round burst")
+		balloon_alert(user, "переключил на [burst_size]-зарядную очередь")
 
 	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
 	update_appearance()
 	update_item_action_buttons()
 
 /obj/item/gun/ballistic/automatic/proto
-	name = "\improper Nanotrasen Saber SMG"
-	desc = "A prototype full-auto 9mm submachine gun, designated 'SABR'. Has a threaded barrel for suppressors."
+	name = "ПП NT Saber"
+	desc = "Образец автоматического 9мм пистолета-пулемета с штатным названием 'SABR'. Ствоил имеет резьбу для глушителя."
 	icon_state = "saber"
 	burst_size = 1
 	actions_types = list()
@@ -66,8 +66,8 @@
 	pin = /obj/item/firing_pin
 
 /obj/item/gun/ballistic/automatic/c20r
-	name = "\improper C-20r SMG"
-	desc = "A bullpup three-round burst .45 SMG, designated 'C-20r'. Has a 'Scarborough Arms - Per falcis, per pravitas' buttstamp."
+	name = "ПП C-20r"
+	desc = "Пистолет-пулемет сконструированный по системе буллпап. Стреляет очередями по 3 выстрела пулями .45 SMG калибра. Сбоку виден штамп: 'Scarborough Arms - Per falcis, per pravitas'."
 	icon_state = "c20r"
 	inhand_icon_state = "c20r"
 	selector_switch_icon = TRUE
@@ -95,12 +95,12 @@
 	update_appearance()
 
 /obj/item/gun/ballistic/automatic/wt550
-	name = "\improper WT-550 Autorifle"
-	desc = "Recalled by Nanotrasen due to public backlash around heat distribution resulting in unintended discombobulation. \
-		This outcry was fabricated through various Syndicate-backed misinformation operations to force Nanotrasen to abandon \
-		its ballistics weapon program, cornering them into the energy weapons market. Most often found today in the hands of pirates, \
-		underfunded security personnel, cargo technicians, theoritical physicists and gang bangers out on the rim. \
-		Light-weight and fully automatic. Uses 4.6x30mm rounds."
+	name = "ПП WT-550"
+	desc = "Производство этих пистолетов-пулеметов было свёрнуто НТ из-за слухов о ненадёжности данного оружия. \
+		Слухи были сфабрикованы по заказу Синдиката в попытках застопорить разработку НТ собственного баллистического оружия, \
+		оттеснив их в сторону разработки энергетических вооружений. В наши дни остатки от той партии которую успели выпустить можно встретить в руках пиратов, \
+		дешевого охранного персонала, каргонцев, теоретических физиков и бандитов. \
+		Легкий и полностью автоматический.  Калибр 4.6x30mm."
 	icon_state = "wt550"
 	w_class = WEIGHT_CLASS_BULKY
 	inhand_icon_state = "arg"
@@ -121,8 +121,8 @@
 	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)
 
 /obj/item/gun/ballistic/automatic/plastikov
-	name = "\improper PP-95 SMG"
-	desc = "An ancient 9mm submachine gun pattern updated and simplified to lower costs, though perhaps simplified too much."
+	name = "ПП-95"
+	desc = "Конструкция классического 9мм пистолета-пулемета была обновлена и упрощена для снижения стоимости. Возможно, упростили слишком сильно."
 	icon_state = "plastikov"
 	inhand_icon_state = "plastikov"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/plastikov9mm
@@ -136,8 +136,8 @@
 	fire_sound = 'sound/weapons/gun/smg/shot_alt.ogg'
 
 /obj/item/gun/ballistic/automatic/mini_uzi
-	name = "\improper Type U3 Uzi"
-	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
+	name = "ПП Узи U3"
+	desc = "Лёгкий пистолет-пулемет с режимом стрельбы очередями. Идеально, когда вы таки хотите увидеть кого-то мёртвым! Калибр 9mm."
 	icon_state = "miniuzi"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/uzim9mm
 	burst_size = 2
@@ -151,15 +151,16 @@
  * Roughly 9 damage per bullet every 0.2 seconds, equaling out to downing an opponent in a bit over a second, if they have no armor.
  */
 /obj/item/gun/ballistic/automatic/mini_uzi/chimpgun
-	name = "\improper MONK-10"
-	desc = "Developed by Syndicate monkeys, for syndicate Monkeys. Despite the name, this weapon resembles an Uzi significantly more than a MAC-10. Uses 9mm rounds. There's a label on the other side of the gun that says \"Do what comes natural.\""
+	name = "ПП MONK-10"
+	desc = "Разработан мартышками для мартышек в лабораториях Синдиката. Несмотря на название этот пистолет-пулемет напоминает Узи значительно сильнее чем MAC-10. Калибр 9mm.\
+	Сбоку висит этикетка с надписью: \"Что естественно, то не безобразно.\""
 	projectile_damage_multiplier = 0.4
 	projectile_wound_bonus = -25
 	pin = /obj/item/firing_pin/monkey
 
 /obj/item/gun/ballistic/automatic/m90
-	name = "\improper M-90gl Carbine"
-	desc = "A three-round burst 5.56 toploading carbine, designated 'M-90gl'. Has an attached underbarrel grenade launcher."
+	name = "Карабин M-90-25ГП"
+	desc = "Карабин стреляет короткими очередями по 3 выстрела. Заряжается сверху калибром 5.56. Маркирован 25ГП по причине несъемного подствольного гранатомёта. Мечта любого морского пехотинца."
 	desc_controls = "ПКМ to use grenade launcher."
 	icon_state = "m90"
 	w_class = WEIGHT_CLASS_BULKY
@@ -214,8 +215,8 @@
 			. += "[initial(icon_state)]_burst"
 
 /obj/item/gun/ballistic/automatic/tommygun
-	name = "\improper Thompson SMG"
-	desc = "Based on the classic 'Chicago Typewriter'."
+	name = "ПП Томпсон"
+	desc = "На основе классической 'Чикагскской печатной машинки'."
 	icon_state = "tommygun"
 	inhand_icon_state = "shotgun"
 	selector_switch_icon = TRUE
@@ -241,8 +242,8 @@
  * Roughly 9 damage per bullet every 0.2 seconds, equaling out to downing an opponent in a bit over a second, if they have no armor.
  */
 /obj/item/gun/ballistic/automatic/tommygun/chimpgun
-	name = "\improper Typewriter"
-	desc = "It was the best of times, it was the BLURST of times!? You stupid monkeys!"
+	name = "Печатная машинка"
+	desc = "Один, два, десять! Ха-ха-ха-ха! Сдачу можешь оставить себе, грязное животное."
 	fire_delay = 2
 	rof = 0.2 SECONDS
 	projectile_damage_multiplier = 0.4
@@ -250,8 +251,8 @@
 	pin = /obj/item/firing_pin/monkey
 
 /obj/item/gun/ballistic/automatic/ar
-	name = "\improper NT-ARG 'Boarder'"
-	desc = "A robust assault rifle used by Nanotrasen fighting forces."
+	name = "NT-ARG 'Пограничник'"
+	desc = "Мощная штурмовая винтовка используемая вооруженными силами НТ."
 	icon_state = "arg"
 	inhand_icon_state = "arg"
 	slot_flags = 0
@@ -263,8 +264,8 @@
 // L6 SAW //
 
 /obj/item/gun/ballistic/automatic/l6_saw
-	name = "\improper L6 SAW"
-	desc = "A heavily modified 7mm light machine gun, designated 'L6 SAW'. Has 'Aussec Armoury - 2531' engraved on the receiver below the designation."
+	name = "L6 SAW"
+	desc = "Сильно модифицированный 7мм пулемет, штатное название - 'L6 SAW'. Чуть ниже ресивера выгравировано название - 'Aussec Armoury - 2531'."
 	icon_state = "l6"
 	inhand_icon_state = "l6closedmag"
 	base_icon_state = "l6"
@@ -297,16 +298,16 @@
 
 /obj/item/gun/ballistic/automatic/l6_saw/examine(mob/user)
 	. = ..()
-	. += "<b>alt + click</b> to [cover_open ? "close" : "open"] the dust cover."
+	. += "<b>alt + клик</b> чтобы [cover_open ? "закрыть" : "открыть"] защитную крышку."
 	if(cover_open && magazine)
-		. += span_notice("It seems like you could use an <b>empty hand</b> to remove the magazine.")
+		. += span_notice("Извлечь магазин можно <b>пустой рукой</b>.")
 
 
 /obj/item/gun/ballistic/automatic/l6_saw/AltClick(mob/user)
 	if(!user.can_perform_action(src))
 		return
 	cover_open = !cover_open
-	balloon_alert(user, "cover [cover_open ? "opened" : "closed"]")
+	balloon_alert(user, "крышка [cover_open ? "открыта" : "закрыта"]")
 	playsound(src, 'sound/weapons/gun/l6/l6_door.ogg', 60, TRUE)
 	update_appearance()
 
@@ -323,7 +324,7 @@
 	. |= AFTERATTACK_PROCESSED_ITEM
 
 	if(cover_open)
-		balloon_alert(user, "close the cover!")
+		balloon_alert(user, "закрой крышку!")
 		return
 	else
 		. |= ..()
@@ -335,21 +336,21 @@
 		..()
 		return
 	if (!cover_open)
-		balloon_alert(user, "open the cover!")
+		balloon_alert(user, "открой крышку!")
 		return
 	..()
 
 /obj/item/gun/ballistic/automatic/l6_saw/attackby(obj/item/A, mob/user, params)
 	if(!cover_open && istype(A, accepted_magazine_type))
-		balloon_alert(user, "open the cover!")
+		balloon_alert(user, "открой крышку")
 		return
 	..()
 
 // Old Semi-Auto Rifle //
 
 /obj/item/gun/ballistic/automatic/surplus
-	name = "Surplus Rifle"
-	desc = "One of countless obsolete ballistic rifles that still sees use as a cheap deterrent. Uses 10mm ammo and its bulky frame prevents one-hand firing."
+	name = "Винтовка 'Surplus'"
+	desc = "Одна из бесчисленного множества устаревших баллистических винтовок, которые до сих пор используются в качестве дешевого вооружения. Калибр 10мм, а его громоздкая рама делает стрельбу одной рукой невозможной."
 	icon_state = "surplus"
 	worn_icon_state = null
 	weapon_weight = WEAPON_HEAVY
@@ -366,8 +367,8 @@
 // Laser rifle (rechargeable magazine) //
 
 /obj/item/gun/ballistic/automatic/laser
-	name = "laser rifle"
-	desc = "Though sometimes mocked for the relatively weak firepower of their energy weapons, the logistic miracle of rechargeable ammunition has given Nanotrasen a decisive edge over many a foe."
+	name = "лазерная винтовка"
+	desc = "Высмеиваемая многими критиками невысокая огневая мощь этого оружия компенсируется возможностью на ходу заменить энергетический магазин винтовки, что дало НТ огромное преимущество на рынке в своё время."
 	icon_state = "oldrifle"
 	w_class = WEIGHT_CLASS_BULKY
 	inhand_icon_state = "arg"

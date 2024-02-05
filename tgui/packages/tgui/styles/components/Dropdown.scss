@@ -33,7 +33,9 @@
   overflow-y: auto;
   align-items: center;
   z-index: 5;
+  width: base.em(100px);
   max-height: base.em(200px);
+  overflow-y: scroll;
   border-radius: 0 0 base.em(2px) base.em(2px);
   color: #fff;
   background-color: #000;

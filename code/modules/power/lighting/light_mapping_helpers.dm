@@ -61,7 +61,7 @@
 	fire_brightness = 3
 	bulb_colour = "#FFD6AA"
 	fire_colour = "#bd3f46"
-	desc = "A small lighting fixture."
+	desc = "Тускло светится. Ах."
 	light_type = /obj/item/light/bulb
 
 /obj/machinery/light/small/broken

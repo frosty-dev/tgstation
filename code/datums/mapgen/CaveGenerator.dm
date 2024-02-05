@@ -99,8 +99,8 @@
 		if(gen_turf.turf_flags & NO_RUINS)
 			new_turf.turf_flags |= NO_RUINS
 
-	var/message = "[name] terrain generation finished in [(REALTIMEOFDAY - start_time)/10]s!"
-	to_chat(world, span_boldannounce("[message]"))
+	var/message = "[name] is done job for [(REALTIMEOFDAY - start_time)/10] s!"
+	to_chat(world, span_green(" -- #<b>[name]</b>:> <b>[(REALTIMEOFDAY - start_time)/10]</b> -- "))
 	log_world(message)
 
 /datum/map_generator/cave_generator/populate_terrain(list/turfs, area/generate_in)
@@ -187,6 +187,6 @@
 				spawned_something = TRUE
 		CHECK_TICK
 
-	var/message = "[name] terrain population finished in [(REALTIMEOFDAY - start_time)/10]s!"
-	to_chat(world, span_boldannounce("[message]"))
+	var/message = "[name] is done job for [(REALTIMEOFDAY - start_time)/10]s!"
+	to_chat(world, span_green(" -- #<b>[name]</b>:> <b>[(REALTIMEOFDAY - start_time)/10]</b> -- "))
 	log_world(message)

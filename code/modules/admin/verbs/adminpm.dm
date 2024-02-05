@@ -406,7 +406,7 @@
 
 		to_chat(recipient,
 			type = MESSAGE_TYPE_ADMINPM,
-			html = "<font color='red' size='4'><b>-- Administrator private message --</b></font>",
+			html = "<font color='red' size='4'><b>-- Сообщение от администратора --</b></font>",
 			confidential = TRUE)
 
 		recipient.receive_ahelp(
@@ -416,13 +416,12 @@
 
 		to_chat(recipient,
 			type = MESSAGE_TYPE_ADMINPM,
-			html = span_adminsay("<i>Click on the administrator's name to reply.</i>"),
+			html = span_adminsay("<i>Нажми на имя администратора для ответа.</i>"),
 			confidential = TRUE)
 		to_chat(src,
 			type = MESSAGE_TYPE_ADMINPM,
 			html = span_notice("Admin PM to-<b>[their_name_with_link]</b>: [span_linkify(send_message)]"),
 			confidential = TRUE)
-
 		admin_ticket_log(recipient,
 			"<font color='purple'>PM From [name_key_with_link]: [keyword_parsed_msg]</font>",
 			log_in_blackbox = FALSE,
@@ -516,6 +515,7 @@
 
 	ticket.reply_to_admins_notification(send_message)
 	SSblackbox.LogAhelp(ticket_id, "Reply", send_message, recip_ckey, our_ckey)
+	webhook_send_ahelp("PM: [key_name(src)]->[key_name(recipient)]", send_message)
 
 	return TRUE
 

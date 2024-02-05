@@ -31,7 +31,7 @@ Fluoride Stare: After someone says 5 words, blah blah blah...
 /obj/item/organ/internal/heart/gondola/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/organ_set_bonus, /datum/status_effect/organ_set_bonus/gondola)
-	AddElement(/datum/element/noticable_organ, "изулучает ауру спокойствия.", BODY_ZONE_CHEST)
+	AddElement(/datum/element/noticable_organ, "тело изулучает ауру спокойствия.", BODY_ZONE_CHEST)
 
 /obj/item/organ/internal/heart/gondola/Insert(mob/living/carbon/receiver, special, drop_if_replaced)
 	. = ..()

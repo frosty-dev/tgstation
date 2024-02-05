@@ -46,7 +46,7 @@ export const ChatPageSettings = (props, context) => {
         </Stack.Item>
       </Stack>
       <Divider />
-      <Section title="Messages to display" level={2}>
+      <Section title="Сообщения для отображения" level={2}>
         {MESSAGE_TYPES.filter(
           (typeDef) => !typeDef.important && !typeDef.admin
         ).map((typeDef) => (

@@ -1,15 +1,15 @@
 /obj/item/firing_pin
-	name = "electronic firing pin"
-	desc = "A small authentication device, to be inserted into a firearm receiver to allow operation. NT safety regulations require all new designs to incorporate one."
+	name = "электронный боек"
+	desc = "Небольшое устройство аутентификации которое вживляется в обычный боек. Правила безопасности NT требуют, чтобы все виды стрелкового вооружения поставлялись с таким бойком."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "firing_pin"
 	inhand_icon_state = "pen"
 	worn_icon_state = "pen"
 	flags_1 = CONDUCT_1
 	w_class = WEIGHT_CLASS_TINY
-	attack_verb_continuous = list("pokes")
-	attack_verb_simple = list("poke")
-	var/fail_message = "invalid user!"
+	attack_verb_continuous = list("тыкает")
+	attack_verb_simple = list("тык")
+	var/fail_message = "неавторизованный пользователь!"
 	/// Explode when user check is failed.
 	var/selfdestruct = FALSE
 	/// Can forcefully replace other pins.
@@ -44,11 +44,11 @@
 					return .
 				if(gun_insert(user, targetted_gun))
 					if(old_pin)
-						balloon_alert(user, "swapped firing pin")
+						balloon_alert(user, "поменял боек")
 					else
-						balloon_alert(user, "inserted firing pin")
+						balloon_alert(user, "вставил боек")
 			else
-				to_chat(user, span_notice("This firearm already has a firing pin installed."))
+				to_chat(user, span_notice("Боек уже установлен внутри."))
 
 			return .
 
@@ -56,7 +56,7 @@
 	if(obj_flags & EMAGGED)
 		return FALSE
 	obj_flags |= EMAGGED
-	balloon_alert(user, "authentication checks overridden")
+	balloon_alert(user, "проверки доступа перезаписаны")
 	return TRUE
 
 /obj/item/firing_pin/proc/gun_insert(mob/living/user, obj/item/gun/G)
@@ -78,23 +78,23 @@
 		balloon_alert(user, fail_message)
 	if(selfdestruct)
 		if(user)
-			user.show_message("[span_danger("SELF-DESTRUCTING...")]<br>", MSG_VISUAL)
-			to_chat(user, span_userdanger("[gun] explodes!"))
+			user.show_message("[span_danger("САМОУНИЧТОЖЕНИЕ...")]<br>", MSG_VISUAL)
+			to_chat(user, span_userdanger("[gun] взрывается!"))
 		explosion(src, devastation_range = -1, light_impact_range = 2, flash_range = 3)
 		if(gun)
 			qdel(gun)
 
 
 /obj/item/firing_pin/magic
-	name = "magic crystal shard"
-	desc = "A small enchanted shard which allows magical weapons to fire."
+	name = "осколок магического кристалла"
+	desc = "Маленький зачарованный осколок. С его помощью происходит выстрел во всех магических оружиях!"
 
 
 // Test pin, works only near firing range.
 /obj/item/firing_pin/test_range
-	name = "test-range firing pin"
-	desc = "This safety firing pin allows weapons to be fired within proximity to a firing range."
-	fail_message = "test range check failed!"
+	name = "тренировочный боек"
+	desc = "Этот боек позволяет использовать стрелковое оружие только на стрельбище."
+	fail_message = "вы не на стрельбище!"
 	pin_hot_swappable = TRUE
 
 /obj/item/firing_pin/test_range/pin_auth(mob/living/user)
@@ -107,9 +107,9 @@
 
 // Implant pin, checks for implant
 /obj/item/firing_pin/implant
-	name = "implant-keyed firing pin"
-	desc = "This is a security firing pin which only authorizes users who are implanted with a certain device."
-	fail_message = "implant check failed!"
+	name = "персональный боек"
+	desc = "Этот боек позволяет использовать оружие только авторизованным соответстввующим образом пользователям."
+	fail_message = "нет импланта!"
 	var/obj/item/implant/req_implant = null
 
 /obj/item/firing_pin/implant/pin_auth(mob/living/user)
@@ -120,13 +120,13 @@
 	return FALSE
 
 /obj/item/firing_pin/implant/mindshield
-	name = "mindshield firing pin"
-	desc = "This Security firing pin authorizes the weapon for only mindshield-implanted users."
+	name = "боек службы безопасности"
+	desc = "Этот боек позволяет использовать оружие пользователям с установленным имплантом защиты разума."
 	icon_state = "firing_pin_loyalty"
 	req_implant = /obj/item/implant/mindshield
 
 /obj/item/firing_pin/implant/pindicate
-	name = "syndicate firing pin"
+	name = "боек синдиката"
 	icon_state = "firing_pin_pindi"
 	req_implant = /obj/item/implant/weapons_auth
 
@@ -135,10 +135,10 @@
 // Honk pin, clown's joke item.
 // Can replace other pins. Replace a pin in cap's laser for extra fun!
 /obj/item/firing_pin/clown
-	name = "hilarious firing pin"
-	desc = "Advanced clowntech that can convert any firearm into a far more useful object."
+	name = "смешной боек"
+	desc = "Продвинутые технологии клоунов могут преобразовать любое оружие в гораздо более полезную вещь."
 	color = "#FFFF00"
-	fail_message = "honk!"
+	fail_message = "<b>ХОНК!</b>"
 	force_replace = TRUE
 
 /obj/item/firing_pin/clown/pin_auth(mob/living/user)
@@ -148,7 +148,7 @@
 // Ultra-honk pin, clown's deadly joke item.
 // A gun with ultra-honk pin is useful for clown and useless for everyone else.
 /obj/item/firing_pin/clown/ultra
-	name = "ultra hilarious firing pin"
+	name = "очень смешной боек"
 
 /obj/item/firing_pin/clown/ultra/pin_auth(mob/living/user)
 	playsound(src.loc, 'sound/items/bikehorn.ogg', 50, TRUE)
@@ -176,18 +176,18 @@
 
 // Now two times deadlier!
 /obj/item/firing_pin/clown/ultra/selfdestruct
-	name = "super ultra hilarious firing pin"
-	desc = "Advanced clowntech that can convert any firearm into a far more useful object. It has a small nitrobananium charge on it."
+	name = "очень-очень смешной боек"
+	desc = "Продвинутые технологии клоунов могут преобразовать любое оружие в гораздо более полезную вещь. Внутрь установлен небольшой заряд нитробананиума."
 	selfdestruct = TRUE
 
 
 // DNA-keyed pin.
 // When you want to keep your toys for yourself.
 /obj/item/firing_pin/dna
-	name = "DNA-keyed firing pin"
-	desc = "This is a DNA-locked firing pin which only authorizes one user. Attempt to fire once to DNA-link."
+	name = "ДНК-блокируемый боек"
+	desc = "Это боек, заблокированный ДНК, который разрешает использовать только одному пользователю. Прежде чем стрелять авторизуйте пользователя."
 	icon_state = "firing_pin_dna"
-	fail_message = "dna check failed!"
+	fail_message = "проверка ДНК провалена!"
 	var/unique_enzymes = null
 
 /obj/item/firing_pin/dna/afterattack(atom/target, mob/user, proximity_flag)
@@ -196,7 +196,7 @@
 		var/mob/living/carbon/M = target
 		if(M.dna && M.dna.unique_enzymes)
 			unique_enzymes = M.dna.unique_enzymes
-			balloon_alert(user, "dna lock set")
+			balloon_alert(user, "Блокировка ДНК установлена")
 
 /obj/item/firing_pin/dna/pin_auth(mob/living/carbon/user)
 	if(user && user.dna && user.dna.unique_enzymes)
@@ -208,19 +208,19 @@
 	if(!unique_enzymes)
 		if(user && user.dna && user.dna.unique_enzymes)
 			unique_enzymes = user.dna.unique_enzymes
-			balloon_alert(user, "dna lock set")
+			balloon_alert(user, "Блокировка ДНК установлена")
 	else
 		..()
 
 /obj/item/firing_pin/dna/dredd
-	desc = "This is a DNA-locked firing pin which only authorizes one user. Attempt to fire once to DNA-link. It has a small explosive charge on it."
+	desc = "Это боек, заблокированный ДНК, который разрешает использовать только одному пользователю. Прежде чем стрелять авторизуйте пользователя. Внутрь установлена небольшая порция взрывчатки."
 	selfdestruct = TRUE
 
 // Paywall pin, brought to you by ARMA 3 DLC.
 // Checks if the user has a valid bank account on an ID and if so attempts to extract a one-time payment to authorize use of the gun. Otherwise fails to shoot.
 /obj/item/firing_pin/paywall
-	name = "paywall firing pin"
-	desc = "A firing pin with a built-in configurable paywall."
+	name = "еврейский боек"
+	desc = "Чтобы стрелять следует <b>ПЛОТИТЬ</b>."
 	color = "#FFD700"
 	fail_message = ""
 	///list of account IDs which have accepted the license prompt. If this is the multi-payment pin, then this means they accepted the waiver that each shot will cost them money
@@ -236,25 +236,25 @@
 
 /obj/item/firing_pin/paywall/attack_self(mob/user)
 	multi_payment = !multi_payment
-	to_chat(user, span_notice("You set the pin to [( multi_payment ) ? "process payment for every shot" : "one-time license payment"]."))
+	to_chat(user, span_notice("Вы настраиваете боек чтобы [( multi_payment ) ? "платить за каждый выстрел " : "купить лицензию сразу"]."))
 
 /obj/item/firing_pin/paywall/examine(mob/user)
 	. = ..()
 	if(pin_owner)
-		. += span_notice("This firing pin is currently authorized to pay into the account of [pin_owner.account_holder].")
+		. += span_notice("В данный момент боек расходует средства с аккаунта [pin_owner.account_holder].")
 
 /obj/item/firing_pin/paywall/gun_insert(mob/living/user, obj/item/gun/G)
 	if(!pin_owner)
-		to_chat(user, span_warning("ERROR: Please swipe valid identification card before installing firing pin!"))
+		to_chat(user, span_warning("Ошибка! Пожалуйста, проведите по бойку ID-картой авторизованного члена экипажа"))
 		user.put_in_hands(src)
 		return FALSE
 	gun = G
 	forceMove(gun)
 	gun.pin = src
 	if(multi_payment)
-		gun.desc += span_notice(" This [gun.name] has a per-shot cost of [payment_amount] credit[( payment_amount > 1 ) ? "s" : ""].")
+		gun.desc += span_notice("Внутрь [gun.name] установлен еврейский боек с [payment_amount] кредитов[( payment_amount > 1 ) ? "s" : ""].")
 		return TRUE
-	gun.desc += span_notice(" This [gun.name] has a license permit cost of [payment_amount] credit[( payment_amount > 1 ) ? "s" : ""].")
+	gun.desc += span_notice(" Внутрь [gun.name] установлен еврейский боек  с безлимитной лицензией на стрельбу стоимостью [payment_amount] кредитов[( payment_amount > 1 ) ? "s" : ""].")
 	return TRUE
 
 
@@ -266,25 +266,25 @@
 	if(isidcard(M))
 		var/obj/item/card/id/id = M
 		if(!id.registered_account)
-			to_chat(user, span_warning("ERROR: Identification card lacks registered bank account!"))
+			to_chat(user, span_warning("ОШИБКА: У данного ID отсутствует зарегистрированный банковский счет!"))
 			return
 		if(id.registered_account != pin_owner && owned)
-			to_chat(user, span_warning("ERROR: This firing pin has already been authorized!"))
+			to_chat(user, span_warning("ОШИБКА: Этот боек уже авторизован!"))
 			return
 		if(id.registered_account == pin_owner)
-			to_chat(user, span_notice("You unlink the card from the firing pin."))
+			to_chat(user, span_notice("Отвязываю банковский счёт от бойка."))
 			gun_owners -= user.get_bank_account()
 			pin_owner = null
 			owned = FALSE
 			return
-		var/transaction_amount = tgui_input_number(user, "Insert valid deposit amount for gun purchase", "Money Deposit")
+		var/transaction_amount = tgui_input_number(user, "Для покупки оружия внесите депозит", "Депозит")
 		if(!transaction_amount || QDELETED(user) || QDELETED(src) || !user.can_perform_action(src, FORBID_TELEKINESIS_REACH))
 			return
 		pin_owner = id.registered_account
 		owned = TRUE
 		payment_amount = transaction_amount
 		gun_owners += user.get_bank_account()
-		to_chat(user, span_notice("You link the card to the firing pin."))
+		to_chat(user, span_notice("Вы привязываете карту к бойку"))
 
 /obj/item/firing_pin/paywall/pin_auth(mob/living/user)
 	if(!istype(user))//nice try commie
@@ -294,20 +294,20 @@
 		if(multi_payment && credit_card_details)
 			if(!gun.can_shoot())
 				return TRUE //So you don't get charged for attempting to fire an empty gun.
-			if(credit_card_details.adjust_money(-payment_amount, "Firing Pin: Gun Rent"))
+			if(credit_card_details.adjust_money(-payment_amount, "Еврейский боек: аренда оружия"))
 				if(pin_owner)
-					pin_owner.adjust_money(payment_amount, "Firing Pin: Payout For Gun Rent")
+					pin_owner.adjust_money(payment_amount, "Еврейский боек: аренда оружия")
 				return TRUE
-			to_chat(user, span_warning("ERROR: User balance insufficent for successful transaction!"))
+			to_chat(user, span_warning("ОШИБКА: мало деняк на счету!"))
 			return FALSE
 		return TRUE
 	if(!credit_card_details)
-		to_chat(user, span_warning("ERROR: User has no valid bank account to subtract neccesary funds from!"))
+		to_chat(user, span_warning("ОШИБКА: Нет подходящего счёта для списания деняк!"))
 		return FALSE
 	if(active_prompt_user == user)
 		return FALSE
 	active_prompt_user = user
-	var/license_request = tgui_alert(user, "Do you wish to pay [payment_amount] credit[( payment_amount > 1 ) ? "s" : ""] for [( multi_payment ) ? "each shot of [gun.name]" : "usage license of [gun.name]"]?", "Weapon Purchase", list("Yes", "No"), 15 SECONDS)
+	var/license_request = tgui_alert(user, "Вы хотите заплатить [payment_amount] кредитов[( payment_amount > 1 ) ? "s" : ""] за [( multi_payment ) ? "каждый выстрел из [gun.name]" : "купить абонемент [gun.name]"]?", "Покупка оружия", list("Yes", "No"), 15 SECONDS)
 	if(!user.can_perform_action(src))
 		active_prompt_user = null
 		return FALSE
@@ -315,19 +315,19 @@
 		if("Yes")
 			if(multi_payment)
 				gun_owners += credit_card_details
-				to_chat(user, span_notice("Gun rental terms agreed to, have a secure day!"))
+				to_chat(user, span_notice("Условия аренды оружия согласованы, удачного вам дня!"))
 
-			else if(credit_card_details.adjust_money(-payment_amount, "Firing Pin: Gun License"))
+			else if(credit_card_details.adjust_money(-payment_amount, "Боек: лицензия на оружие"))
 				if(pin_owner)
-					pin_owner.adjust_money(payment_amount, "Firing Pin: Gun License Bought")
+					pin_owner.adjust_money(payment_amount, "Боек: покупка лицензии на оружие")
 				gun_owners += credit_card_details
-				to_chat(user, span_notice("Gun license purchased, have a secure day!"))
+				to_chat(user, span_notice("Лицензия на оружие куплена, удачного дня!"))
 
 			else
-				to_chat(user, span_warning("ERROR: User balance insufficent for successful transaction!"))
+				to_chat(user, span_warning("ОШИБКА: Мало деняк для успешной операции!"))
 
 		if("No", null)
-			to_chat(user, span_warning("ERROR: User has declined to purchase gun license!"))
+			to_chat(user, span_warning("ОШИБКА: Пользователь отказался приобрести лицензию на оружие!"))
 	active_prompt_user = null
 	return FALSE //we return false here so you don't click initially to fire, get the prompt, accept the prompt, and THEN the gun
 
@@ -374,8 +374,8 @@
 	tagcolor = "blue"
 
 /obj/item/firing_pin/monkey
-	name = "monkeylock firing pin"
-	desc = "This firing pin prevents non-monkeys from firing a gun."
+	name = "обезьяний боек"
+	desc = "Этот боек запрещает стрелять не-мартышкам из оружия в который установлен."
 	fail_message = "not a monkey!"
 
 /obj/item/firing_pin/monkey/pin_auth(mob/living/user)

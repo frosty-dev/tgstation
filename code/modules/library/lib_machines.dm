@@ -277,9 +277,9 @@ GLOBAL_VAR_INIT(library_table_modified, 0)
 /obj/machinery/computer/libraryconsole/bookmanagement
 	name = "book inventory management console"
 	desc = "Librarian's command station."
-	verb_say = "beeps"
-	verb_ask = "beeps"
-	verb_exclaim = "beeps"
+	verb_say = "констатирует"
+	verb_ask = "констатирует"
+	verb_exclaim = "восклицает"
 	pass_flags = PASSTABLE
 
 	icon_state = "oldcomp"

@@ -184,7 +184,7 @@
 			return
 		else
 			cig.light()
-			user.visible_message(span_danger("As [user] lights \their [item] on  [atom_source], silence fills the room..."),\
+			user.visible_message(span_danger("As [user] lights ir [item] on  [atom_source], silence fills the room..."),\
 				span_danger("Time seems to slow to a crawl as you touch  [atom_source] with  [item].</span>\n<span class='notice'> [item] flashes alight with an eerie energy as you nonchalantly lift your hand away from  [atom_source]. Damn."))
 			playsound(atom_source, 'sound/effects/supermatter.ogg', 50, TRUE)
 			radiation_pulse(atom_source, max_range = 1, threshold = 0, chance = 100)

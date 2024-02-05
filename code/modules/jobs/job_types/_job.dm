@@ -198,6 +198,9 @@
 	if(EMERGENCY_PAST_POINT_OF_NO_RETURN && prob(VERY_LATE_ARRIVAL_TOAST_PROB))
 		equip_to_slot_or_del(new /obj/item/food/griddle_toast(src), ITEM_SLOT_MASK)
 
+	if(check_holidays(CHRISTMAS))
+		equip_to_slot_or_del(new /obj/item/stack/garland_pack/twenty(src), ITEM_SLOT_BACKPACK)
+
 #undef VERY_LATE_ARRIVAL_TOAST_PROB
 
 /mob/living/proc/dress_up_as_job(datum/job/equipping, visual_only = FALSE)

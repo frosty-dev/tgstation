@@ -40,6 +40,8 @@
 
 	return is_admin(preferences.parent)
 
+
+
 /datum/preference/toggle/bypass_deadmin_in_centcom
 	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
 	savefile_key = "bypass_deadmin_in_centcom"
@@ -73,3 +75,9 @@
 		return FALSE
 
 	return is_admin(preferences.parent)
+
+/datum/preference/toggle/see_looc
+	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
+	default_value = TRUE
+	savefile_key = "looc_admin_pref"
+	savefile_identifier = PREFERENCE_PLAYER

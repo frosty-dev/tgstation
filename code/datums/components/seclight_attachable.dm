@@ -226,7 +226,7 @@
 		return
 
 	add_light(attacking_item, attacker)
-	source.balloon_alert(attacker, "прикрепляет [attacking_item]")
+	source.balloon_alert(attacker, "прикрепляю [attacking_item]")
 	return COMPONENT_NO_AFTERATTACK
 
 /// Signal proc for [COMSIG_ATOM_TOOL_ACT] via [TOOL_SCREWDRIVER] that removes any attached seclite.

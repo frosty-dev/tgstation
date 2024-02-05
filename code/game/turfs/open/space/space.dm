@@ -45,7 +45,7 @@ GLOBAL_LIST_EMPTY(starlight)
 /turf/open/space
 	icon = 'icons/turf/space.dmi'
 	icon_state = "space"
-	name = "\proper space"
+	name = "космос"
 	overfloor_placed = FALSE
 	underfloor_accessibility = UNDERFLOOR_INTERACTABLE
 
@@ -64,9 +64,8 @@ GLOBAL_LIST_EMPTY(starlight)
 	run_later = TRUE
 	plane = PLANE_SPACE
 	layer = SPACE_LAYER
-	light_power = 1
+	light_power = 0.5
 	light_range = 2
-	light_color = COLOR_STARLIGHT
 	light_height = LIGHTING_HEIGHT_SPACE
 	light_on = FALSE
 	space_lit = TRUE

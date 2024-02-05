@@ -371,7 +371,7 @@
 	log_combat(usr, src, "detonated cyborg")
 	log_silicon("CYBORG: [key_name(src)] has been detonated by [key_name(usr)].")
 	if(connected_ai)
-		to_chat(connected_ai, "<br><br>[span_alert("ALERT - Cyborg detonation detected: [name]")]<br>")
+		to_chat(connected_ai, "<br><br>[span_alert("ВНИМАНИЕ - Зафиксировано уничтожение юнита - [name]")]<br>")
 
 	if(emagged)
 		QDEL_NULL(mmi)
@@ -396,7 +396,7 @@
 		// I could change the network to null but I don't know what would happen, and it seems too hacky for me.
 
 /mob/living/silicon/robot/mode()
-	set name = "Activate Held Object"
+	set name = "Использовать предмет в руке"
 	set category = "IC"
 	set src = usr
 
@@ -427,12 +427,12 @@
 /// Allows the borg to unlock themselves after a lenghty period of time.
 /mob/living/silicon/robot/proc/lockdown_override()
 	if(ai_lockdown)
-		to_chat(src, "<br><br>[span_alert("ALERT - Remote system lockdown override failed.")]<br>")
+		to_chat(src, "<br><br>[span_alert("ВНИМАНИЕ - Удаленная отмена блокировки системы не удалась.")]<br>")
 		return
 	set_lockcharge(FALSE)
-	to_chat(src, "<br><br>[span_notice("ALERT - Remote system lockdown override successful.")]<br>")
+	to_chat(src, "<br><br>[span_notice("ВНИМАНИЕ - Удаленная блокировка системы успешно отменена.")]<br>")
 	if(connected_ai)
-		to_chat(connected_ai, "<br><br>[span_notice("ALERT - Cyborg [name] succesfully overriden the lockdown system")]<br>")
+		to_chat(connected_ai, "<br><br>[span_notice("ВНИМАНИЕ - Юнит [name] успешно преодолел систему блокировки.")]<br>")
 
 ///Reports the event of the change in value of the lockcharge variable.
 /mob/living/silicon/robot/proc/set_lockcharge(new_lockcharge)

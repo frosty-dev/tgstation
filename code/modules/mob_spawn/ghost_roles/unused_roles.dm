@@ -112,23 +112,23 @@
 
 //For ghost bar.
 /obj/effect/mob_spawn/ghost_role/human/space_bar_patron
-	name = "bar cryogenics"
+	name = "криокапсульный бар"
 	uses = INFINITY
-	prompt_name = "a space bar patron"
-	you_are_text = "You're a patron!"
-	flavour_text = "Hang out at the bar and chat with your buddies. Feel free to hop back in the cryogenics when you're done chatting."
+	prompt_name = "Хранитель космобара"
+	you_are_text = "Вы Хранитель!"
+	flavour_text = "Присматривай за баром и болтай со своими приятелями. Не стесняйся запрыгнуть назад в криокапсулу, когда наболтаешься со своими друзьями."
 	outfit = /datum/outfit/cryobartender
 	spawner_job_path = /datum/job/space_bar_patron
 
 /obj/effect/mob_spawn/ghost_role/human/space_bar_patron/attack_hand(mob/user, list/modifiers)
-	var/despawn = tgui_alert(usr, "Return to cryosleep? (Warning, Your mob will be deleted!)", null, list("Yes", "No"))
+	var/despawn = tgui_alert(usr, "Вернуться в криокапсулу? (Внимание, ваш персонаж будет удалён!)", null, list("Да", "Нет"))
 	if(despawn == "No" || !loc || !Adjacent(user))
 		return
-	user.visible_message(span_notice("[user.name] climbs back into cryosleep..."))
+	user.visible_message(span_notice("[user.name] забираюсь назад в криокапсулу..."))
 	qdel(user)
 
 /datum/outfit/cryobartender
-	name = "Cryogenic Bartender"
+	name = "Бармен из криокапсулы"
 	neck = /obj/item/clothing/neck/bowtie
 	uniform = /obj/item/clothing/under/costume/buttondown/slacks/service
 	suit = /obj/item/clothing/suit/armor/vest
@@ -138,15 +138,15 @@
 
 //Timeless prisons: Spawns in Wish Granter prisons in lavaland. Ghosts become age-old users of the Wish Granter and are advised to seek repentance for their past.
 /obj/effect/mob_spawn/ghost_role/human/exile
-	name = "timeless prison"
-	desc = "Although this stasis pod looks medicinal, it seems as though it's meant to preserve something for a very long time."
-	prompt_name = "a penitent exile"
+	name = "вечное заключение"
+	desc = "Хотя этот стазис выглядит медицинским, похоже что он был создан для заключения кого-то в течение долгого времени...."
+	prompt_name = "раскаивающийся изгнанник"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	mob_species = /datum/species/shadow
-	you_are_text = "You are cursed."
-	flavour_text = "Years ago, you sacrificed the lives of your trusted friends and the humanity of yourself to reach the Wish Granter. Though you \
-	did so, it has come at a cost: your very body rejects the light, dooming you to wander endlessly in this horrible wasteland."
+	you_are_text = "Ты проклят."
+	flavour_text = "Годы назад ты пожертвовал жизнью своих преданных друзей и своей человечностью чтобы достигнуть Исполнителя Желаний. Это имело последствия: \
+	твоё тело отвергает любой свет, обрекая тебя бесконечно скитаться в этой ужасной пустоши..."
 	spawner_job_path = /datum/job/exile
 
 /obj/effect/mob_spawn/ghost_role/human/exile/Destroy()
@@ -155,37 +155,37 @@
 
 /obj/effect/mob_spawn/ghost_role/human/exile/special(mob/living/new_spawn)
 	. = ..()
-	new_spawn.fully_replace_character_name(null,"Wish Granter's Victim ([rand(1,999)])")
+	new_spawn.fully_replace_character_name(null,"Жертва Исполнителя Желаний ([rand(1,999)])")
 	var/wish = rand(1,4)
 	var/message = ""
 	switch(wish)
 		if(1)
-			message = "<b>You wished to kill, and kill you did. You've lost track of how many, but the spark of excitement that murder once held has winked out. You feel only regret.</b>"
+			message = "<b>Я хотел убить, и я это сделал. Уже давно потерял счет количеству убийств и та искра возбуждения, которая когда-то возникала в процессе убийства давно погасла. Я испытываю одно лишь сожаление.</b>"
 		if(2)
-			message = "<b>You wished for unending wealth, but no amount of money was worth this existence. Maybe charity might redeem your soul?</b>"
+			message = "<b>Я желал нескончаемого богатства, но никакие деньги не стоили такого существования. Может быть, благотворительность сможет искупить грехи?</b>"
 		if(3)
-			message = "<b>You wished for power. Little good it did you, cast out of the light. You are the [gender == MALE ? "king" : "queen"] of a hell that holds no subjects. You feel only remorse.</b>"
+			message = "<b>Всё, чего когда-либо я желал - власть. Стоила ли власть изгнания из мира? Я [gender == MALE ? "князь" : "княгиня"] тьмы, [gender == MALE ? "князь" : "княгиня"] тишины, и чувствую только раскаяние  .</b>"
 		if(4)
-			message = "<b>You wished for immortality, even as your friends lay dying behind you. No matter how many times you cast yourself into the lava, you awaken in this room again within a few days. There is no escape.</b>"
+			message = "<b>Я желал бессмертия, когда мои друзья умирали ради моих целей. Вне зависимости от того, сколько раз я брошусь в лаву, через несколько дней всё равно проснусь в этой комнате. Спасения нет.</b>"
 	to_chat(new_spawn, "<span class='infoplain'>[message]</span>")
 
 /obj/effect/mob_spawn/ghost_role/human/nanotrasensoldier
-	name = "sleeper"
+	name = "Криокапсула"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	faction = list(FACTION_NANOTRASEN_PRIVATE)
-	prompt_name = "a private security officer"
-	you_are_text = "You are a Nanotrasen Private Security Officer!"
-	flavour_text = "If higher command has an assignment for you, it's best you follow that. Otherwise, death to The Syndicate."
+	prompt_name = "офицер службы безопасности"
+	you_are_text = "Вы офицер службы безопасности Нанотрейзен!"
+	flavour_text = "Если у высшего командования есть для меня задание, лучше всего ему следовать. Если нет - смерть Синдикату!"
 	outfit = /datum/outfit/nanotrasensoldier
 
 /obj/effect/mob_spawn/ghost_role/human/commander
-	name = "sleeper"
+	name = "Криокапсула"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
-	prompt_name = "a nanotrasen commander"
-	you_are_text = "You are a Nanotrasen Commander!"
-	flavour_text = "Upper-crusty of Nanotrasen. You should be given the respect you're owed."
+	prompt_name = "командующий нанотрейзен"
+	you_are_text = "Вы командующий Нанотрейзен!"
+	flavour_text = "Верхушка цепи командования Нанотрейзен. Меня следует уважать как можно сильнее!"
 	outfit = /datum/outfit/nanotrasencommander
 
 //space doctor, a rat with cancer, and bessie from an old removed lavaland ruin.
@@ -194,9 +194,9 @@
 	name = "sleeper"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
-	prompt_name = "a space doctor"
-	you_are_text = "You are a space doctor!"
-	flavour_text = "It's your job- no, your duty as a doctor, to care and heal those in need."
+	prompt_name = "космический Айболит"
+	you_are_text = "Ты - космический Айболит!"
+	flavour_text = "Моя работа - хотя скорее призвание - заботиться и лечить всех, кто в нужде."
 	outfit = /datum/outfit/job/doctor
 	spawner_job_path = /datum/job/space_doctor
 
@@ -211,19 +211,19 @@
 /obj/effect/mob_spawn/ghost_role/mouse
 	name = "sleeper"
 	mob_type = /mob/living/basic/mouse
-	prompt_name = "a mouse"
-	you_are_text = "You're a mouse!"
-	flavour_text = "Uh... yep! Squeak squeak, motherfucker."
+	prompt_name = "мыш"
+	you_are_text = "Я - мыш!"
+	flavour_text = "Ммм...! Пи-пи, пидрила!"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 
 /obj/effect/mob_spawn/ghost_role/cow
 	name = "sleeper"
-	mob_name = "Bessie"
+	mob_name = "Бурёнка"
 	mob_type = /mob/living/basic/cow
-	prompt_name = "a cow"
-	you_are_text = "You're a cow!"
-	flavour_text = "Go graze some grass, stinky."
+	prompt_name = "коровка"
+	you_are_text = "Я коровка!"
+	flavour_text = "Пожуй немного травы!"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 
@@ -234,16 +234,16 @@
 // snow operatives on snowdin - unfortunately seemingly removed in a map remake womp womp
 
 /obj/effect/mob_spawn/ghost_role/human/snow_operative
-	name = "sleeper"
-	prompt_name = "a snow operative"
+	name = "Криокапсула"
+	prompt_name = "Оперативник во льдах"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	faction = list(ROLE_SYNDICATE)
 	outfit = /datum/outfit/snowsyndie
-	you_are_text = "You are a syndicate operative recently awoken from cryostasis in an underground outpost."
-	flavour_text = "Monitor Nanotrasen communications and record information. All intruders should be disposed of \
-	swiftly to assure no gathered information is stolen or lost. Try not to wander too far from the outpost as the \
-	caves can be a deadly place even for a trained operative such as yourself."
+	you_are_text = "Вы — оперативник синдиката, недавно очнувшийся от криостаза на подземной заставе."
+	flavour_text = "Контролируйте связь Nanotrasen и записывайте информацию. Любые посторонние лица на заставе должны быть уничтожены, \
+	чтобы гарантировать, что собранная информация не будет украдена или потеряна. Старайтесь не отходить слишком далеко от аванпоста, во избежания \
+	неоправданной гибели таких ценных кадров, как Вы."
 
 /datum/outfit/snowsyndie
 	name = "Syndicate Snow Operative"
@@ -259,14 +259,15 @@
 //Forgotten syndicate ship
 
 /obj/effect/mob_spawn/ghost_role/human/syndicatespace
-	name = "Syndicate Ship Crew Member"
+	name = "Член экипажа Cybersun Industries"
 	show_flavor = FALSE
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
 	prompt_name = "cybersun crew"
-	you_are_text = "You are a syndicate operative on old ship, stuck in hostile space."
-	flavour_text = "Your ship docks after a long time somewhere in hostile space, reporting a malfunction. You are stuck here, with Nanotrasen station nearby. Fix the ship, find a way to power it and follow your captain's orders."
-	important_text = "Obey orders given by your captain. DO NOT let the ship fall into enemy hands."
+	you_are_text = "Вы оперативник синдиката на старом корабле, застрявшем во враждебном секторе космоса."
+	flavour_text = "Ваш корабль наконец-то прекратил прекратил дрейфовать по космосу, остановившись где-то посреди космической бездны. \
+	Понимая, что рядом находится вражеская станция Нанотрейзен, вы должны починить корабль, найти способ восстановить подачу энергии, следовать приказам капитана и НЕ ПОКИДАТЬ корабль, оставляя его на произвол судьбы."
+	important_text = "Подчиняйтесь приказам Вашего капитана. НЕ ДАЙТЕ кораблю попасть в чужие руки, НЕ ПОКИДАЙТЕ корабль, превратите его в защищённую крепость для отражения возможных нападений."
 	outfit = /datum/outfit/syndicatespace/syndicrew
 	spawner_job_path = /datum/job/syndicate_cybersun
 
@@ -279,11 +280,12 @@
 		to_chat(new_spawn, span_bold("[policy]"))
 
 /obj/effect/mob_spawn/ghost_role/human/syndicatespace/captain
-	name = "Syndicate Ship Captain"
+	name = "Капитан корабля Cybersun Industries"
 	prompt_name = "a cybersun captain"
-	you_are_text = "You are the captain of an old ship, stuck in hostile space."
-	flavour_text = "Your ship docks after a long time somewhere in hostile space, reporting a malfunction. You are stuck here, with Nanotrasen station nearby. Command your crew and turn your ship into the most protected fortress."
-	important_text = "Protect the ship and secret documents in your backpack with your own life."
+	you_are_text = "Вы капитан старого корабля, застрявшего во враждебном секторе космоса."
+	flavour_text = "Ваш корабль наконец-то прекратил  прекратил дрейфовать по космосу, остановившись где-то посреди космической бездны. \
+	Понимая, что рядом находится вражеская станция Нанотрейзен, вы должны починить корабль, найти способ восстановить подачу энергии, НЕ ПОКИДАТЬ корабль, оставляя его на произвол судьбы."
+	important_text = "Защитите корабль и секретные документы в своём рюкзаке любой ценой, даже ценой своей жизни! ЗАПРЕЩЕНО покидать корабль во избежание риска захвата его сотрудниками вражеской корпорации."
 	outfit = /datum/outfit/syndicatespace/syndicaptain
 	spawner_job_path = /datum/job/syndicate_cybersun_captain
 

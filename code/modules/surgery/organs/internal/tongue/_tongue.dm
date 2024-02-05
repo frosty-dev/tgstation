@@ -26,7 +26,7 @@
 	var/list/languages_native
 	///changes the verbage of how you speak. (Permille -> says <-, "I just used a verb!")
 	///i hate to say it, but because of sign language, this may have to be a component. and we may have to do some insane shit like putting a component on a component
-	var/say_mod = "says"
+	var/say_mod = "говорит"
 	///for temporary overrides of the above variable.
 	var/temp_say_mod = ""
 

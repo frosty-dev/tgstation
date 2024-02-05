@@ -336,8 +336,8 @@ GLOBAL_LIST_INIT(sinew_recipes, list ( \
 /obj/item/stack/sheet/hairlesshide
 	name = "безволосая шкура"
 	desc = "Эта шкура была лишена волос, но все еще нуждается в мытье и загаре."
-	singular_name = "hairless hide piece"
 	singular_name = "кусок безволосой шкуры"
+	icon_state = "sheet-hairlesshide"
 	inhand_icon_state = null
 	merge_type = /obj/item/stack/sheet/hairlesshide
 

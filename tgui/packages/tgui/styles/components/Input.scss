@@ -7,22 +7,21 @@
 @use '../functions.scss' as *;
 
 $text-color: base.$color-fg !default;
-$background-color: #0a0a0a !default;
-$border-color: #88bfff !default;
+$background-color: #1a1a1a !default;
+$border-color: #f4f4f4 !default;
 $border-radius: base.$border-radius !default;
 
 .Input {
   position: relative;
   display: inline-block;
   width: base.em(120px);
-  border: base.em(1px) solid $border-color;
-  border: base.em(1px) solid rgba($border-color, 0.75);
+  border: none;
   border-radius: $border-radius;
   color: $text-color;
   background-color: $background-color;
   padding: 0 base.em(4px);
   margin-right: base.em(2px);
-  line-height: base.em(17px);
+  line-height: base.em(14px);
   overflow: visible;
 }
 

@@ -152,14 +152,19 @@ SUBSYSTEM_DEF(ticker)
 	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/ticker/fire()
+	if(world.time > 30 MINUTES && !GLOB.cryopods_enabled)
+		GLOB.cryopods_enabled = TRUE
+		for(var/obj/machinery/cryopod/pod as anything in GLOB.cryopods)
+			pod.PowerOn()
 	switch(current_state)
 		if(GAME_STATE_STARTUP)
 			if(Master.initializations_finished_with_no_players_logged_in)
 				start_at = world.time + (CONFIG_GET(number/lobby_countdown) * 10)
 			for(var/client/C in GLOB.clients)
 				window_flash(C, ignorepref = TRUE) //let them know lobby has opened up.
-			to_chat(world, span_notice("<b>Welcome to [station_name()]!</b>"))
-			send2chat(new /datum/tgs_message_content("New round starting on [SSmapping.config.map_name]!"), CONFIG_GET(string/channel_announce_new_game))
+			to_chat(world, span_boldnotice("<b>Добро пожаловать на [station_name()]!</b>"))
+			//send2chat(new /datum/tgs_message_content("New round starting on [SSmapping.config.map_name]!"), CONFIG_GET(string/channel_announce_new_game))
+			webhook_send_roundstatus("lobby")
 			current_state = GAME_STATE_PREGAME
 			SEND_SIGNAL(src, COMSIG_TICKER_ENTER_PREGAME)
 
@@ -204,6 +209,8 @@ SUBSYSTEM_DEF(ticker)
 				timeLeft = null
 				Master.SetRunLevel(RUNLEVEL_LOBBY)
 				SEND_SIGNAL(src, COMSIG_TICKER_ERROR_SETTING_UP)
+			else
+				webhook_send_roundstatus("ingame")
 
 		if(GAME_STATE_PLAYING)
 			mode.process(wait * 0.1)
@@ -214,12 +221,13 @@ SUBSYSTEM_DEF(ticker)
 				toggle_ooc(TRUE) // Turn it on
 				toggle_dooc(TRUE)
 				declare_completion(force_ending)
+				webhook_send_roundstatus("ending")
 				check_maprotate()
 				Master.SetRunLevel(RUNLEVEL_POSTGAME)
 
 
 /datum/controller/subsystem/ticker/proc/setup()
-	to_chat(world, span_boldannounce("Starting game..."))
+	to_chat(world, span_green("-- Запускаем игру... --"))
 	var/init_start = world.timeofday
 
 	mode = new /datum/game_mode/dynamic
@@ -236,7 +244,7 @@ SUBSYSTEM_DEF(ticker)
 		if(!can_continue)
 			log_game("Game failed pre_setup")
 			QDEL_NULL(mode)
-			to_chat(world, "<B>Error setting up game.</B> Reverting to pre-game lobby.")
+			to_chat(world, "<B>Ничего не вышло!</B> Откатываем таймер назад.")
 			SSjob.ResetOccupations()
 			return FALSE
 	else
@@ -275,14 +283,13 @@ SUBSYSTEM_DEF(ticker)
 	log_world("Game start took [(world.timeofday - init_start)/10]s")
 	INVOKE_ASYNC(SSdbcore, TYPE_PROC_REF(/datum/controller/subsystem/dbcore,SetRoundStart))
 
-	to_chat(world, span_notice("<B>Welcome to [station_name()], enjoy your stay!</B>"))
 	SEND_SOUND(world, sound(SSstation.announcer.get_rand_welcome_sound()))
 
 	current_state = GAME_STATE_PLAYING
 	Master.SetRunLevel(RUNLEVEL_GAME)
 
 	if(length(GLOB.holidays))
-		to_chat(world, span_notice("and..."))
+		to_chat(world, span_notice("и..."))
 		for(var/holidayname in GLOB.holidays)
 			var/datum/holiday/holiday = GLOB.holidays[holidayname]
 			to_chat(world, span_info(holiday.greet()))

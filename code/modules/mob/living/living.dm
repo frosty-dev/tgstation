@@ -422,7 +422,7 @@
 	update_pull_hud_icon()
 
 /mob/living/verb/stop_pulling1()
-	set name = "Stop Pulling"
+	set name = "Прекратить тащить"
 	set category = "IC"
 	stop_pulling()
 
@@ -437,7 +437,7 @@
 	if(!..())
 		return FALSE
 	log_message("points at [pointing_at]", LOG_EMOTE)
-	visible_message("<span class='infoplain'>[span_name("[src]")] points at [pointing_at].</span>", span_notice("You point at [pointing_at]."))
+	visible_message("<span class='infoplain'>[span_name("[src]")] показывает на [pointing_at].</span>", span_notice("Показываю [pointing_at]."))
 
 /mob/living/verb/succumb(whispered as null)
 	set hidden = TRUE
@@ -453,7 +453,7 @@
 	adjustOxyLoss(health - HEALTH_THRESHOLD_DEAD)
 	updatehealth()
 	if(!whispered)
-		to_chat(src, span_notice("You have given up life and succumbed to death."))
+		to_chat(src, span_notice("Сдаюсь смерти. Позорно."))
 	investigate_log("has succumbed to death.", INVESTIGATE_DEATHS)
 	death()
 
@@ -509,15 +509,25 @@
 // MOB PROCS //END
 
 /mob/living/proc/mob_sleep()
-	set name = "Sleep"
+	set name = "Спать"
 	set category = "IC"
 
 	if(IsSleeping())
-		to_chat(src, span_warning("You are already sleeping!"))
+		to_chat(src, span_warning("Уже сплю!"))
 		return
 	else
-		if(tgui_alert(usr, "You sure you want to sleep for a while?", "Sleep", list("Yes", "No")) == "Yes")
-			SetSleeping(400) //Short nap
+		switch(tgui_alert(src, "Сколько будем спать?", "Алло", list("30 секунд", "45 секунд", "60 секунд"), timeout = 15 SECONDS))
+			if("30 секунд")
+				SetSleeping(30 SECONDS)
+				return
+			if("45 секунд")
+				SetSleeping(45 SECONDS)
+				return
+			if("60 секунд")
+				SetSleeping(60 SECONDS)
+				return
+			else
+				return
 
 
 /mob/proc/get_contents()
@@ -566,7 +576,7 @@
 		return account
 
 /mob/living/proc/toggle_resting()
-	set name = "Rest"
+	set name = "Лечь/Встать"
 	set category = "IC"
 
 	set_resting(!resting, FALSE)
@@ -1073,7 +1083,7 @@
 	return TRUE
 
 /mob/living/verb/resist()
-	set name = "Resist"
+	set name = "Сопротивляться"
 	set category = "IC"
 
 	DEFAULT_QUEUE_OR_CALL_VERB(VERB_CALLBACK(src, PROC_REF(execute_resist)))
@@ -1117,17 +1127,17 @@
 		var/resist_chance = BASE_GRAB_RESIST_CHANCE /// see defines/combat.dm, this should be baseline 60%
 		resist_chance = (resist_chance/altered_grab_state) ///Resist chance divided by the value imparted by your grab state. It isn't until you reach neckgrab that you gain a penalty to escaping a grab.
 		if(prob(resist_chance))
-			visible_message(span_danger("[src] breaks free of [pulledby]'s grip!"), \
-							span_danger("You break free of [pulledby]'s grip!"), null, null, pulledby)
-			to_chat(pulledby, span_warning("[src] breaks free of your grip!"))
+			visible_message(span_danger("<b>[capitalize(src)]</b> вырывается из захвата <b>[pulledby]</b>!") , \
+							span_danger("Вырываюсь из захвата <b>[pulledby]</b>!") , null, null, pulledby)
+			to_chat(pulledby, span_warning("<b>[capitalize(src)]</b> вырывается из моего захвата!"))
 			log_combat(pulledby, src, "broke grab")
 			pulledby.stop_pulling()
 			return FALSE
 		else
 			adjustStaminaLoss(rand(15,20))//failure to escape still imparts a pretty serious penalty
-			visible_message(span_danger("[src] struggles as they fail to break free of [pulledby]'s grip!"), \
-							span_warning("You struggle as you fail to break free of [pulledby]'s grip!"), null, null, pulledby)
-			to_chat(pulledby, span_danger("[src] struggles as they fail to break free of your grip!"))
+			visible_message(span_danger("<b>[capitalize(src)]</b> пытается вырваться из захвата <b>[pulledby]</b>!") , \
+							span_warning("Пытаюсь вырваться из захвата <b>[pulledby]</b>!") , null, null, pulledby)
+			to_chat(pulledby, span_danger("<b>[capitalize(src)]</b> пытается вырваться из моего захвата!"))
 		if(moving_resist && client) //we resisted by trying to move
 			client.move_delay = world.time + 4 SECONDS
 	else

@@ -106,21 +106,21 @@
 
 //Bot types
 /// Secutritrons (Beepsky)
-#define SEC_BOT "Securitron"
+#define SEC_BOT "Секьюритрон"
 /// ED-209s
 #define ADVANCED_SEC_BOT "ED-209"
 /// MULEbots
-#define MULE_BOT "MULEbot"
+#define MULE_BOT "МУЛбот"
 /// Floorbots
-#define FLOOR_BOT "Floorbot"
+#define FLOOR_BOT "Флурбот"
 /// Cleanbots
-#define CLEAN_BOT "Cleanbot"
+#define CLEAN_BOT "Клинбот"
 /// Medibots
-#define MED_BOT "Medibot"
+#define MED_BOT "Медбот"
 /// Honkbots & ED-Honks
-#define HONK_BOT "Honkbot"
+#define HONK_BOT "Хонкбот"
 /// Firebots
-#define FIRE_BOT "Firebot"
+#define FIRE_BOT "Пожарный бот"
 /// Hygienebots
 #define HYGIENE_BOT "Hygienebot"
 /// Vibe bots
@@ -128,47 +128,47 @@
 
 // General Bot modes //
 /// Idle
-#define BOT_IDLE "Idle"
+#define BOT_IDLE "Ожидает"
 /// Found target, hunting
-#define BOT_HUNT "In Pursuit"
+#define BOT_HUNT "В погоне"
 /// Currently tipped over.
-#define BOT_TIPPED "Tipped"
+#define BOT_TIPPED "Опрокинут"
 /// Start patrol
-#define BOT_START_PATROL "Beginning Patrol"
+#define BOT_START_PATROL "Начинаю патруль"
 /// Patrolling
-#define BOT_PATROL "Patrolling"
+#define BOT_PATROL "Патрулирую"
 /// Summoned to a location
-#define BOT_SUMMON "Summoned by PDA"
+#define BOT_SUMMON "Вызван через ПДА"
 /// Responding to a call from the AI
-#define BOT_RESPONDING "Proceeding to AI waypoint"
+#define BOT_RESPONDING "Перехожу к маршрутной точке ИИ"
 /// Currently moving
-#define BOT_MOVING "Moving"
+#define BOT_MOVING "Выдвигаюсь"
 
 // Unique modes //
 /// Secbot - At target, preparing to arrest
-#define BOT_PREP_ARREST "Preparing to Arrest"
+#define BOT_PREP_ARREST "Готовлюсь арестовать"
 /// Secbot - Arresting target
-#define BOT_ARREST "Arresting"
+#define BOT_ARREST "Арестовываю"
 /// Cleanbot - Cleaning
-#define BOT_CLEANING "Cleaning"
+#define BOT_CLEANING "Чищу"
 /// Hygienebot - Cleaning unhygienic humans
-#define BOT_SHOWERSTANCE "Chasing filth"
+#define BOT_SHOWERSTANCE "Ищу грязь"
 /// Floorbots - Repairing hull breaches
-#define BOT_REPAIRING "Repairing"
+#define BOT_REPAIRING "Чиню"
 /// Medibots - Healing people
-#define BOT_HEALING "Healing"
+#define BOT_HEALING "Лечу"
 /// MULEbot - Moving to deliver
-#define BOT_DELIVER "Navigating to Delivery Location"
+#define BOT_DELIVER "Двигаюсь к месту доставки"
 /// MULEbot - Returning to home
-#define BOT_GO_HOME "Proceeding to work site"
+#define BOT_GO_HOME "Двигаюсь к рабочему месту"
 /// MULEbot - Blocked
-#define BOT_BLOCKED "No Route"
+#define BOT_BLOCKED "Нет маршрута"
 /// MULEbot - Computing navigation
-#define BOT_NAV "Unable to reach destination"
+#define BOT_NAV "Невозможно достигнуть заданной точки"
 /// MULEbot - Waiting for nav computation
-#define BOT_WAIT_FOR_NAV "Calculating navigation path"
+#define BOT_WAIT_FOR_NAV "Вычисляю маршрут"
 /// MULEbot - No destination beacon found (or no route)
-#define BOT_NO_ROUTE "Navigating to Home"
+#define BOT_NO_ROUTE "Двигаюсь на стартовую позицию"
 
 //Secbot and ED209 judgement criteria bitflag values
 #define JUDGE_EMAGGED (1<<0)
@@ -231,72 +231,72 @@ DEFINE_BITFIELD(janitor_mode_flags, list(
 
 // Defines for lines that bots can speak which also have corresponding voice lines
 
-#define ED209_VOICED_DOWN_WEAPONS "Please put down your weapon. You have 20 seconds to comply."
+#define ED209_VOICED_DOWN_WEAPONS "Пожалуйста, опустите оружие. У вас 20 секунд чтобы подчиниться."
 
-#define HONKBOT_VOICED_HONK_HAPPY "Honk!"
-#define HONKBOT_VOICED_HONK_SAD "Honk..."
+#define HONKBOT_VOICED_HONK_HAPPY "ХОНК!!!"
+#define HONKBOT_VOICED_HONK_SAD "Хонк..."
 
-#define BEEPSKY_VOICED_CRIMINAL_DETECTED "Criminal detected!"
-#define BEEPSKY_VOICED_FREEZE "Freeze, scumbag!"
-#define BEEPSKY_VOICED_JUSTICE "Prepare for justice!"
-#define BEEPSKY_VOICED_YOUR_MOVE "Your move, creep."
-#define BEEPSKY_VOICED_I_AM_THE_LAW "I am the law!"
-#define BEEPSKY_VOICED_SECURE_DAY "Have a secure day."
+#define BEEPSKY_VOICED_CRIMINAL_DETECTED "Преступник обнаружен!"
+#define BEEPSKY_VOICED_FREEZE "Стоять, мразь!"
+#define BEEPSKY_VOICED_JUSTICE "Приготовься к правосудию!"
+#define BEEPSKY_VOICED_YOUR_MOVE "Твой ход, чудила."
+#define BEEPSKY_VOICED_I_AM_THE_LAW "Я! ЗДЕСЬ!! ЗАКОН!!!"
+#define BEEPSKY_VOICED_SECURE_DAY "Безопасного Вам дня."
 
-#define FIREBOT_VOICED_FIRE_DETECTED "Fire detected!"
-#define FIREBOT_VOICED_STOP_DROP "Stop, drop and roll!"
-#define FIREBOT_VOICED_EXTINGUISHING "Extinguishing!"
-#define FIREBOT_VOICED_NO_FIRES "No fires detected."
-#define FIREBOT_VOICED_ONLY_YOU "Only you can prevent station fires."
-#define FIREBOT_VOICED_TEMPERATURE_NOMINAL "Temperature nominal."
-#define FIREBOT_VOICED_KEEP_COOL "Keep it cool."
+#define FIREBOT_VOICED_FIRE_DETECTED "Обнаружено пламя!"
+#define FIREBOT_VOICED_STOP_DROP "Стой, падай и катайся!"
+#define FIREBOT_VOICED_EXTINGUISHING "Тушу пламя!"
+#define FIREBOT_VOICED_NO_FIRES "Пламени не обнаружено."
+#define FIREBOT_VOICED_ONLY_YOU "Только Вы можете предотвратить пожары."
+#define FIREBOT_VOICED_TEMPERATURE_NOMINAL "Температура в порядке."
+#define FIREBOT_VOICED_KEEP_COOL "Будь хладнокровным."
 
-#define HYGIENEBOT_VOICED_UNHYGIENIC "Unhygienic client found. Please stand still so I can clean you."
-#define HYGIENEBOT_VOICED_ENJOY_DAY "Enjoy your clean and tidy day!"
-#define HYGIENEBOT_VOICED_THREAT_AIRLOCK "Either you stop running or I will fucking drag you out of an airlock."
-#define HYGIENEBOT_VOICED_FOUL_SMELL "Get back here you foul smelling fucker."
-#define HYGIENEBOT_VOICED_TROGLODYTE "I just want to fucking clean you you troglodyte."
-#define HYGIENEBOT_VOICED_GREEN_CLOUD "If you don't come back here I'll put a green cloud around you cunt."
-#define HYGIENEBOT_VOICED_ARSEHOLE "Just fucking let me clean you you arsehole!"
-#define HYGIENEBOT_VOICED_THREAT_ARTERIES "STOP RUNNING OR I WILL CUT YOUR ARTERIES!"
-#define HYGIENEBOT_VOICED_STOP_RUNNING "STOP. RUNNING."
-#define HYGIENEBOT_VOICED_FUCKING_FINALLY "Fucking finally."
-#define HYGIENEBOT_VOICED_THANK_GOD "Thank god, you finally stopped."
-#define HYGIENEBOT_VOICED_DEGENERATE "Well about fucking time you degenerate."
+#define HYGIENEBOT_VOICED_UNHYGIENIC "Грязнуля обнаружен. Пожалуйста, постойте смирно, чтобы я вас очистил."
+#define HYGIENEBOT_VOICED_ENJOY_DAY "Наслаждайся своим чистым днём!"
+#define HYGIENEBOT_VOICED_THREAT_AIRLOCK "Либо перестань бежать, либо я выковыряю твой труп из шлюза."
+#define HYGIENEBOT_VOICED_FOUL_SMELL "Вернись сюда, вонючий ублюдок."
+#define HYGIENEBOT_VOICED_TROGLODYTE "Я просто хочу почистить тебя, троглодит."
+#define HYGIENEBOT_VOICED_GREEN_CLOUD "Если ты не вернёшься, я окутаю тебя зелёным облаком"
+#define HYGIENEBOT_VOICED_ARSEHOLE "Просто, черт возьми, дай мне почистить тебя, засранец!"
+#define HYGIENEBOT_VOICED_THREAT_ARTERIES "ХВАТИТ УБЕГАТЬ, ИЛИ Я ПЕРЕРЕЖУ ТЕБЕ ГЛОТКУ"
+#define HYGIENEBOT_VOICED_STOP_RUNNING "ХВАТИТ. УБЕГАТЬ."
+#define HYGIENEBOT_VOICED_FUCKING_FINALLY "Чёрт, наконец-то."
+#define HYGIENEBOT_VOICED_THANK_GOD "Слава богу, ты, наконец-то, остановился."
+#define HYGIENEBOT_VOICED_DEGENERATE "Очень вовремя, чёртов ты дегенерат."
 
-#define MEDIBOT_VOICED_HOLD_ON "Hey! Hold on, I'm coming."
-#define MEDIBOT_VOICED_WANT_TO_HELP "Wait! I want to help!"
-#define MEDIBOT_VOICED_YOU_ARE_INJURED "You appear to be injured!"
-#define MEDIBOT_VOICED_ALL_PATCHED_UP "All patched up!"
-#define MEDIBOT_VOICED_APPLE_A_DAY "An apple a day keeps me away."
-#define MEDIBOT_VOICED_FEEL_BETTER "Feel better soon!"
-#define MEDIBOT_VOICED_STAY_WITH_ME	"No! Stay with me!"
-#define MEDIBOT_VOICED_LIVE	"Live, damnit! LIVE!"
-#define MEDIBOT_VOICED_NEVER_LOST "I...I've never lost a patient before. Not today, I mean."
-#define MEDIBOT_VOICED_DELICIOUS "Delicious!"
-#define MEDIBOT_VOICED_PLASTIC_SURGEON "I knew it, I should've been a plastic surgeon."
-#define MEDIBOT_VOICED_MASK_ON "Radar, put a mask on!"
+#define MEDIBOT_VOICED_HOLD_ON "Эй! Погоди, я иду."
+#define MEDIBOT_VOICED_WANT_TO_HELP "Подожди! Я хочу помочь!"
+#define MEDIBOT_VOICED_YOU_ARE_INJURED "Кажется, ты ранен!"
+#define MEDIBOT_VOICED_ALL_PATCHED_UP "Всё заштопано!"
+#define MEDIBOT_VOICED_APPLE_A_DAY "Яблочко на ужин, и врач не нужен."
+#define MEDIBOT_VOICED_FEEL_BETTER "Скоро полегчает!"
+#define MEDIBOT_VOICED_STAY_WITH_ME	"Нет! Останься со мной!"
+#define MEDIBOT_VOICED_LIVE	"Живи, чёрт возьми! ЖИВИ!!"
+#define MEDIBOT_VOICED_NEVER_LOST "Я...Я никогда не терял пациентов. Сегодня, я имею ввиду."
+#define MEDIBOT_VOICED_DELICIOUS "Восхитительно!"
+#define MEDIBOT_VOICED_PLASTIC_SURGEON "Я знал что мне не следует становиться пластическим хирургом."
+#define MEDIBOT_VOICED_MASK_ON "Эй, надень-ка маску!"
 #define MEDIBOT_VOICED_ALWAYS_A_CATCH "There's always a catch, and I'm the best there is."
-#define MEDIBOT_VOICED_LIKE_FLIES "What kind of medbay is this? Everyone's dropping like flies."
-#define MEDIBOT_VOICED_SUFFER "Why are we still here? Just to suffer?"
-#define MEDIBOT_VOICED_FUCK_YOU	"Fuck you."
-#define MEDIBOT_VOICED_NOT_A_GAME "Turn off your computer. This is not a game."
-#define MEDIBOT_VOICED_IM_DIFFERENT	"I'm different!"
-#define MEDIBOT_VOICED_FOURTH_WALL "Close Dreamseeker.exe now. Or else."
+#define MEDIBOT_VOICED_LIKE_FLIES "Что это за медбей? Все дохнут как мухи."
+#define MEDIBOT_VOICED_SUFFER "Зачем мы здесь? Чтобы страдать?"
+#define MEDIBOT_VOICED_FUCK_YOU	"Пошёл ты..."
+#define MEDIBOT_VOICED_NOT_A_GAME "Выключи компьютер. Это не игра."
+#define MEDIBOT_VOICED_IM_DIFFERENT	"Я особенный!"
+#define MEDIBOT_VOICED_FOURTH_WALL "Закрой Dreamseeker.exe сейчас же!"
 #define MEDIBOT_VOICED_SHINDEMASHOU	"Shindemashou."
-#define MEDIBOT_VOICED_WAIT	"Hey, wait..."
-#define MEDIBOT_VOICED_DONT	"Please don't..."
-#define MEDIBOT_VOICED_TRUSTED_YOU "I trusted you..."
-#define MEDIBOT_VOICED_NO_SAD "Nooo..."
-#define MEDIBOT_VOICED_OH_FUCK "Oh fuck-"
-#define MEDIBOT_VOICED_FORGIVE "I forgive you."
-#define MEDIBOT_VOICED_THANKS "Thank you!"
-#define MEDIBOT_VOICED_GOOD_PERSON "You are a good person."
-#define MEDIBOT_VOICED_BEHAVIOUR_REPORTED "Your behavior has been reported, have a nice day."
-#define MEDIBOT_VOICED_ASSISTANCE "I require assistance."
-#define MEDIBOT_VOICED_PUT_BACK	"Please put me back."
-#define MEDIBOT_VOICED_IM_SCARED "Please, I am scared!"
-#define MEDIBOT_VOICED_NEED_HELP "I don't like this, I need help!"
-#define MEDIBOT_VOICED_THIS_HURTS "This hurts, my pain is real!"
-#define MEDIBOT_VOICED_THE_END "Is this the end?"
-#define MEDIBOT_VOICED_NOOO	"Nooo!"
+#define MEDIBOT_VOICED_WAIT	"Эй, постой..."
+#define MEDIBOT_VOICED_DONT	"Пожалуйста, не надо..."
+#define MEDIBOT_VOICED_TRUSTED_YOU "Я верил тебе..."
+#define MEDIBOT_VOICED_NO_SAD "Нееееет..."
+#define MEDIBOT_VOICED_OH_FUCK "Ох бля-"
+#define MEDIBOT_VOICED_FORGIVE "Я прощаю тебя."
+#define MEDIBOT_VOICED_THANKS "Спасибо тебе!"
+#define MEDIBOT_VOICED_GOOD_PERSON "Ты хороший человек."
+#define MEDIBOT_VOICED_BEHAVIOUR_REPORTED "О твоём поведении доложено куда следует. Хорошего дня."
+#define MEDIBOT_VOICED_ASSISTANCE "Запрашиваю помощь."
+#define MEDIBOT_VOICED_PUT_BACK	"Пожалуйста, поставьте меня."
+#define MEDIBOT_VOICED_IM_SCARED "Пожалуйста, мне страшно!"
+#define MEDIBOT_VOICED_NEED_HELP "Мне это не нравится, мне нужна помощь!"
+#define MEDIBOT_VOICED_THIS_HURTS "Как больно! По настоящему больно!"
+#define MEDIBOT_VOICED_THE_END "Это конец?"
+#define MEDIBOT_VOICED_NOOO	"Неееет!"

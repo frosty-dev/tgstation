@@ -24,13 +24,13 @@ SUBSYSTEM_DEF(statpanels)
 		num_fires++
 		var/datum/map_config/cached = SSmapping.next_map_config
 		global_data = list(
-			"Map: [SSmapping.config?.map_name || "Loading..."]",
-			cached ? "Next Map: [cached.map_name]" : null,
-			"Round ID: [GLOB.round_id ? GLOB.round_id : "NULL"]",
-			"Server Time: [time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]",
-			"Round Time: [ROUND_TIME()]",
-			"Station Time: [station_time_timestamp()]",
-			"Time Dilation: [round(SStime_track.time_dilation_current,1)]% AVG:([round(SStime_track.time_dilation_avg_fast,1)]%, [round(SStime_track.time_dilation_avg,1)]%, [round(SStime_track.time_dilation_avg_slow,1)]%)"
+			"Карта: [SSmapping.config?.map_name || "Загрузка!"]",
+			cached ? "Следующая карта: [cached.map_name]" : null,
+			"ID раунда: [GLOB.round_id ? GLOB.round_id : "NULL"]",
+			"Время раунда: [ROUND_TIME()]",
+			"Серверное время: [time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]",
+			"Станционное время: [station_time_timestamp()]",
+			"Замедление времени: [round(SStime_track.time_dilation_current,1)]% AVG:([round(SStime_track.time_dilation_avg_fast,1)]%, [round(SStime_track.time_dilation_avg,1)]%, [round(SStime_track.time_dilation_avg_slow,1)]%)"
 		)
 
 		if(SSshuttle.emergency)
@@ -103,7 +103,7 @@ SUBSYSTEM_DEF(statpanels)
 
 	target.stat_panel.send_message("update_stat", list(
 		"global_data" = global_data,
-		"ping_str" = "Ping: [round(target.lastping, 1)]ms (Average: [round(target.avgping, 1)]ms)",
+		"ping_str" = "Пинг: [round(target.lastping, 1)]мс (Средний: [round(target.avgping, 1)]мс)",
 		"other_str" = target.mob?.get_status_tab_items(),
 	))
 
@@ -125,7 +125,7 @@ SUBSYSTEM_DEF(statpanels)
 		var/datum/interview/current_interview = m.open_interviews[ckey]
 		if (current_interview && !current_interview.owner)
 			dc++
-	var/stat_string = "([m.open_interviews.len - dc] online / [dc] disconnected)"
+	var/stat_string = "([m.open_interviews.len - dc] онлайн / [dc] отключено)"
 
 	// Prepare each queued interview
 	var/list/queued = list()

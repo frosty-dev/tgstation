@@ -75,8 +75,8 @@
 			take_bodypart_damage(10 + 5 * extra_speed, check_armor = TRUE, wound_bonus = extra_speed * 5)
 			victim.Paralyze(2 SECONDS)
 			Paralyze(2 SECONDS)
-			visible_message(span_danger("[src] crashes into [victim][extra_speed ? " really hard" : ""], knocking them both over!"),\
-				span_userdanger("You violently crash into [victim][extra_speed ? " extra hard" : ""]!"))
+			visible_message(span_danger("<b>[src]</b> врезается в <b>[victim]</b>[extra_speed ? "со всей силы" : ""], роняя обоих на пол!"),\
+				span_userdanger("Жестко врезаюсь в <b>[victim]</b>[extra_speed ? " со всей дури" : ""]!"))
 		playsound(src,'sound/weapons/punch1.ogg',50,TRUE)
 		log_combat(src, victim, "crashed into")
 
@@ -117,9 +117,6 @@
 		return FALSE
 	var/atom/movable/thrown_thing
 	var/obj/item/held_item = get_active_held_item()
-	var/verb_text = pick("throw", "toss", "hurl", "chuck", "fling")
-	if(prob(0.5))
-		verb_text = "yeet"
 	var/neckgrab_throw = FALSE // we can't check for if it's a neckgrab throw when totaling up power_throw since we've already stopped pulling them by then, so get it early
 	if(!held_item)
 		if(pulling && isliving(pulling) && grab_state >= GRAB_AGGRESSIVE)
@@ -130,7 +127,7 @@
 					neckgrab_throw = TRUE
 				stop_pulling()
 				if(HAS_TRAIT(src, TRAIT_PACIFISM))
-					to_chat(src, span_notice("You gently let go of [throwable_mob]."))
+					to_chat(src, span_notice("Аккуратно отпускаю [throwable_mob]."))
 					return FALSE
 	else
 		thrown_thing = held_item.on_thrown(src, target)
@@ -150,12 +147,9 @@
 		power_throw++
 	if(neckgrab_throw)
 		power_throw++
-	if(isitem(thrown_thing))
-		var/obj/item/thrown_item = thrown_thing
-		if(thrown_item.throw_verb)
-			verb_text = thrown_item.throw_verb
-	visible_message(span_danger("[src] [verb_text][plural_s(verb_text)] [thrown_thing][power_throw ? " really hard!" : "."]"), \
-					span_danger("You [verb_text] [thrown_thing][power_throw ? " really hard!" : "."]"))
+	visible_message(span_danger("<b>[src]</b> кидает [thrown_thing][power_throw ? " невероятно сильно!" : "."]"), \
+					span_danger("Кидаю [thrown_thing][power_throw ? " невероятно сильно!" : "."]"))
+	playsound(get_turf(src), 'white/master/sounds/throw.wav', 50, TRUE)
 	log_message("has thrown [thrown_thing] [power_throw > 0 ? "really hard" : ""]", LOG_ATTACK)
 	var/extra_throw_range = HAS_TRAIT(src, TRAIT_THROWINGARM) ? 2 : 0
 	newtonian_move(get_dir(target, src))
@@ -207,15 +201,15 @@
 		if(handcuffed)
 			var/obj/item/restraints/O = src.get_item_by_slot(ITEM_SLOT_HANDCUFFED)
 			buckle_cd = O.breakouttime
-		visible_message(span_warning("[src] attempts to unbuckle [p_them()]self!"), \
-					span_notice("You attempt to unbuckle yourself... (This will take around [round(buckle_cd/600,1)] minute\s, and you need to stay still.)"))
+		visible_message(span_warning("[capitalize(src.name)] пытается выбраться из наручников!"), \
+					span_notice("Пытаюсь выбраться из наручников... (Это должно занять около [round(buckle_cd/600,1)] минут, и мне необходимо оставаться неподвижным)"))
 		if(do_after(src, buckle_cd, target = src, timed_action_flags = IGNORE_HELD_ITEM))
 			if(!buckled)
 				return
 			buckled.user_unbuckle_mob(src,src)
 		else
 			if(src && buckled)
-				to_chat(src, span_warning("You fail to unbuckle yourself!"))
+				to_chat(src, span_warning("Не получилось выбраться из наручников!"))
 	else
 		buckled.user_unbuckle_mob(src,src)
 
@@ -223,12 +217,12 @@
 	adjust_fire_stacks(-5)
 	Paralyze(60, ignore_canstun = TRUE)
 	spin(32,2)
-	visible_message(span_danger("[src] rolls on the floor, trying to put [p_them()]self out!"), \
-		span_notice("You stop, drop, and roll!"))
+	visible_message(span_danger("[capitalize(src.name)] катается по полу пытаясь сбросить пламя!"), \
+		span_notice("Останавливаюсь, падаю и катаюсь по полу!"))
 	sleep(3 SECONDS)
 	if(fire_stacks <= 0 && !QDELETED(src))
-		visible_message(span_danger("[src] successfully extinguishes [p_them()]self!"), \
-			span_notice("You extinguish yourself."))
+		visible_message(span_danger("[capitalize(src.name)] успешно тушит себя!"), \
+			span_notice("Фух! Мне удалось потушить себя."))
 	return
 
 /mob/living/carbon/resist_restraints()
@@ -252,26 +246,26 @@
 
 /mob/living/carbon/proc/cuff_resist(obj/item/I, breakouttime = 1 MINUTES, cuff_break = 0)
 	if(I.item_flags & BEING_REMOVED)
-		to_chat(src, span_warning("You're already attempting to remove [I]!"))
+		to_chat(src, span_warning("Уже пытаюсь снять [I]!"))
 		return
 	I.item_flags |= BEING_REMOVED
 	breakouttime = I.breakouttime
 	if(!cuff_break)
-		visible_message(span_warning("[src] attempts to remove [I]!"))
-		to_chat(src, span_notice("You attempt to remove [I]... (This will take around [DisplayTimeText(breakouttime)] and you need to stand still.)"))
+		visible_message(span_warning("[capitalize(src.name)] пытается снять [I]!"))
+		to_chat(src, span_notice("Пытаюсь снять [I]... (Это должно занять около [DisplayTimeText(breakouttime)] минут, и мне надо оставаться неподвижным)"))
 		if(do_after(src, breakouttime, target = src, timed_action_flags = IGNORE_HELD_ITEM))
 			. = clear_cuffs(I, cuff_break)
 		else
-			to_chat(src, span_warning("You fail to remove [I]!"))
+			to_chat(src, span_warning("Не получилось снять [I]!"))
 
 	else if(cuff_break == FAST_CUFFBREAK)
 		breakouttime = 50
-		visible_message(span_warning("[src] is trying to break [I]!"))
-		to_chat(src, span_notice("You attempt to break [I]... (This will take around 5 seconds and you need to stand still.)"))
+		visible_message(span_warning("[src] пытается разорвать [I]!"))
+		to_chat(src, span_notice("Пытаюсь разорвать [I]..."))
 		if(do_after(src, breakouttime, target = src, timed_action_flags = IGNORE_HELD_ITEM))
 			. = clear_cuffs(I, cuff_break)
 		else
-			to_chat(src, span_warning("You fail to break [I]!"))
+			to_chat(src, span_warning("Не вышло разорвать [I]!"))
 
 	else if(cuff_break == INSTANT_CUFFBREAK)
 		. = clear_cuffs(I, cuff_break)
@@ -313,8 +307,8 @@
 		return FALSE
 	if(I != handcuffed && I != legcuffed)
 		return FALSE
-	visible_message(span_danger("[src] manages to [cuff_break ? "break" : "remove"] [I]!"))
-	to_chat(src, span_notice("You successfully [cuff_break ? "break" : "remove"] [I]."))
+	visible_message(span_danger("[src]  успешно [cuff_break ? "разрывает" : "снимает"] [I]!"))
+	to_chat(src, span_notice("Успешно [cuff_break ? "разрываю" : "снимаю"] [I]."))
 
 	if(cuff_break)
 		. = !((I == handcuffed) || (I == legcuffed))
@@ -388,8 +382,8 @@
 	if(!force && !blood && (nutrition < 100))
 		if(message)
 			visible_message(
-				span_warning("[src] dry heaves!"),
-				span_userdanger("You try to throw up, but there's nothing in your stomach!"),
+				span_warning("[src] корчится в рвотном позыве!"),
+				span_userdanger("Рвота не идёт, ведь мой желудок пуст!"),
 			)
 		if(stun)
 			Stun(20 SECONDS)
@@ -400,16 +394,16 @@
 	if(is_mouth_covered()) //make this add a blood/vomit overlay later it'll be hilarious
 		if(message)
 			visible_message(
-				span_danger("[src] throws up all over [p_them()]self!"),
-				span_userdanger("You throw up all over yourself!"),
+				span_danger("[src] заблёвывает себя!"),
+				span_userdanger("Заблевываю себя!"),
 			)
 			add_mood_event("vomit", /datum/mood_event/vomitself)
 		distance = 0
 	else
 		if(message)
 			visible_message(
-				span_danger("[src] throws up!"),
-				span_userdanger("You throw up!"),
+				span_danger("[src] блюёт!"),
+				span_userdanger("Блюю!"),
 			)
 			if(!isflyperson(src))
 				add_mood_event("vomit", /datum/mood_event/vomit)
@@ -456,8 +450,8 @@
  * * amount: int The amount of reagent
  */
 /mob/living/carbon/proc/expel_ingested(atom/bite, amount)
-	visible_message(span_danger("[src] throws up all over [p_them()]self!"), \
-					span_userdanger("You are unable to keep the [bite] down without a stomach!"))
+	visible_message(span_danger("[src] заблевывает себя!"), \
+					span_userdanger("Не в состоянии удержать [bite] без желудка!"))
 
 	var/turf/floor = get_turf(src)
 	var/obj/effect/decal/cleanable/vomit/spew = new(floor, get_static_viruses())

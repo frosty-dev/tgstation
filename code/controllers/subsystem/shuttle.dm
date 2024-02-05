@@ -354,6 +354,7 @@ SUBSYSTEM_DEF(shuttle)
 	if(call_reason)
 		SSblackbox.record_feedback("text", "shuttle_reason", 1, "[call_reason]")
 		log_shuttle("Shuttle call reason: [call_reason]")
+		webhook_send_roundstatus("shuttle called", list("reason" = call_reason, "seclevel" = SSsecurity_level.get_current_level_as_text()))
 		SSticker.emergency_reason = call_reason
 	message_admins("[ADMIN_LOOKUPFLW(user)] has called the shuttle. (<A HREF='?_src_=holder;[HrefToken()];trigger_centcom_recall=1'>TRIGGER CENTCOM RECALL</A>)")
 
@@ -413,6 +414,7 @@ SUBSYSTEM_DEF(shuttle)
 		emergency.cancel(get_area(user))
 		log_shuttle("[key_name(user)] has recalled the shuttle.")
 		message_admins("[ADMIN_LOOKUPFLW(user)] has recalled the shuttle.")
+		webhook_send_roundstatus("shuttle recalled")
 		deadchat_broadcast(" has recalled the shuttle from [span_name("[get_area_name(user, TRUE)]")].", span_name("[user.real_name]"), user, message_type=DEADCHAT_ANNOUNCEMENT)
 		return 1
 
@@ -460,6 +462,7 @@ SUBSYSTEM_DEF(shuttle)
 			emergency.request(null, set_coefficient = ALERT_COEFF_AUTOEVAC_NORMAL)
 			log_shuttle("There is no means of calling the emergency shuttle anymore. Shuttle automatically called.")
 			message_admins("All the communications consoles were destroyed and all AIs are inactive. Shuttle called.")
+			webhook_send_roundstatus("shuttle autocalled")
 
 /datum/controller/subsystem/shuttle/proc/registerHostileEnvironment(datum/bad)
 	hostile_environments[bad] = TRUE

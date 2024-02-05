@@ -1,6 +1,6 @@
 /obj/item/gun/ballistic/rifle
-	name = "Bolt Rifle"
-	desc = "Some kind of bolt action rifle. You get the feeling you shouldn't have this."
+	name = "Винтовка"
+	desc = "Разновидность винтовок с продольно-скользящим затвором. Возникает чувство, что у меня не должно её быть."
 	icon = 'icons/obj/weapons/guns/wide_guns.dmi'
 	icon_state = "sakhno"
 	w_class = WEIGHT_CLASS_BULKY
@@ -17,7 +17,7 @@
 
 /obj/item/gun/ballistic/rifle/rack(mob/user = null)
 	if (bolt_locked == FALSE)
-		balloon_alert(user, "bolt opened")
+		balloon_alert(user, "затвор открыт")
 		playsound(src, rack_sound, rack_sound_volume, rack_sound_vary)
 		process_chamber(FALSE, FALSE, FALSE)
 		bolt_locked = TRUE
@@ -32,20 +32,20 @@
 
 /obj/item/gun/ballistic/rifle/examine(mob/user)
 	. = ..()
-	. += "The bolt is [bolt_locked ? "open" : "closed"]."
+	. += "Затвор [bolt_locked ? "открыт" : "закрыт"]."
 
 ///////////////////////
 // BOLT ACTION RIFLE //
 ///////////////////////
 
 /obj/item/gun/ballistic/rifle/boltaction
-	name = "\improper Sakhno Precision Rifle"
-	desc = "A Sakhno Precision Rifle, a bolt action weapon that was (and certainly still is) popular with \
-		frontiersmen, cargo runners, private security forces, explorers, and other unsavoury types. This particular \
-		pattern of the rifle dates back all the way to 2440."
-	sawn_desc = "A sawn-off Sakhno Precision Rifle, popularly known as an \"Obrez\". \
-		There was probably a reason it wasn't manufactured this short to begin with. \
-		Despite the terrible nature of the modification, the weapon seems otherwise in good condition."
+	name = "Винтовка Сахно"
+	desc = "Винтовка Сахно с продольно-скользящим затвором была (и по прежнему остаётся) популярной у \
+		колонистов, каргонцев, частных охранных организаций, первооткрывателей, и других неблагонадежных типов. Эта конкретная \
+		модель винтовки была разработана около 2440-х годов."
+	sawn_desc = "Винтовка Сахно с обрезанным стволом, наиболее известная как \"Обрез\". \
+		Очевидно была причина по которой винтовка не выпускалась с настолько коротким стволом. \
+		Невзирая на ужасную природу данной модификации это оружие находится в безупречном состоянии."
 
 	icon_state = "sakhno"
 	inhand_icon_state = "sakhno"
@@ -82,7 +82,7 @@
 				unjam_chance = 10
 			else
 				unjam_chance += 10
-				balloon_alert(user, "jammed!")
+				balloon_alert(user, "заклинило!")
 				playsound(user,'sound/weapons/jammed.ogg', 75, TRUE)
 				return FALSE
 	..()
@@ -98,17 +98,17 @@
 
 /obj/item/gun/ballistic/rifle/boltaction/attackby(obj/item/item, mob/user, params)
 	if(!bolt_locked && !istype(item, /obj/item/knife))
-		balloon_alert(user, "bolt closed!")
+		balloon_alert(user, "затвор закрыт!")
 		return
 
 	. = ..()
 
 	if(istype(item, /obj/item/gun_maintenance_supplies))
 		if(!can_jam)
-			balloon_alert(user, "can't jam!")
+			balloon_alert(user, "не могу расклинить!")
 			return
 		if(do_after(user, 10 SECONDS, target = src))
-			user.visible_message(span_notice("[user] finishes maintaining [src]."))
+			user.visible_message(span_notice("[user] заканчивает починку [src]."))
 			jamming_chance = initial(jamming_chance)
 			qdel(item)
 
@@ -119,8 +119,8 @@
 		. = TRUE
 
 /obj/item/gun/ballistic/rifle/boltaction/harpoon
-	name = "ballistic harpoon gun"
-	desc = "A weapon favored by carp hunters, but just as infamously employed by agents of the Animal Rights Consortium against human aggressors. Because it's ironic."
+	name = "Гарпунная пушка"
+	desc = "Настолько любимое оружие охотников на карпов, насколько позорно используемое агентами Ассоциации по Защите Прав Животных. Какая ирония."
 	icon = 'icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "speargun"
 	inhand_icon_state = "speargun"
@@ -132,33 +132,31 @@
 	SET_BASE_PIXEL(0, 0)
 
 /obj/item/gun/ballistic/rifle/boltaction/surplus
-	name = "\improper Sakhno M2442 Army"
-	desc = "A modification of the Sakhno Precision Rifle, \"Sakhno M2442 Army\" is stamped into the side. \
-		It is unknown what army this pattern of rifle was made for or if it was ever even used by an army \
-		of any sort. What you can discern, however, is that its previous owner did not treat the weapon well. \
-		For some reason, there's moisture all through the internals."
-	sawn_desc = "A sawn-off Sakhno Precision Rifle, popularly known as an \"Obrez\". \
-		\"Sakhno M2442 Army\" is stamped into the side of it. \
-		There was probably a reason it wasn't manufactured this short to begin with. \
-		Cutting the weapon down seems to have not helped with the moisture problem."
+	name = "Сахно M2442"
+	desc = "Модификация высокоточной винтовки Сахно. \ Надпись - Сахно М2442 - выбита на боковой поверхности. \
+		Неизвестно, для какой армии была создана эта винтовка и использовалась ли она вообще.\
+		Однако можно сделать вывод, что предыдущий владелец обращался с оружием не лучшим образом. \
+		По какой-то причине на внутренних деталях винтовки присутствует влага.."
+	sawn_desc = "Винтовка Сахно с обрезанным стволом, наиболее известная как \"Обрез\". \
+		Очевидно была причина по которой винтовка не выпускалась с настолько коротким стволом. \
+		Невзирая на ужасную природу данной модификации это оружие находится в безупречном состоянии."
 	icon_state = "sakhno_tactifucked"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/boltaction/surplus
 	can_jam = TRUE
 
 /obj/item/gun/ballistic/rifle/boltaction/prime
-	name = "\improper Sakhno-Zhihao Sporting Rifle"
-	desc = "An upgrade and modernisation of the original Sakhno rifle, made with such wonders as \
-		modern materials, a scope, and other impressive technological advancements that, to be honest, \
-		were already around when the original weapon was designed. Surprisingly for a rifle of this type, \
-		the scope actually has magnification, rather than being decorative."
+	name = "Спортивная винтовка Сахно-Жинхао"
+	desc = "Обновление и модернизация оригинальной винтовки Сахно, выполненное с использованием таких чудес оружейной промышленности как: современные материалы, тщательная подгонка деталей, \
+		высококлассный оптический прицел, в общем, всё, что, по правде говоря, уже существовало на момент создания оригинального оружия в 2440. Удивительно, но для винтовки такого типа \
+		прицел действительно необходим."
 	icon_state = "zhihao"
 	inhand_icon_state = "zhihao"
 	worn_icon_state = "zhihao"
 	can_be_sawn_off = TRUE
-	sawn_desc = "A sawn-off Sakhno-Zhihao Sporting Rifle... Doing this was a sin, I hope you're happy. \
-		You are now probably one of the few people in the universe to ever hold an \"Obrez Moderna\". \
-		All you had to do was take an allen wrench to the stock to take it off. But no, you just had to \
-		go for the saw."
+	sawn_desc = "Обрез Сахно-Жинхао...Неизвестно у кого поднялась рука сделать это, надеюсь, он был рад. \
+		Возможно я единственный человек во вселенной который когда-либо держал в руках \"Обрез Жинхао\".\
+		Взять шестигранный ключ и открутить ствол - всё, что требовалось, чтобы укоротить ствол, но нет \
+		ты взял пилу."
 
 /obj/item/gun/ballistic/rifle/boltaction/prime/Initialize(mapload)
 	. = ..()
@@ -170,8 +168,8 @@
 		name = "\improper Obrez Moderna" // wear it loud and proud
 
 /obj/item/gun/ballistic/rifle/boltaction/pipegun
-	name = "pipegun"
-	desc = "An excellent weapon for flushing out tunnel rats and enemy assistants, but its rifling leaves much to be desired."
+	name = "самодельная винтовка"
+	desc = "Великолепное оружие для выкуривания туннельных крыс и вражеских ассистентов, но его прицельная дальность оставляет желать лучшего."
 	icon = 'icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "musket"
 	inhand_icon_state = "musket"
@@ -197,10 +195,10 @@
 /obj/item/gun/ballistic/rifle/boltaction/pipegun/handle_chamber()
 	. = ..()
 	do_sparks(1, TRUE, src)
-
+///Контекст не сохранить, перевёл как можно лучше сохранив смысл///
 /obj/item/gun/ballistic/rifle/boltaction/pipegun/prime
-	name = "regal pipegun"
-	desc = "Older, territorial assistants typically possess more valuable loot."
+	name = "улучшенная самодельная винтовка"
+	desc = "С такой и на Древнего Ассистента не страшно пойти."
 	icon_state = "musket_prime"
 	inhand_icon_state = "musket_prime"
 	worn_icon_state = "musket_prime"
@@ -210,8 +208,8 @@
 /// MAGICAL BOLT ACTIONS + ARCANE BARRAGE? ///
 
 /obj/item/gun/ballistic/rifle/enchanted
-	name = "enchanted bolt action rifle"
-	desc = "Careful not to lose your head."
+	name = "зачарованная винтовка с продольно-скользящим затвором"
+	desc = "Не теряй головы!"
 	icon_state = "enchanted_rifle"
 	inhand_icon_state = "enchanted_rifle"
 	worn_icon_state = "enchanted_rifle"
@@ -251,9 +249,9 @@
 
 /obj/item/gun/ballistic/rifle/sniper_rifle
 	name = "anti-materiel sniper rifle"
-	desc = "A boltaction anti-materiel rifle, utilizing .50 BMG cartridges. While technically outdated in modern arms markets, it still works exceptionally well as \
-		an anti-personnel rifle. In particular, the employment of modern armored MODsuits utilizing advanced armor plating has given this weapon a new home on the battlefield. \
-		It is also able to be suppressed....somehow."
+	desc = "Противотанковая винтовка, использующая патроны .50 BMG. Технически устаревшая на современном рынке вооружений, она до сих пор прекрасно работает в качестве \
+		противопехотной винтовки. В частности, с появлением на вооружении современных МОДсьютов с усовершенствованной бронезащитой это оружие получило новое место на поле боя. \
+		К винтовке можно прикрутить глушитель."
 	icon = 'icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "sniper"
 	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
@@ -283,7 +281,7 @@
 
 /obj/item/gun/ballistic/rifle/sniper_rifle/examine(mob/user)
 	. = ..()
-	. += span_warning("<b>It seems to have a warning label:</b> Do NOT, under any circumstances, attempt to 'quickscope' with this rifle.")
+	. += span_warning("<b>Похоже, тут есть надпись:</b> НИ ПРИ КАКИХ обстоятельствах не выполняйте 'quickscope' с этой винтовкой.")
 
 /obj/item/gun/ballistic/rifle/sniper_rifle/Initialize(mapload)
 	. = ..()
@@ -297,8 +295,8 @@
 		playsound(src, 'sound/machines/eject.ogg', 50, TRUE)
 
 /obj/item/gun/ballistic/rifle/sniper_rifle/syndicate
-	desc = "A boltaction anti-materiel rifle, utilizing .50 BMG cartridges. While technically outdated in modern arms markets, it still works exceptionally well as \
-		an anti-personnel rifle. In particular, the employment of modern armored MODsuits utilizing advanced armor plating has given this weapon a new home on the battlefield. \
-		It is also able to be suppressed....somehow. This one seems to have a little picture of someone in a blood-red MODsuit stenciled on it, pointing at a green floppy disk. \
-		Who knows what that might mean."
+	desc = "Противотанковая винтовка, использующая патроны .50 BMG. Технически устаревшая на современном рынке вооружений, она до сих пор прекрасно работает в качестве \
+		противопехотной винтовки. В частности, с появлением на вооружении современных МОДсьютов с усовершенствованной бронезащитой это оружие получило новое место на поле боя. \
+		К винтовке можно прикрутить глушитель.\ Кажется, на винтовке нарисован человек в кроваво-красном МОДсьюте, указывающий на зеленую дискету. \
+		Кто знает, что это может означать?"
 	pin = /obj/item/firing_pin/implant/pindicate

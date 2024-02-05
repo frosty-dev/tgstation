@@ -48,3 +48,11 @@ export const comms_notification: FeatureToggle = {
   category: 'ADMIN',
   component: CheckboxInput,
 };
+
+export const looc_admin_pref: FeatureToggle = {
+  name: 'See admin LOOC',
+  category: 'ADMIN',
+  description:
+    'Toggles whether you want to see LOOC anywhere as an admin or not.',
+  component: CheckboxInput,
+};

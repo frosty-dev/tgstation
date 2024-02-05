@@ -196,6 +196,11 @@
 	/// icon_state for holding mobs.
 	var/held_state = ""
 
+	/// Stores the last name heard
+	var/last_heard_name = null
+	/// Stores the last used color
+	var/last_used_color = null
+
 	///If combat mode is on or not
 	var/combat_mode = FALSE
 

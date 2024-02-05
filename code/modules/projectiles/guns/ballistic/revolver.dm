@@ -1,6 +1,6 @@
 /obj/item/gun/ballistic/revolver
-	name = "\improper .357 revolver"
-	desc = "A suspicious revolver. Uses .357 ammo."
+	name = ".357 револьвер"
+	desc = "Подозрительный револьвер. Калибр 0.357."
 	icon_state = "revolver"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/cylinder
 	fire_sound = 'sound/weapons/gun/revolver/shot_alt.ogg'
@@ -23,7 +23,7 @@
 
 /obj/item/gun/ballistic/revolver/chamber_round(spin_cylinder = TRUE, replace_new_round)
 	if(!magazine) //if it mag was qdel'd somehow.
-		CRASH("revolver tried to chamber a round without a magazine!")
+		CRASH("револьвер пытается выстрелить без барабана внутри!")
 	if(chambered)
 		UnregisterSignal(chambered, COMSIG_MOVABLE_MOVED)
 	if(spin_cylinder)
@@ -56,9 +56,9 @@
 
 
 /obj/item/gun/ballistic/revolver/verb/spin()
-	set name = "Spin Chamber"
+	set name = "Вращаю барабан"
 	set category = "Object"
-	set desc = "Click to spin your revolver's chamber."
+	set desc = "Клик чтобы прокрутить барабан."
 
 	var/mob/M = usr
 
@@ -71,7 +71,7 @@
 
 	if(do_spin())
 		playsound(usr, SFX_REVOLVER_SPIN, 30, FALSE)
-		usr.visible_message(span_notice("[usr] spins [src]'s chamber."), span_notice("You spin [src]'s chamber."))
+		usr.visible_message(span_notice("[usr] вращает барабан [src]."), span_notice("Вращаю барабан [src]."))
 	else
 		verbs -= /obj/item/gun/ballistic/revolver/verb/spin
 
@@ -93,24 +93,24 @@
 /obj/item/gun/ballistic/revolver/examine(mob/user)
 	. = ..()
 	var/live_ammo = get_ammo(FALSE, FALSE)
-	. += "[live_ammo ? live_ammo : "None"] of those are live rounds."
+	. += "[live_ammo ? live_ammo : "Нет"] заряженных патронов."
 	if (current_skin)
-		. += "It can be spun with <b>alt+click</b>"
+		. += "Можно прокрутить барабан с помощью <b>alt+клик</b>"
 
 /obj/item/gun/ballistic/revolver/ignition_effect(atom/A, mob/user)
 	if(last_fire && last_fire + 15 SECONDS > world.time)
-		. = span_notice("[user] touches the end of [src] to  [A], using the residual heat to ignite it in a puff of smoke. What a badass.")
+		. = span_notice("[user] касается кончиком [src] к [A], используя остаточный жар ствола чтобы закурить. Жесть он крут.")
 
 /obj/item/gun/ballistic/revolver/c38
-	name = "\improper .38 revolver"
-	desc = "A classic, if not outdated, lethal firearm. Uses .38 Special rounds."
+	name = ".38 револьвер"
+	desc = "Классическое смертоносное огнестрельное оружие. Использует специальные патроны калибра .38."
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	icon_state = "c38"
 	fire_sound = 'sound/weapons/gun/revolver/shot.ogg'
 
 /obj/item/gun/ballistic/revolver/c38/detective
-	name = "\improper Colt Detective Special"
-	desc = "A classic, if not outdated, law enforcement firearm. Uses .38 Special rounds. \nSome spread rumors that if you loosen the barrel with a wrench, you can \"improve\" it."
+	name = "Colt Detective Special"
+	desc = "Классическое огнестрельное оружие правоохранительных органов. Использует специальные патроны .38. \nНекоторые распространяют слухи, что если ослабить ствол гаечным ключом, то можно вставить патроны другого калибра."
 
 	can_modify_ammo = TRUE
 	initial_caliber = CALIBER_38
@@ -135,15 +135,15 @@
 	)
 
 /obj/item/gun/ballistic/revolver/syndicate
-	name = "\improper Syndicate Revolver"
-	desc = "A modernized 7 round revolver manufactured by Waffle Co. Uses .357 ammo."
+	name = "Револьвер Синдиката"
+	desc = "Модернизированный семизарядный револьвер производства Waffle Co. Использует патроны .357."
 	icon_state = "revolversyndie"
 
 /obj/item/gun/ballistic/revolver/syndicate/nuclear
 	pin = /obj/item/firing_pin/implant/pindicate
 
 /obj/item/gun/ballistic/revolver/syndicate/cowboy
-	desc = "A classic revolver, refurbished for modern use. Uses .357 ammo."
+	desc = "Классический револьвер, переоборудованный для современного использования. Использует патроны .357."
 	//There's already a cowboy sprite in there!
 	icon_state = "lucky"
 
@@ -151,12 +151,12 @@
 	pin = /obj/item/firing_pin/implant/pindicate
 
 /obj/item/gun/ballistic/revolver/mateba
-	name = "\improper Unica 6 auto-revolver"
-	desc = "A retro high-powered autorevolver typically used by officers of the New Russia military. Uses .357 ammo."
+	name = "Unica 6 автоматический револьвер"
+	desc = "Мощный ретро-авторевольвер, обычно используемый офицерами армии Новороссии. Использует патроны .357."
 	icon_state = "mateba"
 
 /obj/item/gun/ballistic/revolver/golden
-	name = "\improper Golden revolver"
+	name = "Золотой револьвер"
 	desc = "This ain't no game, ain't never been no show, And I'll gladly gun down the oldest lady you know. Uses .357 ammo."
 	icon_state = "goldrevolver"
 	fire_sound = 'sound/weapons/resonator_blast.ogg'
@@ -164,8 +164,8 @@
 	pin = /obj/item/firing_pin
 
 /obj/item/gun/ballistic/revolver/nagant
-	name = "\improper Nagant revolver"
-	desc = "An old model of revolver that originated in Russia. Able to be suppressed. Uses 7.62x38mmR ammo."
+	name = "Наган"
+	desc = "Старый револьвер разработанный в России. Может использоваться с глушителем. Использует патроны 7.62x38mmR."
 	icon_state = "nagant"
 	can_suppress = TRUE
 
@@ -176,8 +176,8 @@
 // You can spin the chamber to randomize the position of the bullet.
 
 /obj/item/gun/ballistic/revolver/russian
-	name = "\improper Russian revolver"
-	desc = "A Russian-made revolver for drinking games. Uses .357 ammo, and has a mechanism requiring you to spin the chamber before each trigger pull."
+	name = "Русский револьвер"
+	desc = "Револьвер российского производства, предназначенный для застольных игр. Имеет механизм, требующий перед каждым взведением курка досылать патрон в патронник. Использует патроны калибра .357."
 	icon_state = "russianrevolver"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/cylinder/rus357
 	var/spun = FALSE
@@ -223,14 +223,14 @@
 	if(target != user)
 		playsound(src, dry_fire_sound, 30, TRUE)
 		user.visible_message(
-			span_danger("[user.name] tries to fire  [src] at the same time, but only succeeds at looking like an idiot."), \
-			span_danger(" [src]'s anti-combat mechanism prevents you from firing it at anyone but yourself!"))
+			span_danger("[user.name] пытается выстрелить из [src] в это же время, но выставляет себя посмешищем."), \
+			span_danger(" [src] специальный механизм не даёт возможности стрелять в кого-либо, только в себя!"))
 		return
 
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(!spun)
-			to_chat(user, span_warning("You need to spin  [src]'s chamber first!"))
+			to_chat(user, span_warning("Следует сперва прокрутить барабан [src]!"))
 			return
 
 		spun = FALSE
@@ -246,11 +246,11 @@
 				antagonist = src, \
 				rounds_loaded = loaded_rounds, \
 				aimed_at =  affecting.name, \
-				result = (chambered ? "lost" : "won"))
+				result = (chambered ? "проиграл" : "выиграл"))
 
 		if(chambered)
 			if(HAS_TRAIT(user, TRAIT_CURSED)) // I cannot live, I cannot die, trapped in myself, body my holding cell.
-				to_chat(user, span_warning("What a horrible night... To have a curse!"))
+				to_chat(user, span_warning("Какая ужасная ночь...Чтобы быть проклятым!"))
 				return
 			var/obj/item/ammo_casing/AC = chambered
 			if(AC.fire_casing(user, user, params, distro = 0, quiet = 0, zone_override = null, spread = 0, fired_from = src))
@@ -258,7 +258,7 @@
 				if(is_target_face)
 					shoot_self(user, affecting)
 				else
-					user.visible_message(span_danger("[user.name] cowardly fires [src] at [user.p_their()] [affecting.name]!"), span_userdanger("You cowardly fire [src] at your [affecting.name]!"), span_hear("You hear a gunshot!"))
+					user.visible_message(span_danger("[user.name] трусливо стреляет [src] в [user.p_their()] [affecting.name]!"), span_userdanger("Трусливо стреляю [src] в своё [affecting.name]!"), span_hear("Слышу выстрел!"))
 				chambered = null
 				user.add_mood_event("russian_roulette_lose", /datum/mood_event/russian_roulette_lose)
 				return
@@ -266,16 +266,16 @@
 		if(loaded_rounds && is_target_face)
 			user.add_mood_event("russian_roulette_win", /datum/mood_event/russian_roulette_win, loaded_rounds)
 
-		user.visible_message(span_danger("*click*"))
+		user.visible_message(span_danger("*щёлк*"))
 		playsound(src, dry_fire_sound, 30, TRUE)
 
 /obj/item/gun/ballistic/revolver/russian/proc/shoot_self(mob/living/carbon/human/user, affecting = BODY_ZONE_HEAD)
 	user.apply_damage(300, BRUTE, affecting)
-	user.visible_message(span_danger("[user.name] fires [src] at [user.p_their()] head!"), span_userdanger("You fire [src] at your head!"), span_hear("You hear a gunshot!"))
+	user.visible_message(span_danger("[user.name] стреляет из [src] в [user.p_their()] голову!"), span_userdanger("Стреляю из [src] в свою голову!"), span_hear("Слышу выстрел!"))
 
 /obj/item/gun/ballistic/revolver/russian/soul
-	name = "cursed Russian revolver"
-	desc = "To play with this revolver requires wagering your very soul."
+	name = "проклятый Русский револьвер"
+	desc = "Чтобы сыграть в рулетку этим револьвером потребуется поставить свою душу на кон."
 
 /obj/item/gun/ballistic/revolver/russian/soul/shoot_self(mob/living/user)
 	. = ..()
@@ -283,7 +283,7 @@
 	if(!stone.capture_soul(user, forced = TRUE)) //Something went wrong
 		qdel(stone)
 		return
-	user.visible_message(span_danger("[user.name]'s soul is captured by  [src]!"), span_userdanger("You've lost the gamble! Your soul is forfeit!"))
+	user.visible_message(span_danger("[user.name] душа захвачена [src]!"), span_userdanger("Ты проиграл свою ставку! Душа утеряна навсегда"))
 
 /obj/item/gun/ballistic/revolver/reverse //Fires directly at its user... unless the user is a clown, of course.
 	clumsy_check = FALSE
@@ -301,7 +301,7 @@
 	if(HAS_TRAIT(user, TRAIT_CLUMSY) || is_clown_job(user.mind?.assigned_role))
 		return ..()
 	if(process_fire(user, user, FALSE, null, BODY_ZONE_HEAD))
-		user.visible_message(span_warning("[user] somehow manages to shoot [user.p_them()]self in the face!"), span_userdanger("You somehow shoot yourself in the face! How the hell?!"))
+		user.visible_message(span_warning("[user] как-то умудряется выстрелить [user.p_them()] в лицо!"), span_userdanger("Каким-то образом я стреляю в своё лицо! Какого чёрта?!"))
 		user.emote("scream")
 		user.drop_all_held_items()
 		user.Paralyze(80)

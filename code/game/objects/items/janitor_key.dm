@@ -11,7 +11,7 @@
 	righthand_file = 'icons/mob/inhands/items/keys_righthand.dmi'
 	hitsound = 'sound/items/rattling_keys_attack.ogg'
 	force = 2
-	verb_say = "beeps" //it has a beeper
+	verb_say = "констатирует" //it has a beeper
 	verb_ask = "questionably beeps"
 	verb_exclaim = "beeps loudly"
 	w_class = WEIGHT_CLASS_TINY

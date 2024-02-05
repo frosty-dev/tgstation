@@ -3,8 +3,8 @@
 	icon = 'icons/obj/weapons/bows/bows.dmi'
 	lefthand_file = 'icons/mob/inhands/weapons/bows_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/bows_righthand.dmi'
-	name = "bow"
-	desc = "Seems out-of-place in this day and age, but at least it's reliable."
+	name = "лук"
+	desc = "Кажется что это оружие находится не на своём месте и не в своё время, но оно, хотя бы, надёжно."
 	icon_state = "bow"
 	inhand_icon_state = "bow"
 	base_icon_state = "bow"
@@ -25,9 +25,10 @@
 	/// whether the bow is drawn back
 	var/drawn = FALSE
 
+///тетива натянута отпущена
 /obj/item/gun/ballistic/bow/update_icon_state()
 	. = ..()
-	icon_state = chambered ? "[base_icon_state]_[drawn ? "drawn" : "nocked"]" : "[base_icon_state]"
+	icon_state = chambered ? "[base_icon_state]_[drawn ? "натянута" : "отпущена"]" : "[base_icon_state]"
 
 /obj/item/gun/ballistic/bow/AltClick(mob/user)
 	if(isnull(chambered))
@@ -55,9 +56,9 @@
 
 /obj/item/gun/ballistic/bow/attack_self(mob/user)
 	if(!chambered)
-		balloon_alert(user, "no arrow nocked!")
+		balloon_alert(user, "стрела не вложена!")
 		return
-	balloon_alert(user, "[drawn ? "string released" : "string drawn"]")
+	balloon_alert(user, "[drawn ? "тетива отпущена" : "тетива натянута"]")
 	drawn = !drawn
 	playsound(src, 'sound/weapons/gun/bow/bow_draw.ogg', 25, TRUE)
 	update_appearance()
@@ -67,7 +68,7 @@
 	if(!chambered)
 		return
 	if(!drawn)
-		to_chat(user, span_warning("Without drawing the bow, the arrow uselessly falls to the ground."))
+		to_chat(user, span_warning("Не будучи вложенной на ещё не натянутую тетиву, стрела бесполезно падает на землю."))
 		drop_arrow()
 		return
 	return ..() //fires, removing the arrow
@@ -75,7 +76,7 @@
 /obj/item/gun/ballistic/bow/equipped(mob/user, slot, initial)
 	. = ..()
 	if(slot != ITEM_SLOT_HANDS && chambered)
-		balloon_alert(user, "the arrow falls out!")
+		balloon_alert(user, "стрела выпала!")
 		if(drawn)
 			playsound(src, 'sound/weapons/gun/bow/bow_fire.ogg', 25, TRUE)
 		drop_arrow()

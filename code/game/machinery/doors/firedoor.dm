@@ -136,21 +136,21 @@
 	if (isnull(held_item))
 		if(density)
 			if(isalienadult(living_user) || issilicon(living_user))
-				context[SCREENTIP_CONTEXT_LMB] = "Open"
+				context[SCREENTIP_CONTEXT_LMB] = "Открыть"
 				return CONTEXTUAL_SCREENTIP_SET
 			if(!living_user.combat_mode)
 				if(ishuman(living_user))
-					context[SCREENTIP_CONTEXT_LMB] = "Knock"
+					context[SCREENTIP_CONTEXT_LMB] = "Постучать"
 					return CONTEXTUAL_SCREENTIP_SET
 			else
 				if(ismonkey(living_user))
-					context[SCREENTIP_CONTEXT_LMB] = "Attack"
+					context[SCREENTIP_CONTEXT_LMB] = "Ударить"
 					return CONTEXTUAL_SCREENTIP_SET
 				if(ishuman(living_user))
-					context[SCREENTIP_CONTEXT_LMB] = "Bash"
+					context[SCREENTIP_CONTEXT_LMB] = "Бить"
 					return CONTEXTUAL_SCREENTIP_SET
 		else if(issilicon(living_user))
-			context[SCREENTIP_CONTEXT_LMB] = "Close"
+			context[SCREENTIP_CONTEXT_LMB] = "Закрыть"
 			return CONTEXTUAL_SCREENTIP_SET
 		return .
 
@@ -160,21 +160,21 @@
 	switch (held_item.tool_behaviour)
 		if (TOOL_CROWBAR)
 			if (!density)
-				context[SCREENTIP_CONTEXT_LMB] = "Close"
+				context[SCREENTIP_CONTEXT_LMB] = "Закрыть"
 			else if (!welded)
-				context[SCREENTIP_CONTEXT_LMB] = "Hold open"
-				context[SCREENTIP_CONTEXT_RMB] = "Open permanently"
+				context[SCREENTIP_CONTEXT_LMB] = "Держать открытым"
+				context[SCREENTIP_CONTEXT_RMB] = "Открыть навсегда"
 			return CONTEXTUAL_SCREENTIP_SET
 		if (TOOL_WELDER)
-			context[SCREENTIP_CONTEXT_RMB] = welded ? "Unweld shut" : "Weld shut"
+			context[SCREENTIP_CONTEXT_RMB] = welded ? "Разварить" : "Заварить"
 			return CONTEXTUAL_SCREENTIP_SET
 		if (TOOL_WRENCH)
 			if (welded && !boltslocked)
-				context[SCREENTIP_CONTEXT_LMB] = "Unfasten bolts"
+				context[SCREENTIP_CONTEXT_LMB] = "Открутить болты"
 				return CONTEXTUAL_SCREENTIP_SET
 		if (TOOL_SCREWDRIVER)
 			if (welded)
-				context[SCREENTIP_CONTEXT_LMB] = "Unlock bolts"
+				context[SCREENTIP_CONTEXT_LMB] = "Открыть болты"
 				return CONTEXTUAL_SCREENTIP_SET
 
 	return .
@@ -476,12 +476,12 @@
 	user.changeNext_move(CLICK_CD_MELEE)
 
 	if(!user.combat_mode)
-		user.visible_message(span_notice("[user] knocks on [src]."), \
-			span_notice("You knock on [src]."))
+		user.visible_message(span_notice("[user] стучится о [src]."), \
+			span_notice("Стучусь о [src]."))
 		playsound(src, knock_sound, 50, TRUE)
 	else
-		user.visible_message(span_warning("[user] bashes [src]!"), \
-			span_warning("You bash [src]!"))
+		user.visible_message(span_warning("[user] бьётся о [src]!"), \
+			span_warning("Бьюсь о [src]!"))
 		playsound(src, bash_sound, 100, TRUE)
 
 /obj/machinery/door/firedoor/wrench_act(mob/living/user, obj/item/tool)

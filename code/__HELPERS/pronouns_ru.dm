@@ -209,3 +209,17 @@
 	if((ITEM_SLOT_OCLOTHING in obscured) && skipface)
 		temp_gender = PLURAL
 	return ..()
+
+/proc/getnoun(number, one, two, five)
+	var/n = abs(number)
+	n = n % 100
+	if (n >= 11 &&  n <= 19)
+		return five
+
+	n = n % 10
+	switch(n)
+		if(1)
+			return one
+		if(2 to 4)
+			return two
+	return five

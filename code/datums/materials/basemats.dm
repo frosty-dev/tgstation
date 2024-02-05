@@ -23,6 +23,7 @@
 	desc = "Стекло созданное плавлением песка."
 	color = "#88cdf1"
 	greyscale_colors = "#88cdf196"
+	starlight_color = COLOR_STARLIGHT
 	alpha = 150
 	categories = list(MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE, MAT_CATEGORY_ITEM_MATERIAL=TRUE)
 	integrity_modifier = 0.1

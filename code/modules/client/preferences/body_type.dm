@@ -18,7 +18,7 @@
 	if (value == USE_GENDER)
 		target.physique = target.gender
 	else
-		target.physique = value == friendly_genders[1] ? MALE : FEMALE
+		target.physique = value == friendly_genders[2] ? MALE : FEMALE
 
 /datum/preference/choiced/body_type/is_accessible(datum/preferences/preferences)
 	if (!..(preferences))

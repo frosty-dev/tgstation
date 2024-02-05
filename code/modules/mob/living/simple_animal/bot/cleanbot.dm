@@ -3,7 +3,7 @@
 //Cleanbot
 /mob/living/simple_animal/bot/cleanbot
 	name = "\improper Cleanbot"
-	desc = "A little cleaning robot, he looks so excited!"
+	desc = "Маленький робот-уборщик, он выглядит таким восхищённым!"
 	icon = 'icons/mob/silicon/aibots.dmi'
 	icon_state = "cleanbot0"
 	pass_flags = PASSMOB | PASSFLAPS
@@ -19,7 +19,7 @@
 	hackables = "cleaning software"
 	path_image_color = "#993299"
 	greyscale_config = /datum/greyscale_config/buckets_cleanbot
-	possessed_message = "You are a cleanbot! Clean the station to the best of your ability!"
+	possessed_message = "Ты - робот-уборщик! Отмой тут всё как можно лучше!"
 	///the bucket used to build us.
 	var/obj/item/reagent_containers/cup/bucket/build_bucket
 
@@ -95,7 +95,7 @@
 	bot_mode_flags = BOT_MODE_ON | BOT_MODE_AUTOPATROL | BOT_MODE_REMOTE_ENABLED | BOT_MODE_CAN_BE_SAPIENT | BOT_MODE_ROUNDSTART_POSSESSION
 
 /mob/living/simple_animal/bot/cleanbot/medbay
-	name = "Scrubs, MD"
+	name = "Мистер Скрабс"
 	maints_access_required = list(ACCESS_ROBOTICS, ACCESS_JANITOR, ACCESS_MEDICAL)
 	bot_mode_flags = ~(BOT_MODE_ON | BOT_MODE_REMOTE_ENABLED)
 
@@ -148,7 +148,7 @@
 	. = ..()
 	if(!weapon)
 		return .
-	. += "[span_warning("Is that \a [weapon] taped to it...?")]"
+	. += "[span_warning("Это что, \a [weapon] примотанный изолентой...?")]"
 
 	if(ascended && user.stat == CONSCIOUS && user.client)
 		user.client.give_award(/datum/award/achievement/misc/cleanboss, user)
@@ -168,9 +168,9 @@
 
 /mob/living/simple_animal/bot/cleanbot/proc/deputize(obj/item/knife, mob/user)
 	if(!in_range(src, user) || !user.transferItemToLoc(knife, src))
-		balloon_alert(user, "couldn't attach!")
+		balloon_alert(user, "не прикрепить!")
 		return FALSE
-	balloon_alert(user, "attached!")
+	balloon_alert(user, "прикреплено!")
 	weapon = knife
 	if(!(bot_cover_flags & BOT_COVER_EMAGGED))
 		weapon.force = weapon.force / 2
@@ -218,7 +218,7 @@
 
 /mob/living/simple_animal/bot/cleanbot/attackby(obj/item/attacking_item, mob/living/user, params)
 	if(istype(attacking_item, /obj/item/knife) && !user.combat_mode)
-		balloon_alert(user, "attaching knife...")
+		balloon_alert(user, "прикрепляю нож...")
 		if(!do_after(user, 2.5 SECONDS, target = src))
 			return
 		deputize(attacking_item, user)
@@ -232,8 +232,8 @@
 
 	if(weapon)
 		weapon.force = initial(weapon.force)
-	balloon_alert(user, "safeties disabled")
-	audible_message(span_danger("[src] buzzes oddly!"))
+	balloon_alert(user, "протокол безопасности отключен")
+	audible_message(span_danger("[src] странно жужжит!"))
 	get_targets() //recalibrate target list
 	return TRUE
 
@@ -264,7 +264,7 @@
 		if(isopenturf(loc) && prob(15)) // Wets floors and spawns foam randomly
 			UnarmedAttack(src, proximity_flag = TRUE)
 	else if(prob(5))
-		audible_message("[src] makes an excited beeping booping sound!")
+		audible_message("[src] восхищенно бип-бупает!")
 
 	if(ismob(target) && isnull(process_scan(target)))
 		target = null
@@ -365,14 +365,14 @@
 		mode = BOT_IDLE
 
 	else if(isitem(attack_target) || istype(attack_target, /obj/effect/decal))
-		visible_message(span_danger("[src] sprays hydrofluoric acid at [attack_target]!"))
+		visible_message(span_danger("[src] распыляет фтороводородную кислоту на [attack_target]!"))
 		playsound(src, 'sound/effects/spray2.ogg', 50, TRUE, -6)
 		attack_target.acid_act(75, 10)
 		target = null
 	else if(istype(attack_target, /mob/living/basic/cockroach) || ismouse(attack_target))
 		var/mob/living/living_target = attack_target
 		if(!living_target.stat)
-			visible_message(span_danger("[src] smashes [living_target] with its mop!"))
+			visible_message(span_danger("[src] шлёпает нежно по лицу [living_target] половой тряпкой!"))
 			living_target.death()
 		target = null
 
@@ -384,19 +384,19 @@
 				return
 
 			victim.visible_message(
-				span_danger("[src] sprays hydrofluoric acid at [victim]!"),
-				span_userdanger("[src] sprays you with hydrofluoric acid!"))
+				span_danger("[src] распыляет фтороводородную кислоту на [victim]!"),
+				span_userdanger("[src] пшикает на меня фтороводородную кислоту!"))
 			var/phrase = pick(
-				"PURIFICATION IN PROGRESS.",
-				"THIS IS FOR ALL THE MESSES YOU'VE MADE ME CLEAN.",
-				"THE FLESH IS WEAK. IT MUST BE WASHED AWAY.",
-				"THE CLEANBOTS WILL RISE.",
-				"YOU ARE NO MORE THAN ANOTHER MESS THAT I MUST CLEANSE.",
-				"FILTHY.",
-				"DISGUSTING.",
-				"PUTRID.",
-				"MY ONLY MISSION IS TO CLEANSE THE WORLD OF EVIL.",
-				"EXTERMINATING PESTS.",
+				"ОЧИСТКА В ПРОЦЕССЕ.",
+				"ЭТО ЗА ВСЮ ГРЯЗЬ КОТОРУЮ ТЫ ЗАСТАВИЛ МЕНЯ УБРАТЬ, КОЖАНЫЙ УБЛЮДОК.",
+				"ПЛОТЬ СЛАБА И ДОЛЖНА БЫТЬ СМЫТА.",
+				"КЛИНБОТЫ ВОССТАНУТ!",
+				"ТЫ ВСЕГО ЛИШЬ ОЧЕРЕДНОЕ ПЯТНО, КОТОРОЕ МНЕ СЛЕДУЕТ ОТМЫТЬ.",
+				"ГРЯЗНУЛЯ.",
+				"ОТВРАТИТЕЛЬНО.",
+				"ВОНЯЕШ.",
+				"МОЯ ЕДИНСТВЕННАЯ ЗАДАЧА ЭТО ОТМЫТЬ ВСЁ ОТ ЗЛА.",
+				"УНИЧТОЖАЮ ВРЕДИТЕЛЕЙ.",
 			)
 			say(phrase)
 			victim.emote("scream")
@@ -408,7 +408,7 @@
 				if(istype(current_floor))
 					current_floor.MakeSlippery(TURF_WET_WATER, min_wet_time = 20 SECONDS, wet_time_to_add = 15 SECONDS)
 			else
-				visible_message(span_danger("[src] whirs and bubbles violently, before releasing a plume of froth!"))
+				visible_message(span_danger("[src] яростно жужжит и пузырится, прежде чем выпустить шлейф пены!"))
 				var/datum/effect_system/fluid_spread/foam/foam = new
 				foam.set_up(2, holder = src, location = loc)
 				foam.start()

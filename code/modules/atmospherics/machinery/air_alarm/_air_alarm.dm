@@ -536,7 +536,6 @@ GLOBAL_LIST_EMPTY_TYPED(air_alarms, /obj/machinery/airalarm)
 		state = "alarm0"
 
 	. += mutable_appearance(icon, state)
-	. += emissive_appearance(icon, state, src, alpha = src.alpha)
 
 /// Check the current air and update our danger level.
 /// [/obj/machinery/airalarm/var/danger_level]
@@ -562,28 +561,28 @@ GLOBAL_LIST_EMPTY_TYPED(air_alarms, /obj/machinery/airalarm)
 	if(danger_level)
 		alarm_manager.send_alarm(ALARM_ATMOS)
 		if(pressure <= WARNING_LOW_PRESSURE && temp <= BODYTEMP_COLD_WARNING_1+10)
-			warning_message = "Danger! Low pressure and temperature detected."
+			warning_message = "Опасность! Обнаружено низкое давление и температура."
 			return
 		if(pressure <= WARNING_LOW_PRESSURE && temp >= BODYTEMP_HEAT_WARNING_1-27)
-			warning_message = "Danger! Low pressure and high temperature detected."
+			warning_message = "Опасность! Обнаружено низкое давление и высокая температура."
 			return
 		if(pressure >= WARNING_HIGH_PRESSURE && temp >= BODYTEMP_HEAT_WARNING_1-27)
-			warning_message = "Danger! High pressure and temperature detected."
+			warning_message = "Опасность! Обнаружено высокое давление и высокая температура."
 			return
 		if(pressure >= WARNING_HIGH_PRESSURE && temp <= BODYTEMP_COLD_WARNING_1+10)
-			warning_message = "Danger! High pressure and low temperature detected."
+			warning_message = "Опасность! Обнаружено высокое давление и низкая температура."
 			return
 		if(pressure <= WARNING_LOW_PRESSURE)
-			warning_message = "Danger! Low pressure detected."
+			warning_message = "Опасность! Обнаружено низкое давление."
 			return
 		if(pressure >= WARNING_HIGH_PRESSURE)
-			warning_message = "Danger! High pressure detected."
+			warning_message = "Опасность! Обнаружено высокое давление."
 			return
 		if(temp <= BODYTEMP_COLD_WARNING_1+10)
-			warning_message = "Danger! Low temperature detected."
+			warning_message = "Опасность! Обнаружена низкая температура."
 			return
 		if(temp >= BODYTEMP_HEAT_WARNING_1-27)
-			warning_message = "Danger! High temperature detected."
+			warning_message = "Опасность! Обнаружена высокая температура."
 			return
 		else
 			warning_message = null
@@ -608,7 +607,22 @@ GLOBAL_LIST_EMPTY_TYPED(air_alarms, /obj/machinery/airalarm)
 		selected_mode.apply(my_area)
 	SEND_SIGNAL(src, COMSIG_AIRALARM_UPDATE_MODE, source)
 
-MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/airalarm, 27)
+//MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/airalarm, 24)
+/obj/machinery/airalarm/directional/north
+	dir = SOUTH
+	pixel_y = 24
+
+/obj/machinery/airalarm/directional/south
+	dir = NORTH
+	pixel_y = -24
+
+/obj/machinery/airalarm/directional/east
+	dir = WEST
+	pixel_x = 24
+
+/obj/machinery/airalarm/directional/west
+	dir = EAST
+	pixel_x = -24
 
 /obj/machinery/airalarm/proc/speak(warning_message)
 	if(machine_stat & (BROKEN|NOPOWER))

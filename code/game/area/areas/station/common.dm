@@ -9,63 +9,112 @@
 */
 
 /area/station/commons/dorms
-	name = "\improper Dormitories"
+	name = "Зона отдыха: Дормитории"
 	icon_state = "dorms"
 
 /area/station/commons/dorms/room1
-	name = "\improper Dorms Room 1"
+	name = "Зона отдыха: Дормитории - Комната 1"
 	icon_state = "room1"
 
 /area/station/commons/dorms/room2
-	name = "\improper Dorms Room 2"
+	name = "Зона отдыха: Дормитории - Комната 2"
 	icon_state = "room2"
 
 /area/station/commons/dorms/room3
-	name = "\improper Dorms Room 3"
+	name = "Зона отдыха: Дормитории - Комната 3"
 	icon_state = "room3"
 
 /area/station/commons/dorms/room4
-	name = "\improper Dorms Room 4"
+	name = "Зона отдыха: Дормитории - Комната 4"
 	icon_state = "room4"
 
+/area/station/commons/dorms/room5
+	name = "Зона отдыха: Дормитории - Комната 5"
+	icon_state = "room5"
+
+
+/area/station/commons/dorms/room6
+	name = "Зона отдыха: Дормитории - Комната 6"
+	icon_state = "room6"
+
+
+/area/station/commons/dorms/room7
+	name = "Зона отдыха: Дормитории - Комната 7"
+	icon_state = "room7"
+
+
+/area/station/commons/dorms/room8
+	name = "Зона отдыха: Дормитории - Комната 8"
+	icon_state = "room8"
+
+/area/station/commons/dorms/room9
+	name = "Зона отдыха: Дормитории - Комната 9"
+	icon_state = "room9"
+
+/area/station/commons/dorms/room10
+	name = "Зона отдыха: Дормитории - Комната 10"
+	icon_state = "room10"
+
+
+/area/station/commons/dorms/room11
+	name = "Зона отдыха: Дормитории - Комната 11"
+	icon_state = "room11"
+
+
 /area/station/commons/dorms/apartment1
-	name = "\improper Dorms Apartment 1"
+	name = "Зона отдыха: Дормитории - Апартаменты 1"
 	icon_state = "apartment1"
 
 /area/station/commons/dorms/apartment2
-	name = "\improper Dorms Apartment 2"
+	name = "Зона отдыха: Дормитории - Апартаменты 2"
 	icon_state = "apartment2"
 
-/area/station/commons/dorms/barracks
-	name = "\improper Sleep Barracks"
+/area/station/commons/dorms/cabin1
+	name = "Зона отдыха: Кабинка 1"
+	icon_state = "dcabin1"
+
+/area/station/commons/dorms/cabin2
+	name = "Зона отдыха: Кабинка 2"
+	icon_state = "dcabin2"
+
+/area/station/commons/dorms/cabin3
+	name = "Зона отдыха: Кабинка 3"
+	icon_state = "dcabin3"
+
+/area/station/commons/dorms/cabin4
+	name = "Зона отдыха: Кабинка 4"
+	icon_state = "dcabin4"
+
+/area/station/commons/dorms/barracks // Барак обама сосал хуй и не только.
+	name = "Зона отдыха: Бараки"
 
 /area/station/commons/dorms/barracks/male
-	name = "\improper Male Sleep Barracks"
+	name = "Зона отдыха: Мужские бараки"
 	icon_state = "dorms_male"
 
 /area/station/commons/dorms/barracks/female
-	name = "\improper Female Sleep Barracks"
+	name = "Female Sleep Barracks"
 	icon_state = "dorms_female"
 
 /area/station/commons/dorms/laundry
-	name = "\improper Laundry Room"
+	name = "Зона отдыха: Женские бараки"
 	icon_state = "laundry_room"
 
 /area/station/commons/toilet
-	name = "\improper Dormitory Toilets"
+	name = "Зона отдыха: Туалеты"
 	icon_state = "toilet"
 	sound_environment = SOUND_AREA_SMALL_ENCLOSED
 
 /area/station/commons/toilet/auxiliary
-	name = "\improper Auxiliary Restrooms"
+	name = "Зона отдыха: Вспомогательные туалеты"
 	icon_state = "toilet"
 
 /area/station/commons/toilet/locker
-	name = "\improper Locker Toilets"
+	name = "Зона отдыха: Туалеты раздевалки"
 	icon_state = "toilet"
 
 /area/station/commons/toilet/restrooms
-	name = "\improper Restrooms"
+	name = "Зона отдыха: Туалеты"
 	icon_state = "toilet"
 
 /*
@@ -73,11 +122,11 @@
 */
 
 /area/station/commons/locker
-	name = "\improper Locker Room"
+	name = "Зона отдыха: Раздевалка"
 	icon_state = "locker"
 
 /area/station/commons/lounge
-	name = "\improper Bar Lounge"
+	name = "Зона отдыха: Гостиная"
 	icon_state = "lounge"
 	mood_bonus = 5
 	mood_message = "I love being in the bar!"
@@ -104,6 +153,14 @@
 	name = "\improper Recreation Area"
 	icon_state = "rec"
 
+/area/station/commons/cryopods
+	name = "Криоподы"
+	icon_state = "cryo"
+
+/area/station/commons/fitness/maint_gym
+	name = "Техтоннели: Качалка"
+	icon_state = "rec"
+
 /area/station/commons/fitness/recreation/entertainment
 	name = "\improper Entertainment Center"
 	icon_state = "entertainment"
@@ -113,18 +170,26 @@
 */
 
 /area/station/commons/vacant_room
-	name = "\improper Vacant Room"
+	name = "Свободная комната"
 	icon_state = "vacant_room"
 	ambience_index = AMBIENCE_MAINT
 
 /area/station/commons/vacant_room/office
-	name = "\improper Vacant Office"
+	name = "Свободный офис"
 	icon_state = "vacant_office"
 
 /area/station/commons/vacant_room/commissary
-	name = "\improper Vacant Commissary"
+	name = "Свободный магазин"
 	icon_state = "vacant_commissary"
 
+/area/station/vacant_room/commissary/second
+	name = "Нижний магазин"
+
+/area/station/vacant_room/commissary/third
+	name = "Дополнительный магазин"
+
+/area/station/vacant_room/commissary/fourth
+	name = "Интересный магазин"
 /*
 * Storage Rooms
 */

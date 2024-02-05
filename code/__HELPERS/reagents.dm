@@ -196,7 +196,7 @@
 
 	for(var/X in GLOB.chemical_reagents_list)
 		var/datum/reagent/R = GLOB.chemical_reagents_list[X]
-		if(ckey(chem_name) == ckey(lowertext(R.enname)))
+		if(chem_name == lowertext(R.name) || chem_name == lowertext(R.enname))
 			return X
 
 ///Takes a type in and returns a list of associated recipes

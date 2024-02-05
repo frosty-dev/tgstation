@@ -30,7 +30,7 @@
 
 /obj/item/organ/internal/eyes/night_vision/goliath/Initialize(mapload)
 	. = ..()
-	AddElement(/datum/element/noticable_organ, "кроваво-красные глаза, похожие на камень.", BODY_ZONE_PRECISE_EYES)
+	AddElement(/datum/element/noticable_organ, "кроваво-красные глаза похожи на камень.", BODY_ZONE_PRECISE_EYES)
 	AddElement(/datum/element/organ_set_bonus, /datum/status_effect/organ_set_bonus/goliath)
 
 ///goliath lungs! You can breathe lavaland air mix but can't breath pure O2 from a tank anymore.

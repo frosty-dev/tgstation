@@ -1,7 +1,7 @@
 
 /obj/item/storage/bag/quiver
-	name = "quiver"
-	desc = "Holds arrows for your bow. Good, because while pocketing arrows is possible, it surely can't be pleasant."
+	name = "колчан"
+	desc = "Хранит стрелы для моего лука. Это очень удобно, хотя стрелы можно рассовать и по карманам, но не уверен что их будет комфортно носить при этом."
 	icon = 'icons/obj/weapons/bows/quivers.dmi'
 	icon_state = "quiver"
 	inhand_icon_state = null
@@ -25,8 +25,8 @@
 		new arrow_path(src)
 
 /obj/item/storage/bag/quiver/holy
-	name = "divine quiver"
-	desc = "Holds arrows for your divine bow, where they wait to find their target."
+	name = "божественный колчан"
+	desc = "Хранит стрелы для моего божественного лука, где они смогут дождаться подходящего времени чтобы сразить свою цель."
 	icon_state = "holyquiver"
 	inhand_icon_state = "holyquiver"
 	worn_icon_state = "holyquiver"

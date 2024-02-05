@@ -194,6 +194,18 @@
 	time = 1 SECONDS
 	category = CAT_WEAPON_RANGED
 
+/datum/crafting_recipe/ishotgun
+	name = "Самодельный дробовик"
+	result = /obj/item/gun/ballistic/shotgun/doublebarrel/improvised
+	reqs = list(/obj/item/weaponcrafting/receiver = 1,
+				/obj/item/pipe = 1,
+				/obj/item/weaponcrafting/stock = 1,
+				/obj/item/stack/sticky_tape = 1
+	)
+	tool_behaviors = list(TOOL_SCREWDRIVER)
+	time = 10 SECONDS
+	category = CAT_WEAPON_RANGED
+
 /datum/crafting_recipe/pipegun
 	name = "Pipegun"
 	result = /obj/item/gun/ballistic/rifle/boltaction/pipegun
@@ -201,6 +213,7 @@
 		/obj/item/pipe = 1,
 		/obj/item/weaponcrafting/stock = 1,
 		/obj/item/stack/sticky_tape = 1,
+		/obj/item/stack/rods = 1
 	)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
 	time = 5 SECONDS

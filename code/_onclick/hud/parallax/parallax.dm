@@ -17,7 +17,7 @@
 		C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_2(null, src)
 		C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/planet(null, src)
 		if(SSparallax.random_layer)
-			C.parallax_layers_cached += new SSparallax.random_layer.type(null, src, FALSE, SSparallax.random_layer)
+			C.parallax_layers_cached += new SSparallax.random_layer(null, src, FALSE, SSparallax.random_layer)
 		C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_3(null, src)
 
 	C.parallax_layers = C.parallax_layers_cached.Copy()
@@ -317,18 +317,32 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/parallax_layer)
 
 /atom/movable/screen/parallax_layer/layer_1
 	icon_state = "layer1"
-	speed = 0.6
+	speed = 1
 	layer = 1
+	color = "#999999"
+
+/atom/movable/screen/parallax_layer/layer_1/Initialize(mapload)
+	. = ..()
+	icon_state = "layer1_[rand(1,5)]"
 
 /atom/movable/screen/parallax_layer/layer_2
 	icon_state = "layer2"
-	speed = 1
+	speed = 1.2
 	layer = 2
 
 /atom/movable/screen/parallax_layer/layer_3
 	icon_state = "layer3"
 	speed = 1.4
 	layer = 3
+
+/atom/movable/screen/parallax_layer/random/space_gas
+	icon_state = "space_gas"
+	speed = 1
+	blend_mode = 3
+
+/atom/movable/screen/parallax_layer/random/space_gas/Initialize(mapload, mob/owner)
+	. = ..()
+	src.add_atom_colour(SSparallax.random_parallax_color, ADMIN_COLOUR_PRIORITY)
 
 /atom/movable/screen/parallax_layer/planet
 	icon_state = "planet"
@@ -364,3 +378,4 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/parallax_layer)
 
 /atom/movable/screen/parallax_layer/planet/update_o()
 	return //Shit won't move
+

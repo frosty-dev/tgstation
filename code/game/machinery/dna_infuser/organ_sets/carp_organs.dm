@@ -27,7 +27,7 @@
 
 /obj/item/organ/internal/lungs/carp/Initialize(mapload)
 	. = ..()
-	AddElement(/datum/element/noticable_organ, "на шее виднеются странные жабры.", BODY_ZONE_HEAD)
+	AddElement(/datum/element/noticable_organ, "шея покрыта странными жабрами.", BODY_ZONE_HEAD)
 	AddElement(/datum/element/organ_set_bonus, /datum/status_effect/organ_set_bonus/carp)
 	ADD_TRAIT(src, TRAIT_SPACEBREATHING, REF(src))
 
@@ -145,7 +145,7 @@
 
 /obj/item/organ/internal/heart/carp/Initialize(mapload)
 	. = ..()
-	AddElement(/datum/element/noticable_organ, "на коже виднеются небольшие чешуйчатые участки.", BODY_ZONE_CHEST)
+	AddElement(/datum/element/noticable_organ, "кожа покрыта небольшой чешуёй.", BODY_ZONE_CHEST)
 	AddElement(/datum/element/organ_set_bonus, /datum/status_effect/organ_set_bonus/carp)
 
 #undef CARP_ORGAN_COLOR

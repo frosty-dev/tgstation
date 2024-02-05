@@ -95,15 +95,6 @@ export const CharacterPreferenceWindow = (props, context) => {
               profiles={data.character_profiles}
             />
           </Stack.Item>
-
-          {!data.content_unlocked && (
-            <Stack.Item align="center">
-              Buy BYOND premium for more slots!
-            </Stack.Item>
-          )}
-
-          <Stack.Divider />
-
           <Stack.Item>
             <Stack fill>
               <Stack.Item grow>

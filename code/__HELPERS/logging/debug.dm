@@ -7,6 +7,7 @@
 /proc/log_config(text, list/data)
 	logger.Log(LOG_CATEGORY_CONFIG, text, data)
 	SEND_TEXT(world.log, text)
+	webhook_send_runtime(text)
 
 /proc/log_filter_raw(text, list/data)
 	logger.Log(LOG_CATEGORY_FILTER, text, data)
@@ -41,6 +42,7 @@
 /* Log to the logfile only. */
 /proc/log_runtime(text, list/data)
 	logger.Log(LOG_CATEGORY_RUNTIME, text, data)
+	webhook_send_runtime(text)
 
 /proc/log_signal(text, list/data)
 	logger.Log(LOG_CATEGORY_SIGNAL, text, data)
@@ -59,3 +61,4 @@
 	logger.Log(LOG_CATEGORY_RUNTIME, text, data)
 #endif
 	SEND_TEXT(world.log, text)
+	webhook_send_runtime(text)

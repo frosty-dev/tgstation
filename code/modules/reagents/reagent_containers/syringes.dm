@@ -1,6 +1,6 @@
 /obj/item/reagent_containers/syringe
-	name = "syringe"
-	desc = "A syringe that can hold up to 15 units."
+	name = "шприц"
+	desc = "Шприц, вмещающий до 15 единиц веществ."
 	icon = 'icons/obj/medical/syringe.dmi'
 	base_icon_state = "syringe"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'

@@ -262,6 +262,7 @@ SUBSYSTEM_DEF(mapping)
 		// Create a proportional budget by multiplying the amount of space ruin levels in the current map over the default amount
 		var/proportional_budget = round(CONFIG_GET(number/space_budget) * (space_ruins.len / DEFAULT_SPACE_RUIN_LEVELS))
 		seedRuins(space_ruins, proportional_budget, list(/area/space), themed_ruins[ZTRAIT_SPACE_RUINS])
+	seedStation() //yogs - random station rooms
 
 /// Sets up rivers, and things that behave like rivers. So lava/plasma rivers, and chasms
 /// It is important that this happens AFTER generating mineral walls and such, since we rely on them for river logic
@@ -414,7 +415,7 @@ Used by the AI doomsday and the self-destruct nuke.
 		if (!pm.load(x_offset, y_offset, start_z + parsed_maps[P], no_changeturf = TRUE, new_z = TRUE))
 			errorList |= pm.original_path
 	if(!silent)
-		INIT_ANNOUNCE("Loaded [name] in [(REALTIMEOFDAY - start_time)/10]s!")
+		to_chat(world, span_green(" -- #<b>[name]</b>:> <b>[(REALTIMEOFDAY - start_time)/10]</b> -- "))
 	return parsed_maps
 
 /datum/controller/subsystem/mapping/proc/loadWorld()
@@ -426,7 +427,7 @@ Used by the AI doomsday and the self-destruct nuke.
 
 	// load the station
 	station_start = world.maxz + 1
-	INIT_ANNOUNCE("Loading [config.map_name]...")
+	to_chat(world, span_green(" -- $<b>Настройка</b>:> <b>[config.map_name]</b> -- "))
 	LoadGroup(FailedZs, "Station", config.map_path, config.map_file, config.traits, ZTRAITS_STATION)
 
 	if(SSdbcore.Connect())
@@ -605,7 +606,11 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 
 		if (!(R.ruin_type in themed_ruins))
 			themed_ruins[R.ruin_type] = list()
-		themed_ruins[R.ruin_type][R.name] = R
+			themed_ruins[R.ruin_type][R.name] = R
+		else if(istype(R, /datum/map_template/ruin/station)) //yogs
+			station_room_templates[R.name] = R //yogs
+		else if (istype(R, /datum/map_template/ruin/maint)) // white
+			station_room_templates[R.name] = R // white
 
 /datum/controller/subsystem/mapping/proc/preloadShuttleTemplates()
 	var/list/unbuyable = generateMapList("unbuyableshuttles.txt")

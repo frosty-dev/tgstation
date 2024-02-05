@@ -282,7 +282,7 @@
 	return ..() || .
 
 /datum/reagent/consumable/tea
-	name = "Tea"
+	name = "Чай"
 	description = "Tasty black tea, it has antioxidants, it's good for you!"
 	color = "#101000" // rgb: 16, 16, 0
 	nutriment_factor = 0
