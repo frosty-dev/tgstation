@@ -119,13 +119,13 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/science/alt, 32)
 	name = "\improper Xenobiology sign"
 	sign_change_name = "Department - Science: Xenobiology"
 	desc = "A sign labelling an area where xenobiological entities are researched."
-	icon_state = "xenobio1"
+	icon_state = "xenobio"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/xenobio, 32)
 
 /obj/structure/sign/departments/xenobio/alt
 	sign_change_name = "Department - Science: Xenobiology Alt"
-	icon_state = "xenobio2"
+	icon_state = "xeno_warning"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/xenobio/alt, 32)
 
