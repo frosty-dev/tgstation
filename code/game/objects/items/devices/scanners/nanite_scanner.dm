@@ -4,8 +4,8 @@
 	icon_state = "nanite_scanner"
 	inhand_icon_state = "electronic"
 	worn_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
 	desc = "Устройство для определения нанитов и их особенностей."
 	flags_1 = CONDUCT_1
 	item_flags = NOBLUDGEON
