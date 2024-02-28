@@ -1,5 +1,6 @@
 #define SCANGATE_NONE "Off"
 #define SCANGATE_MINDSHIELD "Mindshield"
+#define SCANGATE_NANITES "Nanites"
 #define SCANGATE_DISEASE "Disease"
 #define SCANGATE_GUNS "Guns"
 #define SCANGATE_WANTED "Wanted"
@@ -37,6 +38,8 @@
 	var/detect_species = SCANGATE_HUMAN
 	///Flips all scan results for inverse scanning. Signals if scan returns false.
 	var/reverse = FALSE
+	///If scanning for a nanite strain, what cloud is it looking for?
+	var/nanite_cloud = 1
 	///If scanning for nutrition, what level of nutrition will trigger the scanner?
 	var/detect_nutrition = NUTRITION_LEVEL_FAT
 	///Will the assembly on the pass wire activate if the scanner resolves green (Pass) on crossing?
@@ -130,6 +133,14 @@
 		if(SCANGATE_MINDSHIELD)
 			if(HAS_TRAIT(M, TRAIT_MINDSHIELD))
 				beep = TRUE
+		if(SCANGATE_NANITES)
+			if(SEND_SIGNAL(M, COMSIG_HAS_NANITES))
+				if(nanite_cloud)
+					var/datum/component/nanites/nanites = M.GetComponent(/datum/component/nanites)
+					if(nanites && nanites.cloud_id == nanite_cloud)
+						beep = TRUE
+				else
+					beep = TRUE
 		if(SCANGATE_DISEASE)
 			if(iscarbon(M))
 				var/mob/living/carbon/C = M
@@ -219,6 +230,7 @@
 	data["locked"] = locked
 	data["scan_mode"] = scangate_mode
 	data["reverse"] = reverse
+	data["nanite_cloud"] = nanite_cloud
 	data["disease_threshold"] = disease_threshold
 	data["target_species"] = detect_species
 	data["target_nutrition"] = detect_nutrition
@@ -245,6 +257,10 @@
 			var/new_threshold = params["new_threshold"]
 			disease_threshold = new_threshold
 			. = TRUE
+		if("set_nanite_cloud")
+			var/new_cloud = text2num(params["new_cloud"])
+			nanite_cloud = clamp(round(new_cloud, 1), 1, 100)
+			. = TRUE
 		//Some species are not scannable, like abductors (too unknown), androids (too artificial) or skeletons (too magic)
 		if("set_target_species")
 			var/new_species = params["new_species"]
@@ -266,6 +282,7 @@
 
 #undef SCANGATE_NONE
 #undef SCANGATE_MINDSHIELD
+#undef SCANGATE_NANITES
 #undef SCANGATE_DISEASE
 #undef SCANGATE_GUNS
 #undef SCANGATE_WANTED

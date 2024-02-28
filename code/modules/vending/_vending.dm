@@ -1729,7 +1729,7 @@
 	name = "разметоцен"
 	desc = "Используется для нанесения голографических ценников на предметы."
 	icon = 'icons/obj/device.dmi'
-	icon_state = "pricetagger"
+	icon_state = "price tagger"
 	custom_premium_price = PAYCHECK_LOWER * 0.5
 	///the price of the item
 	var/price = 1

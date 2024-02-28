@@ -1,8 +1,8 @@
 #define PROCESSOR_SELECT_RECIPE(movable_input) LAZYACCESS(processor_inputs[type], movable_input.type)
 
 /obj/machinery/processor
-	name = "food processor"
-	desc = "An industrial grinder used to process meat and other foods. Keep hands clear of intake area while operating."
+	name = "кухонный комбайн"
+	desc = "Промышленный измельчитель, используемый для обработки мяса и других продуктов. Во время работы держите руки подальше от приемника."
 	icon = 'icons/obj/machines/kitchen.dmi'
 	icon_state = "processor1"
 	layer = BELOW_OBJ_LAYER
@@ -53,7 +53,7 @@
 /obj/machinery/processor/examine(mob/user)
 	. = ..()
 	if(in_range(user, src) || isobserver(user))
-		. += span_notice("Дисплей: Outputting <b>[rating_amount]</b> item(s) at <b>[rating_speed*100]%</b> speed.")
+		. += span_notice("Дисплей:  На выходе <b>[rating_amount]</b> предметов со скоростью <b>[rating_speed*100]%</b>.")
 
 /obj/machinery/processor/Exited(atom/movable/gone, direction)
 	..()
@@ -88,7 +88,7 @@
 
 /obj/machinery/processor/attackby(obj/item/attacking_item, mob/living/user, params)
 	if(processing)
-		to_chat(user, span_warning("[src] is in the process of processing!"))
+		to_chat(user, span_warning("[src] в процессе обработки!"))
 		return TRUE
 	if(default_deconstruction_screwdriver(user, "processor", "processor1", attacking_item) || default_pry_open(attacking_item, close_after_pry = TRUE) || default_deconstruction_crowbar(attacking_item))
 		return
@@ -106,45 +106,45 @@
 					loaded++
 
 		if(loaded)
-			to_chat(user, span_notice("You insert [loaded] items into [src]."))
+			to_chat(user, span_notice("Закидываю [loaded] предметов в [src]."))
 		return
 
 	var/datum/food_processor_process/recipe = PROCESSOR_SELECT_RECIPE(attacking_item)
 	if(recipe)
 		user.visible_message(
-			span_notice("[user] put [attacking_item] into [src]."),
-			span_notice("You put [attacking_item] into [src]."),
+			span_notice("[user] закидывает [attacking_item] в [src]."),
+			span_notice("Закидываю [attacking_item] в [src]."),
 		)
 		user.transferItemToLoc(attacking_item, src, TRUE)
 		LAZYADD(processor_contents, attacking_item)
 		return TRUE
 	else if(!user.combat_mode)
-		to_chat(user, span_warning("That probably won't blend!"))
+		to_chat(user, span_warning("Это не получится переработать!"))
 		return TRUE
 	else
 		return ..()
 
 /obj/machinery/processor/interact(mob/user)
 	if(processing)
-		to_chat(user, span_warning("[src] is in the process of processing!"))
+		to_chat(user, span_warning("[src] в процессе процессирования!"))
 		return TRUE
 	if(ismob(user.pulling) && PROCESSOR_SELECT_RECIPE(user.pulling))
 		if(user.grab_state < GRAB_AGGRESSIVE)
-			to_chat(user, span_warning("You need a better grip to do that!"))
+			to_chat(user, span_warning("Потребуется более сильный захват для этого!"))
 			return
 		var/mob/living/pushed_mob = user.pulling
-		visible_message(span_warning("[user] stuffs [pushed_mob] into [src]!"))
+		visible_message(span_warning("[user] запихивает [pushed_mob] в [src]!"))
 		pushed_mob.forceMove(src)
 		LAZYADD(processor_contents, pushed_mob)
 		user.stop_pulling()
 		return
 	if(!LAZYLEN(processor_contents))
-		to_chat(user, span_warning("[src] is empty!"))
+		to_chat(user, span_warning("[src] пуст!"))
 		return TRUE
 	processing = TRUE
-	user.visible_message(span_notice("[user] turns on [src]."), \
-		span_notice("You turn on [src]."), \
-		span_hear("You hear a food processor."))
+	user.visible_message(span_notice("[user] включает [src]."), \
+		span_notice("Включаю [src]."), \
+		span_hear("Слышу рёв металла."))
 	playsound(src.loc, 'sound/machines/blender.ogg', 50, TRUE)
 	use_power(active_power_usage)
 	var/total_time = 0
@@ -165,11 +165,11 @@
 			continue
 		process_food(recipe, content_item)
 	processing = FALSE
-	visible_message(span_notice(" [src] finishes processing."))
+	visible_message(span_notice("[src] заканчивает свою работу."))
 
 /obj/machinery/processor/verb/eject()
-	set category = "Object"
-	set name = "Eject Contents"
+	set category = "Объект"
+	set name = "Изъять содержимое"
 	set src in oview(1)
 	if(usr.stat != CONSCIOUS || HAS_TRAIT(usr, TRAIT_HANDS_BLOCKED))
 		return

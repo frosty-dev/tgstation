@@ -906,7 +906,6 @@
 	name = "клоунский герметичный шлем"
 	desc = "Предназначен для работы в условиях низкого давления."
 	icon_state = "hardsuit0-clown"
-	inhand_icon_state = "hardsuit0-clown"
 	armor_type = /datum/armor/hardsuit_clown
 	hardsuit_type = "clown"
 
@@ -942,7 +941,7 @@
 	name = "прототип RIG герметичного шлема"
 	desc = "Обычный древний шлем космонавта"
 	icon_state = "hardsuit0-ancient"
-	inhand_icon_state = "anc_helm"
+	inhand_icon_state = "hardsuit-old"
 	armor_type = /datum/armor/hardsuit_ancient
 	hardsuit_type = "ancient"
 	resistance_flags = FIRE_PROOF
@@ -953,7 +952,7 @@
 	name = "прототип RIG скафандра"
 	desc = "Обычный древний скафандр космонавта."
 	icon_state = "hardsuit-ancient"
-	inhand_icon_state = "anc_hardsuit"
+	inhand_icon_state = "rig-old"
 	armor_type = /datum/armor/hardsuit_ancient
 	slowdown = 3
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/ancient

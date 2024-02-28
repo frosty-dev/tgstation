@@ -37,10 +37,10 @@
 
 /obj/item/healthanalyzer/examine(mob/user)
 	. = ..()
-	. += span_notice("Alt-клик, чтобы переключить режим сканирования.")
+	. += span_notice("Альт-клик для переключения индикации повреждения конечностей.")
 
 /obj/item/healthanalyzer/suicide_act(mob/living/carbon/user)
-	user.visible_message(span_suicide("[user] begins to analyze [user.p_them()]self with [src]! The display shows that [user.p_theyre()] dead!"))
+	user.visible_message(span_suicide("[user] begins to analyze [user.ru_na()] self with [src]! The display shows that [user.p_theyre()] dead!"))
 	return BRUTELOSS
 
 /obj/item/healthanalyzer/attack_self(mob/user)
@@ -402,7 +402,7 @@
 			render_list += "<span class='notice ml-1'>Обнаружены кибернетические модификации:</span>\n"
 			render_list += "<span class='notice ml-2'>[cyberimp_detect]</span>\n"
 	// we handled the last <br> so we don't need handholding
-
+	SEND_SIGNAL(M, COMSIG_NANITE_SCAN, user, FALSE)
 	if(tochat)
 		to_chat(user, examine_block(jointext(render_list, "")), trailing_newline = FALSE, type = MESSAGE_TYPE_INFO)
 	else
@@ -460,14 +460,14 @@
 
 		// Special eigenstasium addiction
 		if(M.has_status_effect(/datum/status_effect/eigenstasium))
-			render_list += "<span class='notice ml-1'>Subject is temporally unstable. Stabilising agent is recommended to reduce disturbances.</span>\n"
+			render_list += "<span class='notice ml-1'>Пациент временно нестабилен. Стабилизирующее средство рекомендуется для уменьшения проблем.</span>\n"
 
 		// Allergies
 		for(var/datum/quirk/quirky as anything in M.quirks)
 			if(istype(quirky, /datum/quirk/item_quirk/allergic))
 				var/datum/quirk/item_quirk/allergic/allergies_quirk = quirky
 				var/allergies = allergies_quirk.allergy_string
-				render_list += "<span class='alert ml-1'>Subject is extremely allergic to the following chemicals:</span>\n"
+				render_list += "<span class='alert ml-1'>Пациент крайне аллергичен на следующие химические вещества:</span>\n"
 				render_list += "<span class='alert ml-2'>[allergies]</span>\n"
 
 		// we handled the last <br> so we don't need handholding
@@ -514,7 +514,7 @@
 			if (scanner.give_wound_treatment_bonus)
 				ADD_TRAIT(current_wound, TRAIT_WOUND_SCANNED, ANALYZER_TRAIT)
 				if(!advised)
-					to_chat(user, span_notice("You notice how bright holo-images appear over your [(length(wounded_part.wounds) || length(patient.get_wounded_bodyparts()) ) > 1 ? "various wounds" : "wound"]. They seem to be filled with helpful information, this should make treatment easier!"))
+					to_chat(user, span_notice("Замечаю как яркие голо-изображения появляются над [(length(wounded_part.wounds) || length(patient.get_wounded_bodyparts()) ) > 1 ? "моими травмами" : "моей травмой"]. Изображение заполнено полезной информацией, это должно сделать лечение проще!"))
 					advised = TRUE
 		render_list += "</span>"
 
@@ -685,7 +685,7 @@
 	for(var/datum/disease/disease as anything in patient.diseases)
 		if(!(disease.visibility_flags & HIDDEN_SCANNER))
 			render += "<span class='alert ml-1'><b>Warning: [disease.form] detected</b>\n\
-			<div class='ml-2'>Name: [disease.name].\nType: [disease.spread_text].\nStage: [disease.stage]/[disease.max_stages].\nPossible Cure: [disease.cure_text]</div>\
+			<div class='ml-2'>Название: [disease.name].\nType: [disease.spread_text].\nStage: [disease.stage]/[disease.max_stages].\nPossible Cure: [disease.cure_text]</div>\
 			</span>"
 
 	if(!length(render))

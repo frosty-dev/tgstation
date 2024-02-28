@@ -44,7 +44,7 @@
 			var/obj/item/food/icecream/cone = new cone_path
 			if(cone.ingredients)
 				cone_prototypes[cone_path] = cone
-				cone.ingredients_text = "(Ingredients: [reagent_paths_list_to_text(cone.ingredients)])"
+				cone.ingredients_text = "(Ингредиенты: [reagent_paths_list_to_text(cone.ingredients)])"
 			else
 				qdel(cone)
 
@@ -63,23 +63,23 @@
 /obj/machinery/icecream_vat/ui_interact(mob/user)
 	. = ..()
 	var/dat
-	dat += "<b>ICE CREAM</b><br><div class='statusDisplay'>"
-	dat += "<b>Dispensing: [selected_flavour] icecream </b> <br><br>"
+	dat += "<b>МОРОЖЕНОЕ</b><br><div class='statusDisplay'>"
+	dat += "<b>Выдача: [selected_flavour] мороженого </b> <br><br>"
 	for(var/flavour in GLOB.ice_cream_flavours)
 		if(GLOB.ice_cream_flavours[flavour].hidden)
 			continue
-		dat += "<b>[capitalize(flavour)] ice cream:</b> <a href='?src=[REF(src)];select=[flavour]'><b>Select</b></a> <a href='?src=[REF(src)];make=[flavour];amount=1'><b>Make</b></a> <a href='?src=[REF(src)];make=[flavour];amount=5'><b>x5</b></a> [product_types[flavour]] scoops left[GLOB.ice_cream_flavours[flavour].ingredients_text].<br>"
-	dat += "<br><b>CONES</b><br><div class='statusDisplay'>"
+		dat += "<b>Мороженое [capitalize(flavour)]:</b> <a href='?src=[REF(src)];select=[flavour]'><b>Выбрано</b></a> <a href='?src=[REF(src)];make=[flavour];amount=1'><b>Сделать</b></a> <a href='?src=[REF(src)];make=[flavour];amount=5'><b>x5</b></a> [product_types[flavour]] шариков осталось [GLOB.ice_cream_flavours[flavour].ingredients_text].<br>"
+	dat += "<br><b>ВАФЕЛЬНЫЕ РОЖКИ</b><br><div class='statusDisplay'>"
 	for(var/cone in cone_prototypes)
-		dat += "<b>[capitalize(cone_prototypes[cone].name)]s:</b> <a href='?src=[REF(src)];cone=[cone]'><b>Dispense</b></a> <a href='?src=[REF(src)];make_cone=[cone];amount=1'><b>Make</b></a> <a href='?src=[REF(src)];make_cone=[cone];amount=5'><b>x5</b></a> [product_types[cone]] cones left[cone_prototypes[cone].ingredients_text].<br>"
+		dat += "<b>[capitalize(cone_prototypes[cone].name)]s:</b> <a href='?src=[REF(src)];cone=[cone]'><b>Выдача</b></a> <a href='?src=[REF(src)];make_cone=[cone];amount=1'><b>Make</b></a> <a href='?src=[REF(src)];make_cone=[cone];amount=5'><b>x5</b></a> [product_types[cone]] вафельных рожков осталось[cone_prototypes[cone].ingredients_text].<br>"
 	dat += "<br>"
 	if(beaker)
-		dat += "<b>BEAKER CONTENT</b><br><div class='statusDisplay'>"
+		dat += "<b>СОДЕРЖАНИЕ МЕНЗУРКИ</b><br><div class='statusDisplay'>"
 		for(var/datum/reagent/R in beaker.reagents.reagent_list)
 			dat += "[R.name]: [R.volume]u<br>"
 		dat += "<a href='?src=[REF(src)];refill=1'><b>Refill from beaker</b></a></div>"
 	dat += "<br>"
-	dat += "<b>VAT CONTENT</b><br>"
+	dat += "<b>СОДЕРЖАНИЕ ЧАНА</b><br>"
 	for(var/datum/reagent/R in reagents.reagent_list)
 		dat += "[R.name]: [R.volume]"
 		dat += "<A href='?src=[REF(src)];disposeI=[R.type]'>Purge</A><BR>"
@@ -96,7 +96,7 @@
 		if(!user.transferItemToLoc(B, src))
 			return
 		replace_beaker(user, B)
-		to_chat(user, span_notice("You add [B] to [src]."))
+		to_chat(user, span_notice("Добавляю [B] в [src]."))
 		updateUsrDialog()
 		update_appearance()
 		return
@@ -111,7 +111,7 @@
 	for(var/datum/reagent/R in beaker.reagents.reagent_list)
 		if(R.type in icecream_vat_reagents)
 			beaker.reagents.trans_id_to(src, R.type, R.volume)
-			say("Internalizing reagent.")
+			say("Ввод реагента.")
 			playsound(src, 'sound/items/drink.ogg', 25, TRUE)
 	return
 
@@ -127,11 +127,11 @@
 		product_types[make_type] += amount
 		var/obj/item/food/icecream/cone = cone_prototypes[make_type]
 		if(cone)
-			visible_message(span_info("[user] cooks up some [cone.name]s."))
+			visible_message(span_info("[user] готовит [cone.name]."))
 		else
-			visible_message(span_info("[user] whips up some [make_type] icecream."))
+			visible_message(span_info("[user] готовит мороженое [make_type] ."))
 	else
-		to_chat(user, span_warning("You don't have the ingredients to make this!"))
+		to_chat(user, span_warning("У меня нет ингредиентов на это!"))
 
 /obj/machinery/icecream_vat/Topic(href, href_list)
 	if(..())
@@ -141,7 +141,7 @@
 		var/datum/ice_cream_flavour/flavour = GLOB.ice_cream_flavours[href_list["select"]]
 		if(!flavour || flavour.hidden) //Nice try, tex.
 			return
-		visible_message(span_notice("[user] sets [src] to dispense [href_list["select"]] flavoured ice cream."))
+		visible_message(span_notice("[user] устанавливает [src] на выдачу мороженого со вкусом [href_list["select"]]."))
 		selected_flavour = flavour.name
 
 	if(href_list["cone"])
@@ -153,9 +153,9 @@
 			var/obj/item/food/icecream/cone = new cone_path(get_turf(src))
 			if(!user.put_in_hands(cone))
 				cone.forceMove(drop_location())
-			visible_message(span_info("[user] dispenses a crunchy [cone.name] from [src]."))
+			visible_message(span_info("[user] вытаскивает [cone.name] из [src]."))
 		else
-			to_chat(user, span_warning("There are no [initial(cone_path.name)]s left!"))
+			to_chat(user, span_warning("Не осталось больше [initial(cone_path.name)]!"))
 
 	if(href_list["make"])
 		var/datum/ice_cream_flavour/flavour = GLOB.ice_cream_flavours[href_list["make"]]

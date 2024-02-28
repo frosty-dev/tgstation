@@ -20,7 +20,7 @@
 		return
 	atom_storage.max_slots += 2
 	atom_storage.max_total_storage += 4
-	name = "large [name]"
+	name = "большая [name]"
 	transform = transform.Scale(1.25, 1)
 
 /obj/item/storage/box/survival/PopulateContents()
@@ -289,3 +289,11 @@
 /obj/item/storage/box/skillchips/engineering/PopulateContents()
 	new/obj/item/skillchip/job/engineer(src)
 	new/obj/item/skillchip/job/engineer(src)
+
+/obj/item/storage/box/disks_nanite
+	name = "коробка для дисков с программами для нанитов"
+	illustration = "disk_kit"
+
+/obj/item/storage/box/disks_nanite/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/disk/nanite_program(src)

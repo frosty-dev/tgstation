@@ -1709,7 +1709,7 @@
 	dir = 8
 	},
 /obj/machinery/camera/directional/north,
-/turf/open/floor/iron/freezer,
+/turf/open/floor/iron/white/small,
 /area/station/security/prison)
 "aSl" = (
 /obj/effect/turf_decal/tile/neutral{
@@ -3488,9 +3488,8 @@
 /area/station/engineering/engine_smes)
 "bMm" = (
 /obj/machinery/light/directional/west,
-/turf/open/floor/iron/stairs{
-	dir = 1
-	},
+/obj/structure/stairs/south,
+/turf/open/floor/iron/white/small,
 /area/station/security/prison)
 "bMy" = (
 /turf/closed/wall/r_wall,
@@ -30368,7 +30367,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/freezer,
+/turf/open/floor/iron/white/small,
 /area/station/security/prison)
 "lTO" = (
 /obj/structure/table,
@@ -36283,7 +36282,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
 	},
-/turf/open/floor/iron/freezer,
+/turf/open/floor/iron/white/small,
 /area/station/security/prison)
 "ogG" = (
 /obj/machinery/airalarm/directional/south{
@@ -43341,6 +43340,10 @@
 	},
 /turf/open/floor/engine,
 /area/station/ai_monitored/command/nuke_storage)
+"qSx" = (
+/obj/structure/steam_vent,
+/turf/open/floor/plating,
+/area/station/maintenance/bottom_station_maints/north)
 "qSR" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/yellow/visible{
 	dir = 1
@@ -44076,7 +44079,7 @@
 /area/station/security/detectives_office)
 "rik" = (
 /obj/machinery/shower/directional/north,
-/turf/open/floor/iron/freezer,
+/turf/open/floor/iron/white/small,
 /area/station/security/prison)
 "rim" = (
 /obj/machinery/atmospherics/components/tank/air{
@@ -50374,13 +50377,6 @@
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /turf/open/floor/plating,
 /area/station/maintenance/bottom_station_maints/east)
-"tDd" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/docking_port/stationary/escape_pod{
-	dir = 8
-	},
-/turf/open/floor/plating,
-/area/station/hallway/secondary/entry)
 "tDe" = (
 /turf/closed/wall/r_wall,
 /area/station/ai_monitored/turret_protected/aisat/hallway)
@@ -52937,7 +52933,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/door/firedoor,
-/turf/open/floor/iron,
+/turf/open/floor/iron/white/small,
 /area/station/security/prison)
 "uxU" = (
 /mob/living/carbon/human/species/monkey,
@@ -60525,7 +60521,7 @@
 "xsD" = (
 /obj/machinery/shower/directional/north,
 /obj/machinery/light/directional/east,
-/turf/open/floor/iron/freezer,
+/turf/open/floor/iron/white/small,
 /area/station/security/prison)
 "xsN" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -61920,7 +61916,7 @@
 "xUs" = (
 /obj/machinery/shower/directional/north,
 /obj/item/soap/nanotrasen,
-/turf/open/floor/iron/freezer,
+/turf/open/floor/iron/white/small,
 /area/station/security/prison)
 "xUE" = (
 /obj/structure/disposalpipe/segment{
@@ -62560,9 +62556,8 @@
 /area/station/vacant_room/commissary/third)
 "yeN" = (
 /obj/machinery/light/directional/east,
-/turf/open/floor/iron/stairs{
-	dir = 1
-	},
+/obj/structure/stairs/south,
+/turf/open/floor/iron/white/small,
 /area/station/security/prison)
 "yeQ" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -89739,7 +89734,7 @@ azs
 uBJ
 dNo
 dNo
-dNo
+qSx
 dNo
 dNo
 kNU
@@ -135232,7 +135227,7 @@ jqJ
 xcC
 tbZ
 tzR
-tDd
+tzR
 tzR
 tbZ
 xcC
@@ -135246,7 +135241,7 @@ jqJ
 xcC
 tbZ
 tzR
-tDd
+tzR
 tzR
 tbZ
 xcC
