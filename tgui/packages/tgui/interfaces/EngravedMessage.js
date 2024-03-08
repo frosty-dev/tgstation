@@ -67,25 +67,23 @@ export const EngravedMessage = (props, context) => {
         </Section>
         <Section>
           <LabeledList>
-            <LabeledList.Item label="Created On">{realdate}</LabeledList.Item>
+            <LabeledList.Item label="Создано">{realdate}</LabeledList.Item>
           </LabeledList>
         </Section>
         {!!admin_mode && (
           <Section
-            title="Admin Panel"
+            title="Админ панель"
             buttons={
               <Button
                 icon="times"
-                content="Delete"
+                content="Удалить"
                 color="bad"
                 onClick={() => act('delete')}
               />
             }>
             <LabeledList>
-              <LabeledList.Item label="Creator Ckey">
-                {creator_key}
-              </LabeledList.Item>
-              <LabeledList.Item label="Creator Character Name">
+              <LabeledList.Item label="Автор">{creator_key}</LabeledList.Item>
+              <LabeledList.Item label="ПерсонажПерсонаж">
                 {creator_name}
               </LabeledList.Item>
             </LabeledList>
