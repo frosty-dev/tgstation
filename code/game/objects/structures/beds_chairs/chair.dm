@@ -153,7 +153,7 @@
 	item_chair = /obj/item/chair/wood/wings
 
 /obj/structure/chair/comfy
-	name = "удобный стул"
+	name = "кресло"
 	desc = "Выглядит удобно."
 	icon_state = "comfychair"
 	color = rgb(255, 255, 255)

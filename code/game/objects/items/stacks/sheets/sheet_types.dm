@@ -25,11 +25,11 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 		new/datum/stack_recipe("светлое офисное кресло", /obj/structure/chair/office/light, 5, one_per_turf = TRUE, on_solid_ground = TRUE, category = CAT_FURNITURE), \
 		)), \
 	new/datum/stack_recipe_list("удобные стулья", list( \
-		new/datum/stack_recipe("бежевый удобный стул", /obj/structure/chair/comfy/beige, 2, one_per_turf = TRUE, on_solid_ground = TRUE, category = CAT_FURNITURE), \
-		new/datum/stack_recipe("чёрный удобный стул", /obj/structure/chair/comfy/black, 2, one_per_turf = TRUE, on_solid_ground = TRUE, category = CAT_FURNITURE), \
-		new/datum/stack_recipe("коричневый удобный стул", /obj/structure/chair/comfy/brown, 2, one_per_turf = TRUE, on_solid_ground = TRUE, category = CAT_FURNITURE), \
-		new/datum/stack_recipe("лаймовый удобный стул", /obj/structure/chair/comfy/lime, 2, one_per_turf = TRUE, on_solid_ground = TRUE, category = CAT_FURNITURE), \
-		new/datum/stack_recipe("бирюзовый удобный стул", /obj/structure/chair/comfy/teal, 2, one_per_turf = TRUE, on_solid_ground = TRUE, category = CAT_FURNITURE), \
+		new/datum/stack_recipe("бежевое кресло", /obj/structure/chair/comfy/beige, 2, one_per_turf = TRUE, on_solid_ground = TRUE, category = CAT_FURNITURE), \
+		new/datum/stack_recipe("чёрное кресло", /obj/structure/chair/comfy/black, 2, one_per_turf = TRUE, on_solid_ground = TRUE, category = CAT_FURNITURE), \
+		new/datum/stack_recipe("коричневое кресло", /obj/structure/chair/comfy/brown, 2, one_per_turf = TRUE, on_solid_ground = TRUE, category = CAT_FURNITURE), \
+		new/datum/stack_recipe("лаймовое кресло", /obj/structure/chair/comfy/lime, 2, one_per_turf = TRUE, on_solid_ground = TRUE, category = CAT_FURNITURE), \
+		new/datum/stack_recipe("бирюзовое кресло", /obj/structure/chair/comfy/teal, 2, one_per_turf = TRUE, on_solid_ground = TRUE, category = CAT_FURNITURE), \
 		)), \
 	new/datum/stack_recipe_list("диваны", list(
 		new /datum/stack_recipe("диван (центральный)", /obj/structure/chair/sofa/middle, 1, one_per_turf = TRUE, on_solid_ground = TRUE, category = CAT_FURNITURE),
