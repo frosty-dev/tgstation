@@ -22647,7 +22647,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/autolathe,
 /turf/open/floor/iron/dark,
 /area/station/engineering)
 "iSF" = (
@@ -41921,10 +41921,10 @@
 /turf/open/floor/wood,
 /area/station/commons/dorms/cabin1)
 "quX" = (
-/obj/machinery/mecha_part_fabricator,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+/obj/machinery/rnd/production/techfab/department/engineering,
 /turf/open/floor/iron/dark,
 /area/station/engineering)
 "quY" = (
