@@ -121,6 +121,7 @@ GLOBAL_LIST_INIT(admin_verbs_fun, list(
 	/client/proc/mass_zombie_cure,
 	/client/proc/mass_zombie_infection,
 	/client/proc/object_say,
+	/client/proc/force_say,
 	/client/proc/polymorph_all,
 	/client/proc/remove_marked_mob_ability,
 	/client/proc/reset_ooc,
@@ -860,6 +861,20 @@ GLOBAL_PROTECT(admin_verbs_poll)
 	log_admin("[key_name(usr)] made [O] at [AREACOORD(O)] say \"[message]\"")
 	message_admins(span_adminnotice("[key_name_admin(usr)] made [O] at [AREACOORD(O)]. say \"[message]\""))
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Object Say") // If you are copy-pasting this, ensure the 4th parameter is unique to the new proc!
+
+/client/proc/force_say(mob/M in world)
+	set category = "Admin.Fun"
+	set name = "Force say"
+	set desc = "Makes a mob say something. Bypasses sanitization, be careful with that."
+	var/message = tgui_input_text(usr, "What will [key_name(M)] say?", "Force speech (WARNING, UNSANITIZED)", "")// Don't need to sanitize, since it does that in say(), we also trust our admins.
+	if (!message)
+		return
+	M.say(message, forced="admin speech", sanitize = FALSE)
+	message = sanitize(message)
+	log_admin("[key_name(usr)] made [key_name(M)] at [AREACOORD(M)] say \"[message]\"")
+	message_admins(span_adminnotice("[key_name_admin(usr)] made [key_name_admin(M)] at [AREACOORD(M)]. say \"[message]\""))
+	SSblackbox.record_feedback("tally", "admin_verb", 1, "Force Say") // If you are copy-pasting this, ensure the 4th parameter is unique to the new proc!
+
 /client/proc/togglebuildmodeself()
 	set name = "Toggle Build Mode Self"
 	set category = "Admin.Events"

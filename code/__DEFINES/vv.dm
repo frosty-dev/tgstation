@@ -107,6 +107,7 @@
 
 // /obj
 #define VV_HK_OSAY "osay"
+#define VV_HK_SAY "say"
 #define VV_HK_MASS_DEL_TYPE "mass_delete_type"
 
 // /obj/item
