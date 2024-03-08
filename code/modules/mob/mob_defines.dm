@@ -47,6 +47,9 @@
 	var/datum/mind/mind
 	var/static/next_mob_id = 0
 
+	/// Whether the mob is pixel shifted or not
+	var/is_shifted = FALSE
+
 	/// List of movement speed modifiers applying to this mob
 	var/list/movespeed_modification //Lazy list, see mob_movespeed.dm
 	/// List of movement speed modifiers ignored by this mob. List -> List (id) -> List (sources)
