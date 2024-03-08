@@ -3800,7 +3800,7 @@
 /area/station/medical/chemistry)
 "Jv" = (
 /obj/structure/table,
-/obj/item/storage/medkit,
+/obj/item/storage/medkit/regular,
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted{
 	dir = 1
 	},
@@ -5523,18 +5523,18 @@
 	pixel_x = -10;
 	pixel_y = -3
 	},
-/obj/item/storage/medkit{
+/obj/item/storage/medkit/regular{
 	pixel_x = 19;
 	pixel_y = 6
 	},
-/obj/item/storage/medkit{
+/obj/item/storage/medkit/regular{
 	pixel_x = 16;
 	pixel_y = 3
 	},
-/obj/item/storage/medkit{
+/obj/item/storage/medkit/regular{
 	pixel_x = 13
 	},
-/obj/item/storage/medkit{
+/obj/item/storage/medkit/regular{
 	pixel_x = 10;
 	pixel_y = -3
 	},

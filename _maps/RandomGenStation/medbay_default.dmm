@@ -578,9 +578,9 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced/spawner/directional/east,
-/obj/item/storage/medkit{
-	pixel_x = 5;
-	pixel_y = -3
+/obj/item/storage/medkit/regular{
+	pixel_y = -3;
+	pixel_x = 5
 	},
 /turf/open/floor/iron/dark,
 /area/station/medical/storage)
@@ -3665,10 +3665,6 @@
 	pixel_x = 1;
 	pixel_y = -1
 	},
-/obj/item/storage/medkit{
-	pixel_x = 5;
-	pixel_y = -3
-	},
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -3688,6 +3684,10 @@
 	name = "First-Aid Supplies";
 	red_alert_access = 1;
 	req_access = list("medical")
+	},
+/obj/item/storage/medkit/regular{
+	pixel_y = -3;
+	pixel_x = 5
 	},
 /turf/open/floor/iron/dark,
 /area/station/medical/storage)
@@ -4933,10 +4933,6 @@
 	pixel_x = -1;
 	pixel_y = -1
 	},
-/obj/item/storage/medkit{
-	pixel_x = -5;
-	pixel_y = -3
-	},
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -4948,6 +4944,10 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced/spawner/directional/west,
+/obj/item/storage/medkit/regular{
+	pixel_x = -5;
+	pixel_y = -3
+	},
 /turf/open/floor/iron/dark,
 /area/station/medical/storage)
 "KM" = (
@@ -6812,10 +6812,6 @@
 	pixel_x = -1;
 	pixel_y = -1
 	},
-/obj/item/storage/medkit{
-	pixel_x = -5;
-	pixel_y = -3
-	},
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -6835,6 +6831,10 @@
 	name = "First-Aid Supplies";
 	red_alert_access = 1;
 	req_access = list("medical")
+	},
+/obj/item/storage/medkit/regular{
+	pixel_x = -5;
+	pixel_y = -3
 	},
 /turf/open/floor/iron/dark,
 /area/station/medical/storage)

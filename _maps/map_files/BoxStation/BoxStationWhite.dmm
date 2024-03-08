@@ -3493,6 +3493,9 @@
 "bMm" = (
 /obj/machinery/light/directional/west,
 /obj/structure/stairs/south,
+/obj/structure/railing{
+	dir = 4
+	},
 /turf/open/floor/iron/white/small,
 /area/station/security/prison)
 "bMy" = (
@@ -36635,10 +36638,10 @@
 /turf/closed/wall,
 /area/station/service/library)
 "onh" = (
-/obj/machinery/mecha_part_fabricator,
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
+/obj/machinery/rnd/production/techfab/department/medical,
 /turf/open/floor/iron/white/smooth_large,
 /area/station/medical/zone2)
 "onj" = (
@@ -62595,6 +62598,9 @@
 "yeN" = (
 /obj/machinery/light/directional/east,
 /obj/structure/stairs/south,
+/obj/structure/railing{
+	dir = 8
+	},
 /turf/open/floor/iron/white/small,
 /area/station/security/prison)
 "yeQ" = (

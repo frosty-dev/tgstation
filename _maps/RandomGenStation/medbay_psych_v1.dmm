@@ -288,7 +288,7 @@
 	pixel_y = 3
 	},
 /obj/item/storage/medkit/brute,
-/obj/item/storage/medkit{
+/obj/item/storage/medkit/regular{
 	pixel_x = -3;
 	pixel_y = -3
 	},
@@ -490,7 +490,7 @@
 	pixel_y = 3
 	},
 /obj/item/storage/medkit/fire,
-/obj/item/storage/medkit{
+/obj/item/storage/medkit/regular{
 	pixel_x = -3;
 	pixel_y = -3
 	},
@@ -701,7 +701,7 @@
 /turf/open/floor/iron/white,
 /area/station/medical/medbay)
 "ee" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/rnd/production/techfab/department/medical,
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
@@ -734,7 +734,7 @@
 	pixel_y = 3
 	},
 /obj/item/storage/medkit/o2,
-/obj/item/storage/medkit{
+/obj/item/storage/medkit/regular{
 	pixel_x = -3;
 	pixel_y = -3
 	},
@@ -3121,7 +3121,7 @@
 	pixel_y = 3
 	},
 /obj/item/storage/medkit/toxin,
-/obj/item/storage/medkit{
+/obj/item/storage/medkit/regular{
 	pixel_x = -3;
 	pixel_y = -3
 	},
@@ -3904,8 +3904,8 @@
 /area/station/medical/medbay/extra)
 "Oe" = (
 /obj/structure/table,
-/obj/item/storage/medkit,
-/obj/item/storage/medkit{
+/obj/item/storage/medkit/regular,
+/obj/item/storage/medkit/regular{
 	pixel_x = -3;
 	pixel_y = -3
 	},
@@ -5325,8 +5325,8 @@
 /area/station/medical/pharmacy)
 "Zt" = (
 /obj/structure/table/reinforced,
-/obj/item/storage/medkit,
-/obj/item/storage/medkit{
+/obj/item/storage/medkit/regular,
+/obj/item/storage/medkit/regular{
 	pixel_x = -3;
 	pixel_y = -3
 	},
