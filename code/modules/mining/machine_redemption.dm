@@ -337,7 +337,7 @@
 			if(materials.on_hold())
 				to_chat(usr, span_warning("Доступ к материалам приостановлен, обратитесь к квартирмейстеру."))
 			else if(!allowed(usr)) //Check the ID inside, otherwise check the user
-				to_chat(usr, span_warning("Доступ запрещен.")
+				to_chat(usr, span_warning("Доступ запрещен."))
 			else
 				var/datum/material/mat = locate(params["id"])
 
@@ -377,7 +377,7 @@
 					output = new alloy.build_path(src)
 				unload_mineral(output)
 			else
-				to_chat(usr, span_warning("Доступ запрещен.")
+				to_chat(usr, span_warning("Доступ запрещен."))
 			return TRUE
 
 /obj/machinery/mineral/ore_redemption/ex_act(severity, target)
