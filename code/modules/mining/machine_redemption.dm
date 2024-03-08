@@ -2,8 +2,8 @@
 //Turns all the various mining machines into a single unit to speed up mining and establish a point system
 
 /obj/machinery/mineral/ore_redemption
-	name = "ore redemption machine"
-	desc = "A machine that accepts ore and instantly transforms it into workable material sheets. Points for ore are generated based on type and can be redeemed at a mining equipment vendor."
+	name = "Шахтерская печь"
+	desc = "Машина, которая принимает руду и мгновенно переплавляет ее в листы пригодного для обработки материала. При этом  генерируются баллы за руду, их количество зависит от редкости руды. Полученные балы можно обменять на полезную экипировку в торговом автомате шахтеров."
 	icon = 'icons/obj/machines/mining_machines.dmi'
 	icon_state = "ore_redemption"
 	density = TRUE
@@ -65,8 +65,11 @@
 
 /obj/machinery/mineral/ore_redemption/examine(mob/user)
 	. = ..()
+
+	if(in_range(user, src) || isobserver(user))
+		. += span_notice("Дисплей: Переплавляет <b>[ore_multiplier]</b> лист(а/ов) из одной руды.<br>Награда за руду увеличена на <b>[point_upgrade*100]%</b>.")
 	if(panel_open)
-		. += span_notice("Alt-клик to rotate the input and output direction.")
+		. += span_notice("Alt-клик для изменения направления входы и выхода.")
 
 /// Turns ore into its refined type, and sends it to its material container
 /obj/machinery/mineral/ore_redemption/proc/smelt_ore(obj/item/stack/ore/gathered_ore)
@@ -138,7 +141,7 @@
 	console_notify_timer = null
 
 	var/area/our_area = get_area(src)
-	var/message = "Now available in [our_area]:"
+	var/message = "Теперь доступна в [our_area]:"
 
 	var/has_minerals = FALSE
 	var/list/appended_list = list()
@@ -148,7 +151,7 @@
 		var/mineral_amount = mat_container.materials[current_material] / SHEET_MATERIAL_AMOUNT
 		if(mineral_amount)
 			has_minerals = TRUE
-		appended_list["[capitalize(material_datum.name)]"] = "[mineral_amount] sheets"
+		appended_list["[capitalize(material_datum.name)]"] = "[mineral_amount] лист(а/ов)"
 
 	if(!has_minerals)
 		return
@@ -208,7 +211,7 @@
 	var/obj/item/stack/ore/O = W
 	if(istype(O))
 		if(isnull(O.refined_type))
-			to_chat(user, span_warning("[O] has already been refined!"))
+			to_chat(user, span_warning("Печь не может это переплавить!"))
 			return
 		smelt_ore(O)
 		return TRUE
@@ -221,7 +224,7 @@
 	if(panel_open)
 		input_dir = turn(input_dir, -90)
 		output_dir = turn(output_dir, -90)
-		to_chat(user, span_notice("You change [src]'s I/O settings, setting the input to [dir2text(input_dir)] and the output to [dir2text(output_dir)]."))
+		to_chat(user, span_notice("Вход [src] теперь смотрит на [dir2ru_text(input_dir)], а выход на [dir2ru_text(output_dir)]."))
 		unregister_input_turf() // someone just rotated the input and output directions, unregister the old turf
 		register_input_turf() // register the new one
 		update_appearance(UPDATE_OVERLAYS)
@@ -261,13 +264,11 @@
 
 	data["disconnected"] = null
 	if (!mat_container)
-		data["disconnected"] = "Local mineral storage is unavailable"
+		data["disconnected"] = "Местное хранилище руды недоступно"
 	else if (!materials.silo && requires_silo)
-		data["disconnected"] = "No ore silo connection is available; storing locally"
-	else if (!materials.check_z_level() && requires_silo)
-		data["disconnected"] = "Unable to connect to ore silo, too far away"
+		data["disconnected"] = "Невозможно подключиться к хранилищу руды, слишком далеко"
 	else if (materials.on_hold())
-		data["disconnected"] = "Mineral withdrawal is on hold"
+		data["disconnected"] = "Выдача материалов приостановлена, обратитесь к квартирмейстеру"
 
 	var/obj/item/card/id/card
 	if(isliving(user))
@@ -321,24 +322,22 @@
 			if(isliving(usr))
 				var/mob/living/user = usr
 				user_id_card = user.get_idcard(TRUE)
-			if(!materials.check_z_level() && (requires_silo || !user_id_card.registered_account.replaceable))
-				return TRUE
 			if(points)
 				if(user_id_card)
 					user_id_card.registered_account.mining_points += points
 					points = 0
 				else
-					to_chat(usr, span_warning("No valid ID detected."))
+					to_chat(usr, span_warning("Не найдена действительная ID карта."))
 			else
-				to_chat(usr, span_warning("No points to claim."))
+				to_chat(usr, span_warning("Нет очков для получения."))
 			return TRUE
 		if("Release")
 			if(!mat_container)
 				return
 			if(materials.on_hold())
-				to_chat(usr, span_warning("Mineral access is on hold, please contact the quartermaster."))
+				to_chat(usr, span_warning("Доступ к материалам приостановлен, обратитесь к квартирмейстеру."))
 			else if(!allowed(usr)) //Check the ID inside, otherwise check the user
-				to_chat(usr, span_warning("Required access not found."))
+				to_chat(usr, span_warning("Доступ запрещен.")
 			else
 				var/datum/material/mat = locate(params["id"])
 
@@ -358,7 +357,7 @@
 			if(!mat_container)
 				return
 			if(materials.on_hold())
-				to_chat(usr, span_warning("Mineral access is on hold, please contact the quartermaster."))
+				to_chat(usr, span_warning("Доступ к материалам приостановлен, обратитесь к квартирмейстеру."))
 				return
 			var/alloy_id = params["id"]
 			var/datum/design/alloy = stored_research.isDesignResearchedID(alloy_id)
@@ -378,7 +377,7 @@
 					output = new alloy.build_path(src)
 				unload_mineral(output)
 			else
-				to_chat(usr, span_warning("Required access not found."))
+				to_chat(usr, span_warning("Доступ запрещен.")
 			return TRUE
 
 /obj/machinery/mineral/ore_redemption/ex_act(severity, target)

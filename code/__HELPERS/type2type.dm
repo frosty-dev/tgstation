@@ -39,6 +39,27 @@
 		else
 	return
 
+/proc/dir2ru_text(direction)
+	switch(direction)
+		if(NORTH)
+			return "север"
+		if(SOUTH)
+			return "юг"
+		if(EAST)
+			return "восток"
+		if(WEST)
+			return "запад"
+		if(NORTHEAST)
+			return "северо-восток"
+		if(SOUTHEAST)
+			return "юго-восток"
+		if(NORTHWEST)
+			return "северо-запад"
+		if(SOUTHWEST)
+			return "юго-запад"
+		else
+	return
+
 //Turns text into proper directions
 /proc/text2dir(direction)
 	switch(uppertext(direction))
@@ -57,6 +78,27 @@
 		if("SOUTHEAST")
 			return SOUTHEAST
 		if("SOUTHWEST")
+			return SOUTHWEST
+		else
+	return
+
+/proc/text2dir_ru(direction)
+	switch(uppertext(direction))
+		if("СЕВЕР")
+			return NORTH
+		if("ЮГ")
+			return SOUTH
+		if("ВОСТОК")
+			return EAST
+		if("ЗАПАД")
+			return WEST
+		if("СЕВЕРО-ВОСТОК")
+			return NORTHEAST
+		if("СЕВЕРО-ЗАПАД")
+			return NORTHWEST
+		if("ЮГО-ВОСТОК")
+			return SOUTHEAST
+		if("ЮГО-ЗАПАД")
 			return SOUTHWEST
 		else
 	return
