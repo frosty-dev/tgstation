@@ -163,10 +163,10 @@
 
 /datum/ai_planning_subtree/random_speech/pig
 	speech_chance = 3
-	speak = list("oink?","oink","snurf")
-	sound = list('sound/creatures/pig1.ogg', 'sound/creatures/pig2.ogg')
-	emote_hear = list("snorts.")
-	emote_see = list("sniffs around.")
+	speak = list("ХРЮ!", "УИИИИ!", "ХРЮ?")
+	sound = list('white/valtos/sounds/pig/hru.ogg', 'white/valtos/sounds/pig/oink.ogg', 'white/valtos/sounds/pig/squeak.ogg')
+	emote_hear = list("хрюкает!")
+	emote_see = list("хрюкает гениально")
 
 /datum/ai_planning_subtree/random_speech/pony
 	speech_chance = 3
