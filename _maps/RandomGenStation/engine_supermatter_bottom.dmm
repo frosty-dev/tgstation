@@ -493,9 +493,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible{
-	dir = 6
-	},
+/obj/machinery/light/directional/north,
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
 "dg" = (
@@ -879,12 +877,11 @@
 /area/station/engineering/supermatter/room)
 "eM" = (
 /obj/structure/cable,
-/obj/machinery/atmospherics/components/trinary/filter/flipped/critical{
-	dir = 8;
-	filter_type = "n2"
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/smart{
+	dir = 4
 	},
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
@@ -2067,7 +2064,7 @@ dn
 dF
 Sp
 bk
-db
+aV
 eM
 cf
 tB
@@ -2095,7 +2092,7 @@ GS
 pg
 GS
 bk
-eI
+db
 bP
 cf
 ad
