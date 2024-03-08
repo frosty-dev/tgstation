@@ -97,6 +97,7 @@
 	if(user.buckled && user.buckled.anchored)
 		balloon_alert(user, "buckled to something anchored!")
 		return
+
 	if(travel_time)
 		INVOKE_ASYNC(src, PROC_REF(start_travelling), user, going_up)
 	else
@@ -146,8 +147,8 @@
 /// Shows a radial menu that players can use to climb up and down a stair.
 /obj/structure/ladder/proc/show_options(mob/user, is_ghost = FALSE)
 	var/list/tool_list = list()
-	tool_list["Up"] = image(icon = 'icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = NORTH)
-	tool_list["Down"] = image(icon = 'icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = SOUTH)
+	tool_list["Вверх"] = image(icon = 'icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = NORTH)
+	tool_list["Вниз"] = image(icon = 'icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = SOUTH)
 
 	var/datum/callback/check_menu
 	if(!is_ghost)
