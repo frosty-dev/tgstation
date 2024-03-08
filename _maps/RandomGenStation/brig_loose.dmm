@@ -142,7 +142,7 @@
 /obj/structure/table,
 /obj/item/switchblade,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/storage/medkit,
+/obj/item/storage/medkit/regular,
 /turf/open/floor/iron/white,
 /area/station/security/brig)
 "aO" = (

@@ -1962,11 +1962,11 @@
 /turf/open/floor/iron/white,
 /area/station/security/brig)
 "fX" = (
-/obj/item/storage/medkit{
+/obj/item/storage/medkit/regular{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/storage/medkit,
+/obj/item/storage/medkit/regular,
 /obj/structure/table/glass,
 /obj/effect/turf_decal/bot,
 /obj/structure/sign/nanotrasen{

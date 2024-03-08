@@ -5,7 +5,7 @@ import re
 def find_files(
     directory: str,
     search_pattern: str,
-    exclude_filenames: set[str],
+    exclude_filenames: set[str] = set(),
     verbose: bool = False,
 ) -> list[str]:
     res = []
