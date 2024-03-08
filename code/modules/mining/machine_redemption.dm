@@ -265,7 +265,7 @@
 	data["disconnected"] = null
 	if (!mat_container)
 		data["disconnected"] = "Местное хранилище руды недоступно"
-	else if (!materials.silo && requires_silo)
+	else if (!materials.silo)
 		data["disconnected"] = "Невозможно подключиться к хранилищу руды, слишком далеко"
 	else if (materials.on_hold())
 		data["disconnected"] = "Выдача материалов приостановлена, обратитесь к квартирмейстеру"

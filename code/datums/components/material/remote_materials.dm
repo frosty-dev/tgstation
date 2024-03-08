@@ -31,9 +31,8 @@ handles linking back and forth.
 
 	RegisterSignal(parent, COMSIG_ATOM_TOOL_ACT(TOOL_MULTITOOL), PROC_REF(OnMultitool))
 
-	var/turf/T = get_turf(parent)
 	var/connect_to_silo = FALSE
-	if(force_connect || (mapload && is_station_level(T.z)))
+	if(force_connect || mapload)
 		connect_to_silo = TRUE
 		RegisterSignal(parent, COMSIG_ATOM_ATTACKBY, TYPE_PROC_REF(/datum/component/remote_materials, SiloAttackBy))
 
@@ -142,9 +141,6 @@ handles linking back and forth.
 		if (silo == M.buffer)
 			to_chat(user, span_warning("[capitalize(parent)] уже подключен к [silo]!"))
 			return COMPONENT_BLOCK_TOOL_ATTACK
-		if(!check_z_level(M.buffer))
-			to_chat(user, span_warning("[capitalize(parent)] слишком далеко, чтобы подключить к [silo]!"))
-			return COMPONENT_BLOCK_TOOL_ATTACK
 
 		var/obj/machinery/ore_silo/new_silo = M.buffer
 		var/datum/component/material_container/new_container = new_silo.GetComponent(/datum/component/material_container)
@@ -170,24 +166,9 @@ handles linking back and forth.
 		to_chat(user, span_notice("Подключаю [parent] к [silo] используя буффер мультитула."))
 		return COMPONENT_BLOCK_TOOL_ATTACK
 
-/**
- * Checks if the param silo is in the same level as this components parent i.e. connected machine, rcd, etc
- *
- * Arguments
- * silo_to_check- Is this components parent in the same Z level as this param silo. If null
- * then check this components connected silo
- *
- * Returns true if both are on the station or same z level
- */
-/datum/component/remote_materials/proc/check_z_level(obj/silo_to_check = silo)
-	if(isnull(silo_to_check))
-		return FALSE
-
-	return is_valid_z_level(get_turf(silo_to_check), get_turf(parent))
-
 /// returns TRUE if this connection put on hold by the silo
 /datum/component/remote_materials/proc/on_hold()
-	return check_z_level() ? silo.holds[src] : FALSE
+	return silo?.holds[src] || FALSE
 
 /**
  * Internal proc to check if this connection can use any materials from the silo

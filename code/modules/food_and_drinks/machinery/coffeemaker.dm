@@ -85,11 +85,11 @@
 		return
 
 	if(coffeepot || cartridge)
-		. += span_notice("\The [src] содержит:")
+		. += span_notice("[src] содержит:")
 		if(coffeepot)
-			. += span_notice("- \A [coffeepot].")
+			. += span_notice("- [coffeepot].")
 		if(cartridge)
-			. += span_notice("- \A [cartridge].")
+			. += span_notice("- [cartridge].")
 		return
 
 	if(!(machine_stat & (NOPOWER|BROKEN)))
