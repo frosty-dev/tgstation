@@ -138,7 +138,7 @@
 				var/name = GLOB.trait_name_map[trait] || trait
 				available_traits[name] = trait
 
-	var/chosen_trait = input("Select trait to modify", "Trait") as null|anything in sort_list(available_traits)
+	var/chosen_trait = tgui_input_list(usr, "Select trait to modify", "Trait", sort_list(available_traits))
 	if(!chosen_trait)
 		return
 	chosen_trait = available_traits[chosen_trait]
@@ -148,7 +148,12 @@
 		if("Add") //Not doing source choosing here intentionally to make this bit faster to use, you can always vv it.
 			if(GLOB.movement_type_trait_to_flag[chosen_trait]) //include the required element.
 				D.AddElement(/datum/element/movetype_handler)
-			ADD_TRAIT(D,chosen_trait,source)
+
+			if (chosen_trait == TRAIT_ULTRA)
+				for (var/trait in ULTRA_TRAIT_LIST)
+					ADD_TRAIT(D, trait, source)
+			else
+				ADD_TRAIT(D,chosen_trait,source)
 		if("Remove")
 			var/specific = input("All or specific source ?", "Trait Remove/Add") as null|anything in list("All","Specific")
 			if(!specific)
@@ -160,7 +165,12 @@
 					source = input("Source to be removed","Trait Remove/Add") as null|anything in sort_list(GET_TRAIT_SOURCES(D, chosen_trait))
 					if(!source)
 						return
-			REMOVE_TRAIT(D,chosen_trait,source)
+
+			if (chosen_trait == TRAIT_ULTRA)
+				for (var/trait in ULTRA_TRAIT_LIST)
+					REMOVE_TRAIT(D, trait, source)
+			else
+				REMOVE_TRAIT(D,chosen_trait,source)
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 

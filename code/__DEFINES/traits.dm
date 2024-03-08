@@ -1344,3 +1344,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 
 /// Trait given to mobs that we do not want to mindswap
 #define TRAIT_NO_MINDSWAP "no_mindswap"
+
+/// Adminabuse
+#define TRAIT_ULTRA "trait_ultra"
+#define ULTRA_TRAIT_LIST list(TRAIT_ULTRA, TRAIT_NO_SLIP_ALL, TRAIT_RESISTHEAT, TRAIT_RESISTCOLD, TRAIT_RESISTHEATHANDS, TRAIT_RESISTHIGHPRESSURE, TRAIT_RESISTLOWPRESSURE, TRAIT_NOHUNGER, TRAIT_NOBREATH, TRAIT_NOFIRE, TRAIT_RADIMMUNE)
