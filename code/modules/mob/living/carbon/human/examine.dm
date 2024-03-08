@@ -38,9 +38,9 @@
 		if(glasses  && !(glasses.item_flags & EXAMINE_SKIP))
 			. += "Также на [t_na] [glasses.get_examine_string(user)]."
 		else if(HAS_TRAIT(src, TRAIT_UNNATURAL_RED_GLOWY_EYES))
-			. += "<span class='warning'><B>[ru_ego(TRUE)] глаза ярко-красные и они горят!</B></span>"
+			. += span_warning("<B>[ru_ego(TRUE)] глаза ярко-красные и они горят!</B>")
 		else if(HAS_TRAIT(src, TRAIT_BLOODSHOT_EYES))
-			. += "<span class='warning'><B>[ru_ego(TRUE)] глаза красные!</B></span>"
+			. += span_warning("<B>[ru_ego(TRUE)] глаза красные!</B>")
 
 	//ears
 	if(ears && !(obscured & ITEM_SLOT_EARS) && !(ears.item_flags & EXAMINE_SKIP))
@@ -85,14 +85,14 @@
 		. += "А на руках у н[t_ego] [gloves.get_examine_string(user)]."
 	else if(GET_ATOM_BLOOD_DNA_LENGTH(src))
 		if(num_hands)
-			. += "<span class='warning'>[ru_ego(TRUE)] рук[num_hands > 1 ? "и" : "а"] также в крови!</span>"
+			. += span_warning("[ru_ego(TRUE)] рук[num_hands > 1 ? "и" : "а"] также в крови!")
 
 	//handcuffed?
 	if(handcuffed)
 		if(istype(handcuffed, /obj/item/restraints/handcuffs/cable))
-			. += "<span class='warning'>[t_on] [icon2html(handcuffed, user)] связан[t_a]!</span>"
+			. += span_warning("[t_on] [icon2html(handcuffed, user)] связан[t_a]!")
 		else
-			. += "<span class='warning'>[t_on] [icon2html(handcuffed, user)] в наручниках!</span>"
+			. += span_warning("[t_on] [icon2html(handcuffed, user)] в наручниках!")
 
 	//belt
 	if(belt && !(belt.item_flags & EXAMINE_SKIP))
@@ -132,12 +132,12 @@
 
 		if(!just_sleeping)
 			if(HAS_TRAIT(src, TRAIT_SUICIDED))
-				. += "<span class='warning'>[t_on] выглядит как суицидник... [t_ego] уже невозможно спасти.</span>"
+				. += span_warning("[t_on] выглядит как суицидник... [t_ego] уже невозможно спасти.")
 
 			. += generate_death_examine_text()
 
 	if(get_bodypart(BODY_ZONE_HEAD) && !get_organ_by_type(/obj/item/organ/internal/brain))
-		. += "<span class='deadsay'>Похоже, что у н[t_ego] нет мозга...</span>"
+		. += span_deadsay("Похоже, что у н[t_ego] нет мозга...")
 
 	var/list/msg = list()
 
@@ -174,14 +174,14 @@
 	var/r_limbs_missing = 0
 	for(var/t in missing)
 		if(t == BODY_ZONE_HEAD)
-			msg += "<span class='deadsay'><B>[ru_ego(TRUE)] [ru_exam_parse_zone(parse_zone(t))] отсутствует!</B></span>\n"
+			msg += span_deadsay("<B>[ru_ego(TRUE)] [ru_exam_parse_zone(parse_zone(t))] отсутствует!</B>\n")
 			continue
 		if(t == BODY_ZONE_L_ARM || t == BODY_ZONE_L_LEG)
 			l_limbs_missing++
 		else if(t == BODY_ZONE_R_ARM || t == BODY_ZONE_R_LEG)
 			r_limbs_missing++
 
-		msg += "<span class='warning'><B>[ru_ego(TRUE)] [ru_exam_parse_zone(parse_zone(t))] отсутствует!</B></span>\n"
+		msg += span_warning("<B>[ru_ego(TRUE)] [ru_exam_parse_zone(parse_zone(t))] отсутствует!</B>\n")
 
 	if(l_limbs_missing >= 2 && r_limbs_missing == 0)
 		msg += "[t_on] стоит на правой части.\n"
@@ -335,17 +335,17 @@
 
 		switch(stat)
 			if(UNCONSCIOUS, HARD_CRIT)
-				msg += "<span class='deadsay'>[t_on] не реагирует на происходящее вокруг.</span>\n"
+				msg += span_deadsay("[t_on] не реагирует на происходящее вокруг.\n")
 			if(SOFT_CRIT)
-				msg += "<span class='deadsay'>[t_on] едва в сознании.</span>\n"
+				msg += span_deadsay("[t_on] едва в сознании.\n")
 			if(CONSCIOUS)
 				if(HAS_TRAIT(src, TRAIT_DUMB))
 					msg += "[t_on] имеет глупое выражение лица.\n"
 		if(get_organ_by_type(/obj/item/organ/internal/brain))
 			if(!key)
-				msg += "<span class='deadsay'>[span_deadsay("[t_on] кататоник. Стресс от жизни в глубоком космосе сильно повлиял на н[t_ego]. Восстановление маловероятно.</span>")]\n"
+				msg += span_deadsay("[t_on] кататоник. Стресс от жизни в глубоком космосе сильно повлиял на н[t_ego]. Восстановление маловероятно.\n")
 			else if(!client)
-				msg += "<span class='deadsay'>[t_on] имеет пустой, рассеянный взгляд и кажется совершенно не реагирующим ни на что. [t_on] может выйти из этого в ближайшее время.</span>\n"
+				msg += span_deadsay("[t_on] имеет пустой, рассеянный взгляд и кажется совершенно не реагирующим ни на что. [t_on] может выйти из этого в ближайшее время.\n")
 
 	var/scar_severity = 0
 	for(var/i in all_scars)
