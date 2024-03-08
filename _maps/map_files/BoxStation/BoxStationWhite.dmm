@@ -25123,10 +25123,6 @@
 	id_tag = "innercargo";
 	name = "Bitrunning Den"
 	},
-/obj/machinery/door/airlock/mining/glass{
-	id_tag = "innercargo";
-	name = "Bitrunning Den"
-	},
 /obj/effect/mapping_helpers/airlock/access/any/supply/bit_den,
 /turf/open/floor/plating,
 /area/station/bitrunning/den)
