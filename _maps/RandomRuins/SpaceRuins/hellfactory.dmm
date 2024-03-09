@@ -853,7 +853,7 @@
 /area/ruin/space/has_grav/hellfactory)
 "oV" = (
 /obj/structure/sign/warning/cold_temp{
-	name = "\improper BLAST FREEZER"
+	name = "BLAST FREEZER"
 	},
 /turf/closed/wall/r_wall,
 /area/ruin/space/has_grav/hellfactory)

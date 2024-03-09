@@ -50,7 +50,7 @@
 "aO" = (
 /obj/structure/sign/plaques/kiddie{
 	desc = "It reads: PRIVATE EXHIBIT -  Please inquire with library staff for guided tours.";
-	name = "\improper Private Section Notice";
+	name = "Private Section Notice";
 	pixel_y = 32
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -2529,7 +2529,7 @@
 "JZ" = (
 /obj/docking_port/mobile/emergency{
 	movement_force = list("KNOCKDOWN"=3,"THROW"=6);
-	name = "\proper A MONASTERY WITH ENGINES STRAPPED TO IT";
+	name = "A MONASTERY WITH ENGINES STRAPPED TO IT";
 	port_direction = 1
 	},
 /turf/closed/mineral,

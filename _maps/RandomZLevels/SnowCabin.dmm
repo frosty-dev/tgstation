@@ -132,7 +132,7 @@
 /obj/structure/cable,
 /obj/machinery/power/smes/magical{
 	desc = "A high-capacity superconducting magnetic energy storage (SMES) unit. It seems to be powered just fine without our intervention.";
-	name = "\improper Nanotrasen power storage unit"
+	name = "Nanotrasen power storage unit"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -971,7 +971,7 @@
 "fn" = (
 /obj/machinery/vending/sustenance{
 	desc = "A vending machine which vends food.";
-	name = "\improper Snack Machine";
+	name = "Snack Machine";
 	product_ads = "Sufficiently healthy.;Mmm! So good!;Have a meal.;You need food to live!";
 	product_slogans = "Enjoy your meal."
 	},
@@ -2543,7 +2543,7 @@
 	color = "#ff0000";
 	desc = "ONE HUNDRED AND TEN PERCENT REAL.";
 	id = "whatkindofnerdusesmapmakertocheattheirwaytoateleportrune";
-	name = "\improper TOTALLY LEGIT PORTAL OF FUN"
+	name = "TOTALLY LEGIT PORTAL OF FUN"
 	},
 /turf/open/floor/mineral/plastitanium/red{
 	name = "soviet floor"
@@ -2693,7 +2693,7 @@
 "pj" = (
 /obj/structure/sign/warning/engine_safety{
 	desc = "A sign detailing the various safety protocols when working on-site to ensure a safe shift. It seems to particularly focus on how dangerous the sawblade is.";
-	name = "\improper LUMBERMILL SAFETY"
+	name = "LUMBERMILL SAFETY"
 	},
 /turf/closed/wall/mineral/wood,
 /area/awaymission/cabin/lumbermill)
@@ -3493,7 +3493,7 @@
 	desc = "I want out of this spookfest.";
 	icon_state = "hierophant";
 	id = "GETMEOUTOFHEREYOUFUCKS";
-	name = "\improper Emergency Escape Rune"
+	name = "Emergency Escape Rune"
 	},
 /turf/open/misc/asteroid/snow/snow_cabin,
 /area/awaymission/cabin/caves)
@@ -3625,7 +3625,7 @@
 /area/awaymission/cabin/snowforest/sovietsurface)
 "yQ" = (
 /obj/structure/sign/warning/directional/west{
-	name = "\improper SAWBLADE WARNING"
+	name = "SAWBLADE WARNING"
 	},
 /obj/effect/light_emitter{
 	set_cap = 3;
@@ -4462,7 +4462,7 @@
 	icon = 'icons/obj/radio.dmi';
 	icon_state = "intercom";
 	max_integrity = 99999;
-	name = "\proper Fun Jail intercom";
+	name = "Fun Jail intercom";
 	pixel_y = 32;
 	question = "We have a case of fun happening. Get out there and do your job."
 	},
@@ -4832,7 +4832,7 @@
 /obj/item/gun/ballistic/automatic/toy{
 	anchored = 1;
 	desc = "Don't try it.";
-	name = "\improper Nanotrasen Saber SMG"
+	name = "Nanotrasen Saber SMG"
 	},
 /obj/effect/turf_decal/tile/blue/fourcorners,
 /turf/open/indestructible,
@@ -4924,7 +4924,7 @@
 	height = 1;
 	icon_state = "hierophant";
 	id = "GETMEOUTOFHEREYOUFUCKS";
-	name = "\improper Return Rune"
+	name = "Return Rune"
 	},
 /turf/open/misc/asteroid/snow/snow_cabin,
 /area/awaymission/cabin/caves)
@@ -5128,7 +5128,7 @@
 	height = 1;
 	id = "whatkindofnerdusesmapmakertocheattheirwaytoateleportrune";
 	mouse_opacity = 0;
-	name = "\improper secret escape route"
+	name = "secret escape route"
 	},
 /obj/effect/light_emitter{
 	name = "outdoor light";

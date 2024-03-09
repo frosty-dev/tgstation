@@ -1042,7 +1042,7 @@
 	default_price = 0;
 	extra_price = 0;
 	fair_market_price = 0;
-	name = "\improper Jim Norton's Quebecois Coffee"
+	name = "Jim Norton's Quebecois Coffee"
 	},
 /turf/open/floor/wood/large,
 /area/centcom/central_command_areas/holding)

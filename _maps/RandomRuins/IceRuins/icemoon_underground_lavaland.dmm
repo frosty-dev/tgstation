@@ -27,7 +27,7 @@
 "y" = (
 /mob/living/simple_animal/hostile/megafauna/dragon{
 	desc = "Hunted to extinction, this icey moon is the final resting place for these creatures.";
-	name = "\proper the last ash drake"
+	name = "the last ash drake"
 	},
 /turf/open/floor/mineral/gold,
 /area/icemoon/underground)

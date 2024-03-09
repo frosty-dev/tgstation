@@ -7653,7 +7653,7 @@
 /area/ruin/space/ancientstation/delta/biolab)
 "Tm" = (
 /obj/machinery/power/port_gen/pacman/super{
-	name = "\improper EMERGENCY POWER GENERATOR"
+	name = "EMERGENCY POWER GENERATOR"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/greenglow,

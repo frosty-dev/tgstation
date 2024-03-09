@@ -1280,7 +1280,7 @@
 /obj/structure/table/bronze,
 /obj/item/pai_card{
 	desc = "A real Nanotrasen success, these personal AIs provide all of the companionship of an AI without any law related red-tape.";
-	name = "\improper Nanotrasen-brand personal AI device exhibit";
+	name = "Nanotrasen-brand personal AI device exhibit";
 	pixel_y = 2
 	},
 /turf/open/floor/wood/large,
@@ -2051,7 +2051,7 @@
 /obj/structure/table/bronze,
 /obj/item/pai_card{
 	desc = "A real Nanotrasen success, these personal AIs provide all of the companionship of an AI without any law related red-tape.";
-	name = "\improper Nanotrasen-brand personal AI device exhibit";
+	name = "Nanotrasen-brand personal AI device exhibit";
 	pixel_y = 4
 	},
 /turf/open/floor/wood,
@@ -3327,7 +3327,7 @@
 /obj/structure/chair/plastic,
 /obj/item/pai_card{
 	desc = "A real Nanotrasen success, these personal AIs provide all of the companionship of an AI without any law related red-tape.";
-	name = "\improper Nanotrasen-brand personal AI device exhibit";
+	name = "Nanotrasen-brand personal AI device exhibit";
 	pixel_y = 3;
 	pixel_x = -1
 	},
@@ -3703,7 +3703,7 @@
 /obj/structure/table/wood,
 /obj/item/pai_card{
 	desc = "A real Nanotrasen success, these personal AIs provide all of the companionship of an AI without any law related red-tape.";
-	name = "\improper Nanotrasen-brand personal AI device exhibit";
+	name = "Nanotrasen-brand personal AI device exhibit";
 	pixel_y = 3;
 	pixel_x = 10
 	},

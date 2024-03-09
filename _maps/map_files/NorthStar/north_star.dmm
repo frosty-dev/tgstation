@@ -31830,7 +31830,7 @@
 /area/station/maintenance/floor2/starboard/aft)
 "isp" = (
 /obj/machinery/computer/security/telescreen{
-	name = "\improper Engine Waste Monitor";
+	name = "Engine Waste Monitor";
 	network = list("waste");
 	pixel_y = 26
 	},
@@ -40490,7 +40490,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/computer/security/telescreen{
 	dir = 1;
-	name = "\improper Engine Waste Monitor";
+	name = "Engine Waste Monitor";
 	network = list("waste");
 	pixel_y = -26
 	},
@@ -40834,7 +40834,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/computer/security/telescreen{
 	dir = 8;
-	name = "\improper Engine Waste Monitor";
+	name = "Engine Waste Monitor";
 	network = list("waste");
 	pixel_x = 26
 	},

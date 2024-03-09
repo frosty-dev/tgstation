@@ -29853,7 +29853,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/turf_decal/tile/blue,
 /obj/structure/sign/warning/cold_temp/directional/north{
-	name = "\improper CRYOGENICS"
+	name = "CRYOGENICS"
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)

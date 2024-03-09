@@ -50017,7 +50017,7 @@
 /obj/structure/table,
 /obj/machinery/cell_charger,
 /obj/item/stock_parts/cell/potato{
-	name = "\improper BEEPSKY'S EMERGENCY BATTERY"
+	name = "BEEPSKY'S EMERGENCY BATTERY"
 	},
 /turf/open/floor/plating,
 /area/station/security/processing)
@@ -58375,7 +58375,7 @@
 	},
 /obj/machinery/recycler,
 /obj/structure/sign/warning/secure_area{
-	name = "\improper STAY CLEAR HEAVY MACHINERY";
+	name = "STAY CLEAR HEAVY MACHINERY";
 	pixel_y = 25
 	},
 /turf/open/floor/plating,

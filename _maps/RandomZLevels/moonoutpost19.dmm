@@ -1432,7 +1432,7 @@
 "ki" = (
 /obj/structure/sign/warning/vacuum{
 	desc = "A warning sign which reads 'HOSTILE ATMOSPHERE AHEAD'";
-	name = "\improper HOSTILE ATMOSPHERE AHEAD";
+	name = "HOSTILE ATMOSPHERE AHEAD";
 	pixel_x = -32
 	},
 /obj/effect/turf_decal/lunar_sand/plating,
@@ -3825,7 +3825,7 @@
 "yT" = (
 /obj/structure/sign/warning/vacuum{
 	desc = "A warning sign which reads 'HOSTILE ATMOSPHERE AHEAD'";
-	name = "\improper HOSTILE ATMOSPHERE AHEAD"
+	name = "HOSTILE ATMOSPHERE AHEAD"
 	},
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -3947,7 +3947,7 @@
 "zK" = (
 /obj/structure/sign/warning/vacuum{
 	desc = "A warning sign which reads 'HOSTILE ATMOSPHERE AHEAD'";
-	name = "\improper HOSTILE ATMOSPHERE AHEAD";
+	name = "HOSTILE ATMOSPHERE AHEAD";
 	pixel_y = 32
 	},
 /obj/effect/turf_decal/lunar_sand/plating,
@@ -5862,7 +5862,7 @@
 "ND" = (
 /obj/structure/mecha_wreckage/ripley/mk2{
 	desc = "Remains of the historical mech that first touched down on Moon Outpost 19. Completely irreparable, but perhaps something can be salvaged.";
-	name = "\improper HISTORICAL RIPLEY MK-II WRECKAGE"
+	name = "HISTORICAL RIPLEY MK-II WRECKAGE"
 	},
 /obj/effect/decal/cleanable/oil,
 /obj/item/food/grown/moonflower{

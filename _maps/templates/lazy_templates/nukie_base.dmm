@@ -681,7 +681,7 @@
 /obj/structure/table/reinforced/plastitaniumglass,
 /obj/structure/showcase/machinery/tv{
 	desc = "Static fills the screen. If you can find the VCR, you might be able to watch those old Heist Movies again.";
-	name = "\improper Static Filled Tube(TM) Television"
+	name = "Static Filled Tube(TM) Television"
 	},
 /obj/structure/sign/poster/contraband/rip_badger/directional/east,
 /obj/effect/turf_decal/tile/bar/opposingcorners,
@@ -1516,7 +1516,7 @@
 "rm" = (
 /obj/structure/sign/plaques/kiddie/badger{
 	desc = "A list of names is engraved on this plaque. 'May their heroic sacrifices inspire your bravery' is carved at the bottom.";
-	name = "\improper Operative Remembrance Plaque";
+	name = "Operative Remembrance Plaque";
 	pixel_y = 27
 	},
 /obj/structure/bed/dogbed/cayenne,

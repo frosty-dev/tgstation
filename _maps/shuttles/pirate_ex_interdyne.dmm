@@ -422,7 +422,7 @@
 "bH" = (
 /obj/effect/turf_decal/tile/dark_blue/anticorner/contrasted,
 /obj/machinery/vending/drugs{
-	name = "\improper SYNDICATEDRUG PLUS"
+	name = "SYNDICATEDRUG PLUS"
 	},
 /turf/open/floor/iron/dark,
 /area/shuttle/pirate)
