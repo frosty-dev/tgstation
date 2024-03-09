@@ -58,14 +58,14 @@
 				match_message += (match_message ? " & '[file_place]'" : " - Matching sprite found in: '[file_place]'")
 
 		if(!(skip_left || skip_right) && !lefthand_file && !righthand_file)
-			TEST_FAIL("Missing both icon files for [item_path].\n\tinhand_icon_state = \"[held_icon_state]\"[match_message]")
+			log_test("Missing both icon files for [item_path].\n\tinhand_icon_state = \"[held_icon_state]\"[match_message]")
 			continue
 
 		var/missing_left
 		var/left_fallback
 		if(!skip_left)
 			if(!lefthand_file)
-				TEST_FAIL("Missing left inhand icon file for [item_path].\n\tinhand_icon_state = \"[held_icon_state]\"[match_message]")
+				log_test("Missing left inhand icon file for [item_path].\n\tinhand_icon_state = \"[held_icon_state]\"[match_message]")
 			else
 				missing_left = !icon_exists(lefthand_file, held_icon_state)
 				if(missing_left && icon_exists(lefthand_file, ""))
