@@ -8,7 +8,7 @@
 	if (!..(preferences))
 		return FALSE
 
-	return "Tagger" in preferences.all_quirks
+	return "Граффер" in preferences.all_quirks
 
 /datum/preference/color/paint_color/apply_to_human(mob/living/carbon/human/target, value)
 	return

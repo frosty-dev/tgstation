@@ -7,7 +7,7 @@
 	if (!..(preferences))
 		return FALSE
 
-	return "Bilingual" in preferences.all_quirks
+	return "Двуязычный" in preferences.all_quirks
 
 /datum/preference/choiced/language/init_possible_values()
 	var/list/values = list()

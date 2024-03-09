@@ -82,10 +82,12 @@ PROCESSING_SUBSYSTEM_DEF(quirks)
 	var/badquirk = FALSE
 	for(var/quirk_name in applied_client.prefs.all_quirks)
 		var/datum/quirk/quirk_type = quirks[quirk_name]
+
 		if(ispath(quirk_type))
 			if(user.add_quirk(quirk_type, override_client = applied_client))
 				SSblackbox.record_feedback("nested tally", "quirks_taken", 1, list("[quirk_name]"))
 		else
+			to_chat(user, "Ваше качество \"[quirk_name]\" было убрано в связи с ребалансом. Просьба настроить снова")
 			stack_trace("Invalid quirk \"[quirk_name]\" in client [applied_client.ckey] preferences")
 			applied_client.prefs.all_quirks -= quirk_name
 			badquirk = TRUE

@@ -10,7 +10,7 @@
 	if (!..(preferences))
 		return FALSE
 
-	return "Phobia" in preferences.all_quirks
+	return "Фобия" in preferences.all_quirks
 
 /datum/preference/choiced/phobia/apply_to_human(mob/living/carbon/human/target, value)
 	return
