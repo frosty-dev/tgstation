@@ -118,7 +118,7 @@
 /obj/machinery/door/poddoor/shutters/preopen{
 	dir = 4;
 	id = "barmanpriv";
-	name = "bar shutters"
+	name = "BAR SHUTTERS"
 	},
 /turf/open/floor/plating,
 /area/station/service/kitchen)
@@ -201,7 +201,7 @@
 /obj/effect/spawner/structure/window,
 /obj/machinery/door/poddoor/preopen{
 	id = "barShutters";
-	name = "privacy shutters"
+	name = "PRIVACY SHUTTERS"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/plating,
@@ -272,7 +272,7 @@
 /obj/machinery/door/poddoor/shutters/preopen{
 	dir = 8;
 	id = "barmanpriv";
-	name = "bar shutters"
+	name = "BAR SHUTTERS"
 	},
 /turf/open/floor/light/colour_cycle/dancefloor_a,
 /area/station/service/bar)
@@ -397,7 +397,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "kitchen";
-	name = "kitchen shutters"
+	name = "KITCHEN SHUTTERS"
 	},
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen)
@@ -427,7 +427,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "kitchen";
-	name = "kitchen shutters"
+	name = "KITCHEN SHUTTERS"
 	},
 /obj/structure/displaycase/forsale/kitchen,
 /turf/open/floor/iron/cafeteria,
@@ -640,7 +640,7 @@
 	},
 /obj/machinery/button/door{
 	id = "barShutters";
-	name = "bar shutters";
+	name = "BAR SHUTTERS";
 	pixel_x = 6;
 	pixel_y = 28
 	},
@@ -693,7 +693,7 @@
 /obj/machinery/door/poddoor/shutters/preopen{
 	dir = 8;
 	id = "barmanpriv";
-	name = "bar shutters"
+	name = "BAR SHUTTERS"
 	},
 /obj/machinery/door/window/right/directional/south{
 	dir = 8;
@@ -754,7 +754,7 @@
 /obj/machinery/door/poddoor/shutters/preopen{
 	dir = 4;
 	id = "barmanpriv";
-	name = "bar shutters"
+	name = "BAR SHUTTERS"
 	},
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen)
@@ -965,7 +965,7 @@
 /obj/machinery/door/poddoor/shutters/preopen{
 	dir = 4;
 	id = "barmanpriv";
-	name = "bar shutters"
+	name = "BAR SHUTTERS"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/service/kitchen,
 /turf/open/floor/iron/cafeteria,
@@ -1061,7 +1061,7 @@
 /obj/machinery/door/poddoor/shutters/preopen{
 	dir = 8;
 	id = "barmanpriv";
-	name = "bar shutters"
+	name = "BAR SHUTTERS"
 	},
 /turf/open/floor/light/colour_cycle/dancefloor_a,
 /area/station/service/bar)
@@ -1091,7 +1091,7 @@
 /obj/machinery/door/poddoor/shutters/preopen{
 	dir = 8;
 	id = "barmanpriv";
-	name = "bar shutters"
+	name = "BAR SHUTTERS"
 	},
 /turf/open/floor/light/colour_cycle/dancefloor_a,
 /area/station/service/bar)
@@ -1120,7 +1120,7 @@
 /area/station/service/theater)
 "NC" = (
 /obj/machinery/door/airlock{
-	name = "Kitchen cold room"
+	name = "KITCHEN COLD ROOM"
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor,
@@ -1309,7 +1309,7 @@
 /obj/machinery/door/poddoor/shutters/preopen{
 	dir = 8;
 	id = "barmanpriv";
-	name = "bar shutters"
+	name = "BAR SHUTTERS"
 	},
 /obj/item/cane,
 /turf/open/floor/light/colour_cycle/dancefloor_a,
@@ -1398,7 +1398,7 @@
 /obj/machinery/door/poddoor/shutters/preopen{
 	dir = 8;
 	id = "barmanpriv";
-	name = "bar shutters"
+	name = "BAR SHUTTERS"
 	},
 /turf/open/floor/light/colour_cycle/dancefloor_a,
 /area/station/service/bar)
