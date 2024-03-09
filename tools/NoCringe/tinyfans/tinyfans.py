@@ -35,25 +35,31 @@ for map_file in map_files:
         while j < len(file_content) and ")" not in file_content[j]:
             j += 1
 
-        door_index_start = next((k for k in range(i, j) if any(
-            door_name in file_content[k] for door_name in DOOR_NAMES)), -1)
+        door_index_start = next(
+            (
+                k
+                for k in range(i, j)
+                if any(door_name in file_content[k] for door_name in DOOR_NAMES)
+            ),
+            -1,
+        )
         if door_index_start == -1:
             continue
 
         door_index_end = -1
-        if file_content[door_index_start].endswith('{\n'):
+        if file_content[door_index_start].endswith("{\n"):
             for k in range(door_index_start, j):
-                if file_content[k].endswith('},\n'):
+                if file_content[k].endswith("},\n"):
                     door_index_end = k
                     break
 
         if door_index_end == -1:
             door_index_end = door_index_start
 
-        if file_content[door_index_end+11] == TINYFAN:
+        if file_content[door_index_end + 11] == TINYFAN:
             continue
 
-        file_content.insert(door_index_end+1, TINYFAN)
+        file_content.insert(door_index_end + 1, TINYFAN)
         tinyfans_added += 1
 
     if tinyfans_added > 0:

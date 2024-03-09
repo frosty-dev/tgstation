@@ -5,13 +5,18 @@ from .common import Constant, Typepath
 from .dmm import DMM, Content
 from .error import MaplintError, MapParseError
 
+
 def expect(condition, message):
     if not condition:
         raise MapParseError(message)
 
+
 """Create an error linked to a specific content instance"""
+
+
 def fail_content(content: Content, message: str) -> MaplintError:
     return MaplintError(message, content.filename, content.starting_line)
+
 
 class TypepathExtra:
     typepath: Typepath
@@ -19,11 +24,11 @@ class TypepathExtra:
     wildcard: bool = False
 
     def __init__(self, typepath):
-        if typepath == '*':
+        if typepath == "*":
             self.wildcard = True
             return
 
-        if typepath.startswith('='):
+        if typepath.startswith("="):
             self.exact = True
             typepath = typepath[1:]
 
@@ -39,14 +44,15 @@ class TypepathExtra:
         if len(self.typepath.segments) > len(path.segments):
             return False
 
-        return self.typepath.segments == path.segments[:len(self.typepath.segments)]
+        return self.typepath.segments == path.segments[: len(self.typepath.segments)]
+
 
 class BannedNeighbor:
     identical: bool = False
     typepath: Optional[TypepathExtra] = None
     pattern: Optional[re.Pattern] = None
 
-    def __init__(self, typepath, data = {}):
+    def __init__(self, typepath, data={}):
         if typepath.upper() != typepath:
             self.typepath = TypepathExtra(typepath)
 
@@ -62,7 +68,9 @@ class BannedNeighbor:
         if "pattern" in data:
             self.pattern = re.compile(data.pop("pattern"))
 
-        expect(len(data) == 0, f"Unknown key in banned neighbor: {', '.join(data.keys())}.")
+        expect(
+            len(data) == 0, f"Unknown key in banned neighbor: {', '.join(data.keys())}."
+        )
 
     def matches(self, identified: Content, neighbor: Content):
         if self.identical:
@@ -78,7 +86,9 @@ class BannedNeighbor:
 
         return False
 
+
 Choices = list[Constant] | re.Pattern
+
 
 def extract_choices(data, key) -> Optional[Choices]:
     if key not in data:
@@ -103,16 +113,19 @@ def extract_choices(data, key) -> Optional[Choices]:
             pattern = constants_data.pop("pattern")
             return re.compile(pattern)
 
-        raise MapParseError(f"Unknown key in {key}: {', '.join(constants_data.keys())}.")
+        raise MapParseError(
+            f"Unknown key in {key}: {', '.join(constants_data.keys())}."
+        )
 
     raise MapParseError(f"{key} must be a list of constants, or a pattern")
+
 
 class BannedVariable:
     variable: str
     allow: Optional[Choices] = None
     deny: Optional[Choices] = None
 
-    def __init__(self, variable, data = {}):
+    def __init__(self, variable, data={}):
         self.variable = variable
 
         if data is None:
@@ -121,7 +134,10 @@ class BannedVariable:
         self.allow = extract_choices(data, "allow")
         self.deny = extract_choices(data, "deny")
 
-        expect(len(data) == 0, f"Unknown key in banned variable {variable}: {', '.join(data.keys())}.")
+        expect(
+            len(data) == 0,
+            f"Unknown key in banned variable {variable}: {', '.join(data.keys())}.",
+        )
 
     def run(self, identified: Content) -> str:
         if identified.var_edits[self.variable] is None:
@@ -147,6 +163,7 @@ class BannedVariable:
 
         return f"This variable is not allowed for this type."
 
+
 class Rules:
     banned: bool = False
     banned_neighbors: list[BannedNeighbor] = []
@@ -162,43 +179,77 @@ class Rules:
         if "banned_neighbors" in data:
             banned_neighbors_data = data.pop("banned_neighbors")
 
-            expect(isinstance(banned_neighbors_data, list) or isinstance(banned_neighbors_data, dict), "banned_neighbors must be a list, or a dictionary keyed by type.")
+            expect(
+                isinstance(banned_neighbors_data, list)
+                or isinstance(banned_neighbors_data, dict),
+                "banned_neighbors must be a list, or a dictionary keyed by type.",
+            )
 
             if isinstance(banned_neighbors_data, dict):
-                self.banned_neighbors = [BannedNeighbor(typepath, data) for typepath, data in banned_neighbors_data.items()]
+                self.banned_neighbors = [
+                    BannedNeighbor(typepath, data)
+                    for typepath, data in banned_neighbors_data.items()
+                ]
             else:
-                self.banned_neighbors = [BannedNeighbor(typepath) for typepath in banned_neighbors_data]
+                self.banned_neighbors = [
+                    BannedNeighbor(typepath) for typepath in banned_neighbors_data
+                ]
 
         if "banned_variables" in data:
             banned_variables_data = data.pop("banned_variables")
             if banned_variables_data == True:
                 self.banned_variables = True
             else:
-                expect(isinstance(banned_variables_data, list) or isinstance(banned_variables_data, dict), "banned_variables must be a list, or a dictionary keyed by variable.")
+                expect(
+                    isinstance(banned_variables_data, list)
+                    or isinstance(banned_variables_data, dict),
+                    "banned_variables must be a list, or a dictionary keyed by variable.",
+                )
 
                 if isinstance(banned_variables_data, dict):
-                    self.banned_variables = [BannedVariable(variable, data) for variable, data in banned_variables_data.items()]
+                    self.banned_variables = [
+                        BannedVariable(variable, data)
+                        for variable, data in banned_variables_data.items()
+                    ]
                 else:
-                    self.banned_variables = [BannedVariable(variable) for variable in banned_variables_data]
+                    self.banned_variables = [
+                        BannedVariable(variable) for variable in banned_variables_data
+                    ]
 
         expect(len(data) == 0, f"Unknown lint rules: {', '.join(data.keys())}.")
 
-    def run(self, identified: Content, contents: list[Content], identified_index) -> list[MaplintError]:
+    def run(
+        self, identified: Content, contents: list[Content], identified_index
+    ) -> list[MaplintError]:
         failures: list[MaplintError] = []
 
         if self.banned:
-            failures.append(fail_content(identified, f"Typepath {identified.path} is banned."))
+            failures.append(
+                fail_content(identified, f"Typepath {identified.path} is banned.")
+            )
 
         for banned_neighbor in self.banned_neighbors:
-            for neighbor in contents[:identified_index] + contents[identified_index + 1:]:
+            for neighbor in (
+                contents[:identified_index] + contents[identified_index + 1 :]
+            ):
                 if not banned_neighbor.matches(identified, neighbor):
                     continue
 
-                failures.append(fail_content(identified, f"Typepath {identified.path} has a banned neighbor: {neighbor.path}"))
+                failures.append(
+                    fail_content(
+                        identified,
+                        f"Typepath {identified.path} has a banned neighbor: {neighbor.path}",
+                    )
+                )
 
         if self.banned_variables == True:
             if len(identified.var_edits) > 0:
-                failures.append(fail_content(identified, f"Typepath {identified.path} should not have any variable edits."))
+                failures.append(
+                    fail_content(
+                        identified,
+                        f"Typepath {identified.path} should not have any variable edits.",
+                    )
+                )
         else:
             assert isinstance(self.banned_variables, list)
             for banned_variable in self.banned_variables:
@@ -206,9 +257,15 @@ class Rules:
                     ban_reason = banned_variable.run(identified)
                     if ban_reason is None:
                         continue
-                    failures.append(fail_content(identified, f"Typepath {identified.path} has a banned variable (set to {identified.var_edits[banned_variable.variable]}): {banned_variable.variable}. {ban_reason}"))
+                    failures.append(
+                        fail_content(
+                            identified,
+                            f"Typepath {identified.path} has a banned variable (set to {identified.var_edits[banned_variable.variable]}): {banned_variable.variable}. {ban_reason}",
+                        )
+                    )
 
         return failures
+
 
 class Lint:
     help: Optional[str] = None
@@ -220,7 +277,10 @@ class Lint:
         if "help" in data:
             self.help = data.pop("help")
 
-        expect(isinstance(self.help, str) or self.help is None, "Lint help must be a string.")
+        expect(
+            isinstance(self.help, str) or self.help is None,
+            "Lint help must be a string.",
+        )
 
         self.rules = {}
 
@@ -260,7 +320,7 @@ class Lint:
                         coordinate_texts.append(f"and {leftover_coordinates} more")
 
                     for failure in failures:
-                        failure.coordinates = ', '.join(coordinate_texts)
+                        failure.coordinates = ", ".join(coordinate_texts)
                         failure.help = self.help
                         failure.pop_id = pop
                         all_failures.append(failure)
