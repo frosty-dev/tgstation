@@ -61,7 +61,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	name = "серебро"
 	skloname = "серебра"
 	desc = "Против нежити самое то!"
-	color = list(255/255, 284/255, 302/255,0, 0,0,0,0, 0,0,0,0, 0,0,0,1, 0,0,0,0)
+	color = "#bbccff"
 	greyscale_colors = "#e3f1f8"
 	categories = list(MAT_CATEGORY_ORE = TRUE, MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE, MAT_CATEGORY_ITEM_MATERIAL=TRUE)
 	sheet_type = /obj/item/stack/sheet/mineral/silver
@@ -79,7 +79,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	name = "золото"
 	skloname = "золота"
 	desc = "Сияет."
-	color = list(340/255, 240/255, 50/255,0, 0,0,0,0, 0,0,0,0, 0,0,0,1, 0,0,0,0) //gold is shiny, but not as bright as bananium
+	color = "#ffbb50" //gold is shiny, but not as bright as bananium
 	greyscale_colors = "#dbdd4c"
 	strength_modifier = 1.2
 	categories = list(MAT_CATEGORY_ORE = TRUE, MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE, MAT_CATEGORY_ITEM_MATERIAL=TRUE)
@@ -96,10 +96,10 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 
 ///Has no special properties
 /datum/material/diamond
-	name = "алмазы"
+	name = "алмаз"
 	skloname = "алмаза"
 	desc = "Углерод под высоким давлением."
-	color = list(48/255, 272/255, 301/255,0, 0,0,0,0, 0,0,0,0, 0,0,0,1, 0,0,0,0)
+	color = "#48bbff"
 	greyscale_colors = "#71c8f784"
 	categories = list(MAT_CATEGORY_ORE = TRUE, MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE, MAT_CATEGORY_ITEM_MATERIAL=TRUE)
 	sheet_type = /obj/item/stack/sheet/mineral/diamond
@@ -120,7 +120,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	name = "уран"
 	skloname = "урана"
 	desc = "Радиоактивный элемент."
-	color = rgb(48, 237, 26)
+	color = "#48fa26"
 	greyscale_colors = rgb(48, 237, 26)
 	categories = list(MAT_CATEGORY_ORE = TRUE, MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE, MAT_CATEGORY_ITEM_MATERIAL=TRUE)
 	sheet_type = /obj/item/stack/sheet/mineral/uranium
@@ -158,7 +158,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	name = "плазма"
 	skloname = "плазмы"
 	desc = "Разве плазма - это не состояние материи? Не важно."
-	color = list(298/255, 46/255, 352/255,0, 0,0,0,0, 0,0,0,0, 0,0,0,1, 0,0,0,0)
+	color = "#bb46ff"
 	greyscale_colors = "#c162ec"
 	categories = list(MAT_CATEGORY_ORE = TRUE, MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE, MAT_CATEGORY_ITEM_MATERIAL=TRUE)
 	sheet_type = /obj/item/stack/sheet/mineral/plasma
@@ -188,7 +188,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	name = "блюспейс кристалл"
 	skloname = "блюспейс кристаллов"
 	desc = "Кристаллы со свойствами блюспейса."
-	color = list(119/255, 217/255, 396/255,0, 0,0,0,0, 0,0,0,0, 0,0,0,1, 0,0,0,0)
+	color = "#55bbff"
 	greyscale_colors = "#4e7dffC8"
 	alpha = 200
 	starlight_color = COLOR_BLUE
@@ -209,7 +209,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	name = "бананиум"
 	skloname = "бананиума"
 	desc = "Материал с уморительными свойствами."
-	color = list(460/255, 464/255, 0, 0, 0,0,0,0, 0,0,0,0, 0,0,0,1, 0,0,0,0) //obnoxiously bright yellow
+	color =  "#ffff00" //obnoxiously bright yellow
 	greyscale_colors = "#ffff00"
 	categories = list(MAT_CATEGORY_ORE = TRUE, MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE, MAT_CATEGORY_ITEM_MATERIAL=TRUE)
 	sheet_type = /obj/item/stack/sheet/mineral/bananium
