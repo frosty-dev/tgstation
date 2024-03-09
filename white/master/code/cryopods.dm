@@ -42,6 +42,8 @@ GLOBAL_LIST_EMPTY(ghost_records)
 	GLOB.cryopod_computers -= src
 	..()
 
+	if (src)
+		qdel(src)
 /obj/machinery/computer/cryopod/update_icon_state()
 	if(machine_stat & (NOPOWER|BROKEN))
 		icon_state = "cellconsole"
