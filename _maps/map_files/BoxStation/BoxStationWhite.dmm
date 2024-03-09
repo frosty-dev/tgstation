@@ -50017,7 +50017,7 @@
 /obj/structure/table,
 /obj/machinery/cell_charger,
 /obj/item/stock_parts/cell/potato{
-	name = "\IMPROPER BEEPSKY'S EMERGENCY BATTERY"
+	name = "\improper BEEPSKY'S EMERGENCY BATTERY"
 	},
 /turf/open/floor/plating,
 /area/station/security/processing)

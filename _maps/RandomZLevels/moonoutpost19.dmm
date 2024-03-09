@@ -1432,7 +1432,7 @@
 "ki" = (
 /obj/structure/sign/warning/vacuum{
 	desc = "A warning sign which reads 'HOSTILE ATMOSPHERE AHEAD'";
-	name = "\IMPROPER HOSTILE ATMOSPHERE AHEAD";
+	name = "\improper HOSTILE ATMOSPHERE AHEAD";
 	pixel_x = -32
 	},
 /obj/effect/turf_decal/lunar_sand/plating,
@@ -5862,7 +5862,7 @@
 "ND" = (
 /obj/structure/mecha_wreckage/ripley/mk2{
 	desc = "Remains of the historical mech that first touched down on Moon Outpost 19. Completely irreparable, but perhaps something can be salvaged.";
-	name = "\IMPROPER HISTORICAL RIPLEY MK-II WRECKAGE"
+	name = "\improper HISTORICAL RIPLEY MK-II WRECKAGE"
 	},
 /obj/effect/decal/cleanable/oil,
 /obj/item/food/grown/moonflower{

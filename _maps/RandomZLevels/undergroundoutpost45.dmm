@@ -5012,7 +5012,7 @@
 	},
 /obj/structure/sign/warning/deathsposal/directional/south{
 	desc = "A warning sign which reads 'DISPOSAL: LEADS TO EXTERIOR'";
-	name = "\IMPROPER DISPOSAL: LEADS TO EXTERIOR"
+	name = "\improper DISPOSAL: LEADS TO EXTERIOR"
 	},
 /turf/open/floor/iron/white/corner{
 	dir = 4
@@ -7056,7 +7056,7 @@
 /obj/structure/disposalpipe/trunk,
 /obj/structure/sign/warning/deathsposal/directional/north{
 	desc = "A warning sign which reads 'DISPOSAL: LEADS TO EXTERIOR'";
-	name = "\IMPROPER DISPOSAL: LEADS TO EXTERIOR"
+	name = "\improper DISPOSAL: LEADS TO EXTERIOR"
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,

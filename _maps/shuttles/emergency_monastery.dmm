@@ -2529,7 +2529,7 @@
 "JZ" = (
 /obj/docking_port/mobile/emergency{
 	movement_force = list("KNOCKDOWN"=3,"THROW"=6);
-	name = "\PROPER A MONASTERY WITH ENGINES STRAPPED TO IT";
+	name = "\proper A MONASTERY WITH ENGINES STRAPPED TO IT";
 	port_direction = 1
 	},
 /turf/closed/mineral,
