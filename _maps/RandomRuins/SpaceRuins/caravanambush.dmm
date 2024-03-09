@@ -72,7 +72,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/poddoor/preopen{
 	id = "caravantrade2_cargo_port";
-	name = "Cargo Blast Door"
+	name = "CARGO BLAST DOOR"
 	},
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating/airless,
@@ -93,7 +93,7 @@
 "cF" = (
 /obj/machinery/door/poddoor{
 	id = "caravantrade2_cargo_starboard";
-	name = "Cargo Blast Door"
+	name = "CARGO BLAST DOOR"
 	},
 /turf/open/floor/plating/airless,
 /area/shuttle/ruin/caravan/freighter2)
@@ -129,7 +129,7 @@
 "dH" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "caravantrade2_cargo_port";
-	name = "Cargo Blast Door"
+	name = "CARGO BLAST DOOR"
 	},
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating/airless,
@@ -220,7 +220,7 @@
 /obj/machinery/light/small/directional/south,
 /obj/machinery/button/door/directional/south{
 	id = "caravantrade3_cargo_starboard";
-	name = "Cargo Blast Door Control"
+	name = "CARGO BLAST DOOR CONTROL"
 	},
 /turf/open/floor/iron/dark/airless,
 /area/shuttle/ruin/caravan/freighter3)
@@ -294,7 +294,7 @@
 	dwidth = 11;
 	height = 11;
 	shuttle_id = "caravantrade1_ambush";
-	name = "Trade Route";
+	name = "TRADE ROUTE";
 	roundstart_template = /datum/map_template/shuttle/ruin/caravan_victim;
 	width = 27
 	},
@@ -400,7 +400,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/poddoor/preopen{
 	id = "caravantrade2_cargo_port";
-	name = "Cargo Blast Door"
+	name = "CARGO BLAST DOOR"
 	},
 /turf/open/floor/plating/airless,
 /area/shuttle/ruin/caravan/freighter2)
@@ -430,7 +430,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/poddoor{
 	id = "caravantrade2_cargo_starboard";
-	name = "Cargo Blast Door"
+	name = "CARGO BLAST DOOR"
 	},
 /turf/open/floor/plating/airless,
 /area/shuttle/ruin/caravan/freighter2)
@@ -571,7 +571,7 @@
 "vG" = (
 /obj/machinery/door/poddoor{
 	id = "caravantrade3_cargo_starboard";
-	name = "Cargo Blast Door"
+	name = "CARGO BLAST DOOR"
 	},
 /turf/open/floor/plating/airless,
 /area/shuttle/ruin/caravan/freighter3)
@@ -649,7 +649,7 @@
 "Ab" = (
 /obj/machinery/door/poddoor{
 	id = "caravantrade3_cargo_port";
-	name = "Cargo Blast Door"
+	name = "CARGO BLAST DOOR"
 	},
 /turf/open/floor/plating/airless,
 /area/shuttle/ruin/caravan/freighter3)
@@ -814,7 +814,7 @@
 "GY" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "caravantrade2_cargo_port";
-	name = "Cargo Blast Door"
+	name = "CARGO BLAST DOOR"
 	},
 /turf/open/floor/plating/airless,
 /area/shuttle/ruin/caravan/freighter2)
@@ -1013,7 +1013,7 @@
 /obj/effect/turf_decal/bot_white,
 /obj/machinery/button/door/directional/north{
 	id = "caravantrade2_cargo_port";
-	name = "Cargo Blast Door Control"
+	name = "CARGO BLAST DOOR CONTROL"
 	},
 /obj/machinery/light/small/directional/north,
 /obj/structure/closet/crate/secure,

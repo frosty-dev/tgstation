@@ -43,7 +43,7 @@
 /obj/structure/sink/kitchen/directional/east,
 /obj/machinery/button/door/directional/south{
 	id = "pirate_irs_bar";
-	name = "Privacy Shutters"
+	name = "PRIVACY SHUTTERS"
 	},
 /turf/open/floor/iron/kitchen,
 /area/shuttle/pirate)
@@ -103,7 +103,7 @@
 /obj/structure/window/reinforced/plasma/spawner/directional/west,
 /obj/structure/window/reinforced/plasma/spawner/directional/south,
 /obj/structure/statue/gold/hop{
-	name = "statue of the model tax collector"
+	name = "STATUE OF THE MODEL TAX COLLECTOR"
 	},
 /turf/open/floor/wood,
 /area/shuttle/pirate)
@@ -235,7 +235,7 @@
 	desc = "Ill-gotten gains of the Space IRS";
 	icon = 'icons/obj/stack_objects.dmi';
 	icon_state = "sheet-gold_3";
-	name = "recouped gold"
+	name = "RECOUPED GOLD"
 	},
 /obj/structure/window/reinforced/survival_pod/spawner/directional/south,
 /obj/machinery/door/window/brigdoor/right/directional/north{
@@ -367,7 +367,7 @@
 /area/shuttle/pirate)
 "mE" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Special Tax Recoupment Unit"
+	name = "SPECIAL TAX RECOUPMENT UNIT"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/syndicate,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
@@ -485,7 +485,7 @@
 /area/shuttle/pirate)
 "pg" = (
 /obj/machinery/door/airlock/vault{
-	name = "Vault";
+	name = "VAULT";
 	id_tag = "pirate_irs_vault"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/syndicate,
@@ -518,7 +518,7 @@
 /area/shuttle/pirate)
 "pD" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Enhanced Auditing Interview Chamber"
+	name = "ENHANCED AUDITING INTERVIEW CHAMBER"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/syndicate,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
@@ -602,7 +602,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold/scrubbers/hidden/layer2,
 /obj/machinery/button/door/directional/south{
 	id = "piratestarboardexternal";
-	name = "External Bolt Control";
+	name = "EXTERNAL BOLT CONTROL";
 	normaldoorcontrol = 1;
 	specialfunctions = 4
 	},
@@ -736,7 +736,7 @@
 "vo" = (
 /obj/effect/mapping_helpers/airlock/access/any/syndicate,
 /obj/machinery/door/airlock/glass{
-	name = "Commons Area"
+	name = "COMMONS AREA"
 	},
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/door/firedoor,
@@ -1260,7 +1260,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold/scrubbers/hidden/layer2,
 /obj/machinery/door/airlock/public/glass{
-	name = "Bridge"
+	name = "BRIDGE"
 	},
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/door/firedoor,
@@ -1335,7 +1335,7 @@
 "KI" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 4;
-	name = "tactical chair"
+	name = "TACTICAL CHAIR"
 	},
 /obj/effect/turf_decal/trimline/yellow/filled/line,
 /turf/open/floor/iron,
@@ -1594,7 +1594,7 @@
 /area/shuttle/pirate)
 "PX" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Maintenance Room"
+	name = "MAINTENANCE ROOM"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/syndicate,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
@@ -1635,7 +1635,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/button/door{
 	id = "pirate_irs_bridge";
-	name = "Bridge Shutters"
+	name = "BRIDGE SHUTTERS"
 	},
 /turf/open/floor/iron,
 /area/shuttle/pirate)
@@ -1793,7 +1793,7 @@
 /area/shuttle/pirate)
 "Uk" = (
 /obj/machinery/door/airlock/vault{
-	name = "Vault";
+	name = "VAULT";
 	id_tag = "pirate_irs_vault"
 	},
 /obj/structure/cable,
@@ -1855,7 +1855,7 @@
 /area/shuttle/pirate)
 "Xr" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Auditing Office"
+	name = "AUDITING OFFICE"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/syndicate,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
@@ -1891,7 +1891,7 @@
 	id = "pirate_irs_vault";
 	normaldoorcontrol = 1;
 	specialfunctions = 4;
-	name = "Vault Lockdown"
+	name = "VAULT LOCKDOWN"
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/shuttle/pirate)
@@ -1934,7 +1934,7 @@
 /obj/effect/mapping_helpers/airlock/access/any/syndicate,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/door/airlock/public/glass{
-	name = "Bridge"
+	name = "BRIDGE"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron/edge{

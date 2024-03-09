@@ -66,7 +66,7 @@
 /area/centcom/wizard_station)
 "eW" = (
 /obj/machinery/door/airlock/wood{
-	name = "Bathroom"
+	name = "BATHROOM"
 	},
 /turf/open/floor/plastic,
 /area/centcom/wizard_station)
@@ -115,7 +115,7 @@
 /area/centcom/wizard_station)
 "hq" = (
 /obj/machinery/door/airlock/wood{
-	name = "Games Room"
+	name = "GAMES ROOM"
 	},
 /turf/open/floor/engine/cult,
 /area/centcom/wizard_station)
@@ -156,7 +156,7 @@
 /area/centcom/wizard_station)
 "jp" = (
 /obj/machinery/door/airlock/wood{
-	name = "Ship Engine"
+	name = "SHIP ENGINE"
 	},
 /obj/structure/railing/corner/end/flip,
 /obj/structure/railing/corner/end,
@@ -222,7 +222,7 @@
 "nN" = (
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /obj/machinery/door/airlock/wood{
-	name = "Kitchen"
+	name = "KITCHEN"
 	},
 /turf/open/floor/iron,
 /area/centcom/wizard_station)
@@ -405,7 +405,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/wood{
-	name = "Firing Range"
+	name = "FIRING RANGE"
 	},
 /turf/open/floor/engine/cult,
 /area/centcom/wizard_station)
@@ -555,7 +555,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/wood{
-	name = "Storage"
+	name = "STORAGE"
 	},
 /obj/structure/railing/corner/end{
 	dir = 8
@@ -707,7 +707,7 @@
 /area/centcom/wizard_station)
 "OV" = (
 /obj/machinery/door/airlock/wood{
-	name = "Master Bedroom"
+	name = "MASTER BEDROOM"
 	},
 /obj/effect/mapping_helpers/airlock_note_placer{
 	note_info = "Don't forget the book above your desk. Also, your other clothes are in your dresser. -Mom"
@@ -907,7 +907,7 @@
 /area/centcom/wizard_station)
 "XV" = (
 /obj/machinery/door/airlock/wood{
-	name = "Library"
+	name = "LIBRARY"
 	},
 /turf/open/floor/engine/cult,
 /area/centcom/wizard_station)

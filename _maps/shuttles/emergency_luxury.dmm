@@ -135,7 +135,7 @@
 /area/shuttle/escape)
 "gU" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Escape Shuttle Cell"
+	name = "ESCAPE SHUTTLE CELL"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /obj/machinery/scanner_gate/luxury_shuttle{
@@ -197,7 +197,7 @@
 /area/shuttle/escape)
 "jy" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Economy-Class"
+	name = "ECONOMY-CLASS"
 	},
 /obj/structure/fans/tiny,
 /obj/structure/fans/tiny,
@@ -242,7 +242,7 @@
 /area/shuttle/escape)
 "kM" = (
 /obj/machinery/door/airlock/silver{
-	name = "Pool"
+	name = "POOL"
 	},
 /turf/open/floor/iron/white/herringbone,
 /area/shuttle/escape/luxury)
@@ -327,7 +327,7 @@
 /area/shuttle/escape/luxury)
 "oH" = (
 /obj/machinery/door/airlock{
-	name = "Economy Medical"
+	name = "ECONOMY MEDICAL"
 	},
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/dirt,
@@ -361,7 +361,7 @@
 /area/shuttle/escape)
 "qm" = (
 /obj/machinery/door/airlock/silver{
-	name = "Medical"
+	name = "MEDICAL"
 	},
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/escape/luxury)
@@ -421,7 +421,7 @@
 /area/shuttle/escape/luxury)
 "sg" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Escape Shuttle Cell"
+	name = "ESCAPE SHUTTLE CELL"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/carpet/red,
@@ -611,7 +611,7 @@
 /area/shuttle/escape/luxury)
 "zL" = (
 /obj/machinery/door/airlock/silver{
-	name = "Restrooms"
+	name = "RESTROOMS"
 	},
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape/luxury)
@@ -675,7 +675,7 @@
 	layer = 2.6
 	},
 /obj/machinery/door/airlock/silver{
-	name = "First Class"
+	name = "FIRST CLASS"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/carpet/blue,
@@ -704,7 +704,7 @@
 	layer = 2.6
 	},
 /obj/machinery/door/airlock/silver{
-	name = "First Class"
+	name = "FIRST CLASS"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/carpet/blue,
@@ -737,7 +737,7 @@
 "DE" = (
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /obj/machinery/door/airlock/security/glass{
-	name = "Escape Shuttle Cell"
+	name = "ESCAPE SHUTTLE CELL"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/carpet/red,
@@ -942,7 +942,7 @@
 /area/shuttle/escape)
 "KJ" = (
 /obj/machinery/door/airlock/silver{
-	name = "Flight Control"
+	name = "FLIGHT CONTROL"
 	},
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/escape/luxury)
@@ -1092,7 +1092,7 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /obj/machinery/door/airlock/security/glass{
-	name = "Escape Shuttle Cell"
+	name = "ESCAPE SHUTTLE CELL"
 	},
 /turf/open/indestructible/white,
 /area/shuttle/escape/brig)
@@ -1243,7 +1243,7 @@
 /area/shuttle/escape/luxury)
 "YN" = (
 /obj/machinery/door/airlock/silver{
-	name = "Restroom"
+	name = "RESTROOM"
 	},
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape/luxury)

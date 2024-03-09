@@ -412,7 +412,7 @@
 /area/shuttle/escape)
 "gp" = (
 /obj/machinery/door/airlock{
-	name = "Garden"
+	name = "GARDEN"
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
@@ -439,7 +439,7 @@
 "hI" = (
 /obj/machinery/atmospherics/components/binary/pump/on{
 	dir = 4;
-	name = "Air Out"
+	name = "AIR OUT"
 	},
 /turf/open/floor/plating,
 /area/shuttle/escape)
@@ -513,7 +513,7 @@
 	base_state = "left";
 	dir = 2;
 	icon_state = "left";
-	name = "Curator Desk Door";
+	name = "CURATOR DESK DOOR";
 	req_access = list("library")
 	},
 /obj/effect/turf_decal/tile/red/half/contrasted,
@@ -556,14 +556,14 @@
 /area/shuttle/escape)
 "iM" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Chapel"
+	name = "CHAPEL"
 	},
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/shuttle/escape)
 "iS" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Chapel"
+	name = "CHAPEL"
 	},
 /turf/open/floor/iron/dark,
 /area/shuttle/escape)
@@ -831,7 +831,7 @@
 /area/shuttle/escape)
 "mH" = (
 /obj/machinery/door/morgue{
-	name = "Confession Booth"
+	name = "CONFESSION BOOTH"
 	},
 /turf/open/floor/iron/dark,
 /area/shuttle/escape)
@@ -852,7 +852,7 @@
 /area/shuttle/escape)
 "mP" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Chapel"
+	name = "CHAPEL"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -908,7 +908,7 @@
 /area/shuttle/escape)
 "nt" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Crematorium"
+	name = "CREMATORIUM"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1024,7 +1024,7 @@
 /obj/machinery/door/window/right/directional/north{
 	base_state = "left";
 	icon_state = "left";
-	name = "Secure Art Exhibit";
+	name = "SECURE ART EXHIBIT";
 	req_access = list("library")
 	},
 /turf/open/floor/iron/dark,
@@ -1108,7 +1108,7 @@
 /area/shuttle/escape)
 "qp" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Monastery Cemetery"
+	name = "MONASTERY CEMETERY"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
@@ -1189,7 +1189,7 @@
 /area/shuttle/escape)
 "ru" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Chapel Access"
+	name = "CHAPEL ACCESS"
 	},
 /turf/open/floor/iron/dark,
 /area/shuttle/escape)
@@ -1208,7 +1208,7 @@
 	base_state = "right";
 	dir = 1;
 	icon_state = "right";
-	name = "Coffin Storage";
+	name = "COFFIN STORAGE";
 	req_access = list("chapel_office")
 	},
 /turf/open/floor/iron/dark,
@@ -1447,7 +1447,7 @@
 /area/shuttle/escape)
 "vE" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Chapel Access"
+	name = "CHAPEL ACCESS"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -1455,7 +1455,7 @@
 /area/shuttle/escape)
 "vJ" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Chapel"
+	name = "CHAPEL"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1463,7 +1463,7 @@
 /area/shuttle/escape)
 "vO" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Chapel Access"
+	name = "CHAPEL ACCESS"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1573,7 +1573,7 @@
 "yd" = (
 /obj/machinery/door/window/left/directional/east{
 	dir = 1;
-	name = "Coffin Storage";
+	name = "COFFIN STORAGE";
 	req_access = list("chapel_office")
 	},
 /turf/open/floor/iron/dark,
@@ -1607,7 +1607,7 @@
 /area/shuttle/escape)
 "yA" = (
 /obj/machinery/door/morgue{
-	name = "Private Exhibit"
+	name = "PRIVATE EXHIBIT"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/service/library,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -1659,7 +1659,7 @@
 /area/shuttle/escape)
 "yR" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Chapel"
+	name = "CHAPEL"
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
@@ -1705,7 +1705,7 @@
 /area/shuttle/escape)
 "zw" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Pod Docking Bay"
+	name = "POD DOCKING BAY"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -1897,7 +1897,7 @@
 "BQ" = (
 /obj/machinery/door/airlock{
 	id_tag = "Cell1";
-	name = "Cell 1"
+	name = "CELL 1"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
@@ -2038,7 +2038,7 @@
 /area/shuttle/escape)
 "DM" = (
 /obj/machinery/door/airlock{
-	name = "Dining Room"
+	name = "DINING ROOM"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
@@ -2092,7 +2092,7 @@
 /area/shuttle/escape)
 "Eu" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Library"
+	name = "LIBRARY"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/machinery/door/firedoor,
@@ -2112,7 +2112,7 @@
 /area/shuttle/escape)
 "ED" = (
 /obj/machinery/door/window/right/directional/north{
-	name = "Secure Art Exhibit";
+	name = "SECURE ART EXHIBIT";
 	req_access = list("library")
 	},
 /turf/open/floor/iron/dark,
@@ -2196,7 +2196,7 @@
 /area/shuttle/escape)
 "FF" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Chapel"
+	name = "CHAPEL"
 	},
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -2209,7 +2209,7 @@
 /area/shuttle/escape)
 "FO" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Chapel Office"
+	name = "CHAPEL OFFICE"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
@@ -2292,7 +2292,7 @@
 "Hf" = (
 /obj/machinery/door/airlock{
 	id_tag = "Cell2";
-	name = "Cell 2"
+	name = "CELL 2"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
@@ -2361,7 +2361,7 @@
 /area/shuttle/escape)
 "Iv" = (
 /obj/machinery/door/airlock{
-	name = "Kitchen"
+	name = "KITCHEN"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
@@ -2487,7 +2487,7 @@
 /area/shuttle/escape)
 "JA" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Chapel Garden"
+	name = "CHAPEL GARDEN"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
@@ -2508,13 +2508,13 @@
 /area/shuttle/escape)
 "JS" = (
 /obj/machinery/door/airlock{
-	name = "Bathroom"
+	name = "BATHROOM"
 	},
 /turf/open/floor/iron/grimy,
 /area/shuttle/escape)
 "JW" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Art Storage"
+	name = "ART STORAGE"
 	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
@@ -2529,7 +2529,7 @@
 "JZ" = (
 /obj/docking_port/mobile/emergency{
 	movement_force = list("KNOCKDOWN"=3,"THROW"=6);
-	name = "\proper a monastery with engines strapped to it";
+	name = "\PROPER A MONASTERY WITH ENGINES STRAPPED TO IT";
 	port_direction = 1
 	},
 /turf/closed/mineral,
@@ -2705,7 +2705,7 @@
 /area/shuttle/escape)
 "MF" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Art Gallery"
+	name = "ART GALLERY"
 	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
@@ -2775,7 +2775,7 @@
 /area/shuttle/escape)
 "Nw" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Library"
+	name = "LIBRARY"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
@@ -2792,7 +2792,7 @@
 /area/shuttle/escape)
 "NL" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Monastery Transit"
+	name = "MONASTERY TRANSIT"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
@@ -2830,7 +2830,7 @@
 /area/shuttle/escape)
 "Oc" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Library"
+	name = "LIBRARY"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
@@ -2880,7 +2880,7 @@
 /area/shuttle/escape)
 "OH" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Monastery Maintenance";
+	name = "MONASTERY MAINTENANCE";
 	req_access = list("service","maint_tunnels")
 	},
 /obj/structure/cable,
@@ -2974,7 +2974,7 @@
 /area/shuttle/escape)
 "PU" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Library"
+	name = "LIBRARY"
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -2988,7 +2988,7 @@
 /area/shuttle/escape)
 "Qg" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Library"
+	name = "LIBRARY"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
@@ -3149,7 +3149,7 @@
 /obj/machinery/mass_driver/chapelgun,
 /obj/machinery/door/window/left/directional/east{
 	dir = 8;
-	name = "Mass Driver"
+	name = "MASS DRIVER"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
@@ -3177,7 +3177,7 @@
 /area/shuttle/escape)
 "Se" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Chapel Office"
+	name = "CHAPEL OFFICE"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -3307,7 +3307,7 @@
 /obj/machinery/light/small/directional/east,
 /obj/machinery/door/window/right/directional/north{
 	dir = 2;
-	name = "Curator Desk Door";
+	name = "CURATOR DESK DOOR";
 	req_access = list("library")
 	},
 /obj/effect/turf_decal/tile/red/half/contrasted,
@@ -3319,7 +3319,7 @@
 /area/shuttle/escape)
 "Tf" = (
 /obj/machinery/door/airlock{
-	name = "Garden"
+	name = "GARDEN"
 	},
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -3460,7 +3460,7 @@
 /area/shuttle/escape)
 "UQ" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Pod Docking Bay"
+	name = "POD DOCKING BAY"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -3561,7 +3561,7 @@
 /area/shuttle/escape)
 "Wh" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Dock Access"
+	name = "DOCK ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -3673,7 +3673,7 @@
 	},
 /obj/machinery/atmospherics/components/unary/outlet_injector/on/layer2{
 	dir = 1;
-	name = "Outlet Injector"
+	name = "OUTLET INJECTOR"
 	},
 /turf/open/floor/plating/airless,
 /area/shuttle/escape)
@@ -3855,7 +3855,7 @@
 /area/shuttle/escape)
 "ZU" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Library"
+	name = "LIBRARY"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/machinery/door/firedoor,

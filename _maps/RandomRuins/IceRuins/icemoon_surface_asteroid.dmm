@@ -51,7 +51,7 @@
 /obj/structure/table/bronze,
 /obj/item/toy/clockwork_watch{
 	desc = "You can still feel the embers of a once great empire in your hand...";
-	name = "drained clockwork slab"
+	name = "DRAINED CLOCKWORK SLAB"
 	},
 /turf/open/floor/bronze,
 /area/icemoon/surface)

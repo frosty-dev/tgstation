@@ -138,7 +138,7 @@
 /mob/living/basic/construct/juggernaut/hostile{
 	health = 450;
 	maxHealth = 450;
-	name = "Right Hand of the Elder"
+	name = "RIGHT HAND OF THE ELDER"
 	},
 /turf/open/floor/engine/cult,
 /area/ruin/powered)
@@ -363,7 +363,7 @@
 /mob/living/basic/construct/juggernaut/hostile{
 	health = 450;
 	maxHealth = 450;
-	name = "Left Hand of the Elder"
+	name = "LEFT HAND OF THE ELDER"
 	},
 /turf/open/floor/engine/cult,
 /area/ruin/powered)
@@ -447,7 +447,7 @@
 	maxHealth = 500;
 	melee_damage_lower = 10;
 	melee_damage_upper = 30;
-	name = "Village Elder"
+	name = "VILLAGE ELDER"
 	},
 /turf/open/floor/engine/cult,
 /area/ruin/powered)

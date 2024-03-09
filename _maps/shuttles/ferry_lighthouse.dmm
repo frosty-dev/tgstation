@@ -141,7 +141,7 @@
 /obj/docking_port/mobile{
 	dir = 8;
 	shuttle_id = "ferry";
-	name = "The Lighthouse";
+	name = "THE LIGHTHOUSE";
 	port_direction = 2
 	},
 /turf/open/floor/mineral/titanium/blue,

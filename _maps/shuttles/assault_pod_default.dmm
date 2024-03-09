@@ -15,7 +15,7 @@
 "e" = (
 /obj/machinery/door/airlock/centcom{
 	aiControlDisabled = 1;
-	name = "Assault Pod"
+	name = "ASSAULT POD"
 	},
 /obj/docking_port/mobile/assault_pod{
 	name = "steel rain";
@@ -35,7 +35,7 @@
 "t" = (
 /obj/machinery/door/airlock/centcom{
 	aiControlDisabled = 1;
-	name = "Assault Pod"
+	name = "ASSAULT POD"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/plating,
@@ -60,7 +60,7 @@
 /area/shuttle/assault_pod)
 "R" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Assault Pod"
+	name = "ASSAULT POD"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/plating,

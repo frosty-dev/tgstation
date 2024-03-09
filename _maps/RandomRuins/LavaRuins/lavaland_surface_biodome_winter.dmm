@@ -99,7 +99,7 @@
 /obj/machinery/button/door{
 	desc = "Who the hell hid behind a can of beans?";
 	id = "winter_biodome";
-	name = "secret button"
+	name = "SECRET BUTTON"
 	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
@@ -198,7 +198,7 @@
 	},
 /turf/open/floor/wood{
 	initial_gas_mix = "o2=22;n2=82;TEMP=180";
-	name = "bridge"
+	name = "BRIDGE"
 	},
 /area/ruin/powered/snow_biodome)
 "bv" = (

@@ -13,7 +13,7 @@
 /area/space/nearstation)
 "f" = (
 /obj/machinery/door/window{
-	name = "Kitchen Coldroom"
+	name = "KITCHEN COLDROOM"
 	},
 /turf/open/floor/iron/freezer,
 /area/ruin/space/djstation)
@@ -113,7 +113,7 @@
 /area/ruin/space/djstation)
 "T" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Kitchen"
+	name = "KITCHEN"
 	},
 /turf/template_noop,
 /area/template_noop)
@@ -136,7 +136,7 @@
 /area/ruin/space/djstation)
 "Z" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Kitchen"
+	name = "KITCHEN"
 	},
 /obj/modular_map_connector,
 /turf/template_noop,

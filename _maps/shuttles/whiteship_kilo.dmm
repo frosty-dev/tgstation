@@ -31,7 +31,7 @@
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /obj/machinery/door/poddoor{
 	id = "whiteship_windows";
-	name = "Exterior Window Blast Door"
+	name = "EXTERIOR WINDOW BLAST DOOR"
 	},
 /turf/open/floor/plating,
 /area/shuttle/abandoned/cargo)
@@ -183,7 +183,7 @@
 /obj/effect/turf_decal/delivery,
 /obj/machinery/door/airlock/external/ruin{
 	id_tag = "ntms_exterior";
-	name = "NTMS-037 Mining Airlock"
+	name = "NTMS-037 MINING AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/decal/cleanable/dirt,
@@ -197,7 +197,7 @@
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /obj/machinery/door/poddoor{
 	id = "whiteship_bridge";
-	name = "Cockpit Emergency Blast Door"
+	name = "COCKPIT EMERGENCY BLAST DOOR"
 	},
 /turf/open/floor/plating,
 /area/shuttle/abandoned/bridge)
@@ -234,7 +234,7 @@
 /area/shuttle/abandoned/cargo)
 "ku" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "External Freight Airlock"
+	name = "EXTERNAL FREIGHT AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/turf_decal/stripes/line{
@@ -341,7 +341,7 @@
 /area/shuttle/abandoned/cargo)
 "nN" = (
 /obj/machinery/door/airlock/command{
-	name = "NTMS-037 Ship Control"
+	name = "NTMS-037 SHIP CONTROL"
 	},
 /obj/effect/turf_decal/delivery/white{
 	color = "#52B4E9"
@@ -363,7 +363,7 @@
 /obj/effect/turf_decal/delivery,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
 /obj/machinery/door/airlock/shuttle{
-	name = "NTMS-037 Cargo Bay"
+	name = "NTMS-037 CARGO BAY"
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/abandoned/engine)
@@ -645,7 +645,7 @@
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /obj/machinery/door/poddoor{
 	id = "whiteship_windows";
-	name = "Exterior Window Blast Door"
+	name = "EXTERIOR WINDOW BLAST DOOR"
 	},
 /turf/open/floor/plating,
 /area/shuttle/abandoned/crew)
@@ -653,7 +653,7 @@
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /obj/machinery/door/poddoor{
 	id = "whiteship_windows";
-	name = "Exterior Window Blast Door"
+	name = "EXTERIOR WINDOW BLAST DOOR"
 	},
 /obj/effect/decal/cleanable/blood/splatter/over_window,
 /turf/open/floor/plating,
@@ -666,7 +666,7 @@
 /obj/effect/turf_decal/bot_white,
 /obj/machinery/door/poddoor{
 	id = "whiteship_port";
-	name = "NTMS-037 Bay Blast Door"
+	name = "NTMS-037 BAY BLAST DOOR"
 	},
 /obj/machinery/conveyor{
 	id = "NTMSLoad2";
@@ -786,7 +786,7 @@
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /obj/machinery/door/poddoor{
 	id = "whiteship_windows";
-	name = "Exterior Window Blast Door"
+	name = "EXTERIOR WINDOW BLAST DOOR"
 	},
 /turf/open/floor/plating,
 /area/shuttle/abandoned/bar)
@@ -805,7 +805,7 @@
 "Lj" = (
 /obj/effect/turf_decal/delivery,
 /obj/machinery/door/airlock/external/ruin{
-	name = "NTMS-037 Mining Airlock"
+	name = "NTMS-037 MINING AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/decal/cleanable/dirt,
@@ -835,7 +835,7 @@
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /obj/machinery/door/poddoor{
 	id = "whiteship_windows";
-	name = "Exterior Window Blast Door"
+	name = "EXTERIOR WINDOW BLAST DOOR"
 	},
 /obj/effect/decal/cleanable/blood/splatter/over_window,
 /turf/open/floor/plating,
@@ -974,7 +974,7 @@
 /obj/effect/turf_decal/bot_white,
 /obj/machinery/door/poddoor{
 	id = "whiteship_port";
-	name = "NTMS-037 Bay Blast Door"
+	name = "NTMS-037 BAY BLAST DOOR"
 	},
 /obj/machinery/conveyor{
 	dir = 1;
@@ -986,7 +986,7 @@
 "RF" = (
 /obj/effect/turf_decal/delivery,
 /obj/machinery/door/airlock/shuttle{
-	name = "NTMS-037 Lockers"
+	name = "NTMS-037 LOCKERS"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/structure/cable,
@@ -1001,7 +1001,7 @@
 "RN" = (
 /obj/effect/turf_decal/delivery,
 /obj/machinery/door/airlock/shuttle{
-	name = "NTMS-037 Cargo Bay"
+	name = "NTMS-037 CARGO BAY"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/structure/cable,
@@ -1121,7 +1121,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/shuttle{
-	name = "NTMS-037 Engine Room"
+	name = "NTMS-037 ENGINE ROOM"
 	},
 /obj/effect/decal/cleanable/blood/tracks,
 /obj/structure/cable,
@@ -1169,7 +1169,7 @@
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /obj/machinery/door/poddoor{
 	id = "whiteship_windows";
-	name = "Exterior Window Blast Door"
+	name = "EXTERIOR WINDOW BLAST DOOR"
 	},
 /turf/open/floor/plating,
 /area/shuttle/abandoned/engine)

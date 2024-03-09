@@ -34,7 +34,7 @@
 /area/ruin/space/has_grav/crashedship/midship)
 "bj" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Security Checkpoint"
+	name = "SECURITY CHECKPOINT"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/iron,
@@ -48,7 +48,7 @@
 /obj/structure/cable,
 /obj/machinery/door/airlock/command{
 	emergency = 1;
-	name = "E.V.A. Storage"
+	name = "E.V.A. STORAGE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/eva,
 /turf/open/floor/iron/white/corner,
@@ -270,7 +270,7 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/public/glass{
-	name = "Entry Hall"
+	name = "ENTRY HALL"
 	},
 /obj/structure/cable,
 /turf/open/floor/mineral/plastitanium,
@@ -316,7 +316,7 @@
 /area/ruin/space/has_grav/crashedship/aft)
 "on" = (
 /obj/machinery/door/airlock/command{
-	name = "Captain's Office"
+	name = "CAPTAIN'S OFFICE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/captain,
 /turf/open/floor/iron/airless,
@@ -352,7 +352,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/public/glass{
-	name = "Entry Hall"
+	name = "ENTRY HALL"
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/crashedship/aft)
@@ -674,7 +674,7 @@
 /obj/structure/cable,
 /obj/machinery/door/airlock/command{
 	emergency = 1;
-	name = "Teleport Access"
+	name = "TELEPORT ACCESS"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/teleporter,
 /turf/open/floor/iron/white/side{
@@ -841,7 +841,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible/layer2,
 /obj/machinery/door/airlock/grunge{
-	name = "Emergency Supplies"
+	name = "EMERGENCY SUPPLIES"
 	},
 /turf/open/floor/pod/dark,
 /area/ruin/space/has_grav/crashedship/aft)
@@ -1051,7 +1051,7 @@
 "Lo" = (
 /obj/machinery/door/airlock/command{
 	emergency = 1;
-	name = "Teleport Access"
+	name = "TELEPORT ACCESS"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/teleporter,
 /obj/structure/cable,
@@ -1078,7 +1078,7 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/public/glass{
-	name = "Entry Hall"
+	name = "ENTRY HALL"
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/crashedship/aft)
@@ -1146,7 +1146,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/public/glass{
-	name = "Entry Hall"
+	name = "ENTRY HALL"
 	},
 /obj/structure/cable,
 /turf/open/floor/mineral/plastitanium,

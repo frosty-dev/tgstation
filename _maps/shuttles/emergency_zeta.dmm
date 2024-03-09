@@ -5,7 +5,7 @@
 /area/shuttle/escape)
 "aO" = (
 /obj/machinery/door/airlock/abductor{
-	name = "Transport Ship Zeta"
+	name = "TRANSPORT SHIP ZETA"
 	},
 /turf/open/floor/plating/abductor,
 /area/shuttle/escape)
@@ -43,14 +43,14 @@
 /area/shuttle/escape)
 "jI" = (
 /obj/machinery/door/airlock/abductor{
-	name = "Holding Facility"
+	name = "HOLDING FACILITY"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/plating/abductor,
 /area/shuttle/escape/brig)
 "jJ" = (
 /obj/machinery/door/airlock/abductor{
-	name = "Command Center"
+	name = "COMMAND CENTER"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /turf/open/floor/plating/abductor,
@@ -168,7 +168,7 @@
 /area/shuttle/escape)
 "Ct" = (
 /obj/machinery/door/airlock/abductor{
-	name = "Repair Bay"
+	name = "REPAIR BAY"
 	},
 /turf/open/floor/plating/abductor,
 /area/shuttle/escape)
@@ -286,7 +286,7 @@
 /area/shuttle/escape)
 "XI" = (
 /obj/machinery/door/airlock/abductor{
-	name = "Transport Ship Zeta"
+	name = "TRANSPORT SHIP ZETA"
 	},
 /obj/docking_port/mobile/emergency{
 	name = "Zeta emergency shuttle"
@@ -313,7 +313,7 @@
 /area/shuttle/escape)
 "ZJ" = (
 /obj/machinery/door/airlock/abductor{
-	name = "Experimentation Lab"
+	name = "EXPERIMENTATION LAB"
 	},
 /turf/open/floor/plating/abductor,
 /area/shuttle/escape)

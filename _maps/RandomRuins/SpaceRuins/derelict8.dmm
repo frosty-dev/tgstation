@@ -78,7 +78,7 @@
 /area/ruin/space/has_grav)
 "mF" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Starboard Engineering Storage"
+	name = "STARBOARD ENGINEERING STORAGE"
 	},
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/structure/cable,

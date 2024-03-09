@@ -52,7 +52,7 @@
 /area/shuttle/labor)
 "j" = (
 /obj/machinery/door/airlock/shuttle{
-	name = "Labor Shuttle Airlock"
+	name = "LABOR SHUTTLE AIRLOCK"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -65,7 +65,7 @@
 /area/shuttle/labor)
 "k" = (
 /obj/machinery/door/airlock/shuttle{
-	name = "Labor Shuttle Airlock"
+	name = "LABOR SHUTTLE AIRLOCK"
 	},
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/mapping_helpers/airlock/access/all/security/brig,
@@ -224,7 +224,7 @@
 "w" = (
 /obj/machinery/door/airlock/shuttle{
 	id_tag = "prisonshuttle";
-	name = "Labor Shuttle Airlock"
+	name = "LABOR SHUTTLE AIRLOCK"
 	},
 /obj/docking_port/mobile{
 	dir = 8;

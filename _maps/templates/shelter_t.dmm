@@ -10,7 +10,7 @@
 /obj/machinery/door/airlock/survival_pod/glass,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "podtoilet";
-	name = "Privacy Shutters"
+	name = "PRIVACY SHUTTERS"
 	},
 /turf/open/floor/pod,
 /area/misc/survivalpod)

@@ -16,7 +16,7 @@
 "f" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Telecommunications"
+	name = "TELECOMMUNICATIONS"
 	},
 /turf/open/floor/plating,
 /area/ruin/space/djstation/service)
@@ -126,7 +126,7 @@
 "R" = (
 /obj/machinery/power/smes/magical{
 	desc = "A high-capacity superconducting magnetic energy storage (SMES) unit.";
-	name = "power storage unit"
+	name = "POWER STORAGE UNIT"
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -151,14 +151,14 @@
 /area/ruin/space/djstation/service)
 "W" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Ruskie DJ Station"
+	name = "RUSKIE DJ STATION"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/plating,
 /area/ruin/space/djstation/service)
 "X" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Ruskie DJ Station"
+	name = "RUSKIE DJ STATION"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1

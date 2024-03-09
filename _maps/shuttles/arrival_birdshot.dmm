@@ -67,7 +67,7 @@
 /area/shuttle/arrival)
 "F" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Arrivals Shuttle Airlock"
+	name = "ARRIVALS SHUTTLE AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/mineral/titanium/blue,

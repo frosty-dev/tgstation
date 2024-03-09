@@ -5,7 +5,7 @@
 "ab" = (
 /obj/machinery/door/poddoor/shutters{
 	id = "syndieshutters";
-	name = "Blast Shutters"
+	name = "BLAST SHUTTERS"
 	},
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /turf/open/floor/plating,
@@ -187,7 +187,7 @@
 /obj/effect/turf_decal/delivery,
 /obj/machinery/door/airlock/hatch{
 	id_tag = "infiltrator_bridge";
-	name = "Infiltrator Bridge"
+	name = "INFILTRATOR BRIDGE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -297,7 +297,7 @@
 /area/shuttle/syndicate/eva)
 "aR" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Preparation Room"
+	name = "PREPARATION ROOM"
 	},
 /obj/effect/turf_decal/delivery,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
@@ -326,7 +326,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/hatch{
-	name = "Infiltrator Access"
+	name = "INFILTRATOR ACCESS"
 	},
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
@@ -405,7 +405,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/hatch{
-	name = "Infiltrator Access"
+	name = "INFILTRATOR ACCESS"
 	},
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
@@ -430,7 +430,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/machinery/door/poddoor/shutters{
 	id = "infiltrator_medbay";
-	name = "Infiltrator Medical Bay"
+	name = "INFILTRATOR MEDICAL BAY"
 	},
 /obj/structure/cable,
 /turf/open/floor/mineral/plastitanium,
@@ -504,7 +504,7 @@
 "bp" = (
 /obj/machinery/door/poddoor{
 	id = "infiltrator_portblast";
-	name = "Infiltrator Port Hatch"
+	name = "INFILTRATOR PORT HATCH"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/turf_decal/box,
@@ -520,7 +520,7 @@
 /obj/effect/turf_decal/delivery,
 /obj/machinery/door/poddoor/shutters{
 	id = "infiltrator_medbay";
-	name = "Infiltrator Medical Bay"
+	name = "INFILTRATOR MEDICAL BAY"
 	},
 /obj/machinery/button/door/directional/east{
 	id = "infiltrator_medbay";
@@ -773,7 +773,7 @@
 "bV" = (
 /obj/machinery/door/window{
 	dir = 1;
-	name = "Surgery Chamber";
+	name = "SURGERY CHAMBER";
 	req_access = list("syndicate")
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
@@ -822,7 +822,7 @@
 	},
 /obj/machinery/door/airlock/external/ruin{
 	id_tag = "infiltrator_portdoor";
-	name = "Infiltrator Port Airlock"
+	name = "INFILTRATOR PORT AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
@@ -859,7 +859,7 @@
 /area/shuttle/syndicate/medical)
 "cd" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Preparation Room"
+	name = "PREPARATION ROOM"
 	},
 /obj/effect/turf_decal/delivery,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -990,7 +990,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/poddoor/shutters{
 	id = "infiltrator_armorybay";
-	name = "Infiltrator Armoy Bay"
+	name = "INFILTRATOR ARMOY BAY"
 	},
 /obj/machinery/button/door/directional/west{
 	id = "infiltrator_armorybay";
@@ -1169,7 +1169,7 @@
 "cW" = (
 /obj/machinery/door/poddoor{
 	id = "infiltrator_starboardblast";
-	name = "Infiltrator Starboard Hatch"
+	name = "INFILTRATOR STARBOARD HATCH"
 	},
 /obj/docking_port/mobile/infiltrator,
 /obj/structure/fans/tiny,
@@ -1269,7 +1269,7 @@
 /area/shuttle/syndicate/airlock)
 "dg" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Preparation Room"
+	name = "PREPARATION ROOM"
 	},
 /obj/effect/turf_decal/delivery,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
@@ -1427,7 +1427,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/machinery/door/poddoor/shutters{
 	id = "infiltrator_armorybay";
-	name = "Infiltrator Armoy Bay"
+	name = "INFILTRATOR ARMOY BAY"
 	},
 /obj/structure/cable,
 /turf/open/floor/mineral/plastitanium,
@@ -1684,7 +1684,7 @@
 /area/shuttle/syndicate/armory)
 "ec" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Ordnance Storage"
+	name = "ORDNANCE STORAGE"
 	},
 /obj/effect/turf_decal/delivery,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
@@ -1761,7 +1761,7 @@
 	},
 /obj/machinery/door/window{
 	dir = 1;
-	name = "Systems Chamber";
+	name = "SYSTEMS CHAMBER";
 	req_access = list("syndicate")
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -1769,7 +1769,7 @@
 /area/shuttle/syndicate/armory)
 "ek" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Ordnance Storage"
+	name = "ORDNANCE STORAGE"
 	},
 /obj/effect/turf_decal/delivery,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{

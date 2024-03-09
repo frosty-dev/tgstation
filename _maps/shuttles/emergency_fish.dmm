@@ -67,7 +67,7 @@
 "eC" = (
 /obj/item/toy/plush/lizard_plushie/space/green{
 	desc = "An adorable stuffed toy that resembles a very determined seafaring lizardperson. To ten thousand leagues and below, little guy.";
-	name = "Drinks-The-Salt"
+	name = "DRINKS-THE-SALT"
 	},
 /turf/open/water/beach,
 /area/shuttle/escape)
@@ -162,7 +162,7 @@
 /area/shuttle/escape)
 "jw" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Holding Area"
+	name = "HOLDING AREA"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /obj/effect/turf_decal/tile/dark/fourcorners,
@@ -330,7 +330,7 @@
 /area/shuttle/escape)
 "rj" = (
 /obj/docking_port/mobile/emergency{
-	name = "Angler's Choice emergency shuttle"
+	name = "ANGLER'S CHOICE EMERGENCY SHUTTLE"
 	},
 /obj/machinery/door/airlock/shuttle/glass,
 /obj/effect/turf_decal/tile/dark/fourcorners,

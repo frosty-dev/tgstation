@@ -43,7 +43,7 @@
 "g" = (
 /obj/machinery/door/poddoor{
 	id = "QMLoaddoor2";
-	name = "Supply Dock Loading Door"
+	name = "SUPPLY DOCK LOADING DOOR"
 	},
 /obj/machinery/conveyor{
 	dir = 4;
@@ -156,7 +156,7 @@
 	},
 /obj/machinery/door/poddoor{
 	id = "QMLoaddoor";
-	name = "Supply Dock Loading Door"
+	name = "SUPPLY DOCK LOADING DOOR"
 	},
 /turf/open/floor/catwalk_floor/iron_smooth,
 /area/shuttle/supply)
@@ -173,7 +173,7 @@
 "O" = (
 /obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /obj/machinery/door/airlock/survival_pod/glass{
-	name = "Supply Shuttle Airlock"
+	name = "SUPPLY SHUTTLE AIRLOCK"
 	},
 /obj/docking_port/mobile/supply,
 /turf/open/floor/catwalk_floor/iron,

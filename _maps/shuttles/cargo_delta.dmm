@@ -58,7 +58,7 @@
 	},
 /obj/machinery/door/poddoor{
 	id = "cargounload";
-	name = "Supply Dock Unloading Door"
+	name = "SUPPLY DOCK UNLOADING DOOR"
 	},
 /turf/open/floor/plating,
 /area/shuttle/supply)
@@ -75,7 +75,7 @@
 /area/shuttle/supply)
 "n" = (
 /obj/machinery/door/airlock/shuttle{
-	name = "Supply Shuttle Airlock"
+	name = "SUPPLY SHUTTLE AIRLOCK"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/docking_port/mobile/supply{
@@ -99,7 +99,7 @@
 /area/shuttle/supply)
 "r" = (
 /obj/machinery/door/airlock/shuttle{
-	name = "Supply Shuttle Airlock"
+	name = "SUPPLY SHUTTLE AIRLOCK"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/airlock/access/all/supply/general,
@@ -108,7 +108,7 @@
 "s" = (
 /obj/machinery/door/poddoor{
 	id = "cargoload";
-	name = "Supply Dock Loading Door"
+	name = "SUPPLY DOCK LOADING DOOR"
 	},
 /obj/machinery/conveyor{
 	dir = 4;

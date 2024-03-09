@@ -6,7 +6,7 @@
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /obj/machinery/door/poddoor/preopen{
 	id = "escape_cockpit_windows";
-	name = "Cockpit Blast Door"
+	name = "COCKPIT BLAST DOOR"
 	},
 /turf/open/floor/plating,
 /area/shuttle/escape)
@@ -268,7 +268,7 @@
 /area/shuttle/escape/brig)
 "aS" = (
 /obj/machinery/door/airlock/command/glass{
-	name = "Cockpit"
+	name = "COCKPIT"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /turf/open/floor/iron/dark,
@@ -352,7 +352,7 @@
 /obj/effect/turf_decal/delivery/white,
 /obj/machinery/door/poddoor/preopen{
 	id = "escape_cockpit_blast";
-	name = "Cockpit Blast Door"
+	name = "COCKPIT BLAST DOOR"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark,
@@ -361,7 +361,7 @@
 /obj/effect/turf_decal/delivery/white,
 /obj/machinery/door/poddoor/preopen{
 	id = "escape_cockpit_blast";
-	name = "Cockpit Blast Door"
+	name = "COCKPIT BLAST DOOR"
 	},
 /turf/open/floor/iron/dark,
 /area/shuttle/escape)
@@ -418,7 +418,7 @@
 /area/shuttle/escape/brig)
 "bk" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Holding Area"
+	name = "HOLDING AREA"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -443,7 +443,7 @@
 "bo" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/medical/glass{
-	name = "Escape Shuttle Infirmary"
+	name = "ESCAPE SHUTTLE INFIRMARY"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -503,7 +503,7 @@
 /area/shuttle/escape/brig)
 "bx" = (
 /obj/machinery/door/airlock/command/glass{
-	name = "Cockpit"
+	name = "COCKPIT"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -673,7 +673,7 @@
 /area/shuttle/escape)
 "bT" = (
 /obj/machinery/door/airlock/medical/glass{
-	name = "Escape Shuttle Infirmary"
+	name = "ESCAPE SHUTTLE INFIRMARY"
 	},
 /turf/open/floor/iron,
 /area/shuttle/escape)
@@ -742,7 +742,7 @@
 /area/shuttle/escape)
 "cd" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Emegency Shuttle External Airlock"
+	name = "EMEGENCY SHUTTLE EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
@@ -950,7 +950,7 @@
 /obj/effect/turf_decal/delivery/white,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "escape_cargo_shutters";
-	name = "Cargo Bay Shutters"
+	name = "CARGO BAY SHUTTERS"
 	},
 /obj/machinery/button/door{
 	id = "escape_cargo_shutters";
@@ -963,7 +963,7 @@
 /obj/effect/turf_decal/delivery/white,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "escape_cargo_shutters";
-	name = "Cargo Bay Shutters"
+	name = "CARGO BAY SHUTTERS"
 	},
 /turf/open/floor/iron/dark,
 /area/shuttle/escape)
@@ -976,7 +976,7 @@
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "escape_cargo_shutters";
-	name = "Cargo Bay Shutters"
+	name = "CARGO BAY SHUTTERS"
 	},
 /turf/open/floor/iron/dark,
 /area/shuttle/escape)
@@ -1118,7 +1118,7 @@
 /area/shuttle/escape)
 "da" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Emergency Shuttle Seating"
+	name = "EMERGENCY SHUTTLE SEATING"
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
@@ -1158,7 +1158,7 @@
 "de" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/public/glass{
-	name = "Emergency Shuttle Seating"
+	name = "EMERGENCY SHUTTLE SEATING"
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
@@ -1242,7 +1242,7 @@
 /area/shuttle/escape)
 "dr" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Emergency Shuttle Cargo Bay"
+	name = "EMERGENCY SHUTTLE CARGO BAY"
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
@@ -1323,7 +1323,7 @@
 /area/shuttle/escape)
 "dA" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Emergency Shutle Engineering"
+	name = "EMERGENCY SHUTLE ENGINEERING"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/engineering/atmos,
 /obj/effect/mapping_helpers/airlock/access/any/engineering/general,
@@ -1460,7 +1460,7 @@
 /area/shuttle/escape)
 "eo" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Emegency Shuttle External Airlock"
+	name = "EMEGENCY SHUTTLE EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/docking_port/mobile/emergency{
@@ -1553,7 +1553,7 @@
 /area/shuttle/escape)
 "AS" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Emegency Shuttle External Airlock"
+	name = "EMEGENCY SHUTTLE EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/structure/fans/tiny,

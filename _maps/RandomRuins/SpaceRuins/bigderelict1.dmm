@@ -191,7 +191,7 @@
 /area/ruin/space/has_grav/derelictoutpost/cargobay)
 "aU" = (
 /obj/structure/closet/crate/critter{
-	name = "critter crate - mr.tiggles";
+	name = "CRITTER CRATE - MR.TIGGLES";
 	opened = 1
 	},
 /obj/item/paper/crumpled/ruins/bigderelict1/manifest,
@@ -340,7 +340,7 @@
 /obj/effect/decal/cleanable/blood/old{
 	dir = 5;
 	icon_state = "trails_1";
-	name = "dried blood trail"
+	name = "DRIED BLOOD TRAIL"
 	},
 /obj/structure/alien/weeds/creature,
 /turf/open/floor/mineral/titanium/blue,
@@ -537,7 +537,7 @@
 /area/ruin/space/has_grav/derelictoutpost/powerstorage)
 "cr" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Power Storage"
+	name = "POWER STORAGE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/general,
 /obj/structure/barricade/wooden,
@@ -560,7 +560,7 @@
 /obj/machinery/door/airlock/public/glass,
 /obj/machinery/door/poddoor{
 	id = "bigderelictcheckpoint";
-	name = "Checkpoint Security Doors"
+	name = "CHECKPOINT SECURITY DOORS"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
@@ -577,7 +577,7 @@
 	desc = "Awh its so sm-OH GOD WHAT THE FUCK.";
 	health = 25;
 	maxHealth = 25;
-	name = "hatchling";
+	name = "HATCHLING";
 	current_size = 0.85
 	},
 /turf/open/floor/iron,
@@ -681,7 +681,7 @@
 /obj/effect/decal/cleanable/blood/old{
 	dir = 1;
 	icon_state = "trails_1";
-	name = "dried blood trail"
+	name = "DRIED BLOOD TRAIL"
 	},
 /obj/structure/alien/weeds/creature,
 /turf/open/floor/iron,
@@ -751,7 +751,7 @@
 /obj/effect/decal/cleanable/blood/old{
 	dir = 5;
 	icon_state = "trails_1";
-	name = "dried blood trail"
+	name = "DRIED BLOOD TRAIL"
 	},
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/structure/alien/weeds/creature,
@@ -986,7 +986,7 @@
 /obj/effect/decal/cleanable/blood/old{
 	dir = 8;
 	icon_state = "trails_1";
-	name = "dried blood trail"
+	name = "DRIED BLOOD TRAIL"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron,
@@ -995,7 +995,7 @@
 /obj/effect/decal/cleanable/blood/old{
 	dir = 8;
 	icon_state = "trails_1";
-	name = "dried blood trail"
+	name = "DRIED BLOOD TRAIL"
 	},
 /turf/open/floor/iron,
 /area/ruin/space/has_grav/derelictoutpost/cargostorage)
@@ -1089,7 +1089,7 @@
 /obj/effect/decal/cleanable/blood/old{
 	dir = 10;
 	icon_state = "trails_1";
-	name = "dried blood trail"
+	name = "DRIED BLOOD TRAIL"
 	},
 /obj/structure/alien/weeds/creature,
 /turf/open/misc/asteroid,
@@ -1187,7 +1187,7 @@
 /obj/effect/decal/cleanable/blood/old{
 	dir = 4;
 	icon_state = "trails_1";
-	name = "dried blood trail"
+	name = "DRIED BLOOD TRAIL"
 	},
 /obj/structure/alien/weeds/creature,
 /obj/structure/glowshroom/single,
@@ -1343,7 +1343,7 @@
 "Gy" = (
 /obj/machinery/door/airlock/security/glass{
 	id_tag = "innerbrig";
-	name = "Security Checkpoint"
+	name = "SECURITY CHECKPOINT"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /obj/effect/turf_decal/tile/red/fourcorners,
@@ -1364,7 +1364,7 @@
 /obj/effect/decal/cleanable/blood/old{
 	dir = 4;
 	icon_state = "trails_1";
-	name = "dried blood trail"
+	name = "DRIED BLOOD TRAIL"
 	},
 /turf/open/misc/asteroid,
 /area/ruin/space/has_grav/derelictoutpost)

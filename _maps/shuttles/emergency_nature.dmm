@@ -166,7 +166,7 @@
 	dir = 10
 	},
 /obj/machinery/door/window/left/directional/west{
-	name = "Infirmary"
+	name = "INFIRMARY"
 	},
 /turf/open/floor/iron{
 	dir = 1
@@ -442,7 +442,7 @@
 	dir = 8
 	},
 /obj/machinery/door/window/left/directional/west{
-	name = "Nature Pen"
+	name = "NATURE PEN"
 	},
 /turf/open/floor/iron/white,
 /area/shuttle/escape)
@@ -687,7 +687,7 @@
 /area/shuttle/escape)
 "zE" = (
 /obj/machinery/door/airlock/security{
-	name = "Brig"
+	name = "BRIG"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/iron/dark,
@@ -704,7 +704,7 @@
 /area/shuttle/escape)
 "Bm" = (
 /obj/machinery/door/airlock/command/glass{
-	name = "Cockpit"
+	name = "COCKPIT"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /turf/open/floor/iron/dark,
@@ -1020,7 +1020,7 @@
 /obj/effect/turf_decal/trimline/green/filled/end,
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/door/window/left/directional/south{
-	name = "Nature Pen"
+	name = "NATURE PEN"
 	},
 /turf/open/floor/iron/white,
 /area/shuttle/escape)
@@ -1097,7 +1097,7 @@
 /area/shuttle/escape)
 "SS" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/iron/white,
@@ -1243,7 +1243,7 @@
 /area/shuttle/escape)
 "Yp" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/docking_port/mobile/emergency,
 /obj/structure/fans/tiny,
@@ -1267,7 +1267,7 @@
 	dir = 4
 	},
 /obj/machinery/door/window/left/directional/east{
-	name = "Nature Pen"
+	name = "NATURE PEN"
 	},
 /turf/open/floor/iron/white,
 /area/shuttle/escape)

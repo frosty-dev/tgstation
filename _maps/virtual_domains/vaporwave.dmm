@@ -52,7 +52,7 @@
 "gM" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/glasses/sunglasses/big{
-	name = "aesthetic sunglasses"
+	name = "AESTHETIC SUNGLASSES"
 	},
 /turf/open/floor/iron/vaporwave,
 /area/ruin/space/has_grav/powered/virtual_domain)

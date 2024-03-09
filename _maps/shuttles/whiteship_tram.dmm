@@ -86,7 +86,7 @@
 "ar" = (
 /obj/effect/turf_decal/stripes/white/box,
 /obj/machinery/door/airlock/hatch{
-	name = "Engineering"
+	name = "ENGINEERING"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
@@ -409,7 +409,7 @@
 "bG" = (
 /obj/effect/turf_decal/stripes/white/box,
 /obj/machinery/door/airlock/hatch{
-	name = "Command"
+	name = "COMMAND"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
@@ -448,7 +448,7 @@
 	dir = 2;
 	shuttle_id = "whiteship";
 	launch_status = 0;
-	name = "White Ship";
+	name = "WHITE SHIP";
 	port_direction = 2
 	},
 /obj/effect/turf_decal/stripes/white/box,
@@ -529,7 +529,7 @@
 "cj" = (
 /obj/effect/turf_decal/stripes/white/box,
 /obj/machinery/door/airlock/hatch{
-	name = "Atmospherics"
+	name = "ATMOSPHERICS"
 	},
 /obj/machinery/door/firedoor/heavy,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
@@ -541,7 +541,7 @@
 "ck" = (
 /obj/effect/turf_decal/stripes/white/box,
 /obj/machinery/door/airlock/hatch{
-	name = "Engine Room"
+	name = "ENGINE ROOM"
 	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor/heavy,
@@ -716,7 +716,7 @@
 /area/shuttle/abandoned/crew)
 "dh" = (
 /obj/machinery/door/window/brigdoor{
-	name = "Captain's Quarters"
+	name = "CAPTAIN'S QUARTERS"
 	},
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 8
@@ -755,7 +755,7 @@
 "do" = (
 /obj/effect/turf_decal/stripes/white/box,
 /obj/machinery/door/airlock/hatch{
-	name = "Bridge"
+	name = "BRIDGE"
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
@@ -776,7 +776,7 @@
 "dq" = (
 /obj/effect/turf_decal/stripes/white/box,
 /obj/machinery/door/airlock/hatch{
-	name = "Crew Quarters"
+	name = "CREW QUARTERS"
 	},
 /obj/structure/cable,
 /obj/effect/decal/cleanable/blood/tracks{
@@ -1358,7 +1358,7 @@
 "UC" = (
 /obj/effect/turf_decal/stripes/white/box,
 /obj/machinery/door/airlock/external/ruin{
-	name = "Escape Pod Loader"
+	name = "ESCAPE POD LOADER"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/locked,

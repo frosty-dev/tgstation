@@ -43,7 +43,7 @@
 /area/ruin/syndicate_lava_base/testlab)
 "eq" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Supermatter"
+	name = "SUPERMATTER"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/iron/dark,
@@ -63,7 +63,7 @@
 /obj/structure/table/reinforced,
 /obj/item/paper/crumpled{
 	default_raw_text = "Explosive testing on site is STRICTLY forbidden, as this outpost's walls are lined with explosives intended for intentional self-destruct purposes that may be set off prematurely through careless experiments.";
-	name = "Explosives Testing Warning";
+	name = "EXPLOSIVES TESTING WARNING";
 	pixel_x = -6;
 	pixel_y = 5
 	},
@@ -165,7 +165,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/airlock/hatch{
-	name = "Experimentation Lab"
+	name = "EXPERIMENTATION LAB"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/structure/cable,

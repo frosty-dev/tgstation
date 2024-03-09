@@ -44,7 +44,7 @@
 "J" = (
 /obj/modular_map_connector,
 /obj/machinery/door/airlock/public/glass{
-	name = "Kitchen"
+	name = "KITCHEN"
 	},
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/structure/barricade/wooden,
@@ -55,7 +55,7 @@
 /area/ruin/space/djstation)
 "O" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Kitchen"
+	name = "KITCHEN"
 	},
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/structure/barricade/wooden,

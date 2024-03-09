@@ -23,14 +23,14 @@
 /area/shuttle/escape)
 "g" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/shuttle/escape)
 "h" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/docking_port/mobile/emergency{
 	dir = 2;
@@ -104,7 +104,7 @@
 /area/shuttle/escape)
 "w" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Emergency Shuttle Infirmary"
+	name = "EMERGENCY SHUTTLE INFIRMARY"
 	},
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
@@ -143,7 +143,7 @@
 /area/shuttle/escape)
 "E" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Emergency Shuttle Cockpit"
+	name = "EMERGENCY SHUTTLE COCKPIT"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /turf/open/floor/mineral/titanium/yellow,
@@ -162,7 +162,7 @@
 /area/shuttle/escape/brig)
 "K" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Emergency Shuttle Brig"
+	name = "EMERGENCY SHUTTLE BRIG"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/mineral/plastitanium/red,

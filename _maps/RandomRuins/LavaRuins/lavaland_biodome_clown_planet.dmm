@@ -438,7 +438,7 @@
 "iZ" = (
 /obj/item/grown/bananapeel{
 	color = "#2F3000";
-	name = "stealth banana peel"
+	name = "STEALTH BANANA PEEL"
 	},
 /obj/effect/mapping_helpers/no_lava,
 /turf/open/misc/asteroid/basalt/lava_land_surface,

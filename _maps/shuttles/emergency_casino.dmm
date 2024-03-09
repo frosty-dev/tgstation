@@ -67,7 +67,7 @@
 /area/shuttle/escape)
 "cV" = (
 /obj/machinery/door/airlock/medical/glass{
-	name = "Casino Infirmary"
+	name = "CASINO INFIRMARY"
 	},
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
@@ -79,7 +79,7 @@
 /area/shuttle/escape)
 "dh" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Casino Life Support"
+	name = "CASINO LIFE SUPPORT"
 	},
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/mineral/titanium,
@@ -134,7 +134,7 @@
 /area/shuttle/escape)
 "ga" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/mineral/titanium,
@@ -560,7 +560,7 @@
 /area/shuttle/escape)
 "qd" = (
 /obj/machinery/door/airlock/external{
-	name = "Emergency Recovery Airlock"
+	name = "EMERGENCY RECOVERY AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/mineral/titanium,
@@ -624,7 +624,7 @@
 /area/shuttle/escape)
 "sd" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Brig"
+	name = "BRIG"
 	},
 /obj/item/grown/bananapeel,
 /obj/item/bikehorn,
@@ -685,7 +685,7 @@
 /area/shuttle/escape)
 "vK" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Brig"
+	name = "BRIG"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/mineral/plastitanium/red,
@@ -810,7 +810,7 @@
 /area/shuttle/escape)
 "ye" = (
 /obj/machinery/door/airlock/command{
-	name = "Pet Daycare"
+	name = "PET DAYCARE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /turf/open/floor/mineral/titanium/purple,
@@ -959,14 +959,14 @@
 	name = "Casino emergency shuttle"
 	},
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape)
 "Ec" = (
 /obj/machinery/door/airlock/command{
-	name = "Casino Office"
+	name = "CASINO OFFICE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /turf/open/floor/carpet/green,
@@ -1030,7 +1030,7 @@
 /area/shuttle/escape)
 "Gs" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Casino Storage"
+	name = "CASINO STORAGE"
 	},
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/mineral/titanium,
@@ -1372,7 +1372,7 @@
 /area/shuttle/escape)
 "Xg" = (
 /obj/machinery/door/airlock/command{
-	name = "Casino Office"
+	name = "CASINO OFFICE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /turf/open/floor/mineral/titanium,
@@ -1463,7 +1463,7 @@
 /area/shuttle/escape)
 "YX" = (
 /obj/machinery/door/airlock/glass{
-	name = "Crafts Room"
+	name = "CRAFTS ROOM"
 	},
 /turf/open/floor/sepia,
 /area/shuttle/escape)

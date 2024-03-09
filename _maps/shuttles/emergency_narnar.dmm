@@ -151,7 +151,7 @@
 "E" = (
 /obj/machinery/door/airlock/cult/friendly,
 /obj/docking_port/mobile/emergency{
-	name = "shuttle 667"
+	name = "SHUTTLE 667"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
@@ -189,7 +189,7 @@
 "K" = (
 /mob/living/basic/eyeball{
 	faction = list("cult");
-	name = "right eyeball"
+	name = "RIGHT EYEBALL"
 	},
 /turf/open/floor/cult,
 /area/shuttle/escape)

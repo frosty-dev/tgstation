@@ -95,7 +95,7 @@
 /area/shuttle/escape)
 "aA" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /turf/open/floor/plating,
 /area/shuttle/escape)
@@ -119,7 +119,7 @@
 /area/shuttle/escape)
 "aF" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/docking_port/mobile/emergency{
 	name = "Hyperfractal Gigashuttle"
@@ -132,7 +132,7 @@
 /area/shuttle/escape)
 "aL" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Emergency Launch Catwalk"
+	name = "EMERGENCY LAUNCH CATWALK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/general,

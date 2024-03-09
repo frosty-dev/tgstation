@@ -75,7 +75,7 @@
 /area/ruin/space/prison_shuttle)
 "v" = (
 /obj/structure/closet/secure_closet/contraband{
-	name = "confiscation locker"
+	name = "CONFISCATION LOCKER"
 	},
 /obj/effect/spawner/random/exotic/antag_gear,
 /obj/effect/spawner/random/exotic/antag_gear_weak,

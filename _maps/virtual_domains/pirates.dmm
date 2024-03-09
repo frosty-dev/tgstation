@@ -687,7 +687,7 @@
 "Kw" = (
 /obj/machinery/door/airlock/vault{
 	color = "#825427";
-	name = "Ye Olde Strong Door"
+	name = "YE OLDE STRONG DOOR"
 	},
 /turf/open/floor/wood/parquet,
 /area/virtual_domain/powered)

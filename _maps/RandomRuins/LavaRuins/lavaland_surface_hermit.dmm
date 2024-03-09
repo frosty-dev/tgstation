@@ -47,7 +47,7 @@
 "l" = (
 /obj/item/storage/toolbox/emergency,
 /turf/open/misc/asteroid{
-	name = "dirt"
+	name = "DIRT"
 	},
 /area/ruin/powered)
 "m" = (
@@ -151,7 +151,7 @@
 /area/ruin/powered)
 "H" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Escape Pod Airlock"
+	name = "ESCAPE POD AIRLOCK"
 	},
 /turf/open/floor/mineral/titanium/blue,
 /area/ruin/powered)

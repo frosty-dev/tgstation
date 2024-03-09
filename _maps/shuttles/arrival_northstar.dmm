@@ -10,7 +10,7 @@
 /area/shuttle/arrival)
 "c" = (
 /obj/machinery/door/airlock/survival_pod/glass{
-	name = "Arrivals Shuttle Airlock"
+	name = "ARRIVALS SHUTTLE AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,

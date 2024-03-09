@@ -112,7 +112,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/airlock{
-	name = "Break Room"
+	name = "BREAK ROOM"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/general,
 /turf/open/floor/iron/grimy,
@@ -382,7 +382,7 @@
 /obj/effect/mapping_helpers/airlock/access/all/away/medical,
 /obj/effect/mapping_helpers/airlock/access/all/away/security,
 /obj/machinery/door/airlock/vault{
-	name = "Clothing Storage"
+	name = "CLOTHING STORAGE"
 	},
 /turf/open/floor/cult,
 /area/ruin/space/has_grav/the_outlet/cultinfluence)
@@ -732,7 +732,7 @@
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/away/general,
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Electrical"
+	name = "ELECTRICAL"
 	},
 /turf/open/floor/iron,
 /area/ruin/space/has_grav/the_outlet/employeesection)
@@ -1114,7 +1114,7 @@
 "Ae" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock{
-	name = "Womens Bathroom"
+	name = "WOMENS BATHROOM"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/general,
 /turf/open/floor/iron/grimy,
@@ -1405,7 +1405,7 @@
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/effect/mapping_helpers/airlock/access/all/away/general,
 /obj/machinery/door/airlock/highsecurity{
-	name = "Merchandise Storage"
+	name = "MERCHANDISE STORAGE"
 	},
 /turf/open/floor/plating/rust,
 /area/ruin/space/has_grav/the_outlet/researchrooms)
@@ -1603,7 +1603,7 @@
 "Mu" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock{
-	name = "Mens Bathroom"
+	name = "MENS BATHROOM"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/general,
 /turf/open/floor/iron/grimy,
@@ -1631,7 +1631,7 @@
 /area/ruin/space/has_grav/the_outlet/cultinfluence)
 "MR" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Electrical"
+	name = "ELECTRICAL"
 	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
@@ -1718,7 +1718,7 @@
 /area/ruin/space/has_grav/the_outlet/researchrooms)
 "Po" = (
 /obj/machinery/door/airlock/security{
-	name = "Decontamination"
+	name = "DECONTAMINATION"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/away/general,
@@ -1845,7 +1845,7 @@
 "Sx" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/grunge{
-	name = "Research Quarters"
+	name = "RESEARCH QUARTERS"
 	},
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 8
@@ -1912,7 +1912,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/airlock/freezer{
-	name = "Fabric Storage"
+	name = "FABRIC STORAGE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/general,
 /obj/effect/mapping_helpers/airlock/access/all/away/medical,
@@ -2144,7 +2144,7 @@
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/airlock/highsecurity{
-	name = "Merchandise Storage"
+	name = "MERCHANDISE STORAGE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/general,
 /turf/open/floor/plating/rust,

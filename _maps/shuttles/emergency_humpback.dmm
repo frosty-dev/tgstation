@@ -72,7 +72,7 @@
 /area/shuttle/escape)
 "ez" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Cyborg Bay"
+	name = "CYBORG BAY"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /turf/open/floor/mineral/plastitanium/red,
@@ -108,7 +108,7 @@
 /area/shuttle/escape)
 "gL" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Escape Shuttle Brig"
+	name = "ESCAPE SHUTTLE BRIG"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
@@ -378,7 +378,7 @@
 /area/shuttle/escape)
 "wf" = (
 /obj/machinery/door/airlock/mining/glass{
-	name = "Emergency Shuttle Cargo Hold"
+	name = "EMERGENCY SHUTTLE CARGO HOLD"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /turf/open/floor/mineral/plastitanium,
@@ -416,7 +416,7 @@
 /area/shuttle/escape)
 "yN" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/shuttle/escape)
@@ -480,7 +480,7 @@
 /area/shuttle/escape)
 "Cl" = (
 /obj/machinery/door/airlock/medical/glass{
-	name = "Medbay"
+	name = "MEDBAY"
 	},
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/wood/large,
@@ -547,7 +547,7 @@
 /area/shuttle/escape)
 "FG" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Escape Shuttle Brig"
+	name = "ESCAPE SHUTTLE BRIG"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
@@ -622,7 +622,7 @@
 /area/shuttle/escape)
 "LB" = (
 /obj/machinery/door/airlock/command{
-	name = "Cockpit"
+	name = "COCKPIT"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
@@ -755,7 +755,7 @@
 /area/shuttle/escape/brig)
 "Ty" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/docking_port/mobile/emergency,
 /turf/open/floor/mineral/plastitanium/red,

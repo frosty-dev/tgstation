@@ -54,7 +54,7 @@
 /area/ruin/space/djstation)
 "p" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Rest Room"
+	name = "REST ROOM"
 	},
 /turf/template_noop,
 /area/template_noop)
@@ -65,7 +65,7 @@
 "u" = (
 /obj/machinery/duct,
 /obj/machinery/door/airlock/silver{
-	name = "Bedroom"
+	name = "BEDROOM"
 	},
 /turf/open/floor/wood/tile,
 /area/ruin/space/djstation)
@@ -88,7 +88,7 @@
 /area/ruin/space/djstation)
 "B" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Rest Room"
+	name = "REST ROOM"
 	},
 /obj/modular_map_connector,
 /turf/template_noop,
@@ -129,7 +129,7 @@
 /area/ruin/space/djstation)
 "U" = (
 /obj/machinery/door/airlock/silver{
-	name = "Bathroom"
+	name = "BATHROOM"
 	},
 /obj/machinery/duct,
 /turf/open/floor/iron/freezer,

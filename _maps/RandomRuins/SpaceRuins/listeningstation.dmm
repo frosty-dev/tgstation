@@ -108,7 +108,7 @@
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/airlock/centcom{
-	name = "Nanotrasen Real Locked Door";
+	name = "NANOTRASEN REAL LOCKED DOOR";
 	desc = "Truly, a marvel of modern engineering."
 	},
 /turf/open/floor/iron/dark,
@@ -235,7 +235,7 @@
 	},
 /obj/machinery/door/window/brigdoor{
 	req_access = list("syndicate");
-	name = "Self Destruct Option"
+	name = "SELF DESTRUCT OPTION"
 	},
 /obj/machinery/light/small/red/directional/north,
 /turf/open/floor/circuit/red,
@@ -258,7 +258,7 @@
 /area/ruin/space/has_grav/listeningstation)
 "nX" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Syndicate Secure Airlock System";
+	name = "SYNDICATE SECURE AIRLOCK SYSTEM";
 	desc = "Truly, a marvel of modern engineering."
 	},
 /obj/structure/cable,
@@ -680,7 +680,7 @@
 	dwidth = 4;
 	height = 5;
 	shuttle_id = "caravansyndicate1_listeningpost";
-	name = "Syndicate Listening Post";
+	name = "SYNDICATE LISTENING POST";
 	width = 9
 	},
 /turf/template_noop,
@@ -809,7 +809,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/mapping_helpers/broken_floor,
 /obj/machinery/door/airlock{
-	name = "Emergency Backup"
+	name = "EMERGENCY BACKUP"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/plating,

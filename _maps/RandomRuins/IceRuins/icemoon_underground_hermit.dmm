@@ -7,7 +7,7 @@
 /area/ruin/powered/hermit)
 "bM" = (
 /obj/machinery/door/airlock/wood{
-	name = "Frozen Shack"
+	name = "FROZEN SHACK"
 	},
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/wood,

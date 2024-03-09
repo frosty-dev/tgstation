@@ -36,7 +36,7 @@
 /area/shuttle/escape)
 "ay" = (
 /obj/machinery/door/airlock/shuttle{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/docking_port/mobile/emergency{
 	name = "Omega emergency shuttle"
@@ -194,7 +194,7 @@
 /area/shuttle/escape)
 "aP" = (
 /obj/machinery/door/airlock/shuttle{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -210,7 +210,7 @@
 /area/shuttle/escape)
 "aT" = (
 /obj/machinery/door/airlock/shuttle{
-	name = "Emergency Shuttle Cargo"
+	name = "EMERGENCY SHUTTLE CARGO"
 	},
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/stripes/line{
@@ -220,7 +220,7 @@
 /area/shuttle/escape)
 "aV" = (
 /obj/machinery/door/airlock/medical/glass{
-	name = "Escape Shuttle Infirmary"
+	name = "ESCAPE SHUTTLE INFIRMARY"
 	},
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/stripes/line{
@@ -484,7 +484,7 @@
 /area/shuttle/escape)
 "qX" = (
 /obj/machinery/door/airlock/shuttle{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -532,7 +532,7 @@
 /area/shuttle/escape)
 "vu" = (
 /obj/machinery/door/airlock/command/glass{
-	name = "Cockpit"
+	name = "COCKPIT"
 	},
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/stripes/line{
@@ -617,7 +617,7 @@
 /area/shuttle/escape)
 "IX" = (
 /obj/machinery/door/airlock/command{
-	name = "Emergency Recovery Airlock"
+	name = "EMERGENCY RECOVERY AIRLOCK"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -667,7 +667,7 @@
 /area/shuttle/escape)
 "TB" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Holding Area"
+	name = "HOLDING AREA"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/mineral/plastitanium/red,

@@ -159,7 +159,7 @@
 /obj/machinery/button/door/directional/north{
 	desc = "A remote control switch to call the elevator.";
 	id = "UO45_useless";
-	name = "Call Elevator";
+	name = "CALL ELEVATOR";
 	pixel_x = -6
 	},
 /turf/open/floor/iron,
@@ -362,7 +362,7 @@
 /area/awaymission/undergroundoutpost45/central)
 "bv" = (
 /obj/machinery/door/airlock{
-	name = "Unisex Restrooms"
+	name = "UNISEX RESTROOMS"
 	},
 /turf/open/floor/iron/freezer,
 /area/awaymission/undergroundoutpost45/central)
@@ -383,13 +383,13 @@
 /area/awaymission/undergroundoutpost45/central)
 "by" = (
 /obj/machinery/door/airlock{
-	name = "Unit 2"
+	name = "UNIT 2"
 	},
 /turf/open/floor/iron/freezer,
 /area/awaymission/undergroundoutpost45/central)
 "bz" = (
 /obj/machinery/door/airlock{
-	name = "Unit 1"
+	name = "UNIT 1"
 	},
 /turf/open/floor/iron/freezer,
 /area/awaymission/undergroundoutpost45/central)
@@ -580,7 +580,7 @@
 "cZ" = (
 /obj/machinery/door/airlock{
 	id_tag = "awaydorm2";
-	name = "Dorm 2"
+	name = "DORM 2"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -589,14 +589,14 @@
 "da" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass{
-	name = "Central Access"
+	name = "CENTRAL ACCESS"
 	},
 /turf/open/floor/iron,
 /area/awaymission/undergroundoutpost45/central)
 "db" = (
 /obj/machinery/door/airlock{
 	id_tag = "awaydorm1";
-	name = "Dorm 1"
+	name = "DORM 1"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -788,7 +788,7 @@
 /area/awaymission/undergroundoutpost45/central)
 "dR" = (
 /obj/machinery/door/airlock/security{
-	name = "Security Checkpoint"
+	name = "SECURITY CHECKPOINT"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -845,7 +845,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/public/glass{
-	name = "Hydroponics"
+	name = "HYDROPONICS"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -882,7 +882,7 @@
 "ed" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/command{
-	name = "Gateway Chamber"
+	name = "GATEWAY CHAMBER"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/structure/cable,
@@ -892,7 +892,7 @@
 /area/awaymission/undergroundoutpost45/gateway)
 "ef" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Security Checkpoint Maintenance"
+	name = "SECURITY CHECKPOINT MAINTENANCE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /turf/open/floor/plating,
@@ -943,7 +943,7 @@
 "eo" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass{
-	name = "Hydroponics"
+	name = "HYDROPONICS"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /turf/open/floor/iron,
@@ -1242,7 +1242,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/maintenance{
-	name = "Hydroponics Maintenance"
+	name = "HYDROPONICS MAINTENANCE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/structure/cable,
@@ -1296,7 +1296,7 @@
 "fD" = (
 /obj/machinery/door/airlock{
 	id_tag = "awaydorm3";
-	name = "Dorm 3"
+	name = "DORM 3"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1421,7 +1421,7 @@
 /area/awaymission/undergroundoutpost45/crew_quarters)
 "gi" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Kitchen Maintenance"
+	name = "KITCHEN MAINTENANCE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /turf/open/floor/plating,
@@ -1482,7 +1482,7 @@
 /area/awaymission/undergroundoutpost45/crew_quarters)
 "gu" = (
 /obj/machinery/door/airlock{
-	name = "Kitchen Cold Room"
+	name = "KITCHEN COLD ROOM"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /turf/open/floor/iron/showroomfloor,
@@ -1657,7 +1657,7 @@
 /obj/item/folder/red,
 /obj/machinery/door/window/left/directional/south{
 	dir = 8;
-	name = "Security Checkpoint";
+	name = "SECURITY CHECKPOINT";
 	req_access = list("away_maintenance")
 	},
 /turf/open/floor/iron,
@@ -1842,7 +1842,7 @@
 "hP" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass{
-	name = "Kitchen"
+	name = "KITCHEN"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/structure/disposalpipe/segment{
@@ -1901,7 +1901,7 @@
 	base_state = "right";
 	dir = 4;
 	icon_state = "right";
-	name = "Hydroponics Desk";
+	name = "HYDROPONICS DESK";
 	req_access = list("away_maintenance")
 	},
 /turf/open/floor/iron,
@@ -2007,7 +2007,7 @@
 /area/awaymission/undergroundoutpost45/gateway)
 "iu" = (
 /obj/machinery/door/window{
-	name = "Gateway Chamber";
+	name = "GATEWAY CHAMBER";
 	req_access = list("away_maintenance")
 	},
 /obj/structure/cable,
@@ -2020,7 +2020,7 @@
 /area/awaymission/undergroundoutpost45/gateway)
 "ix" = (
 /obj/machinery/door/airlock{
-	name = "Emergency Supplies"
+	name = "EMERGENCY SUPPLIES"
 	},
 /turf/open/floor/plating,
 /area/awaymission/undergroundoutpost45/gateway)
@@ -2229,7 +2229,7 @@
 /area/awaymission/undergroundoutpost45/gateway)
 "jo" = (
 /obj/machinery/door/airlock/research{
-	name = "Gateway Observation"
+	name = "GATEWAY OBSERVATION"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -2252,7 +2252,7 @@
 "ju" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass{
-	name = "Central Access"
+	name = "CENTRAL ACCESS"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
@@ -2293,7 +2293,7 @@
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock{
-	name = "Kitchen"
+	name = "KITCHEN"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/effect/turf_decal/tile/bar/opposingcorners,
@@ -2339,7 +2339,7 @@
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/research{
-	name = "Research Lab"
+	name = "RESEARCH LAB"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -2483,7 +2483,7 @@
 "kl" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/command{
-	name = "Gateway EVA"
+	name = "GATEWAY EVA"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/structure/cable,
@@ -2509,7 +2509,7 @@
 "kp" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass{
-	name = "Diner"
+	name = "DINER"
 	},
 /turf/open/floor/iron,
 /area/awaymission/undergroundoutpost45/crew_quarters)
@@ -2590,7 +2590,7 @@
 "kF" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/research{
-	name = "Research Division Access"
+	name = "RESEARCH DIVISION ACCESS"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /turf/open/floor/iron/white,
@@ -2618,7 +2618,7 @@
 "kL" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/research{
-	name = "Research Division Access"
+	name = "RESEARCH DIVISION ACCESS"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/effect/turf_decal/tile/purple{
@@ -2673,7 +2673,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/preopen{
 	id = "UO45_biohazard";
-	name = "Biohazard Containment Door"
+	name = "BIOHAZARD CONTAINMENT DOOR"
 	},
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/iron,
@@ -2785,7 +2785,7 @@
 "lx" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/research{
-	name = "Research Division Access"
+	name = "RESEARCH DIVISION ACCESS"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/structure/cable,
@@ -2832,7 +2832,7 @@
 "lD" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/research{
-	name = "Research Division Access"
+	name = "RESEARCH DIVISION ACCESS"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/structure/cable,
@@ -2928,7 +2928,7 @@
 /area/awaymission/undergroundoutpost45/research)
 "lO" = (
 /obj/machinery/door/airlock/research{
-	name = "Research Division Access"
+	name = "RESEARCH DIVISION ACCESS"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -2990,7 +2990,7 @@
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/public/glass{
-	name = "Diner"
+	name = "DINER"
 	},
 /obj/structure/cable,
 /turf/open/floor/iron,
@@ -3069,7 +3069,7 @@
 "mh" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/command{
-	name = "Research Director's Office"
+	name = "RESEARCH DIRECTOR'S OFFICE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -3082,7 +3082,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "UO45_rdprivacy";
-	name = "Privacy Shutters"
+	name = "PRIVACY SHUTTERS"
 	},
 /turf/open/floor/plating,
 /area/awaymission/undergroundoutpost45/research)
@@ -3237,7 +3237,7 @@
 "mK" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/maintenance{
-	name = "Research Maintenance"
+	name = "RESEARCH MAINTENANCE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/structure/cable,
@@ -3323,7 +3323,7 @@
 "mV" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass{
-	name = "Dormitories"
+	name = "DORMITORIES"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -3398,7 +3398,7 @@
 "nh" = (
 /obj/machinery/door/poddoor{
 	id = "UO45_Secure Storage";
-	name = "Secure Storage"
+	name = "SECURE STORAGE"
 	},
 /turf/open/floor/plating,
 /area/awaymission/undergroundoutpost45/engineering)
@@ -3408,7 +3408,7 @@
 "nj" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass{
-	name = "Central Access"
+	name = "CENTRAL ACCESS"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
@@ -3456,7 +3456,7 @@
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for monitoring the research division and the labs within.";
 	dir = 8;
-	name = "research monitor";
+	name = "RESEARCH MONITOR";
 	network = list("uo45r")
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -3529,7 +3529,7 @@
 "nB" = (
 /obj/machinery/door/airlock{
 	id_tag = "awaydorm5";
-	name = "Dorm 5"
+	name = "DORM 5"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -3538,7 +3538,7 @@
 "nC" = (
 /obj/machinery/door/airlock{
 	id_tag = "awaydorm7";
-	name = "Dorm 7"
+	name = "DORM 7"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -3559,7 +3559,7 @@
 "nG" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass{
-	name = "Dormitories"
+	name = "DORMITORIES"
 	},
 /turf/open/floor/iron,
 /area/awaymission/undergroundoutpost45/crew_quarters)
@@ -3596,7 +3596,7 @@
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for monitoring the research division and the labs within.";
-	name = "research monitor";
+	name = "RESEARCH MONITOR";
 	network = list("uo45r")
 	},
 /turf/open/floor/iron/cafeteria{
@@ -3782,7 +3782,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/public/glass{
-	name = "Dormitories"
+	name = "DORMITORIES"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -3891,7 +3891,7 @@
 /area/awaymission/undergroundoutpost45/research)
 "oE" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Security Office"
+	name = "SECURITY OFFICE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -4095,7 +4095,7 @@
 "po" = (
 /obj/machinery/door/airlock{
 	id_tag = "awaydorm4";
-	name = "Dorm 4"
+	name = "DORM 4"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -4104,7 +4104,7 @@
 "pq" = (
 /obj/machinery/door/airlock{
 	id_tag = "awaydorm6";
-	name = "Dorm 6"
+	name = "DORM 6"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -4112,7 +4112,7 @@
 /area/awaymission/undergroundoutpost45/crew_quarters)
 "pr" = (
 /obj/machinery/door/airlock{
-	name = "Unisex Restrooms"
+	name = "UNISEX RESTROOMS"
 	},
 /turf/open/floor/iron/freezer,
 /area/awaymission/undergroundoutpost45/crew_quarters)
@@ -4172,7 +4172,7 @@
 /area/awaymission/undergroundoutpost45/research)
 "pI" = (
 /obj/machinery/door/airlock/command{
-	name = "Server Room"
+	name = "SERVER ROOM"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -4180,13 +4180,13 @@
 /area/awaymission/undergroundoutpost45/research)
 "pJ" = (
 /obj/machinery/door/airlock{
-	name = "Private Restroom"
+	name = "PRIVATE RESTROOM"
 	},
 /turf/open/floor/iron/freezer,
 /area/awaymission/undergroundoutpost45/research)
 "pM" = (
 /obj/machinery/door/airlock/research/glass{
-	name = "Research Storage"
+	name = "RESEARCH STORAGE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /turf/open/floor/iron/white,
@@ -4249,7 +4249,7 @@
 /area/awaymission/undergroundoutpost45/crew_quarters)
 "pW" = (
 /obj/machinery/door/airlock{
-	name = "Unit 1"
+	name = "UNIT 1"
 	},
 /turf/open/floor/iron/freezer,
 /area/awaymission/undergroundoutpost45/crew_quarters)
@@ -4274,7 +4274,7 @@
 /area/awaymission/undergroundoutpost45/engineering)
 "qc" = (
 /obj/machinery/door/airlock/engineering/glass{
-	name = "SMES Room"
+	name = "SMES ROOM"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/structure/cable,
@@ -4469,7 +4469,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/command/glass{
-	name = "Server Room"
+	name = "SERVER ROOM"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /turf/open/floor/iron/dark,
@@ -4540,7 +4540,7 @@
 /area/awaymission/undergroundoutpost45/crew_quarters)
 "rb" = (
 /obj/machinery/door/airlock{
-	name = "Unit 2"
+	name = "UNIT 2"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/freezer,
@@ -4734,7 +4734,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/maintenance{
-	name = "Research Maintenance"
+	name = "RESEARCH MAINTENANCE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -4776,7 +4776,7 @@
 /area/awaymission/undergroundoutpost45/research)
 "rL" = (
 /obj/machinery/door/airlock{
-	name = "Unisex Showers"
+	name = "UNISEX SHOWERS"
 	},
 /turf/open/floor/iron/freezer,
 /area/awaymission/undergroundoutpost45/crew_quarters)
@@ -4876,7 +4876,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Engineering Reception"
+	name = "ENGINEERING RECEPTION"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
@@ -5012,7 +5012,7 @@
 	},
 /obj/structure/sign/warning/deathsposal/directional/south{
 	desc = "A warning sign which reads 'DISPOSAL: LEADS TO EXTERIOR'";
-	name = "\improper DISPOSAL: LEADS TO EXTERIOR"
+	name = "\IMPROPER DISPOSAL: LEADS TO EXTERIOR"
 	},
 /turf/open/floor/iron/white/corner{
 	dir = 4
@@ -5093,7 +5093,7 @@
 "sL" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Engineering Reception"
+	name = "ENGINEERING RECEPTION"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -5130,7 +5130,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/preopen{
 	id = "UO45_Engineering";
-	name = "Engineering Security Door"
+	name = "ENGINEERING SECURITY DOOR"
 	},
 /turf/open/floor/plating,
 /area/awaymission/undergroundoutpost45/engineering)
@@ -5313,7 +5313,7 @@
 /area/awaymission/undergroundoutpost45/engineering)
 "tL" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Engineering Maintenance"
+	name = "ENGINEERING MAINTENANCE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -5419,7 +5419,7 @@
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/engineering{
-	name = "Engineering Foyer"
+	name = "ENGINEERING FOYER"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/structure/cable,
@@ -5537,7 +5537,7 @@
 /obj/machinery/computer/atmos_control/fixed{
 	atmos_chambers = list("uo45air"="Air Supply","uo45mix"="Mix Chamber","uo45n2"="Nitrogen Supply","uo45o2"="Oxygen Supply");
 	dir = 4;
-	name = "Chamber Atmospherics Monitoring"
+	name = "CHAMBER ATMOSPHERICS MONITORING"
 	},
 /obj/effect/turf_decal/tile/yellow/opposingcorners{
 	dir = 1
@@ -5566,7 +5566,7 @@
 /area/awaymission/undergroundoutpost45/engineering)
 "uF" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Security Office"
+	name = "SECURITY OFFICE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -5575,7 +5575,7 @@
 /area/awaymission/undergroundoutpost45/engineering)
 "uG" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Engineering"
+	name = "ENGINEERING"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/structure/cable,
@@ -5684,7 +5684,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/preopen{
 	id = "UO45_Engineering";
-	name = "Engineering Security Door"
+	name = "ENGINEERING SECURITY DOOR"
 	},
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/iron,
@@ -5693,7 +5693,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/preopen{
 	id = "UO45_Engineering";
-	name = "Engineering Security Door"
+	name = "ENGINEERING SECURITY DOOR"
 	},
 /obj/effect/turf_decal/delivery,
 /obj/structure/cable,
@@ -5844,7 +5844,7 @@
 /area/awaymission/undergroundoutpost45/engineering)
 "vz" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Engineering"
+	name = "ENGINEERING"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/structure/cable,
@@ -5894,7 +5894,7 @@
 /area/awaymission/undergroundoutpost45/mining)
 "vM" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Mining Maintenance"
+	name = "MINING MAINTENANCE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /turf/open/floor/plating,
@@ -5902,7 +5902,7 @@
 "vN" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining/glass{
-	name = "Mining Foyer"
+	name = "MINING FOYER"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -5912,7 +5912,7 @@
 "vO" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining/glass{
-	name = "Mining Foyer"
+	name = "MINING FOYER"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/structure/cable,
@@ -6038,7 +6038,7 @@
 "wr" = (
 /obj/machinery/door/airlock{
 	id_tag = "awaydorm8";
-	name = "Mining Dorm 1"
+	name = "MINING DORM 1"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -6074,7 +6074,7 @@
 /area/awaymission/undergroundoutpost45/mining)
 "wK" = (
 /obj/machinery/door/airlock{
-	name = "Private Restroom"
+	name = "PRIVATE RESTROOM"
 	},
 /turf/open/floor/iron/freezer,
 /area/awaymission/undergroundoutpost45/engineering)
@@ -6102,7 +6102,7 @@
 "wO" = (
 /obj/machinery/door/airlock{
 	id_tag = "awaydorm9";
-	name = "Mining Dorm 2"
+	name = "MINING DORM 2"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -6150,7 +6150,7 @@
 "xg" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining{
-	name = "Processing Area"
+	name = "PROCESSING AREA"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -6160,7 +6160,7 @@
 "xh" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining{
-	name = "Processing Area"
+	name = "PROCESSING AREA"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/effect/decal/cleanable/dirt,
@@ -6285,7 +6285,7 @@
 /area/awaymission/undergroundoutpost45/mining)
 "xI" = (
 /obj/machinery/door/airlock/mining/glass{
-	name = "Mining EVA"
+	name = "MINING EVA"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/structure/cable,
@@ -6373,7 +6373,7 @@
 /area/awaymission/undergroundoutpost45/mining)
 "xX" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/effect/decal/cleanable/dirt,
@@ -6417,7 +6417,7 @@
 /area/awaymission/undergroundoutpost45/mining)
 "yf" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/effect/turf_decal/sand,
@@ -6507,7 +6507,7 @@
 "zr" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass{
-	name = "Central Access"
+	name = "CENTRAL ACCESS"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
@@ -6556,7 +6556,7 @@
 /obj/structure/closet/secure_closet{
 	icon_state = "hydro";
 	locked = 0;
-	name = "botanist's locker";
+	name = "BOTANIST'S LOCKER";
 	req_access = list("away_maintenance")
 	},
 /obj/item/storage/bag/plants/portaseeder,
@@ -6857,7 +6857,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/window/left/directional/south{
 	dir = 4;
-	name = "Hydroponics Desk";
+	name = "HYDROPONICS DESK";
 	req_access = list("away_maintenance")
 	},
 /turf/open/floor/iron,
@@ -6901,7 +6901,7 @@
 "Fd" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/command/glass{
-	name = "Chief Engineer"
+	name = "CHIEF ENGINEER"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /obj/structure/cable,
@@ -7032,7 +7032,7 @@
 "Ij" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass{
-	name = "Central Access"
+	name = "CENTRAL ACCESS"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
@@ -7056,7 +7056,7 @@
 /obj/structure/disposalpipe/trunk,
 /obj/structure/sign/warning/deathsposal/directional/north{
 	desc = "A warning sign which reads 'DISPOSAL: LEADS TO EXTERIOR'";
-	name = "\improper DISPOSAL: LEADS TO EXTERIOR"
+	name = "\IMPROPER DISPOSAL: LEADS TO EXTERIOR"
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
@@ -7171,7 +7171,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/preopen{
 	id = "UO45_biohazard";
-	name = "Biohazard Containment Door"
+	name = "BIOHAZARD CONTAINMENT DOOR"
 	},
 /obj/effect/turf_decal/delivery,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -7284,7 +7284,7 @@
 /area/awaymission/undergroundoutpost45/research)
 "Mu" = (
 /obj/machinery/door/window/right/directional/south{
-	name = "Bar Door";
+	name = "BAR DOOR";
 	req_access = list("away_maintenance")
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -7342,7 +7342,7 @@
 /obj/structure/sign/warning/secure_area/directional/north,
 /obj/machinery/door/poddoor/preopen{
 	id = "UO45_Engineering";
-	name = "Engineering Security Door"
+	name = "ENGINEERING SECURITY DOOR"
 	},
 /obj/effect/turf_decal/delivery,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -7351,7 +7351,7 @@
 "Nr" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass{
-	name = "Diner"
+	name = "DINER"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -7369,7 +7369,7 @@
 	base_state = "right";
 	dir = 8;
 	icon_state = "right";
-	name = "Security Checkpoint";
+	name = "SECURITY CHECKPOINT";
 	req_access = list("away_maintenance")
 	},
 /turf/open/floor/iron,
@@ -7488,11 +7488,11 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "UO45_EngineeringOffice";
-	name = "Privacy Shutters"
+	name = "PRIVACY SHUTTERS"
 	},
 /obj/machinery/door/window/left/directional/south{
 	dir = 4;
-	name = "Engineering Reception";
+	name = "ENGINEERING RECEPTION";
 	req_access = list("away_maintenance")
 	},
 /obj/item/paper_bin{
@@ -7860,7 +7860,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/window/left/directional/east{
 	dir = 1;
-	name = "Hydroponics Desk";
+	name = "HYDROPONICS DESK";
 	req_access = list("away_maintenance")
 	},
 /turf/open/floor/iron/dark,
@@ -7951,13 +7951,13 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "UO45_EngineeringOffice";
-	name = "Privacy Shutters"
+	name = "PRIVACY SHUTTERS"
 	},
 /obj/machinery/door/window/left/directional/south{
 	base_state = "right";
 	dir = 4;
 	icon_state = "right";
-	name = "Engineering Reception";
+	name = "ENGINEERING RECEPTION";
 	req_access = list("away_maintenance")
 	},
 /obj/item/folder/red,

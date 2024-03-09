@@ -91,7 +91,7 @@
 /area/shuttle/escape)
 "au" = (
 /obj/machinery/door/airlock/command/glass{
-	name = "Cockpit"
+	name = "COCKPIT"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /obj/structure/fans/tiny,
@@ -141,7 +141,7 @@
 /area/shuttle/escape/brig)
 "aD" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Containment Cell"
+	name = "CONTAINMENT CELL"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /obj/structure/fans/tiny,
@@ -170,7 +170,7 @@
 /area/shuttle/escape/brig)
 "aL" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Emergency Shuttle Brig"
+	name = "EMERGENCY SHUTTLE BRIG"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /obj/structure/fans/tiny,
@@ -190,7 +190,7 @@
 /area/shuttle/escape)
 "aP" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /obj/structure/fans/tiny,
@@ -204,14 +204,14 @@
 /area/shuttle/escape/brig)
 "aR" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/shuttle/escape)
 "aS" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/docking_port/mobile/emergency{
 	name = "Donut emergency shuttle"
@@ -237,7 +237,7 @@
 /area/shuttle/escape)
 "bc" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Emergency Shuttle Infirmary"
+	name = "EMERGENCY SHUTTLE INFIRMARY"
 	},
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)

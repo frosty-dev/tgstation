@@ -30,7 +30,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/wood{
-	name = "Room 7";
+	name = "ROOM 7";
 	id_tag = "beach_room_7"
 	},
 /turf/open/floor/wood,
@@ -83,7 +83,7 @@
 /area/awaymission/beach)
 "aU" = (
 /obj/machinery/door/airlock/wood{
-	name = "Garage"
+	name = "GARAGE"
 	},
 /turf/open/floor/iron/dark/herringbone,
 /area/awaymission/beach)
@@ -105,7 +105,7 @@
 "bx" = (
 /obj/effect/turf_decal/sand,
 /obj/machinery/door/airlock/wood{
-	name = "Bathroom";
+	name = "BATHROOM";
 	id_tag = "toiletfarbeach"
 	},
 /turf/open/floor/iron/white,
@@ -224,7 +224,7 @@
 /area/awaymission/beach)
 "cZ" = (
 /obj/machinery/door/airlock/wood{
-	name = "Room 1";
+	name = "ROOM 1";
 	id_tag = "beach_room_1"
 	},
 /obj/effect/turf_decal/siding/wood{
@@ -290,7 +290,7 @@
 /area/awaymission/beach)
 "dL" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Locker Room"
+	name = "LOCKER ROOM"
 	},
 /turf/open/floor/wood/parquet,
 /area/awaymission/beach)
@@ -300,7 +300,7 @@
 /area/awaymission/beach)
 "dR" = (
 /obj/machinery/door/airlock/wood{
-	name = "Balcony";
+	name = "BALCONY";
 	id_tag = "beach_room_x"
 	},
 /turf/open/floor/wood,
@@ -394,7 +394,7 @@
 /area/awaymission/beach)
 "fj" = (
 /obj/machinery/door/airlock/wood{
-	name = "Room 3";
+	name = "ROOM 3";
 	id_tag = "beach_room_3"
 	},
 /obj/effect/turf_decal/siding/wood{
@@ -430,7 +430,7 @@
 /area/awaymission/beach)
 "fv" = (
 /obj/machinery/chem_master/condimaster{
-	name = "CondiMaster Neo"
+	name = "CONDIMASTER NEO"
 	},
 /turf/open/floor/wood/large,
 /area/awaymission/beach)
@@ -907,7 +907,7 @@
 /area/awaymission/beach)
 "ll" = (
 /obj/machinery/door/airlock/wood{
-	name = "Room 11";
+	name = "ROOM 11";
 	id_tag = "beach_room_11"
 	},
 /obj/effect/turf_decal/siding/wood,
@@ -919,7 +919,7 @@
 /area/awaymission/beach)
 "lz" = (
 /obj/machinery/door/airlock/wood{
-	name = "Room 10";
+	name = "ROOM 10";
 	id_tag = "beach_room_10"
 	},
 /obj/effect/turf_decal/siding/wood,
@@ -970,7 +970,7 @@
 /area/awaymission/beach)
 "mk" = (
 /obj/machinery/door/airlock/wood{
-	name = "Trash Disposal"
+	name = "TRASH DISPOSAL"
 	},
 /turf/open/floor/wood/large,
 /area/awaymission/beach)
@@ -1087,7 +1087,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/wood{
-	name = "Room 1"
+	name = "ROOM 1"
 	},
 /turf/open/floor/wood/large,
 /area/awaymission/beach)
@@ -1109,19 +1109,19 @@
 /area/awaymission/beach)
 "nW" = (
 /obj/machinery/door/airlock/wood/glass{
-	name = "Beach Access"
+	name = "BEACH ACCESS"
 	},
 /turf/open/floor/wood/large,
 /area/awaymission/beach)
 "oa" = (
 /obj/machinery/door/airlock/wood/glass{
-	name = "Rooms"
+	name = "ROOMS"
 	},
 /turf/open/floor/wood/large,
 /area/awaymission/beach)
 "ob" = (
 /obj/machinery/door/airlock/wood{
-	name = "Employees' Only"
+	name = "EMPLOYEES' ONLY"
 	},
 /turf/open/floor/plastic,
 /area/awaymission/beach)
@@ -1236,7 +1236,7 @@
 /area/awaymission/beach)
 "pE" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Temporary Holding Cell"
+	name = "TEMPORARY HOLDING CELL"
 	},
 /obj/effect/mapping_helpers/airlock/unres{
 	dir = 8
@@ -1261,7 +1261,7 @@
 /area/awaymission/beach)
 "pO" = (
 /obj/machinery/door/airlock/wood{
-	name = "Docks"
+	name = "DOCKS"
 	},
 /turf/open/floor/wood/parquet,
 /area/awaymission/beach)
@@ -1313,7 +1313,7 @@
 /area/awaymission/beach)
 "qy" = (
 /obj/machinery/door/airlock/wood{
-	name = "Arcade"
+	name = "ARCADE"
 	},
 /turf/open/floor/wood/large,
 /area/awaymission/beach)
@@ -1572,7 +1572,7 @@
 /area/awaymission/beach)
 "uq" = (
 /obj/machinery/door/airlock/wood/glass{
-	name = "Hotel's Facilities"
+	name = "HOTEL'S FACILITIES"
 	},
 /turf/open/floor/wood/large,
 /area/awaymission/beach)
@@ -1784,7 +1784,7 @@
 /area/awaymission/beach)
 "wX" = (
 /obj/machinery/door/airlock/wood{
-	name = "Room 9";
+	name = "ROOM 9";
 	id_tag = "beach_room_9"
 	},
 /obj/effect/turf_decal/siding/wood{
@@ -1828,7 +1828,7 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/wood{
-	name = "Tropical Kitchen"
+	name = "TROPICAL KITCHEN"
 	},
 /turf/open/floor/wood/large,
 /area/awaymission/beach)
@@ -1893,7 +1893,7 @@
 /area/awaymission/beach)
 "yE" = (
 /obj/machinery/door/airlock/wood{
-	name = "Room 8";
+	name = "ROOM 8";
 	id_tag = "beach_room_8"
 	},
 /turf/open/floor/wood,
@@ -2071,7 +2071,7 @@
 /area/awaymission/beach)
 "AP" = (
 /obj/machinery/door/airlock/wood{
-	name = "Changing Room"
+	name = "CHANGING ROOM"
 	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -2092,7 +2092,7 @@
 /area/awaymission/beach)
 "AW" = (
 /obj/machinery/door/airlock/wood{
-	name = "Room 2";
+	name = "ROOM 2";
 	id_tag = "beach_room_2"
 	},
 /obj/effect/turf_decal/siding/wood{
@@ -2470,7 +2470,7 @@
 /area/awaymission/beach)
 "EP" = (
 /obj/machinery/door/airlock/wood{
-	name = "Janitorial"
+	name = "JANITORIAL"
 	},
 /turf/open/floor/wood/large,
 /area/awaymission/beach)
@@ -2658,7 +2658,7 @@
 "Gm" = (
 /obj/effect/turf_decal/sand,
 /obj/machinery/door/airlock/wood{
-	name = "Bathroom";
+	name = "BATHROOM";
 	id_tag = "toilet1beach"
 	},
 /turf/open/floor/iron/white,
@@ -2843,7 +2843,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/wood{
-	name = "Room 6";
+	name = "ROOM 6";
 	id_tag = "beach_room_6"
 	},
 /turf/open/floor/wood,
@@ -2865,7 +2865,7 @@
 /area/awaymission/beach)
 "JG" = (
 /obj/machinery/door/airlock/wood{
-	name = "Room 4";
+	name = "ROOM 4";
 	id_tag = "beach_room_4"
 	},
 /obj/effect/turf_decal/siding/wood,
@@ -3039,7 +3039,7 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/wood{
-	name = "Balcony";
+	name = "BALCONY";
 	id_tag = "beach_room_x"
 	},
 /turf/open/floor/wood,
@@ -3155,7 +3155,7 @@
 /area/awaymission/beach)
 "MV" = (
 /obj/machinery/door/airlock/medical/glass{
-	name = "Medbay Clinic"
+	name = "MEDBAY CLINIC"
 	},
 /obj/effect/turf_decal/siding/blue{
 	dir = 4
@@ -3214,7 +3214,7 @@
 /area/awaymission/beach)
 "Nk" = (
 /obj/machinery/door/airlock/wood{
-	name = "Balcony";
+	name = "BALCONY";
 	id_tag = "beach_room_x"
 	},
 /obj/structure/railing/corner/end/flip{
@@ -3245,7 +3245,7 @@
 /area/awaymission/beach)
 "NH" = (
 /obj/machinery/door/airlock/wood/glass{
-	name = "Cabin"
+	name = "CABIN"
 	},
 /turf/open/floor/carpet,
 /area/awaymission/beach)
@@ -3356,7 +3356,7 @@
 /area/awaymission/beach)
 "Pt" = (
 /obj/machinery/door/airlock/command/glass{
-	name = "Admin"
+	name = "ADMIN"
 	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -3384,7 +3384,7 @@
 "Qe" = (
 /obj/effect/turf_decal/sand,
 /obj/machinery/door/airlock/wood{
-	name = "Bathroom";
+	name = "BATHROOM";
 	id_tag = "toilet3beach"
 	},
 /turf/open/floor/iron/white,
@@ -3438,7 +3438,7 @@
 /area/awaymission/beach)
 "QI" = (
 /obj/machinery/door/airlock/wood{
-	name = "Room 12";
+	name = "ROOM 12";
 	id_tag = "beach_room_12"
 	},
 /obj/effect/turf_decal/siding/wood{
@@ -3525,7 +3525,7 @@
 /area/awaymission/beach)
 "RI" = (
 /obj/machinery/door/airlock/medical/glass{
-	name = "Medbay Clinic"
+	name = "MEDBAY CLINIC"
 	},
 /obj/effect/turf_decal/siding/blue{
 	dir = 8
@@ -3748,7 +3748,7 @@
 "Vo" = (
 /obj/effect/turf_decal/sand,
 /obj/machinery/door/airlock/wood{
-	name = "Bathroom";
+	name = "BATHROOM";
 	id_tag = "toilet2beach"
 	},
 /turf/open/floor/iron/white,
@@ -3811,7 +3811,7 @@
 /area/awaymission/beach)
 "Wd" = (
 /obj/machinery/door/airlock/wood{
-	name = "Room 5";
+	name = "ROOM 5";
 	id_tag = "beach_room_5"
 	},
 /obj/effect/turf_decal/siding/wood,

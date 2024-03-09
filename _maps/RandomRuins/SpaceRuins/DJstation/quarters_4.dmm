@@ -24,7 +24,7 @@
 /area/ruin/space/djstation)
 "p" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Rest Room"
+	name = "REST ROOM"
 	},
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/structure/barricade/wooden,
@@ -66,7 +66,7 @@
 /area/space/nearstation)
 "P" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Rest Room"
+	name = "REST ROOM"
 	},
 /obj/modular_map_connector,
 /obj/effect/mapping_helpers/airlock/locked,

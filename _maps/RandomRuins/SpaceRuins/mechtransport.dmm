@@ -131,7 +131,7 @@
 /area/ruin/space/has_grav/powered/mechtransport)
 "rD" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Cockpit"
+	name = "COCKPIT"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/admin/general,
 /turf/open/floor/iron/smooth_large/airless,
@@ -364,7 +364,7 @@
 "XL" = (
 /obj/machinery/door/poddoor{
 	id = "mechaship1";
-	name = "Cargo Bay Door"
+	name = "CARGO BAY DOOR"
 	},
 /turf/open/floor/engine/airless,
 /area/ruin/space/has_grav/powered/mechtransport)

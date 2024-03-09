@@ -152,7 +152,7 @@
 	},
 /obj/machinery/door/window/right/directional/south{
 	dir = 8;
-	name = "First Aid Supplies";
+	name = "FIRST AID SUPPLIES";
 	req_access = list("medical")
 	},
 /turf/open/floor/iron/dark,
@@ -171,7 +171,7 @@
 	},
 /obj/machinery/button/door{
 	id = "durka_quarantine";
-	name = "Карантин";
+	name = "КАРАНТИН";
 	pixel_x = 25
 	},
 /turf/open/floor/iron/dark,
@@ -259,16 +259,16 @@
 /obj/structure/fans/tiny,
 /obj/machinery/door/poddoor/preopen{
 	id = "durka_hub";
-	name = "Panic Bunker"
+	name = "PANIC BUNKER"
 	},
 /obj/machinery/door/window/brigdoor/left/directional/north{
 	dir = 4;
-	name = "Medbay Desk";
+	name = "MEDBAY DESK";
 	req_access = list("brig_entrance")
 	},
 /obj/machinery/door/window/brigdoor/left/directional/north{
 	dir = 8;
-	name = "Medbay Desk";
+	name = "MEDBAY DESK";
 	req_access = list("brig_entrance")
 	},
 /turf/open/floor/iron/dark/smooth_large,
@@ -319,7 +319,7 @@
 	},
 /obj/machinery/door/window/right/directional/south{
 	dir = 4;
-	name = "First Aid Supplies";
+	name = "FIRST AID SUPPLIES";
 	req_access = list("medical")
 	},
 /turf/open/floor/iron/dark,
@@ -354,7 +354,7 @@
 	},
 /obj/machinery/door/window/right/directional/south{
 	dir = 8;
-	name = "First Aid Supplies";
+	name = "FIRST AID SUPPLIES";
 	req_access = list("medical")
 	},
 /turf/open/floor/iron/dark,
@@ -628,7 +628,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/shutters{
 	id = "durka_cell";
-	name = "durka cell"
+	name = "DURKA CELL"
 	},
 /turf/open/floor/iron/white/smooth_large,
 /area/station/medical/medbay/aft)
@@ -794,7 +794,7 @@
 /obj/structure/cable,
 /obj/machinery/button/door{
 	id = "durka_windows";
-	name = "Бронеставни";
+	name = "БРОНЕСТАВНИ";
 	pixel_x = 6;
 	pixel_y = 24
 	},
@@ -1095,7 +1095,7 @@
 /obj/machinery/door/poddoor/shutters{
 	dir = 8;
 	id = "durka_quarantine";
-	name = "Quarantine"
+	name = "QUARANTINE"
 	},
 /obj/structure/fans/tiny,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -1133,7 +1133,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/preopen{
 	id = "pharmacy_shutters";
-	name = "Pharmacy Shutter"
+	name = "PHARMACY SHUTTER"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -1247,7 +1247,7 @@
 /obj/structure/cable,
 /obj/machinery/door/poddoor/preopen{
 	id = "cmoprivacy";
-	name = "CMO Office"
+	name = "CMO OFFICE"
 	},
 /turf/open/floor/plating/airless,
 /area/station/command/heads_quarters/cmo)
@@ -1268,7 +1268,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/shutters{
 	id = "durka_cell";
-	name = "durka cell"
+	name = "DURKA CELL"
 	},
 /turf/open/floor/iron/white/smooth_large,
 /area/station/medical/medbay/aft)
@@ -1500,7 +1500,7 @@
 /area/station/medical/pharmacy)
 "wo" = (
 /obj/machinery/door/airlock/command{
-	name = "Chief Medical Officer";
+	name = "CHIEF MEDICAL OFFICER";
 	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1631,7 +1631,7 @@
 /obj/structure/cable,
 /obj/machinery/door/poddoor/preopen{
 	id = "durka_hub";
-	name = "Panic Bunker"
+	name = "PANIC BUNKER"
 	},
 /turf/open/floor/plating/airless,
 /area/station/medical/medbay/lobby)
@@ -1716,7 +1716,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/preopen{
 	id = "pharmacy_shutters";
-	name = "Pharmacy Shutter"
+	name = "PHARMACY SHUTTER"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -1981,7 +1981,7 @@
 "Cl" = (
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
-	name = "Medbay"
+	name = "MEDBAY"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -2251,7 +2251,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/preopen{
 	id = "pharmacy_shutters";
-	name = "Pharmacy Shutter"
+	name = "PHARMACY SHUTTER"
 	},
 /turf/open/floor/plating/airless,
 /area/station/medical/pharmacy)
@@ -2261,7 +2261,7 @@
 /area/station/medical/medbay/central)
 "FE" = (
 /obj/machinery/door/airlock/medical/glass{
-	name = "Pharmacy"
+	name = "PHARMACY"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -2313,7 +2313,7 @@
 "FZ" = (
 /obj/machinery/button/door{
 	id = "durka_quarantine";
-	name = "Карантин";
+	name = "КАРАНТИН";
 	pixel_x = 6;
 	pixel_y = 32
 	},
@@ -2366,7 +2366,7 @@
 "GS" = (
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
-	name = "Medbay"
+	name = "MEDBAY"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -2383,7 +2383,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/preopen{
 	id = "pharmacy_shutters";
-	name = "Pharmacy Shutter"
+	name = "PHARMACY SHUTTER"
 	},
 /turf/open/floor/plating/airless,
 /area/station/medical/pharmacy)
@@ -2396,7 +2396,7 @@
 /area/station/medical/medbay/aft)
 "GY" = (
 /obj/machinery/door/airlock/medical/glass{
-	name = "Durka"
+	name = "DURKA"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -2439,7 +2439,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /obj/machinery/door/airlock/virology/glass{
-	name = "Virology"
+	name = "VIROLOGY"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/medical/virology,
@@ -2468,7 +2468,7 @@
 "Jb" = (
 /obj/machinery/door/poddoor/shutters{
 	id = "durka_outer";
-	name = "Gate Shutters"
+	name = "GATE SHUTTERS"
 	},
 /obj/structure/cable,
 /obj/effect/spawner/structure/window/reinforced,
@@ -2530,11 +2530,11 @@
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "pharmacy_shutters";
-	name = "Pharmacy Shutter"
+	name = "PHARMACY SHUTTER"
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/window/right/directional/east{
-	name = "Pharmacy Desk";
+	name = "PHARMACY DESK";
 	req_access = list("pharmacy")
 	},
 /turf/open/floor/iron/white/smooth_large,
@@ -2588,7 +2588,7 @@
 /obj/machinery/light/directional/north,
 /obj/machinery/computer/security{
 	desc = "Для прослушки соседей.";
-	name = "Консоль домофона";
+	name = "КОНСОЛЬ ДОМОФОНА";
 	network = list("durka_domofon")
 	},
 /turf/open/floor/iron/dark,
@@ -2686,7 +2686,7 @@
 "LT" = (
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
-	name = "Medbay"
+	name = "MEDBAY"
 	},
 /obj/effect/mapping_helpers/airlock/unres,
 /obj/machinery/door/firedoor,
@@ -2761,7 +2761,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/preopen{
 	id = "pharmacy_shutters";
-	name = "Pharmacy Shutter"
+	name = "PHARMACY SHUTTER"
 	},
 /obj/structure/cable,
 /turf/open/floor/plating/airless,
@@ -2842,7 +2842,7 @@
 "OH" = (
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
-	name = "Medbay"
+	name = "MEDBAY"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -2893,7 +2893,7 @@
 	},
 /obj/machinery/door/window/right/directional/south{
 	dir = 4;
-	name = "First Aid Supplies";
+	name = "FIRST AID SUPPLIES";
 	req_access = list("medical")
 	},
 /turf/open/floor/iron/dark,
@@ -3094,7 +3094,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/preopen{
 	id = "pharmacy_shutters";
-	name = "Pharmacy Shutter"
+	name = "PHARMACY SHUTTER"
 	},
 /turf/open/floor/plating/airless,
 /area/station/medical/pharmacy)
@@ -3230,7 +3230,7 @@
 /area/station/medical/medbay/aft)
 "UH" = (
 /obj/machinery/door/airlock/medical/glass{
-	name = "Durka"
+	name = "DURKA"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron/white/smooth_large,
@@ -3374,7 +3374,7 @@
 /area/station/medical/medbay/aft)
 "VT" = (
 /obj/machinery/door/airlock/medical/glass{
-	name = "Medbay Storage"
+	name = "MEDBAY STORAGE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -3417,7 +3417,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
-	name = "Medbay"
+	name = "MEDBAY"
 	},
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -3514,7 +3514,7 @@
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "durka_hub";
-	name = "Panic Bunker"
+	name = "PANIC BUNKER"
 	},
 /turf/open/floor/plating,
 /area/station/medical/medbay/lobby)

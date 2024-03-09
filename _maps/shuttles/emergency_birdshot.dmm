@@ -61,7 +61,7 @@
 /area/shuttle/escape)
 "ek" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Emergency Shuttle Brig"
+	name = "EMERGENCY SHUTTLE BRIG"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/mineral/plastitanium,
@@ -78,7 +78,7 @@
 /area/shuttle/escape/brig)
 "eM" = (
 /obj/machinery/door/airlock/public{
-	name = "Toilet"
+	name = "TOILET"
 	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape)
@@ -156,7 +156,7 @@
 /area/shuttle/escape)
 "gN" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Emergency Shuttle Door"
+	name = "EMERGENCY SHUTTLE DOOR"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /turf/open/floor/mineral/titanium,
@@ -182,7 +182,7 @@
 /area/shuttle/escape)
 "hF" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Emergency Shuttle Door"
+	name = "EMERGENCY SHUTTLE DOOR"
 	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape)
@@ -231,7 +231,7 @@
 /area/shuttle/escape)
 "ll" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/docking_port/mobile/emergency{
 	dir = 8;
@@ -242,7 +242,7 @@
 /area/shuttle/escape)
 "lp" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /obj/structure/fans/tiny,
@@ -250,7 +250,7 @@
 /area/shuttle/escape)
 "lE" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Emergency Shuttle Cockpit"
+	name = "EMERGENCY SHUTTLE COCKPIT"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /obj/structure/fans/tiny,
@@ -510,7 +510,7 @@
 /area/shuttle/escape)
 "xC" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Emergency Shuttle Brig"
+	name = "EMERGENCY SHUTTLE BRIG"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /obj/effect/mapping_helpers/airlock/locked,
@@ -622,7 +622,7 @@
 /area/shuttle/escape)
 "Cu" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Emergency Shuttle Door"
+	name = "EMERGENCY SHUTTLE DOOR"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/mineral/titanium,
@@ -971,14 +971,14 @@
 /area/shuttle/escape)
 "Xi" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Emergency Shuttle Door"
+	name = "EMERGENCY SHUTTLE DOOR"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/mineral/titanium/purple,
 /area/shuttle/escape)
 "Xy" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/mineral/titanium,

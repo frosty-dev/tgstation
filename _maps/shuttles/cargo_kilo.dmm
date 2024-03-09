@@ -51,7 +51,7 @@
 "i" = (
 /obj/machinery/door/poddoor{
 	id = "QMLoaddoor";
-	name = "Supply Dock Loading Door"
+	name = "SUPPLY DOCK LOADING DOOR"
 	},
 /obj/machinery/conveyor{
 	dir = 8;
@@ -86,7 +86,7 @@
 /area/shuttle/supply)
 "m" = (
 /obj/machinery/door/airlock/shuttle{
-	name = "Supply Shuttle Airlock"
+	name = "SUPPLY SHUTTLE AIRLOCK"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/airlock/access/all/supply/general,
@@ -141,7 +141,7 @@
 /area/shuttle/supply)
 "r" = (
 /obj/machinery/door/airlock/shuttle{
-	name = "Supply Shuttle Airlock"
+	name = "SUPPLY SHUTTLE AIRLOCK"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/airlock/access/all/supply/general,
@@ -158,7 +158,7 @@
 "t" = (
 /obj/machinery/door/poddoor{
 	id = "QMLoaddoor2";
-	name = "Supply Dock Loading Door"
+	name = "SUPPLY DOCK LOADING DOOR"
 	},
 /obj/machinery/conveyor{
 	dir = 4;

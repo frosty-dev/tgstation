@@ -188,7 +188,7 @@
 /area/shuttle/abandoned/engine)
 "aE" = (
 /obj/structure/closet/crate{
-	name = "food crate"
+	name = "FOOD CRATE"
 	},
 /obj/item/reagent_containers/cup/glass/waterbottle/large{
 	pixel_x = -5;
@@ -273,7 +273,7 @@
 	},
 /mob/living/basic/trooper/syndicate/ranged{
 	environment_smash = 0;
-	name = "Syndicate Salvage Worker"
+	name = "SYNDICATE SALVAGE WORKER"
 	},
 /turf/open/floor/plating,
 /area/shuttle/abandoned/engine)
@@ -410,7 +410,7 @@
 "bt" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock{
-	name = "Restroom"
+	name = "RESTROOM"
 	},
 /turf/open/floor/iron/freezer,
 /area/shuttle/abandoned/crew)
@@ -449,7 +449,7 @@
 "by" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/engineering{
-	name = "Engineering"
+	name = "ENGINEERING"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/structure/cable,
@@ -523,7 +523,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/public/glass{
-	name = "Bar"
+	name = "BAR"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/structure/cable,
@@ -1160,7 +1160,7 @@
 /obj/machinery/door/firedoor,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/glass{
-	name = "Hydroponics"
+	name = "HYDROPONICS"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
 	dir = 4
@@ -1334,7 +1334,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/button/door/directional/east{
 	id = "whiteship_starboard";
-	name = "Starboard Blast Door Control"
+	name = "STARBOARD BLAST DOOR CONTROL"
 	},
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/cargo)
@@ -1566,7 +1566,7 @@
 /obj/machinery/door/firedoor,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/public/glass{
-	name = "Bar"
+	name = "BAR"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/structure/cable,
@@ -1576,7 +1576,7 @@
 "pS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock{
-	name = "Cabin 1"
+	name = "CABIN 1"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -1696,7 +1696,7 @@
 /obj/machinery/door/firedoor,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/glass{
-	name = "Crew Quarters"
+	name = "CREW QUARTERS"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
 	dir = 4
@@ -1720,7 +1720,7 @@
 /obj/machinery/door/firedoor,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/command{
-	name = "Bridge"
+	name = "BRIDGE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
 	dir = 4
@@ -1781,7 +1781,7 @@
 	shuttle_id = "whiteship";
 	launch_status = 0;
 	movement_force = list("KNOCKDOWN"=0,"THROW"=0);
-	name = "Salvage Ship";
+	name = "SALVAGE SHIP";
 	port_direction = 8;
 	preferred_direction = 4
 	},
@@ -1812,7 +1812,7 @@
 "FH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock{
-	name = "Cabin 2"
+	name = "CABIN 2"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -2119,7 +2119,7 @@
 /obj/machinery/door/firedoor,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/glass{
-	name = "Kitchen"
+	name = "KITCHEN"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
 	dir = 4

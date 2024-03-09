@@ -442,7 +442,7 @@
 /area/centcom/central_command_areas/holding)
 "kI" = (
 /turf/closed/indestructible/fakedoor{
-	name = "Guest House Entrance"
+	name = "GUEST HOUSE ENTRANCE"
 	},
 /area/centcom/central_command_areas/holding)
 "kO" = (
@@ -506,7 +506,7 @@
 	dir = 1
 	},
 /obj/structure/mineral_door/paperframe{
-	name = "Guest Suite *A"
+	name = "GUEST SUITE *A"
 	},
 /turf/open/floor/iron/sepia,
 /area/centcom/central_command_areas/holding)
@@ -625,7 +625,7 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/wood{
-	name = "Custodial Closet"
+	name = "CUSTODIAL CLOSET"
 	},
 /turf/open/floor/stone,
 /area/centcom/central_command_areas/holding)
@@ -687,7 +687,7 @@
 	},
 /obj/effect/turf_decal/siding/wood,
 /obj/machinery/door/airlock/wood{
-	name = "Bar"
+	name = "BAR"
 	},
 /obj/machinery/duct,
 /turf/open/floor/iron/sepia,
@@ -1407,7 +1407,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/wood{
-	name = "Kitchen"
+	name = "KITCHEN"
 	},
 /turf/open/floor/iron/sepia,
 /area/centcom/central_command_areas/holding)
@@ -1630,7 +1630,7 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/wood{
-	name = "Freezer"
+	name = "FREEZER"
 	},
 /turf/open/floor/stone,
 /area/centcom/central_command_areas/holding)
@@ -1856,7 +1856,7 @@
 /area/centcom/central_command_areas/holding)
 "RC" = (
 /obj/machinery/door/airlock/wood{
-	name = "Blue Team"
+	name = "BLUE TEAM"
 	},
 /turf/open/floor/wood/parquet,
 /area/centcom/central_command_areas/holding)
@@ -1910,7 +1910,7 @@
 	},
 /obj/effect/turf_decal/siding/wood,
 /obj/machinery/door/airlock/wood{
-	name = "Washroom"
+	name = "WASHROOM"
 	},
 /turf/open/floor/iron/sepia,
 /area/centcom/central_command_areas/holding)
@@ -2092,7 +2092,7 @@
 /area/centcom/central_command_areas/holding)
 "WX" = (
 /obj/machinery/door/airlock/wood{
-	name = "Red Team"
+	name = "RED TEAM"
 	},
 /turf/open/floor/wood/parquet,
 /area/centcom/central_command_areas/holding)
@@ -2177,7 +2177,7 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/wood{
-	name = "Toilet"
+	name = "TOILET"
 	},
 /turf/open/floor/iron/sepia,
 /area/centcom/central_command_areas/holding)

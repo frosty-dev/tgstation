@@ -14,7 +14,7 @@
 /area/shuttle/pod_1)
 "N" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Escape Pod Airlock"
+	name = "ESCAPE POD AIRLOCK"
 	},
 /obj/docking_port/mobile/pod{
 	port_direction = 2

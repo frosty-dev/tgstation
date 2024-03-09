@@ -230,7 +230,7 @@
 /area/ruin/planetengi)
 "bq" = (
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Production Room"
+	name = "PRODUCTION ROOM"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/engineering,
 /obj/structure/cable,
@@ -519,7 +519,7 @@
 /area/ruin/planetengi)
 "cF" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Engineering Access"
+	name = "ENGINEERING ACCESS"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/engineering,
 /turf/open/floor/iron,

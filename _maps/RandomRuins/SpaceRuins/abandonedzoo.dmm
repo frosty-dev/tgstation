@@ -43,7 +43,7 @@
 /area/ruin/space/has_grav/abandonedzoo)
 "aD" = (
 /obj/machinery/door/airlock/highsecurity{
-	name = "Bio Containment"
+	name = "BIO CONTAINMENT"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/science/research,
 /obj/structure/cable,
@@ -292,7 +292,7 @@
 /area/ruin/space/has_grav/abandonedzoo)
 "iX" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Bio-Research Station"
+	name = "BIO-RESEARCH STATION"
 	},
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/green/fourcorners,
@@ -486,7 +486,7 @@
 /area/ruin/space/has_grav/abandonedzoo)
 "Ti" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Bio-Research Station"
+	name = "BIO-RESEARCH STATION"
 	},
 /obj/effect/turf_decal/tile/green/fourcorners,
 /turf/open/floor/iron/dark,

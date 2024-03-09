@@ -90,7 +90,7 @@
 /area/shuttle/escape)
 "as" = (
 /obj/machinery/door/airlock/bananium/glass{
-	name = "Emergency Shuttle Premium Lounge"
+	name = "EMERGENCY SHUTTLE PREMIUM LOUNGE"
 	},
 /turf/open/floor/bluespace,
 /area/shuttle/escape)
@@ -115,7 +115,7 @@
 /area/shuttle/escape/brig)
 "aA" = (
 /obj/machinery/door/airlock/bananium/glass{
-	name = "Emergency Shuttle Greentext"
+	name = "EMERGENCY SHUTTLE GREENTEXT"
 	},
 /turf/open/floor/bluespace,
 /area/shuttle/escape)
@@ -144,7 +144,7 @@
 /area/shuttle/escape)
 "aI" = (
 /obj/machinery/door/airlock/bananium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/docking_port/mobile/emergency{
 	name = "Snappop(tm)!"
@@ -164,7 +164,7 @@
 /area/shuttle/escape)
 "aQ" = (
 /obj/machinery/door/airlock/bananium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
@@ -176,13 +176,13 @@
 /area/shuttle/escape)
 "aT" = (
 /obj/machinery/door/airlock/bananium{
-	name = "Emergency Shuttle Cargo"
+	name = "EMERGENCY SHUTTLE CARGO"
 	},
 /turf/open/floor/bluespace,
 /area/shuttle/escape)
 "aU" = (
 /obj/machinery/door/airlock/bananium/glass{
-	name = "Emergency Shuttle Infirmary"
+	name = "EMERGENCY SHUTTLE INFIRMARY"
 	},
 /turf/open/floor/bluespace,
 /area/shuttle/escape)

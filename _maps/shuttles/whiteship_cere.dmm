@@ -26,7 +26,7 @@
 /area/shuttle/abandoned/crew)
 "ap" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Solar Sail Access"
+	name = "SOLAR SAIL ACCESS"
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -36,7 +36,7 @@
 /area/shuttle/abandoned/cargo)
 "at" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Crew Quarters"
+	name = "CREW QUARTERS"
 	},
 /obj/structure/cable,
 /obj/structure/cable/layer1,
@@ -87,7 +87,7 @@
 /area/shuttle/abandoned/engine)
 "aM" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Solar Sail Access"
+	name = "SOLAR SAIL ACCESS"
 	},
 /obj/structure/cable,
 /obj/effect/turf_decal/stripes/line{
@@ -128,7 +128,7 @@
 "bb" = (
 /obj/structure/cable,
 /obj/machinery/door/window/right/directional/west{
-	name = "Solar Sail Access"
+	name = "SOLAR SAIL ACCESS"
 	},
 /turf/open/floor/plating,
 /area/shuttle/abandoned/engine)
@@ -219,7 +219,7 @@
 /area/shuttle/abandoned/cargo)
 "hj" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Solar Sail Access"
+	name = "SOLAR SAIL ACCESS"
 	},
 /obj/structure/cable/layer1,
 /turf/open/floor/plating,
@@ -297,7 +297,7 @@
 	dir = 4
 	},
 /obj/machinery/door/window/left/directional/east{
-	name = "Solar Sail Access"
+	name = "SOLAR SAIL ACCESS"
 	},
 /turf/open/floor/plating,
 /area/shuttle/abandoned/crew)
@@ -324,7 +324,7 @@
 /area/shuttle/abandoned/cargo)
 "nf" = (
 /obj/machinery/door/airlock{
-	name = "Cabin 1"
+	name = "CABIN 1"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
@@ -348,7 +348,7 @@
 "ns" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock{
-	name = "Kitchen and Bridge"
+	name = "KITCHEN AND BRIDGE"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
@@ -513,7 +513,7 @@
 "yA" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/hatch{
-	name = "Generator Room and Solar Sail Controls"
+	name = "GENERATOR ROOM AND SOLAR SAIL CONTROLS"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /turf/open/floor/plating,
@@ -631,7 +631,7 @@
 /area/shuttle/abandoned/crew)
 "DG" = (
 /obj/machinery/door/airlock/command{
-	name = "Bridge"
+	name = "BRIDGE"
 	},
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -796,7 +796,7 @@
 /area/shuttle/abandoned/bridge)
 "MW" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Solar Sail Access"
+	name = "SOLAR SAIL ACCESS"
 	},
 /obj/structure/cable,
 /obj/effect/turf_decal/stripes/line{
@@ -845,7 +845,7 @@
 /area/shuttle/abandoned/engine)
 "PX" = (
 /obj/machinery/door/window/right/directional/north{
-	name = "Bar"
+	name = "BAR"
 	},
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -890,7 +890,7 @@
 /area/shuttle/abandoned/cargo)
 "Sx" = (
 /obj/machinery/door/airlock/command{
-	name = "Captain's Quarters";
+	name = "CAPTAIN'S QUARTERS";
 	id_tag = "whiteship_cap_bolts"
 	},
 /obj/effect/mapping_helpers/airlock/locked,
@@ -906,7 +906,7 @@
 	dir = 2;
 	shuttle_id = "whiteship";
 	launch_status = 0;
-	name = "NT Heavy Salvage Ship";
+	name = "NT HEAVY SALVAGE SHIP";
 	port_direction = 2
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -915,7 +915,7 @@
 "SL" = (
 /obj/effect/decal/remains/human,
 /obj/item/clothing/head/hats/caphat/parade{
-	name = "old captain's cap";
+	name = "OLD CAPTAIN'S CAP";
 	desc = "A damaged Captain's cap, smelling faintly of blood.";
 	pixel_y = 4
 	},

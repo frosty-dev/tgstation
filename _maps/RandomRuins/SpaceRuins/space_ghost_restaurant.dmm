@@ -285,7 +285,7 @@
 /area/ruin/space/space_ghost_restaurant)
 "WY" = (
 /obj/effect/mob_spawn/corpse/human/assistant{
-	mob_name = "Aron Blue"
+	mob_name = "ARON BLUE"
 	},
 /turf/open/floor/iron/cafeteria/airless,
 /area/ruin/space/space_ghost_restaurant)

@@ -291,7 +291,7 @@
 "iS" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining/glass{
-	name = "Resource Collector Dock"
+	name = "RESOURCE COLLECTOR DOCK"
 	},
 /turf/open/floor/iron/large,
 /area/ruin/space/has_grav/whiteship/box)
@@ -395,7 +395,7 @@
 "lG" = (
 /obj/machinery/door/poddoor{
 	id = "oldship_ruin_gun";
-	name = "Pod Bay Door"
+	name = "POD BAY DOOR"
 	},
 /turf/open/floor/iron/textured,
 /area/ruin/space/has_grav/whiteship/box)
@@ -472,7 +472,7 @@
 /area/ruin/space/has_grav/whiteship/box)
 "mQ" = (
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Engine Bay Access"
+	name = "ENGINE BAY ACCESS"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/dark,
 /turf/open/floor/plating,
@@ -840,7 +840,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/mining/glass{
-	name = "Resource Collector Dock"
+	name = "RESOURCE COLLECTOR DOCK"
 	},
 /turf/open/floor/iron/large,
 /area/ruin/space/has_grav/whiteship/box)
@@ -1168,7 +1168,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/mining/glass{
-	name = "Resource Collector Dock"
+	name = "RESOURCE COLLECTOR DOCK"
 	},
 /turf/open/floor/iron/large,
 /area/ruin/space/has_grav/whiteship/box)
@@ -1222,7 +1222,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/medical/glass{
-	name = "Medical Bay Storage AccesS"
+	name = "MEDICAL BAY STORAGE ACCESS"
 	},
 /turf/open/floor/iron/showroomfloor/airless,
 /area/ruin/space/has_grav/whiteship/box)
@@ -1343,7 +1343,7 @@
 "Qo" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/dark,
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Engine Bay Access"
+	name = "ENGINE BAY ACCESS"
 	},
 /obj/effect/turf_decal/trimline/yellow/arrow_ccw{
 	dir = 1

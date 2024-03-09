@@ -133,13 +133,13 @@
 /area/shuttle/escape)
 "dU" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape)
 "fK" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/docking_port/mobile/emergency{
 	name = "Venture Emergency Shuttle";
@@ -285,7 +285,7 @@
 /area/shuttle/escape)
 "nT" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Shuttle Storage"
+	name = "SHUTTLE STORAGE"
 	},
 /turf/open/floor/mineral/titanium/yellow,
 /area/shuttle/escape)
@@ -398,7 +398,7 @@
 /area/shuttle/escape)
 "vf" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Brig"
+	name = "BRIG"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/security/general,
 /turf/open/floor/mineral/plastitanium/red,
@@ -424,7 +424,7 @@
 /area/shuttle/escape)
 "xN" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape)
@@ -565,7 +565,7 @@
 /area/shuttle/escape)
 "Fp" = (
 /obj/machinery/door/airlock/medical/glass{
-	name = "Shuttle Medical"
+	name = "SHUTTLE MEDICAL"
 	},
 /turf/open/floor/iron/white,
 /area/shuttle/escape)
@@ -635,7 +635,7 @@
 "HL" = (
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /obj/machinery/door/airlock/command/glass{
-	name = "Cockpit"
+	name = "COCKPIT"
 	},
 /turf/open/floor/iron/herringbone,
 /area/shuttle/escape)
@@ -656,7 +656,7 @@
 /area/shuttle/escape)
 "KG" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /turf/open/floor/mineral/titanium/yellow,
 /area/shuttle/escape)
@@ -918,7 +918,7 @@
 /area/shuttle/escape)
 "ZI" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/mineral/titanium,

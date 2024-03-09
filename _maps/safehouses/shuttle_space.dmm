@@ -35,7 +35,7 @@
 	},
 /obj/machinery/computer{
 	dir = 8;
-	name = "shuttle console";
+	name = "SHUTTLE CONSOLE";
 	icon_screen = "shuttle"
 	},
 /turf/open/floor/iron,

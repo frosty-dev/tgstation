@@ -23,7 +23,7 @@
 	port_direction = 2
 	},
 /obj/machinery/door/airlock/titanium/glass{
-	name = "Escape Pod Airlock"
+	name = "ESCAPE POD AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/carpet/executive,

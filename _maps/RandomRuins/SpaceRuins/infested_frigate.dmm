@@ -852,7 +852,7 @@
 "nN" = (
 /obj/structure/alien/resin{
 	max_integrity = 2000;
-	name = "viscous resin";
+	name = "VISCOUS RESIN";
 	desc = "The resin is thick and it keeps collapsing on itself."
 	},
 /turf/open/floor/mineral/plastitanium,
@@ -1064,7 +1064,7 @@
 	},
 /obj/structure/closet/crate/large{
 	anchored = 1;
-	name = "crew supplies"
+	name = "CREW SUPPLIES"
 	},
 /obj/structure/cable,
 /obj/item/pickaxe/emergency,
@@ -1357,7 +1357,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/machinery/door/airlock/highsecurity{
-	name = "SYN-C Brutus Armory";
+	name = "SYN-C BRUTUS ARMORY";
 	req_access = list("syndicate")
 	},
 /obj/effect/mapping_helpers/airlock/welded,
@@ -1730,7 +1730,7 @@
 /obj/structure/cable,
 /obj/item/wallframe/telescreen/entertainment{
 	icon_state = "entertainment";
-	name = "relatively interesting news";
+	name = "RELATIVELY INTERESTING NEWS";
 	desc = "It's been live this whole time, news from Nanotrasen core space, just an hour ago.";
 	light_power = 0.5;
 	light_range = 3
@@ -1986,7 +1986,7 @@
 "Fs" = (
 /mob/living/simple_animal/bot/firebot{
 	faction = list("syndicate","xenomorph");
-	name = "Mr. Squirtsky";
+	name = "MR. SQUIRTSKY";
 	desc = "He seems much happier with the new management!"
 	},
 /obj/effect/turf_decal{
@@ -2327,7 +2327,7 @@
 /obj/structure/alien/resin/membrane{
 	max_integrity = 1600;
 	desc = "Resin just thin enough to let light pass through, but it's congealing in the same way as the thicker stuff.";
-	name = "viscous resin membrane"
+	name = "VISCOUS RESIN MEMBRANE"
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/infested_frigate)
@@ -2588,7 +2588,7 @@
 /obj/structure/alien/resin/membrane{
 	max_integrity = 1600;
 	desc = "Resin just thin enough to let light pass through, but it's congealing in the same way as the thicker stuff.";
-	name = "viscous resin membrane"
+	name = "VISCOUS RESIN MEMBRANE"
 	},
 /obj/structure/alien/weeds/node{
 	maximum_growtime = 240000;
@@ -2686,7 +2686,7 @@
 /obj/item/storage/box/syndie_kit/chameleon,
 /obj/structure/closet/crate/large{
 	anchored = 1;
-	name = "crew supplies"
+	name = "CREW SUPPLIES"
 	},
 /obj/item/clothing/head/collectable/xenom,
 /obj/item/xenos_claw,
@@ -2735,7 +2735,7 @@
 /obj/item/ammo_casing/spent,
 /obj/item/ammo_casing/spent,
 /obj/structure/door_assembly/door_assembly_hatch{
-	name = "SYN-C Brutus Bridge"
+	name = "SYN-C BRUTUS BRIDGE"
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/infested_frigate)
@@ -2896,7 +2896,7 @@
 /obj/structure/showcase/machinery/microwave{
 	icon_state = "mwbloodyo";
 	desc = "A product so good your enemies still own one. The dim bloody light compliments the TV's.";
-	name = "Nanotrasen brand microwave";
+	name = "NANOTRASEN BRAND MICROWAVE";
 	pixel_y = 7
 	},
 /obj/structure/cable,
@@ -2989,7 +2989,7 @@
 	},
 /obj/structure/closet/crate/large{
 	anchored = 1;
-	name = "crew supplies"
+	name = "CREW SUPPLIES"
 	},
 /obj/effect/spawner/random/aimodule/harmful,
 /obj/effect/spawner/random/decoration,

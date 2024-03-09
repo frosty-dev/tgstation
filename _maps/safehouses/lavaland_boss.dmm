@@ -110,7 +110,7 @@
 /area/virtual_domain/safehouse)
 "H" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/all,
 /obj/structure/fans/tiny,

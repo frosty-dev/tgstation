@@ -110,7 +110,7 @@
 /area/shuttle/escape)
 "at" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Glorious Leaders"
+	name = "GLORIOUS LEADERS"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /turf/open/floor/mineral/titanium,
@@ -166,7 +166,7 @@
 /area/shuttle/escape/brig)
 "aI" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Emergency Shuttle Brig"
+	name = "EMERGENCY SHUTTLE BRIG"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/mineral/plastitanium,
@@ -200,7 +200,7 @@
 /area/shuttle/escape)
 "aO" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/plating,
@@ -240,7 +240,7 @@
 	name = "Mother Russia Bleeds"
 	},
 /obj/machinery/door/airlock/security/glass{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /turf/open/floor/plating,
 /area/shuttle/escape)
@@ -251,7 +251,7 @@
 "aZ" = (
 /obj/effect/decal/cleanable/shreds,
 /obj/machinery/door/window{
-	name = "Fight Pit"
+	name = "FIGHT PIT"
 	},
 /turf/open/floor/engine,
 /area/shuttle/escape)
@@ -323,7 +323,7 @@
 /area/shuttle/escape)
 "br" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /turf/open/floor/plating,
 /area/shuttle/escape)
@@ -339,7 +339,7 @@
 /area/shuttle/escape)
 "bu" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Emergency Shuttle Cargo"
+	name = "EMERGENCY SHUTTLE CARGO"
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/escape)
@@ -350,7 +350,7 @@
 /area/shuttle/escape)
 "bw" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Emergency Shuttle Infirmary"
+	name = "EMERGENCY SHUTTLE INFIRMARY"
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/escape)

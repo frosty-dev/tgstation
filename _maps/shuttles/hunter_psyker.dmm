@@ -6,7 +6,7 @@
 /area/shuttle/hunter)
 "ai" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Gear Storage"
+	name = "GEAR STORAGE"
 	},
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
@@ -139,7 +139,7 @@
 /area/shuttle/hunter)
 "gB" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Intelligence Training Room"
+	name = "INTELLIGENCE TRAINING ROOM"
 	},
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
@@ -233,7 +233,7 @@
 "kl" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Maintenance"
+	name = "MAINTENANCE"
 	},
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/effect/mapping_helpers/airlock/access/all/hunter,
@@ -406,7 +406,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/grunge{
-	name = "Office"
+	name = "OFFICE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/hunter,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
@@ -435,7 +435,7 @@
 /obj/effect/spawner/structure/window/reinforced/plasma,
 /obj/machinery/door/poddoor/preopen{
 	id = "psyker_bridge";
-	name = "External Blast Door"
+	name = "EXTERNAL BLAST DOOR"
 	},
 /turf/open/floor/plating,
 /area/shuttle/hunter)
@@ -630,7 +630,7 @@
 /area/shuttle/hunter)
 "Fc" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Sanctuary In The Garden Of Mind"
+	name = "SANCTUARY IN THE GARDEN OF MIND"
 	},
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/effect/mapping_helpers/airlock/access/all/hunter,
@@ -645,7 +645,7 @@
 /area/shuttle/hunter)
 "Gj" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Freezer"
+	name = "FREEZER"
 	},
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
@@ -694,7 +694,7 @@
 "HH" = (
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/door/airlock/grunge{
-	name = "Bridge"
+	name = "BRIDGE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/effect/mapping_helpers/airlock/access/all/hunter,
@@ -747,12 +747,12 @@
 /area/shuttle/hunter)
 "Js" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Fortune Telling"
+	name = "FORTUNE TELLING"
 	},
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/button/curtain{
 	id = "fortune_tell";
-	name = "Fortune Telling Curtains";
+	name = "FORTUNE TELLING CURTAINS";
 	pixel_x = -24;
 	req_access = list("hunter")
 	},
@@ -967,7 +967,7 @@
 "UI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Maintenance"
+	name = "MAINTENANCE"
 	},
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/effect/mapping_helpers/airlock/access/all/hunter,
@@ -975,7 +975,7 @@
 /area/shuttle/hunter)
 "Vc" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Fortune Telling"
+	name = "FORTUNE TELLING"
 	},
 /turf/open/floor/carpet/black,
 /area/shuttle/hunter)
@@ -1044,7 +1044,7 @@
 /area/shuttle/hunter)
 "Xy" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Gear Storage"
+	name = "GEAR STORAGE"
 	},
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/effect/mapping_helpers/airlock/access/all/hunter,

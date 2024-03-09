@@ -67,7 +67,7 @@
 "ar" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/command{
-	name = "Manager's Office"
+	name = "MANAGER'S OFFICE"
 	},
 /turf/open/floor/wood,
 /area/awaymission/cabin)
@@ -213,7 +213,7 @@
 /area/awaymission/cabin)
 "aR" = (
 /obj/machinery/door/window/right/directional/west{
-	name = "Fireplace"
+	name = "FIREPLACE"
 	},
 /obj/structure/fireplace,
 /obj/effect/decal/cleanable/dirt,
@@ -233,7 +233,7 @@
 /area/awaymission/cabin)
 "aT" = (
 /obj/machinery/door/window/left/directional/east{
-	name = "Fireplace"
+	name = "FIREPLACE"
 	},
 /obj/structure/fireplace,
 /obj/effect/decal/cleanable/dirt,
@@ -242,7 +242,7 @@
 "aU" = (
 /obj/structure/fireplace,
 /obj/machinery/door/window/right/directional/west{
-	name = "Fireplace"
+	name = "FIREPLACE"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -254,7 +254,7 @@
 "aW" = (
 /obj/structure/fireplace,
 /obj/machinery/door/window/left/directional/east{
-	name = "Fireplace"
+	name = "FIREPLACE"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -276,7 +276,7 @@
 "ba" = (
 /obj/structure/fans/tiny,
 /obj/machinery/door/airlock/wood/glass{
-	name = "Cabin"
+	name = "CABIN"
 	},
 /turf/open/floor/wood,
 /area/awaymission/cabin)
@@ -301,7 +301,7 @@
 /area/awaymission/cabin)
 "bg" = (
 /obj/machinery/door/window/left/directional/west{
-	name = "Manager's Desk"
+	name = "MANAGER'S DESK"
 	},
 /turf/open/floor/carpet,
 /area/awaymission/cabin)
@@ -312,7 +312,7 @@
 "bi" = (
 /obj/machinery/door/airlock/wood{
 	id_tag = "WheresTheSyndiBalloon";
-	name = "Manager's Bedroom"
+	name = "MANAGER'S BEDROOM"
 	},
 /turf/open/floor/wood,
 /area/awaymission/cabin)
@@ -334,7 +334,7 @@
 "bm" = (
 /obj/machinery/door/airlock/wood{
 	id_tag = "snowdinbutworse5";
-	name = "Cabin 5"
+	name = "CABIN 5"
 	},
 /obj/structure/cable,
 /turf/open/floor/wood,
@@ -497,7 +497,7 @@
 /area/awaymission/cabin)
 "bV" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Garage"
+	name = "GARAGE"
 	},
 /turf/open/floor/wood,
 /area/awaymission/cabin)
@@ -564,7 +564,7 @@
 "cA" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/wood{
-	name = "Stage Left"
+	name = "STAGE LEFT"
 	},
 /turf/open/floor/wood,
 /area/awaymission/cabin)
@@ -580,7 +580,7 @@
 /area/awaymission/cabin)
 "cD" = (
 /obj/machinery/door/window/left/directional/west{
-	name = "Bar"
+	name = "BAR"
 	},
 /turf/open/floor/wood,
 /area/awaymission/cabin)
@@ -641,7 +641,7 @@
 /area/awaymission/cabin)
 "cM" = (
 /obj/machinery/door/airlock/wood{
-	name = "Gateway"
+	name = "GATEWAY"
 	},
 /turf/open/floor/wood,
 /area/awaymission/cabin)
@@ -765,14 +765,14 @@
 "eo" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock{
-	name = "Kitchen"
+	name = "KITCHEN"
 	},
 /turf/open/floor/wood,
 /area/awaymission/cabin)
 "eq" = (
 /obj/machinery/door/poddoor/shutters{
 	id = "garage_cabin";
-	name = "Garage Door"
+	name = "GARAGE DOOR"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/plating/snowed/snow_cabin,
@@ -1097,7 +1097,7 @@
 /obj/machinery/door/airlock/centcom{
 	desc = "Look at what you have done.";
 	max_integrity = 2000;
-	name = "Jail Cell 7213"
+	name = "JAIL CELL 7213"
 	},
 /obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/iron/dark,
@@ -1386,7 +1386,7 @@
 /area/awaymission/cabin)
 "hg" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Janitor Closet"
+	name = "JANITOR CLOSET"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -1416,7 +1416,7 @@
 "hm" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/wood{
-	name = "Gateway"
+	name = "GATEWAY"
 	},
 /turf/open/floor/wood,
 /area/awaymission/cabin)
@@ -1485,13 +1485,13 @@
 "hx" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/wood{
-	name = "Stage Right"
+	name = "STAGE RIGHT"
 	},
 /turf/open/floor/wood,
 /area/awaymission/cabin)
 "hy" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Heater Storage"
+	name = "HEATER STORAGE"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -1503,14 +1503,14 @@
 "hA" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/freezer{
-	name = "Freezer"
+	name = "FREEZER"
 	},
 /turf/open/floor/iron/freezer,
 /area/awaymission/cabin)
 "hB" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock{
-	name = "Backstage"
+	name = "BACKSTAGE"
 	},
 /turf/open/floor/wood,
 /area/awaymission/cabin)
@@ -1616,7 +1616,7 @@
 /obj/machinery/door/airlock/hatch,
 /obj/structure/barricade/wooden,
 /turf/open/floor/mineral/plastitanium/red{
-	name = "soviet floor"
+	name = "SOVIET FLOOR"
 	},
 /area/awaymission/cabin/caves/sovietcave)
 "iq" = (
@@ -1743,7 +1743,7 @@
 "iV" = (
 /obj/machinery/door/airlock/wood{
 	id_tag = "snowdinbutworse1";
-	name = "Cabin 1"
+	name = "CABIN 1"
 	},
 /obj/structure/cable,
 /turf/open/floor/wood,
@@ -1751,7 +1751,7 @@
 "iW" = (
 /obj/machinery/door/airlock/wood{
 	id_tag = "snowdinbutworse2";
-	name = "Cabin 2"
+	name = "CABIN 2"
 	},
 /obj/structure/cable,
 /turf/open/floor/wood,
@@ -1759,7 +1759,7 @@
 "iX" = (
 /obj/machinery/door/airlock/wood{
 	id_tag = "snowdinbutworse3";
-	name = "Cabin 3"
+	name = "CABIN 3"
 	},
 /obj/structure/cable,
 /turf/open/floor/wood,
@@ -1767,14 +1767,14 @@
 "iY" = (
 /obj/machinery/door/airlock/wood{
 	id_tag = "snowdinbutworse4";
-	name = "Cabin 4"
+	name = "CABIN 4"
 	},
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/awaymission/cabin)
 "iZ" = (
 /obj/structure/window/reinforced/fulltile/ice{
-	name = "frozen window"
+	name = "FROZEN WINDOW"
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "fightingcommunity10"
@@ -1783,7 +1783,7 @@
 /area/awaymission/cabin)
 "ja" = (
 /obj/structure/window/reinforced/fulltile/ice{
-	name = "frozen window"
+	name = "FROZEN WINDOW"
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "fightingcommunity20"
@@ -1792,7 +1792,7 @@
 /area/awaymission/cabin)
 "jb" = (
 /obj/structure/window/reinforced/fulltile/ice{
-	name = "frozen window"
+	name = "FROZEN WINDOW"
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "fightingcommunity30"
@@ -1801,7 +1801,7 @@
 /area/awaymission/cabin)
 "jc" = (
 /obj/structure/window/reinforced/fulltile/ice{
-	name = "frozen window"
+	name = "FROZEN WINDOW"
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "fightingcommunity40"
@@ -1810,7 +1810,7 @@
 /area/awaymission/cabin)
 "jd" = (
 /obj/structure/window/reinforced/fulltile/ice{
-	name = "frozen window"
+	name = "FROZEN WINDOW"
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "fightingcommunity50"
@@ -1819,7 +1819,7 @@
 /area/awaymission/cabin)
 "je" = (
 /obj/structure/window/reinforced/fulltile/ice{
-	name = "frozen window"
+	name = "FROZEN WINDOW"
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "fightingcommunity60"
@@ -1924,7 +1924,7 @@
 "jC" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/engineering{
-	name = "Generator Room"
+	name = "GENERATOR ROOM"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -2421,7 +2421,7 @@
 /obj/machinery/door/airlock/hatch,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/mineral/plastitanium/red{
-	name = "soviet floor"
+	name = "SOVIET FLOOR"
 	},
 /area/awaymission/cabin/caves/sovietcave)
 "mN" = (
@@ -2451,7 +2451,7 @@
 "mS" = (
 /obj/machinery/door/airlock/vault{
 	desc = "Made by the Russians.";
-	name = "Soviet Door"
+	name = "SOVIET DOOR"
 	},
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/effect/decal/cleanable/dirt,
@@ -2588,12 +2588,12 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/grunge,
 /turf/open/floor/mineral/plastitanium/red{
-	name = "soviet floor"
+	name = "SOVIET FLOOR"
 	},
 /area/awaymission/cabin/caves/sovietcave)
 "nM" = (
 /obj/machinery/door/airlock/multi_tile/public/glass{
-	name = "Medical Bay"
+	name = "MEDICAL BAY"
 	},
 /obj/structure/cable,
 /turf/open/floor/iron/white,
@@ -2618,7 +2618,7 @@
 /area/awaymission/cabin)
 "nU" = (
 /obj/machinery/door/airlock{
-	name = "Bathroom"
+	name = "BATHROOM"
 	},
 /turf/open/floor/iron/freezer,
 /area/awaymission/cabin)
@@ -2626,7 +2626,7 @@
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/maintenance{
-	name = "Maintenance"
+	name = "MAINTENANCE"
 	},
 /turf/open/floor/plating,
 /area/awaymission/cabin)

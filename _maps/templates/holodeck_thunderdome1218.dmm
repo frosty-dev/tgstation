@@ -35,7 +35,7 @@
 /obj/item/scythe,
 /obj/item/spear,
 /obj/item/melee/chainofcommand{
-	name = "chain whip"
+	name = "CHAIN WHIP"
 	},
 /turf/open/floor/holofloor/asteroid,
 /area/template_noop)
@@ -52,7 +52,7 @@
 "y" = (
 /obj/structure/table/wood,
 /obj/item/melee/chainofcommand{
-	name = "chain whip"
+	name = "CHAIN WHIP"
 	},
 /obj/item/spear,
 /turf/open/floor/holofloor/asteroid,

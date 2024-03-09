@@ -29,7 +29,7 @@
 /area/shuttle/mining)
 "h" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Mining Shuttle Airlock"
+	name = "MINING SHUTTLE AIRLOCK"
 	},
 /obj/docking_port/mobile{
 	dir = 8;

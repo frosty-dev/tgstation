@@ -143,7 +143,7 @@
 /area/shuttle/mining/large)
 "r" = (
 /obj/machinery/door/airlock/mining{
-	name = "Mining Shuttle Cockpit"
+	name = "MINING SHUTTLE COCKPIT"
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
@@ -302,7 +302,7 @@
 /area/shuttle/mining/large)
 "D" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Mining Shuttle External Airlock"
+	name = "MINING SHUTTLE EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -339,7 +339,7 @@
 /area/shuttle/mining/large)
 "J" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Mining Shuttle External Airlock"
+	name = "MINING SHUTTLE EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{

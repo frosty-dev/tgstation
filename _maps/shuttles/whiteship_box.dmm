@@ -22,7 +22,7 @@
 	shuttle_id = "whiteship";
 	launch_status = 0;
 	movement_force = list("KNOCKDOWN" = 0, "THROW" = 0);
-	name = "Hospital Ship";
+	name = "HOSPITAL SHIP";
 	port_direction = 8;
 	preferred_direction = 4
 	},
@@ -132,7 +132,7 @@
 "aw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/medical{
-	name = "Surgery"
+	name = "SURGERY"
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
@@ -428,7 +428,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/engineering{
-	name = "Engineering"
+	name = "ENGINEERING"
 	},
 /turf/open/floor/plating,
 /area/shuttle/abandoned/engine)
@@ -586,7 +586,7 @@
 "br" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/medical{
-	name = "Surgery"
+	name = "SURGERY"
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
@@ -634,7 +634,7 @@
 "bw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/medical{
-	name = "Break Room"
+	name = "BREAK ROOM"
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
@@ -819,7 +819,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/medical/glass{
-	name = "Cryo Room"
+	name = "CRYO ROOM"
 	},
 /turf/open/floor/iron/white,
 /area/shuttle/abandoned/medbay)
@@ -874,7 +874,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/medical/glass{
-	name = "Cryo Room"
+	name = "CRYO ROOM"
 	},
 /obj/structure/cable,
 /turf/open/floor/iron/white,
@@ -900,7 +900,7 @@
 "bY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/command{
-	name = "Bridge"
+	name = "BRIDGE"
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
@@ -1114,7 +1114,7 @@
 "cv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/medical{
-	name = "Recovery Room"
+	name = "RECOVERY ROOM"
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
@@ -1124,7 +1124,7 @@
 "cw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/medical{
-	name = "Medical Storage"
+	name = "MEDICAL STORAGE"
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
@@ -1182,7 +1182,7 @@
 "cC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/engineering{
-	name = "Engineering"
+	name = "ENGINEERING"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
 	dir = 4
@@ -1348,7 +1348,7 @@
 "cT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock{
-	name = "Restroom"
+	name = "RESTROOM"
 	},
 /turf/open/floor/iron/freezer,
 /area/shuttle/abandoned/medbay)
@@ -1357,7 +1357,7 @@
 /obj/structure/table,
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/machinery/door/window/right/directional/east{
-	name = "First-Aid Supplies"
+	name = "FIRST-AID SUPPLIES"
 	},
 /obj/item/storage/box/beakers{
 	pixel_x = 6;
@@ -1406,7 +1406,7 @@
 /obj/machinery/light/small/built/directional/east,
 /obj/structure/table,
 /obj/machinery/door/window/left/directional/west{
-	name = "Medical Equipment Storage"
+	name = "MEDICAL EQUIPMENT STORAGE"
 	},
 /obj/item/clothing/neck/stethoscope{
 	pixel_y = 4
@@ -1499,7 +1499,7 @@
 "df" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/medical{
-	name = "Recovery Room"
+	name = "RECOVERY ROOM"
 	},
 /obj/effect/turf_decal/stripes/corner,
 /obj/machinery/door/firedoor,
@@ -1680,7 +1680,7 @@
 	pixel_y = -3
 	},
 /obj/machinery/door/window/left/directional/east{
-	name = "First-Aid Supplies"
+	name = "FIRST-AID SUPPLIES"
 	},
 /turf/open/floor/iron/white,
 /area/shuttle/abandoned/medbay)
@@ -1735,7 +1735,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/machinery/door/airlock{
-	name = "Cabin 1"
+	name = "CABIN 1"
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
@@ -1743,7 +1743,7 @@
 "Fg" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/medical{
-	name = "Crew Quarters"
+	name = "CREW QUARTERS"
 	},
 /obj/effect/turf_decal/stripes/corner{
 	dir = 4
@@ -1760,7 +1760,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/machinery/door/airlock{
-	name = "Cabin 2"
+	name = "CABIN 2"
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,

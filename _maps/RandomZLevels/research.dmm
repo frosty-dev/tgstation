@@ -143,7 +143,7 @@
 /obj/machinery/computer/pod{
 	dir = 1;
 	id = "spacebattlepod2";
-	name = "Hull Door Control"
+	name = "HULL DOOR CONTROL"
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/awaymission/research/interior/engineering)
@@ -508,7 +508,7 @@
 /area/awaymission/research/interior)
 "cq" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Engine Room"
+	name = "ENGINE ROOM"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/general,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -527,7 +527,7 @@
 /area/awaymission/research/interior)
 "cs" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Engine Room"
+	name = "ENGINE ROOM"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/general,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -545,7 +545,7 @@
 /area/awaymission/research/interior/genetics)
 "cy" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Genetics Maintenance"
+	name = "GENETICS MAINTENANCE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/science/genetics,
 /obj/structure/cable,
@@ -609,7 +609,7 @@
 "cR" = (
 /obj/machinery/door/airlock/highsecurity{
 	aiDisabledIdScanner = 1;
-	name = "Gateway Access"
+	name = "GATEWAY ACCESS"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/generic1,
 /obj/structure/cable,
@@ -622,7 +622,7 @@
 /area/awaymission/research/interior/maint)
 "cZ" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Engine Room"
+	name = "ENGINE ROOM"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/general,
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
@@ -632,7 +632,7 @@
 /area/awaymission/research/interior)
 "da" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Engine Room"
+	name = "ENGINE ROOM"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/general,
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
@@ -792,7 +792,7 @@
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/machinery/door/airlock/highsecurity{
 	aiDisabledIdScanner = 1;
-	name = "Secure Storage C"
+	name = "SECURE STORAGE C"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/generic1,
 /turf/open/floor/iron/dark,
@@ -801,7 +801,7 @@
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/machinery/door/airlock/highsecurity{
 	aiDisabledIdScanner = 1;
-	name = "Secure Storage D"
+	name = "SECURE STORAGE D"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/generic1,
 /turf/open/floor/iron/dark,
@@ -821,7 +821,7 @@
 "eb" = (
 /obj/machinery/door/poddoor{
 	id = "cryopodg2";
-	name = "Cryogenetic Blast Door"
+	name = "CRYOGENETIC BLAST DOOR"
 	},
 /turf/open/floor/iron/stairs,
 /area/awaymission/research/interior/genetics)
@@ -991,7 +991,7 @@
 /area/awaymission/research/interior/maint)
 "eQ" = (
 /obj/machinery/door/window/right/directional/north{
-	name = "Cell Door";
+	name = "CELL DOOR";
 	req_access = list("brig_entrance")
 	},
 /obj/effect/turf_decal/tile/red/half/contrasted{
@@ -1002,7 +1002,7 @@
 "eS" = (
 /obj/machinery/door/airlock/security/glass{
 	id_tag = "outerbrig";
-	name = "Brig"
+	name = "BRIG"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/entrance,
 /obj/effect/turf_decal/tile/red/half/contrasted{
@@ -1196,7 +1196,7 @@
 /area/awaymission/research/interior/cryo)
 "fK" = (
 /obj/machinery/door/airlock/research{
-	name = "Cryogenetics Research"
+	name = "CRYOGENETICS RESEARCH"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/science/genetics,
 /obj/effect/turf_decal/tile/purple/half/contrasted,
@@ -1208,7 +1208,7 @@
 /area/awaymission/research/interior)
 "fM" = (
 /obj/machinery/door/airlock/research{
-	name = "Cryogenetics Research"
+	name = "CRYOGENETICS RESEARCH"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/science/genetics,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -1241,7 +1241,7 @@
 "fS" = (
 /obj/machinery/door/airlock/security/glass{
 	id_tag = "outerbrig";
-	name = "Brig"
+	name = "BRIG"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /obj/effect/turf_decal/tile/red/half/contrasted,
@@ -1281,7 +1281,7 @@
 "gg" = (
 /obj/machinery/door/airlock/highsecurity{
 	aiDisabledIdScanner = 1;
-	name = "Power Storage"
+	name = "POWER STORAGE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/generic1,
 /obj/structure/cable,
@@ -1299,7 +1299,7 @@
 /area/awaymission/research/interior/secure)
 "gl" = (
 /obj/machinery/door/airlock/highsecurity{
-	name = "Vault Storage"
+	name = "VAULT STORAGE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/generic1,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -1310,7 +1310,7 @@
 /area/awaymission/research/interior/secure)
 "gn" = (
 /obj/machinery/door/airlock/research{
-	name = "Secure Storage"
+	name = "SECURE STORAGE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/generic1,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -1326,7 +1326,7 @@
 /area/awaymission/research/interior)
 "gq" = (
 /obj/machinery/door/airlock/research{
-	name = "Cryogenetics Research"
+	name = "CRYOGENETICS RESEARCH"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/science/genetics,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -1415,7 +1415,7 @@
 "hb" = (
 /obj/machinery/door/airlock/security/glass{
 	id_tag = "outerbrig";
-	name = "Brig"
+	name = "BRIG"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /obj/effect/turf_decal/tile/red/half/contrasted{
@@ -1526,7 +1526,7 @@
 /area/awaymission/research/interior/maint)
 "hE" = (
 /obj/machinery/door/window/right/directional/south{
-	name = "Cell Door";
+	name = "CELL DOOR";
 	req_access = list("security")
 	},
 /obj/effect/turf_decal/tile/red/half/contrasted,
@@ -1556,7 +1556,7 @@
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/machinery/door/airlock/highsecurity{
 	aiDisabledIdScanner = 1;
-	name = "Secure Storage A"
+	name = "SECURE STORAGE A"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/generic1,
 /turf/open/floor/iron/dark,
@@ -1565,7 +1565,7 @@
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/machinery/door/airlock/highsecurity{
 	aiDisabledIdScanner = 1;
-	name = "Secure Storage B"
+	name = "SECURE STORAGE B"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/generic1,
 /turf/open/floor/iron/dark,
@@ -1573,7 +1573,7 @@
 "hK" = (
 /obj/machinery/door/poddoor{
 	id = "cryopodg1";
-	name = "Cryogenetic Blast Door"
+	name = "CRYOGENETIC BLAST DOOR"
 	},
 /turf/open/floor/iron/stairs{
 	dir = 1
@@ -1744,7 +1744,7 @@
 /area/awaymission/research/interior)
 "iv" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Security Maintenance"
+	name = "SECURITY MAINTENANCE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /obj/structure/cable,
@@ -1755,7 +1755,7 @@
 /area/awaymission/research/interior/bathroom)
 "iB" = (
 /obj/machinery/door/airlock{
-	name = "Stall"
+	name = "STALL"
 	},
 /turf/open/floor/iron/freezer,
 /area/awaymission/research/interior/bathroom)
@@ -1802,7 +1802,7 @@
 /area/awaymission/research/interior/bathroom)
 "iP" = (
 /obj/machinery/door/airlock{
-	name = "Unisex Bathroom"
+	name = "UNISEX BATHROOM"
 	},
 /turf/open/floor/iron/freezer,
 /area/awaymission/research/interior/bathroom)
@@ -1832,7 +1832,7 @@
 /area/awaymission/research/interior/dorm)
 "iY" = (
 /obj/machinery/door/airlock{
-	name = "Bathroom"
+	name = "BATHROOM"
 	},
 /turf/open/floor/iron,
 /area/awaymission/research/interior/dorm)
@@ -1916,7 +1916,7 @@
 /area/awaymission/research/interior)
 "jt" = (
 /obj/machinery/door/airlock/medical{
-	name = "Medical"
+	name = "MEDICAL"
 	},
 /obj/effect/turf_decal/tile/blue/half/contrasted,
 /turf/open/floor/iron/white,
@@ -2065,7 +2065,7 @@
 /area/awaymission/research/interior)
 "kf" = (
 /obj/machinery/door/airlock/medical{
-	name = "Medical"
+	name = "MEDICAL"
 	},
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 1
@@ -2129,21 +2129,21 @@
 "kq" = (
 /obj/machinery/door/airlock{
 	id_tag = "Dorm1";
-	name = "Dorm 1"
+	name = "DORM 1"
 	},
 /turf/open/floor/wood,
 /area/awaymission/research/interior/dorm)
 "kr" = (
 /obj/machinery/door/airlock{
 	id_tag = "Dorm2";
-	name = "Dorm 2"
+	name = "DORM 2"
 	},
 /turf/open/floor/wood,
 /area/awaymission/research/interior/dorm)
 "ks" = (
 /obj/machinery/door/airlock{
 	id_tag = "Dorm3";
-	name = "Dorm 3"
+	name = "DORM 3"
 	},
 /turf/open/floor/wood,
 /area/awaymission/research/interior/dorm)
@@ -2444,21 +2444,21 @@
 "lK" = (
 /obj/machinery/door/airlock{
 	id_tag = "Dorm6";
-	name = "Dorm 6"
+	name = "DORM 6"
 	},
 /turf/open/floor/wood,
 /area/awaymission/research/interior/dorm)
 "lL" = (
 /obj/machinery/door/airlock{
 	id_tag = "Dorm5";
-	name = "Dorm 5"
+	name = "DORM 5"
 	},
 /turf/open/floor/wood,
 /area/awaymission/research/interior/dorm)
 "lM" = (
 /obj/machinery/door/airlock{
 	id_tag = "Dorm4";
-	name = "Dorm 4"
+	name = "DORM 4"
 	},
 /turf/open/floor/wood,
 /area/awaymission/research/interior/dorm)
@@ -2603,13 +2603,13 @@
 /area/awaymission/research/exterior)
 "mt" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Escape Pod Airlock"
+	name = "ESCAPE POD AIRLOCK"
 	},
 /turf/open/floor/mineral/titanium/blue,
 /area/awaymission/research/exterior)
 "mu" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Escape Pod One"
+	name = "ESCAPE POD ONE"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
@@ -2732,7 +2732,7 @@
 /area/awaymission/research/interior/escapepods)
 "mO" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Escape Pod Two"
+	name = "ESCAPE POD TWO"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
@@ -2752,7 +2752,7 @@
 /area/awaymission/research/interior/escapepods)
 "mS" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Escape Pod Three"
+	name = "ESCAPE POD THREE"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
@@ -2792,7 +2792,7 @@
 /area/awaymission/research/interior/escapepods)
 "mZ" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Escape Airlock"
+	name = "ESCAPE AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/plating,
@@ -2856,7 +2856,7 @@
 /area/awaymission/research/interior/security)
 "pt" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Escape Pod Three"
+	name = "ESCAPE POD THREE"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -2969,14 +2969,14 @@
 /area/awaymission/research/interior)
 "sq" = (
 /obj/machinery/door/airlock/medical{
-	name = "Medical Storage"
+	name = "MEDICAL STORAGE"
 	},
 /obj/effect/turf_decal/tile/blue/fourcorners,
 /turf/open/floor/iron/white,
 /area/awaymission/research/interior/medbay)
 "su" = (
 /obj/machinery/door/airlock/medical{
-	name = "Medical"
+	name = "MEDICAL"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
@@ -3007,7 +3007,7 @@
 /area/awaymission/research/interior/medbay)
 "tE" = (
 /obj/machinery/door/airlock/medical{
-	name = "Medical"
+	name = "MEDICAL"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
@@ -3041,7 +3041,7 @@
 /area/awaymission/research/interior)
 "va" = (
 /obj/machinery/door/airlock/research{
-	name = "Cryogenetics Research"
+	name = "CRYOGENETICS RESEARCH"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/science/genetics,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -3086,7 +3086,7 @@
 /area/space/nearstation)
 "wM" = (
 /obj/machinery/door/airlock/medical{
-	name = "Medical"
+	name = "MEDICAL"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -3130,7 +3130,7 @@
 /area/awaymission/research/interior/security)
 "xG" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Escape Pod Two"
+	name = "ESCAPE POD TWO"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -3240,7 +3240,7 @@
 /area/awaymission/research/interior/medbay)
 "Bx" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Engine Room"
+	name = "ENGINE ROOM"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/general,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -3517,7 +3517,7 @@
 /area/awaymission/research/interior)
 "Jb" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Genetics Maintenance"
+	name = "GENETICS MAINTENANCE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/science/genetics,
 /turf/open/floor/plating,
@@ -3586,7 +3586,7 @@
 "Km" = (
 /obj/machinery/door/airlock/security/glass{
 	id_tag = "outerbrig";
-	name = "Brig"
+	name = "BRIG"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/entrance,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -3672,7 +3672,7 @@
 /area/awaymission/research/interior)
 "Nu" = (
 /obj/machinery/door/airlock/medical{
-	name = "Medical Surgery"
+	name = "MEDICAL SURGERY"
 	},
 /obj/effect/turf_decal/tile/blue/fourcorners,
 /turf/open/floor/iron/white,
@@ -3766,7 +3766,7 @@
 /area/awaymission/research/interior/genetics)
 "Qd" = (
 /obj/machinery/door/airlock/medical{
-	name = "Medical"
+	name = "MEDICAL"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -3799,7 +3799,7 @@
 "Qz" = (
 /obj/machinery/door/airlock/security/glass{
 	id_tag = "outerbrig";
-	name = "Brig"
+	name = "BRIG"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/entrance,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -3891,7 +3891,7 @@
 /area/awaymission/research/interior/medbay)
 "TD" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Engine Room"
+	name = "ENGINE ROOM"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/general,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -3904,7 +3904,7 @@
 /area/awaymission/research/interior)
 "TE" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Escape Pod One"
+	name = "ESCAPE POD ONE"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -3929,7 +3929,7 @@
 "Uu" = (
 /obj/machinery/door/airlock/security/glass{
 	id_tag = "outerbrig";
-	name = "Brig"
+	name = "BRIG"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/entrance,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -4002,7 +4002,7 @@
 "WR" = (
 /obj/machinery/door/airlock/security/glass{
 	id_tag = "outerbrig";
-	name = "Brig"
+	name = "BRIG"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/entrance,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -4024,7 +4024,7 @@
 /area/awaymission/research/interior/dorm)
 "XE" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Escape Airlock"
+	name = "ESCAPE AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
@@ -4033,7 +4033,7 @@
 /area/awaymission/research/interior/escapepods)
 "XM" = (
 /obj/machinery/door/airlock/research{
-	name = "Cryogenetics Research"
+	name = "CRYOGENETICS RESEARCH"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/science/genetics,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{

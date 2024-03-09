@@ -124,7 +124,7 @@
 /area/ruin/pizzeria)
 "fa" = (
 /obj/machinery/door/airlock{
-	name = "Kitchen"
+	name = "KITCHEN"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/service/kitchen,
 /turf/open/floor/iron/white/smooth_large,
@@ -332,7 +332,7 @@
 /area/ruin/pizzeria/kitchen)
 "lR" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Moffuchi's Pizzeria"
+	name = "MOFFUCHI'S PIZZERIA"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
@@ -394,7 +394,7 @@
 /area/template_noop)
 "rT" = (
 /obj/machinery/door/airlock{
-	name = "Restrooms"
+	name = "RESTROOMS"
 	},
 /turf/open/floor/iron/freezer,
 /area/ruin/pizzeria)
@@ -605,7 +605,7 @@
 "AA" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock{
-	name = "Kitchen"
+	name = "KITCHEN"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/service/kitchen,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden,
@@ -638,7 +638,7 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/public/glass{
-	name = "Moffuchi's Pizzeria"
+	name = "MOFFUCHI'S PIZZERIA"
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -662,7 +662,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden,
 /obj/machinery/door/airlock/public/glass{
-	name = "Moffuchi's Pizzeria"
+	name = "MOFFUCHI'S PIZZERIA"
 	},
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/neutral{
@@ -690,7 +690,7 @@
 /area/ruin/pizzeria)
 "DO" = (
 /obj/machinery/door/airlock{
-	name = "Restrooms"
+	name = "RESTROOMS"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -711,10 +711,10 @@
 "EU" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/right/directional/south{
-	name = "Drive Thru"
+	name = "DRIVE THRU"
 	},
 /obj/machinery/door/window/left/directional/north{
-	name = "Drive Thru"
+	name = "DRIVE THRU"
 	},
 /turf/open/floor/iron/smooth_large,
 /area/ruin/pizzeria/kitchen)
@@ -773,7 +773,7 @@
 "IL" = (
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden,
 /obj/machinery/door/airlock/maintenance/external{
-	name = "External Access"
+	name = "EXTERNAL ACCESS"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
@@ -942,7 +942,7 @@
 "Oy" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/machinery/door/airlock/public/glass{
-	name = "Moffuchi's Pizzeria"
+	name = "MOFFUCHI'S PIZZERIA"
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -1044,7 +1044,7 @@
 /area/ruin/pizzeria)
 "Qw" = (
 /obj/machinery/door/airlock/maintenance/external{
-	name = "External Access"
+	name = "EXTERNAL ACCESS"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/plating,
@@ -1140,7 +1140,7 @@
 /area/icemoon/surface/outdoors/nospawn)
 "Ty" = (
 /obj/machinery/door/airlock{
-	name = "Restrooms"
+	name = "RESTROOMS"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden,
@@ -1298,7 +1298,7 @@
 "Ym" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/maintenance{
-	name = "Maintenance Access"
+	name = "MAINTENANCE ACCESS"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/service/kitchen,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden,

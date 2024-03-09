@@ -2,7 +2,7 @@
 "a" = (
 /obj/effect/turf_decal/bot_red,
 /obj/machinery/door/airlock/survival_pod{
-	name = "Mining Shuttle"
+	name = "MINING SHUTTLE"
 	},
 /obj/docking_port/mobile{
 	dir = 4;

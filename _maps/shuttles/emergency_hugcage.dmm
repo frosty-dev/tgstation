@@ -68,7 +68,7 @@
 /area/shuttle/escape)
 "fG" = (
 /obj/machinery/door/airlock/medical/glass{
-	name = "Emergency Shuttle Medical"
+	name = "EMERGENCY SHUTTLE MEDICAL"
 	},
 /turf/open/floor/mineral/titanium/yellow,
 /area/shuttle/escape)
@@ -128,7 +128,7 @@
 /area/shuttle/escape)
 "kB" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/mineral/titanium/yellow,
@@ -141,7 +141,7 @@
 /obj/structure/table/optable,
 /obj/machinery/status_display/evac/directional/west,
 /obj/item/toy/plush/lizard_plushie{
-	name = "Heals-The-Patients"
+	name = "HEALS-THE-PATIENTS"
 	},
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/escape)
@@ -249,7 +249,7 @@
 /area/shuttle/escape)
 "AM" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape)
@@ -295,7 +295,7 @@
 /area/shuttle/escape)
 "IH" = (
 /obj/effect/fun_balloon/sentience/emergency_shuttle{
-	group_name = "a bunch of cutesy animals";
+	group_name = "A BUNCH OF CUTESY ANIMALS";
 	effect_range = 4
 	},
 /turf/open/floor/mineral/titanium/purple,
@@ -311,7 +311,7 @@
 "JE" = (
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /obj/machinery/door/airlock/security/glass{
-	name = "Emergency Shuttle Brig"
+	name = "EMERGENCY SHUTTLE BRIG"
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/shuttle/escape/brig)
@@ -320,7 +320,7 @@
 	name = "Hugcage"
 	},
 /obj/machinery/door/airlock/medical/glass{
-	name = "Emergency Shuttle Medical"
+	name = "EMERGENCY SHUTTLE MEDICAL"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/mineral/titanium/yellow,
@@ -356,7 +356,7 @@
 "Nu" = (
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /obj/machinery/door/airlock/security/glass{
-	name = "Emergency Shuttle Brig"
+	name = "EMERGENCY SHUTTLE BRIG"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/mineral/plastitanium/red,
@@ -401,7 +401,7 @@
 "Vf" = (
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /obj/machinery/door/airlock/command/glass{
-	name = "Cockpit"
+	name = "COCKPIT"
 	},
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/escape)

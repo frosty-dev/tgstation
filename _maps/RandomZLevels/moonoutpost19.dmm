@@ -103,7 +103,7 @@
 /obj/machinery/door/poddoor{
 	id = "AwayRD";
 	layer = 2.9;
-	name = "Privacy Shutter"
+	name = "PRIVACY SHUTTER"
 	},
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -285,7 +285,7 @@
 /area/awaymission/moonoutpost19/arrivals)
 "bU" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Security Post";
+	name = "SECURITY POST";
 	req_access = "201"
 	},
 /turf/open/floor/iron/white,
@@ -506,7 +506,7 @@
 	},
 /obj/machinery/button/door{
 	id = "awaymission19atvs";
-	name = "Biohazard Shutter Control";
+	name = "BIOHAZARD SHUTTER CONTROL";
 	pixel_y = 8;
 	req_access = "201"
 	},
@@ -785,7 +785,7 @@
 /obj/machinery/door/poddoor/preopen{
 	desc = "A heavy duty blast door that opens mechanically. This one has been applied with an acid-proof coating.";
 	id = "Awaylab";
-	name = "Acid-Proof Containment Chamber Blast Door"
+	name = "ACID-PROOF CONTAINMENT CHAMBER BLAST DOOR"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
 	desc = "A one meter section of pipe. This one has been applied with an acid-proof coating.";
@@ -908,7 +908,7 @@
 	desc = "A heavy duty blast door that opens mechanically. This one has been applied with an acid-proof coating.";
 	id = "Awaybiohazard";
 	layer = 2.9;
-	name = "Acid-Proof Biohazard Containment Door"
+	name = "ACID-PROOF BIOHAZARD CONTAINMENT DOOR"
 	},
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/iron,
@@ -1100,7 +1100,7 @@
 "hM" = (
 /obj/machinery/door/airlock{
 	id_tag = "awaydorm5";
-	name = "Dorm 2"
+	name = "DORM 2"
 	},
 /turf/open/floor/wood,
 /area/awaymission/moonoutpost19/syndicate)
@@ -1212,7 +1212,7 @@
 /area/awaymission/moonoutpost19/main)
 "iu" = (
 /obj/machinery/door/airlock/medical{
-	name = "Research Division";
+	name = "RESEARCH DIVISION";
 	req_access = "201"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -1275,7 +1275,7 @@
 /obj/machinery/door/airlock/research{
 	density = 0;
 	icon_state = "open";
-	name = "Xenobiology Lab";
+	name = "XENOBIOLOGY LAB";
 	opacity = 0
 	},
 /obj/structure/cable,
@@ -1319,7 +1319,7 @@
 /area/awaymission/moonoutpost19/arrivals)
 "jb" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Power Maintenance";
+	name = "POWER MAINTENANCE";
 	req_access = "150"
 	},
 /obj/structure/cable,
@@ -1432,7 +1432,7 @@
 "ki" = (
 /obj/structure/sign/warning/vacuum{
 	desc = "A warning sign which reads 'HOSTILE ATMOSPHERE AHEAD'";
-	name = "\improper HOSTILE ATMOSPHERE AHEAD";
+	name = "\IMPROPER HOSTILE ATMOSPHERE AHEAD";
 	pixel_x = -32
 	},
 /obj/effect/turf_decal/lunar_sand/plating,
@@ -1613,7 +1613,7 @@
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/machinery/door/airlock{
 	id_tag = "awaydorm3";
-	name = "Dorm 3"
+	name = "DORM 3"
 	},
 /turf/open/floor/iron,
 /area/awaymission/moonoutpost19/arrivals)
@@ -1930,7 +1930,7 @@
 /area/awaymission/moonoutpost19/arrivals)
 "mH" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Shuttle Cockpit"
+	name = "SHUTTLE COCKPIT"
 	},
 /turf/open/floor/mineral/titanium/yellow,
 /area/awaymission/moonoutpost19/arrivals)
@@ -1950,7 +1950,7 @@
 /area/awaymission/moonoutpost19/arrivals)
 "mK" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Shuttle Airlock"
+	name = "SHUTTLE AIRLOCK"
 	},
 /turf/open/floor/mineral/titanium/blue,
 /area/awaymission/moonoutpost19/arrivals)
@@ -2098,7 +2098,7 @@
 /obj/machinery/door/poddoor/preopen{
 	desc = "A heavy duty blast door that opens mechanically. This one has been applied with an acid-proof coating.";
 	id = "Awaylab";
-	name = "Acid-Proof Containment Chamber Blast Door"
+	name = "ACID-PROOF CONTAINMENT CHAMBER BLAST DOOR"
 	},
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -2153,7 +2153,7 @@
 /area/awaymission/moonoutpost19/arrivals)
 "ol" = (
 /obj/machinery/door/airlock{
-	name = "Unisex Showers"
+	name = "UNISEX SHOWERS"
 	},
 /obj/machinery/duct,
 /turf/open/floor/iron/freezer,
@@ -2206,13 +2206,13 @@
 /obj/machinery/door/poddoor/preopen{
 	desc = "A heavy duty blast door that opens mechanically. This one has been applied with an acid-proof coating.";
 	id = "Awaybiohazard";
-	name = "Acid-Proof Biohazard Containment Door"
+	name = "ACID-PROOF BIOHAZARD CONTAINMENT DOOR"
 	},
 /obj/machinery/door/poddoor{
 	desc = "A heavy duty blast door that opens mechanically. This one has been applied with an acid-proof coating.";
 	id = "Awaybiohazard";
 	layer = 2.9;
-	name = "Acid-Proof Biohazard Containment Door"
+	name = "ACID-PROOF BIOHAZARD CONTAINMENT DOOR"
 	},
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -2220,7 +2220,7 @@
 /area/awaymission/moonoutpost19/research)
 "ot" = (
 /obj/machinery/door/airlock{
-	name = "Private Restroom"
+	name = "PRIVATE RESTROOM"
 	},
 /turf/open/floor/iron/freezer,
 /area/awaymission/moonoutpost19/research)
@@ -2277,7 +2277,7 @@
 "pc" = (
 /obj/machinery/door/airlock{
 	id_tag = "awaydorm1";
-	name = "Dorm 1"
+	name = "DORM 1"
 	},
 /turf/open/floor/iron,
 /area/awaymission/moonoutpost19/arrivals)
@@ -2399,7 +2399,7 @@
 /area/awaymission/moonoutpost19/research)
 "pP" = (
 /obj/machinery/door/airlock{
-	name = "Unit 2"
+	name = "UNIT 2"
 	},
 /turf/open/floor/iron/freezer,
 /area/awaymission/moonoutpost19/arrivals)
@@ -2684,7 +2684,7 @@
 "rm" = (
 /obj/machinery/door/airlock{
 	id_tag = "awaydorm2";
-	name = "Dorm 2"
+	name = "DORM 2"
 	},
 /obj/effect/decal/cleanable/blood/tracks{
 	desc = "Your instincts say you shouldn't be following these.";
@@ -2743,7 +2743,7 @@
 "rA" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass{
-	name = "Diner"
+	name = "DINER"
 	},
 /turf/open/floor/iron,
 /area/awaymission/moonoutpost19/arrivals)
@@ -2906,7 +2906,7 @@
 /area/awaymission/moonoutpost19/syndicate)
 "su" = (
 /obj/machinery/door/airlock{
-	name = "Kitchen Cold Room";
+	name = "KITCHEN COLD ROOM";
 	req_access = "201"
 	},
 /obj/effect/turf_decal/siding/wood/corner{
@@ -3229,7 +3229,7 @@
 /obj/machinery/door/airlock/public/glass{
 	density = 0;
 	icon_state = "open";
-	name = "Dormitories"
+	name = "DORMITORIES"
 	},
 /obj/item/stack/rods,
 /obj/item/shard{
@@ -3286,7 +3286,7 @@
 /area/awaymission/moonoutpost19/research)
 "vb" = (
 /obj/machinery/door/airlock{
-	name = "Unisex Restrooms"
+	name = "UNISEX RESTROOMS"
 	},
 /turf/open/floor/iron/freezer,
 /area/awaymission/moonoutpost19/syndicate)
@@ -3351,7 +3351,7 @@
 /obj/machinery/door/poddoor/preopen{
 	desc = "A heavy duty blast door that opens mechanically. This one has been applied with an acid-proof coating.";
 	id = "Awaylab";
-	name = "Acid-Proof Containment Chamber Blast Door"
+	name = "ACID-PROOF CONTAINMENT CHAMBER BLAST DOOR"
 	},
 /obj/item/stack/cable_coil/cut,
 /turf/open/floor/plating,
@@ -3438,7 +3438,7 @@
 	},
 /obj/machinery/button/door/directional/west{
 	id = "awaydorm3";
-	name = "Door Bolt Control";
+	name = "DOOR BOLT CONTROL";
 	normaldoorcontrol = 1;
 	specialfunctions = 4
 	},
@@ -3592,7 +3592,7 @@
 /area/awaymission/moonoutpost19/syndicate)
 "xj" = (
 /obj/machinery/door/airlock{
-	name = "Unit 1"
+	name = "UNIT 1"
 	},
 /turf/open/floor/iron/freezer,
 /area/awaymission/moonoutpost19/arrivals)
@@ -3845,7 +3845,7 @@
 /area/awaymission/moonoutpost19/arrivals)
 "zb" = (
 /obj/machinery/door/airlock{
-	name = "Unisex Restrooms"
+	name = "UNISEX RESTROOMS"
 	},
 /obj/machinery/duct,
 /turf/open/floor/iron/freezer,
@@ -3861,7 +3861,7 @@
 "zf" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock{
-	name = "Kitchen";
+	name = "KITCHEN";
 	req_access = "201"
 	},
 /obj/structure/barricade/wooden/crude,
@@ -4009,7 +4009,7 @@
 /obj/machinery/door/airlock/command{
 	density = 0;
 	icon_state = "open";
-	name = "Research Director's Office";
+	name = "RESEARCH DIRECTOR'S OFFICE";
 	opacity = 0
 	},
 /turf/open/floor/iron/cafeteria{
@@ -4027,7 +4027,7 @@
 "AC" = (
 /obj/machinery/door/window{
 	dir = 1;
-	name = "Gateway Access";
+	name = "GATEWAY ACCESS";
 	req_access = "150"
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -4068,7 +4068,7 @@
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for watching the contents of the xenobiology containment pen.";
 	dir = 8;
-	name = "xenobiology monitor";
+	name = "XENOBIOLOGY MONITOR";
 	network = list("mo19x")
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -4172,7 +4172,7 @@
 /area/awaymission/moonoutpost19/tent)
 "Bs" = (
 /obj/machinery/door/airlock/research/glass{
-	name = "Research Storage";
+	name = "RESEARCH STORAGE";
 	req_access = "201"
 	},
 /turf/open/floor/iron/white,
@@ -4210,7 +4210,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/shutters{
 	id = "awaykitchen";
-	name = "Serving Hatch"
+	name = "SERVING HATCH"
 	},
 /turf/open/floor/carpet,
 /area/awaymission/moonoutpost19/arrivals)
@@ -4852,7 +4852,7 @@
 	density = 0;
 	icon_state = "open";
 	id_tag = "awaydorm4";
-	name = "Dorm 1";
+	name = "DORM 1";
 	opacity = 0
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -4892,7 +4892,7 @@
 	},
 /obj/machinery/door/poddoor/shutters{
 	id = "awaykitchen";
-	name = "Serving Hatch"
+	name = "SERVING HATCH"
 	},
 /turf/open/floor/carpet,
 /area/awaymission/moonoutpost19/arrivals)
@@ -5203,7 +5203,7 @@
 /area/awaymission/moonoutpost19/arrivals)
 "Im" = (
 /obj/machinery/door/puzzle/keycard{
-	name = "ATV Shed Door";
+	name = "ATV SHED DOOR";
 	puzzle_id = "atvs"
 	},
 /turf/open/floor/plating,
@@ -5338,7 +5338,7 @@
 	},
 /obj/machinery/door/poddoor/shutters{
 	id = "awaykitchen";
-	name = "Serving Hatch"
+	name = "SERVING HATCH"
 	},
 /turf/open/floor/carpet,
 /area/awaymission/moonoutpost19/arrivals)
@@ -5578,7 +5578,7 @@
 "Lp" = (
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/machinery/door/airlock/highsecurity{
-	name = "Gateway";
+	name = "GATEWAY";
 	req_access = "150"
 	},
 /obj/structure/cable,
@@ -5825,7 +5825,7 @@
 /obj/machinery/door/poddoor/preopen{
 	desc = "A heavy duty blast door that opens mechanically. This one has been applied with an acid-proof coating.";
 	id = "Awaylab";
-	name = "Acid-Proof Containment Chamber Blast Door"
+	name = "ACID-PROOF CONTAINMENT CHAMBER BLAST DOOR"
 	},
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -5862,7 +5862,7 @@
 "ND" = (
 /obj/structure/mecha_wreckage/ripley/mk2{
 	desc = "Remains of the historical mech that first touched down on Moon Outpost 19. Completely irreparable, but perhaps something can be salvaged.";
-	name = "\improper Historical Ripley MK-II wreckage"
+	name = "\IMPROPER HISTORICAL RIPLEY MK-II WRECKAGE"
 	},
 /obj/effect/decal/cleanable/oil,
 /obj/item/food/grown/moonflower{
@@ -6118,7 +6118,7 @@
 /obj/structure/disposalpipe/trunk{
 	desc = "An underfloor disposal pipe. This one has been applied with an acid-proof coating.";
 	dir = 4;
-	name = "Acid-Proof disposal pipe"
+	name = "ACID-PROOF DISPOSAL PIPE"
 	},
 /obj/structure/alien/weeds,
 /obj/effect/turf_decal/stripes/line{
@@ -6398,7 +6398,7 @@
 /area/awaymission/moonoutpost19/main)
 "Qq" = (
 /obj/machinery/door/airlock/medical{
-	name = "Research Division";
+	name = "RESEARCH DIVISION";
 	req_access = "201"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -6747,7 +6747,7 @@
 /obj/machinery/door/poddoor/preopen{
 	desc = "A heavy duty blast door that opens mechanically. This one has been applied with an acid-proof coating.";
 	id = "Awaylab";
-	name = "Acid-Proof Containment Chamber Blast Door"
+	name = "ACID-PROOF CONTAINMENT CHAMBER BLAST DOOR"
 	},
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -7092,7 +7092,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/button/door/directional/west{
 	id = "awaykitchen";
-	name = "Kitchen Shutters Control"
+	name = "KITCHEN SHUTTERS CONTROL"
 	},
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/iron/cafeteria{
@@ -7225,7 +7225,7 @@
 /obj/machinery/newscaster/directional/north,
 /obj/machinery/button/door/directional/west{
 	id = "awaydorm2";
-	name = "Door Bolt Control";
+	name = "DOOR BOLT CONTROL";
 	normaldoorcontrol = 1;
 	specialfunctions = 4
 	},
@@ -7329,7 +7329,7 @@
 	},
 /obj/machinery/button/door/directional/west{
 	id = "Awaybiohazard";
-	name = "Biohazard Shutter Control";
+	name = "BIOHAZARD SHUTTER CONTROL";
 	req_access = "101"
 	},
 /obj/effect/turf_decal/tile/red/half/contrasted{
@@ -7760,7 +7760,7 @@
 /area/awaymission/moonoutpost19/main)
 "ZC" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Break Room"
+	name = "BREAK ROOM"
 	},
 /turf/open/floor/iron,
 /area/awaymission/moonoutpost19/syndicate)

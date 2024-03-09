@@ -69,7 +69,7 @@
 	},
 /obj/machinery/button/door/directional/north{
 	id = "goonwizship1";
-	name = "Strange Ship Door Button"
+	name = "STRANGE SHIP DOOR BUTTON"
 	},
 /turf/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/powered/authorship)

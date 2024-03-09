@@ -665,7 +665,7 @@
 /obj/effect/spawner/random/trash/mess,
 /obj/machinery/button/door/directional/south{
 	id = "Arrivals_Toilet2";
-	name = "Lock Control";
+	name = "LOCK CONTROL";
 	normaldoorcontrol = 1;
 	specialfunctions = 4
 	},
@@ -1433,7 +1433,7 @@
 "Xw" = (
 /obj/machinery/door/airlock{
 	id_tag = "Arrivals_Toilet2";
-	name = "Toilet Unit 2"
+	name = "TOILET UNIT 2"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8

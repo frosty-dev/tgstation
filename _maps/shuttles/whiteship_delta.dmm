@@ -21,7 +21,7 @@
 	shuttle_id = "whiteship";
 	launch_status = 0;
 	movement_force = list("KNOCKDOWN" = 0, "THROW" = 0);
-	name = "NT Frigate";
+	name = "NT FRIGATE";
 	port_direction = 8;
 	preferred_direction = 4
 	},
@@ -231,14 +231,14 @@
 "aD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock{
-	name = "Restroom"
+	name = "RESTROOM"
 	},
 /turf/open/floor/iron/freezer,
 /area/shuttle/abandoned/crew)
 "aE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock{
-	name = "Cabin 2"
+	name = "CABIN 2"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /turf/open/floor/wood,
@@ -246,7 +246,7 @@
 "aF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock{
-	name = "Cabin 1"
+	name = "CABIN 1"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /turf/open/floor/wood,
@@ -283,7 +283,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/external/glass/ruin{
-	name = "E.V.A Access"
+	name = "E.V.A ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
@@ -389,7 +389,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/external/glass/ruin{
-	name = "E.V.A Access"
+	name = "E.V.A ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/decal/cleanable/dirt,
@@ -548,7 +548,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass{
-	name = "Crew Quarters"
+	name = "CREW QUARTERS"
 	},
 /turf/open/floor/iron,
 /area/shuttle/abandoned/crew)
@@ -556,7 +556,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass{
-	name = "Crew Quarters"
+	name = "CREW QUARTERS"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/structure/cable,
@@ -668,7 +668,7 @@
 /area/shuttle/abandoned/bridge)
 "bC" = (
 /obj/machinery/door/airlock/command{
-	name = "Bridge"
+	name = "BRIDGE"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/firedoor,
@@ -918,7 +918,7 @@
 /area/shuttle/abandoned/engine)
 "cd" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Engineering"
+	name = "ENGINEERING"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
@@ -1095,7 +1095,7 @@
 	},
 /obj/machinery/button/door/directional/west{
 	id = "whiteship_bridge";
-	name = "Bridge Blast Door Control";
+	name = "BRIDGE BLAST DOOR CONTROL";
 	pixel_y = 6
 	},
 /turf/open/floor/iron/dark,
@@ -1271,7 +1271,7 @@
 /area/shuttle/abandoned/medbay)
 "cS" = (
 /obj/machinery/door/airlock/medical/glass{
-	name = "Medbay"
+	name = "MEDBAY"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/firedoor,
@@ -1279,7 +1279,7 @@
 /area/shuttle/abandoned/medbay)
 "cT" = (
 /obj/machinery/door/airlock/medical/glass{
-	name = "Medbay"
+	name = "MEDBAY"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/firedoor,
@@ -1342,7 +1342,7 @@
 /area/shuttle/abandoned/engine)
 "de" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Engineering"
+	name = "ENGINEERING"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
@@ -1367,7 +1367,7 @@
 "dh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/medical{
-	name = "Medbay Storage"
+	name = "MEDBAY STORAGE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
 	dir = 4
@@ -1462,7 +1462,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/external/glass/ruin{
-	name = "E.V.A Access"
+	name = "E.V.A ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/decal/cleanable/dirt,
@@ -1479,7 +1479,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/external/glass/ruin{
-	name = "E.V.A Access"
+	name = "E.V.A ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
@@ -1874,7 +1874,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/secure_closet/freezer{
 	locked = 0;
-	name = "fridge"
+	name = "FRIDGE"
 	},
 /obj/item/food/sausage,
 /obj/item/reagent_containers/cup/glass/bottle/beer{

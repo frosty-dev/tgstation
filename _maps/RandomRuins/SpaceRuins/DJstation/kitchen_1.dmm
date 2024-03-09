@@ -60,7 +60,7 @@
 /area/space/nearstation)
 "J" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Kitchen"
+	name = "KITCHEN"
 	},
 /obj/modular_map_connector,
 /turf/template_noop,
@@ -74,7 +74,7 @@
 /area/ruin/space/djstation)
 "O" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Kitchen"
+	name = "KITCHEN"
 	},
 /turf/template_noop,
 /area/template_noop)

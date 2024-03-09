@@ -66,7 +66,7 @@
 /area/shuttle/mining)
 "C" = (
 /obj/machinery/door/airlock/survival_pod/glass{
-	name = "Public Mining Shuttle"
+	name = "PUBLIC MINING SHUTTLE"
 	},
 /obj/effect/turf_decal/bot_red,
 /obj/docking_port/mobile{

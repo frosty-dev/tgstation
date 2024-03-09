@@ -11,7 +11,7 @@
 /area/ruin/powered/beach)
 "ao" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Resort Lobby"
+	name = "RESORT LOBBY"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
@@ -234,7 +234,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
 /obj/machinery/door/airlock/public/glass{
-	name = "Resort Casino"
+	name = "RESORT CASINO"
 	},
 /turf/open/floor/wood,
 /area/ruin/powered/beach)
@@ -258,7 +258,7 @@
 /area/ruin/powered/beach)
 "gT" = (
 /obj/machinery/door/airlock/sandstone{
-	name = "Surfer Shack 2"
+	name = "SURFER SHACK 2"
 	},
 /turf/open/floor/wood,
 /area/ruin/powered/beach)
@@ -310,7 +310,7 @@
 /area/ruin/powered/beach)
 "hF" = (
 /obj/machinery/door/airlock/sandstone{
-	name = "Resort Bathroom"
+	name = "RESORT BATHROOM"
 	},
 /turf/open/floor/wood,
 /area/ruin/powered/beach)
@@ -378,7 +378,7 @@
 /area/ruin/powered/beach)
 "li" = (
 /obj/machinery/door/airlock/sandstone{
-	name = "Bar Access"
+	name = "BAR ACCESS"
 	},
 /turf/open/floor/wood,
 /area/ruin/powered/beach)
@@ -1195,7 +1195,7 @@
 /area/ruin/powered/beach)
 "Sn" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Supply Room"
+	name = "SUPPLY ROOM"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
@@ -1379,7 +1379,7 @@
 /area/ruin/powered/beach)
 "Xt" = (
 /obj/machinery/door/airlock/sandstone{
-	name = "Surfer Shack 1"
+	name = "SURFER SHACK 1"
 	},
 /turf/open/floor/wood,
 /area/ruin/powered/beach)

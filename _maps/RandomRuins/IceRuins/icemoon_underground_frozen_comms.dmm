@@ -241,7 +241,7 @@
 /obj/machinery/light/small/directional/south,
 /obj/machinery/button/door/directional/north{
 	id = "ice_comms_car";
-	name = "Garage Door Button";
+	name = "GARAGE DOOR BUTTON";
 	pixel_x = -23;
 	pixel_y = 22;
 	req_access = list("research")
@@ -369,7 +369,7 @@
 "RK" = (
 /obj/machinery/door/poddoor/shutters/window/preopen{
 	id = "ice_comms_car";
-	name = "Garage Door"
+	name = "GARAGE DOOR"
 	},
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/stripes/line{

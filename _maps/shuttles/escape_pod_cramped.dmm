@@ -7,7 +7,7 @@
 	port_direction = 2
 	},
 /obj/machinery/door/airlock/external{
-	name = "Escape Pod Airlock"
+	name = "ESCAPE POD AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/structure/fans/tiny,

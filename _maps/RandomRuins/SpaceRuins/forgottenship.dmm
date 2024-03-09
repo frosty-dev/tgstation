@@ -23,7 +23,7 @@
 "ae" = (
 /obj/structure/fans/tiny,
 /obj/machinery/door/airlock/external/ruin{
-	name = "Syndicate Ship Airlock"
+	name = "SYNDICATE SHIP AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/mineral/plastitanium,
@@ -90,7 +90,7 @@
 /obj/structure/window/reinforced/plasma/plastitanium,
 /obj/machinery/door/poddoor{
 	id = "fslockdown";
-	name = "Ship Blast Door";
+	name = "SHIP BLAST DOOR";
 	state_open = 1
 	},
 /turf/open/floor/mineral/plastitanium,
@@ -150,7 +150,7 @@
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "aQ" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Syndicate Ship Airlock"
+	name = "SYNDICATE SHIP AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/iron/dark,
@@ -177,7 +177,7 @@
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "aU" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Syndicate Ship Airlock"
+	name = "SYNDICATE SHIP AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/mineral/plastitanium,
@@ -223,7 +223,7 @@
 "be" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/external/ruin{
-	name = "Syndicate Ship Airlock"
+	name = "SYNDICATE SHIP AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/mineral/plastitanium,
@@ -344,19 +344,19 @@
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "bx" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Captain's Room"
+	name = "CAPTAIN'S ROOM"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/poddoor{
 	id = "fscaproom";
-	name = "Captain's Blast Door";
+	name = "CAPTAIN'S BLAST DOOR";
 	state_open = 1
 	},
 /turf/open/floor/carpet/royalblack,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "by" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Syndicate Ship Airlock"
+	name = "SYNDICATE SHIP AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/mineral/plastitanium,
@@ -398,7 +398,7 @@
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "bF" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Syndicate Ship Airlock"
+	name = "SYNDICATE SHIP AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/structure/cable,
@@ -432,7 +432,7 @@
 /obj/structure/cable,
 /obj/structure/fans/tiny,
 /obj/machinery/door/airlock/external/ruin{
-	name = "Syndicate Ship Airlock"
+	name = "SYNDICATE SHIP AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/mineral/plastitanium,
@@ -554,12 +554,12 @@
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "ch" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Captain's Room"
+	name = "CAPTAIN'S ROOM"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/poddoor{
 	id = "fscaproom";
-	name = "Captain's Blast Door";
+	name = "CAPTAIN'S BLAST DOOR";
 	state_open = 1
 	},
 /turf/open/floor/mineral/plastitanium/red,
@@ -583,7 +583,7 @@
 /area/ruin/space/has_grav/syndicate_forgotten_cargopod)
 "cm" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Syndicate Ship Airlock"
+	name = "SYNDICATE SHIP AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/mineral/plastitanium/red,
@@ -596,21 +596,21 @@
 /obj/structure/filingcabinet,
 /obj/machinery/door/window{
 	dir = 8;
-	name = "Syndicate Interior Door";
+	name = "SYNDICATE INTERIOR DOOR";
 	req_access = list("syndicate")
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "cp" = (
 /obj/machinery/door/window{
-	name = "Control Room";
+	name = "CONTROL ROOM";
 	req_access = list("syndicate")
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "cq" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Bridge"
+	name = "BRIDGE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
@@ -708,7 +708,7 @@
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "cG" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Syndicate Ship Airlock"
+	name = "SYNDICATE SHIP AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/structure/cable,
@@ -733,14 +733,14 @@
 "cJ" = (
 /obj/machinery/door/window{
 	dir = 1;
-	name = "Spare Equipment";
+	name = "SPARE EQUIPMENT";
 	req_access = list("syndicate")
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "cK" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Syndicate Ship Airlock"
+	name = "SYNDICATE SHIP AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/structure/cable,
@@ -847,7 +847,7 @@
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "cZ" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Syndicate Ship Airlock"
+	name = "SYNDICATE SHIP AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/iron/dark/side{
@@ -902,7 +902,7 @@
 	anchored = 1;
 	desc = "A basic closet for all your villainous needs.";
 	locked = 1;
-	name = "Closet";
+	name = "CLOSET";
 	req_access = list("syndicate");
 	secure = 1
 	},
@@ -941,7 +941,7 @@
 /obj/structure/fans/tiny,
 /obj/machinery/door/airlock/grunge{
 	desc = "Vault airlock preventing air from going out.";
-	name = "Syndicate Vault Airlock"
+	name = "SYNDICATE VAULT AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/pod/dark,
@@ -957,7 +957,7 @@
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "dn" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Syndicate Ship Airlock"
+	name = "SYNDICATE SHIP AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/plating,

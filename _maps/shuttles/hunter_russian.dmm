@@ -194,7 +194,7 @@
 	},
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/door/airlock/security/glass{
-	name = "Cockpit Access"
+	name = "COCKPIT ACCESS"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/hunter,
 /turf/open/floor/pod/light,
@@ -213,7 +213,7 @@
 /area/shuttle/hunter/russian)
 "tm" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Cargo Hold Access"
+	name = "CARGO HOLD ACCESS"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
 	dir = 4
@@ -265,7 +265,7 @@
 /area/shuttle/hunter/russian)
 "xf" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Crew Storage"
+	name = "CREW STORAGE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
 	dir = 4
@@ -276,7 +276,7 @@
 /area/shuttle/hunter/russian)
 "xE" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Cockpit Access"
+	name = "COCKPIT ACCESS"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
 	dir = 4
@@ -531,7 +531,7 @@
 /area/shuttle/hunter/russian)
 "LT" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Ship Support Systems"
+	name = "SHIP SUPPORT SYSTEMS"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
@@ -574,7 +574,7 @@
 	},
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/door/airlock/security/glass{
-	name = "Cargo Hold Access"
+	name = "CARGO HOLD ACCESS"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/hunter,
 /turf/open/floor/pod/light,
@@ -610,7 +610,7 @@
 	dir = 1
 	},
 /obj/structure/closet/crate/secure/gear{
-	name = "commandant's crate"
+	name = "COMMANDANT'S CRATE"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/item/gun/ballistic/automatic/pistol,
@@ -696,7 +696,7 @@
 /obj/docking_port/stationary{
 	dwidth = 11;
 	height = 16;
-	name = "Deep Space";
+	name = "DEEP SPACE";
 	shuttle_id = "pirate_home";
 	width = 17
 	},

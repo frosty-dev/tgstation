@@ -211,7 +211,7 @@
 "kg" = (
 /obj/item/toy/plush/beeplushie{
 	desc = "How did this get here?";
-	name = "Secret bee plushie"
+	name = "SECRET BEE PLUSHIE"
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/interdyne)
@@ -378,7 +378,7 @@
 /area/ruin/space/has_grav/interdyne)
 "pE" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Chief Researcher's Room"
+	name = "CHIEF RESEARCHER'S ROOM"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/medical/general,
 /obj/structure/cable,
@@ -744,7 +744,7 @@
 "FN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/maintenance{
-	name = "Restroom"
+	name = "RESTROOM"
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/interdyne)
@@ -977,7 +977,7 @@
 	desc = "Ew, I think I see a hairball.";
 	icon = 'icons/obj/mining_zones/survival_pod.dmi';
 	icon_state = "fan_tiny";
-	name = "shower drain"
+	name = "SHOWER DRAIN"
 	},
 /obj/machinery/shower/directional/east,
 /obj/item/soap/syndie,

@@ -469,7 +469,7 @@
 	dir = 4;
 	launch_status = 0;
 	movement_force = list("KNOCKDOWN"=0,"THROW"=0);
-	name = "Silverscale Cruiser";
+	name = "SILVERSCALE CRUISER";
 	preferred_direction = 4
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -961,7 +961,7 @@
 /obj/structure/table,
 /obj/machinery/button/door{
 	id = "silverbridge";
-	name = "Window Shutters Control";
+	name = "WINDOW SHUTTERS CONTROL";
 	pixel_y = -5
 	},
 /obj/item/radio/intercom{

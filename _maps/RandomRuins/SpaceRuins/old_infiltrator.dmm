@@ -27,7 +27,7 @@
 /area/ruin/space/unpowered)
 "cj" = (
 /obj/machinery/door/window/brigdoor/left/directional/north{
-	name = "Bomb Storage";
+	name = "BOMB STORAGE";
 	req_access = list("syndicate")
 	},
 /obj/effect/spawner/random/engineering/tracking_beacon,
@@ -43,7 +43,7 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/airlock/external/ruin{
-	name = "Exterior Airlock"
+	name = "EXTERIOR AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/effect/turf_decal/stripes/red/line{
@@ -71,7 +71,7 @@
 /area/ruin/space/unpowered)
 "en" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Cockpit"
+	name = "COCKPIT"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/leader,
 /obj/effect/mapping_helpers/airlock/locked,
@@ -246,7 +246,7 @@
 "qL" = (
 /obj/machinery/door/window/brigdoor/left/directional/west{
 	req_access = list("syndicate");
-	name = "Engineering"
+	name = "ENGINEERING"
 	},
 /obj/effect/turf_decal/stripes/red/line{
 	dir = 8
@@ -321,7 +321,7 @@
 	dir = 1
 	},
 /obj/machinery/door/window/brigdoor/left/directional/north{
-	name = "Teleporter";
+	name = "TELEPORTER";
 	req_access = list("syndicate")
 	},
 /obj/item/stock_parts/scanning_module/adv{
@@ -336,7 +336,7 @@
 "wJ" = (
 /obj/machinery/door/poddoor{
 	id = "ruined_infiltrator";
-	name = "Exterior Blast Door"
+	name = "EXTERIOR BLAST DOOR"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/turf_decal/siding/thinplating_new/dark{
@@ -502,7 +502,7 @@
 	dir = 4
 	},
 /obj/machinery/door/window/brigdoor/right/directional/east{
-	name = "Medical";
+	name = "MEDICAL";
 	req_access = list("syndicate")
 	},
 /turf/open/floor/iron/dark/airless,
@@ -583,7 +583,7 @@
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /obj/machinery/door/poddoor/shutters{
 	id = "ruined_infiltrator_shutters";
-	name = "Cockpit Shutters"
+	name = "COCKPIT SHUTTERS"
 	},
 /turf/open/floor/plating,
 /area/ruin/space/unpowered)
@@ -650,7 +650,7 @@
 "Tx" = (
 /obj/machinery/door/window/brigdoor/right/directional/west{
 	req_access = list("syndicate");
-	name = "Engineering"
+	name = "ENGINEERING"
 	},
 /obj/effect/turf_decal/stripes/red/line{
 	dir = 8

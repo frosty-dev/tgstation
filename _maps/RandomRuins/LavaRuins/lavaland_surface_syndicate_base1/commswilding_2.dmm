@@ -85,7 +85,7 @@
 	},
 /obj/item/radio/intercom{
 	freerange = 1;
-	name = "Syndicate Radio Intercom";
+	name = "SYNDICATE RADIO INTERCOM";
 	pixel_y = -26
 	},
 /turf/open/floor/iron/dark,
@@ -153,7 +153,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
 /obj/machinery/door/airlock/hatch{
-	name = "Telecommunications"
+	name = "TELECOMMUNICATIONS"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/modular_map_connector,

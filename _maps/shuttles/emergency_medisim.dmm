@@ -5,7 +5,7 @@
 /area/shuttle/escape/simulation)
 "aB" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/escape)
@@ -92,7 +92,7 @@
 /area/shuttle/escape)
 "fa" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Engine Maintenance Access"
+	name = "ENGINE MAINTENANCE ACCESS"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/mineral/titanium/white,
@@ -617,7 +617,7 @@
 /area/shuttle/escape/simulation)
 "Aw" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Engine Maintenance Access"
+	name = "ENGINE MAINTENANCE ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
@@ -874,7 +874,7 @@
 	pixel_y = 9
 	},
 /obj/machinery/door/morgue{
-	name = "Emergency Supplies"
+	name = "EMERGENCY SUPPLIES"
 	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape)
@@ -1010,7 +1010,7 @@
 /area/shuttle/escape/simulation)
 "Mt" = (
 /obj/machinery/door/airlock/medical/glass{
-	name = "Escape Shuttle Infirmary"
+	name = "ESCAPE SHUTTLE INFIRMARY"
 	},
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/escape)
@@ -1037,7 +1037,7 @@
 /area/shuttle/escape/simulation)
 "NN" = (
 /obj/machinery/door/airlock/command/glass{
-	name = "Cockpit"
+	name = "COCKPIT"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /turf/open/floor/mineral/titanium/white,
@@ -1063,7 +1063,7 @@
 /area/shuttle/escape/simulation)
 "NX" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Cargo Bay Airlock"
+	name = "EMERGENCY SHUTTLE CARGO BAY AIRLOCK"
 	},
 /turf/open/floor/mineral/titanium/yellow,
 /area/shuttle/escape)
@@ -1116,7 +1116,7 @@
 /area/shuttle/escape/simulation)
 "QS" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/docking_port/mobile/emergency{
 	dir = 1;
@@ -1146,7 +1146,7 @@
 /area/shuttle/escape/simulation)
 "RK" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Brig"
+	name = "BRIG"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/mineral/plastitanium/red,

@@ -304,7 +304,7 @@
 /obj/item/stack/sheet/bluespace_crystal,
 /obj/machinery/button/door{
 	id = "geodebridge";
-	name = "Window Shutters Control";
+	name = "WINDOW SHUTTERS CONTROL";
 	pixel_y = 30
 	},
 /turf/open/misc/dirt/station,
@@ -519,7 +519,7 @@
 /obj/docking_port/mobile/pirate{
 	launch_status = 0;
 	movement_force = list("KNOCKDOWN"=0,"THROW"=0);
-	name = "Pirate Ship";
+	name = "PIRATE SHIP";
 	port_direction = 2;
 	dir = 4
 	},
@@ -536,7 +536,7 @@
 /area/shuttle/pirate)
 "BA" = (
 /obj/structure/closet/crate/cardboard{
-	name = "box of climbing hooks"
+	name = "BOX OF CLIMBING HOOKS"
 	},
 /obj/item/climbing_hook/syndicate,
 /obj/item/climbing_hook/syndicate,

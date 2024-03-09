@@ -144,7 +144,7 @@
 /area/shuttle/pirate)
 "ap" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Port Gun Battery"
+	name = "PORT GUN BATTERY"
 	},
 /obj/structure/barricade/wooden/crude,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
@@ -196,7 +196,7 @@
 "au" = (
 /obj/machinery/door/airlock/hatch{
 	id_tag = "piratebridgebolt";
-	name = "Bridge"
+	name = "BRIDGE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
@@ -205,7 +205,7 @@
 /area/shuttle/pirate)
 "av" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Starboard Gun Battery"
+	name = "STARBOARD GUN BATTERY"
 	},
 /obj/structure/barricade/wooden/crude,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
@@ -607,7 +607,7 @@
 "bM" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/machinery/door/airlock{
-	name = "Crew Cabin"
+	name = "CREW CABIN"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
@@ -809,7 +809,7 @@
 "mU" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/machinery/door/airlock/engineering{
-	name = "Engineering"
+	name = "ENGINEERING"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
@@ -854,7 +854,7 @@
 /area/shuttle/pirate)
 "wf" = (
 /obj/machinery/door/airlock{
-	name = "Unisex Restrooms"
+	name = "UNISEX RESTROOMS"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
@@ -875,7 +875,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/hatch{
-	name = "Armory Access"
+	name = "ARMORY ACCESS"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
@@ -884,7 +884,7 @@
 "zw" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/machinery/door/airlock{
-	name = "Captain's Quarters"
+	name = "CAPTAIN'S QUARTERS"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
@@ -904,7 +904,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /obj/structure/window/spawner/directional/east,
 /obj/machinery/door/window{
-	name = "Decontamination"
+	name = "DECONTAMINATION"
 	},
 /turf/open/floor/plating,
 /area/shuttle/pirate)

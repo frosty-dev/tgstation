@@ -166,7 +166,7 @@
 "rs" = (
 /obj/machinery/button/door/directional/west{
 	desc = "After all, what's more important than making sure you get what you're due?";
-	name = "Criminal Shutters"
+	name = "CRIMINAL SHUTTERS"
 	},
 /obj/structure/cable,
 /turf/open/floor/iron/dark/smooth_edge{
@@ -204,7 +204,7 @@
 "uh" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
-	name = "Criminal Shutters"
+	name = "CRIMINAL SHUTTERS"
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/thelizardsgas)
@@ -311,7 +311,7 @@
 /obj/machinery/door/airlock/external/glass,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/machinery/door/poddoor/shutters/preopen{
-	name = "Criminal Shutters"
+	name = "CRIMINAL SHUTTERS"
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/thelizardsgas)

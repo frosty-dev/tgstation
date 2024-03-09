@@ -37,7 +37,7 @@
 /area/ruin/space/djstation)
 "J" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Kitchen"
+	name = "KITCHEN"
 	},
 /turf/template_noop,
 /area/ruin/space/djstation)
@@ -46,7 +46,7 @@
 /area/ruin/space/djstation)
 "N" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Kitchen"
+	name = "KITCHEN"
 	},
 /obj/modular_map_connector,
 /turf/template_noop,

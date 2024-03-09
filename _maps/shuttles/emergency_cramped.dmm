@@ -8,7 +8,7 @@
 /area/shuttle/escape)
 "c" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /obj/structure/fans/tiny,
@@ -55,7 +55,7 @@
 /area/shuttle/escape)
 "k" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/docking_port/mobile/emergency{
 	name = "Secure Transport Vessel 5"
@@ -89,7 +89,7 @@
 /area/shuttle/escape)
 "q" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,

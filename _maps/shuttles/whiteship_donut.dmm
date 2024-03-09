@@ -174,7 +174,7 @@
 "pM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/titanium{
-	name = "Restroom"
+	name = "RESTROOM"
 	},
 /turf/open/floor/iron/showroomfloor/airless,
 /area/shuttle/abandoned)
@@ -266,7 +266,7 @@
 "CC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/titanium{
-	name = "Cockpit"
+	name = "COCKPIT"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/admin/captain,
 /obj/effect/mapping_helpers/airlock/locked,
@@ -362,7 +362,7 @@
 	dir = 2;
 	shuttle_id = "whiteship";
 	launch_status = 0;
-	name = "White Ship";
+	name = "WHITE SHIP";
 	port_direction = 2
 	},
 /turf/open/floor/plating/airless,
@@ -484,7 +484,7 @@
 "ZA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/titanium{
-	name = "Mech Bay"
+	name = "MECH BAY"
 	},
 /turf/open/floor/plating/airless,
 /area/shuttle/abandoned)

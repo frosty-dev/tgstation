@@ -60,7 +60,7 @@
 /area/virtual_domain/powered)
 "bG" = (
 /obj/structure/lattice/catwalk{
-	name = "industrial lift"
+	name = "INDUSTRIAL LIFT"
 	},
 /obj/structure/closet/crate/preopen,
 /obj/structure/railing,
@@ -757,7 +757,7 @@
 "wq" = (
 /obj/structure/table/wood,
 /obj/machinery/button/door{
-	name = "Cargo Bay Lockdown";
+	name = "CARGO BAY LOCKDOWN";
 	id = "factorylockdown"
 	},
 /turf/open/floor/carpet/royalblue{
@@ -856,7 +856,7 @@
 /area/virtual_domain/powered)
 "yM" = (
 /turf/closed/indestructible/fakedoor{
-	name = "Stairwell Access"
+	name = "STAIRWELL ACCESS"
 	},
 /area/virtual_domain/powered)
 "yQ" = (
@@ -947,7 +947,7 @@
 /area/virtual_domain/powered)
 "BI" = (
 /obj/machinery/door/airlock/command/glass{
-	name = "Quartermaster's Office"
+	name = "QUARTERMASTER'S OFFICE"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/away/command,
 /obj/effect/turf_decal/trimline/yellow/line{
@@ -1474,7 +1474,7 @@
 /area/virtual_domain/safehouse)
 "Qr" = (
 /turf/closed/indestructible/fakedoor/maintenance{
-	name = "maintenance access"
+	name = "MAINTENANCE ACCESS"
 	},
 /area/virtual_domain/powered)
 "Qv" = (
@@ -1846,7 +1846,7 @@
 "Ym" = (
 /mob/living/simple_animal/pet/cat/space,
 /obj/structure/bed/dogbed{
-	name = "cat bed"
+	name = "CAT BED"
 	},
 /obj/item/toy/plush/moth{
 	pixel_x = 3;

@@ -60,7 +60,7 @@
 "l" = (
 /obj/machinery/door/poddoor{
 	id = "QMLoaddoor2";
-	name = "Supply Dock Loading Door"
+	name = "SUPPLY DOCK LOADING DOOR"
 	},
 /obj/machinery/conveyor{
 	dir = 8;
@@ -74,7 +74,7 @@
 /area/shuttle/supply)
 "o" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Supply Shuttle Airlock"
+	name = "SUPPLY SHUTTLE AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /turf/open/floor/plating,
@@ -98,7 +98,7 @@
 /area/shuttle/supply)
 "q" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Supply Shuttle Airlock"
+	name = "SUPPLY SHUTTLE AIRLOCK"
 	},
 /obj/docking_port/mobile/supply,
 /obj/effect/mapping_helpers/airlock/access/all/supply/general,
@@ -107,7 +107,7 @@
 "r" = (
 /obj/machinery/door/poddoor{
 	id = "QMLoaddoor";
-	name = "Supply Dock Loading Door"
+	name = "SUPPLY DOCK LOADING DOOR"
 	},
 /obj/machinery/conveyor{
 	dir = 4;

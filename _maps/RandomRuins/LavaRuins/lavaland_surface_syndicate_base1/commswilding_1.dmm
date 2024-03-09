@@ -103,7 +103,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
 /obj/machinery/door/airlock/hatch{
-	name = "Telecommunications"
+	name = "TELECOMMUNICATIONS"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/modular_map_connector,
@@ -129,7 +129,7 @@
 /area/ruin/syndicate_lava_base/telecomms)
 "O" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Telecommunications Control"
+	name = "TELECOMMUNICATIONS CONTROL"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/turf_decal/tile/neutral/fourcorners,

@@ -913,7 +913,7 @@
 /area/misc/anomaly_research)
 "ya" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Mining Station Maintenance"
+	name = "MINING STATION MAINTENANCE"
 	},
 /turf/open/floor/plating,
 /area/misc/anomaly_research)
@@ -932,7 +932,7 @@
 /area/misc/anomaly_research)
 "yJ" = (
 /obj/machinery/door/airlock/research/glass{
-	name = "Pharmacy"
+	name = "PHARMACY"
 	},
 /turf/open/floor/iron/white,
 /area/misc/anomaly_research)
@@ -1338,7 +1338,7 @@
 /area/misc/anomaly_research)
 "Kc" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Mining Station Maintenance"
+	name = "MINING STATION MAINTENANCE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -1781,7 +1781,7 @@
 /area/misc/anomaly_research)
 "Xo" = (
 /obj/machinery/door/airlock{
-	name = "Unisex Restrooms"
+	name = "UNISEX RESTROOMS"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1835,7 +1835,7 @@
 "Zv" = (
 /obj/machinery/duct,
 /obj/machinery/door/airlock/research/glass{
-	name = "Pharmacy"
+	name = "PHARMACY"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,

@@ -123,7 +123,7 @@
 /area/shuttle/escape)
 "ga" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/mineral/titanium,
@@ -166,7 +166,7 @@
 "jH" = (
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /obj/machinery/door/airlock/command/glass{
-	name = "Cockpit"
+	name = "COCKPIT"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/iron/dark,
@@ -443,7 +443,7 @@
 "rH" = (
 /obj/structure/chair/sofa/corp/corner{
 	dir = 1;
-	name = "couch";
+	name = "COUCH";
 	desc = "Looks like someone threw it out. Covered in donut crumbs."
 	},
 /turf/open/floor/mineral/silver,
@@ -490,7 +490,7 @@
 /area/shuttle/escape)
 "vK" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Brig"
+	name = "BRIG"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /obj/structure/fans/tiny,
@@ -565,7 +565,7 @@
 /area/shuttle/escape)
 "xI" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/docking_port/mobile/emergency{
 	dir = 2;
@@ -655,7 +655,7 @@
 "Bb" = (
 /obj/structure/chair/sofa/corp/left{
 	desc = "Looks like someone threw it out. Covered in donut crumbs.";
-	name = "couch";
+	name = "COUCH";
 	dir = 4
 	},
 /turf/open/floor/mineral/silver,
@@ -1000,7 +1000,7 @@
 "Wp" = (
 /obj/machinery/door/window/left/directional/west{
 	dir = 4;
-	name = "Infirmary"
+	name = "INFIRMARY"
 	},
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)

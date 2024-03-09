@@ -116,7 +116,7 @@
 /area/ruin/space/has_grav)
 "aG" = (
 /obj/structure/door_assembly/door_assembly_public{
-	name = "broken airlock"
+	name = "BROKEN AIRLOCK"
 	},
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /turf/open/floor/iron/airless,

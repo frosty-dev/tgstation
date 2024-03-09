@@ -120,7 +120,7 @@
 /area/shuttle/abandoned/engine)
 "dj" = (
 /obj/machinery/door/airlock/shuttle{
-	name = "Sleeping Quarter"
+	name = "SLEEPING QUARTER"
 	},
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden,
 /obj/structure/cable,
@@ -150,7 +150,7 @@
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /obj/machinery/door/poddoor{
 	id = "whiteship_windows";
-	name = "Exterior Window Blast Door"
+	name = "EXTERIOR WINDOW BLAST DOOR"
 	},
 /turf/open/floor/plating,
 /area/shuttle/abandoned/bridge)
@@ -177,7 +177,7 @@
 /area/shuttle/abandoned/engine)
 "gG" = (
 /obj/machinery/door/airlock/shuttle{
-	name = "Left Engine Maintenance"
+	name = "LEFT ENGINE MAINTENANCE"
 	},
 /obj/machinery/atmospherics/pipe/smart/simple/supply/visible{
 	dir = 8
@@ -214,7 +214,7 @@
 	dir = 8
 	},
 /obj/machinery/button/door/directional/west{
-	name = "Bolt Control";
+	name = "BOLT CONTROL";
 	id = "ws_westbolts";
 	normaldoorcontrol = 1;
 	specialfunctions = 4
@@ -269,7 +269,7 @@
 	health = 60;
 	melee_damage_lower = 11;
 	melee_damage_upper = 11;
-	name = "Rotting Carcass";
+	name = "ROTTING CARCASS";
 	outfit = /datum/outfit/corpse_assistant
 	},
 /turf/open/floor/mineral/plastitanium,
@@ -318,7 +318,7 @@
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /obj/machinery/door/poddoor{
 	id = "whiteship_windows";
-	name = "Exterior Window Blast Door"
+	name = "EXTERIOR WINDOW BLAST DOOR"
 	},
 /obj/effect/decal/cleanable/blood/splatter/over_window,
 /turf/open/floor/plating,
@@ -394,7 +394,7 @@
 /area/shuttle/abandoned/bridge)
 "Fp" = (
 /obj/machinery/door/airlock/shuttle{
-	name = "Right Engine Maintenance"
+	name = "RIGHT ENGINE MAINTENANCE"
 	},
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden{
 	dir = 4

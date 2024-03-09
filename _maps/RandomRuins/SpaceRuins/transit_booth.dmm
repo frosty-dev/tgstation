@@ -45,7 +45,7 @@
 /area/ruin/space/has_grav/transit_booth)
 "ag" = (
 /obj/machinery/door/airlock/external{
-	name = "Transit Booth Airlock"
+	name = "TRANSIT BOOTH AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -55,7 +55,7 @@
 "ah" = (
 /obj/effect/turf_decal/stripes/red/line,
 /obj/machinery/door/window/right/directional/west{
-	name = "Eastbound"
+	name = "EASTBOUND"
 	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/transit_booth)
@@ -112,7 +112,7 @@
 /area/ruin/space/has_grav/transit_booth)
 "ap" = (
 /obj/machinery/door/airlock/external{
-	name = "Transit Booth Airlock"
+	name = "TRANSIT BOOTH AIRLOCK"
 	},
 /obj/effect/turf_decal/stripes{
 	dir = 8
@@ -186,7 +186,7 @@
 /area/ruin/space/has_grav/transit_booth)
 "aw" = (
 /obj/machinery/door/airlock/external{
-	name = "Transit Booth Airlock"
+	name = "TRANSIT BOOTH AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
@@ -369,13 +369,13 @@
 	dir = 8
 	},
 /obj/machinery/door/window/right/directional/south{
-	name = "Northbound"
+	name = "NORTHBOUND"
 	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/transit_booth)
 "aO" = (
 /obj/machinery/door/window/left/directional/north{
-	name = "Southbound"
+	name = "SOUTHBOUND"
 	},
 /obj/effect/turf_decal/stripes/red/line{
 	dir = 4
@@ -414,7 +414,7 @@
 /area/ruin/space/has_grav/transit_booth)
 "aR" = (
 /obj/machinery/door/airlock/external{
-	name = "Transit Booth Airlock"
+	name = "TRANSIT BOOTH AIRLOCK"
 	},
 /obj/effect/turf_decal/stripes{
 	dir = 4
@@ -482,7 +482,7 @@
 	dir = 1
 	},
 /obj/machinery/door/window/right/directional/east{
-	name = "Westbound"
+	name = "WESTBOUND"
 	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/transit_booth)

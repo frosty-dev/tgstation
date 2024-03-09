@@ -118,7 +118,7 @@
 /obj/structure/table,
 /obj/machinery/button/door{
 	id = "ancient";
-	name = "Charlie Station Lockdown Button"
+	name = "CHARLIE STATION LOCKDOWN BUTTON"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/item/binoculars{
@@ -292,7 +292,7 @@
 /area/ruin/space/ancientstation/charlie/bridge)
 "bw" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Gravity Generator"
+	name = "GRAVITY GENERATOR"
 	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
@@ -427,7 +427,7 @@
 /area/ruin/space/ancientstation/delta/hall)
 "cd" = (
 /obj/machinery/door/airlock/command{
-	name = "Beta Station Access"
+	name = "BETA STATION ACCESS"
 	},
 /obj/machinery/door/poddoor{
 	id = "ancient"
@@ -543,7 +543,7 @@
 	},
 /mob/living/simple_animal/bot/cleanbot/autopatrol{
 	bot_mode_flags = 12;
-	name = "Ramboo";
+	name = "RAMBOO";
 	pixel_x = -2;
 	pixel_y = 5;
 	bot_cover_flags = 0
@@ -852,7 +852,7 @@
 "dL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/command/glass{
-	name = "Bridge"
+	name = "BRIDGE"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
@@ -1540,7 +1540,7 @@
 "gQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/optable{
-	name = "Robotics Operating Table"
+	name = "ROBOTICS OPERATING TABLE"
 	},
 /obj/item/surgical_drapes,
 /turf/open/floor/iron/white,
@@ -1801,7 +1801,7 @@
 "ib" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/command{
-	name = "Delta Station Access"
+	name = "DELTA STATION ACCESS"
 	},
 /obj/machinery/door/poddoor{
 	id = "ancient"
@@ -1877,7 +1877,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass{
-	name = "Dining Area"
+	name = "DINING AREA"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
@@ -1949,7 +1949,7 @@
 /area/ruin/space/ancientstation/beta/supermatter)
 "iy" = (
 /obj/machinery/door/airlock/medical/glass{
-	name = "Medical Bay"
+	name = "MEDICAL BAY"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
@@ -2068,7 +2068,7 @@
 "iV" = (
 /obj/machinery/power/smes/engineering{
 	charge = 0;
-	name = "backup power storage unit"
+	name = "BACKUP POWER STORAGE UNIT"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
@@ -2261,7 +2261,7 @@
 "jU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/public/glass{
-	name = "Cryogenics Room"
+	name = "CRYOGENICS ROOM"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/decal/cleanable/dirt,
@@ -2340,7 +2340,7 @@
 "ko" = (
 /obj/machinery/atmospherics/components/unary/portables_connector/visible{
 	dir = 4;
-	name = "O2 Input"
+	name = "O2 INPUT"
 	},
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 1
@@ -2525,7 +2525,7 @@
 /area/ruin/space/ancientstation/beta/atmos)
 "kY" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Electrical Maintanace"
+	name = "ELECTRICAL MAINTANACE"
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -2713,7 +2713,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/button/door/directional/west{
 	id = "Beta Secure Storage";
-	name = "Engineering Secure Storage";
+	name = "ENGINEERING SECURE STORAGE";
 	req_access = list("engine_equip");
 	pixel_x = 25;
 	pixel_y = 23
@@ -2971,7 +2971,7 @@
 /area/ruin/space/ancientstation/beta/mining)
 "mM" = (
 /obj/machinery/door/airlock/mining/glass{
-	name = "Mining Equipment"
+	name = "MINING EQUIPMENT"
 	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
@@ -3065,7 +3065,7 @@
 /area/ruin/space/ancientstation/beta/hall)
 "nb" = (
 /obj/machinery/door/airlock/command{
-	name = "Beta Station Access"
+	name = "BETA STATION ACCESS"
 	},
 /obj/machinery/door/poddoor{
 	id = "ancient"
@@ -3093,7 +3093,7 @@
 "nd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/command{
-	name = "Delta Station Access"
+	name = "DELTA STATION ACCESS"
 	},
 /obj/machinery/door/poddoor{
 	id = "ancient"
@@ -3216,7 +3216,7 @@
 "nJ" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/engineering{
-	name = "Backup Generator Room"
+	name = "BACKUP GENERATOR ROOM"
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -4434,7 +4434,7 @@
 "wi" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/command{
-	name = "Charlie Station Access"
+	name = "CHARLIE STATION ACCESS"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/general,
 /obj/effect/decal/cleanable/dirt,
@@ -4533,7 +4533,7 @@
 /area/space/nearstation)
 "wE" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Supermatter Chamber"
+	name = "SUPERMATTER CHAMBER"
 	},
 /turf/open/floor/plating/airless,
 /area/ruin/space/ancientstation/beta/supermatter)
@@ -4683,7 +4683,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/poddoor{
 	id = "Beta Secure Storage";
-	name = "Secure Storage"
+	name = "SECURE STORAGE"
 	},
 /turf/open/floor/iron/textured_large,
 /area/ruin/space/ancientstation/beta/supermatter)
@@ -4790,7 +4790,7 @@
 /area/ruin/space/ancientstation/beta/medbay)
 "zj" = (
 /obj/machinery/door/airlock/science{
-	name = "Biolab"
+	name = "BIOLAB"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/firedoor/closed,
@@ -4807,7 +4807,7 @@
 /obj/machinery/door/window/brigdoor{
 	dir = 8;
 	icon_state = "rightsecure";
-	name = "Plasma Canister Storage"
+	name = "PLASMA CANISTER STORAGE"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -4819,7 +4819,7 @@
 /area/ruin/space/ancientstation/beta/atmos)
 "zn" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Gravity Generator"
+	name = "GRAVITY GENERATOR"
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
@@ -5186,7 +5186,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass{
-	name = "Dining Area"
+	name = "DINING AREA"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/duct,
@@ -5251,7 +5251,7 @@
 "Cs" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/public/glass{
-	name = "Dining Area"
+	name = "DINING AREA"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron,
@@ -5268,7 +5268,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/atmos/glass{
-	name = "Station Atmospherics"
+	name = "STATION ATMOSPHERICS"
 	},
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/beta/atmos)
@@ -5520,7 +5520,7 @@
 /area/ruin/space/ancientstation/delta/hall)
 "EF" = (
 /obj/machinery/door/airlock/command{
-	name = "Charlie Station Access"
+	name = "CHARLIE STATION ACCESS"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/general,
 /obj/effect/decal/cleanable/dirt,
@@ -5798,7 +5798,7 @@
 /area/ruin/space/ancientstation/beta/supermatter)
 "GK" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Storage Room"
+	name = "STORAGE ROOM"
 	},
 /turf/open/floor/plating,
 /area/ruin/space/ancientstation/beta/hall)
@@ -5850,7 +5850,7 @@
 "Hl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/highsecurity{
-	name = "Prototype Laboratory"
+	name = "PROTOTYPE LABORATORY"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/general,
 /obj/machinery/door/firedoor,
@@ -5899,7 +5899,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/duct,
 /obj/machinery/button/door/directional/south{
-	name = "Research Shutters Control";
+	name = "RESEARCH SHUTTERS CONTROL";
 	id = "oldstation_rnd"
 	},
 /obj/structure/table,
@@ -6029,7 +6029,7 @@
 "Iu" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/highsecurity{
-	name = "Prototype Laboratory"
+	name = "PROTOTYPE LABORATORY"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/general,
 /obj/structure/cable,
@@ -6258,7 +6258,7 @@
 "JJ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Laundry"
+	name = "LAUNDRY"
 	},
 /obj/machinery/atmospherics/pipe/layer_manifold,
 /turf/open/floor/iron,
@@ -6529,7 +6529,7 @@
 /area/ruin/space/ancientstation/beta/atmos)
 "Lo" = (
 /obj/machinery/door/airlock/science{
-	name = "Biolab"
+	name = "BIOLAB"
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -7146,7 +7146,7 @@
 /area/ruin/space/ancientstation/delta/hall)
 "Ps" = (
 /obj/machinery/door/airlock/medical/glass{
-	name = "Chemical Storage"
+	name = "CHEMICAL STORAGE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/general,
 /obj/effect/decal/cleanable/dirt,
@@ -7653,7 +7653,7 @@
 /area/ruin/space/ancientstation/delta/biolab)
 "Tm" = (
 /obj/machinery/power/port_gen/pacman/super{
-	name = "\improper emergency power generator"
+	name = "\IMPROPER EMERGENCY POWER GENERATOR"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/greenglow,
@@ -8208,7 +8208,7 @@
 /area/ruin/space/ancientstation/beta/atmos)
 "XD" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Custodial Closet"
+	name = "CUSTODIAL CLOSET"
 	},
 /obj/effect/mapping_helpers/airlock/welded,
 /obj/effect/decal/cleanable/dirt,
@@ -8222,7 +8222,7 @@
 /area/ruin/space/ancientstation/charlie/engie)
 "XK" = (
 /obj/machinery/door/airlock/atmos/glass{
-	name = "Station Atmospherics"
+	name = "STATION ATMOSPHERICS"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/decal/cleanable/dirt,

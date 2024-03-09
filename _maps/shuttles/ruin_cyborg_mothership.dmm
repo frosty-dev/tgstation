@@ -164,7 +164,7 @@
 /obj/structure/lattice/catwalk,
 /obj/machinery/conveyor_switch{
 	id = "Recycler";
-	name = "Recycler"
+	name = "RECYCLER"
 	},
 /turf/template_noop,
 /area/shuttle/ruin/cyborg_mothership)
@@ -349,7 +349,7 @@
 /area/shuttle/ruin/cyborg_mothership)
 "ry" = (
 /obj/machinery/mecha_part_fabricator/maint{
-	name = "forgotten exosuit fabricator";
+	name = "FORGOTTEN EXOSUIT FABRICATOR";
 	dir = 8
 	},
 /obj/machinery/conveyor{

@@ -121,7 +121,7 @@
 /area/shuttle/escape)
 "az" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Emergency Shuttle Cockpit"
+	name = "EMERGENCY SHUTTLE COCKPIT"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /turf/open/floor/carpet,
@@ -161,7 +161,7 @@
 /area/shuttle/escape/brig)
 "aJ" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Emergency Shuttle Brig"
+	name = "EMERGENCY SHUTTLE BRIG"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /obj/effect/turf_decal/tile/bar/opposingcorners,
@@ -169,7 +169,7 @@
 /area/shuttle/escape/brig)
 "aK" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/mineral/plastitanium/red,
@@ -221,7 +221,7 @@
 /area/shuttle/escape)
 "aT" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/docking_port/mobile/emergency{
 	name = "The Emergency Escape Bar"
@@ -275,7 +275,7 @@
 /area/shuttle/escape)
 "bg" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /turf/open/floor/iron,
@@ -290,7 +290,7 @@
 /area/shuttle/escape)
 "bm" = (
 /obj/machinery/door/airlock{
-	name = "Unisex Restrooms"
+	name = "UNISEX RESTROOMS"
 	},
 /turf/open/floor/iron/freezer,
 /area/shuttle/escape)
@@ -300,7 +300,7 @@
 /area/shuttle/escape)
 "bo" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /turf/open/floor/iron/freezer,
 /area/shuttle/escape)
@@ -309,7 +309,7 @@
 /area/shuttle/escape)
 "bq" = (
 /obj/machinery/door/airlock/medical/glass{
-	name = "Medbay"
+	name = "MEDBAY"
 	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape)
@@ -319,19 +319,19 @@
 /area/shuttle/escape)
 "bs" = (
 /obj/machinery/door/airlock{
-	name = "Unit 1"
+	name = "UNIT 1"
 	},
 /turf/open/floor/iron/freezer,
 /area/shuttle/escape)
 "bu" = (
 /obj/machinery/door/airlock{
-	name = "Unit 2"
+	name = "UNIT 2"
 	},
 /turf/open/floor/iron/freezer,
 /area/shuttle/escape)
 "bv" = (
 /obj/machinery/door/airlock{
-	name = "Unit B"
+	name = "UNIT B"
 	},
 /turf/open/floor/iron/freezer,
 /area/shuttle/escape)

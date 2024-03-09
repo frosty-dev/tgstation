@@ -13,7 +13,7 @@
 /obj/machinery/button/massdriver/indestructible{
 	id = "trektorpedo2";
 	layer = 3.9;
-	name = "photon torpedo button";
+	name = "PHOTON TORPEDO BUTTON";
 	pixel_x = 16;
 	pixel_y = -5
 	},

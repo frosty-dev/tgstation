@@ -7,7 +7,7 @@
 /area/shuttle/arrival)
 "c" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Arrivals Shuttle Airlock"
+	name = "ARRIVALS SHUTTLE AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
@@ -92,7 +92,7 @@
 /area/shuttle/arrival)
 "t" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Arrivals Shuttle Airlock"
+	name = "ARRIVALS SHUTTLE AIRLOCK"
 	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/arrival)

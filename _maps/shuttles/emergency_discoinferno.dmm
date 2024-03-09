@@ -89,7 +89,7 @@
 /area/shuttle/escape)
 "u" = (
 /obj/docking_port/mobile/emergency{
-	name = "Disco Inferno"
+	name = "DISCO INFERNO"
 	},
 /obj/machinery/door/airlock/gold/discoinferno,
 /turf/open/floor/mineral/plasma/disco,

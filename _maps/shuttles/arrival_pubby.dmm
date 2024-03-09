@@ -7,7 +7,7 @@
 /area/shuttle/arrival)
 "c" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Arrivals Shuttle Airlock"
+	name = "ARRIVALS SHUTTLE AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
@@ -51,14 +51,14 @@
 "m" = (
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "arrivy";
-	name = "Ship Shutters"
+	name = "SHIP SHUTTERS"
 	},
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
 /area/shuttle/arrival)
 "n" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Arrivals Shuttle Airlock"
+	name = "ARRIVALS SHUTTLE AIRLOCK"
 	},
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/arrival)

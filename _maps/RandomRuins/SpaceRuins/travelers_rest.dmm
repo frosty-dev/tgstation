@@ -183,7 +183,7 @@
 /obj/structure/cable,
 /obj/machinery/power/solar_control{
 	id = "foreport";
-	name = "Solar Control";
+	name = "SOLAR CONTROL";
 	dir = 8
 	},
 /obj/machinery/power/terminal{

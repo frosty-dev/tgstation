@@ -47,7 +47,7 @@
 /obj/docking_port/mobile{
 	dir = 8;
 	shuttle_id = "ferry";
-	name = "ferry shuttle";
+	name = "FERRY SHUTTLE";
 	port_direction = 2
 	},
 /turf/open/floor/mineral/titanium/blue,

@@ -442,7 +442,7 @@
 /obj/effect/decal/cleanable/glass,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/shuttle{
-	name = "Archaeology Shuttle Airlock"
+	name = "ARCHAEOLOGY SHUTTLE AIRLOCK"
 	},
 /turf/open/floor/mineral/titanium/purple,
 /area/ruin/powered/graveyard_shuttle)

@@ -216,7 +216,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /turf/open/floor/stone,
 /area/shuttle/escape)
@@ -229,7 +229,7 @@
 /area/shuttle/escape)
 "fv" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Engine Room"
+	name = "ENGINE ROOM"
 	},
 /turf/open/floor/wood/tile,
 /area/shuttle/escape)
@@ -381,7 +381,7 @@
 /area/shuttle/escape)
 "hG" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Escape Shuttle Brig"
+	name = "ESCAPE SHUTTLE BRIG"
 	},
 /obj/effect/turf_decal/tile/red/half/contrasted{
 	dir = 4
@@ -552,7 +552,7 @@
 /area/shuttle/escape)
 "kE" = (
 /obj/machinery/door/airlock/medical/glass{
-	name = "Escape Shuttle Infirmary"
+	name = "ESCAPE SHUTTLE INFIRMARY"
 	},
 /turf/open/floor/iron/smooth_half,
 /area/shuttle/escape)
@@ -1447,7 +1447,7 @@
 /area/shuttle/escape)
 "Bf" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /turf/open/floor/wood/tile,
 /area/shuttle/escape)
@@ -1499,7 +1499,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /turf/open/floor/stone,
 /area/shuttle/escape)
@@ -1902,7 +1902,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/docking_port/mobile/emergency{
 	dir = 2;
@@ -1987,7 +1987,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /turf/open/floor/stone,
 /area/shuttle/escape)
@@ -2026,7 +2026,7 @@
 /area/shuttle/escape)
 "KV" = (
 /obj/machinery/door/airlock/command/glass{
-	name = "Cockpit"
+	name = "COCKPIT"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /turf/open/floor/iron/dark,
@@ -2076,7 +2076,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/fax{
 	fax_name = "Captain's Office";
-	name = "Captain's Fax Machine"
+	name = "CAPTAIN'S FAX MACHINE"
 	},
 /turf/open/floor/iron/dark/small,
 /area/shuttle/escape)
@@ -2196,7 +2196,7 @@
 /area/shuttle/escape)
 "OB" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Escape Shuttle Brig"
+	name = "ESCAPE SHUTTLE BRIG"
 	},
 /obj/effect/turf_decal/tile/red/half/contrasted{
 	dir = 8
@@ -2349,7 +2349,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /turf/open/floor/stone,
 /area/shuttle/escape)
@@ -2693,7 +2693,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /turf/open/floor/wood/tile,
 /area/shuttle/escape)

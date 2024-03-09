@@ -21,7 +21,7 @@
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /obj/machinery/door/poddoor/shutters{
 	id = "syndieshutters";
-	name = "Blast Shutters"
+	name = "BLAST SHUTTERS"
 	},
 /turf/open/floor/plating,
 /area/shuttle/syndicate/bridge)
@@ -193,13 +193,13 @@
 "aY" = (
 /obj/machinery/door/poddoor{
 	id = "smindicate";
-	name = "Outer Blast Door"
+	name = "OUTER BLAST DOOR"
 	},
 /obj/docking_port/mobile/infiltrator,
 /obj/structure/fans/tiny,
 /obj/machinery/button/door/directional/north{
 	id = "smindicate";
-	name = "external door control";
+	name = "EXTERNAL DOOR CONTROL";
 	req_access = list("syndicate")
 	},
 /obj/effect/turf_decal/siding/thinplating_new/dark{
@@ -783,7 +783,7 @@
 "vu" = (
 /obj/machinery/door/window/survival_pod{
 	dir = 1;
-	name = "Telecommunications Centre";
+	name = "TELECOMMUNICATIONS CENTRE";
 	req_access = list("syndicate")
 	},
 /obj/effect/turf_decal/siding/red,

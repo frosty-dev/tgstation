@@ -59,7 +59,7 @@
 /area/shuttle/mining)
 "i" = (
 /obj/machinery/door/airlock/shuttle{
-	name = "Mining Shuttle Airlock"
+	name = "MINING SHUTTLE AIRLOCK"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8

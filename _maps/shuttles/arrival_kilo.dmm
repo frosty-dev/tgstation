@@ -10,7 +10,7 @@
 /area/shuttle/arrival)
 "ad" = (
 /obj/machinery/door/airlock/shuttle{
-	name = "Arrival Shuttle Airlock"
+	name = "ARRIVAL SHUTTLE AIRLOCK"
 	},
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/stripes/line{
@@ -166,7 +166,7 @@
 "aD" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/door/airlock/shuttle{
-	name = "Arrival Shuttle Airlock"
+	name = "ARRIVAL SHUTTLE AIRLOCK"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 1

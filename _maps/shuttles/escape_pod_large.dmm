@@ -56,7 +56,7 @@
 /area/shuttle/pod_1)
 "O" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Shuttle Airlock"
+	name = "SHUTTLE AIRLOCK"
 	},
 /obj/docking_port/mobile/monastery,
 /obj/structure/fans/tiny,

@@ -228,14 +228,14 @@
 /area/shuttle/escape)
 "tS" = (
 /obj/machinery/door/airlock/survival_pod/glass{
-	name = "Emergency Shuttle Bridge"
+	name = "EMERGENCY SHUTTLE BRIDGE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /turf/open/floor/pod,
 /area/shuttle/escape)
 "uy" = (
 /obj/machinery/door/airlock/survival_pod/glass{
-	name = "Emergency Shuttle Brig"
+	name = "EMERGENCY SHUTTLE BRIG"
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/shuttle/escape)
@@ -269,7 +269,7 @@
 /area/shuttle/escape)
 "zg" = (
 /obj/machinery/door/airlock/survival_pod{
-	name = "Emergency Shuttle Access"
+	name = "EMERGENCY SHUTTLE ACCESS"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
@@ -333,7 +333,7 @@
 	name = "North Star emergency shuttle"
 	},
 /obj/machinery/door/airlock/survival_pod{
-	name = "Emergency Shuttle Access"
+	name = "EMERGENCY SHUTTLE ACCESS"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
@@ -347,7 +347,7 @@
 /area/shuttle/escape)
 "DW" = (
 /obj/machinery/door/airlock/survival_pod/glass{
-	name = "Emergency Shuttle Treatment"
+	name = "EMERGENCY SHUTTLE TREATMENT"
 	},
 /turf/open/floor/catwalk_floor/flat_white,
 /area/shuttle/escape)

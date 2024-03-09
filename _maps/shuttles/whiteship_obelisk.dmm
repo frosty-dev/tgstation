@@ -18,7 +18,7 @@
 /area/shuttle/abandoned/bridge)
 "bV" = (
 /obj/machinery/door/airlock/command{
-	name = "Bridge"
+	name = "BRIDGE"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
@@ -101,7 +101,7 @@
 /area/shuttle/abandoned/bridge)
 "fF" = (
 /obj/machinery/door/airlock/shuttle{
-	name = "Refreshment Room"
+	name = "REFRESHMENT ROOM"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
@@ -245,7 +245,7 @@
 	},
 /obj/machinery/button/door{
 	id = "whiteship_windows";
-	name = "Exterior Window Blastdoor Control";
+	name = "EXTERIOR WINDOW BLASTDOOR CONTROL";
 	pixel_y = 8
 	},
 /obj/effect/turf_decal/tile/dark_blue/half{
@@ -545,7 +545,7 @@
 /area/shuttle/abandoned)
 "Fy" = (
 /obj/machinery/door/airlock/shuttle{
-	name = "Sleeping Quarter"
+	name = "SLEEPING QUARTER"
 	},
 /obj/structure/cable,
 /obj/effect/decal/cleanable/blood/footprints{
@@ -654,7 +654,7 @@
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/machinery/light/small/broken/directional/west,
 /obj/machinery/button/door/directional/west{
-	name = "Bolt Control";
+	name = "BOLT CONTROL";
 	normaldoorcontrol = 1;
 	specialfunctions = 4;
 	id = "whiteship_westbolt"
@@ -852,7 +852,7 @@
 "Xd" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/shuttle/glass{
-	name = "Engine Central"
+	name = "ENGINE CENTRAL"
 	},
 /obj/effect/spawner/random/structure/barricade,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{

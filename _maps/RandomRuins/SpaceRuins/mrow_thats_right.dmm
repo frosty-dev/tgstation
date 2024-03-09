@@ -82,14 +82,14 @@
 /area/ruin/space/has_grav/powered/cat_man)
 "aq" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Misc Supplies"
+	name = "MISC SUPPLIES"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/powered/cat_man)
 "ar" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Custodial Supplies"
+	name = "CUSTODIAL SUPPLIES"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /turf/open/floor/plating,
@@ -211,7 +211,7 @@
 /area/ruin/space/has_grav/powered/cat_man)
 "aN" = (
 /obj/machinery/door/airlock{
-	name = "Private Quarters"
+	name = "PRIVATE QUARTERS"
 	},
 /turf/open/floor/carpet,
 /area/ruin/space/has_grav/powered/cat_man)
@@ -225,7 +225,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/preopen{
 	id = "meow";
-	name = "Kitty Protection Door"
+	name = "KITTY PROTECTION DOOR"
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/powered/cat_man)
@@ -233,10 +233,10 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/poddoor/preopen{
 	id = "meow";
-	name = "Kitty Protection Door"
+	name = "KITTY PROTECTION DOOR"
 	},
 /obj/machinery/door/window{
-	name = "Kitty Door";
+	name = "KITTY DOOR";
 	req_access = list("away_general")
 	},
 /turf/open/floor/plating,
@@ -335,10 +335,10 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/poddoor/preopen{
 	id = "meow";
-	name = "Kitty Protection Door"
+	name = "KITTY PROTECTION DOOR"
 	},
 /obj/machinery/door/window/left/directional/west{
-	name = "Kitty Door";
+	name = "KITTY DOOR";
 	req_access = list("away_general")
 	},
 /turf/open/floor/plating,
@@ -527,10 +527,10 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/poddoor/preopen{
 	id = "meow";
-	name = "Kitty Protection Door"
+	name = "KITTY PROTECTION DOOR"
 	},
 /obj/machinery/door/window/left/directional/north{
-	name = "Kitty Door";
+	name = "KITTY DOOR";
 	req_access = list("away_general")
 	},
 /turf/open/floor/plating,
@@ -585,7 +585,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/food/meat/slab/synthmeat{
 	desc = "A slab of cat meat. Tastes like furball.";
-	name = "cat meat"
+	name = "CAT MEAT"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/green/hidden{
 	dir = 6
@@ -642,7 +642,7 @@
 /area/ruin/space/has_grav/powered/cat_man)
 "cg" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Portable Atmos Equipment"
+	name = "PORTABLE ATMOS EQUIPMENT"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/maintenance,
 /turf/open/floor/plating/airless,
@@ -696,7 +696,7 @@
 /area/ruin/space/has_grav/powered/cat_man)
 "cp" = (
 /obj/machinery/door/airlock{
-	name = "Limb Storage"
+	name = "LIMB STORAGE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/general,
 /turf/open/floor/iron/freezer,
@@ -825,7 +825,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed/dogbed{
-	name = "kitty bed"
+	name = "KITTY BED"
 	},
 /obj/effect/mob_spawn/corpse/human/damaged{
 	outfit_override = list("head"=/obj/item/clothing/head/costume/kitty)

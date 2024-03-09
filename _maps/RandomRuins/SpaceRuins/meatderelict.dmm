@@ -348,7 +348,7 @@
 "hY" = (
 /obj/structure/barricade/wooden,
 /obj/machinery/door/airlock/science/glass{
-	name = "Janitorial Closet"
+	name = "JANITORIAL CLOSET"
 	},
 /obj/effect/mapping_helpers/airlock_note_placer{
 	note_info = "DO NOT ENTER!!!"
@@ -437,7 +437,7 @@
 "jo" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock_note_placer{
-	note_name = "notice";
+	note_name = "NOTICE";
 	note_info = "This area is condemned by Nanotrasen. Employees seen near or in this area will be fined or punished otherwise."
 	},
 /turf/open/floor/plating,
@@ -951,7 +951,7 @@
 	normaldoorcontrol = 1;
 	specialfunctions = 4;
 	id = "md_scis";
-	name = "safety lock control"
+	name = "SAFETY LOCK CONTROL"
 	},
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 6
@@ -1140,7 +1140,7 @@
 "vY" = (
 /obj/machinery/door/puzzle/keycard{
 	puzzle_id = "md_director";
-	name = "Directors Office"
+	name = "DIRECTORS OFFICE"
 	},
 /turf/open/floor/carpet,
 /area/ruin/space/has_grav/powered/biooutpost)
@@ -1398,7 +1398,7 @@
 "AX" = (
 /obj/machinery/light/directional/north,
 /mob/living/basic/mothroach{
-	name = "Moff"
+	name = "MOFF"
 	},
 /obj/machinery/door/window/right/directional/south{
 	req_access = list("science")
@@ -1822,7 +1822,7 @@
 "Jt" = (
 /obj/machinery/puzzle_button/directional/north{
 	id = "md_tosci";
-	name = "shield power panel"
+	name = "SHIELD POWER PANEL"
 	},
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 1
@@ -2089,7 +2089,7 @@
 /area/ruin/space/has_grav/powered/biooutpost)
 "OQ" = (
 /obj/machinery/door/airlock/vault{
-	name = "Teleportation Research"
+	name = "TELEPORTATION RESEARCH"
 	},
 /turf/open/indestructible/meat,
 /area/ruin/space/has_grav/powered/biooutpost/vault)
@@ -2140,7 +2140,7 @@
 /obj/effect/turf_decal/stripes/full,
 /obj/machinery/puzzle_keycardpad/directional/south{
 	id = "md_armory";
-	name = "armory authentication pad";
+	name = "ARMORY AUTHENTICATION PAD";
 	queue_size = 5
 	},
 /turf/open/indestructible/white,
@@ -2273,7 +2273,7 @@
 "Sz" = (
 /mob/living/basic/meteor_heart/opens_puzzle_door{
 	id = "md_heart";
-	name = "tumor heart"
+	name = "TUMOR HEART"
 	},
 /turf/open/indestructible/meat,
 /area/ruin/space/has_grav/powered/biooutpost/vault)

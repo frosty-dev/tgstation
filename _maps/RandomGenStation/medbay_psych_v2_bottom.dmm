@@ -403,7 +403,7 @@
 /area/station/medical/chemistry)
 "xQ" = (
 /obj/machinery/door/airlock/medical{
-	name = "Morgue"
+	name = "MORGUE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/medical/morgue,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -521,11 +521,11 @@
 "CE" = (
 /obj/machinery/door/airlock/maintenance{
 	dir = 4;
-	name = "Medbay Maintenance"
+	name = "MEDBAY MAINTENANCE"
 	},
 /obj/machinery/door/poddoor/shutters{
 	id = "durka_bot_left";
-	name = "Бронежалюзи нижние левые"
+	name = "БРОНЕЖАЛЮЗИ НИЖНИЕ ЛЕВЫЕ"
 	},
 /turf/open/floor/plating,
 /area/station/medical/chemistry)
@@ -736,7 +736,7 @@
 /area/station/medical/morgue)
 "RS" = (
 /obj/machinery/door/airlock/medical/glass{
-	name = "Chemistry Storage"
+	name = "CHEMISTRY STORAGE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
@@ -791,7 +791,7 @@
 	pixel_y = -32
 	},
 /obj/machinery/door/airlock/medical{
-	name = "Psychology"
+	name = "PSYCHOLOGY"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/medical/psychology,
 /obj/machinery/door/firedoor,
@@ -819,7 +819,7 @@
 "WM" = (
 /obj/machinery/door/airlock/maintenance{
 	dir = 4;
-	name = "Medbay Maintenance"
+	name = "MEDBAY MAINTENANCE"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
@@ -828,7 +828,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/poddoor/shutters{
 	id = "durka_bot_right";
-	name = "Бронежалюзи нижние правые"
+	name = "БРОНЕЖАЛЮЗИ НИЖНИЕ ПРАВЫЕ"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/plating,

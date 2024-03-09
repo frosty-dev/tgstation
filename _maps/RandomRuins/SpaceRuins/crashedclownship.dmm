@@ -41,7 +41,7 @@
 /area/ruin/space/has_grav)
 "k" = (
 /obj/structure/closet/secure_closet{
-	name = "clown locker";
+	name = "CLOWN LOCKER";
 	req_access = list("theatre")
 	},
 /obj/item/clothing/shoes/clown_shoes/banana_shoes,

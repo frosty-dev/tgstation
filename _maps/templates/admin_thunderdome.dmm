@@ -20,7 +20,7 @@
 "ad" = (
 /obj/machinery/door/poddoor{
 	id = "thunderdomehea";
-	name = "Heavy Supply"
+	name = "HEAVY SUPPLY"
 	},
 /obj/effect/turf_decal/loading_area,
 /obj/effect/light_emitter/thunderdome,
@@ -85,7 +85,7 @@
 "am" = (
 /obj/machinery/door/poddoor{
 	id = "thunderdome";
-	name = "Thunderdome Blast Door"
+	name = "THUNDERDOME BLAST DOOR"
 	},
 /obj/effect/turf_decal/loading_area{
 	dir = 4
@@ -123,7 +123,7 @@
 "ar" = (
 /obj/machinery/door/poddoor{
 	id = "thunderdomegen";
-	name = "General Supply"
+	name = "GENERAL SUPPLY"
 	},
 /obj/effect/turf_decal/loading_area{
 	dir = 8
@@ -196,7 +196,7 @@
 "aB" = (
 /obj/machinery/door/poddoor{
 	id = "thunderdome";
-	name = "Thunderdome Blast Door"
+	name = "THUNDERDOME BLAST DOOR"
 	},
 /obj/effect/turf_decal/loading_area{
 	dir = 8
@@ -362,7 +362,7 @@
 "aY" = (
 /obj/machinery/door/poddoor{
 	id = "thunderdomegen";
-	name = "General Supply"
+	name = "GENERAL SUPPLY"
 	},
 /obj/effect/turf_decal/loading_area{
 	dir = 4

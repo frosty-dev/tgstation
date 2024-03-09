@@ -2,13 +2,13 @@
 "bh" = (
 /obj/machinery/door/airlock/hatch{
 	id_tag = "caravansyndicate3_bolt_port";
-	name = "External Airlock";
+	name = "EXTERNAL AIRLOCK";
 	normalspeed = 0
 	},
 /obj/docking_port/mobile{
 	dir = 2;
 	shuttle_id = "caravansyndicate3";
-	name = "Syndicate Drop Ship";
+	name = "SYNDICATE DROP SHIP";
 	port_direction = 8;
 	preferred_direction = 4
 	},
@@ -228,7 +228,7 @@
 "wS" = (
 /obj/machinery/door/airlock/hatch{
 	id_tag = "caravansyndicate3_bolt_starboard";
-	name = "External Airlock";
+	name = "EXTERNAL AIRLOCK";
 	normalspeed = 0
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -401,7 +401,7 @@
 /area/shuttle/ruin/caravan/syndicate3)
 "Ry" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Ready Room"
+	name = "READY ROOM"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
@@ -422,7 +422,7 @@
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/machinery/door/airlock/hatch{
 	id_tag = "caravansyndicate3_bolt_bridge";
-	name = "Bridge"
+	name = "BRIDGE"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8

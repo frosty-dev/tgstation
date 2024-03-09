@@ -87,7 +87,7 @@
 /area/ruin/space/has_grav/hellfactoryoffice)
 "aq" = (
 /obj/item/pressure_plate/hologrid{
-	name = "bossman's hologrid";
+	name = "BOSSMAN'S HOLOGRID";
 	reward = /obj/item/stack/spacecash/c10000
 	},
 /turf/open/floor/iron/grimy,

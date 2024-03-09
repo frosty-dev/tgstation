@@ -49,21 +49,21 @@
 /area/shuttle/escape)
 "aq" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /turf/open/floor/mineral/plastitanium/red,
 /area/shuttle/escape/brig)
 "ar" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Emergency Shuttle Cockpit"
+	name = "EMERGENCY SHUTTLE COCKPIT"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /turf/open/floor/carpet,
 /area/shuttle/escape)
 "as" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape)
@@ -91,7 +91,7 @@
 "az" = (
 /obj/structure/grille,
 /obj/machinery/door/airlock/public/glass{
-	name = "Emergency Shuttle Brig"
+	name = "EMERGENCY SHUTTLE BRIG"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/plating,
@@ -105,7 +105,7 @@
 /area/shuttle/escape)
 "aC" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/plating,
@@ -138,7 +138,7 @@
 /area/shuttle/escape)
 "aK" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /obj/docking_port/mobile/emergency{
 	name = "Scrapheap Challenge"
@@ -201,7 +201,7 @@
 /area/shuttle/escape)
 "aZ" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
+	name = "EMERGENCY SHUTTLE AIRLOCK"
 	},
 /turf/open/floor/plating,
 /area/shuttle/escape)
@@ -212,7 +212,7 @@
 /area/shuttle/escape)
 "bd" = (
 /obj/machinery/door/airlock{
-	name = "Unisex Restrooms"
+	name = "UNISEX RESTROOMS"
 	},
 /turf/open/floor/iron/freezer,
 /area/shuttle/escape)
@@ -226,19 +226,19 @@
 /area/shuttle/escape)
 "bg" = (
 /obj/machinery/door/airlock{
-	name = "Unit 1"
+	name = "UNIT 1"
 	},
 /turf/open/floor/iron/freezer,
 /area/shuttle/escape)
 "bh" = (
 /obj/machinery/door/airlock{
-	name = "Unit 2"
+	name = "UNIT 2"
 	},
 /turf/open/floor/iron/freezer,
 /area/shuttle/escape)
 "bi" = (
 /obj/machinery/door/airlock{
-	name = "Unit B"
+	name = "UNIT B"
 	},
 /turf/open/floor/iron/freezer,
 /area/shuttle/escape)

@@ -557,7 +557,7 @@
 /area/ruin/space/has_grav/dangerous_research/dorms)
 "hS" = (
 /obj/machinery/door/window/left/directional/west{
-	name = "Subject Pen"
+	name = "SUBJECT PEN"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/white,
@@ -737,7 +737,7 @@
 /area/ruin/space/has_grav/dangerous_research/lab)
 "jC" = (
 /obj/machinery/door/airlock{
-	name = "Dorms - Researcher Smith"
+	name = "DORMS - RESEARCHER SMITH"
 	},
 /obj/effect/turf_decal/tile/neutral/diagonal_edge,
 /turf/open/floor/iron/dark/diagonal,
@@ -1010,7 +1010,7 @@
 /area/ruin/space/has_grav/dangerous_research/medical)
 "om" = (
 /obj/machinery/door/airlock/science{
-	name = "Decontamination"
+	name = "DECONTAMINATION"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
@@ -1045,7 +1045,7 @@
 /area/ruin/space/has_grav/dangerous_research/lab)
 "ox" = (
 /obj/machinery/door/airlock/vault{
-	name = "ASRC Electrical"
+	name = "ASRC ELECTRICAL"
 	},
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/access/all/away/science,
@@ -1175,7 +1175,7 @@
 "qc" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/command{
-	name = "Head Occultist Bedroom"
+	name = "HEAD OCCULTIST BEDROOM"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/command,
 /turf/open/floor/wood/parquet,
@@ -1372,7 +1372,7 @@
 /area/ruin/space/has_grav/dangerous_research/lab)
 "rT" = (
 /obj/machinery/door/airlock/science/glass{
-	name = "Main Testing Room"
+	name = "MAIN TESTING ROOM"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -1430,7 +1430,7 @@
 /area/ruin/space/has_grav/dangerous_research/lab)
 "tf" = (
 /obj/machinery/door/airlock{
-	name = "Dorms - Researcher Armstrong"
+	name = "DORMS - RESEARCHER ARMSTRONG"
 	},
 /obj/effect/turf_decal/tile/neutral/diagonal_edge,
 /turf/open/floor/iron/dark/diagonal,
@@ -1447,7 +1447,7 @@
 "tk" = (
 /obj/effect/turf_decal/tile/neutral/diagonal_edge,
 /obj/machinery/door/airlock{
-	name = "Dorms - Officer Simes"
+	name = "DORMS - OFFICER SIMES"
 	},
 /turf/open/floor/iron/dark/diagonal,
 /area/ruin/space/has_grav/dangerous_research/dorms)
@@ -1501,7 +1501,7 @@
 /area/ruin/space/has_grav/dangerous_research/dorms)
 "tD" = (
 /obj/machinery/door/airlock{
-	name = "Dorms - Doctor Greyham"
+	name = "DORMS - DOCTOR GREYHAM"
 	},
 /obj/effect/turf_decal/tile/neutral/diagonal_edge,
 /turf/open/floor/iron/dark/diagonal,
@@ -2374,7 +2374,7 @@
 "Ei" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/vault{
-	name = "Subject Containment"
+	name = "SUBJECT CONTAINMENT"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/away/command,
 /turf/open/floor/iron/white,
@@ -2505,7 +2505,7 @@
 /area/ruin/space/has_grav/dangerous_research/lab)
 "Gd" = (
 /obj/machinery/door/airlock/science{
-	name = "Supply Closet"
+	name = "SUPPLY CLOSET"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -2513,14 +2513,14 @@
 /obj/effect/mapping_helpers/airlock/access/all/away/science,
 /obj/machinery/door/poddoor/shutters{
 	id = "asrc_supply";
-	name = "Supply Closet Shutters"
+	name = "SUPPLY CLOSET SHUTTERS"
 	},
 /turf/open/floor/iron,
 /area/ruin/space/has_grav/dangerous_research/maint)
 "Gg" = (
 /obj/structure/barricade/wooden/crude,
 /obj/machinery/door/airlock/vault{
-	name = "Decontamination"
+	name = "DECONTAMINATION"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -2603,7 +2603,7 @@
 /area/ruin/space/has_grav/dangerous_research/medical)
 "Hx" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Restroom"
+	name = "RESTROOM"
 	},
 /turf/open/floor/iron/showroomfloor,
 /area/ruin/space/has_grav/dangerous_research/dorms)
@@ -2624,7 +2624,7 @@
 "HQ" = (
 /obj/effect/turf_decal/tile/neutral/diagonal_edge,
 /obj/machinery/door/airlock{
-	name = "Dorms - Researcher Beaches"
+	name = "DORMS - RESEARCHER BEACHES"
 	},
 /turf/open/floor/iron/dark/diagonal,
 /area/ruin/space/has_grav/dangerous_research/dorms)
@@ -2779,7 +2779,7 @@
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/tile/purple/diagonal_edge,
 /obj/machinery/door/airlock/science/glass{
-	name = "Alternate Sciences Research Center"
+	name = "ALTERNATE SCIENCES RESEARCH CENTER"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/diagonal,
@@ -2863,7 +2863,7 @@
 /area/ruin/space/has_grav/dangerous_research)
 "LU" = (
 /obj/machinery/door/airlock/command/glass{
-	name = "Head Occultist Office"
+	name = "HEAD OCCULTIST OFFICE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -2950,7 +2950,7 @@
 /area/ruin/space/has_grav/dangerous_research/maint)
 "Nc" = (
 /obj/machinery/door/airlock/science/glass{
-	name = "Alternate Sciences Research Center"
+	name = "ALTERNATE SCIENCES RESEARCH CENTER"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/tile/purple/diagonal_edge,
@@ -2984,7 +2984,7 @@
 /area/ruin/space/has_grav/dangerous_research/dorms)
 "Ns" = (
 /obj/machinery/door/airlock/science{
-	name = "Decontamination"
+	name = "DECONTAMINATION"
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -3461,7 +3461,7 @@
 /area/ruin/space/has_grav/dangerous_research)
 "SH" = (
 /obj/machinery/door/airlock/science{
-	name = "Science Lab"
+	name = "SCIENCE LAB"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -3559,7 +3559,7 @@
 /area/ruin/space/has_grav/dangerous_research)
 "UA" = (
 /obj/machinery/door/airlock/science{
-	name = "Living Quarters"
+	name = "LIVING QUARTERS"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
@@ -3617,7 +3617,7 @@
 "Vf" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/engineering{
-	name = "ASRC Atmospherics"
+	name = "ASRC ATMOSPHERICS"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -3653,7 +3653,7 @@
 /area/ruin/space/has_grav/dangerous_research/lab)
 "VP" = (
 /obj/structure/closet{
-	name = "Outpost Security Locker"
+	name = "OUTPOST SECURITY LOCKER"
 	},
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/effect/spawner/random/contraband/permabrig_weapon,
