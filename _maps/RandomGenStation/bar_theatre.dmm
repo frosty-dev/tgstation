@@ -1251,7 +1251,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "kitchen";
-	name = "kitchen shutters"
+	name = "KITCHEN SHUTTERS"
 	},
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen)
