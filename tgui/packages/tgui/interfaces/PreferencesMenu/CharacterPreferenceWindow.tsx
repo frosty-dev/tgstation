@@ -34,7 +34,8 @@ const CharacterProfiles = (props: {
             onClick={() => {
               props.onClick(slot);
             }}
-            fluid>
+            fluid
+          >
             {profile ?? 'Новый персонаж'}
           </Button>
         </Stack.Item>
@@ -49,7 +50,7 @@ export const CharacterPreferenceWindow = (props, context) => {
   const [currentPage, setCurrentPage] = useLocalState(
     context,
     'currentPage',
-    Page.Main
+    Page.Main,
   );
 
   let pageContents;
@@ -102,7 +103,8 @@ export const CharacterPreferenceWindow = (props, context) => {
                   currentPage={currentPage}
                   page={Page.Main}
                   setPage={setCurrentPage}
-                  otherActivePages={[Page.Species]}>
+                  otherActivePages={[Page.Species]}
+                >
                   Персонаж
                 </PageButton>
               </Stack.Item>
@@ -111,7 +113,8 @@ export const CharacterPreferenceWindow = (props, context) => {
                 <PageButton
                   currentPage={currentPage}
                   page={Page.Jobs}
-                  setPage={setCurrentPage}>
+                  setPage={setCurrentPage}
+                >
                   {/*
                     Fun fact: This isn't "Jobs" so that it intentionally
                     catches your eyes, because it's really important!
@@ -124,7 +127,8 @@ export const CharacterPreferenceWindow = (props, context) => {
                 <PageButton
                   currentPage={currentPage}
                   page={Page.Antags}
-                  setPage={setCurrentPage}>
+                  setPage={setCurrentPage}
+                >
                   Антаги
                 </PageButton>
               </Stack.Item>
@@ -133,7 +137,8 @@ export const CharacterPreferenceWindow = (props, context) => {
                 <PageButton
                   currentPage={currentPage}
                   page={Page.Quirks}
-                  setPage={setCurrentPage}>
+                  setPage={setCurrentPage}
+                >
                   Особенности
                 </PageButton>
               </Stack.Item>

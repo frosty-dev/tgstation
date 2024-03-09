@@ -53,12 +53,12 @@ export const LightController = (props, context) => {
   const [currentTemplate, setCurrentTemplate] = useLocalState<string>(
     context,
     'currentTemplate',
-    default_id
+    default_id,
   );
   const [currentCategory, setCurrentCategory] = useLocalState<string>(
     context,
     'currentCategory',
-    default_category
+    default_category,
   );
 
   const category_keys = category_ids ? Object.keys(category_ids) : [];
@@ -74,7 +74,8 @@ export const LightController = (props, context) => {
                   <Tabs.Tab
                     key={category}
                     selected={currentCategory === category}
-                    onClick={() => setCurrentCategory(category)}>
+                    onClick={() => setCurrentCategory(category)}
+                  >
                     <Box fontSize="14px" bold textColor="#eee">
                       {category}
                     </Box>
@@ -86,7 +87,8 @@ export const LightController = (props, context) => {
                   <Tabs.Tab
                     key={id}
                     selected={currentTemplate === id}
-                    onClick={() => setCurrentTemplate(id)}>
+                    onClick={() => setCurrentTemplate(id)}
+                  >
                     <Box fontSize="14px" textColor="#cee">
                       {templates[id].light_info.name}
                     </Box>
@@ -136,7 +138,8 @@ const LightControl = (props: LightControlProps, context) => {
                 icon="brush"
                 tooltip="Change light color"
                 textColor={info.color}
-                onClick={() => act('change_color')}>
+                onClick={() => act('change_color')}
+              >
                 {info.color}
               </Button>
               <Button

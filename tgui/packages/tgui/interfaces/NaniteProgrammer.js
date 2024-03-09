@@ -1,5 +1,14 @@
 import { useBackend } from '../backend';
-import { Button, Dropdown, Grid, Input, LabeledList, NoticeBox, NumberInput, Section } from '../components';
+import {
+  Button,
+  Dropdown,
+  Grid,
+  Input,
+  LabeledList,
+  NoticeBox,
+  NumberInput,
+  Section,
+} from '../components';
 import { Window } from '../layouts';
 
 export const NaniteCodes = (props, context) => {
@@ -274,7 +283,8 @@ export const NaniteProgrammerContent = (props, context) => {
       title={name}
       buttons={
         <Button icon="eject" content="Изъять" onClick={() => act('eject')} />
-      }>
+      }
+    >
       <Section title="Информация" level={2}>
         <Grid>
           <Grid.Column>{desc}</Grid.Column>
@@ -309,7 +319,8 @@ export const NaniteProgrammerContent = (props, context) => {
             bold
             onClick={() => act('toggle_active')}
           />
-        }>
+        }
+      >
         <Grid>
           <Grid.Column>
             <NaniteCodes />

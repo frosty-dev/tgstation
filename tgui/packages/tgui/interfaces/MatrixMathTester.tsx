@@ -5,7 +5,7 @@ import { Window } from '../layouts';
 
 const MatrixMathTesterInput = (
   props: { value: number; varName: string },
-  context
+  context,
 ) => {
   const { act } = useBackend(context);
   return (

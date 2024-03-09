@@ -1,7 +1,18 @@
 import { BooleanLike } from 'common/react';
 import { capitalize, createSearch } from 'common/string';
 import { useBackend, useLocalState } from '../backend';
-import { Box, Button, Dimmer, Divider, Icon, Input, NumberInput, Section, Stack, Tabs } from '../components';
+import {
+  Box,
+  Button,
+  Dimmer,
+  Divider,
+  Icon,
+  Input,
+  NumberInput,
+  Section,
+  Stack,
+  Tabs,
+} from '../components';
 import { Window } from '../layouts';
 
 const buttonWidth = 2;
@@ -56,13 +67,13 @@ const ShoppingTab = (props, context) => {
   const [shopCategory, setShopCategory] = useLocalState(
     context,
     'shopCategory',
-    order_categories[0]
+    order_categories[0],
   );
   const [condensed] = useLocalState(context, 'condensed', false);
   const [searchItem, setSearchItem] = useLocalState(context, 'searchItem', '');
   const search = createSearch<OrderDatum>(
     searchItem,
-    (order_datums) => order_datums.name
+    (order_datums) => order_datums.name,
   );
   let goods =
     searchItem.length > 0
@@ -83,7 +94,8 @@ const ShoppingTab = (props, context) => {
                   if (searchItem.length > 0) {
                     setSearchItem('');
                   }
-                }}>
+                }}
+              >
                 {category}
               </Tabs.Tab>
             ))}
@@ -200,7 +212,7 @@ const CheckoutTab = (props, context) => {
   } = data;
   const total_cargo_cost = Math.floor(total_cost * cargo_cost_multiplier);
   const checkout_list = order_datums.filter(
-    (food) => food && (findAmount(item_amts, food.name) || 0)
+    (food) => food && (findAmount(item_amts, food.name) || 0),
   );
   return (
     <Stack vertical fill>

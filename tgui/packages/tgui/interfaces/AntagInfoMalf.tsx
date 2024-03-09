@@ -4,7 +4,11 @@ import { GenericUplink, Item } from './Uplink/GenericUplink';
 import { BlockQuote, Button, Section, Stack, Tabs } from '../components';
 import { BooleanLike } from 'common/react';
 import { Window } from '../layouts';
-import { ObjectivePrintout, Objective, ReplaceObjectivesButton } from './common/Objectives';
+import {
+  ObjectivePrintout,
+  Objective,
+  ReplaceObjectivesButton,
+} from './common/Objectives';
 
 const allystyle = {
   fontWeight: 'bold',
@@ -77,10 +81,12 @@ const FlavorSection = (props, context) => {
             This is a gameplay suggestion for bored ais.
             You don't have to follow it, unless you want some
             ideas for how to spend the round.`}
-          tooltipPosition="bottom-start">
+          tooltipPosition="bottom-start"
+        >
           Policy
         </Button>
-      }>
+      }
+    >
       <Stack vertical fill>
         <Stack.Item grow>
           <Stack fill vertical>
@@ -168,7 +174,7 @@ export const AntagInfoMalf = (props, context) => {
   const [antagInfoTab, setAntagInfoTab] = useLocalState(
     context,
     'antagInfoTab',
-    0
+    0,
   );
   const categoriesList: string[] = [];
   const items: Item[] = [];
@@ -191,7 +197,8 @@ export const AntagInfoMalf = (props, context) => {
     <Window
       width={660}
       height={530}
-      theme={(antagInfoTab === 0 && 'hackerman') || 'malfunction'}>
+      theme={(antagInfoTab === 0 && 'hackerman') || 'malfunction'}
+    >
       <Window.Content style={{ 'font-family': 'Consolas, monospace' }}>
         <Stack vertical fill>
           <Stack.Item>
@@ -199,13 +206,15 @@ export const AntagInfoMalf = (props, context) => {
               <Tabs.Tab
                 icon="info"
                 selected={antagInfoTab === 0}
-                onClick={() => setAntagInfoTab(0)}>
+                onClick={() => setAntagInfoTab(0)}
+              >
                 Information
               </Tabs.Tab>
               <Tabs.Tab
                 icon="code"
                 selected={antagInfoTab === 1}
-                onClick={() => setAntagInfoTab(1)}>
+                onClick={() => setAntagInfoTab(1)}
+              >
                 Malfunction Modules
               </Tabs.Tab>
             </Tabs>

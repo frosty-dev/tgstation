@@ -80,7 +80,8 @@ export const EngravedMessage = (props, context) => {
                 color="bad"
                 onClick={() => act('delete')}
               />
-            }>
+            }
+          >
             <LabeledList>
               <LabeledList.Item label="Автор">{creator_key}</LabeledList.Item>
               <LabeledList.Item label="ПерсонажПерсонаж">

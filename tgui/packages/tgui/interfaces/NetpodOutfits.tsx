@@ -1,4 +1,12 @@
-import { Button, Divider, Input, NoticeBox, Section, Stack, Tabs } from '../components';
+import {
+  Button,
+  Divider,
+  Input,
+  NoticeBox,
+  Section,
+  Stack,
+  Tabs,
+} from '../components';
 import { useBackend, useLocalState } from '../backend';
 
 import { Window } from '../layouts';
@@ -27,12 +35,12 @@ export const NetpodOutfits = (props, context) => {
   const [selectedType, setSelectedType] = useLocalState<Collection>(
     context,
     'selectedType',
-    collections[0]
+    collections[0],
   );
   const [search, setSearch] = useLocalState<string>(
     context,
     'outfitSearch',
-    ''
+    '',
   );
 
   const searchFn = createSearch(search, (outfit: Outfit) => outfit.name);
@@ -60,7 +68,8 @@ export const NetpodOutfits = (props, context) => {
                   placeholder="Search"
                   value={search}
                 />
-              }>
+              }
+            >
               <Stack fill>
                 <Stack.Item grow>
                   <Tabs vertical>
@@ -69,7 +78,8 @@ export const NetpodOutfits = (props, context) => {
                         <Tabs.Tab
                           key={collection.name}
                           onClick={() => setSelectedType(collection)}
-                          selected={selectedType === collection}>
+                          selected={selectedType === collection}
+                        >
                           {collection.name}
                         </Tabs.Tab>
                         {index > 0 && <Divider />}
@@ -85,9 +95,8 @@ export const NetpodOutfits = (props, context) => {
                         <Button
                           selected={netsuit === path}
                           color="transparent"
-                          onClick={() =>
-                            act('select_outfit', { outfit: path })
-                          }>
+                          onClick={() => act('select_outfit', { outfit: path })}
+                        >
                           {name}
                         </Button>
                       </Stack.Item>

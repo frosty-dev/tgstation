@@ -1,6 +1,16 @@
 import { useBackend, useLocalState } from '../backend';
 import { Window } from '../layouts';
-import { BlockQuote, Button, Collapsible, LabeledList, NoticeBox, RestrictedInput, Section, Stack, Tabs } from '../components';
+import {
+  BlockQuote,
+  Button,
+  Collapsible,
+  LabeledList,
+  NoticeBox,
+  RestrictedInput,
+  Section,
+  Stack,
+  Tabs,
+} from '../components';
 import { sortBy } from 'common/collections';
 
 type Data = {
@@ -27,7 +37,7 @@ export const WarrantConsole = (props, context) => {
   const [selectedRecord] = useLocalState<WarrantRecord | undefined>(
     context,
     'warrantRecord',
-    undefined
+    undefined,
   );
 
   return (
@@ -78,7 +88,8 @@ const RecordList = (props, context) => {
       }
       fill
       scrollable
-      title="Citations">
+      title="Citations"
+    >
       <Stack fill vertical>
         {!records?.length ? (
           <NoticeBox>No citations issued.</NoticeBox>
@@ -89,7 +100,8 @@ const RecordList = (props, context) => {
                 className="candystripe"
                 key={index}
                 onClick={() => selectHandler(record)}
-                selected={selectedRecord?.crew_ref === record.crew_ref}>
+                selected={selectedRecord?.crew_ref === record.crew_ref}
+              >
                 {record.crew_name}: {record.citations.length}
               </Tabs.Tab>
             ))}
@@ -142,12 +154,14 @@ const CitationManager = (props, context) => {
           icon="print"
           onClick={() =>
             act('print', { crew_ref: crew_ref, fine_ref: fine_ref })
-          }>
+          }
+        >
           Print
         </Button>
       }
       color={getFineColor(fine)}
-      title={fine_name}>
+      title={fine_name}
+    >
       <LabeledList>
         <LabeledList.Item label="Details">
           <BlockQuote>{details}</BlockQuote>
@@ -186,13 +200,13 @@ export const getCurrentRecord = (context) => {
   const [selectedRecord] = useLocalState<WarrantRecord | undefined>(
     context,
     'warrantRecord',
-    undefined
+    undefined,
   );
   if (!selectedRecord) return;
   const { data } = useBackend<Data>(context);
   const { records = [] } = data;
   const foundRecord = records.find(
-    (record) => record.crew_ref === selectedRecord.crew_ref
+    (record) => record.crew_ref === selectedRecord.crew_ref,
   );
   if (!foundRecord) return;
 

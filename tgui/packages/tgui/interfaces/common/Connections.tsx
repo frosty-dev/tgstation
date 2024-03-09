@@ -32,7 +32,7 @@ export const Connections = (
     zLayer?: number;
     lineWidth?: number;
   },
-  context
+  context,
 ) => {
   const { connections, zLayer = -1, lineWidth = '2px' } = props;
 
@@ -47,10 +47,11 @@ export const Connections = (
       width="100%"
       height="100%"
       style={{
-        'position': 'absolute',
+        position: 'absolute',
         'pointer-events': 'none',
         'z-index': zLayer,
-      }}>
+      }}
+    >
       {connections.map((val, index) => {
         const from = val.from;
         const to = val.to;

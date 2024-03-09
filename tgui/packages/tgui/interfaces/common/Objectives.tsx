@@ -69,7 +69,7 @@ type ReplaceObjectivesProps = {
 
 export const ReplaceObjectivesButton = (
   props: ReplaceObjectivesProps,
-  context
+  context,
 ) => {
   const {
     can_change_objective,

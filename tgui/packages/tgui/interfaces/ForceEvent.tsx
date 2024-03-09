@@ -83,7 +83,7 @@ export const PanelOptions = (props, context) => {
   const [searchQuery, setSearchQuery] = useLocalState(
     context,
     'searchQuery',
-    ''
+    '',
   );
 
   const [announce, setAnnounce] = useLocalState(context, 'announce', true);
@@ -106,7 +106,8 @@ export const PanelOptions = (props, context) => {
         <Button.Checkbox
           fluid
           checked={announce}
-          onClick={() => setAnnounce(!announce)}>
+          onClick={() => setAnnounce(!announce)}
+        >
           Announce
         </Button.Checkbox>
       </Stack.Item>
@@ -134,7 +135,7 @@ export const EventSection = (props, context) => {
       }
       return true;
     }),
-    EVENT_PAGE_ITEMS
+    EVENT_PAGE_ITEMS,
   );
 
   const sectionTitle = searchQuery ? 'Searching...' : category.name + ' Events';
@@ -163,7 +164,8 @@ export const EventSection = (props, context) => {
                         type: event.type,
                         announce: announce,
                       })
-                    }>
+                    }
+                  >
                     {event.name}
                   </Button>
                 </Stack.Item>
@@ -183,7 +185,7 @@ export const EventTabs = (props, context) => {
   const [category, setCategory] = useLocalState(
     context,
     'category',
-    categories[0]
+    categories[0],
   );
 
   const layerCats = paginate(categories, CATEGORY_PAGE_ITEMS);
@@ -197,7 +199,8 @@ export const EventTabs = (props, context) => {
               selected={category === cat}
               icon={cat.icon}
               key={cat.icon}
-              onClick={() => setCategory(cat)}>
+              onClick={() => setCategory(cat)}
+            >
               {cat.name}
             </Tabs.Tab>
           ))}

@@ -1,5 +1,13 @@
 import { useBackend, useLocalState } from '../backend';
-import { Section, Stack, Input, Button, Table, LabeledList, NoticeBox } from '../components';
+import {
+  Section,
+  Stack,
+  Input,
+  Button,
+  Table,
+  LabeledList,
+  NoticeBox,
+} from '../components';
 import { Window } from '../layouts';
 
 enum Screen {
@@ -44,7 +52,8 @@ const MachineScreen = (props, context) => {
               icon="home"
               onClick={() => act('return_home')}
             />
-          }>
+          }
+        >
           <LabeledList>
             <LabeledList.Item label="Network">{network}</LabeledList.Item>
             <LabeledList.Item label="Network Entity">
@@ -86,7 +95,7 @@ const MainScreen = (props, context) => {
   const [networkId, setNetworkId] = useLocalState(
     context,
     'networkId',
-    network
+    network,
   );
 
   return (
@@ -117,7 +126,8 @@ const MainScreen = (props, context) => {
               disabled={machinery.length === 0}
               onClick={() => act('flush_buffer')}
             />
-          }>
+          }
+        >
           <Table>
             <Table.Row header>
               <Table.Cell>Address</Table.Cell>

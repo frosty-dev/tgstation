@@ -1,6 +1,14 @@
 import { useBackend } from '../../backend';
 import { NumberInput, Dropdown, Stack } from '../../components';
-import { GeneratorProps, GeneratorTypes, GeneratorTypesNoVectors, ParticleUIData, P_DATA_GENERATOR, RandToNumber, RandTypes } from './data';
+import {
+  GeneratorProps,
+  GeneratorTypes,
+  GeneratorTypesNoVectors,
+  ParticleUIData,
+  P_DATA_GENERATOR,
+  RandToNumber,
+  RandTypes,
+} from './data';
 
 export const GeneratorListEntry = (props: GeneratorProps, context) => {
   const { act, data } = useBackend<ParticleUIData>(context);

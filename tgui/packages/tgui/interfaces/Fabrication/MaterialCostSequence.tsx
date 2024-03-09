@@ -42,17 +42,17 @@ export type MaterialCostSequenceProps = {
 };
 
 const MATERIAL_RU_TO_EN: Record<string, string> = {
-  'стекло': 'glass',
-  'железо': 'iron',
-  'пластик': 'plastic',
-  'титан': 'titanium',
-  'плазма': 'plasma',
-  'серебро': 'silver',
-  'золото': 'gold',
-  'уран': 'uranium',
-  'алмаз': 'diamond',
+  стекло: 'glass',
+  железо: 'iron',
+  пластик: 'plastic',
+  титан: 'titanium',
+  плазма: 'plasma',
+  серебро: 'silver',
+  золото: 'gold',
+  уран: 'uranium',
+  алмаз: 'diamond',
   'блюспейс кристалл': 'bluespace crystal',
-  'бананиум': 'bananium',
+  бананиум: 'bananium',
 };
 
 /**
@@ -68,7 +68,7 @@ const MATERIAL_RU_TO_EN: Record<string, string> = {
  */
 export const MaterialCostSequence = (
   props: MaterialCostSequenceProps,
-  context
+  context,
 ) => {
   const { design, amount, available, align, justify, SHEET_MATERIAL_AMOUNT } =
     props;
@@ -89,7 +89,7 @@ export const MaterialCostSequence = (
   return (
     <Flex wrap justify={justify ?? 'space-around'} align={align ?? 'center'}>
       {Object.entries(costMap).map(([material, quantity]) => (
-        <Flex.Item key={material} style={{ 'padding': '0.25em' }}>
+        <Flex.Item key={material} style={{ padding: '0.25em' }}>
           <Flex direction={'column'} align="center">
             <Flex.Item>
               <MaterialIcon
@@ -107,10 +107,11 @@ export const MaterialCostSequence = (
                         ? '#f08f11'
                         : '#db2828',
                 }
-              }>
+              }
+            >
               {formatSiUnit(
                 ((amount || 1) * quantity) / SHEET_MATERIAL_AMOUNT,
-                0
+                0,
               )}
             </Flex.Item>
           </Flex>

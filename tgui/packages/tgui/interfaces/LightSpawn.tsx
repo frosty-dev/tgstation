@@ -43,12 +43,12 @@ export const LightSpawn = (props, context) => {
   const [currentTemplate, setCurrentTemplate] = useLocalState<string>(
     context,
     'currentTemplate',
-    default_id
+    default_id,
   );
   const [currentCategory, setCurrentCategory] = useLocalState<string>(
     context,
     'currentCategory',
-    default_category
+    default_category,
   );
 
   const category_keys = category_ids ? Object.keys(category_ids) : [];
@@ -67,7 +67,8 @@ export const LightSpawn = (props, context) => {
                     onClick={() => setCurrentCategory(category)}
                     fontSize="14px"
                     bold
-                    textColor="#eee">
+                    textColor="#eee"
+                  >
                     {category}
                   </Tabs.Tab>
                 ))}
@@ -77,7 +78,8 @@ export const LightSpawn = (props, context) => {
                   <Tabs.Tab
                     key={id}
                     selected={currentTemplate === id}
-                    onClick={() => setCurrentTemplate(id)}>
+                    onClick={() => setCurrentTemplate(id)}
+                  >
                     <Stack vertical>
                       <Stack.Item
                         align="center"
@@ -115,7 +117,7 @@ const LightInfo = (props: LightInfoProps, context) => {
   const [workingDir, setWorkingDir] = useLocalState<number>(
     context,
     'workingDir',
-    Direction.North
+    Direction.North,
   );
   return (
     <Section>
@@ -223,7 +225,7 @@ const DirectionButton = (props: DirectedButtonProps, context) => {
   const [workingDir, setWorkingDir] = useLocalState<number>(
     context,
     'workingDir',
-    Direction.North
+    Direction.North,
   );
   return (
     <Button

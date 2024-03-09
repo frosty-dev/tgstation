@@ -25,7 +25,7 @@ const ReceiverChoice = (props, context) => {
   const [showInvisible, setShowInvisible] = useLocalState(
     context,
     'showInvisible',
-    false
+    false,
   );
 
   return (
@@ -106,7 +106,7 @@ const MessageInput = (props, context) => {
   const [showInvisible, setShowInvisible] = useLocalState(
     context,
     'showInvisible',
-    false
+    false,
   );
 
   const tooltipText = function (name, job, message, target) {
@@ -146,7 +146,7 @@ const MessageInput = (props, context) => {
           tooltip={
             blocked
               ? 'Fill in the following lines: ' +
-              tooltipText(name, job, messageText, spam || !!user)
+                tooltipText(name, job, messageText, spam || !!user)
               : 'Send message to user(s)'
           }
           fluid
@@ -162,7 +162,8 @@ const MessageInput = (props, context) => {
               include_invisible: showInvisible,
               force: force,
             })
-          }>
+          }
+        >
           Send Message
         </Button>
       </Box>

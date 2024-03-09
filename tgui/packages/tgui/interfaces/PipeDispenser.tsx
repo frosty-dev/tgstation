@@ -2,7 +2,12 @@ import { BooleanLike } from 'common/react';
 import { useBackend, useLocalState } from '../backend';
 import { Button, LabeledList, Section, Stack, Tabs } from '../components';
 import { Window } from '../layouts';
-import { ICON_BY_CATEGORY_NAME, ColorItem, LayerSelect, SmartPipeBlockSection } from './RapidPipeDispenser';
+import {
+  ICON_BY_CATEGORY_NAME,
+  ColorItem,
+  LayerSelect,
+  SmartPipeBlockSection,
+} from './RapidPipeDispenser';
 
 type Data = {
   // Dynamic
@@ -55,7 +60,7 @@ const PipeTypeSection = (props, context) => {
   const [categoryName, setCategoryName] = useLocalState(
     context,
     'categoryName',
-    categories[0].cat_name
+    categories[0].cat_name,
   );
   const shownCategory =
     categories.find((category) => category.cat_name === categoryName) ||
@@ -69,7 +74,8 @@ const PipeTypeSection = (props, context) => {
             key={category.cat_name}
             icon={ICON_BY_CATEGORY_NAME[category.cat_name]}
             selected={category.cat_name === shownCategory.cat_name}
-            onClick={() => setCategoryName(category.cat_name)}>
+            onClick={() => setCategoryName(category.cat_name)}
+          >
             {category.cat_name}
           </Tabs.Tab>
         ))}

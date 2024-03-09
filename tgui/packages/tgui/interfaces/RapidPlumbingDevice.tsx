@@ -32,7 +32,7 @@ const PlumbingTypeSection = (props, context) => {
   const [categoryName, setCategoryName] = useLocalState(
     context,
     'categoryName',
-    selected_category
+    selected_category,
   );
   const shownCategory =
     categories.find((category) => category.cat_name === categoryName) ||
@@ -45,7 +45,8 @@ const PlumbingTypeSection = (props, context) => {
             fluid
             key={category.cat_name}
             selected={category.cat_name === shownCategory.cat_name}
-            onClick={() => setCategoryName(category.cat_name)}>
+            onClick={() => setCategoryName(category.cat_name)}
+          >
             {category.cat_name}
           </Tabs.Tab>
         ))}
@@ -62,7 +63,8 @@ const PlumbingTypeSection = (props, context) => {
               category: shownCategory.cat_name,
               id: index,
             })
-          }>
+          }
+        >
           <Box
             inline
             verticalAlign="middle"

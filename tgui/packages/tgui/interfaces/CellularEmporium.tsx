@@ -1,6 +1,15 @@
 import { BooleanLike } from '../../common/react';
 import { useBackend, useLocalState } from '../backend';
-import { Button, Section, Icon, Input, Stack, LabeledList, Box, NoticeBox } from '../components';
+import {
+  Button,
+  Section,
+  Icon,
+  Input,
+  Stack,
+  LabeledList,
+  Box,
+  NoticeBox,
+} from '../components';
 import { Window } from '../layouts';
 
 type typePath = string;
@@ -29,7 +38,7 @@ export const CellularEmporium = (props, context) => {
   const [searchAbilities, setSearchAbilities] = useLocalState(
     context,
     'searchAbilities',
-    ''
+    '',
   );
 
   const { can_readapt, genetic_points_count } = data;
@@ -70,7 +79,8 @@ export const CellularEmporium = (props, context) => {
                 />
               </Stack.Item>
             </Stack>
-          }>
+          }
+        >
           <AbilityList />
         </Section>
       </Window.Content>
@@ -93,12 +103,18 @@ const AbilityList = (props, context) => {
     searchAbilities.length <= 1
       ? abilities
       : abilities.filter((ability) => {
-        return (
-          ability.name.toLowerCase().includes(searchAbilities.toLowerCase()) ||
-          ability.desc.toLowerCase().includes(searchAbilities.toLowerCase()) ||
-          ability.helptext.toLowerCase().includes(searchAbilities.toLowerCase())
-        );
-      });
+          return (
+            ability.name
+              .toLowerCase()
+              .includes(searchAbilities.toLowerCase()) ||
+            ability.desc
+              .toLowerCase()
+              .includes(searchAbilities.toLowerCase()) ||
+            ability.helptext
+              .toLowerCase()
+              .includes(searchAbilities.toLowerCase())
+          );
+        });
 
   if (filteredAbilities.length === 0) {
     return (
@@ -147,7 +163,8 @@ const AbilityList = (props, context) => {
                   />
                 </Stack.Item>
               </Stack>
-            }>
+            }
+          >
             {ability.desc}
             <Box color="good">{ability.helptext}</Box>
           </LabeledList.Item>

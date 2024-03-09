@@ -1,5 +1,14 @@
 import { BooleanLike } from 'common/react';
-import { Box, Icon, Stack, Button, Section, NoticeBox, LabeledList, Collapsible } from '../components';
+import {
+  Box,
+  Icon,
+  Stack,
+  Button,
+  Section,
+  NoticeBox,
+  LabeledList,
+  Collapsible,
+} from '../components';
 import { Window } from '../layouts';
 import { useBackend } from '../backend';
 
@@ -62,7 +71,7 @@ export const VotePanel = (props, context) => {
     windowTitle +=
       ': ' +
       (currentVote.question || currentVote.vote.name).replace(/^\w/, (c) =>
-        c.toUpperCase()
+        c.toUpperCase(),
       );
   }
 
@@ -144,7 +153,8 @@ const VotersList = (props, context) => {
       <Collapsible
         title={`View Voters${
           data.voting.length ? `: ${data.voting.length}` : ''
-        }`}>
+        }`}
+      >
         <Section height={8} fill scrollable>
           {data.voting.map((voter) => {
             return <Box key={voter}>{voter}</Box>;
@@ -183,10 +193,12 @@ const ChoicesPanel = (props, context) => {
                       disabled={user.singleSelection === choice.name}
                       onClick={() => {
                         act('voteSingle', { voteOption: choice.name });
-                      }}>
+                      }}
+                    >
                       Vote
                     </Button>
-                  }>
+                  }
+                >
                   {user.singleSelection &&
                     choice.name === user.singleSelection && (
                       <Icon
@@ -219,10 +231,12 @@ const ChoicesPanel = (props, context) => {
                     <Button
                       onClick={() => {
                         act('voteMulti', { voteOption: choice.name });
-                      }}>
+                      }}
+                    >
                       Vote
                     </Button>
-                  }>
+                  }
+                >
                   {user.multiSelection &&
                   user.multiSelection[user.ckey.concat(choice.name)] === 1 ? (
                     <Icon
@@ -265,7 +279,8 @@ const TimePanel = (props, context) => {
             <Button
               color="red"
               disabled={!user.isLowerAdmin || !currentVote}
-              onClick={() => act('cancel')}>
+              onClick={() => act('cancel')}
+            >
               Cancel Vote
             </Button>
           )}

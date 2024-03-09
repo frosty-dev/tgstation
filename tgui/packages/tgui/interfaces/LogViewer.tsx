@@ -1,5 +1,12 @@
 import { useBackend, useLocalState } from '../backend';
-import { Button, Collapsible, Input, NoticeBox, Section, Stack } from '../components';
+import {
+  Button,
+  Collapsible,
+  Input,
+  NoticeBox,
+  Section,
+  Stack,
+} from '../components';
 import { Window } from '../layouts';
 
 type LogViewerData = {
@@ -36,7 +43,7 @@ export const LogViewer = (_: any, context: any) => {
   const [activeCategory, setActiveCategory] = useLocalState(
     context,
     'activeCategory',
-    ''
+    '',
   );
 
   let viewerData: LogViewerCategoryData = {
@@ -87,7 +94,7 @@ const CategoryBar = (props: CategoryBarProps, context: any) => {
   const [categorySearch, setCategorySearch] = useLocalState(
     context,
     'categorySearch',
-    ''
+    '',
   );
 
   return (
@@ -101,7 +108,8 @@ const CategoryBar = (props: CategoryBarProps, context: any) => {
           value={categorySearch}
           onChange={(_: any, value: string) => setCategorySearch(value)}
         />
-      }>
+      }
+    >
       <Stack scrollableHorizontal>
         {/** these are not in stack items to have them directly next to eachother */}
         <Button
@@ -156,12 +164,12 @@ const CategoryViewer = (props: CategoryViewerProps, context: any) => {
   let [searchRegex, setSearchRegex] = useLocalState(
     context,
     'searchRegex',
-    false
+    false,
   );
   let [caseSensitive, setCaseSensitive] = useLocalState(
     context,
     'caseSensitive',
-    false
+    false,
   );
   if (!search && searchRegex) {
     setSearchRegex(false);
@@ -210,7 +218,8 @@ const CategoryViewer = (props: CategoryViewerProps, context: any) => {
             }}
           />
         </>
-      }>
+      }
+    >
       <Stack vertical>
         {!searchRegex || regexValidation === true ? (
           props.data?.entries.map((entry) => {
@@ -240,7 +249,8 @@ const CategoryViewer = (props: CategoryViewerProps, context: any) => {
                 <Collapsible
                   fitted
                   tooltip={entry.timestamp}
-                  title={`[${entry.id}] - ${entry.message}`}>
+                  title={`[${entry.id}] - ${entry.message}`}
+                >
                   <Stack vertical fill>
                     <Stack.Item>
                       <p font-family="Courier">{entry.message}</p>

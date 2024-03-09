@@ -84,20 +84,22 @@ export const Panel = (props, context) => {
             <Notifications>
               {game.connectionLostAt && (
                 <Notifications.Item
-                  rightSlot={(
+                  rightSlot={
                     <Button
                       color="white"
-                      onClick={() => Byond.command('.reconnect')}>
+                      onClick={() => Byond.command('.reconnect')}
+                    >
                       Переподключиться
                     </Button>
-                  )}>
-                  Сервер перезагружается. Если сообщение висит
-                  более двух минут, то можете нажать на кнопку справа.
+                  }
+                >
+                  Сервер перезагружается. Если сообщение висит более двух минут,
+                  то можете нажать на кнопку справа.
                 </Notifications.Item>
               )}
               {game.roundRestartedAt && (
                 <Notifications.Item>
-                   Соединение было закрыто по причине  перезагрузки сервера.
+                  Соединение было закрыто по причине перезагрузки сервера.
                   Пожалуйста, подождите. Игра сама переподключится к серверу.
                   Это может занять 30 секунд и более, учтите!
                 </Notifications.Item>
@@ -123,7 +125,8 @@ const HoboPanel = (props, context) => {
             'z-index': 1000,
           }}
           selected={settings.visible}
-          onClick={() => settings.toggle()}>
+          onClick={() => settings.toggle()}
+        >
           Настройки
         </Button>
         {(settings.visible && <SettingsPanel />) || (

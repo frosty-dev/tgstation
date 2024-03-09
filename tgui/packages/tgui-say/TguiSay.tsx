@@ -312,7 +312,8 @@ export class TguiSay extends Component<{}, State> {
     return (
       <div
         className={`window window-${theme} window-${this.state.size}`}
-        $HasKeyedChildren>
+        $HasKeyedChildren
+      >
         <Dragzone position="top" theme={theme} />
         <div className="center" $HasKeyedChildren>
           <Dragzone position="left" theme={theme} />
@@ -320,7 +321,8 @@ export class TguiSay extends Component<{}, State> {
             <button
               className={`button button-${theme}`}
               onClick={this.handleIncrementChannel}
-              type="button">
+              type="button"
+            >
               {this.state.buttonContent}
             </button>
             <textarea
