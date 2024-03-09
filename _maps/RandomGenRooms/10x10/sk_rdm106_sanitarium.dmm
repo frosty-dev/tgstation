@@ -74,9 +74,6 @@
 "iK" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/sign/poster/official/obey{
-	pixel_x = 30
-	},
 /obj/effect/decal/remains/human,
 /turf/open/floor/plating,
 /area/template_noop)
@@ -85,9 +82,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/blood/tracks,
 /obj/effect/decal/cleanable/blood/gibs/up,
-/obj/structure/sign/warning{
-	pixel_x = -30
-	},
 /turf/open/floor/plating,
 /area/template_noop)
 "jc" = (
@@ -96,16 +90,15 @@
 /area/template_noop)
 "jT" = (
 /obj/machinery/light/small/directional/east,
-/obj/structure/sign/poster/official/soft_cap_pop_art{
-	pixel_x = -30
-	},
 /turf/open/floor/iron/white,
 /area/template_noop)
 "jY" = (
-/obj/structure/sign/poster/official/nanomichi_ad{
-	pixel_y = -30
-	},
-/turf/open/floor/carpet/blue,
+/obj/structure/sign/warning/no_smoking/circle,
+/turf/closed/wall,
+/area/template_noop)
+"kk" = (
+/obj/structure/sign/poster/official/work_for_a_future,
+/turf/closed/wall,
 /area/template_noop)
 "lF" = (
 /turf/open/floor/carpet/blue,
@@ -135,10 +128,15 @@
 /area/template_noop)
 "nO" = (
 /obj/machinery/light/directional/south,
-/obj/structure/sign/warning/no_smoking/circle{
-	pixel_y = -30
-	},
 /turf/open/floor/carpet/blue,
+/area/template_noop)
+"og" = (
+/obj/structure/sign/poster/official/soft_cap_pop_art,
+/turf/closed/wall,
+/area/template_noop)
+"oo" = (
+/obj/structure/sign/poster/official/help_others,
+/turf/closed/wall,
 /area/template_noop)
 "pk" = (
 /obj/structure/chair/sofa/left,
@@ -157,6 +155,10 @@
 	},
 /turf/open/floor/iron/white,
 /area/template_noop)
+"se" = (
+/obj/structure/sign/poster/contraband/clown,
+/turf/closed/wall,
+/area/template_noop)
 "st" = (
 /obj/machinery/door/airlock/wood,
 /turf/open/floor/plating,
@@ -164,9 +166,6 @@
 "sz" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 1
-	},
-/obj/structure/sign/poster/official/no_erp{
-	pixel_y = -30
 	},
 /obj/effect/decal/cleanable/blood/gibs/old,
 /turf/open/floor/plating,
@@ -182,10 +181,8 @@
 /turf/open/floor/carpet/blue,
 /area/template_noop)
 "yM" = (
-/obj/structure/sign/poster/contraband/clown{
-	pixel_y = -30
-	},
-/turf/open/floor/carpet/blue,
+/obj/structure/sign/poster/official/obey,
+/turf/closed/wall,
 /area/template_noop)
 "yQ" = (
 /obj/machinery/door/airlock/maintenance_hatch{
@@ -199,9 +196,6 @@
 "zX" = (
 /obj/machinery/light/directional/north,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/sign/poster/official/help_others{
-	pixel_y = 30
-	},
 /turf/open/floor/iron/white,
 /area/template_noop)
 "Ah" = (
@@ -254,6 +248,10 @@
 "Cz" = (
 /turf/closed/wall,
 /area/template_noop)
+"CX" = (
+/obj/structure/sign/poster/official/do_not_question,
+/turf/closed/wall,
+/area/template_noop)
 "Eq" = (
 /obj/structure/chair/sofa/right,
 /turf/open/floor/carpet/blue,
@@ -271,9 +269,6 @@
 /area/template_noop)
 "Jd" = (
 /obj/structure/reagent_dispensers/water_cooler,
-/obj/structure/sign/poster/official/cleanliness{
-	pixel_y = 30
-	},
 /turf/open/floor/iron/white,
 /area/template_noop)
 "Jg" = (
@@ -284,6 +279,10 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
+/area/template_noop)
+"JQ" = (
+/obj/structure/sign/poster/official/no_erp,
+/turf/closed/wall,
 /area/template_noop)
 "Kr" = (
 /obj/structure/table/wood,
@@ -320,9 +319,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/blood/tracks,
 /obj/effect/decal/cleanable/blood/gibs/down,
-/obj/structure/sign/warning/biohazard{
-	pixel_x = -30
-	},
 /turf/open/floor/plating,
 /area/template_noop)
 "KL" = (
@@ -355,9 +351,6 @@
 "Ms" = (
 /obj/machinery/light/directional/west,
 /obj/structure/filingcabinet/chestdrawer,
-/obj/structure/sign/poster/official/work_for_a_future{
-	pixel_y = -30
-	},
 /turf/open/floor/carpet/blue,
 /area/template_noop)
 "Ov" = (
@@ -383,16 +376,15 @@
 /area/template_noop)
 "RY" = (
 /obj/structure/chair/office,
-/obj/structure/sign/warning/no_smoking/circle{
-	pixel_y = 30
-	},
 /turf/open/floor/iron/white,
 /area/template_noop)
 "SI" = (
-/obj/structure/sign/poster/official/do_not_question{
-	pixel_y = -30
-	},
-/turf/open/floor/iron/white,
+/obj/structure/sign/warning/biohazard,
+/turf/closed/wall,
+/area/template_noop)
+"UZ" = (
+/obj/structure/sign/poster/official/cleanliness,
+/turf/closed/wall,
 /area/template_noop)
 "VC" = (
 /obj/machinery/light/small/directional/east,
@@ -408,6 +400,10 @@
 	},
 /turf/open/floor/carpet/cyan,
 /area/template_noop)
+"Ww" = (
+/obj/structure/sign/poster/official/nanomichi_ad,
+/turf/closed/wall,
+/area/template_noop)
 "WC" = (
 /obj/structure/table/reinforced,
 /obj/item/paper_bin{
@@ -417,11 +413,15 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/white,
 /area/template_noop)
+"Xu" = (
+/obj/structure/sign/warning,
+/turf/closed/wall,
+/area/template_noop)
 "XI" = (
 /obj/structure/sign/poster/official/the_owl{
-	pixel_x = 30
+	pixel_x = null
 	},
-/turf/open/floor/iron/white,
+/turf/closed/wall,
 /area/template_noop)
 
 (1,1,1) = {"
@@ -441,8 +441,8 @@ Eq
 ni
 Cz
 Cz
-Cz
-Cz
+Xu
+SI
 Cz
 Jg
 gO
@@ -451,24 +451,24 @@ Cz
 (3,1,1) = {"
 pk
 nO
-Cz
+jY
 IY
 iY
 KA
 yQ
 iK
 sz
-Cz
+JQ
 "}
 (4,1,1) = {"
 ml
-jY
-Cz
-Cz
+lF
+Ww
+og
 st
 Cz
 Cz
-Cz
+yM
 Cz
 Cz
 "}
@@ -478,7 +478,7 @@ jc
 bN
 jT
 jc
-XI
+mV
 bN
 mV
 WC
@@ -486,12 +486,12 @@ Ls
 "}
 (6,1,1) = {"
 Ah
-SI
-Cz
+mV
+CX
 Cz
 bN
-Cz
-Cz
+XI
+jY
 RY
 eX
 mV
@@ -503,7 +503,7 @@ Cz
 ec
 ni
 Ms
-Cz
+kk
 jc
 ql
 mV
@@ -515,7 +515,7 @@ Cz
 ni
 lF
 bI
-Cz
+oo
 zX
 ni
 ni
@@ -527,7 +527,7 @@ Cz
 uS
 Eu
 KL
-Cz
+UZ
 Jd
 lF
 bI
@@ -538,8 +538,8 @@ Kr
 Cz
 At
 lF
-yM
-Cz
+lF
+se
 KV
 Pg
 tz
