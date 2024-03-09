@@ -546,7 +546,7 @@
 "gx" = (
 /obj/effect/turf_decal/siding/blue,
 /obj/machinery/airalarm/directional/south{
-	pixel_y = -23
+	pixel_y = -25
 	},
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/white/smooth_large,
@@ -766,7 +766,7 @@
 	},
 /obj/item/reagent_containers/cup/bottle/multiver{
 	pixel_x = -5;
-	pixel_y = 3
+	pixel_y = 25
 	},
 /obj/effect/turf_decal/trimline/blue/filled/line,
 /obj/machinery/light/directional/south,
@@ -1608,7 +1608,7 @@
 	dir = 1
 	},
 /obj/machinery/airalarm/directional/north{
-	pixel_y = 23
+	pixel_y = 25
 	},
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/cmo)
@@ -1644,7 +1644,7 @@
 	areastring = "/area/station/command/heads_quarters/cmo";
 	dir = 1;
 	name = "CMO Office APC";
-	pixel_y = 23
+	pixel_y = 25
 	},
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
@@ -1663,7 +1663,7 @@
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger{
-	pixel_y = -7
+	pixel_y = -25
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
@@ -2641,7 +2641,7 @@
 	dir = 8
 	},
 /obj/machinery/airalarm/directional/west{
-	pixel_x = -23
+	pixel_x = -25
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/aft)
@@ -2706,7 +2706,7 @@
 "Mb" = (
 /obj/machinery/firealarm{
 	dir = 8;
-	pixel_x = 24
+	pixel_x = 25
 	},
 /obj/machinery/light/directional/east,
 /turf/open/floor/engine,
@@ -3300,7 +3300,7 @@
 /obj/structure/table/glass,
 /obj/item/reagent_containers/cup/bottle/epinephrine{
 	pixel_x = -6;
-	pixel_y = 13
+	pixel_y = 25
 	},
 /obj/item/reagent_containers/syringe{
 	pixel_x = -5;
@@ -3493,7 +3493,7 @@
 /obj/machinery/iv_drip,
 /obj/structure/window/reinforced/spawner/directional/west,
 /obj/machinery/newscaster{
-	pixel_y = -28
+	pixel_y = -25
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 1

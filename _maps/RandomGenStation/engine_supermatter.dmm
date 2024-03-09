@@ -209,7 +209,7 @@
 /obj/item/clothing/mask/gas,
 /obj/item/clothing/mask/gas{
 	pixel_x = -3;
-	pixel_y = -3
+	pixel_y = -25
 	},
 /turf/open/floor/iron,
 /area/station/engineering/main)

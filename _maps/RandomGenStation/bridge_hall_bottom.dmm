@@ -406,7 +406,7 @@
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/west{
 	areastring = "/area/station/engineering/gravity_generator";
-	pixel_y = 1
+	pixel_y = 25
 	},
 /obj/structure/chair/office/light,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -431,7 +431,7 @@
 	areastring = "/area/station/command/heads_quarters/captain";
 	dir = 1;
 	name = "Captain's Office APC";
-	pixel_y = 23
+	pixel_y = 25
 	},
 /obj/structure/cable,
 /turf/open/floor/wood,
@@ -1259,7 +1259,7 @@
 /obj/structure/table/wood,
 /obj/item/camera,
 /obj/item/storage/photo_album{
-	pixel_y = -10
+	pixel_y = -25
 	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain)
@@ -1510,7 +1510,7 @@
 /obj/effect/turf_decal/bot,
 /obj/structure/window/reinforced/spawner/directional/west,
 /obj/machinery/airalarm/directional/north{
-	pixel_y = 23
+	pixel_y = 25
 	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/command/teleporter)
@@ -2252,7 +2252,7 @@
 /obj/machinery/power/apc{
 	areastring = "/area/station/command/heads_quarters/hop";
 	name = "HEAD OF PERSONNEL APC";
-	pixel_y = -23
+	pixel_y = -25
 	},
 /obj/structure/cable,
 /turf/open/floor/iron/dark/smooth_large,
@@ -2812,7 +2812,7 @@
 /area/station/command/heads_quarters/captain)
 "XU" = (
 /obj/machinery/airalarm/directional/east{
-	pixel_x = 23
+	pixel_x = 25
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 9

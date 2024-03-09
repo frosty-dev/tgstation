@@ -1623,7 +1623,7 @@
 	},
 /obj/machinery/firealarm{
 	dir = 1;
-	pixel_y = -24
+	pixel_y = -25
 	},
 /obj/machinery/computer/operating{
 	dir = 1
@@ -5270,7 +5270,7 @@
 	network = list("ss13","medbay")
 	},
 /obj/machinery/airalarm/directional/south{
-	pixel_y = -23
+	pixel_y = -25
 	},
 /obj/structure/table,
 /obj/machinery/cell_charger,

@@ -25,7 +25,7 @@
 "am" = (
 /obj/machinery/door_buttons/airlock_controller{
 	pixel_x = -5;
-	pixel_y = 30
+	pixel_y = 25
 	},
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 1
@@ -136,7 +136,7 @@
 /obj/machinery/power/apc/auto_name{
 	dir = 1;
 	name = "Virology APC";
-	pixel_y = 23
+	pixel_y = 25
 	},
 /obj/effect/mapping_helpers/apc/cell_5k,
 /obj/machinery/camera/directional/north{
@@ -354,7 +354,7 @@
 	areastring = "/area/station/medical/pharmacy";
 	dir = 1;
 	name = "Pharmacy APC";
-	pixel_y = 23
+	pixel_y = 25
 	},
 /turf/open/floor/iron/white/smooth_large,
 /area/station/medical/pharmacy)
@@ -1682,7 +1682,7 @@
 	areastring = "/area/station/command/heads_quarters/cmo";
 	dir = 1;
 	name = "CM Office APC";
-	pixel_y = 23
+	pixel_y = 25
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -1854,7 +1854,7 @@
 	pixel_x = 28
 	},
 /obj/item/screwdriver{
-	pixel_y = 10
+	pixel_y = 25
 	},
 /obj/item/radio/off,
 /obj/effect/turf_decal/tile/red,
@@ -2007,7 +2007,7 @@
 /obj/machinery/power/apc{
 	areastring = "/area/station/medical/psychology";
 	name = "Psychology APC";
-	pixel_y = -24
+	pixel_y = -25
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -2160,7 +2160,7 @@
 /area/station/maintenance/aft)
 "vE" = (
 /obj/structure/mirror{
-	pixel_x = -28
+	pixel_x = -25
 	},
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 8
@@ -3342,7 +3342,7 @@
 /area/station/maintenance/aft)
 "Fs" = (
 /obj/structure/noticeboard{
-	pixel_y = 32
+	pixel_y = 25
 	},
 /obj/machinery/camera/directional/north{
 	c_tag = "Medbay West";
@@ -3755,7 +3755,7 @@
 	areastring = "/area/station/medical/morgue";
 	dir = 1;
 	name = "Morgue APC";
-	pixel_y = 23
+	pixel_y = 25
 	},
 /obj/structure/cable,
 /turf/open/floor/iron/dark/smooth_large,
@@ -5353,7 +5353,7 @@
 /area/station/medical/medbay)
 "XK" = (
 /obj/structure/sign/departments/psychology{
-	pixel_y = -32
+	pixel_y = -25
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 5

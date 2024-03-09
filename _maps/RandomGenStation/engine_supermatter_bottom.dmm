@@ -1314,7 +1314,7 @@
 	dir = 8
 	},
 /obj/machinery/airalarm/directional/west{
-	pixel_x = -23
+	pixel_x = -25
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 1

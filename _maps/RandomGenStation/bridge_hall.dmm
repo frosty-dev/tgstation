@@ -15,7 +15,7 @@
 /obj/machinery/power/apc/auto_name{
 	areastring = "/area/station/command";
 	name = "BRIDGE APC";
-	pixel_y = -23
+	pixel_y = -25
 	},
 /obj/effect/mapping_helpers/apc/cell_5k,
 /obj/structure/cable,
@@ -574,7 +574,7 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -27;
-	pixel_y = 1
+	pixel_y = 25
 	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/command/teleporter)
@@ -1048,7 +1048,7 @@
 /obj/structure/table,
 /obj/item/beacon,
 /obj/machinery/airalarm/directional/north{
-	pixel_y = 23
+	pixel_y = 25
 	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/command/teleporter)
@@ -1235,7 +1235,7 @@
 /obj/structure/table,
 /obj/item/hand_tele,
 /obj/machinery/firealarm{
-	pixel_y = 24
+	pixel_y = 25
 	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/command/teleporter)
@@ -2502,7 +2502,7 @@
 /area/station/command)
 "In" = (
 /obj/machinery/newscaster{
-	pixel_y = 32
+	pixel_y = 25
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 10
@@ -2969,7 +2969,7 @@
 /obj/machinery/power/apc/auto_name{
 	areastring = "/area/station/ai_monitored/turret_protected/ai_upload";
 	name = "UPLOAD APC";
-	pixel_y = -23
+	pixel_y = -25
 	},
 /obj/effect/mapping_helpers/apc/cell_5k,
 /obj/structure/cable,
@@ -3485,7 +3485,7 @@
 	areastring = "/area/station/command/meeting_room";
 	dir = 4;
 	name = "CONFERENCE ROOM APC";
-	pixel_x = 24
+	pixel_x = 25
 	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor/border_only{

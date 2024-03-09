@@ -70,7 +70,7 @@
 /obj/machinery/button/door{
 	id = "durka_bot_right";
 	name = "Бронежалюзи нижние правые";
-	pixel_y = -32
+	pixel_y = -25
 	},
 /turf/open/floor/plating,
 /area/station/medical/psychology)
@@ -376,7 +376,7 @@
 	},
 /obj/machinery/light/small/directional/north,
 /obj/machinery/airalarm/directional/east{
-	pixel_x = 23
+	pixel_x = 25
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/chemistry)
@@ -458,7 +458,7 @@
 	pixel_y = 1
 	},
 /obj/item/storage/pill_bottle/mannitol{
-	pixel_y = -3
+	pixel_y = -25
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/extra)
@@ -586,7 +586,7 @@
 /area/station/medical/chemistry)
 "FW" = (
 /obj/machinery/airalarm/directional/east{
-	pixel_x = 23
+	pixel_x = 25
 	},
 /obj/structure/chair/sofa/left{
 	dir = 8
