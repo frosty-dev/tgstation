@@ -26,5 +26,5 @@
 	name = "Альпинист"
 
 	uniform = /obj/item/clothing/under/color/grey
-	backpack = /obj/item/storage/backpack/duffelbag
+	backpack = /obj/item/storage/backpack
 	shoes = /obj/item/clothing/shoes/winterboots
