@@ -25,7 +25,7 @@ const ReceiverChoice = (props, context) => {
   const [showInvisible, setShowInvisible] = useLocalState(
     context,
     'showInvisible',
-    false,
+    false
   );
 
   return (
@@ -106,7 +106,7 @@ const MessageInput = (props, context) => {
   const [showInvisible, setShowInvisible] = useLocalState(
     context,
     'showInvisible',
-    false,
+    false
   );
 
   const tooltipText = function (name, job, message, target) {

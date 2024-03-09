@@ -59,8 +59,8 @@ export const RemoteRobotControlContent = (props, context) => {
                 decodeHtmlEntities(robot.mode) === 'Inactive'
                   ? 'bad'
                   : decodeHtmlEntities(robot.mode) === 'Idle'
-                    ? 'average'
-                    : 'good'
+                  ? 'average'
+                  : 'good'
               }
             >
               {decodeHtmlEntities(robot.mode)}

@@ -28,7 +28,7 @@ const InstalledSoftware = (props, context) => {
   const [currentSelection, setCurrentSelection] = useLocalState(
     context,
     'software',
-    '',
+    ''
   );
 
   return (

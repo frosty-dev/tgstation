@@ -68,7 +68,7 @@ export class ChatScreen extends Component<ChatScreenProps, ChatScreenState> {
   componentDidUpdate(
     prevProps: ChatScreenProps,
     _prevState: ChatScreenState,
-    _snapshot: any,
+    _snapshot: any
   ) {
     if (prevProps.messages.length !== this.props.messages.length) {
       this.scrollToBottom();
@@ -201,7 +201,7 @@ export class ChatScreen extends Component<ChatScreenProps, ChatScreenState> {
                 : undefined
             }
           />
-        </Stack.Item>,
+        </Stack.Item>
       );
     }
 

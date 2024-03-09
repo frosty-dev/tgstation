@@ -44,8 +44,8 @@ export const Fax = (props, context) => {
           ? data.faxes.filter((filterFax: FaxInfo) => filterFax.visible)
           : data.faxes.filter(
               (filterFax: FaxInfo) =>
-                filterFax.visible && !filterFax.syndicate_network,
-            ),
+                filterFax.visible && !filterFax.syndicate_network
+            )
       )
     : [];
   return (
@@ -85,7 +85,7 @@ export const Fax = (props, context) => {
               {(data.syndicate_network
                 ? data.special_faxes
                 : data.special_faxes.filter(
-                    (fax: FaxSpecial) => !fax.emag_needed,
+                    (fax: FaxSpecial) => !fax.emag_needed
                   )
               ).map((special: FaxSpecial) => (
                 <Button

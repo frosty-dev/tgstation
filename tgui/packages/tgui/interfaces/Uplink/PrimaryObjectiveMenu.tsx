@@ -10,7 +10,7 @@ type PrimaryObjectiveMenuProps = {
 
 export const PrimaryObjectiveMenu = (
   props: PrimaryObjectiveMenuProps,
-  context,
+  context
 ) => {
   const { act } = useBackend(context);
   const { primary_objectives, final_objective, can_renegotiate } = props;

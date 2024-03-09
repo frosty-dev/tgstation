@@ -115,8 +115,8 @@ export const MatMarket = (props, context) => {
                       material.trend === 'up'
                         ? 'green'
                         : material.trend === 'down'
-                          ? 'red'
-                          : 'white'
+                        ? 'red'
+                        : 'white'
                     }
                   >
                     <b>{toTitleCase(material.name)}</b> is trending{' '}

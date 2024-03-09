@@ -30,12 +30,12 @@ export const ChemMixingChamber = (props, context) => {
   const [reagentName, setReagentName] = useLocalState(
     context,
     'reagentName',
-    '',
+    ''
   );
   const [reagentQuantity, setReagentQuantity] = useLocalState(
     context,
     'reagentQuantity',
-    1,
+    1
   );
 
   const { emptying, temperature, targetTemp, isReacting } = data;

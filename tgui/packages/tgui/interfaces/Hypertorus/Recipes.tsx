@@ -217,13 +217,13 @@ export const HypertorusRecipes = (props: RecipeProps, context) => {
                             name={effect_to_icon(
                               value,
                               scale,
-                              override_base || 1,
+                              override_base || 1
                             )}
                           />
                         </Tooltip>
                       </Table.Cell>
                     );
-                  },
+                  }
                 )}
               </MemoRow>
             );

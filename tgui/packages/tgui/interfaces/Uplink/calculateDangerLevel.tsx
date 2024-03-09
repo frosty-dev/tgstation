@@ -120,7 +120,7 @@ export const getDangerLevel = (progression_points: number) => {
 
 export const calculateDangerLevel = (
   progression_points: number,
-  textOnly: boolean,
+  textOnly: boolean
 ) => {
   const minutes = progression_points / 600;
   const displayedProgression = calculateProgression(progression_points);

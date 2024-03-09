@@ -123,7 +123,7 @@ export const SupermatterContent = (props: SupermatterProps, context) => {
   const [allGasActive, setAllGasActive] = useLocalState(
     context,
     'allGasActive',
-    false,
+    false
   );
   const gas_composition: [gas_path: string, amount: number][] = flow([
     !allGasActive && filter(([gas_path, amount]) => amount !== 0),
@@ -383,15 +383,15 @@ export const SupermatterContent = (props: SupermatterProps, context) => {
                                           ? 'green'
                                           : 'red'
                                         : effect.amount < 0
-                                          ? 'green'
-                                          : 'red'
+                                        ? 'green'
+                                        : 'red'
                                     }
                                   >
                                     {effect.amount > 0
                                       ? '+' + effect.amount + effect.unit
                                       : effect.amount + effect.unit}
                                   </LabeledList.Item>
-                                ),
+                                )
                             )}
                           </LabeledList>
                         </>

@@ -165,7 +165,7 @@ export const ExodroneConsole = (props, context) => {
   const [choosingTools, setChoosingTools] = useLocalState(
     context,
     'choosingTools',
-    false,
+    false
   );
 
   return (
@@ -220,7 +220,7 @@ const DroneSelectionSection = (
   props: {
     all_drones: Array<DroneBasicData>;
   },
-  context,
+  context
 ) => {
   const { act } = useBackend<ExodroneConsoleData>(context);
   const { all_drones } = props;
@@ -270,7 +270,7 @@ const ToolSelectionModal = (props, context) => {
   const [choosingTools, setChoosingTools] = useLocalState(
     context,
     'choosingTools',
-    false,
+    false
   );
 
   const toolData = Object.keys(all_tools);
@@ -317,7 +317,7 @@ const EquipmentBox = (
     cargo: CargoData;
     drone: DroneData;
   },
-  context,
+  context
 ) => {
   const { act, data } = useBackend<ExodroneConsoleData>(context);
   const { all_tools = {} } = data;
@@ -404,14 +404,14 @@ const EquipmentGrid = (
   props: {
     drone: ActiveDrone & DroneData;
   },
-  context,
+  context
 ) => {
   const { act } = useBackend<ExodroneConsoleData>(context);
   const { cargo, configurable } = props.drone;
   const [choosingTools, setChoosingTools] = useLocalState(
     context,
     'choosingTools',
-    false,
+    false
   );
   return (
     <Stack vertical fill>
@@ -476,7 +476,7 @@ const DroneStatus = (
     drone_integrity: number;
     drone_max_integrity: number;
   },
-  context,
+  context
 ) => {
   const { drone_integrity, drone_max_integrity } = props;
 
@@ -524,7 +524,7 @@ const TravelTargetSelectionScreen = (
     drone: (DroneExploration | DroneIdle | DroneTravel) & DroneData;
     showCancelButton?: boolean;
   },
-  context,
+  context
 ) => {
   // List of sites and eta travel times to each
   const { act, data } = useBackend<ExodroneConsoleData>(context);
@@ -548,12 +548,12 @@ const TravelTargetSelectionScreen = (
   const [choosingTools, setChoosingTools] = useLocalState(
     context,
     'choosingTools',
-    false,
+    false
   );
   const [TravelDimmerShown, setTravelDimmerShown] = useLocalState(
     context,
     'TravelDimmerShown',
-    false,
+    false
   );
 
   const travel_to = (ref) => {
@@ -656,7 +656,7 @@ const TravelDimmer = (
   props: {
     drone: DroneTravel;
   },
-  context,
+  context
 ) => {
   const { travel_time_left } = props.drone;
   return (
@@ -698,7 +698,7 @@ const ExplorationScreen = (
   props: {
     drone: DroneExploration & DroneData;
   },
-  context,
+  context
 ) => {
   const { act } = useBackend(context);
   const { drone } = props;
@@ -707,7 +707,7 @@ const ExplorationScreen = (
   const [TravelDimmerShown, setTravelDimmerShown] = useLocalState(
     context,
     'TravelDimmerShown',
-    false,
+    false
   );
 
   if (TravelDimmerShown) {
@@ -760,7 +760,7 @@ const EventScreen = (
     drone: DroneData;
     event: FullEventData;
   },
-  context,
+  context
 ) => {
   const { act } = useBackend(context);
   const { drone, event } = props;
@@ -828,7 +828,7 @@ export const AdventureScreen = (
     drone_max_integrity: number;
     hide_status?: boolean;
   },
-  context,
+  context
 ) => {
   const { act } = useBackend(context);
   const { adventure_data, drone_integrity, drone_max_integrity } = props;

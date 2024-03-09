@@ -35,12 +35,12 @@ export const FaxMainPanel = (props, context) => {
   const [stampCoordX, setStampCoordX] = useLocalState(
     context,
     'stampCoordX',
-    0,
+    0
   );
   const [stampCoordY, setStampCoordY] = useLocalState(
     context,
     'stampCoordY',
-    0,
+    0
   );
   const [stampAngle, setStampAngle] = useLocalState(context, 'stampAngle', 0);
   if (stamp && data.stamps[0] !== 'None') {

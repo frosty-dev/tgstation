@@ -31,7 +31,7 @@ export const MultiNameInput = (
     handleUpdateName: (nameType: string, value: string) => void;
     names: Record<string, string>;
   },
-  context,
+  context
 ) => {
   const [currentlyEditingName, setCurrentlyEditingName] = useLocalState<
     string | null
@@ -52,7 +52,7 @@ export const MultiNameInput = (
             {
               key,
               name,
-            },
+            }
           );
         }
 
@@ -143,7 +143,7 @@ export const MultiNameInput = (
                           <LabeledList.Divider />
                         )}
                       </>
-                    ),
+                    )
                   )}
                 </LabeledList>
               </Section>
@@ -161,7 +161,7 @@ export const NameInput = (
     name: string;
     openMultiNameInput: () => void;
   },
-  context,
+  context
 ) => {
   const [lastNameBeforeEdit, setLastNameBeforeEdit] = useLocalState<
     string | null

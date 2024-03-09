@@ -192,7 +192,7 @@ createElement(
   { className: 'color-' + status },
   'You are in ',
   status,
-  ' condition!',
+  ' condition!'
 );
 ```
 

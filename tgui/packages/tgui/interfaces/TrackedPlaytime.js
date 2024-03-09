@@ -12,7 +12,7 @@ const PlaytimeSection = (props) => {
   const { playtimes } = props;
 
   const sortedPlaytimes = sortByPlaytime(Object.entries(playtimes)).filter(
-    (entry) => entry[1],
+    (entry) => entry[1]
   );
 
   if (!sortedPlaytimes.length) {

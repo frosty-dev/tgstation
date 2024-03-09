@@ -103,7 +103,7 @@ export const RoundGauge = (props) => {
                   style={{
                     'stroke-dashoffset': Math.max(
                       (2.0 - (col_ranges[1] - col_ranges[0])) * Math.PI * 50,
-                      0,
+                      0
                     ),
                   }}
                   transform={`rotate(${180 + 180 * col_ranges[0]} 50 50)`}

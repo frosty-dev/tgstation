@@ -461,7 +461,7 @@ const SearchSpells = (props, context) => {
         entry.desc.toLowerCase().includes(searchStatement) ||
         // Also opting to include category
         // so you can search "rituals" to see them all at once
-        entry.cat.toLowerCase().includes(searchStatement),
+        entry.cat.toLowerCase().includes(searchStatement)
     );
   };
 
@@ -497,7 +497,7 @@ const SpellTabDisplay = (
     CooldownOffset?: number;
     PointOffset?: number;
   },
-  context,
+  context
 ) => {
   const { act, data } = useBackend<Data>(context);
   const { points } = data;
@@ -629,7 +629,7 @@ export const Spellbook = (props, context) => {
   const [spellSearch, setSpellSearch] = useLocalState(
     context,
     'spell-search',
-    '',
+    ''
   );
   const ActiveCat = TAB2NAME[tabIndex - 1];
   const ActiveNextCat = TAB2NAME[tabIndex];

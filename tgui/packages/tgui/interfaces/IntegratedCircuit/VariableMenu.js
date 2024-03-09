@@ -166,7 +166,7 @@ export class VariableMenu extends Component {
                             variable_name,
                             variable_type,
                             VARIABLE_NOT_A_LIST,
-                            e,
+                            e
                           )
                         }
                         fluid
@@ -183,7 +183,7 @@ export class VariableMenu extends Component {
                             variable_name,
                             variable_type,
                             VARIABLE_LIST,
-                            e,
+                            e
                           )
                         }
                         fluid
@@ -200,7 +200,7 @@ export class VariableMenu extends Component {
                             variable_name,
                             variable_type,
                             VARIABLE_ASSOC_LIST,
-                            e,
+                            e
                           )
                         }
                         fluid

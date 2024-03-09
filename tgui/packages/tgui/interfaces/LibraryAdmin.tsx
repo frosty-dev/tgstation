@@ -20,7 +20,7 @@ export const LibraryAdmin = (props, context) => {
   const [modifyMethod, setModifyMethod] = useLocalState(
     context,
     'ModifyMethod',
-    null,
+    null
   );
   return (
     <Window
@@ -110,12 +110,12 @@ const SearchAndDisplay = (props, context) => {
   const [modifyMethod, setModifyMethod] = useLocalState(
     context,
     'ModifyMethod',
-    '',
+    ''
   );
   const [modifyTarget, setModifyTarget] = useLocalState(
     context,
     'ModifyTarget',
-    0,
+    0
   );
   const {
     can_db_request,
@@ -349,12 +349,12 @@ const ModifyPage = (props, context) => {
   const [modifyMethod, setModifyMethod] = useLocalState(
     context,
     'ModifyMethod',
-    '',
+    ''
   );
   const [modifyTarget, setModifyTarget] = useLocalState(
     context,
     'ModifyTarget',
-    0,
+    0
   );
   const [reason, setReason] = useLocalState(context, 'Reason', 'null');
 

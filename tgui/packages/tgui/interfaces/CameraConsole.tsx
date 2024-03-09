@@ -32,7 +32,7 @@ type Camera = {
  */
 const prevNextCamera = (
   cameras: Camera[],
-  activeCamera: Camera & { status: BooleanLike },
+  activeCamera: Camera & { status: BooleanLike }
 ) => {
   if (!activeCamera || cameras.length < 2) {
     return [];

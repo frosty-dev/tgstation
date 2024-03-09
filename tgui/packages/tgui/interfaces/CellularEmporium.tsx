@@ -38,7 +38,7 @@ export const CellularEmporium = (props, context) => {
   const [searchAbilities, setSearchAbilities] = useLocalState(
     context,
     'searchAbilities',
-    '',
+    ''
   );
 
   const { can_readapt, genetic_points_count } = data;

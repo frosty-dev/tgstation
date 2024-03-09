@@ -33,17 +33,17 @@ export const MessageWriteTab = (props, context) => {
   const [messageText, setMessageText] = useLocalState(
     context,
     'messageText',
-    '',
+    ''
   );
   const [requestType, setRequestType] = useLocalState(
     context,
     'requestType',
-    RequestType.ASSISTANCE,
+    RequestType.ASSISTANCE
   );
   const [priority, setPriority] = useLocalState(
     context,
     'priority',
-    RequestPriority.NORMAL,
+    RequestPriority.NORMAL
   );
   const [recipient, setRecipient] = useLocalState(context, 'recipient', '');
   return (

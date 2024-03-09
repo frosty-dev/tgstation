@@ -165,7 +165,7 @@ const MainScreenAuth = (props, context) => {
   const [auth_password, setPassword] = useLocalState(
     context,
     'input_password',
-    password,
+    password
   );
   return (
     <>
@@ -266,7 +266,7 @@ const MainScreenNotAuth = (props, context) => {
   const [auth_password, setPassword] = useLocalState(
     context,
     'input_password',
-    password,
+    password
   );
 
   return (

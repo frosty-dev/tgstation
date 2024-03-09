@@ -110,7 +110,7 @@ export const Autolathe = (props, context) => {
               buildRecipeElement={(
                 design,
                 availableMaterials,
-                _onPrintDesign,
+                _onPrintDesign
               ) => (
                 <AutolatheRecipe
                   design={design}
@@ -140,7 +140,7 @@ const PrintButton = (props: PrintButtonProps, context) => {
   const canPrint = !Object.entries(design.cost).some(
     ([material, amount]) =>
       !availableMaterials[material] ||
-      amount * quantity > (availableMaterials[material] ?? 0),
+      amount * quantity > (availableMaterials[material] ?? 0)
   );
 
   return (
@@ -181,7 +181,7 @@ const AutolatheRecipe = (props: AutolatheRecipeProps, context) => {
   const canPrint = !Object.entries(design.cost).some(
     ([material, amount]) =>
       !availableMaterials[material] ||
-      amount > (availableMaterials[material] ?? 0),
+      amount > (availableMaterials[material] ?? 0)
   );
 
   return (

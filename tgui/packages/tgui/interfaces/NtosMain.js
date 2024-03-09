@@ -17,7 +17,7 @@ export const NtosMain = (props, context) => {
     pai,
   } = data;
   const filtered_programs = programs.filter(
-    (program) => program.header_program,
+    (program) => program.header_program
   );
   return (
     <NtosWindow
@@ -31,7 +31,7 @@ export const NtosMain = (props, context) => {
       <NtosWindow.Content scrollable>
         {Boolean(
           removable_media.length ||
-            programs.some((program) => program.header_program),
+            programs.some((program) => program.header_program)
         ) && (
           <Section>
             <Stack>
@@ -170,7 +170,7 @@ const ProgramsTable = (props, context) => {
   const { programs = [] } = data;
   // add the program filename to this list to have it excluded from the main menu program list table
   const filtered_programs = programs.filter(
-    (program) => !program.header_program,
+    (program) => !program.header_program
   );
 
   return (

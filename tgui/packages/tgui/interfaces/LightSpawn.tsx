@@ -43,12 +43,12 @@ export const LightSpawn = (props, context) => {
   const [currentTemplate, setCurrentTemplate] = useLocalState<string>(
     context,
     'currentTemplate',
-    default_id,
+    default_id
   );
   const [currentCategory, setCurrentCategory] = useLocalState<string>(
     context,
     'currentCategory',
-    default_category,
+    default_category
   );
 
   const category_keys = category_ids ? Object.keys(category_ids) : [];
@@ -117,7 +117,7 @@ const LightInfo = (props: LightInfoProps, context) => {
   const [workingDir, setWorkingDir] = useLocalState<number>(
     context,
     'workingDir',
-    Direction.North,
+    Direction.North
   );
   return (
     <Section>
@@ -225,7 +225,7 @@ const DirectionButton = (props: DirectedButtonProps, context) => {
   const [workingDir, setWorkingDir] = useLocalState<number>(
     context,
     'workingDir',
-    Direction.North,
+    Direction.North
   );
   return (
     <Button

@@ -83,7 +83,7 @@ export const PanelOptions = (props, context) => {
   const [searchQuery, setSearchQuery] = useLocalState(
     context,
     'searchQuery',
-    '',
+    ''
   );
 
   const [announce, setAnnounce] = useLocalState(context, 'announce', true);
@@ -135,7 +135,7 @@ export const EventSection = (props, context) => {
       }
       return true;
     }),
-    EVENT_PAGE_ITEMS,
+    EVENT_PAGE_ITEMS
   );
 
   const sectionTitle = searchQuery ? 'Searching...' : category.name + ' Events';
@@ -185,7 +185,7 @@ export const EventTabs = (props, context) => {
   const [category, setCategory] = useLocalState(
     context,
     'category',
-    categories[0],
+    categories[0]
   );
 
   const layerCats = paginate(categories, CATEGORY_PAGE_ITEMS);

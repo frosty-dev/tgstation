@@ -61,7 +61,7 @@ export const Biogenerator = (props, context) => {
   const [selectedCategory, setSelectedCategory] = useLocalState<string>(
     context,
     'category',
-    data.categories[0]?.name,
+    data.categories[0]?.name
   );
   const items =
     categories.find((category) => category.name === selectedCategory)?.items ||
@@ -187,7 +187,7 @@ const ItemList = (props, context) => {
     const [amount, setAmount] = useLocalState(
       context,
       'amount' + item.name,
-      item.is_reagent ? Math.min(Math.max(props.space, 1), 10) : 1,
+      item.is_reagent ? Math.min(Math.max(props.space, 1), 10) : 1
     );
     const disabled =
       props.processing ||
@@ -195,7 +195,7 @@ const ItemList = (props, context) => {
       (item.is_reagent && props.space < amount) ||
       props.biomass < Math.ceil((item.cost * amount) / props.efficiency);
     const max_possible = Math.floor(
-      (props.efficiency * props.biomass) / item.cost,
+      (props.efficiency * props.biomass) / item.cost
     );
     const max_capacity = item.is_reagent ? props.space : props.max_output;
     const max_amount = Math.max(1, Math.min(max_capacity, max_possible));

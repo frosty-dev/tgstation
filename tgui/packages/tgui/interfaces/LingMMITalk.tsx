@@ -11,7 +11,7 @@ export const LingMMITalk = (props, context) => {
   const [mmiMessage, setmmiMessage] = useLocalState<string>(
     context,
     'textArea',
-    '',
+    ''
   );
 
   return (

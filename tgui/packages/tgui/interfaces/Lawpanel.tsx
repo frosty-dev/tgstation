@@ -87,7 +87,7 @@ const SyncedBorgDimmer = (props: { master: string }) => {
 
 export const LawPrintout = (
   props: { cyborg_ref: string; lawset: Law[] },
-  context,
+  context
 ) => {
   const { data, act } = useBackend<Law>(context);
   const { cyborg_ref, lawset } = props;

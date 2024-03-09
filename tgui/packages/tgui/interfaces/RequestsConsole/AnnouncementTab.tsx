@@ -8,7 +8,7 @@ export const AnnouncementTab = (props, context) => {
   const [messageText, setMessageText] = useLocalState(
     context,
     'messageText',
-    '',
+    ''
   );
   return (
     <Section>

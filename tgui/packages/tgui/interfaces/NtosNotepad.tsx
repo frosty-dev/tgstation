@@ -74,12 +74,12 @@ const NtosNotepadMenuBar = (props: MenuBarProps, context) => {
   const [openOnHover, setOpenOnHover] = useLocalState(
     context,
     'openOnHover',
-    false,
+    false
   );
   const [openMenuBar, setOpenMenuBar] = useLocalState<string | null>(
     context,
     'openMenuBar',
-    null,
+    null
   );
   const onMenuItemClick = (value) => {
     setOpenOnHover(false);
@@ -280,7 +280,7 @@ class NotePadTextArea extends Component<NotePadTextAreaProps> {
     const textarea = this.innerRef?.current;
     if (!textarea) {
       logger.error(
-        'NotePadTextArea.render(): Textarea RefObject should not be null',
+        'NotePadTextArea.render(): Textarea RefObject should not be null'
       );
       return;
     }
@@ -288,7 +288,7 @@ class NotePadTextArea extends Component<NotePadTextAreaProps> {
     // Javascript – execute when textarea caret is moved
     // https://stackoverflow.com/a/53999418/5613731
     TEXTAREA_UPDATE_TRIGGERS.forEach((trigger) =>
-      textarea.addEventListener(trigger, this),
+      textarea.addEventListener(trigger, this)
     );
     // Slight hack: Keep selection when textarea loses focus so menubar actions can be used (i.e. cut, delete)
     textarea.onblur = this.onblur.bind(this);
@@ -298,12 +298,12 @@ class NotePadTextArea extends Component<NotePadTextAreaProps> {
     const textarea = this.innerRef?.current;
     if (!textarea) {
       logger.error(
-        'NotePadTextArea.componentWillUnmount(): Textarea RefObject should not be null',
+        'NotePadTextArea.componentWillUnmount(): Textarea RefObject should not be null'
       );
       return;
     }
     TEXTAREA_UPDATE_TRIGGERS.forEach((trigger) =>
-      textarea.removeEventListener(trigger, this),
+      textarea.removeEventListener(trigger, this)
     );
   }
 
@@ -378,12 +378,12 @@ export const NtosNotepad = (props, context) => {
   const [documentName, setDocumentName] = useLocalState<string>(
     context,
     'documentName',
-    DEFAULT_DOCUMENT_NAME,
+    DEFAULT_DOCUMENT_NAME
   );
   const [originalText, setOriginalText] = useLocalState<string>(
     context,
     'originalText',
-    note,
+    note
   );
   console.log(note);
   const [text, setText] = useLocalState<string>(context, 'text', note);
@@ -394,22 +394,22 @@ export const NtosNotepad = (props, context) => {
   const [activeDialog, setActiveDialog] = useLocalState<Dialogs>(
     context,
     'activeDialog',
-    Dialogs.NONE,
+    Dialogs.NONE
   );
   const [retryAction, setRetryAction] = useLocalState<RetryActionType | null>(
     context,
     'activeAction',
-    null,
+    null
   );
   const [showStatusBar, setShowStatusBar] = useLocalState<boolean>(
     context,
     'showStatusBar',
-    true,
+    true
   );
   const [wordWrap, setWordWrap] = useLocalState<boolean>(
     context,
     'wordWrap',
-    true,
+    true
   );
   const handleCloseDialog = () => setActiveDialog(Dialogs.NONE);
   const handleSave = (newDocumentName: string = documentName) => {
@@ -430,7 +430,7 @@ export const NtosNotepad = (props, context) => {
   };
   const ensureUnsavedChangesAreHandled = (
     action: () => void,
-    retrying = false,
+    retrying = false
   ): boolean => {
     // This is a guard function that throws up the "unsaved changes" dialog if the user is
     // attempting to do something that will make them lose data

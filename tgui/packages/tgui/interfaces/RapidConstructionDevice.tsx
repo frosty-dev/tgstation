@@ -91,7 +91,7 @@ const DesignSection = (props, context) => {
   const [categoryName, setCategoryName] = useLocalState(
     context,
     'categoryName',
-    selected_category,
+    selected_category
   );
   const shownCategory =
     categories.find((category) => category.cat_name === categoryName) ||

@@ -235,8 +235,8 @@ export const NtosRobotactContent = (props, context) => {
                         wireAI === 'FAULT'
                           ? 'red'
                           : wireAI === 'READY'
-                            ? 'yellow'
-                            : 'green'
+                          ? 'yellow'
+                          : 'green'
                       }
                     >
                       {wireAI}
@@ -253,8 +253,8 @@ export const NtosRobotactContent = (props, context) => {
                         wireCamera === 'FAULT'
                           ? 'red'
                           : wireCamera === 'DISABLED'
-                            ? 'yellow'
-                            : 'green'
+                          ? 'yellow'
+                          : 'green'
                       }
                     >
                       {wireCamera}
@@ -271,8 +271,8 @@ export const NtosRobotactContent = (props, context) => {
                         locomotion === 'FAULT'
                           ? 'red'
                           : locomotion === 'DISABLED'
-                            ? 'yellow'
-                            : 'green'
+                          ? 'yellow'
+                          : 'green'
                       }
                     >
                       {locomotion}

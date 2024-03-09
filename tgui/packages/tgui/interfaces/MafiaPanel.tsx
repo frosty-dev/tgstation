@@ -66,7 +66,7 @@ export const MafiaPanelData = (props, context) => {
   const [mafia_tab, setMafiaMode] = useLocalState(
     context,
     'mafia_tab',
-    'Role list',
+    'Role list'
   );
 
   if (phase === 'No Game') {
@@ -377,7 +377,7 @@ const MafiaNotesTab = (props, context) => {
   const [note_message, setNotesMessage] = useLocalState(
     context,
     'Notes',
-    user_notes,
+    user_notes
   );
   return (
     <Section grow fill>

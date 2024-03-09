@@ -95,7 +95,7 @@ const MainScreen = (props, context) => {
   const [networkId, setNetworkId] = useLocalState(
     context,
     'networkId',
-    network,
+    network
   );
 
   return (

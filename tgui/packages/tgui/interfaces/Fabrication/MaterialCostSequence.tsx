@@ -68,7 +68,7 @@ const MATERIAL_RU_TO_EN: Record<string, string> = {
  */
 export const MaterialCostSequence = (
   props: MaterialCostSequenceProps,
-  context,
+  context
 ) => {
   const { design, amount, available, align, justify, SHEET_MATERIAL_AMOUNT } =
     props;
@@ -104,14 +104,14 @@ export const MaterialCostSequence = (
                     (amount || 1) * quantity * 2 <= available[material]
                       ? '#fff'
                       : (amount || 1) * quantity <= available[material]
-                        ? '#f08f11'
-                        : '#db2828',
+                      ? '#f08f11'
+                      : '#db2828',
                 }
               }
             >
               {formatSiUnit(
                 ((amount || 1) * quantity) / SHEET_MATERIAL_AMOUNT,
-                0,
+                0
               )}
             </Flex.Item>
           </Flex>

@@ -84,7 +84,7 @@ export const Vending = (props, context) => {
   const [selectedCategory, setSelectedCategory] = useLocalState<string>(
     context,
     'selectedCategory',
-    Object.keys(data.categories)[0],
+    Object.keys(data.categories)[0]
   );
 
   let inventory: (ProductRecord | CustomInput)[];
@@ -112,7 +112,7 @@ export const Vending = (props, context) => {
           return false;
         }
       });
-    }),
+    })
   );
 
   return (
@@ -184,7 +184,7 @@ const ProductDisplay = (
     selectedCategory: string | null;
     inventory: (ProductRecord | CustomInput)[];
   },
-  context,
+  context
 ) => {
   const { data } = useBackend<VendingData>(context);
   const { custom, inventory, selectedCategory } = props;

@@ -32,7 +32,7 @@ export const Connections = (
     zLayer?: number;
     lineWidth?: number;
   },
-  context,
+  context
 ) => {
   const { connections, zLayer = -1, lineWidth = '2px' } = props;
 

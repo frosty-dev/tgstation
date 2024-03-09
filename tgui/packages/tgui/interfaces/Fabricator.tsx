@@ -79,7 +79,7 @@ const PrintButton = (props: PrintButtonProps, context) => {
 
   const canPrint = !Object.entries(design.cost).some(
     ([material, amount]) =>
-      !available[material] || amount * quantity > (available[material] ?? 0),
+      !available[material] || amount * quantity > (available[material] ?? 0)
   );
 
   return (
@@ -117,7 +117,7 @@ const CustomPrint = (props: CustomPrintProps, context) => {
   const { design, available } = props;
   const canPrint = !Object.entries(design.cost).some(
     ([material, amount]) =>
-      !available[material] || amount > (available[material] ?? 0),
+      !available[material] || amount > (available[material] ?? 0)
   );
 
   return (
@@ -154,7 +154,7 @@ const Recipe = (props: RecipeProps, context) => {
 
   const canPrint = !Object.entries(design.cost).some(
     ([material, amount]) =>
-      !available[material] || amount > (available[material] ?? 0),
+      !available[material] || amount > (available[material] ?? 0)
   );
 
   return (

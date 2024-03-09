@@ -193,7 +193,7 @@ export class Dropdown extends Component<DropdownProps, DropdownState> {
             {
               ...DEFAULT_OPTIONS,
               placement: 'bottom-start',
-            },
+            }
           );
 
           Dropdown.singletonPopper = singletonPopper;
@@ -206,7 +206,7 @@ export class Dropdown extends Component<DropdownProps, DropdownState> {
           singletonPopper.update();
         }
       },
-      this.context,
+      this.context
     );
   }
 

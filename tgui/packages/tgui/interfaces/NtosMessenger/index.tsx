@@ -103,11 +103,11 @@ const ContactsScreen = (props: any, context: any) => {
 
   const searchChatByName = createSearch(
     searchUser,
-    (chat: NtChat) => chat.recipient.name + chat.recipient.job,
+    (chat: NtChat) => chat.recipient.name + chat.recipient.job
   );
   const searchMessengerByName = createSearch(
     searchUser,
-    (messenger: NtMessenger) => messenger.name + messenger.job,
+    (messenger: NtMessenger) => messenger.name + messenger.job
   );
 
   const chatToButton = (chat: NtChat) => {
@@ -133,7 +133,7 @@ const ContactsScreen = (props: any, context: any) => {
   };
 
   const openChatsArray = sortByUnreads(Object.values(saved_chats)).filter(
-    searchChatByName,
+    searchChatByName
   );
 
   const filteredChatButtons = openChatsArray
@@ -144,7 +144,7 @@ const ContactsScreen = (props: any, context: any) => {
     .filter(
       ([ref, messenger]) =>
         openChatsArray.every((chat) => chat.recipient.ref !== ref) &&
-        searchMessengerByName(messenger),
+        searchMessengerByName(messenger)
     )
     .map(([_, messenger]) => messenger)
     .map(messengerToButton)

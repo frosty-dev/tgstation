@@ -59,17 +59,17 @@ const ObservableSearch = (props, context) => {
   const [autoObserve, setAutoObserve] = useLocalState<boolean>(
     context,
     'autoObserve',
-    false,
+    false
   );
   const [heatMap, setHeatMap] = useLocalState<boolean>(
     context,
     'heatMap',
-    false,
+    false
   );
   const [searchQuery, setSearchQuery] = useLocalState<string>(
     context,
     'searchQuery',
-    '',
+    ''
   );
 
   /** Gets a list of Observables, then filters the most relevant to orbit */
@@ -202,7 +202,7 @@ const ObservableSection = (
     section: Observable[];
     title: string;
   },
-  context,
+  context
 ) => {
   const { color, section = [], title } = props;
 
@@ -214,12 +214,12 @@ const ObservableSection = (
 
   const filteredSection: Observable[] = flow([
     filter<Observable>((observable) =>
-      isJobOrNameMatch(observable, searchQuery),
+      isJobOrNameMatch(observable, searchQuery)
     ),
     sortBy<Observable>((observable) =>
       getDisplayName(observable.full_name, observable.name)
         .replace(/^"/, '')
-        .toLowerCase(),
+        .toLowerCase()
     ),
   ])(section);
 
@@ -246,7 +246,7 @@ const ObservableSection = (
 /** Renders an observable button that has tooltip info for living Observables*/
 const ObservableItem = (
   props: { color?: string; item: Observable },
-  context,
+  context
 ) => {
   const { act } = useBackend<OrbitData>(context);
   const { color, item } = props;

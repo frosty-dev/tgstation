@@ -33,7 +33,7 @@ export class ComponentMenu extends Component {
   async populateServerData() {
     if (!fetchServerData) {
       fetchServerData = fetchRetry(
-        resolveAsset('circuit_components.json'),
+        resolveAsset('circuit_components.json')
       ).then((response) => response.json());
     }
 
@@ -41,7 +41,7 @@ export class ComponentMenu extends Component {
 
     this.setState({
       componentData: circuitData.sort(
-        (a, b) => a.name.toLowerCase() < b.name.toLowerCase(),
+        (a, b) => a.name.toLowerCase() < b.name.toLowerCase()
       ),
     });
   }

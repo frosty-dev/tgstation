@@ -94,7 +94,7 @@ export const SolarControl = (props, context) => {
                   >
                     {capacity > 0
                       ? `${formatPower(supply)} of ${formatPower(
-                          capacity,
+                          capacity
                         )} (${Math.round((100 * supply) / capacity)}%)`
                       : formatPower(0)}
                   </ProgressBar>

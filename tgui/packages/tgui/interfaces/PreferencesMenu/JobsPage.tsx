@@ -16,7 +16,7 @@ const sortJobs = (entries: [string, Job][], head?: string) =>
   sortBy<[string, Job]>(
     ([key, _]) => (key === head ? -1 : 1),
     ([_, job]) => job.name_ru,
-    ([key, _]) => key,
+    ([key, _]) => key
   )(entries);
 
 const PRIORITY_BUTTON_SIZE = '18px';
@@ -55,7 +55,7 @@ const createSetPriorityCache: Record<string, CreateSetPriority> = {};
 
 const createCreateSetPriorityFromName = (
   context,
-  jobName: string,
+  jobName: string
 ): CreateSetPriority => {
   if (createSetPriorityCache[jobName] !== undefined) {
     return createSetPriorityCache[jobName];
@@ -162,7 +162,7 @@ const JobRow = (
     job: Job;
     name: string;
   },
-  context,
+  context
 ) => {
   const { data } = useBackend<PreferencesMenuData>(context);
   const { className, job, name } = props;
@@ -268,7 +268,7 @@ const Department: SFC<{ department: string }> = (props) => {
 
         const jobsForDepartment = sortJobs(
           Object.entries(jobs).filter(([_, job]) => job.department === name),
-          department.head,
+          department.head
         );
 
         return (

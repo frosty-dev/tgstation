@@ -19,7 +19,7 @@ const QuirkList = (props: {
     string,
     Quirk & {
       failTooltip?: string;
-    },
+    }
   ][];
   onClick: (quirkName: string, quirk: Quirk) => void;
 }) => {
@@ -139,7 +139,7 @@ export const QuirksPage = (props, context) => {
   const [selectedQuirks, setSelectedQuirks] = useLocalState(
     context,
     `selectedQuirks_${data.active_slot}`,
-    data.selected_quirks,
+    data.selected_quirks
   );
 
   return (
@@ -305,8 +305,8 @@ export const QuirksPage = (props, context) => {
 
                       setSelectedQuirks(
                         selectedQuirks.filter(
-                          (otherQuirk) => quirkName !== otherQuirk,
-                        ),
+                          (otherQuirk) => quirkName !== otherQuirk
+                        )
                       );
 
                       act('remove_quirk', { quirk: quirk.name });

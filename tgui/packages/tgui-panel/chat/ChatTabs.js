@@ -46,7 +46,7 @@ export const ChatTabs = (props, context) => {
                 dispatch(
                   changeChatPage({
                     pageId: page.id,
-                  }),
+                  })
                 )
               }
             >

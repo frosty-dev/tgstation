@@ -78,7 +78,7 @@ export const InfuserBook = (props, context) => {
     {
       chapter: 0,
       pageInChapter: 0,
-    },
+    }
   );
   const { chapter, pageInChapter } = bookPosition;
 

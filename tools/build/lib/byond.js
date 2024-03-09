@@ -64,7 +64,7 @@ const getNamedByondVersionPath = (namedVersion) => {
   const map_entry = all_entries.find((x) => x.name === namedVersion);
   if (map_entry === undefined) {
     Juke.logger.error(
-      `No named byond version with name "${namedVersion}" found.`,
+      `No named byond version with name "${namedVersion}" found.`
     );
     throw new Juke.ExitCode(1);
   }
@@ -131,7 +131,7 @@ export const DreamMaker = async (dmeFile, options = {}) => {
       }
       if (err && err.code === "EBUSY") {
         Juke.logger.error(
-          `File '${name}' is locked by the DreamDaemon process.`,
+          `File '${name}' is locked by the DreamDaemon process.`
         );
         Juke.logger.error(`Stop the currently running server and try again.`);
         throw new Juke.ExitCode(1);
@@ -166,11 +166,11 @@ export const DreamMaker = async (dmeFile, options = {}) => {
       await runWithWarningChecks(dmPath, [`${dmeBaseName}.m.dme`]);
       fs.writeFileSync(
         `${dmeBaseName}.dmb`,
-        fs.readFileSync(`${dmeBaseName}.m.dmb`),
+        fs.readFileSync(`${dmeBaseName}.m.dmb`)
       );
       fs.writeFileSync(
         `${dmeBaseName}.rsc`,
-        fs.readFileSync(`${dmeBaseName}.m.rsc`),
+        fs.readFileSync(`${dmeBaseName}.m.rsc`)
       );
     } finally {
       Juke.rm(`${dmeBaseName}.m.*`);

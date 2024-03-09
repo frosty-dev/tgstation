@@ -43,7 +43,7 @@ export const LogViewer = (_: any, context: any) => {
   const [activeCategory, setActiveCategory] = useLocalState(
     context,
     'activeCategory',
-    '',
+    ''
   );
 
   let viewerData: LogViewerCategoryData = {
@@ -94,7 +94,7 @@ const CategoryBar = (props: CategoryBarProps, context: any) => {
   const [categorySearch, setCategorySearch] = useLocalState(
     context,
     'categorySearch',
-    '',
+    ''
   );
 
   return (
@@ -164,12 +164,12 @@ const CategoryViewer = (props: CategoryViewerProps, context: any) => {
   let [searchRegex, setSearchRegex] = useLocalState(
     context,
     'searchRegex',
-    false,
+    false
   );
   let [caseSensitive, setCaseSensitive] = useLocalState(
     context,
     'caseSensitive',
-    false,
+    false
   );
   if (!search && searchRegex) {
     setSearchRegex(false);

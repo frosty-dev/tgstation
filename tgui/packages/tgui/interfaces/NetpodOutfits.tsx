@@ -35,12 +35,12 @@ export const NetpodOutfits = (props, context) => {
   const [selectedType, setSelectedType] = useLocalState<Collection>(
     context,
     'selectedType',
-    collections[0],
+    collections[0]
   );
   const [search, setSearch] = useLocalState<string>(
     context,
     'outfitSearch',
-    '',
+    ''
   );
 
   const searchFn = createSearch(search, (outfit: Outfit) => outfit.name);

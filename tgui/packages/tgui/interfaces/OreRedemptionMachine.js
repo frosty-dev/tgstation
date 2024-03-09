@@ -176,7 +176,7 @@ const MaterialRow = (props, context) => {
   const [compact, setCompact] = useLocalState(context, 'compact', false);
 
   const display = material_icons.find(
-    (mat_icon) => mat_icon.id === material.id,
+    (mat_icon) => mat_icon.id === material.id
   );
 
   const sheet_amounts = Math.floor(material.amount);

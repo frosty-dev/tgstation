@@ -345,10 +345,10 @@ const SuitStatusSection = (props, context) => {
   const status = malfunctioning
     ? 'Malfunctioning'
     : active
-      ? 'Active'
-      : 'Inactive';
+    ? 'Active'
+    : 'Inactive';
   const charge_percent = Math.round(
-    (100 * cell_charge_current) / cell_charge_max,
+    (100 * cell_charge_current) / cell_charge_max
   );
 
   return (
@@ -380,18 +380,18 @@ const SuitStatusSection = (props, context) => {
             {!core_name
               ? 'No Core Detected'
               : cell_charge_max === 1
-                ? 'Power Cell Missing'
-                : cell_charge_current === 1e31
-                  ? 'Infinite'
-                  : `${formatSiUnit(
-                      cell_charge_current * 1000,
-                      0,
-                      'J',
-                    )} of ${formatSiUnit(
-                      cell_charge_max * 1000,
-                      0,
-                      'J',
-                    )} (${charge_percent}%)`}
+              ? 'Power Cell Missing'
+              : cell_charge_current === 1e31
+              ? 'Infinite'
+              : `${formatSiUnit(
+                  cell_charge_current * 1000,
+                  0,
+                  'J'
+                )} of ${formatSiUnit(
+                  cell_charge_max * 1000,
+                  0,
+                  'J'
+                )} (${charge_percent}%)`}
           </ProgressBar>
         </LabeledList.Item>
         <LabeledList.Item label="ID Lock">
@@ -660,7 +660,7 @@ const ModuleSection = (props, context) => {
   const [configureState, setConfigureState] = useLocalState(
     context,
     'module_configuration',
-    '',
+    ''
   );
   return (
     <Section
@@ -731,7 +731,7 @@ const ModuleSection = (props, context) => {
                   <Button
                     onClick={() =>
                       setConfigureState(
-                        configureState === module.ref ? '' : module.ref,
+                        configureState === module.ref ? '' : module.ref
                       )
                     }
                     icon="cog"

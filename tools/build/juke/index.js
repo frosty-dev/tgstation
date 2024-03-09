@@ -76,10 +76,10 @@ var __toModule = (module2) => {
         "default",
         module2 && module2.__esModule && "default" in module2
           ? { get: () => module2.default, enumerable: true }
-          : { value: module2, enumerable: true },
-      ),
+          : { value: module2, enumerable: true }
+      )
     ),
-    module2,
+    module2
   );
 };
 
@@ -87,7 +87,7 @@ var __toModule = (module2) => {
 var require_color_name = __commonJS({
   "pnp:color-name-npm-1.1.4-025792b0ea-b044585952.zip/node_modules/color-name/index.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     module2.exports = {
@@ -247,7 +247,7 @@ var require_color_name = __commonJS({
 var require_conversions = __commonJS({
   "pnp:color-convert-npm-2.0.1-79730e935b-79e6bdb9fd.zip/node_modules/color-convert/conversions.js"(
     exports,
-    module2,
+    module2
   ) {
     var cssKeywords = require_color_name();
     var reverseKeywords = {};
@@ -943,7 +943,7 @@ var require_conversions = __commonJS({
 var require_route = __commonJS({
   "pnp:color-convert-npm-2.0.1-79730e935b-79e6bdb9fd.zip/node_modules/color-convert/route.js"(
     exports,
-    module2,
+    module2
   ) {
     var conversions = require_conversions();
     function buildGraph() {
@@ -1014,7 +1014,7 @@ var require_route = __commonJS({
 var require_color_convert = __commonJS({
   "pnp:color-convert-npm-2.0.1-79730e935b-79e6bdb9fd.zip/node_modules/color-convert/index.js"(
     exports,
-    module2,
+    module2
   ) {
     var conversions = require_conversions();
     var route = require_route();
@@ -1082,7 +1082,7 @@ var require_color_convert = __commonJS({
 var require_ansi_styles = __commonJS({
   "pnp:ansi-styles-npm-4.3.0-245c7d42c7-513b44c3b2.zip/node_modules/ansi-styles/index.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     var wrapAnsi16 =
@@ -1212,22 +1212,22 @@ var require_ansi_styles = __commonJS({
       styles.color.close = "[39m";
       styles.bgColor.close = "[49m";
       setLazyProperty(styles.color, "ansi", () =>
-        makeDynamicStyles(wrapAnsi16, "ansi16", ansi2ansi, false),
+        makeDynamicStyles(wrapAnsi16, "ansi16", ansi2ansi, false)
       );
       setLazyProperty(styles.color, "ansi256", () =>
-        makeDynamicStyles(wrapAnsi256, "ansi256", ansi2ansi, false),
+        makeDynamicStyles(wrapAnsi256, "ansi256", ansi2ansi, false)
       );
       setLazyProperty(styles.color, "ansi16m", () =>
-        makeDynamicStyles(wrapAnsi16m, "rgb", rgb2rgb, false),
+        makeDynamicStyles(wrapAnsi16m, "rgb", rgb2rgb, false)
       );
       setLazyProperty(styles.bgColor, "ansi", () =>
-        makeDynamicStyles(wrapAnsi16, "ansi16", ansi2ansi, true),
+        makeDynamicStyles(wrapAnsi16, "ansi16", ansi2ansi, true)
       );
       setLazyProperty(styles.bgColor, "ansi256", () =>
-        makeDynamicStyles(wrapAnsi256, "ansi256", ansi2ansi, true),
+        makeDynamicStyles(wrapAnsi256, "ansi256", ansi2ansi, true)
       );
       setLazyProperty(styles.bgColor, "ansi16m", () =>
-        makeDynamicStyles(wrapAnsi16m, "rgb", rgb2rgb, true),
+        makeDynamicStyles(wrapAnsi16m, "rgb", rgb2rgb, true)
       );
       return styles;
     }
@@ -1242,7 +1242,7 @@ var require_ansi_styles = __commonJS({
 var require_has_flag = __commonJS({
   "pnp:has-flag-npm-4.0.0-32af9f0536-261a135703.zip/node_modules/has-flag/index.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     module2.exports = (flag, argv = process.argv) => {
@@ -1261,7 +1261,7 @@ var require_has_flag = __commonJS({
 var require_supports_color = __commonJS({
   "pnp:supports-color-npm-7.2.0-606bfcf7da-3dda818de0.zip/node_modules/supports-color/index.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     var os = require("os");
@@ -1362,7 +1362,7 @@ var require_supports_color = __commonJS({
       if ("TERM_PROGRAM" in env) {
         const version2 = parseInt(
           (env.TERM_PROGRAM_VERSION || "").split(".")[0],
-          10,
+          10
         );
         switch (env.TERM_PROGRAM) {
           case "iTerm.app":
@@ -1376,7 +1376,7 @@ var require_supports_color = __commonJS({
       }
       if (
         /^screen|^xterm|^vt100|^vt220|^rxvt|color|ansi|cygwin|linux/i.test(
-          env.TERM,
+          env.TERM
         )
       ) {
         return 1;
@@ -1402,7 +1402,7 @@ var require_supports_color = __commonJS({
 var require_util = __commonJS({
   "pnp:chalk-npm-4.1.2-ba8b67ab80-fe75c9d5c7.zip/node_modules/chalk/source/util.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     var stringReplaceAll = (string, substring, replacer) => {
@@ -1449,7 +1449,7 @@ var require_util = __commonJS({
 var require_templates = __commonJS({
   "pnp:chalk-npm-4.1.2-ba8b67ab80-fe75c9d5c7.zip/node_modules/chalk/source/templates.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     var TEMPLATE_REGEX =
@@ -1495,12 +1495,12 @@ var require_templates = __commonJS({
         } else if ((matches = chunk.match(STRING_REGEX))) {
           results.push(
             matches[2].replace(ESCAPE_REGEX, (m, escape, character) =>
-              escape ? unescape(escape) : character,
-            ),
+              escape ? unescape(escape) : character
+            )
           );
         } else {
           throw new Error(
-            `Invalid Chalk template style argument: ${chunk} (in style '${name}')`,
+            `Invalid Chalk template style argument: ${chunk} (in style '${name}')`
           );
         }
       }
@@ -1556,7 +1556,7 @@ var require_templates = __commonJS({
             const string = chunk.join("");
             chunk = [];
             chunks.push(
-              styles.length === 0 ? string : buildStyle(chalk5, styles)(string),
+              styles.length === 0 ? string : buildStyle(chalk5, styles)(string)
             );
             styles.push({ inverse, styles: parseStyle(style) });
           } else if (close) {
@@ -1569,11 +1569,13 @@ var require_templates = __commonJS({
           } else {
             chunk.push(character);
           }
-        },
+        }
       );
       chunks.push(chunk.join(""));
       if (styles.length > 0) {
-        const errMessage = `Chalk template literal is missing ${styles.length} closing bracket${styles.length === 1 ? "" : "s"} (\`}\`)`;
+        const errMessage = `Chalk template literal is missing ${
+          styles.length
+        } closing bracket${styles.length === 1 ? "" : "s"} (\`}\`)`;
         throw new Error(errMessage);
       }
       return chunks.join("");
@@ -1585,7 +1587,7 @@ var require_templates = __commonJS({
 var require_source = __commonJS({
   "pnp:chalk-npm-4.1.2-ba8b67ab80-fe75c9d5c7.zip/node_modules/chalk/source/index.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     var ansiStyles = require_ansi_styles();
@@ -1622,7 +1624,7 @@ var require_source = __commonJS({
       Object.setPrototypeOf(chalk6.template, chalk6);
       chalk6.template.constructor = () => {
         throw new Error(
-          "`chalk.constructor()` is deprecated. Use `new chalk.Instance()` instead.",
+          "`chalk.constructor()` is deprecated. Use `new chalk.Instance()` instead."
         );
       };
       chalk6.template.Instance = ChalkClass;
@@ -1637,7 +1639,7 @@ var require_source = __commonJS({
           const builder = createBuilder(
             this,
             createStyler(style.open, style.close, this._styler),
-            this._isEmpty,
+            this._isEmpty
           );
           Object.defineProperty(this, styleName, { value: builder });
           return builder;
@@ -1669,7 +1671,7 @@ var require_source = __commonJS({
             const styler = createStyler(
               ansiStyles.color[levelMapping[level]][model](...arguments_),
               ansiStyles.color.close,
-              this._styler,
+              this._styler
             );
             return createBuilder(this, styler, this._isEmpty);
           };
@@ -1685,7 +1687,7 @@ var require_source = __commonJS({
             const styler = createStyler(
               ansiStyles.bgColor[levelMapping[level]][model](...arguments_),
               ansiStyles.bgColor.close,
-              this._styler,
+              this._styler
             );
             return createBuilder(this, styler, this._isEmpty);
           };
@@ -1704,7 +1706,7 @@ var require_source = __commonJS({
             this._generator.level = level;
           },
         },
-      }),
+      })
     );
     var createStyler = (open, close, parent) => {
       let openAll;
@@ -1731,7 +1733,7 @@ var require_source = __commonJS({
         }
         return applyStyle(
           builder,
-          arguments_.length === 1 ? "" + arguments_[0] : arguments_.join(" "),
+          arguments_.length === 1 ? "" + arguments_[0] : arguments_.join(" ")
         );
       };
       Object.setPrototypeOf(builder, proto);
@@ -1761,7 +1763,7 @@ var require_source = __commonJS({
           string,
           closeAll,
           openAll,
-          lfIndex,
+          lfIndex
         );
       }
       return openAll + string + closeAll;
@@ -1777,7 +1779,7 @@ var require_source = __commonJS({
       for (let i = 1; i < firstString.length; i++) {
         parts.push(
           String(arguments_[i - 1]).replace(/[{}\\]/g, "\\$&"),
-          String(firstString.raw[i]),
+          String(firstString.raw[i])
         );
       }
       if (template === void 0) {
@@ -1798,7 +1800,7 @@ var require_source = __commonJS({
 var require_lowercase = __commonJS({
   "pnp:stringcase-npm-4.3.1-2f1c329337-741a448632.zip/node_modules/stringcase/lib/lowercase.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     function lowercase(str) {
@@ -1819,7 +1821,7 @@ var require_lowercase = __commonJS({
 var require_uppercase = __commonJS({
   "pnp:stringcase-npm-4.3.1-2f1c329337-741a448632.zip/node_modules/stringcase/lib/uppercase.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     function uppercase(str) {
@@ -1840,7 +1842,7 @@ var require_uppercase = __commonJS({
 var require_camelcase = __commonJS({
   "pnp:stringcase-npm-4.3.1-2f1c329337-741a448632.zip/node_modules/stringcase/lib/camelcase.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     var lowercase = require_lowercase();
@@ -1882,7 +1884,7 @@ var require_camelcase = __commonJS({
 var require_capitalcase = __commonJS({
   "pnp:stringcase-npm-4.3.1-2f1c329337-741a448632.zip/node_modules/stringcase/lib/capitalcase.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     var uppercase = require_uppercase();
@@ -1901,7 +1903,7 @@ var require_capitalcase = __commonJS({
 var require_snakecase = __commonJS({
   "pnp:stringcase-npm-4.3.1-2f1c329337-741a448632.zip/node_modules/stringcase/lib/snakecase.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     var lowercase = require_lowercase();
@@ -1949,7 +1951,7 @@ var require_snakecase = __commonJS({
 var require_constcase = __commonJS({
   "pnp:stringcase-npm-4.3.1-2f1c329337-741a448632.zip/node_modules/stringcase/lib/constcase.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     var uppercase = require_uppercase();
@@ -1971,7 +1973,7 @@ var require_constcase = __commonJS({
 var require_cramcase = __commonJS({
   "pnp:stringcase-npm-4.3.1-2f1c329337-741a448632.zip/node_modules/stringcase/lib/cramcase.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     var snakecase = require_snakecase();
@@ -1986,7 +1988,7 @@ var require_cramcase = __commonJS({
 var require_decapitalcase = __commonJS({
   "pnp:stringcase-npm-4.3.1-2f1c329337-741a448632.zip/node_modules/stringcase/lib/decapitalcase.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     var lowercase = require_lowercase();
@@ -2005,7 +2007,7 @@ var require_decapitalcase = __commonJS({
 var require_dotcase = __commonJS({
   "pnp:stringcase-npm-4.3.1-2f1c329337-741a448632.zip/node_modules/stringcase/lib/dotcase.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     var snakecase = require_snakecase();
@@ -2020,7 +2022,7 @@ var require_dotcase = __commonJS({
 var require_enumcase = __commonJS({
   "pnp:stringcase-npm-4.3.1-2f1c329337-741a448632.zip/node_modules/stringcase/lib/enumcase.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     var snakecase = require_snakecase();
@@ -2035,7 +2037,7 @@ var require_enumcase = __commonJS({
 var require_pascalcase = __commonJS({
   "pnp:stringcase-npm-4.3.1-2f1c329337-741a448632.zip/node_modules/stringcase/lib/pascalcase.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     var camelcase2 = require_camelcase();
@@ -2051,7 +2053,7 @@ var require_pascalcase = __commonJS({
 var require_pathcase = __commonJS({
   "pnp:stringcase-npm-4.3.1-2f1c329337-741a448632.zip/node_modules/stringcase/lib/pathcase.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     var snakecase = require_snakecase();
@@ -2066,7 +2068,7 @@ var require_pathcase = __commonJS({
 var require_trimcase = __commonJS({
   "pnp:stringcase-npm-4.3.1-2f1c329337-741a448632.zip/node_modules/stringcase/lib/trimcase.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     function trimcase(str) {
@@ -2080,7 +2082,7 @@ var require_trimcase = __commonJS({
 var require_sentencecase = __commonJS({
   "pnp:stringcase-npm-4.3.1-2f1c329337-741a448632.zip/node_modules/stringcase/lib/sentencecase.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     var lowercase = require_lowercase();
@@ -2103,7 +2105,7 @@ var require_sentencecase = __commonJS({
 var require_spacecase = __commonJS({
   "pnp:stringcase-npm-4.3.1-2f1c329337-741a448632.zip/node_modules/stringcase/lib/spacecase.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     var snakecase = require_snakecase();
@@ -2118,7 +2120,7 @@ var require_spacecase = __commonJS({
 var require_spinalcase = __commonJS({
   "pnp:stringcase-npm-4.3.1-2f1c329337-741a448632.zip/node_modules/stringcase/lib/spinalcase.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     var snakecase = require_snakecase();
@@ -2133,7 +2135,7 @@ var require_spinalcase = __commonJS({
 var require_titlecase = __commonJS({
   "pnp:stringcase-npm-4.3.1-2f1c329337-741a448632.zip/node_modules/stringcase/lib/titlecase.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     var snakecase = require_snakecase();
@@ -2163,7 +2165,7 @@ var require_titlecase = __commonJS({
 var require_lib = __commonJS({
   "pnp:stringcase-npm-4.3.1-2f1c329337-741a448632.zip/node_modules/stringcase/lib/index.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     var camelcase2 = require_camelcase();
@@ -2225,7 +2227,7 @@ var require_lib = __commonJS({
 // pnp:fs.realpath-npm-1.0.0-c8f05d8126-99ddea01a7.zip/node_modules/fs.realpath/old.js
 var require_old = __commonJS({
   "pnp:fs.realpath-npm-1.0.0-c8f05d8126-99ddea01a7.zip/node_modules/fs.realpath/old.js"(
-    exports,
+    exports
   ) {
     var pathModule = require("path");
     var isWindows = process.platform === "win32";
@@ -2428,7 +2430,7 @@ var require_old = __commonJS({
 var require_fs = __commonJS({
   "pnp:fs.realpath-npm-1.0.0-c8f05d8126-99ddea01a7.zip/node_modules/fs.realpath/index.js"(
     exports,
-    module2,
+    module2
   ) {
     module2.exports = realpath;
     realpath.realpath = realpath;
@@ -2496,7 +2498,7 @@ var require_fs = __commonJS({
 var require_concat_map = __commonJS({
   "pnp:concat-map-npm-0.0.1-85a921b7ee-902a9f5d89.zip/node_modules/concat-map/index.js"(
     exports,
-    module2,
+    module2
   ) {
     module2.exports = function (xs, fn) {
       var res = [];
@@ -2519,7 +2521,7 @@ var require_concat_map = __commonJS({
 var require_balanced_match = __commonJS({
   "pnp:balanced-match-npm-1.0.0-951a2ad706-9b67bfe558.zip/node_modules/balanced-match/index.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     module2.exports = balanced;
@@ -2579,7 +2581,7 @@ var require_balanced_match = __commonJS({
 var require_brace_expansion = __commonJS({
   "pnp:brace-expansion-npm-1.1.11-fb95eb05ad-faf34a7bb0.zip/node_modules/brace-expansion/index.js"(
     exports,
-    module2,
+    module2
   ) {
     var concatMap = require_concat_map();
     var balanced = require_balanced_match();
@@ -2739,7 +2741,7 @@ var require_brace_expansion = __commonJS({
 var require_minimatch = __commonJS({
   "pnp:minimatch-npm-3.0.4-6e76f51c23-66ac295f8a.zip/node_modules/minimatch/minimatch.js"(
     exports,
-    module2,
+    module2
   ) {
     module2.exports = minimatch;
     minimatch.Minimatch = Minimatch;
@@ -2927,8 +2929,8 @@ var require_minimatch = __commonJS({
         pattern.charAt(0) === "."
           ? ""
           : options.dot
-            ? "(?!(?:^|\\/)\\.{1,2}(?:$|\\/))"
-            : "(?!\\.)";
+          ? "(?!(?:^|\\/)\\.{1,2}(?:$|\\/))"
+          : "(?!\\.)";
       var self = this;
       function clearStateChar() {
         if (stateChar) {
@@ -3159,8 +3161,8 @@ var require_minimatch = __commonJS({
       var twoStar = options.noglobstar
         ? star
         : options.dot
-          ? twoStarDot
-          : twoStarNoDot;
+        ? twoStarDot
+        : twoStarNoDot;
       var flags = options.nocase ? "i" : "";
       var re = set
         .map(function (pattern) {
@@ -3169,8 +3171,8 @@ var require_minimatch = __commonJS({
               return p === GLOBSTAR
                 ? twoStar
                 : typeof p === "string"
-                  ? regExpEscape(p)
-                  : p._src;
+                ? regExpEscape(p)
+                : p._src;
             })
             .join("\\/");
         })
@@ -3322,7 +3324,7 @@ var require_minimatch = __commonJS({
 var require_inherits_browser = __commonJS({
   "pnp:inherits-npm-2.0.4-c66b3957a0-4a48a73384.zip/node_modules/inherits/inherits_browser.js"(
     exports,
-    module2,
+    module2
   ) {
     if (typeof Object.create === "function") {
       module2.exports = function inherits(ctor, superCtor) {
@@ -3356,7 +3358,7 @@ var require_inherits_browser = __commonJS({
 var require_inherits = __commonJS({
   "pnp:inherits-npm-2.0.4-c66b3957a0-4a48a73384.zip/node_modules/inherits/inherits.js"(
     exports,
-    module2,
+    module2
   ) {
     try {
       util = require("util");
@@ -3373,7 +3375,7 @@ var require_inherits = __commonJS({
 var require_path_is_absolute = __commonJS({
   "pnp:path-is-absolute-npm-1.0.1-31bc695ffd-060840f92c.zip/node_modules/path-is-absolute/index.js"(
     exports,
-    module2,
+    module2
   ) {
     "use strict";
     function posix(path2) {
@@ -3396,7 +3398,7 @@ var require_path_is_absolute = __commonJS({
 // pnp:glob-npm-7.1.7-5698ad9c48-b61f48973b.zip/node_modules/glob/common.js
 var require_common = __commonJS({
   "pnp:glob-npm-7.1.7-5698ad9c48-b61f48973b.zip/node_modules/glob/common.js"(
-    exports,
+    exports
   ) {
     exports.setopts = setopts;
     exports.ownProp = ownProp;
@@ -3578,7 +3580,7 @@ var require_common = __commonJS({
 var require_sync = __commonJS({
   "pnp:glob-npm-7.1.7-5698ad9c48-b61f48973b.zip/node_modules/glob/sync.js"(
     exports,
-    module2,
+    module2
   ) {
     module2.exports = globSync;
     globSync.GlobSync = GlobSync;
@@ -3599,7 +3601,7 @@ var require_sync = __commonJS({
     function globSync(pattern, options) {
       if (typeof options === "function" || arguments.length === 3)
         throw new TypeError(
-          "callback provided to sync glob\nSee: https://github.com/isaacs/node-glob/issues/167",
+          "callback provided to sync glob\nSee: https://github.com/isaacs/node-glob/issues/167"
         );
       return new GlobSync(pattern, options).found;
     }
@@ -3607,7 +3609,7 @@ var require_sync = __commonJS({
       if (!pattern) throw new Error("must provide pattern");
       if (typeof options === "function" || arguments.length === 3)
         throw new TypeError(
-          "callback provided to sync glob\nSee: https://github.com/isaacs/node-glob/issues/167",
+          "callback provided to sync glob\nSee: https://github.com/isaacs/node-glob/issues/167"
         );
       if (!(this instanceof GlobSync)) return new GlobSync(pattern, options);
       setopts(this, pattern, options);
@@ -3677,7 +3679,7 @@ var require_sync = __commonJS({
       abs,
       remain,
       index,
-      inGlobStar,
+      inGlobStar
     ) {
       var entries = this._readdir(abs, inGlobStar);
       if (!entries) return;
@@ -3817,7 +3819,7 @@ var require_sync = __commonJS({
       abs,
       remain,
       index,
-      inGlobStar,
+      inGlobStar
     ) {
       var entries = this._readdir(abs, inGlobStar);
       if (!entries) return;
@@ -3905,7 +3907,7 @@ var require_sync = __commonJS({
 var require_wrappy = __commonJS({
   "pnp:wrappy-npm-1.0.2-916de4d4b3-159da4805f.zip/node_modules/wrappy/wrappy.js"(
     exports,
-    module2,
+    module2
   ) {
     module2.exports = wrappy;
     function wrappy(fn, cb) {
@@ -3938,7 +3940,7 @@ var require_wrappy = __commonJS({
 var require_once = __commonJS({
   "pnp:once-npm-1.4.0-ccf03ef07a-cd0a885013.zip/node_modules/once/once.js"(
     exports,
-    module2,
+    module2
   ) {
     var wrappy = require_wrappy();
     module2.exports = wrappy(once);
@@ -3984,7 +3986,7 @@ var require_once = __commonJS({
 var require_inflight = __commonJS({
   "pnp:inflight-npm-1.0.6-ccedb4b908-f4f76aa072.zip/node_modules/inflight/inflight.js"(
     exports,
-    module2,
+    module2
   ) {
     var wrappy = require_wrappy();
     var reqs = Object.create(null);
@@ -4033,7 +4035,7 @@ var require_inflight = __commonJS({
 var require_glob = __commonJS({
   "pnp:glob-npm-7.1.7-5698ad9c48-b61f48973b.zip/node_modules/glob/glob.js"(
     exports,
-    module2,
+    module2
   ) {
     module2.exports = glob2;
     var fs4 = require("fs");
@@ -4262,7 +4264,7 @@ var require_glob = __commonJS({
       remain,
       index,
       inGlobStar,
-      cb,
+      cb
     ) {
       var self = this;
       this._readdir(abs, inGlobStar, function (er, entries) {
@@ -4274,7 +4276,7 @@ var require_glob = __commonJS({
           index,
           inGlobStar,
           entries,
-          cb,
+          cb
         );
       });
     };
@@ -4286,7 +4288,7 @@ var require_glob = __commonJS({
       index,
       inGlobStar,
       entries,
-      cb,
+      cb
     ) {
       if (!entries) return cb();
       var pn = remain[0];
@@ -4444,7 +4446,7 @@ var require_glob = __commonJS({
       remain,
       index,
       inGlobStar,
-      cb,
+      cb
     ) {
       var self = this;
       this._readdir(abs, inGlobStar, function (er, entries) {
@@ -4456,7 +4458,7 @@ var require_glob = __commonJS({
           index,
           inGlobStar,
           entries,
-          cb,
+          cb
         );
       });
     };
@@ -4468,7 +4470,7 @@ var require_glob = __commonJS({
       index,
       inGlobStar,
       entries,
-      cb,
+      cb
     ) {
       if (!entries) return cb();
       var remainWithoutGlobStar = remain.slice(1);
@@ -4663,7 +4665,7 @@ var exec = (executable, args = [], options = {}) => {
     const child = (0, import_child_process.spawn)(
       executable,
       args,
-      spawnOptions,
+      spawnOptions
     );
     children.add(child);
     let stdout = "";
@@ -4714,32 +4716,32 @@ var logger = {
     console.log(
       import_chalk2.default.bold(
         import_chalk2.default.redBright("=>"),
-        import_chalk2.default.whiteBright(...args),
-      ),
+        import_chalk2.default.whiteBright(...args)
+      )
     );
   },
   action: (...args) => {
     console.log(
       import_chalk2.default.bold(
         import_chalk2.default.greenBright("=>"),
-        import_chalk2.default.whiteBright(...args),
-      ),
+        import_chalk2.default.whiteBright(...args)
+      )
     );
   },
   warn: (...args) => {
     console.log(
       import_chalk2.default.bold(
         import_chalk2.default.yellowBright("=>"),
-        import_chalk2.default.whiteBright(...args),
-      ),
+        import_chalk2.default.whiteBright(...args)
+      )
     );
   },
   info: (...args) => {
     console.log(
       import_chalk2.default.bold(
         import_chalk2.default.blueBright("::"),
-        import_chalk2.default.whiteBright(...args),
-      ),
+        import_chalk2.default.whiteBright(...args)
+      )
     );
   },
   debug: (...args) => {
@@ -4908,7 +4910,7 @@ var parseArgs = (args, parameters) => {
         (p) =>
           p.name === name ||
           p.toKebabCase() === name ||
-          p.toCamelCase() === name,
+          p.toCamelCase() === name
       );
       if (!parameter) {
         continue;
@@ -4931,7 +4933,7 @@ var parseArgs = (args, parameters) => {
   }
   for (const [key, value] of Object.entries(process.env)) {
     const parameter = parameters.find(
-      (p) => p.name === key || p.toConstCase() === key,
+      (p) => p.name === key || p.toConstCase() === key
     );
     if (!parameter || parameterMap.has(parameter)) {
       continue;
@@ -5089,7 +5091,7 @@ var runner = new (class Runner {
     const startedAt = Date.now();
     const { globalFlags, taskArgs } = prepareArgs(
       process.argv.slice(2),
-      this.config.singleTarget,
+      this.config.singleTarget
     );
     const globalParameterMap = parseArgs(globalFlags, this.parameters);
     const targetsToRun = new Map();
@@ -5104,7 +5106,7 @@ var runner = new (class Runner {
           " --" +
             parameter.name +
             (parameter.alias ? `, -${parameter.alias}` : "") +
-            ` (type: ${parameter.type})`,
+            ` (type: ${parameter.type})`
         );
       }
     };
@@ -5163,7 +5165,7 @@ var runner = new (class Runner {
             ? await target.dependsOn(meta.context)
             : target.dependsOn) || [];
         meta.dependsOn = optionalDependsOn.filter(
-          (dep) => typeof dep === "object" && dep !== null,
+          (dep) => typeof dep === "object" && dep !== null
         );
       }
       for (const dependency of meta.dependsOn) {
@@ -5205,8 +5207,8 @@ var runner = new (class Runner {
             worker.onFinish(() => resolve(true));
             worker.onFail(() => resolve(false));
             worker.start();
-          }),
-      ),
+          })
+      )
     );
     const hasFailedWorkers = resolutions.includes(false);
     if (!hasFailedWorkers) {
@@ -5282,7 +5284,7 @@ var Worker = class {
         [];
       const paths = optionalPaths.filter((path2) => typeof path2 === "string");
       return paths.flatMap((path2) =>
-        path2.includes("*") ? new Glob(path2).toFiles() : new File(path2),
+        path2.includes("*") ? new Glob(path2).toFiles() : new File(path2)
       );
     };
     const inputs = await fileMapper(this.target.inputs);
@@ -5316,11 +5318,11 @@ var Worker = class {
         if (err instanceof ExitCode) {
           const codeStr = import_chalk3.default.red(err.code);
           logger.error(
-            `Target '${nameStr}' failed in ${timeStr2}, exit code: ${codeStr}`,
+            `Target '${nameStr}' failed in ${timeStr2}, exit code: ${codeStr}`
           );
         } else {
           logger.error(
-            `Target '${nameStr}' failed in ${timeStr2}, unhandled exception:`,
+            `Target '${nameStr}' failed in ${timeStr2}, unhandled exception:`
           );
           console.error(err);
         }
@@ -5365,7 +5367,7 @@ var setup = async (config) => {
   }
   let buildModule = await import(config.file);
   const isCommonJs = Boolean(
-    (0, import_module.createRequire)(config.file).cache[config.file],
+    (0, import_module.createRequire)(config.file).cache[config.file]
   );
   if (isCommonJs) {
     buildModule = buildModule.default;

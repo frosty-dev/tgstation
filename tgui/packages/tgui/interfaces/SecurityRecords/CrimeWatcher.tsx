@@ -27,7 +27,7 @@ export const CrimeWatcher = (props, context) => {
   const [selectedTab, setSelectedTab] = useLocalState<SECURETAB>(
     context,
     'selectedTab',
-    SECURETAB.Crimes,
+    SECURETAB.Crimes
   );
 
   return (
@@ -119,7 +119,7 @@ const CrimeDisplay = ({ item }: { item: Crime }, context) => {
   const [editing, setEditing] = useLocalState(
     context,
     `editing_${crime_ref}`,
-    false,
+    false
   );
 
   return (
@@ -218,13 +218,13 @@ const CrimeAuthor = (props, context) => {
   const [crimeDetails, setCrimeDetails] = useLocalState(
     context,
     'crimeDetails',
-    '',
+    ''
   );
   const [crimeFine, setCrimeFine] = useLocalState(context, 'crimeFine', 0);
   const [selectedTab, setSelectedTab] = useLocalState<SECURETAB>(
     context,
     'selectedTab',
-    SECURETAB.Crimes,
+    SECURETAB.Crimes
   );
 
   const nameMeetsReqs = crimeName?.length > 2;

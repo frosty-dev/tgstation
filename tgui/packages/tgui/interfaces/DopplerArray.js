@@ -28,7 +28,7 @@ const DopplerArrayContent = (props, context) => {
   const [activeRecordName, setActiveRecordName] = useSharedState(
     context,
     'activeRecordrecord',
-    records[0]?.name,
+    records[0]?.name
   );
   const activeRecord = records.find((record) => {
     return record.name === activeRecordName;

@@ -109,8 +109,8 @@ const Cyborgs = (props, context) => {
               {cyborg.status
                 ? 'Not Responding'
                 : cyborg.locked_down
-                  ? 'Locked Down'
-                  : 'Nominal'}
+                ? 'Locked Down'
+                : 'Nominal'}
             </Box>
           </LabeledList.Item>
           <LabeledList.Item label="Charge">
@@ -119,8 +119,8 @@ const Cyborgs = (props, context) => {
                 cyborg.charge <= 30
                   ? 'bad'
                   : cyborg.charge <= 70
-                    ? 'average'
-                    : 'good'
+                  ? 'average'
+                  : 'good'
               }
             >
               {typeof cyborg.charge === 'number'

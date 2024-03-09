@@ -53,12 +53,12 @@ export const LightController = (props, context) => {
   const [currentTemplate, setCurrentTemplate] = useLocalState<string>(
     context,
     'currentTemplate',
-    default_id,
+    default_id
   );
   const [currentCategory, setCurrentCategory] = useLocalState<string>(
     context,
     'currentCategory',
-    default_category,
+    default_category
   );
 
   const category_keys = category_ids ? Object.keys(category_ids) : [];

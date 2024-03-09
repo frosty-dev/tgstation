@@ -32,9 +32,7 @@ $bg-map: colors.$bg-map !default;
 }
 
 .ProgressBar__fill--animated {
-  transition:
-    background-color 900ms ease-out,
-    width 900ms ease-out;
+  transition: background-color 900ms ease-out, width 900ms ease-out;
 }
 
 .ProgressBar__content {
@@ -44,11 +42,8 @@ $bg-map: colors.$bg-map !default;
   text-align: right;
   font-weight: bold;
   font-weight: bold;
-  text-shadow:
-    -1px -1px 0 rgba(0, 0, 0, 1),
-    1px -1px 0 rgba(0, 0, 0, 1),
-    -1px 1px 0 rgba(0, 0, 0, 1),
-    1px 1px 0 rgba(0, 0, 0, 1);
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 1), 1px -1px 0 rgba(0, 0, 0, 1),
+    -1px 1px 0 rgba(0, 0, 0, 1), 1px 1px 0 rgba(0, 0, 0, 1);
 }
 
 .ProgressBar--color--default {

@@ -79,7 +79,7 @@ export const MaterialAccessBar = (props: MaterialAccessBarProps, context) => {
               }
             />
           </Flex.Item>
-        ),
+        )
       )}
     </Flex>
   );
@@ -97,7 +97,7 @@ const MaterialCounter = (props: MaterialCounterProps, context) => {
   const [hovering, setHovering] = useLocalState(
     context,
     `MaterialCounter__${material.name}`,
-    false,
+    false
   );
 
   const sheets = material.amount / SHEET_MATERIAL_AMOUNT;

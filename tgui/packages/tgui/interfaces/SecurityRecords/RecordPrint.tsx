@@ -22,13 +22,13 @@ export const RecordPrint = (props, context) => {
   const [printType, setPrintType] = useLocalState<PRINTOUT>(
     context,
     'printType',
-    PRINTOUT.Missing,
+    PRINTOUT.Missing
   );
   const [header, setHeader] = useLocalState<string>(context, 'printHeader', '');
   const [description, setDescription] = useLocalState<string>(
     context,
     'printDesc',
-    '',
+    ''
   );
 
   /** Prints the record and resets. */

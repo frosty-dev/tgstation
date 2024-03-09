@@ -50,7 +50,7 @@ export type DesignBrowserProps<T extends Design = Design> = {
     /**
      * A callback to print the design.
      */
-    onPrintDesign: (design: T, amount: number) => void,
+    onPrintDesign: (design: T, amount: number) => void
   ) => InfernoNode;
 
   /**
@@ -117,7 +117,7 @@ const BLACKLISTED_CATEGORIES: Record<string, boolean> = {
  */
 export const DesignBrowser = <T extends Design = Design>(
   props: DesignBrowserProps<T>,
-  context,
+  context
 ) => {
   const {
     designs,
@@ -131,13 +131,13 @@ export const DesignBrowser = <T extends Design = Design>(
   const [selectedCategory, setSelectedCategory] = useSharedState(
     context,
     'selected_category',
-    ALL_CATEGORY,
+    ALL_CATEGORY
   );
 
   const [searchText, setSearchText] = useSharedState(
     context,
     'search_text',
-    '',
+    ''
   );
 
   const onCategorySelected = (newCategory: string) => {
@@ -235,7 +235,7 @@ export const DesignBrowser = <T extends Design = Design>(
                   </div>
 
                   {sortBy((category: Category) => category.title)(
-                    Object.values(root.subcategories),
+                    Object.values(root.subcategories)
                   ).map((category) => (
                     <DesignBrowserTab
                       key={category.title}
@@ -258,8 +258,8 @@ export const DesignBrowser = <T extends Design = Design>(
             searchText.length > 0
               ? `Results for "${searchText}"`
               : selectedCategory === ALL_CATEGORY
-                ? 'All Designs'
-                : selectedCategory
+              ? 'All Designs'
+              : selectedCategory
           }
           fill
         >
@@ -277,30 +277,30 @@ export const DesignBrowser = <T extends Design = Design>(
               <Section fill style={{ overflow: 'auto' }}>
                 {searchText.length > 0 ? (
                   sortBy((design: T) => design.name)(
-                    Object.values(root.descendants),
+                    Object.values(root.descendants)
                   )
                     .filter((design) =>
                       design.name
                         .toLowerCase()
-                        .includes(searchText.toLowerCase()),
+                        .includes(searchText.toLowerCase())
                     )
                     .map((design) =>
                       buildRecipeElement(
                         design,
                         availableMaterials || {},
-                        onPrintDesign || NOOP,
-                      ),
+                        onPrintDesign || NOOP
+                      )
                     )
                 ) : selectedCategory === ALL_CATEGORY ? (
                   <>
                     {sortBy((design: T) => design.name)(
-                      Object.values(root.descendants),
+                      Object.values(root.descendants)
                     ).map((design) =>
                       buildRecipeElement(
                         design,
                         availableMaterials || {},
-                        onPrintDesign || NOOP,
-                      ),
+                        onPrintDesign || NOOP
+                      )
                     )}
                   </>
                 ) : (
@@ -344,7 +344,7 @@ type DesignBrowserTabProps<T extends Design = Design> = {
 
 const DesignBrowserTab = <T extends Design = Design>(
   props: DesignBrowserTabProps<T>,
-  context,
+  context
 ) => {
   let { category, depth, maxDepth, selectedCategory, setSelectedCategory } =
     props;
@@ -385,7 +385,7 @@ const DesignBrowserTab = <T extends Design = Design>(
         selectedCategory === category.title && (
           <div className="FabricatorTabs">
             {sortBy((category: Category) => category.title)(
-              Object.values(category.subcategories),
+              Object.values(category.subcategories)
             ).map((subcategory) => (
               <DesignBrowserTab
                 key={subcategory.title}
@@ -441,7 +441,7 @@ type CategoryViewProps<T extends Design = Design> = {
     /**
      * A callback to print the design.
      */
-    onPrintDesign: (design: T, amount: number) => void,
+    onPrintDesign: (design: T, amount: number) => void
   ) => InfernoNode;
 
   /**
@@ -452,7 +452,7 @@ type CategoryViewProps<T extends Design = Design> = {
 
 const CategoryView = <T extends Design = Design>(
   props: CategoryViewProps<T>,
-  context,
+  context
 ) => {
   let {
     depth,
@@ -471,8 +471,8 @@ const CategoryView = <T extends Design = Design>(
         buildRecipeElement(
           design,
           availableMaterials || {},
-          onPrintDesign || NOOP,
-        ),
+          onPrintDesign || NOOP
+        )
       )}
 
       {Object.keys(category.subcategories)

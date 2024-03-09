@@ -361,7 +361,7 @@ const ReagentTooltip = (props) => {
           <Table.Cell py={0.5} pl={2} textAlign={'right'}>
             {Math.max(
               Math.round(reagent.rate * props.potency * props.volume_mod),
-              1,
+              1
             )}
             u
           </Table.Cell>

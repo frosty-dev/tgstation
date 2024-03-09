@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -135,7 +135,7 @@
         Byond.callAsync = function (path, params) {
           if (!window.Promise) {
             throw new Error(
-              'Async calls require API level of ES2015 or later.',
+              'Async calls require API level of ES2015 or later.'
             );
           }
           var index = Byond.__callbacks__.length;
@@ -146,7 +146,7 @@
             path,
             assign({}, params, {
               callback: 'Byond.__callbacks__[' + index + ']',
-            }),
+            })
           );
           return promise;
         };
@@ -304,14 +304,11 @@
               }
               throw new Error(errorMessage);
             }
-            setTimeout(
-              function () {
-                loadedAssetByUrl[url] = null;
-                options.attempt += 1;
-                loadAsset(options);
-              },
-              RETRY_WAIT_INITIAL + attempt * RETRY_WAIT_INCREMENT,
-            );
+            setTimeout(function () {
+              loadedAssetByUrl[url] = null;
+              options.attempt += 1;
+              loadAsset(options);
+            }, RETRY_WAIT_INITIAL + attempt * RETRY_WAIT_INCREMENT);
           };
           // JS specific code
           if (type === 'js') {
@@ -515,7 +512,7 @@
           'afterbegin',
           '<!-- tgui:inline-html-start -->' +
             inline_html +
-            '<!-- tgui:inline-html-end -->',
+            '<!-- tgui:inline-html-end -->'
         );
       };
 
@@ -571,8 +568,7 @@
         margin: 16px;
         top: 0;
         left: 0;
-        animation:
-          FatalError__rainbow 2s linear infinite alternate,
+        animation: FatalError__rainbow 2s linear infinite alternate,
           FatalError__shadow 4s linear infinite alternate,
           FatalError__tfmX 3s infinite alternate,
           FatalError__tfmY 4s infinite alternate;

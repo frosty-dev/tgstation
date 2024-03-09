@@ -103,7 +103,7 @@ export const EntryGradient = (props: EntryGradientProps, context) => {
   const isLooping = gradient?.find((x) => x === 'loop');
   const space_type = gradient?.includes('space')
     ? Object.keys(SpaceToNum).find(
-        (space) => SpaceToNum[space] === gradient['space'],
+        (space) => SpaceToNum[space] === gradient['space']
       )
     : 'COLORSPACE_RGB';
   return (
@@ -161,7 +161,7 @@ export const EntryGradient = (props: EntryGradientProps, context) => {
                     act('edit', {
                       var: var_name,
                       new_value: gradient!.map((x, i) =>
-                        i === index ? value : x,
+                        i === index ? value : x
                       ),
                     })
                   }
@@ -177,7 +177,7 @@ export const EntryGradient = (props: EntryGradientProps, context) => {
                   }
                 />
               </>
-            ),
+            )
           )}
         </Stack.Item>
         <Stack.Item>
@@ -205,8 +205,8 @@ export const EntryTransform = (props: EntryTransformProps, context) => {
     len < 7
       ? 'Simple Matrix'
       : len < 13
-        ? 'Complex Matrix'
-        : 'Projection Matrix';
+      ? 'Complex Matrix'
+      : 'Projection Matrix';
   const { name, var_name, transform } = props;
   return (
     <LabeledList.Item label={name}>
@@ -238,7 +238,7 @@ export const EntryTransform = (props: EntryTransformProps, context) => {
                 act('edit', {
                   var: var_name,
                   new_value: transform!.map((x, i) =>
-                    i === index ? value : x,
+                    i === index ? value : x
                   ),
                 })
               }
@@ -381,8 +381,8 @@ export const EntryIconState = (props: EntryIconStateProps, context) => {
                       var: var_name,
                       new_value: Object.fromEntries(
                         Object.entries(icon_state).filter(
-                          ([key]) => key !== iconstate,
-                        ),
+                          ([key]) => key !== iconstate
+                        )
                       ),
                     })
                   }

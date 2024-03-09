@@ -198,7 +198,7 @@ class PaperSheetStamper extends Component<PaperSheetStamperProps> {
 
     const radians = Math.atan2(
       currentWidth + stampWidth / 2 - e.pageX,
-      currentHeight + stampHeight - e.pageY,
+      currentHeight + stampHeight - e.pageY
     );
 
     const rotate = rotating
@@ -312,13 +312,13 @@ export class PrimaryView extends Component {
     const [inputFieldData, setInputFieldData] = useLocalState(
       this.context,
       'inputFieldData',
-      {},
+      {}
     );
 
     const [textAreaText, setTextAreaText] = useLocalState(
       this.context,
       'textAreaText',
-      '',
+      ''
     );
 
     const interactMode =
@@ -538,7 +538,7 @@ export class PreviewView extends Component<PreviewViewProps> {
     const [inputFieldData, setInputFieldData] = useLocalState(
       this.context,
       'inputFieldData',
-      {},
+      {}
     );
 
     const { data } = useBackend<PaperContext>(this.context);
@@ -614,7 +614,7 @@ export class PreviewView extends Component<PreviewViewProps> {
         fontBold,
         fieldCount,
         readOnly,
-        advancedHtml,
+        advancedHtml
       );
 
       output += processingOutput.text;
@@ -660,7 +660,7 @@ export class PreviewView extends Component<PreviewViewProps> {
       paper_color,
       fontBold,
       fieldCount,
-      readOnly,
+      readOnly
     );
 
     this.parsedTextBoxCache = processingOutput.text;
@@ -673,7 +673,7 @@ export class PreviewView extends Component<PreviewViewProps> {
     text: string,
     font: string,
     color: string,
-    bold: boolean = false,
+    bold: boolean = false
   ): string => {
     return `<span style="color:${color};font-family:${font};${
       bold ? 'font-weight: bold;' : ''
@@ -744,7 +744,7 @@ export class PreviewView extends Component<PreviewViewProps> {
     bold: boolean,
     fieldCounter: number = 0,
     forceReadonlyFields: boolean = false,
-    advanced_html: boolean = false,
+    advanced_html: boolean = false
   ): FieldCreationReturn => {
     // First lets make sure it ends in a new line
     const { data } = useBackend<PaperContext>(this.context);
@@ -764,7 +764,7 @@ export class PreviewView extends Component<PreviewViewProps> {
       color,
       paperColor,
       forceReadonlyFields,
-      fieldCounter,
+      fieldCounter
     );
 
     // Fifth, we wrap the created text in the writing implement properties.
@@ -800,7 +800,7 @@ export class PreviewView extends Component<PreviewViewProps> {
     color: string,
     paperColor: string,
     forceReadonlyFields: boolean,
-    counter: number = 0,
+    counter: number = 0
   ): FieldCreationReturn => {
     const { data } = useBackend<PaperContext>(this.context);
     const { raw_field_input } = data;
@@ -810,7 +810,7 @@ export class PreviewView extends Component<PreviewViewProps> {
       (match, p1, offset, string) => {
         const width = this.textWidth(match, font, fontSize);
         const matchingData = raw_field_input?.find(
-          (e) => e.field_index === `${counter}`,
+          (e) => e.field_index === `${counter}`
         );
         if (matchingData) {
           return this.createFilledInputField(
@@ -821,7 +821,7 @@ export class PreviewView extends Component<PreviewViewProps> {
             fontSize,
             color,
             paperColor,
-            this.createIDHeader(counter++),
+            this.createIDHeader(counter++)
           );
         }
         return this.createInputField(
@@ -831,9 +831,9 @@ export class PreviewView extends Component<PreviewViewProps> {
           fontSize,
           color,
           this.createIDHeader(counter++),
-          forceReadonlyFields,
+          forceReadonlyFields
         );
-      },
+      }
     );
 
     return {
@@ -850,7 +850,7 @@ export class PreviewView extends Component<PreviewViewProps> {
     fontSize: number,
     color: string,
     id: string,
-    readOnly: boolean,
+    readOnly: boolean
   ): string => {
     // This are fields that may potentially be fillable, so we'll use the
     // currently held item's stats for them if possible.
@@ -909,7 +909,7 @@ export class PreviewView extends Component<PreviewViewProps> {
     fontSize: number,
     color: string,
     paperColor: string,
-    id: string,
+    id: string
   ): string => {
     const { data } = useBackend<PaperContext>(this.context);
     const { max_input_field_length } = data;
@@ -947,7 +947,7 @@ export class PreviewView extends Component<PreviewViewProps> {
 
     if (interactMode === InteractionType.writing) {
       previewText += this.createPreviewFromTextArea(
-        dmTextPreviewData.newFieldCount,
+        dmTextPreviewData.newFieldCount
       );
     }
 
@@ -1017,7 +1017,7 @@ export const PaperSheet = (props, context) => {
     const [inputFieldData, setInputFieldData] = useLocalState(
       context,
       'inputFieldData',
-      {},
+      {}
     );
     if (Object.keys(inputFieldData).length) {
       setInputFieldData({});

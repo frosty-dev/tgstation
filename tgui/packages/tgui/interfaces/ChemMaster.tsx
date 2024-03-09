@@ -198,8 +198,8 @@ const ChemMasterContent = (props, context) => {
                     Math.round(
                       Math.min(
                         selectedContainerVolume,
-                        bufferCurrentVolume / itemCount,
-                      ) * 100,
+                        bufferCurrentVolume / itemCount
+                      ) * 100
                     ) / 100
                   } u. each`}
                 </Box>
@@ -241,7 +241,7 @@ const ChemMasterContent = (props, context) => {
                       category={category}
                       container={container}
                     />
-                  ),
+                  )
               )}
             </Box>
           ))}

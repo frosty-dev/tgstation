@@ -27,7 +27,7 @@ export const EditableText = (props: Props, context) => {
   const [editing, setEditing] = useLocalState<boolean>(
     context,
     `editing_${field}`,
-    false,
+    false
   );
 
   return editing ? (

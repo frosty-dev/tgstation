@@ -43,7 +43,7 @@ export const PlayerTicketHistory = (props: any, context: any) => {
   const [page, setPage] = useLocalState(
     context,
     'page',
-    data.target_ckey ? Pages.TicketHistory : Pages.Cache,
+    data.target_ckey ? Pages.TicketHistory : Pages.Cache
   );
 
   const [cacheInput, setCacheInput] = useLocalState(context, 'cacheInput', '');
@@ -110,7 +110,7 @@ const TicketHistory = (props: any, context: any) => {
   const [activeTicket, setActiveTicket] = useLocalState<TicketData | undefined>(
     context,
     'ticket',
-    undefined,
+    undefined
   );
 
   // sory by round then ticket number, descending
@@ -219,7 +219,7 @@ const TicketView = (props: TicketViewProps, context: any) => {
   const [forceExpand, setForceExpand] = useLocalState(
     context,
     'forceExpand',
-    false,
+    false
   );
 
   // sort by timestamp

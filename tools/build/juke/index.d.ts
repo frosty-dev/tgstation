@@ -14,7 +14,7 @@ import EventEmitter from "events";
  */
 export declare const chdir: (
   directory: string,
-  relativeTo?: string | undefined,
+  relativeTo?: string | undefined
 ) => void;
 export declare const logger: {
   log: (...args: unknown[]) => void;
@@ -41,16 +41,16 @@ export declare type StringType =
 export declare type TypeByString<T extends StringType> = T extends "string"
   ? string
   : T extends "string[]"
-    ? string[]
-    : T extends "number"
-      ? number
-      : T extends "number[]"
-        ? number[]
-        : T extends "boolean"
-          ? boolean
-          : T extends "boolean[]"
-            ? boolean[]
-            : never;
+  ? string[]
+  : T extends "number"
+  ? number
+  : T extends "number[]"
+  ? number[]
+  : T extends "boolean"
+  ? boolean
+  : T extends "boolean[]"
+  ? boolean[]
+  : never;
 export declare type ParameterConfig<T extends StringType> = {
   /**
    * Parameter name, as it would be used in CLI.
@@ -85,25 +85,25 @@ export interface Parameter<T extends ParameterType = ParameterType> {
   toCamelCase(): string | undefined;
 }
 export declare type ParameterCtor = {
-  new <T extends StringType>(
-    config: ParameterConfig<T>,
-  ): Parameter<TypeByString<T>>;
+  new <T extends StringType>(config: ParameterConfig<T>): Parameter<
+    TypeByString<T>
+  >;
 };
 export declare const Parameter: ParameterCtor;
 export declare type ParameterCreator = <T extends StringType>(
-  config: ParameterConfig<T>,
+  config: ParameterConfig<T>
 ) => Parameter<TypeByString<T>>;
 export declare const createParameter: ParameterCreator;
 export declare type ExecutionContext = {
   /** Get parameter value. */
   get: <T extends ParameterType>(
-    parameter: Parameter<T>,
+    parameter: Parameter<T>
   ) => T extends Array<unknown> ? T : T | null;
   args: string[];
 };
 export declare type BooleanLike = boolean | null | undefined;
 export declare type WithExecutionContext<R> = (
-  context: ExecutionContext,
+  context: ExecutionContext
 ) => R | Promise<R>;
 export declare type WithOptionalExecutionContext<R> =
   | R
@@ -234,7 +234,7 @@ export declare type ExecReturn = {
 export declare const exec: (
   executable: string,
   args?: string[],
-  options?: ExecOptions,
+  options?: ExecOptions
 ) => Promise<ExecReturn>;
 /**
  * Unix style pathname pattern expansion.

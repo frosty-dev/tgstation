@@ -37,7 +37,7 @@ export const WarrantConsole = (props, context) => {
   const [selectedRecord] = useLocalState<WarrantRecord | undefined>(
     context,
     'warrantRecord',
-    undefined,
+    undefined
   );
 
   return (
@@ -200,13 +200,13 @@ export const getCurrentRecord = (context) => {
   const [selectedRecord] = useLocalState<WarrantRecord | undefined>(
     context,
     'warrantRecord',
-    undefined,
+    undefined
   );
   if (!selectedRecord) return;
   const { data } = useBackend<Data>(context);
   const { records = [] } = data;
   const foundRecord = records.find(
-    (record) => record.crew_ref === selectedRecord.crew_ref,
+    (record) => record.crew_ref === selectedRecord.crew_ref
   );
   if (!foundRecord) return;
 

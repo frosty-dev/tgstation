@@ -177,13 +177,13 @@ export const PersonalCrafting = (props, context) => {
     Object.keys(craftability).length
       ? 'Can Make'
       : mode === MODE.cooking
-        ? DEFAULT_CAT_COOKING
-        : DEFAULT_CAT_CRAFTING,
+      ? DEFAULT_CAT_COOKING
+      : DEFAULT_CAT_CRAFTING
   );
   const [activeType, setFoodType] = useLocalState(
     context,
     'foodtype',
-    Object.keys(craftability).length ? 'Can Make' : data.foodtypes[0],
+    Object.keys(craftability).length ? 'Can Make' : data.foodtypes[0]
   );
   const material_occurences = flow([
     sortBy<Material>((material) => -material.occurences),
@@ -191,7 +191,7 @@ export const PersonalCrafting = (props, context) => {
   const [activeMaterial, setMaterial] = useLocalState(
     context,
     'material',
-    material_occurences[0].atom_id,
+    material_occurences[0].atom_id
   );
   const [tabMode, setTabMode] = useLocalState(context, 'tabMode', 0);
   const searchName = createSearch(searchText, (item: Recipe) => item.name);
@@ -214,7 +214,7 @@ export const PersonalCrafting = (props, context) => {
           (tabMode === TABS.category &&
             ((activeCategory === 'Can Make' &&
               Boolean(craftability[recipe.ref])) ||
-              recipe.category === activeCategory))),
+              recipe.category === activeCategory)))
     ),
     sortBy<Recipe>((recipe) => [
       activeCategory === 'Can Make'
@@ -237,8 +237,8 @@ export const PersonalCrafting = (props, context) => {
         ? 20
         : 10
       : display_compact
-        ? 60
-        : 30;
+      ? 60
+      : 30;
   const displayLimit = pageSize * pages;
   const content = document.getElementById('content');
   const CATEGORY_ICONS =
@@ -279,7 +279,7 @@ export const PersonalCrafting = (props, context) => {
                         setCategory(
                           Object.keys(craftability).length
                             ? 'Can Make'
-                            : data.categories[0],
+                            : data.categories[0]
                         );
                       }}
                     >
@@ -297,7 +297,7 @@ export const PersonalCrafting = (props, context) => {
                           setFoodType(
                             Object.keys(craftability).length
                               ? 'Can Make'
-                              : data.foodtypes[0],
+                              : data.foodtypes[0]
                           );
                         }}
                       >
@@ -526,7 +526,7 @@ export const PersonalCrafting = (props, context) => {
                         mode={mode}
                         diet={diet}
                       />
-                    ),
+                    )
                   )
               ) : (
                 <NoticeBox m={1} p={1}>
@@ -651,9 +651,9 @@ const RecipeContentCompact = ({ item, craftable, busy, mode }, context) => {
                     return is_reagent
                       ? `${name}\xa0${amount}u`
                       : amount > 1
-                        ? `${name}\xa0${amount}x`
-                        : name;
-                  }),
+                      ? `${name}\xa0${amount}x`
+                      : name;
+                  })
                 ).join(', ')}
 
                 {item.chem_catalysts &&
@@ -667,8 +667,8 @@ const RecipeContentCompact = ({ item, craftable, busy, mode }, context) => {
                         return is_reagent
                           ? `${name}\xa0${amount}u`
                           : amount > 1
-                            ? `${name}\xa0${amount}x`
-                            : name;
+                          ? `${name}\xa0${amount}x`
+                          : name;
                       })
                       .join(', ')}
 
@@ -709,8 +709,8 @@ const RecipeContentCompact = ({ item, craftable, busy, mode }, context) => {
                       busy
                         ? 'circle-notch'
                         : mode === MODE.cooking
-                          ? 'utensils'
-                          : 'hammer'
+                        ? 'utensils'
+                        : 'hammer'
                     }
                     iconSpin={busy ? 1 : 0}
                     onClick={() =>
@@ -846,8 +846,8 @@ const RecipeContent = ({ item, craftable, busy, mode, diet }, context) => {
                     busy
                       ? 'circle-notch'
                       : mode === MODE.cooking
-                        ? 'utensils'
-                        : 'hammer'
+                      ? 'utensils'
+                      : 'hammer'
                   }
                   iconSpin={busy ? 1 : 0}
                   onClick={() =>

@@ -263,7 +263,7 @@ const TankCompressorRecords = (props, context) => {
   const [activeRecordRef, setActiveRecordRef] = useSharedState(
     context,
     'recordRef',
-    records[0]?.ref,
+    records[0]?.ref
   );
   const activeRecord =
     !!activeRecordRef &&

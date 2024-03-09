@@ -54,7 +54,7 @@ export class LuaEditor extends Component {
     };
 
     window.addEventListener('resize', () =>
-      this.forceUpdate(this.handleSectionScroll),
+      this.forceUpdate(this.handleSectionScroll)
     );
   }
 
@@ -115,7 +115,7 @@ export class LuaEditor extends Component {
     const [modal, setModal] = useLocalState(
       this.context,
       'modal',
-      noStateYet ? 'states' : null,
+      noStateYet ? 'states' : null
     );
     const { activeTab, showJumpToBottomButton, scriptInput } = this.state;
     let tabContent;

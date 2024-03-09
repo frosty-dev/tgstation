@@ -237,7 +237,7 @@ const SpeciesPageInner = (
     handleClose: () => void;
     species: ServerData['species'];
   },
-  context,
+  context
 ) => {
   const { act, data } = useBackend<PreferencesMenuData>(context);
   const setSpecies = createSetPreference(act, 'species');
@@ -245,7 +245,7 @@ const SpeciesPageInner = (
   let species: [string, Species][] = Object.entries(props.species).map(
     ([species, data]) => {
       return [species, data];
-    },
+    }
   );
 
   // Humans are always the top of the list

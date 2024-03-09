@@ -166,8 +166,8 @@ export const ChemDispenser = (props, context) => {
                       ? 'black'
                       : 'green'
                     : hasCol
-                      ? chemical.pHCol
-                      : 'default'
+                    ? chemical.pHCol
+                    : 'default'
                 }
                 onClick={() =>
                   act('dispense', {

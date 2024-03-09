@@ -11,13 +11,13 @@ export const getMedicalRecord = (context) => {
   const [selectedRecord] = useLocalState<MedicalRecord | undefined>(
     context,
     'medicalRecord',
-    undefined,
+    undefined
   );
   if (!selectedRecord) return;
   const { data } = useBackend<MedicalRecordData>(context);
   const { records = [] } = data;
   const foundRecord = records.find(
-    (record) => record.crew_ref === selectedRecord.crew_ref,
+    (record) => record.crew_ref === selectedRecord.crew_ref
   );
   if (!foundRecord) return;
 

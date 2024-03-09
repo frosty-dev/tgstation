@@ -149,7 +149,7 @@ export const BountyBoardContent = (props, context) => {
                             />
                           </Flex.Item>
                         </Flex>
-                      ),
+                      )
                   )}
                 </Section>
               </Section>

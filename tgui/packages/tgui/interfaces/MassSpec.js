@@ -53,8 +53,8 @@ export const MassSpec = (props, context) => {
                 !beaker1Contents.length
                   ? 'Missing input reagents!'
                   : !beaker2
-                    ? 'Missing an output beaker!'
-                    : 'Begin purifying'
+                  ? 'Missing an output beaker!'
+                  : 'Begin purifying'
               }
               tooltipPosition="left"
               onClick={() => act('activate')}

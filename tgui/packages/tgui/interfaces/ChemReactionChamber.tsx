@@ -25,7 +25,7 @@ export const ChemReactionChamber = (props, context) => {
   const [reagentQuantity, setReagentQuantity] = useLocalState(
     context,
     'reagentQuantity',
-    1,
+    1
   );
 
   const {

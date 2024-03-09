@@ -44,7 +44,7 @@ export const ChemPress = (props, context) => {
   const [categoryName, setCategoryName] = useLocalState(
     context,
     'categoryName',
-    packaging_category,
+    packaging_category
   );
   const shownCategory =
     packaging_types.find((category) => category.cat_name === categoryName) ||

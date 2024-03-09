@@ -58,8 +58,8 @@ export const JobEntry: SFC<{
         'background-color': job.unavailable_reason
           ? '#949494' // Grey background
           : job.prioritized
-            ? '#16fc0f' // Bright green background
-            : Color.fromHex(department.color).darken(10).toString(),
+          ? '#16fc0f' // Bright green background
+          : Color.fromHex(department.color).darken(10).toString(),
         color: job.unavailable_reason
           ? '#616161' // Dark grey font
           : Color.fromHex(department.color).darken(90).toString(),
@@ -107,7 +107,7 @@ export const JobSelection = (props, context) => {
   }
   const departments: Record<string, Department> = deepMerge(
     data.departments,
-    data.departments_static,
+    data.departments_static
   );
 
   return (

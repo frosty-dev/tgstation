@@ -79,7 +79,7 @@ const loggingMiddleware: Middleware = (store) => (next) => (action) => {
   const { type } = action;
   logger.debug(
     'action',
-    type === 'update' || type === 'backend/update' ? { type } : action,
+    type === 'update' || type === 'backend/update' ? { type } : action
   );
   return next(action);
 };

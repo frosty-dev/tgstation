@@ -228,11 +228,11 @@ export const TimeFormat = (props, context) => {
   const seconds = toFixed(Math.floor((value / 10) % 60)).padStart(2, '0');
   const minutes = toFixed(Math.floor((value / (10 * 60)) % 60)).padStart(
     2,
-    '0',
+    '0'
   );
   const hours = toFixed(Math.floor((value / (10 * 60 * 60)) % 24)).padStart(
     2,
-    '0',
+    '0'
   );
   const formattedValue = `${hours}:${minutes}:${seconds}`;
   return formattedValue;

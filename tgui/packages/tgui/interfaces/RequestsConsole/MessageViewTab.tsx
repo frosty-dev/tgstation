@@ -33,7 +33,7 @@ const MessageDisplay = (
   props: {
     message: RequestMessage;
   },
-  context,
+  context
 ) => {
   const { act } = useBackend(context);
   const { message } = props;

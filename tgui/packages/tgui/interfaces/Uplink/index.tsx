@@ -110,7 +110,7 @@ export class Uplink extends Component<{}, UplinkState> {
   async populateServerData() {
     if (!fetchServerData) {
       fetchServerData = fetchRetry(resolveAsset('uplink.json')).then(
-        (response) => response.json(),
+        (response) => response.json()
       );
     }
     const { data } = useBackend<UplinkData>(this.context);
@@ -159,7 +159,7 @@ export class Uplink extends Component<{}, UplinkState> {
     });
 
     uplinkData.categories = uplinkData.categories.filter((value) =>
-      availableCategories.includes(value),
+      availableCategories.includes(value)
     );
 
     this.setState({
@@ -264,7 +264,7 @@ export class Uplink extends Component<{}, UplinkState> {
     // Clamp it down between 0 and 2
     progressionPercentage = Math.min(
       Math.max(progressionPercentage / progression_scaling_deviance, -1),
-      1,
+      1
     );
     // Round it and convert it into a percentage
     progressionPercentage = Math.round(progressionPercentage * 1000) / 10;
@@ -304,7 +304,7 @@ export class Uplink extends Component<{}, UplinkState> {
                                   Threat passively increases by{' '}
                                   <Box color="green" as="span">
                                     {calculateProgression(
-                                      current_progression_scaling,
+                                      current_progression_scaling
                                     )}
                                   </Box>
                                   &nbsp;every minute

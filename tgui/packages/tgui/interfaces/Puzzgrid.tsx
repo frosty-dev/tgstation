@@ -52,7 +52,7 @@ export const Puzzgrid = (props, context) => {
 
   const answersLeft = data.answers.filter(
     (answer) =>
-      !data.solved_groups.find((group) => group.answers.indexOf(answer) !== -1),
+      !data.solved_groups.find((group) => group.answers.indexOf(answer) !== -1)
   );
 
   return (

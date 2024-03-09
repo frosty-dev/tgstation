@@ -41,7 +41,7 @@ export const AccountingConsole = (props, context) => {
   const [screenmode, setScreenmode] = useLocalState(
     context,
     'tab_main',
-    SCREENS.users,
+    SCREENS.users
   );
 
   return (

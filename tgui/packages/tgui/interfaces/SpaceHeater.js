@@ -69,8 +69,8 @@ export const SpaceHeater = (props, context) => {
                   Math.abs(data.targetTemp - data.currentTemp) > 50
                     ? 'bad'
                     : Math.abs(data.targetTemp - data.currentTemp) > 20
-                      ? 'average'
-                      : 'good'
+                    ? 'average'
+                    : 'good'
                 }
               >
                 {data.currentTemp}°C

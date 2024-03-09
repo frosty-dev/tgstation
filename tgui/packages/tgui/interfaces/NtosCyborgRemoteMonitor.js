@@ -104,17 +104,17 @@ export const NtosCyborgRemoteMonitorContent = (props, context) => {
                           cyborg.status
                             ? 'bad'
                             : cyborg.locked_down
-                              ? 'average'
-                              : 'good'
+                            ? 'average'
+                            : 'good'
                         }
                       >
                         {cyborg.status
                           ? 'Not Responding'
                           : cyborg.locked_down
-                            ? 'Locked Down'
-                            : cyborg.shell_discon
-                              ? 'Nominal/Disconnected'
-                              : 'Nominal'}
+                          ? 'Locked Down'
+                          : cyborg.shell_discon
+                          ? 'Nominal/Disconnected'
+                          : 'Nominal'}
                       </Box>
                     </LabeledList.Item>
                     <LabeledList.Item label="Condition">
@@ -123,17 +123,17 @@ export const NtosCyborgRemoteMonitorContent = (props, context) => {
                           cyborg.integ <= 25
                             ? 'bad'
                             : cyborg.integ <= 75
-                              ? 'average'
-                              : 'good'
+                            ? 'average'
+                            : 'good'
                         }
                       >
                         {cyborg.integ === 0
                           ? 'Hard Fault'
                           : cyborg.integ <= 25
-                            ? 'Functionality Disrupted'
-                            : cyborg.integ <= 75
-                              ? 'Functionality Impaired'
-                              : 'Operational'}
+                          ? 'Functionality Disrupted'
+                          : cyborg.integ <= 75
+                          ? 'Functionality Impaired'
+                          : 'Operational'}
                       </Box>
                     </LabeledList.Item>
                     <LabeledList.Item label="Charge">
@@ -142,8 +142,8 @@ export const NtosCyborgRemoteMonitorContent = (props, context) => {
                           cyborg.charge <= 30
                             ? 'bad'
                             : cyborg.charge <= 70
-                              ? 'average'
-                              : 'good'
+                            ? 'average'
+                            : 'good'
                         }
                       >
                         {typeof cyborg.charge === 'number'

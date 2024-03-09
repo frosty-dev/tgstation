@@ -17,14 +17,14 @@ export const RequestManager = (props, context) => {
     context,
     'filteredTypes',
     Object.fromEntries(
-      Object.entries(displayTypeMap).map(([type, _]) => [type, true]),
-    ),
+      Object.entries(displayTypeMap).map(([type, _]) => [type, true])
+    )
   );
   const [searchText, setSearchText] = useLocalState(context, 'searchText');
 
   // Handle filtering
   let displayedRequests = requests.filter(
-    (request) => filteredTypes[request.req_type],
+    (request) => filteredTypes[request.req_type]
   );
   if (searchText) {
     const filterText = searchText.toLowerCase();
@@ -33,7 +33,7 @@ export const RequestManager = (props, context) => {
         decodeHtmlEntities(request.message)
           .toLowerCase()
           .includes(filterText) ||
-        request.owner_name.toLowerCase().includes(filterText),
+        request.owner_name.toLowerCase().includes(filterText)
     );
   }
 
@@ -134,14 +134,14 @@ const FilterPanel = (props, context) => {
   const [filterVisible, setFilterVisible] = useLocalState(
     context,
     'filterVisible',
-    false,
+    false
   );
   const [filteredTypes, setFilteredTypes] = useLocalState(
     context,
     'filteredTypes',
     Object.fromEntries(
-      Object.entries(displayTypeMap).map(([type, _]) => [type, true]),
-    ),
+      Object.entries(displayTypeMap).map(([type, _]) => [type, true])
+    )
   );
 
   return (
