@@ -74,7 +74,6 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
-/obj/structure/table,
 /obj/machinery/reagentgrinder,
 /turf/open/floor/iron,
 /area/template_noop)
