@@ -1,5 +1,6 @@
 /obj/effect/mob_spawn/ghost_role/human/durka
 	name = "спящий больной"
+	prompt_name = "спящий больной"
 	desc = "Смотрит мне прямо в душу. Он что-то замышляет???"
 	icon = 'white/master/icons/objects.dmi'
 	icon_state = "shiz"
