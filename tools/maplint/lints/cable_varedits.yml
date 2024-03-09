@@ -1,6 +1,3 @@
-/obj/structure/cable:
-  banned_variables: true
-
 /obj/structure/pipe_cleaner:
   banned_variables:
   - d1
