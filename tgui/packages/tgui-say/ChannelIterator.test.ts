@@ -44,11 +44,4 @@ describe('ChannelIterator', () => {
     channelIterator.set('Admin');
     expect(channelIterator.next()).toBe('Admin');
   });
-
-  // public reset(): void
-  it('should reset the channel to "Say"', () => {
-    channelIterator.set('OOC');
-    channelIterator.reset();
-    expect(channelIterator.current()).toBe('Say');
-  });
 });

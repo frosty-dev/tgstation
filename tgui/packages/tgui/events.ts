@@ -14,7 +14,7 @@ export const globalEvents = new EventEmitter();
 let ignoreWindowFocus = false;
 
 export const setupGlobalEvents = (
-  options: { ignoreWindowFocus?: boolean } = {}
+  options: { ignoreWindowFocus?: boolean } = {},
 ): void => {
   ignoreWindowFocus = !!options.ignoreWindowFocus;
 };
@@ -22,8 +22,8 @@ export const setupGlobalEvents = (
 // Window focus
 // --------------------------------------------------------
 
-export let windowFocusTimeout: ReturnType<typeof setTimeout> | null;
-export let windowFocused = true;
+let windowFocusTimeout: ReturnType<typeof setTimeout> | null;
+let windowFocused = true;
 
 // Pretend to always be in focus.
 const setWindowFocus = (value: boolean, delayed?: boolean) => {
