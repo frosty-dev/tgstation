@@ -32,12 +32,12 @@ export const filter =
   };
 
 type MapFunction = {
-  <T, U>(
-    iterateeFn: (value: T, index: number, collection: T[]) => U,
-  ): (collection: T[]) => U[];
+  <T, U>(iterateeFn: (value: T, index: number, collection: T[]) => U): (
+    collection: T[]
+  ) => U[];
 
   <T, U, K extends string | number>(
-    iterateeFn: (value: T, index: K, collection: Record<K, T>) => U,
+    iterateeFn: (value: T, index: K, collection: Record<K, T>) => U
   ): (collection: Record<K, T>) => U[];
 };
 
@@ -75,7 +75,7 @@ export const map: MapFunction =
  */
 export const filterMap = <T, U>(
   collection: T[],
-  iterateeFn: (value: T) => U | undefined,
+  iterateeFn: (value: T) => U | undefined
 ): U[] => {
   const finalCollection: U[] = [];
 
@@ -89,7 +89,7 @@ export const filterMap = <T, U>(
   return finalCollection;
 };
 
-const COMPARATOR = (objA, objB) => {
+export const COMPARATOR = (objA, objB) => {
   const criteriaA = objA.criteria;
   const criteriaB = objB.criteria;
   const length = criteriaA.length;
@@ -258,10 +258,10 @@ export const zipWith =
     return map((values: T[]) => iterateeFn(...values))(zip(...arrays));
   };
 
-const binarySearch = <T, U = unknown>(
+export const binarySearch = <T, U = unknown>(
   getKey: (value: T) => U,
   collection: readonly T[],
-  inserting: T,
+  inserting: T
 ): number => {
   if (collection.length === 0) {
     return 0;

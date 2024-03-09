@@ -17,7 +17,7 @@ describe('captureExternalLinks', () => {
   it('should subscribe to document clicks', () => {
     expect(addEventListenerSpy).toHaveBeenCalledWith(
       'click',
-      expect.any(Function),
+      expect.any(Function)
     );
   });
 
@@ -74,6 +74,62 @@ describe('captureExternalLinks', () => {
     expect(byond.sendMessage).toHaveBeenCalledWith({
       type: 'openLink',
       url: 'https://www.example.com',
+    });
+  });
+
+  it('should not preventDefault or send a message when the target is not an anchor tag', () => {
+    const nonAnchorTag = {
+      tagName: 'DIV',
+      getAttribute: () => 'https://example.com',
+      parentElement: {
+        tagName: 'A',
+        getAttribute: () => 'https://example.com',
+      },
+    };
+    const byond = { sendMessage: jest.fn() };
+    // @ts-ignore
+    global.Byond = byond;
+
+    const evt = { target: nonAnchorTag, preventDefault: jest.fn() };
+    clickHandler(evt);
+
+    expect(evt.preventDefault).toHaveBeenCalled();
+    expect(byond.sendMessage).toHaveBeenCalledWith({
+      type: 'openLink',
+      url: 'https://example.com',
+    });
+  });
+
+  it('should not preventDefault or send a message when the target is the body of the document', () => {
+    const body = document.body;
+    const byond = { sendMessage: jest.fn() };
+    // @ts-ignore
+    global.Byond = byond;
+
+    const evt = { target: body, preventDefault: jest.fn() };
+    clickHandler(evt);
+
+    expect(evt.preventDefault).not.toHaveBeenCalled();
+    expect(byond.sendMessage).not.toHaveBeenCalled();
+  });
+
+  it('should not preventDefault or send a message when the anchor tag does not have an href attribute', () => {
+    const anchorWithoutHref = {
+      tagName: 'A',
+      getAttribute: () => null,
+      parentElement: document.body,
+    };
+    const byond = { sendMessage: jest.fn() };
+    // @ts-ignore
+    global.Byond = byond;
+
+    const evt = { target: anchorWithoutHref, preventDefault: jest.fn() };
+    clickHandler(evt);
+
+    expect(evt.preventDefault).toHaveBeenCalled();
+    expect(byond.sendMessage).toHaveBeenCalledWith({
+      type: 'openLink',
+      url: '',
     });
   });
 });

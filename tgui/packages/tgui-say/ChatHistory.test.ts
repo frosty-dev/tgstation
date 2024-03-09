@@ -47,4 +47,11 @@ describe('ChatHistory', () => {
     expect(chatHistory.isAtLatest()).toBe(true);
     expect(chatHistory.getOlderMessage()).toEqual('Hello');
   });
+
+  // get index function
+  it('should return the index of the current message', () => {
+    chatHistory.add('Hello');
+    chatHistory.getOlderMessage();
+    expect(chatHistory.getIndex()).toBe(1);
+  });
 });
