@@ -124,7 +124,7 @@
 /area/template_noop)
 "p" = (
 /obj/machinery/door/window/left/directional/south{
-	name = "old cell door"
+	name = "OLD CELL DOOR"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark,
