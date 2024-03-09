@@ -89,3 +89,5 @@
 
 /obj/item/food/meat/slab/pig/make_processable()
 	AddElement(/datum/element/processable, TOOL_KNIFE,  /obj/item/food/meat/rawcutlet/plain/salo, 3, 30)
+
+#undef CELL_LINE_TABLE_PIG
