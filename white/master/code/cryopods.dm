@@ -40,6 +40,7 @@ GLOBAL_LIST_EMPTY(ghost_records)
 
 /obj/machinery/computer/cryopod/Destroy()
 	GLOB.cryopod_computers -= src
+	qdel(src)
 	..()
 
 /obj/machinery/computer/cryopod/update_icon_state()
