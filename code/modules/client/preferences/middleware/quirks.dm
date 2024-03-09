@@ -88,6 +88,6 @@
 	var/list/selected_quirks = list()
 
 	for (var/quirk in preferences.all_quirks)
-		selected_quirks += sanitize_css_class_name(quirk)
+		selected_quirks += quirk
 
 	return selected_quirks
