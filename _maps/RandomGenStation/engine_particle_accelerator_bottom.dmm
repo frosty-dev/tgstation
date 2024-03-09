@@ -223,7 +223,7 @@
 "xg" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/external{
-	name = "External Access"
+	name = "EXTERNAL ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/turf_decal/bot{

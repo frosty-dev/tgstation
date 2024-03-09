@@ -126,7 +126,7 @@
 /area/station/maintenance/starboard/central)
 "tM" = (
 /obj/machinery/door/airlock/external{
-	name = "Escape Pod Three";
+	name = "ESCAPE POD THREE";
 	space_dir = 4
 	},
 /obj/structure/fans/tiny,
@@ -203,7 +203,7 @@
 "zy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Cleaning Closet"
+	name = "CLEANING CLOSET"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/engineering/maintenance,
 /obj/effect/mapping_helpers/airlock/access/any/service/janitor,
@@ -332,7 +332,7 @@
 /area/station/maintenance/starboard/central)
 "Jh" = (
 /obj/machinery/door/airlock/external{
-	name = "Defunct Podbay"
+	name = "DEFUNCT PODBAY"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{

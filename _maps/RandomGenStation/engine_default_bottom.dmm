@@ -18,7 +18,7 @@
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/abandoned,
 /obj/structure/barricade/wooden{
-	name = "wooden barricade (CLOSED)"
+	name = "WOODEN BARRICADE (CLOSED)"
 	},
 /obj/structure/cable,
 /obj/machinery/door/airlock/external,

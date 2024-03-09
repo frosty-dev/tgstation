@@ -115,7 +115,7 @@
 /area/station/maintenance/department/science)
 "qd" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Medical Maintenance Access"
+	name = "MEDICAL MAINTENANCE ACCESS"
 	},
 /obj/effect/mapping_helpers/airlock/unres,
 /obj/effect/mapping_helpers/airlock/access/any/medical/morgue,
@@ -180,7 +180,7 @@
 /area/station/maintenance/department/medical)
 "wO" = (
 /obj/machinery/door/airlock/external{
-	name = "External Access"
+	name = "EXTERNAL ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -258,7 +258,7 @@
 /area/station/maintenance/department/science)
 "Go" = (
 /obj/machinery/door/airlock/external{
-	name = "External Access"
+	name = "EXTERNAL ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -320,7 +320,7 @@
 /area/station/maintenance/department/medical)
 "LS" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Science Maintenance Hatch"
+	name = "SCIENCE MAINTENANCE HATCH"
 	},
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -368,7 +368,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Medical Maintenance Hatch"
+	name = "MEDICAL MAINTENANCE HATCH"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/engineering/maintenance,
 /obj/effect/mapping_helpers/airlock/unres{

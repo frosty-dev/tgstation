@@ -174,7 +174,7 @@
 "jW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/external{
-	name = "Abandoned Pod Bay"
+	name = "ABANDONED POD BAY"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
@@ -199,7 +199,7 @@
 /area/station/maintenance/starboard/central)
 "lD" = (
 /obj/machinery/door/airlock/titanium{
-	name = "Escape Pod Airlock"
+	name = "ESCAPE POD AIRLOCK"
 	},
 /turf/open/floor/mineral/titanium/blue,
 /area/station/maintenance/starboard/central)
@@ -299,7 +299,7 @@
 "vI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/external{
-	name = "Abandoned Pod Bay"
+	name = "ABANDONED POD BAY"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
@@ -407,7 +407,7 @@
 "JD" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/machinery/door/poddoor{
-	name = "Podbay Door";
+	name = "PODBAY DOOR";
 	id_tag = "podbayifhereal"
 	},
 /obj/structure/holosign/barrier/atmos/sturdy,

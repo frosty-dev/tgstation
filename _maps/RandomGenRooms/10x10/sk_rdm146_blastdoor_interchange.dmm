@@ -18,7 +18,7 @@
 "bH" = (
 /obj/machinery/button/door{
 	id = "maint2";
-	name = "Blast Door Control B";
+	name = "BLAST DOOR CONTROL B";
 	pixel_y = -24
 	},
 /turf/open/floor/plating,
@@ -100,7 +100,7 @@
 "kf" = (
 /obj/machinery/button/door{
 	id = "maint2";
-	name = "Blast Door Control B";
+	name = "BLAST DOOR CONTROL B";
 	pixel_y = 24
 	},
 /turf/open/floor/plating,
@@ -284,7 +284,7 @@
 /obj/structure/rack,
 /obj/machinery/button/door{
 	id = "maint1";
-	name = "Blast Door Control A";
+	name = "BLAST DOOR CONTROL A";
 	pixel_x = -24
 	},
 /turf/open/floor/plating,

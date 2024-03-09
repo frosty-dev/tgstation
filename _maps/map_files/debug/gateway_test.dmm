@@ -155,7 +155,7 @@
 /area/misc/testroom/gateway_room)
 "E" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Gateway Chamber"
+	name = "GATEWAY CHAMBER"
 	},
 /turf/open/indestructible,
 /area/misc/testroom/gateway_room)

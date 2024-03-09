@@ -77,7 +77,7 @@
 /area/station/maintenance/department/crew_quarters/dorms)
 "X" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Art Storage Maintenance Hatch"
+	name = "ART STORAGE MAINTENANCE HATCH"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /obj/effect/decal/cleanable/dirt,

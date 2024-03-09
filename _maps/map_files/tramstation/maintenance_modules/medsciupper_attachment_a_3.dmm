@@ -124,7 +124,7 @@
 /obj/modular_map_connector,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Testing Range Maintenance Hatch"
+	name = "TESTING RANGE MAINTENANCE HATCH"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/science/research,
 /obj/effect/turf_decal/trimline/purple/filled/line{

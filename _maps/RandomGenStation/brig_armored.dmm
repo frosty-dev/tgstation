@@ -15,7 +15,7 @@
 /area/space/nearstation)
 "ah" = (
 /obj/machinery/door/airlock/security{
-	name = "Interrogation"
+	name = "INTERROGATION"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/any/security/general,
@@ -65,7 +65,7 @@
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /obj/machinery/door/poddoor/preopen{
 	id = "hosspace";
-	name = "space shutters"
+	name = "SPACE SHUTTERS"
 	},
 /turf/open/floor/engine,
 /area/station/security)
@@ -205,7 +205,7 @@
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /obj/machinery/door/poddoor/preopen{
 	id = "hosspace";
-	name = "space shutters"
+	name = "SPACE SHUTTERS"
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -405,7 +405,7 @@
 	dir = 8
 	},
 /obj/machinery/door/window/left/directional/south{
-	name = "Armory Rack";
+	name = "ARMORY RACK";
 	req_access = list("armory")
 	},
 /turf/open/floor/iron/dark,
@@ -451,7 +451,7 @@
 	dir = 8
 	},
 /obj/machinery/door/window/left/directional/south{
-	name = "Armory Rack";
+	name = "ARMORY RACK";
 	req_access = list("armory")
 	},
 /turf/open/floor/iron/dark,
@@ -509,7 +509,7 @@
 	dir = 8
 	},
 /obj/machinery/door/window/left/directional/south{
-	name = "Armory Rack";
+	name = "ARMORY RACK";
 	req_access = list("armory")
 	},
 /turf/open/floor/iron/dark,
@@ -535,7 +535,7 @@
 	dir = 8
 	},
 /obj/machinery/door/window/left/directional/south{
-	name = "Armory Rack";
+	name = "ARMORY RACK";
 	req_access = list("armory")
 	},
 /turf/open/floor/iron/dark,
@@ -563,7 +563,7 @@
 	pixel_y = 3
 	},
 /obj/machinery/door/window/left/directional/south{
-	name = "Armory Rack";
+	name = "ARMORY RACK";
 	req_access = list("armory")
 	},
 /turf/open/floor/iron/dark,
@@ -605,7 +605,7 @@
 /area/station/security)
 "cr" = (
 /obj/machinery/door/airlock/external{
-	name = "Security External Airlock"
+	name = "SECURITY EXTERNAL AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/structure/fans/tiny,
@@ -825,7 +825,7 @@
 /obj/effect/turf_decal/bot,
 /obj/structure/window/reinforced/spawner/directional/west,
 /obj/machinery/door/window/left/directional/south{
-	name = "Armory Rack";
+	name = "ARMORY RACK";
 	req_access = list("armory")
 	},
 /obj/structure/window/reinforced/spawner/directional/east,
@@ -942,22 +942,22 @@
 /obj/machinery/door/poddoor/shutters{
 	dir = 4;
 	id = "armory";
-	name = "Armoury Shutter"
+	name = "ARMOURY SHUTTER"
 	},
 /obj/machinery/door/window/brigdoor{
 	dir = 8;
-	name = "Weapon Distribution";
+	name = "WEAPON DISTRIBUTION";
 	req_access = list("armory")
 	},
 /obj/machinery/door/window/left/directional/south{
 	dir = 4;
-	name = "Requests Window"
+	name = "REQUESTS WINDOW"
 	},
 /turf/open/floor/engine,
 /area/station/ai_monitored/security/armory)
 "dk" = (
 /obj/machinery/door/airlock/external{
-	name = "Security External Airlock"
+	name = "SECURITY EXTERNAL AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
@@ -1099,7 +1099,7 @@
 /obj/machinery/door/poddoor/shutters{
 	dir = 4;
 	id = "armory";
-	name = "Armoury Shutter"
+	name = "ARMOURY SHUTTER"
 	},
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/engine,
@@ -1415,7 +1415,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/external{
-	name = "Escape Pod Four";
+	name = "ESCAPE POD FOUR";
 	shuttledocked = 1
 	},
 /obj/effect/mapping_helpers/airlock/access/any/security/general,
@@ -1426,7 +1426,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/external{
-	name = "Escape Pod Four";
+	name = "ESCAPE POD FOUR";
 	shuttledocked = 1
 	},
 /obj/effect/mapping_helpers/airlock/access/any/security/general,
@@ -1454,7 +1454,7 @@
 /obj/structure/cable,
 /obj/machinery/door/poddoor/shutters{
 	id = "armory";
-	name = "Armoury Shutter"
+	name = "ARMOURY SHUTTER"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/engine,
@@ -1464,7 +1464,7 @@
 /obj/structure/cable,
 /obj/machinery/door/poddoor/shutters{
 	id = "armory";
-	name = "Armoury Shutter"
+	name = "ARMOURY SHUTTER"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -1473,7 +1473,7 @@
 /area/station/ai_monitored/security/armory)
 "eY" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Equipment Room";
+	name = "EQUIPMENT ROOM";
 	security_level = 6
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1517,7 +1517,7 @@
 /obj/structure/cable,
 /obj/machinery/door/poddoor/shutters{
 	id = "armory";
-	name = "Armoury Shutter"
+	name = "ARMOURY SHUTTER"
 	},
 /turf/open/floor/engine,
 /area/station/ai_monitored/security/armory)
@@ -1611,12 +1611,12 @@
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "Prison Gate";
-	name = "prison blast door"
+	name = "PRISON BLAST DOOR"
 	},
 /obj/effect/turf_decal/delivery,
 /obj/structure/cable,
 /obj/machinery/door/airlock/public/glass{
-	name = "Prison Wing"
+	name = "PRISON WING"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -1626,11 +1626,11 @@
 "ft" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "Prison Gate";
-	name = "prison blast door"
+	name = "PRISON BLAST DOOR"
 	},
 /obj/effect/turf_decal/delivery,
 /obj/machinery/door/airlock/public/glass{
-	name = "Prison Wing"
+	name = "PRISON WING"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark,
@@ -2139,12 +2139,12 @@
 /obj/effect/turf_decal/delivery,
 /obj/machinery/door/poddoor/preopen{
 	id = "briggateteh";
-	name = "security blast door"
+	name = "SECURITY BLAST DOOR"
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/window/brigdoor{
 	dir = 8;
-	name = "Security Delivery";
+	name = "SECURITY DELIVERY";
 	req_access = list("brig")
 	},
 /turf/open/floor/engine,
@@ -2198,7 +2198,7 @@
 /area/station/security/warden)
 "gw" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Brig Control";
+	name = "BRIG CONTROL";
 	security_level = 6
 	},
 /obj/structure/cable,
@@ -2256,7 +2256,7 @@
 "gB" = (
 /obj/machinery/door/window/left/directional/west{
 	dir = 4;
-	name = "Brig Infirmary"
+	name = "BRIG INFIRMARY"
 	},
 /turf/open/floor/iron/white,
 /area/station/security/brig)
@@ -2467,7 +2467,7 @@
 	base_state = "right";
 	dir = 4;
 	icon_state = "right";
-	name = "Brig Infirmary"
+	name = "BRIG INFIRMARY"
 	},
 /turf/open/floor/iron/white,
 /area/station/security/brig)
@@ -2722,18 +2722,18 @@
 	},
 /obj/machinery/door/window/brigdoor{
 	dir = 1;
-	name = "Warden Desk";
+	name = "WARDEN DESK";
 	req_access = list("armory")
 	},
 /obj/machinery/door/window/left/directional/north{
 	dir = 2;
-	name = "Warden Desk"
+	name = "WARDEN DESK"
 	},
 /turf/open/floor/engine,
 /area/station/security/warden)
 "hq" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Brig Control";
+	name = "BRIG CONTROL";
 	security_level = 6
 	},
 /obj/structure/cable,
@@ -2745,7 +2745,7 @@
 /area/station/security/warden)
 "hr" = (
 /obj/machinery/door/airlock/security{
-	name = "Security Office";
+	name = "SECURITY OFFICE";
 	security_level = 6
 	},
 /obj/structure/cable,
@@ -2757,7 +2757,7 @@
 /area/station/security)
 "hs" = (
 /obj/machinery/door/airlock/security{
-	name = "Interrogation"
+	name = "INTERROGATION"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -2820,12 +2820,12 @@
 /area/station/security/brig)
 "hA" = (
 /obj/machinery/door/airlock/security{
-	name = "Labor Shuttle"
+	name = "LABOR SHUTTLE"
 	},
 /obj/structure/cable,
 /obj/machinery/door/poddoor/preopen{
 	id = "briggate";
-	name = "security blast door"
+	name = "SECURITY BLAST DOOR"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 4
@@ -3033,7 +3033,7 @@
 /area/station/security/brig)
 "ig" = (
 /obj/machinery/door/airlock/command/glass{
-	name = "Head of Security";
+	name = "HEAD OF SECURITY";
 	security_level = 6
 	},
 /obj/structure/cable,
@@ -3113,7 +3113,7 @@
 /area/station/security/brig)
 "iq" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Evidence Storage"
+	name = "EVIDENCE STORAGE"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/any/security/general,
@@ -3122,7 +3122,7 @@
 "is" = (
 /obj/machinery/door/window/brigdoor/security/cell{
 	id = "Cell 1";
-	name = "Cell 1"
+	name = "CELL 1"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -3133,7 +3133,7 @@
 "iu" = (
 /obj/machinery/door/window/brigdoor/security/cell{
 	id = "Cell 2";
-	name = "Cell 2"
+	name = "CELL 2"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -3144,7 +3144,7 @@
 "iv" = (
 /obj/machinery/door/window/brigdoor/security/cell{
 	id = "Cell 3";
-	name = "Cell 3"
+	name = "CELL 3"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -3154,7 +3154,7 @@
 /area/station/security/brig)
 "iw" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Brig Desk"
+	name = "BRIG DESK"
 	},
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -3173,7 +3173,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/airlock/security/glass{
 	id_tag = "innerbrig";
-	name = "Brig";
+	name = "BRIG";
 	security_level = 6
 	},
 /obj/effect/turf_decal/tile/red{
@@ -3191,7 +3191,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/airlock/security/glass{
 	id_tag = "innerbrig";
-	name = "Brig";
+	name = "BRIG";
 	security_level = 6
 	},
 /obj/effect/turf_decal/tile/red,
@@ -3206,7 +3206,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/window/brigdoor/security/holding{
 	id = "Holding Cell";
-	name = "Holding Cell"
+	name = "HOLDING CELL"
 	},
 /turf/open/floor/iron/dark,
 /area/station/security/brig)
@@ -3268,10 +3268,10 @@
 /obj/structure/table/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "briggate";
-	name = "security shutters"
+	name = "SECURITY SHUTTERS"
 	},
 /obj/machinery/door/window/left/directional/east{
-	name = "Brig Desk";
+	name = "BRIG DESK";
 	req_access = list("security")
 	},
 /obj/item/paper_bin{
@@ -3458,10 +3458,10 @@
 /obj/structure/table/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "briggate";
-	name = "security shutters"
+	name = "SECURITY SHUTTERS"
 	},
 /obj/machinery/door/window/right/directional/east{
-	name = "Brig Desk";
+	name = "BRIG DESK";
 	req_access = list("security")
 	},
 /obj/item/restraints/handcuffs,
@@ -3533,7 +3533,7 @@
 "jj" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "Secure Gate";
-	name = "brig shutters"
+	name = "BRIG SHUTTERS"
 	},
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /obj/structure/cable,
@@ -3543,11 +3543,11 @@
 /obj/structure/table/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "briggate";
-	name = "security shutters"
+	name = "SECURITY SHUTTERS"
 	},
 /obj/machinery/door/window/left/directional/east{
 	dir = 2;
-	name = "Brig Desk";
+	name = "BRIG DESK";
 	req_access = list("security")
 	},
 /turf/open/floor/iron/dark,
@@ -3556,11 +3556,11 @@
 /obj/structure/table/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "briggate";
-	name = "security shutters"
+	name = "SECURITY SHUTTERS"
 	},
 /obj/machinery/door/window/right/directional/east{
 	dir = 2;
-	name = "Brig Desk";
+	name = "BRIG DESK";
 	req_access = list("security")
 	},
 /turf/open/floor/iron/dark,
@@ -3568,7 +3568,7 @@
 "jm" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "briggate";
-	name = "security blast door"
+	name = "SECURITY BLAST DOOR"
 	},
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /obj/structure/cable,
@@ -3580,13 +3580,13 @@
 	},
 /obj/machinery/door/airlock/security/glass{
 	id_tag = "outerbrig";
-	name = "Brig";
+	name = "BRIG";
 	security_level = 6
 	},
 /obj/structure/cable,
 /obj/machinery/door/poddoor/preopen{
 	id = "briggate";
-	name = "security blast door"
+	name = "SECURITY BLAST DOOR"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/turf_decal/tile/red{
@@ -3601,7 +3601,7 @@
 /obj/structure/cable,
 /obj/machinery/door/poddoor/preopen{
 	id = "briggate";
-	name = "security blast door"
+	name = "SECURITY BLAST DOOR"
 	},
 /turf/open/floor/plating,
 /area/station/security/brig)
@@ -3611,12 +3611,12 @@
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "briggate";
-	name = "security blast door"
+	name = "SECURITY BLAST DOOR"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/airlock/security/glass{
 	id_tag = "outerbrig";
-	name = "Brig";
+	name = "BRIG";
 	security_level = 6
 	},
 /obj/effect/turf_decal/tile/red{
@@ -3765,7 +3765,7 @@
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /obj/machinery/door/poddoor/preopen{
 	id = "hosspace";
-	name = "space shutters"
+	name = "SPACE SHUTTERS"
 	},
 /turf/open/floor/plating,
 /area/station/security)

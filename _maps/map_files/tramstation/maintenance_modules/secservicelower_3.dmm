@@ -101,7 +101,7 @@
 /area/station/maintenance/central/greater)
 "im" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Maintenance Hatch"
+	name = "MAINTENANCE HATCH"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /obj/machinery/duct,
@@ -287,7 +287,7 @@
 /area/station/maintenance/central/greater)
 "wy" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Water Access Maintenance Hatch"
+	name = "WATER ACCESS MAINTENANCE HATCH"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/service/janitor,
 /obj/effect/decal/cleanable/dirt,
@@ -316,7 +316,7 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Tunnel Access Hatch"
+	name = "TUNNEL ACCESS HATCH"
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,

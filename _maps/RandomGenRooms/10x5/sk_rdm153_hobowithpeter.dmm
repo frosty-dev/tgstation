@@ -125,7 +125,7 @@
 /area/template_noop)
 "J" = (
 /mob/living/basic/frog{
-	name = "Peter"
+	name = "PETER"
 	},
 /turf/open/floor/grass,
 /area/template_noop)

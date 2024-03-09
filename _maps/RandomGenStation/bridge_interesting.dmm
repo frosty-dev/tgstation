@@ -4,7 +4,7 @@
 /area/template_noop)
 "ac" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Central Access"
+	name = "CENTRAL ACCESS"
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -14,14 +14,14 @@
 /area/station/hallway/primary/central/north)
 "ad" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Central Access"
+	name = "CENTRAL ACCESS"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/north)
 "ae" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Central Access"
+	name = "CENTRAL ACCESS"
 	},
 /obj/effect/turf_decal/tile/blue,
 /obj/machinery/door/firedoor,
@@ -526,7 +526,7 @@
 /area/station/engineering/gravity_generator)
 "bp" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Gravity Generator"
+	name = "GRAVITY GENERATOR"
 	},
 /obj/effect/turf_decal/delivery,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -571,7 +571,7 @@
 /area/station/engineering/gravity_generator)
 "bu" = (
 /obj/machinery/door/airlock/command{
-	name = "Conference Room"
+	name = "CONFERENCE ROOM"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -618,17 +618,17 @@
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "hop";
-	name = "Privacy Shutters"
+	name = "PRIVACY SHUTTERS"
 	},
 /obj/machinery/door/window/left/directional/north{
 	dir = 8;
-	name = "Reception Window"
+	name = "RECEPTION WINDOW"
 	},
 /obj/machinery/door/window/brigdoor{
 	base_state = "rightsecure";
 	dir = 4;
 	icon_state = "rightsecure";
-	name = "Head of Personnel's Desk";
+	name = "HEAD OF PERSONNEL'S DESK";
 	req_access = list("hop")
 	},
 /turf/open/floor/iron,
@@ -678,7 +678,7 @@
 "bD" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/command/glass{
-	name = "Bridge";
+	name = "BRIDGE";
 	security_level = 6
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -692,7 +692,7 @@
 "bE" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge blast";
-	name = "bridge blast door"
+	name = "BRIDGE BLAST DOOR"
 	},
 /obj/structure/cable,
 /obj/effect/spawner/structure/window/reinforced,
@@ -909,7 +909,7 @@
 	base_state = "right";
 	dir = 1;
 	icon_state = "right";
-	name = "Captain's Desk Door";
+	name = "CAPTAIN'S DESK DOOR";
 	req_access = list("captain")
 	},
 /turf/open/floor/wood,
@@ -1040,7 +1040,7 @@
 /area/station/hallway/primary/central/north)
 "cu" = (
 /obj/machinery/door/airlock/command{
-	name = "Captain's Quarters"
+	name = "CAPTAIN'S QUARTERS"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 6
@@ -1095,7 +1095,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/airlock/command{
-	name = "Captain's Office"
+	name = "CAPTAIN'S OFFICE"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/command/captain,
@@ -1154,7 +1154,7 @@
 /area/station/command/heads_quarters/hop)
 "cK" = (
 /obj/machinery/door/airlock/command{
-	name = "Head of Personnel"
+	name = "HEAD OF PERSONNEL"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -1391,7 +1391,7 @@
 "dk" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "heads_meeting";
-	name = "privacy shutters"
+	name = "PRIVACY SHUTTERS"
 	},
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/disposalpipe/segment{
@@ -1445,7 +1445,7 @@
 /area/station/hallway/primary/central/north)
 "dr" = (
 /obj/machinery/door/airlock/command{
-	name = "Conference Room"
+	name = "CONFERENCE ROOM"
 	},
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
@@ -1461,7 +1461,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "hop";
-	name = "Privacy Shutters"
+	name = "PRIVACY SHUTTERS"
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -1477,7 +1477,7 @@
 /obj/effect/turf_decal/loading_area,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "hopqueue";
-	name = "HoP Queue Shutters"
+	name = "HOP QUEUE SHUTTERS"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -1493,7 +1493,7 @@
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "hopqueue";
-	name = "HoP Queue Shutters"
+	name = "HOP QUEUE SHUTTERS"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/firedoor,
@@ -1666,7 +1666,7 @@
 /area/station/hallway/primary/central/north)
 "ea" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Central Access"
+	name = "CENTRAL ACCESS"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 4
@@ -1679,7 +1679,7 @@
 /area/station/hallway/primary/central/north)
 "ec" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Central Access"
+	name = "CENTRAL ACCESS"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 10
@@ -1820,7 +1820,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge blast";
-	name = "bridge blast door"
+	name = "BRIDGE BLAST DOOR"
 	},
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/iron,
@@ -1893,7 +1893,7 @@
 "hg" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "heads_meeting";
-	name = "privacy shutters"
+	name = "PRIVACY SHUTTERS"
 	},
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -2003,7 +2003,7 @@
 	base_state = "right";
 	dir = 4;
 	icon_state = "right";
-	name = "Core Modules";
+	name = "CORE MODULES";
 	req_access = list("captain")
 	},
 /turf/open/floor/iron/dark/smooth_large,
@@ -2053,7 +2053,7 @@
 /obj/item/ai_module/supplied/protect_station,
 /obj/machinery/door/window/brigdoor/left/directional/south{
 	dir = 8;
-	name = "High-Risk Modules";
+	name = "HIGH-RISK MODULES";
 	req_access = list("captain")
 	},
 /turf/open/floor/iron/dark/smooth_large,
@@ -2119,7 +2119,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/command/glass{
-	name = "Bridge"
+	name = "BRIDGE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -2219,7 +2219,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge blast";
-	name = "bridge blast door"
+	name = "BRIDGE BLAST DOOR"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -2261,7 +2261,7 @@
 /area/station/engineering/gravity_generator)
 "jP" = (
 /obj/machinery/door/airlock{
-	name = "Private Restroom"
+	name = "PRIVATE RESTROOM"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/captain,
 /turf/open/floor/iron/freezer,
@@ -2381,7 +2381,7 @@
 "kF" = (
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "hop";
-	name = "Privacy Shutters"
+	name = "PRIVACY SHUTTERS"
 	},
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -2478,7 +2478,7 @@
 /area/station/engineering/gravity_generator)
 "lz" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Gravity Generator"
+	name = "GRAVITY GENERATOR"
 	},
 /obj/effect/turf_decal/delivery,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -2512,7 +2512,7 @@
 /area/station/command/teleporter)
 "lF" = (
 /obj/machinery/door/airlock/command{
-	name = "Teleport Access"
+	name = "TELEPORT ACCESS"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -2600,7 +2600,7 @@
 /area/station/hallway/primary/central/south)
 "ni" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Central Access"
+	name = "CENTRAL ACCESS"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
@@ -2628,7 +2628,7 @@
 /area/station/hallway/primary/central/south)
 "nl" = (
 /obj/machinery/door/airlock/highsecurity{
-	name = "AI Upload Access"
+	name = "AI UPLOAD ACCESS"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -2638,7 +2638,7 @@
 /area/station/ai_monitored/turret_protected/ai_upload)
 "nm" = (
 /obj/machinery/door/airlock/highsecurity{
-	name = "AI Upload Access"
+	name = "AI UPLOAD ACCESS"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 6
@@ -2723,7 +2723,7 @@
 /obj/structure/cable,
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge blast";
-	name = "bridge blast door"
+	name = "BRIDGE BLAST DOOR"
 	},
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -2905,7 +2905,7 @@
 "nX" = (
 /obj/structure/chair{
 	dir = 8;
-	name = "Logistics Station"
+	name = "LOGISTICS STATION"
 	},
 /turf/open/floor/iron/dark,
 /area/station/command)
@@ -3052,7 +3052,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/command/glass{
-	name = "Bridge"
+	name = "BRIDGE"
 	},
 /obj/structure/cable,
 /obj/structure/sign/warning/secure_area{
@@ -3078,7 +3078,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge blast";
-	name = "bridge blast door"
+	name = "BRIDGE BLAST DOOR"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -3145,7 +3145,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/command/glass{
-	name = "Bridge"
+	name = "BRIDGE"
 	},
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -3673,7 +3673,7 @@
 /obj/structure/cable,
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge blast";
-	name = "bridge blast door"
+	name = "BRIDGE BLAST DOOR"
 	},
 /obj/machinery/status_display/evac,
 /obj/effect/spawner/structure/window/reinforced,
@@ -3709,7 +3709,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/command/glass{
-	name = "Bridge"
+	name = "BRIDGE"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/command/general,
 /turf/open/floor/iron,
@@ -3724,7 +3724,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge blast";
-	name = "bridge blast door"
+	name = "BRIDGE BLAST DOOR"
 	},
 /turf/open/floor/iron,
 /area/station/command)
@@ -3890,7 +3890,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/command/glass{
-	name = "Bridge"
+	name = "BRIDGE"
 	},
 /obj/structure/sign/warning/secure_area{
 	pixel_y = 32
@@ -3907,7 +3907,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/command/glass{
-	name = "Bridge"
+	name = "BRIDGE"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/command/general,
 /turf/open/floor/iron,
@@ -4038,7 +4038,7 @@
 "qO" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/public/glass{
-	name = "Central Access"
+	name = "CENTRAL ACCESS"
 	},
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
@@ -4051,7 +4051,7 @@
 /area/station/hallway/primary/central/south)
 "qP" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Central Access"
+	name = "CENTRAL ACCESS"
 	},
 /obj/effect/turf_decal/tile/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -4357,7 +4357,7 @@
 /obj/machinery/door/poddoor/shutters{
 	dir = 4;
 	id = "aquaprivacy";
-	name = "Privacy Shutters"
+	name = "PRIVACY SHUTTERS"
 	},
 /turf/open/floor/plating,
 /area/station/commons/fitness/recreation)
@@ -4384,7 +4384,7 @@
 /area/station/command/heads_quarters/hop)
 "Be" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Central Access"
+	name = "CENTRAL ACCESS"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron,
@@ -4676,7 +4676,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters{
 	id = "aquaprivacy";
-	name = "Privacy Shutters"
+	name = "PRIVACY SHUTTERS"
 	},
 /turf/open/floor/plating,
 /area/station/commons/fitness/recreation)
@@ -4782,7 +4782,7 @@
 /area/station/hallway/primary/central/south)
 "UY" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Central Access"
+	name = "CENTRAL ACCESS"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron/large,
@@ -4805,7 +4805,7 @@
 /area/station/hallway/primary/central/north)
 "WY" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Central Access"
+	name = "CENTRAL ACCESS"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{

@@ -4,7 +4,7 @@
 /area/station/maintenance/department/security)
 "c" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Closet Access Maintenance Hatch"
+	name = "CLOSET ACCESS MAINTENANCE HATCH"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /obj/effect/decal/cleanable/dirt,
@@ -12,7 +12,7 @@
 /area/station/maintenance/department/security)
 "g" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Closet Access Maintenance Hatch"
+	name = "CLOSET ACCESS MAINTENANCE HATCH"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /obj/effect/mapping_helpers/airlock/locked,
@@ -29,7 +29,7 @@
 /area/station/maintenance/department/security)
 "p" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Closet Access Maintenance Hatch"
+	name = "CLOSET ACCESS MAINTENANCE HATCH"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /obj/effect/decal/cleanable/dirt,

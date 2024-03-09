@@ -86,7 +86,7 @@
 "n" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Custodial Maintenance Hatch"
+	name = "CUSTODIAL MAINTENANCE HATCH"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /turf/open/floor/plating,
@@ -100,7 +100,7 @@
 /area/station/maintenance/starboard/greater)
 "p" = (
 /obj/machinery/door/airlock/external{
-	name = "External Access"
+	name = "EXTERNAL ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -157,7 +157,7 @@
 /area/station/maintenance/starboard/greater)
 "w" = (
 /obj/machinery/door/airlock/external{
-	name = "External Access"
+	name = "EXTERNAL ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -291,7 +291,7 @@
 "S" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Maintenance Hatch"
+	name = "MAINTENANCE HATCH"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /turf/open/floor/iron/smooth,

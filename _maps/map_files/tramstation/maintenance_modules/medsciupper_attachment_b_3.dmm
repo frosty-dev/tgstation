@@ -35,7 +35,7 @@
 "H" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Morgue Maintenance"
+	name = "MORGUE MAINTENANCE"
 	},
 /obj/modular_map_connector,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,

@@ -184,7 +184,7 @@
 /area/template_noop)
 "J" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Pete's Speakeasy"
+	name = "PETE'S SPEAKEASY"
 	},
 /turf/open/floor/plating,
 /area/template_noop)

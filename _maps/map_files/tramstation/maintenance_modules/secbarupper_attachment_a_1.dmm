@@ -1,7 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "e" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Bureaucracy Storage Maintenance Hatch"
+	name = "BUREAUCRACY STORAGE MAINTENANCE HATCH"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,

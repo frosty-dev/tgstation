@@ -84,7 +84,7 @@
 /area/station/maintenance/starboard/greater)
 "p" = (
 /obj/machinery/door/airlock/external{
-	name = "External Access"
+	name = "EXTERNAL ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -119,7 +119,7 @@
 /area/station/asteroid)
 "w" = (
 /obj/machinery/door/airlock/external{
-	name = "External Access"
+	name = "EXTERNAL ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,

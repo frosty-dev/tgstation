@@ -20,7 +20,7 @@
 	dir = 1
 	},
 /obj/machinery/door/poddoor/shutters{
-	name = "Storage Shutters";
+	name = "STORAGE SHUTTERS";
 	id = "defnotillegastuffinhereofficer"
 	},
 /turf/open/floor/plating,
@@ -85,7 +85,7 @@
 "v" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Maintenance Hatch"
+	name = "MAINTENANCE HATCH"
 	},
 /turf/open/floor/iron/smooth,
 /area/station/maintenance/starboard/lesser)
@@ -133,7 +133,7 @@
 "F" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/mining/glass{
-	name = "Long-Term Shipping Storage"
+	name = "LONG-TERM SHIPPING STORAGE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /obj/modular_map_connector,

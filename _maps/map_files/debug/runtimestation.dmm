@@ -175,7 +175,7 @@
 /area/station/engineering/main)
 "aU" = (
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Gravity Generator"
+	name = "GRAVITY GENERATOR"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
@@ -198,7 +198,7 @@
 /area/station/engineering/gravity_generator)
 "aX" = (
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Gravity Generator"
+	name = "GRAVITY GENERATOR"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -754,7 +754,7 @@
 /area/station/hallway/secondary/entry)
 "di" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Labor Camp Shuttle Airlock"
+	name = "LABOR CAMP SHUTTLE AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/structure/fans/tiny,
@@ -1004,7 +1004,7 @@
 	dir = 8;
 	dwidth = 3;
 	height = 15;
-	name = "arrivals";
+	name = "ARRIVALS";
 	roundstart_template = /datum/map_template/shuttle/arrival/box;
 	shuttle_id = "arrival_stationary";
 	width = 7
@@ -1085,7 +1085,7 @@
 /area/station/cargo/storage)
 "ex" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Escape Pod One"
+	name = "ESCAPE POD ONE"
 	},
 /obj/structure/fans/tiny,
 /obj/structure/fans/tiny,
@@ -1180,7 +1180,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/external/ruin{
-	name = "Supply Dock Airlock"
+	name = "SUPPLY DOCK AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/turf_decal/stripes/line{
@@ -1196,7 +1196,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/external/ruin{
-	name = "Supply Dock Airlock"
+	name = "SUPPLY DOCK AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/turf_decal/stripes/line{
@@ -1231,7 +1231,7 @@
 	},
 /obj/machinery/door/poddoor{
 	id = "cargounload";
-	name = "Supply Dock Unloading Door"
+	name = "SUPPLY DOCK UNLOADING DOOR"
 	},
 /turf/open/floor/plating,
 /area/station/cargo/storage)
@@ -1250,7 +1250,7 @@
 /area/station/cargo/storage)
 "fb" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Departure Lounge Airlock"
+	name = "DEPARTURE LOUNGE AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/turf_decal/delivery,
@@ -1264,7 +1264,7 @@
 	},
 /obj/machinery/door/poddoor{
 	id = "cargoload";
-	name = "Supply Dock Loading Door"
+	name = "SUPPLY DOCK LOADING DOOR"
 	},
 /turf/open/floor/plating,
 /area/station/cargo/storage)
@@ -1363,7 +1363,7 @@
 /area/station/cargo/storage)
 "fs" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Transport Airlock"
+	name = "TRANSPORT AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/structure/fans/tiny,
@@ -1583,7 +1583,7 @@
 /area/station/hallway/secondary/exit/departure_lounge)
 "gc" = (
 /obj/machinery/door/airlock/external/ruin{
-	name = "Auxiliary Airlock"
+	name = "AUXILIARY AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/structure/fans/tiny,
@@ -1947,7 +1947,7 @@
 /area/station/construction)
 "tG" = (
 /obj/docking_port/stationary/random{
-	name = "lavaland";
+	name = "LAVALAND";
 	shuttle_id = "pod_lavaland"
 	},
 /turf/open/space/basic,

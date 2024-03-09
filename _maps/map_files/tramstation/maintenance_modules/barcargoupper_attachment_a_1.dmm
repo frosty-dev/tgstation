@@ -28,7 +28,7 @@
 "o" = (
 /obj/modular_map_connector,
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Theatre Storage Maintenance Hatch"
+	name = "THEATRE STORAGE MAINTENANCE HATCH"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/service/theatre,
 /obj/effect/decal/cleanable/dirt,

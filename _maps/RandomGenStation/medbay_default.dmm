@@ -348,7 +348,7 @@
 "bY" = (
 /obj/machinery/door/airlock/maintenance{
 	dir = 4;
-	name = "Medbay Maintenance"
+	name = "MEDBAY MAINTENANCE"
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/disposalpipe/segment{
@@ -370,7 +370,7 @@
 "bZ" = (
 /obj/machinery/power/apc{
 	areastring = "/area/station/medical/psychology";
-	name = "Psychology APC";
+	name = "PSYCHOLOGY APC";
 	pixel_y = -25
 	},
 /obj/effect/turf_decal/tile/blue{
@@ -501,7 +501,7 @@
 /area/station/medical/virology)
 "cH" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Morgue"
+	name = "MORGUE"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -608,7 +608,7 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = null;
-	name = "Medbay"
+	name = "MEDBAY"
 	},
 /obj/effect/mapping_helpers/airlock/unres,
 /obj/machinery/door/firedoor,
@@ -780,7 +780,7 @@
 	base_state = "left";
 	dir = 8;
 	icon_state = "left";
-	name = "Pharmacy Desk";
+	name = "PHARMACY DESK";
 	req_access = list("pharmacy")
 	},
 /turf/open/floor/iron,
@@ -836,7 +836,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = null;
-	name = "Medbay"
+	name = "MEDBAY"
 	},
 /obj/effect/mapping_helpers/airlock/unres,
 /obj/machinery/door/firedoor,
@@ -1034,7 +1034,7 @@
 /area/station/command/heads_quarters/cmo)
 "gf" = (
 /obj/machinery/door/airlock/atmos{
-	name = "Atmospherics Maintenance"
+	name = "ATMOSPHERICS MAINTENANCE"
 	},
 /obj/effect/mapping_helpers/airlock/abandoned,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/atmos,
@@ -1064,7 +1064,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/security/glass{
-	name = "Security Office"
+	name = "SECURITY OFFICE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1161,7 +1161,7 @@
 "ho" = (
 /obj/machinery/door/airlock/maintenance{
 	dir = 4;
-	name = "Medbay Maintenance"
+	name = "MEDBAY MAINTENANCE"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/medical/general,
@@ -1660,7 +1660,7 @@
 /area/station/medical/medbay/lobby)
 "lO" = (
 /obj/machinery/door/airlock/medical{
-	name = "Medbay"
+	name = "MEDBAY"
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -1776,7 +1776,7 @@
 "mK" = (
 /obj/machinery/door/airlock/maintenance{
 	dir = 4;
-	name = "Chemistry Maintenance"
+	name = "CHEMISTRY MAINTENANCE"
 	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
@@ -1927,7 +1927,7 @@
 	autoclose = 0;
 	frequency = 1449;
 	id_tag = "virology_airlock_interior";
-	name = "Virology Interior Airlock"
+	name = "VIROLOGY INTERIOR AIRLOCK"
 	},
 /obj/effect/turf_decal/tile/green,
 /obj/effect/turf_decal/tile/green{
@@ -2078,7 +2078,7 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/medical{
-	name = "Psychology"
+	name = "PSYCHOLOGY"
 	},
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
@@ -2197,7 +2197,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/line,
 /obj/machinery/power/apc{
 	areastring = "/area/station/medical/medbay";
-	name = "Medbay APC";
+	name = "MEDBAY APC";
 	pixel_y = -25
 	},
 /obj/structure/cable,
@@ -2237,7 +2237,7 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/medical/glass{
-	name = "Chemistry Lab"
+	name = "CHEMISTRY LAB"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -2258,7 +2258,7 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/medical/glass{
-	name = "Medbay Storage"
+	name = "MEDBAY STORAGE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -2688,7 +2688,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/preopen{
 	id = "cmoprivacy";
-	name = "CMO Office"
+	name = "CMO OFFICE"
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -2821,13 +2821,13 @@
 /obj/item/pen,
 /obj/machinery/door/poddoor/preopen{
 	id = "pharmacy_shutters";
-	name = "Pharmacy Shutter"
+	name = "PHARMACY SHUTTER"
 	},
 /obj/machinery/door/window/right/directional/east{
 	base_state = "left";
 	dir = 8;
 	icon_state = "left";
-	name = "Pharmacy Desk";
+	name = "PHARMACY DESK";
 	req_access = list("pharmacy")
 	},
 /turf/open/floor/iron,
@@ -3237,7 +3237,7 @@
 /obj/structure/table,
 /obj/machinery/fax{
 	fax_name = "Medical";
-	name = "Medical Fax Machine";
+	name = "MEDICAL FAX MACHINE";
 	pixel_y = 6
 	},
 /turf/open/floor/iron/white,
@@ -3519,7 +3519,7 @@
 /area/station/medical/break_room)
 "Aa" = (
 /obj/machinery/door/airlock/virology/glass{
-	name = "Isolation B"
+	name = "ISOLATION B"
 	},
 /obj/effect/turf_decal/tile/green{
 	dir = 1
@@ -3618,7 +3618,7 @@
 /obj/machinery/door/poddoor/shutters{
 	dir = 4;
 	id = "chemistry_shutters";
-	name = "Chemistry Shutter"
+	name = "CHEMISTRY SHUTTER"
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/chemistry)
@@ -3681,7 +3681,7 @@
 /obj/machinery/door/window/left/directional/north{
 	dir = 4;
 	icon_state = "right";
-	name = "First-Aid Supplies";
+	name = "FIRST-AID SUPPLIES";
 	red_alert_access = 1;
 	req_access = list("medical")
 	},
@@ -3715,7 +3715,7 @@
 /area/station/medical/chemistry)
 "BY" = (
 /obj/machinery/door/airlock/medical{
-	name = "Surgery"
+	name = "SURGERY"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/medical/surgery,
@@ -3808,7 +3808,7 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/command{
-	name = "Chief Medical Officer";
+	name = "CHIEF MEDICAL OFFICER";
 	req_access = null
 	},
 /obj/structure/cable,
@@ -3820,7 +3820,7 @@
 /area/station/command/heads_quarters/cmo)
 "CH" = (
 /obj/machinery/door/window/left/directional/east{
-	name = "Medbay Delivery"
+	name = "MEDBAY DELIVERY"
 	},
 /obj/machinery/navbeacon{
 	codes_txt = "delivery;dir=4";
@@ -3872,7 +3872,7 @@
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/power/apc{
 	areastring = "/area/station/medical/cryo";
-	name = "Cryo APC";
+	name = "CRYO APC";
 	pixel_y = -25
 	},
 /obj/machinery/limbgrower,
@@ -3978,7 +3978,7 @@
 /obj/machinery/door/poddoor/shutters{
 	dir = 4;
 	id = "chemistry_shutters";
-	name = "Chemistry Shutter"
+	name = "CHEMISTRY SHUTTER"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -4030,7 +4030,7 @@
 	autoclose = 0;
 	frequency = 1449;
 	id_tag = "virology_airlock_exterior";
-	name = "Virology Exterior Airlock"
+	name = "VIROLOGY EXTERIOR AIRLOCK"
 	},
 /obj/effect/turf_decal/tile/green,
 /obj/effect/turf_decal/tile/green{
@@ -4093,7 +4093,7 @@
 /area/station/maintenance/aft)
 "DZ" = (
 /obj/machinery/door/airlock/virology/glass{
-	name = "Isolation A"
+	name = "ISOLATION A"
 	},
 /obj/effect/turf_decal/tile/green{
 	dir = 1
@@ -4148,11 +4148,11 @@
 /obj/item/pen,
 /obj/machinery/door/poddoor/preopen{
 	id = "pharmacy_shutters2";
-	name = "Pharmacy Shutter"
+	name = "PHARMACY SHUTTER"
 	},
 /obj/machinery/door/window/right/directional/east{
 	dir = 2;
-	name = "Pharmacy Desk";
+	name = "PHARMACY DESK";
 	req_access = list("pharmacy")
 	},
 /turf/open/floor/iron,
@@ -4424,7 +4424,7 @@
 "Gm" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/maintenance{
-	name = "Medbay Maintenance"
+	name = "MEDBAY MAINTENANCE"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/plating,
@@ -4737,7 +4737,7 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/medical/glass{
-	name = "Pharmacy"
+	name = "PHARMACY"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -4796,7 +4796,7 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/medical/glass{
-	name = "Medbay Storage"
+	name = "MEDBAY STORAGE"
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -5148,7 +5148,7 @@
 "Mu" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/door/airlock/medical/glass{
-	name = "Coroner's Office"
+	name = "CORONER'S OFFICE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/medical/coroner,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -5315,7 +5315,7 @@
 /obj/item/storage/box/syringes,
 /obj/item/radio/intercom{
 	frequency = 1485;
-	name = "Station Intercom (Medbay)";
+	name = "STATION INTERCOM (MEDBAY)";
 	pixel_x = 30
 	},
 /obj/effect/turf_decal/trimline/blue/filled/line{
@@ -5487,7 +5487,7 @@
 /area/station/medical/medbay/central)
 "Ps" = (
 /obj/machinery/door/airlock/virology/glass{
-	name = "Monkey Pen"
+	name = "MONKEY PEN"
 	},
 /obj/effect/turf_decal/tile/green,
 /obj/effect/turf_decal/tile/green{
@@ -5590,7 +5590,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/preopen{
 	id = "pharmacy_shutters";
-	name = "Pharmacy Shutter"
+	name = "PHARMACY SHUTTER"
 	},
 /turf/open/floor/plating,
 /area/station/medical/pharmacy)
@@ -6033,7 +6033,7 @@
 /area/station/medical/break_room)
 "SM" = (
 /obj/machinery/door/airlock{
-	name = "Private Restroom"
+	name = "PRIVATE RESTROOM"
 	},
 /turf/open/floor/iron/freezer,
 /area/station/medical/break_room)
@@ -6156,7 +6156,7 @@
 	},
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
-	name = "Medbay"
+	name = "MEDBAY"
 	},
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/unres,
@@ -6194,7 +6194,7 @@
 /area/station/medical/medbay/aft)
 "TR" = (
 /obj/machinery/door/airlock/virology{
-	name = "Break Room"
+	name = "BREAK ROOM"
 	},
 /obj/effect/turf_decal/tile/green{
 	dir = 4
@@ -6342,7 +6342,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/medical{
-	name = "Break Room"
+	name = "BREAK ROOM"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
@@ -6401,7 +6401,7 @@
 	},
 /obj/machinery/fax{
 	fax_name = "Chief Medical Officer's Office";
-	name = "Chief Medical Officer's Fax Machine"
+	name = "CHIEF MEDICAL OFFICER'S FAX MACHINE"
 	},
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/cmo)
@@ -6473,7 +6473,7 @@
 	},
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
-	name = "Medbay"
+	name = "MEDBAY"
 	},
 /obj/effect/mapping_helpers/airlock/unres,
 /obj/machinery/door/firedoor,
@@ -6483,7 +6483,7 @@
 "VR" = (
 /obj/effect/landmark/navigate_destination,
 /obj/machinery/door/airlock/hatch{
-	name = "Morgue";
+	name = "MORGUE";
 	req_access = null
 	},
 /obj/machinery/door/firedoor,
@@ -6692,7 +6692,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/preopen{
 	id = "chemistry_shutters2";
-	name = "Chemistry Shutter"
+	name = "CHEMISTRY SHUTTER"
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -6828,7 +6828,7 @@
 /obj/machinery/door/window/left/directional/north{
 	dir = 8;
 	icon_state = "right";
-	name = "First-Aid Supplies";
+	name = "FIRST-AID SUPPLIES";
 	red_alert_access = 1;
 	req_access = list("medical")
 	},

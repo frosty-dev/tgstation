@@ -47,7 +47,7 @@
 	autoclose = 0;
 	frequency = 1449;
 	id_tag = "servicemaintleft_internal";
-	name = "External Access"
+	name = "EXTERNAL ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/machinery/door_buttons/access_button{
@@ -170,7 +170,7 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Tunnel Access Hatch"
+	name = "TUNNEL ACCESS HATCH"
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -232,7 +232,7 @@
 	autoclose = 0;
 	frequency = 1449;
 	id_tag = "servicemaintleft_external";
-	name = "External Access"
+	name = "EXTERNAL ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/machinery/door_buttons/access_button{
@@ -259,7 +259,7 @@
 /area/station/maintenance/port/central)
 "pV" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Maintenance Hatch"
+	name = "MAINTENANCE HATCH"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /obj/machinery/duct,
@@ -429,7 +429,7 @@
 /area/station/maintenance/port/central)
 "BG" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Water Access Maintenance Hatch"
+	name = "WATER ACCESS MAINTENANCE HATCH"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/service/janitor,
 /obj/effect/decal/cleanable/dirt,
@@ -514,14 +514,14 @@
 /obj/machinery/door_buttons/access_button{
 	idDoor = "servicemaintright_internal";
 	idSelf = "servicemaintright_airlock_control";
-	name = "External Access Button";
+	name = "EXTERNAL ACCESS BUTTON";
 	pixel_x = 24
 	},
 /obj/machinery/door/airlock/external{
 	autoclose = 0;
 	frequency = 1449;
 	id_tag = "servicemaintright_internal";
-	name = "External Access"
+	name = "EXTERNAL ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/locked,
@@ -588,7 +588,7 @@
 	autoclose = 0;
 	frequency = 1449;
 	id_tag = "servicemaintright_external";
-	name = "External Access"
+	name = "EXTERNAL ACCESS"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/catwalk_floor,
@@ -668,7 +668,7 @@
 	idExterior = "servicemaintright_external";
 	idInterior = "servicemaintright_internal";
 	idSelf = "servicemaintrightairlock_control";
-	name = "External Access Console";
+	name = "EXTERNAL ACCESS CONSOLE";
 	pixel_y = 24
 	},
 /turf/open/floor/catwalk_floor,

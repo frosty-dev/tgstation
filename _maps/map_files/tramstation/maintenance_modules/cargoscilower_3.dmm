@@ -74,7 +74,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/research/glass{
-	name = "Aseembly Lab"
+	name = "ASEEMBLY LAB"
 	},
 /obj/structure/barricade/wooden/crude,
 /obj/effect/decal/cleanable/dirt,
@@ -169,7 +169,7 @@
 "qq" = (
 /obj/modular_map_root/tramstation{
 	key = "cargoscilower_attachment_a";
-	name = "cargoscilower_attachment_a"
+	name = "CARGOSCILOWER_ATTACHMENT_A"
 	},
 /turf/open/floor/iron/smooth,
 /area/station/maintenance/starboard/central)
@@ -235,7 +235,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters{
 	id = "assemblymeme";
-	name = "Assembly Line Shutters"
+	name = "ASSEMBLY LINE SHUTTERS"
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/central)
@@ -459,7 +459,7 @@
 "NR" = (
 /obj/machinery/conveyor_switch/oneway{
 	id = "oldassemblyrobo";
-	name = "Unloading Conveyor";
+	name = "UNLOADING CONVEYOR";
 	pixel_x = -10
 	},
 /obj/effect/turf_decal/trimline/purple/filled/line{

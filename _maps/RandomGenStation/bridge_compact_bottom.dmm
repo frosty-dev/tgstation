@@ -255,7 +255,7 @@
 /obj/structure/table/wood,
 /obj/machinery/fax{
 	fax_name = "Captain's Office";
-	name = "Captain's Fax Machine"
+	name = "CAPTAIN'S FAX MACHINE"
 	},
 /turf/open/floor/iron/grimy,
 /area/station/command/heads_quarters/captain)
@@ -330,7 +330,7 @@
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge blast";
-	name = "bridge blast door"
+	name = "BRIDGE BLAST DOOR"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 4
@@ -343,7 +343,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/command/glass{
-	name = "Bridge"
+	name = "BRIDGE"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/command/general,
 /turf/open/floor/iron/dark/smooth_large,
@@ -420,7 +420,7 @@
 /obj/item/radio/intercom{
 	dir = 8;
 	freerange = 1;
-	name = "Station Intercom (Command)"
+	name = "STATION INTERCOM (COMMAND)"
 	},
 /turf/open/floor/carpet,
 /area/station/command/meeting_room)
@@ -478,7 +478,7 @@
 "kT" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge blast";
-	name = "bridge blast door"
+	name = "BRIDGE BLAST DOOR"
 	},
 /obj/structure/cable,
 /obj/effect/spawner/structure/window/reinforced,
@@ -500,7 +500,7 @@
 	base_state = "right";
 	dir = 8;
 	icon_state = "right";
-	name = "Captain's Desk Door";
+	name = "CAPTAIN'S DESK DOOR";
 	req_access = list("captain")
 	},
 /turf/open/floor/carpet,
@@ -550,7 +550,7 @@
 /area/station/command/heads_quarters/captain)
 "my" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Captain's Office Maintenance"
+	name = "CAPTAIN'S OFFICE MAINTENANCE"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/command/captain,
@@ -579,7 +579,7 @@
 "mZ" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge blast";
-	name = "bridge blast door"
+	name = "BRIDGE BLAST DOOR"
 	},
 /obj/machinery/door/airlock/external,
 /obj/structure/fans/tiny,
@@ -606,7 +606,7 @@
 /area/station/command/meeting_room)
 "nM" = (
 /obj/machinery/door/airlock/silver{
-	name = "Bathroom"
+	name = "BATHROOM"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -827,7 +827,7 @@
 /obj/item/ai_module/supplied/quarantine,
 /obj/machinery/door/window/brigdoor/left/directional/south{
 	dir = 4;
-	name = "High-Risk Modules";
+	name = "HIGH-RISK MODULES";
 	req_access = list("captain")
 	},
 /turf/open/floor/iron/dark,
@@ -932,7 +932,7 @@
 /obj/item/ai_module/supplied/freeform,
 /obj/machinery/door/window/brigdoor/left/directional/south{
 	dir = 8;
-	name = "High-Risk Modules";
+	name = "HIGH-RISK MODULES";
 	req_access = list("captain")
 	},
 /turf/open/floor/iron/dark,
@@ -1134,7 +1134,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/preopen{
 	id = "heads_meeting";
-	name = "privacy shutters"
+	name = "PRIVACY SHUTTERS"
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -1285,7 +1285,7 @@
 /obj/effect/turf_decal/delivery,
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge blast";
-	name = "bridge blast door"
+	name = "BRIDGE BLAST DOOR"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
@@ -1352,7 +1352,7 @@
 /area/station/hallway/primary/central/low_level_centre)
 "Ff" = (
 /obj/machinery/door/airlock/command/glass{
-	name = "Bridge"
+	name = "BRIDGE"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -1360,7 +1360,7 @@
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge blast";
-	name = "bridge blast door"
+	name = "BRIDGE BLAST DOOR"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 4
@@ -1384,7 +1384,7 @@
 "Fn" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge blast";
-	name = "bridge blast door"
+	name = "BRIDGE BLAST DOOR"
 	},
 /obj/effect/turf_decal/delivery,
 /obj/structure/cable,
@@ -1434,7 +1434,7 @@
 "FF" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge blast";
-	name = "bridge blast door"
+	name = "BRIDGE BLAST DOOR"
 	},
 /obj/machinery/door/airlock/external,
 /obj/structure/fans/tiny,
@@ -1502,7 +1502,7 @@
 "HK" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge blast";
-	name = "bridge blast door"
+	name = "BRIDGE BLAST DOOR"
 	},
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/iron/dark/smooth_large,
@@ -1513,7 +1513,7 @@
 /area/station/command/meeting_room)
 "HU" = (
 /obj/machinery/door/airlock/highsecurity{
-	name = "AI Upload Access";
+	name = "AI UPLOAD ACCESS";
 	security_level = 6
 	},
 /obj/effect/turf_decal/delivery,
@@ -1529,7 +1529,7 @@
 /area/station/ai_monitored/turret_protected/ai_upload)
 "HV" = (
 /obj/machinery/door/airlock/command{
-	name = "Captain's Office"
+	name = "CAPTAIN'S OFFICE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
@@ -1560,7 +1560,7 @@
 /area/station/command/heads_quarters/captain)
 "Ih" = (
 /obj/machinery/door/airlock/command{
-	name = "Captain's Quarters"
+	name = "CAPTAIN'S QUARTERS"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
@@ -1586,7 +1586,7 @@
 /obj/effect/turf_decal/delivery,
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge blast";
-	name = "bridge blast door"
+	name = "BRIDGE BLAST DOOR"
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
@@ -1630,7 +1630,7 @@
 	},
 /obj/structure/curtain,
 /obj/machinery/door/window/brigdoor/left/directional/south{
-	name = "Shower"
+	name = "SHOWER"
 	},
 /obj/item/soap/deluxe,
 /turf/open/floor/iron/white,
@@ -1652,7 +1652,7 @@
 /area/station/command)
 "Ld" = (
 /obj/machinery/door/airlock/command{
-	name = "Captain's Office"
+	name = "CAPTAIN'S OFFICE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -1871,7 +1871,7 @@
 /obj/machinery/atmospherics/pipe/multiz/supply/visible/layer4{
 	color = "#0000ff";
 	dir = 1;
-	name = "Supply multi deck pipe adapter"
+	name = "SUPPLY MULTI DECK PIPE ADAPTER"
 	},
 /obj/structure/lattice/catwalk,
 /obj/structure/cable,
@@ -1955,7 +1955,7 @@
 "RX" = (
 /obj/machinery/button/door{
 	id = "heads_meeting";
-	name = "Security Shutters";
+	name = "SECURITY SHUTTERS";
 	pixel_y = 24
 	},
 /turf/open/floor/wood,
@@ -2214,7 +2214,7 @@
 /area/space)
 "YZ" = (
 /obj/machinery/door/airlock/command{
-	name = "Captain's Office"
+	name = "CAPTAIN'S OFFICE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 4

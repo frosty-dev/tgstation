@@ -53,7 +53,7 @@
 	desc = "When it's time to sleep, the lights will go out. Remember - no one in space can hear you scream.";
 	id = "mafia";
 	max_integrity = 99999;
-	name = "Station Night Shutters"
+	name = "STATION NIGHT SHUTTERS"
 	},
 /turf/closed/indestructible/fakeglass,
 /area/centcom/mafia)
@@ -81,7 +81,7 @@
 	desc = "When it's time to sleep, the lights will go out. Remember - no one in space can hear you scream.";
 	id = "mafia";
 	max_integrity = 99999;
-	name = "Station Night Shutters"
+	name = "STATION NIGHT SHUTTERS"
 	},
 /obj/structure/window/reinforced/plasma/plastitanium,
 /turf/open/floor/plating/abductor2,

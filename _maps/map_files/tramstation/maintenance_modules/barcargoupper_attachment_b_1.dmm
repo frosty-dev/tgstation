@@ -20,7 +20,7 @@
 /obj/modular_map_connector,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Cargo Storage Maintenance Hatch"
+	name = "CARGO STORAGE MAINTENANCE HATCH"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /turf/open/floor/iron/smooth,

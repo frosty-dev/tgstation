@@ -22,7 +22,7 @@
 /area/station/maintenance/port/aft)
 "h" = (
 /obj/structure/barricade/wooden{
-	name = "wooden barricade (CLOSED)"
+	name = "WOODEN BARRICADE (CLOSED)"
 	},
 /obj/machinery/door/airlock/maintenance{
 	dir = 8
@@ -34,7 +34,7 @@
 "k" = (
 /obj/machinery/door/airlock/maintenance{
 	dir = 4;
-	name = "Incinerator Access"
+	name = "INCINERATOR ACCESS"
 	},
 /obj/effect/mapping_helpers/airlock/abandoned,
 /obj/structure/barricade/wooden{
@@ -53,7 +53,7 @@
 /area/station/maintenance/port/aft)
 "w" = (
 /obj/structure/barricade/wooden{
-	name = "wooden barricade (CLOSED)"
+	name = "WOODEN BARRICADE (CLOSED)"
 	},
 /obj/machinery/door/airlock/maintenance{
 	dir = 4

@@ -684,7 +684,7 @@
 	},
 /obj/machinery/door/poddoor/preopen{
 	elevator_mode = 1;
-	name = "Industrial Lift";
+	name = "INDUSTRIAL LIFT";
 	transport_linked_id = "test_vator"
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -1170,7 +1170,7 @@
 	},
 /obj/machinery/door/poddoor{
 	elevator_mode = 1;
-	name = "Industrial Lift";
+	name = "INDUSTRIAL LIFT";
 	transport_linked_id = "test_vator"
 	},
 /turf/open/floor/iron/edge{
@@ -1358,7 +1358,7 @@
 /area/station/engineering/main)
 "yR" = (
 /obj/machinery/elevator_control_panel/directional/east{
-	preset_destination_names = list("2"="Bottom Floor","3"="Middle Floor","4"="Top Floor");
+	preset_destination_names = list("2"="BOTTOM FLOOR","3"="MIDDLE FLOOR","4"="TOP FLOOR");
 	linked_elevator_id = "test_vator"
 	},
 /obj/structure/transport/linear/public,
@@ -1887,7 +1887,7 @@
 "Vo" = (
 /obj/machinery/door/poddoor/preopen{
 	elevator_mode = 1;
-	name = "Industrial Lift";
+	name = "INDUSTRIAL LIFT";
 	transport_linked_id = "test_vator"
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -1935,7 +1935,7 @@
 	},
 /obj/machinery/door/poddoor{
 	elevator_mode = 1;
-	name = "Industrial Lift";
+	name = "INDUSTRIAL LIFT";
 	transport_linked_id = "test_vator"
 	},
 /obj/effect/turf_decal/stripes/line{

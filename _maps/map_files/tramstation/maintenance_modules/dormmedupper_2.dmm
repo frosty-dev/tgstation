@@ -254,7 +254,7 @@
 /area/station/maintenance/department/crew_quarters/dorms)
 "DH" = (
 /obj/machinery/door/airlock/external{
-	name = "External Access"
+	name = "EXTERNAL ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -299,7 +299,7 @@
 /area/station/maintenance/department/crew_quarters/dorms)
 "HQ" = (
 /obj/machinery/door/airlock/external{
-	name = "External Access"
+	name = "EXTERNAL ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{

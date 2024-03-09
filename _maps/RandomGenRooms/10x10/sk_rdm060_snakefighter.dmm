@@ -197,7 +197,7 @@
 /area/template_noop)
 "O" = (
 /obj/machinery/door/airlock/research/glass{
-	name = "Research Pit"
+	name = "RESEARCH PIT"
 	},
 /turf/open/floor/plating,
 /area/template_noop)

@@ -72,7 +72,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Maintenance Hatch"
+	name = "MAINTENANCE HATCH"
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/greater)
@@ -118,7 +118,7 @@
 /area/station/maintenance/starboard/greater)
 "F" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Da Clubbe"
+	name = "DA CLUBBE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /turf/open/floor/iron/smooth,
@@ -145,7 +145,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Maintenance Hatch"
+	name = "MAINTENANCE HATCH"
 	},
 /turf/open/floor/iron/smooth,
 /area/station/maintenance/starboard/greater)

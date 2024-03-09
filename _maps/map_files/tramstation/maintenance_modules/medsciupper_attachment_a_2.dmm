@@ -63,12 +63,12 @@
 /obj/structure/cable,
 /obj/effect/turf_decal/sand/plating,
 /obj/machinery/door/window/left/directional/north{
-	name = "Containment Pen";
+	name = "CONTAINMENT PEN";
 	req_access = list("xenobiology")
 	},
 /obj/machinery/door/window/left/directional/north{
 	dir = 2;
-	name = "Containment Pen";
+	name = "CONTAINMENT PEN";
 	req_access = list("xenobiology")
 	},
 /turf/open/floor/plating,
@@ -76,7 +76,7 @@
 "L" = (
 /obj/modular_map_connector,
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Creature Containment Maintenance Hatch"
+	name = "CREATURE CONTAINMENT MAINTENANCE HATCH"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/science/xenobio,
 /obj/structure/cable,

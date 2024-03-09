@@ -109,7 +109,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/shutters/radiation/preopen{
 	id = "engsm";
-	name = "Radiation Chamber Shutters"
+	name = "RADIATION CHAMBER SHUTTERS"
 	},
 /turf/open/floor/plating,
 /area/station/engineering/main)
@@ -134,7 +134,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/shutters/radiation/preopen{
 	id = "engsm";
-	name = "Radiation Chamber Shutters"
+	name = "RADIATION CHAMBER SHUTTERS"
 	},
 /turf/open/floor/plating,
 /area/station/engineering/main)
@@ -188,7 +188,7 @@
 /area/station/engineering/main)
 "lA" = (
 /obj/machinery/door/airlock/external{
-	name = "Engineering External Access"
+	name = "ENGINEERING EXTERNAL ACCESS"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/effect/mapping_helpers/mail_sorting/engineering/general,
@@ -268,7 +268,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/shutters/radiation/preopen{
 	id = "engsm";
-	name = "Radiation Chamber Shutters"
+	name = "RADIATION CHAMBER SHUTTERS"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
@@ -315,7 +315,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/shutters/radiation/preopen{
 	id = "engsm";
-	name = "Radiation Chamber Shutters"
+	name = "RADIATION CHAMBER SHUTTERS"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
@@ -368,7 +368,7 @@
 "yU" = (
 /obj/machinery/door/poddoor/shutters/radiation/preopen{
 	id = "engsm";
-	name = "Radiation Chamber Shutters"
+	name = "RADIATION CHAMBER SHUTTERS"
 	},
 /turf/open/floor/plating,
 /area/station/engineering/main)
@@ -421,7 +421,7 @@
 /area/station/engineering/main)
 "DM" = (
 /obj/machinery/door/airlock/external{
-	name = "Engineering External Access"
+	name = "ENGINEERING EXTERNAL ACCESS"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
@@ -480,7 +480,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /obj/machinery/door/airlock/engineering{
-	name = "Engine Room"
+	name = "ENGINE ROOM"
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
@@ -513,7 +513,7 @@
 "Jb" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/engineering{
-	name = "Engine Room"
+	name = "ENGINE ROOM"
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
@@ -770,7 +770,7 @@
 "XY" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/airlock/engineering{
-	name = "Engine Room"
+	name = "ENGINE ROOM"
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/firedoor/border_only{

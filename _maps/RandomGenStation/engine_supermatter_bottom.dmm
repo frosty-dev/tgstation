@@ -535,7 +535,7 @@
 	},
 /obj/machinery/door/poddoor/shutters/radiation/preopen{
 	id = "engsm";
-	name = "Radiation Chamber Shutters"
+	name = "RADIATION CHAMBER SHUTTERS"
 	},
 /turf/open/floor/plating,
 /area/station/engineering/supermatter)
@@ -599,7 +599,7 @@
 /obj/structure/cable,
 /obj/machinery/door/poddoor/shutters/radiation/preopen{
 	id = "engsm";
-	name = "Radiation Chamber Shutters"
+	name = "RADIATION CHAMBER SHUTTERS"
 	},
 /turf/open/floor/plating,
 /area/station/engineering/supermatter)
@@ -620,7 +620,7 @@
 /obj/structure/cable,
 /obj/machinery/door/poddoor/shutters/radiation/preopen{
 	id = "engsm";
-	name = "Radiation Chamber Shutters"
+	name = "RADIATION CHAMBER SHUTTERS"
 	},
 /turf/open/floor/plating,
 /area/station/engineering/supermatter)
@@ -643,7 +643,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/engineering/glass/critical{
 	heat_proof = 1;
-	name = "Supermatter Chamber"
+	name = "SUPERMATTER CHAMBER"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/general,
@@ -655,7 +655,7 @@
 	},
 /obj/machinery/door/poddoor/shutters/radiation/preopen{
 	id = "engsm";
-	name = "Radiation Chamber Shutters"
+	name = "RADIATION CHAMBER SHUTTERS"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -836,7 +836,7 @@
 "eF" = (
 /obj/machinery/door/airlock/engineering/glass/critical{
 	heat_proof = 1;
-	name = "Supermatter Chamber"
+	name = "SUPERMATTER CHAMBER"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
@@ -1075,7 +1075,7 @@
 	},
 /obj/machinery/door/poddoor/shutters/radiation/preopen{
 	id = "engsm";
-	name = "Radiation Chamber Shutters"
+	name = "RADIATION CHAMBER SHUTTERS"
 	},
 /turf/open/floor/plating,
 /area/station/engineering/supermatter)
@@ -1127,7 +1127,7 @@
 /area/station/engineering/supermatter/room)
 "lI" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Engineering Maintenance"
+	name = "ENGINEERING MAINTENANCE"
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
@@ -1248,7 +1248,7 @@
 /area/station/engineering/supermatter/room)
 "qQ" = (
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Laser Room"
+	name = "LASER ROOM"
 	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor/border_only{
@@ -1416,7 +1416,7 @@
 	},
 /obj/machinery/door/poddoor/shutters/radiation/preopen{
 	id = "engsm";
-	name = "Radiation Chamber Shutters"
+	name = "RADIATION CHAMBER SHUTTERS"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,

@@ -40,7 +40,7 @@
 "h" = (
 /obj/machinery/door/airlock/security{
 	id_tag = "confine1";
-	name = "Confinement Room 1"
+	name = "CONFINEMENT ROOM 1"
 	},
 /turf/open/floor/iron/dark,
 /area/template_noop)
@@ -85,7 +85,7 @@
 "o" = (
 /obj/machinery/door/airlock/security{
 	id_tag = "confine3";
-	name = "Confinement Room 3"
+	name = "CONFINEMENT ROOM 3"
 	},
 /turf/open/floor/iron/dark,
 /area/template_noop)
@@ -232,14 +232,14 @@
 "G" = (
 /obj/machinery/door/airlock/security{
 	id_tag = "confine2";
-	name = "Confinement Room 2"
+	name = "CONFINEMENT ROOM 2"
 	},
 /turf/open/floor/iron/dark,
 /area/template_noop)
 "H" = (
 /obj/machinery/door/airlock/security{
 	id_tag = "confine4";
-	name = "Confinement Room 4"
+	name = "CONFINEMENT ROOM 4"
 	},
 /turf/open/floor/plating,
 /area/template_noop)

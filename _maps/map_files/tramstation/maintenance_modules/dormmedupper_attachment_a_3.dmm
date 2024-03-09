@@ -109,7 +109,7 @@
 /area/station/maintenance/department/crew_quarters/dorms)
 "X" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Public Services Storage Maintenance Hatch"
+	name = "PUBLIC SERVICES STORAGE MAINTENANCE HATCH"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/modular_map_connector,

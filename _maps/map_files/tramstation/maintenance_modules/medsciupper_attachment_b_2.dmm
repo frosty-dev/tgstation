@@ -35,7 +35,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/window/left/directional/east{
 	req_access = list("medical");
-	name = "Cold Storage"
+	name = "COLD STORAGE"
 	},
 /obj/effect/turf_decal/tile/blue/opposingcorners,
 /turf/open/floor/iron/freezer,
@@ -46,7 +46,7 @@
 "x" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Freezer Maintenance"
+	name = "FREEZER MAINTENANCE"
 	},
 /obj/modular_map_connector,
 /obj/effect/mapping_helpers/airlock/access/all/medical/general,

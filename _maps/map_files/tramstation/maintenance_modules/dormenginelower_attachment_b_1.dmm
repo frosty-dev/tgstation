@@ -20,7 +20,7 @@
 /obj/effect/turf_decal/delivery,
 /obj/machinery/door/poddoor{
 	id = "securedeeznuts";
-	name = "Secure Storage"
+	name = "SECURE STORAGE"
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/central/lesser)
@@ -37,7 +37,7 @@
 /obj/effect/turf_decal/delivery,
 /obj/machinery/door/poddoor{
 	id = "securedeeznuts";
-	name = "Secure Storage"
+	name = "SECURE STORAGE"
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/central/lesser)
@@ -202,7 +202,7 @@
 /obj/modular_map_connector,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Engineering Maintenance Hatch"
+	name = "ENGINEERING MAINTENANCE HATCH"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/engineering/maintenance/departmental,
 /obj/effect/turf_decal/trimline/yellow/filled/line{

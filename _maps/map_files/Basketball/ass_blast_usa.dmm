@@ -473,7 +473,7 @@
 "PW" = (
 /obj/machinery/door/poddoor/shutters/window{
 	id = "armory";
-	name = "Freedom Shutters"
+	name = "FREEDOM SHUTTERS"
 	},
 /turf/open/floor/iron/dark,
 /area/centcom/basketball)

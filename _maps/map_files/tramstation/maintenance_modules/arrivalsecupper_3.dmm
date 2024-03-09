@@ -78,7 +78,7 @@
 "K" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Security Maintenance Hatch"
+	name = "SECURITY MAINTENANCE HATCH"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/security/maintenance,
 /turf/open/floor/iron/smooth,

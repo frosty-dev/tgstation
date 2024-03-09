@@ -19,7 +19,7 @@
 "dF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Water Access Maintenance Hatch"
+	name = "WATER ACCESS MAINTENANCE HATCH"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/service/janitor,
 /obj/machinery/duct,
@@ -52,7 +52,7 @@
 /area/station/maintenance/department/security)
 "fK" = (
 /obj/machinery/door/airlock/external{
-	name = "External Access"
+	name = "EXTERNAL ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -77,7 +77,7 @@
 /area/station/maintenance/department/security)
 "iV" = (
 /obj/machinery/door/airlock/external{
-	name = "External Access"
+	name = "EXTERNAL ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -308,7 +308,7 @@
 "Lj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Security Maintenance Hatch"
+	name = "SECURITY MAINTENANCE HATCH"
 	},
 /obj/effect/mapping_helpers/airlock/unres{
 	dir = 4

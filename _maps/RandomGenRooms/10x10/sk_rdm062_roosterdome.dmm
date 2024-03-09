@@ -39,7 +39,7 @@
 	base_state = "left";
 	dir = 8;
 	icon_state = "left";
-	name = "Arena"
+	name = "ARENA"
 	},
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/window/reinforced/spawner/directional/east,
@@ -62,7 +62,7 @@
 /obj/machinery/door/window/right/directional/east{
 	base_state = "left";
 	icon_state = "left";
-	name = "Arena"
+	name = "ARENA"
 	},
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/structure/window/reinforced/spawner/directional/west,
@@ -172,7 +172,7 @@
 	base_state = "left";
 	dir = 8;
 	icon_state = "left";
-	name = "Arena"
+	name = "ARENA"
 	},
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/chair/stool,
@@ -277,7 +277,7 @@
 /obj/machinery/door/window/right/directional/east{
 	base_state = "left";
 	icon_state = "left";
-	name = "Arena"
+	name = "ARENA"
 	},
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/structure/chair/stool,

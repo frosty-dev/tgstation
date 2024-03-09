@@ -143,7 +143,7 @@
 /area/station/maintenance/department/crew_quarters/dorms)
 "uz" = (
 /obj/machinery/door/airlock/external{
-	name = "External Access"
+	name = "EXTERNAL ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -189,7 +189,7 @@
 /area/station/maintenance/department/crew_quarters/dorms)
 "wq" = (
 /obj/machinery/door/airlock/external{
-	name = "External Access"
+	name = "EXTERNAL ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -408,7 +408,7 @@
 /area/station/commons/fitness/recreation)
 "WW" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "External Access"
+	name = "EXTERNAL ACCESS"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron,

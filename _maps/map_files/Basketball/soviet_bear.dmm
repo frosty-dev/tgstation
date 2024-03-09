@@ -162,7 +162,7 @@
 /obj/machinery/door/window/left/directional/west{
 	base_state = "right";
 	icon_state = "right";
-	name = "Shooting Range";
+	name = "SHOOTING RANGE";
 	dir = 4
 	},
 /obj/item/gun/ballistic/rifle/boltaction{
@@ -250,7 +250,7 @@
 /obj/machinery/door/window/left/directional/west{
 	base_state = "right";
 	icon_state = "right";
-	name = "Shooting Range"
+	name = "SHOOTING RANGE"
 	},
 /turf/open/floor/iron/dark,
 /area/centcom/basketball)
@@ -525,7 +525,7 @@
 /obj/machinery/door/window/left/directional/west{
 	base_state = "right";
 	icon_state = "right";
-	name = "Shooting Range"
+	name = "SHOOTING RANGE"
 	},
 /turf/open/floor/iron/dark,
 /area/centcom/basketball)
@@ -694,7 +694,7 @@
 /obj/machinery/door/window/left/directional/west{
 	base_state = "right";
 	icon_state = "right";
-	name = "Shooting Range";
+	name = "SHOOTING RANGE";
 	dir = 4
 	},
 /obj/item/gun/ballistic/rifle/boltaction{

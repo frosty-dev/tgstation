@@ -151,7 +151,7 @@
 /area/station/maintenance/department/science)
 "vK" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Science Maintenance Hatch"
+	name = "SCIENCE MAINTENANCE HATCH"
 	},
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -261,7 +261,7 @@
 "IL" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/machinery/door/airlock/external{
-	name = "External Access"
+	name = "EXTERNAL ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -323,7 +323,7 @@
 /area/station/maintenance/department/medical)
 "QL" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Medical Maintenance Access"
+	name = "MEDICAL MAINTENANCE ACCESS"
 	},
 /obj/effect/mapping_helpers/airlock/unres,
 /obj/effect/mapping_helpers/airlock/access/any/medical/morgue,
@@ -337,7 +337,7 @@
 /area/station/maintenance/department/science)
 "Rp" = (
 /obj/machinery/door/airlock/external{
-	name = "External Access"
+	name = "EXTERNAL ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{

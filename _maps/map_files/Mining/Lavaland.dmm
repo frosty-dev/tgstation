@@ -38,7 +38,7 @@
 /area/lavaland/surface/outdoors)
 "ag" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -101,7 +101,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
 /obj/machinery/door/airlock/external{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/unres,
@@ -238,7 +238,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/external{
-	name = "Lavaland Shuttle Airlock"
+	name = "LAVALAND SHUTTLE AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/iron/textured_large,
@@ -280,7 +280,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
 /obj/machinery/door/airlock/external{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/access/any/engineering/maintenance/departmental,
@@ -294,7 +294,7 @@
 /area/mine/maintenance/public/south)
 "ci" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Labor Camp External Airlock"
+	name = "LABOR CAMP EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -332,7 +332,7 @@
 /area/mine/laborcamp)
 "cm" = (
 /obj/machinery/door/airlock/external{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/structure/disposalpipe/segment,
@@ -370,7 +370,7 @@
 /area/mine/medical)
 "cC" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -395,7 +395,7 @@
 /area/mine/lounge)
 "cJ" = (
 /obj/machinery/door/airlock/mining/glass{
-	name = "Processing Area"
+	name = "PROCESSING AREA"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -462,7 +462,7 @@
 "cV" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/external{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -532,7 +532,7 @@
 /area/lavaland/surface/outdoors)
 "dr" = (
 /obj/machinery/door/airlock{
-	name = "Labor Camp Library"
+	name = "LABOR CAMP LIBRARY"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -555,7 +555,7 @@
 /area/lavaland/surface/outdoors)
 "dx" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -711,7 +711,7 @@
 /area/mine/maintenance/service)
 "eX" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Labor Camp External Airlock"
+	name = "LABOR CAMP EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -757,7 +757,7 @@
 "fk" = (
 /obj/machinery/door/airlock/public/glass{
 	id_tag = "cellblock1";
-	name = "Labor Camp Operations"
+	name = "LABOR CAMP OPERATIONS"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1048,7 +1048,7 @@
 /area/mine/living_quarters)
 "gK" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Labor Camp External Airlock"
+	name = "LABOR CAMP EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -1107,7 +1107,7 @@
 /area/mine/laborcamp/security)
 "hd" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Labor Camp Shuttle Security Airlock"
+	name = "LABOR CAMP SHUTTLE SECURITY AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/security/brig,
 /obj/effect/decal/cleanable/dirt,
@@ -1291,7 +1291,7 @@
 "hY" = (
 /obj/machinery/door/airlock/public/glass{
 	id_tag = "gulag1";
-	name = "Cell 1"
+	name = "CELL 1"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1299,7 +1299,7 @@
 /area/mine/laborcamp/quarters)
 "ia" = (
 /obj/machinery/door/airlock/medical/glass{
-	name = "Infirmary"
+	name = "INFIRMARY"
 	},
 /obj/effect/turf_decal/tile/blue/fourcorners,
 /turf/open/floor/iron/white/side{
@@ -1327,7 +1327,7 @@
 /area/lavaland/surface/outdoors)
 "ie" = (
 /obj/machinery/door/airlock/hydroponics{
-	name = "Xenobotany"
+	name = "XENOBOTANY"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/disposalpipe/segment,
@@ -1488,7 +1488,7 @@
 /area/mine/laborcamp/security)
 "jj" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Mining Station Maintenance"
+	name = "MINING STATION MAINTENANCE"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/engineering/maintenance,
 /turf/open/floor/plating,
@@ -1502,7 +1502,7 @@
 /area/mine/laborcamp/production)
 "jm" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Showers"
+	name = "SHOWERS"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -1730,7 +1730,7 @@
 /area/lavaland/surface/outdoors)
 "kI" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -1765,7 +1765,7 @@
 /area/mine/lounge)
 "kL" = (
 /obj/machinery/door/airlock/glass{
-	name = "Canteen"
+	name = "CANTEEN"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -1969,7 +1969,7 @@
 /area/lavaland/surface/outdoors)
 "lJ" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Labor Camp Storage"
+	name = "LABOR CAMP STORAGE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1984,14 +1984,14 @@
 /obj/effect/mapping_helpers/airlock/unres,
 /obj/effect/mapping_helpers/airlock/access/any/supply/mining_station,
 /obj/machinery/door/airlock/external/glass{
-	name = "Mining Shuttle Airlock"
+	name = "MINING SHUTTLE AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/iron/dark/smooth_large,
 /area/mine/production)
 "lN" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Mining Station Maintenance"
+	name = "MINING STATION MAINTENANCE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -2184,7 +2184,7 @@
 /area/lavaland/surface/outdoors)
 "my" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Mining Station Maintenance"
+	name = "MINING STATION MAINTENANCE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -2535,7 +2535,7 @@
 /area/mine/maintenance/service)
 "nQ" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Labor Camp External Airlock"
+	name = "LABOR CAMP EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -2646,7 +2646,7 @@
 /area/mine/maintenance/public/south)
 "ov" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -2696,7 +2696,7 @@
 /area/mine/laborcamp)
 "oS" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -2801,7 +2801,7 @@
 /area/mine/laborcamp/production)
 "px" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -2958,7 +2958,7 @@
 /area/mine/laborcamp/quarters)
 "qo" = (
 /obj/machinery/door/airlock/glass{
-	name = "Equipment Storage"
+	name = "EQUIPMENT STORAGE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -2971,7 +2971,7 @@
 /area/mine/storage/public)
 "qp" = (
 /obj/machinery/door/airlock/glass{
-	name = "Canteen"
+	name = "CANTEEN"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -3001,7 +3001,7 @@
 /area/mine/laborcamp/quarters)
 "qx" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Labor Camp External Airlock"
+	name = "LABOR CAMP EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -3028,7 +3028,7 @@
 "qH" = (
 /obj/machinery/door/airlock{
 	id_tag = "miningbathroomprivate";
-	name = "Restroom"
+	name = "RESTROOM"
 	},
 /obj/effect/turf_decal/siding/white{
 	dir = 8
@@ -3344,7 +3344,7 @@
 "tg" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/airlock/maintenance{
-	name = "Mining Station Maintenance"
+	name = "MINING STATION MAINTENANCE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/atmos,
@@ -3491,7 +3491,7 @@
 /area/lavaland/surface/outdoors)
 "uk" = (
 /obj/machinery/door/airlock/glass{
-	name = "Games Room"
+	name = "GAMES ROOM"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -3530,7 +3530,7 @@
 "ux" = (
 /obj/machinery/door/airlock{
 	id_tag = "miningdorm1";
-	name = "Room 1"
+	name = "ROOM 1"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -3603,7 +3603,7 @@
 /area/mine/medical)
 "vc" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Mining Station Maintenance"
+	name = "MINING STATION MAINTENANCE"
 	},
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/general,
@@ -3639,7 +3639,7 @@
 "vh" = (
 /obj/machinery/door/airlock/public/glass{
 	id_tag = "cellblock1";
-	name = "Labor Camp Cellblock"
+	name = "LABOR CAMP CELLBLOCK"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -3721,7 +3721,7 @@
 /area/mine/laborcamp/security/maintenance)
 "vF" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Mining Station Maintenance"
+	name = "MINING STATION MAINTENANCE"
 	},
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/access/all/supply/mining_station,
@@ -3773,7 +3773,7 @@
 "vQ" = (
 /obj/machinery/door/airlock{
 	id_tag = "miningdorm2";
-	name = "Room 2"
+	name = "ROOM 2"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -4009,7 +4009,7 @@
 /area/mine/maintenance/service/comms)
 "xF" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -4035,7 +4035,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/airlock/maintenance{
-	name = "Mining Station Maintenance"
+	name = "MINING STATION MAINTENANCE"
 	},
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/tcoms,
@@ -4051,7 +4051,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/external{
-	name = "Lavaland Shuttle Airlock"
+	name = "LAVALAND SHUTTLE AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/iron/textured_large,
@@ -4129,7 +4129,7 @@
 /area/mine/lounge)
 "yh" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Labor Camp External Airlock"
+	name = "LABOR CAMP EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -4143,7 +4143,7 @@
 /area/mine/hydroponics)
 "yl" = (
 /obj/machinery/door/airlock/glass{
-	name = "Arrival Lounge"
+	name = "ARRIVAL LOUNGE"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -4184,7 +4184,7 @@
 /area/mine/laborcamp/quarters)
 "yG" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Labor Camp External Airlock"
+	name = "LABOR CAMP EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -4243,7 +4243,7 @@
 /area/mine/hydroponics)
 "zc" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Mining Station Maintenance"
+	name = "MINING STATION MAINTENANCE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -4263,7 +4263,7 @@
 /area/mine/maintenance/service)
 "zf" = (
 /obj/machinery/door/airlock{
-	name = "Restroom"
+	name = "RESTROOM"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -4304,7 +4304,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
 /obj/machinery/door/airlock/external{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/access/any/engineering/maintenance/departmental,
@@ -4360,7 +4360,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
 /obj/machinery/door/airlock/external{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/access/any/engineering/maintenance/departmental,
@@ -4433,7 +4433,7 @@
 /area/mine/maintenance/service)
 "Ap" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -4469,7 +4469,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/maintenance{
-	name = "Mining Station Maintenance"
+	name = "MINING STATION MAINTENANCE"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/brig,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
@@ -4534,7 +4534,7 @@
 "By" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "labor";
-	name = "Labor Camp Blast Door"
+	name = "LABOR CAMP BLAST DOOR"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
@@ -4591,7 +4591,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /obj/machinery/door/airlock/external{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/unres{
@@ -4630,7 +4630,7 @@
 /area/mine/production)
 "Cm" = (
 /obj/machinery/door/airlock/glass{
-	name = "Canteen"
+	name = "CANTEEN"
 	},
 /obj/effect/turf_decal/tile/bar/opposingcorners{
 	dir = 1
@@ -4639,7 +4639,7 @@
 /area/mine/cafeteria)
 "Cz" = (
 /obj/machinery/door/airlock/medical/glass{
-	name = "Infirmary"
+	name = "INFIRMARY"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -4655,7 +4655,7 @@
 /area/mine/laborcamp/quarters)
 "CC" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -4717,7 +4717,7 @@
 /area/mine/mechbay)
 "CS" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Mining Station Maintenance"
+	name = "MINING STATION MAINTENANCE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -4772,14 +4772,14 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/machinery/door/airlock/external/glass{
-	name = "Labor Camp Shuttle Prisoner Airlock"
+	name = "LABOR CAMP SHUTTLE PRISONER AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/iron/large,
 /area/mine/laborcamp)
 "Dl" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Labor Camp Shuttle Security Airlock"
+	name = "LABOR CAMP SHUTTLE SECURITY AIRLOCK"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/security/brig,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -4825,7 +4825,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/external{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -4894,7 +4894,7 @@
 /area/mine/maintenance/service/disposals)
 "Eq" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Labor Camp Monitoring"
+	name = "LABOR CAMP MONITORING"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -4911,7 +4911,7 @@
 /area/mine/maintenance/service/comms)
 "Ex" = (
 /obj/machinery/door/airlock{
-	name = "Unisex Restroom"
+	name = "UNISEX RESTROOM"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/siding/white{
@@ -5132,7 +5132,7 @@
 /area/mine/laborcamp/quarters)
 "Gf" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Labor Camp External Airlock"
+	name = "LABOR CAMP EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -5205,7 +5205,7 @@
 /area/mine/production)
 "GH" = (
 /obj/machinery/door/airlock/glass{
-	name = "Arrival Lounge"
+	name = "ARRIVAL LOUNGE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -5565,7 +5565,7 @@
 /area/mine/production)
 "Je" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Labor Camp Maintenance"
+	name = "LABOR CAMP MAINTENANCE"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -5589,7 +5589,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/airlock/security{
-	name = "Labor Camp Gate Monitoring"
+	name = "LABOR CAMP GATE MONITORING"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/security/brig,
 /obj/effect/turf_decal/tile/red/fourcorners,
@@ -5713,7 +5713,7 @@
 /area/mine/maintenance/service/disposals)
 "JN" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Mining Station Maintenance"
+	name = "MINING STATION MAINTENANCE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -5813,7 +5813,7 @@
 /area/mine/laborcamp/security)
 "Ki" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -6099,7 +6099,7 @@
 /area/mine/laborcamp/quarters)
 "LK" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Mining Station Maintenance"
+	name = "MINING STATION MAINTENANCE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -6220,7 +6220,7 @@
 /area/mine/living_quarters)
 "MH" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -6294,7 +6294,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /obj/machinery/door/airlock/external{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/access/any/engineering/maintenance,
@@ -6340,7 +6340,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
 /obj/machinery/door/airlock/external{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/access/any/engineering/maintenance/departmental,
@@ -6368,7 +6368,7 @@
 /area/mine/living_quarters)
 "Nv" = (
 /obj/machinery/door/airlock/external{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -6399,7 +6399,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/airlock{
 	id_tag = "miningdorm3";
-	name = "Luxury Room"
+	name = "LUXURY ROOM"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/supply/mining_station,
 /obj/effect/turf_decal/tile/blue/fourcorners,
@@ -6442,7 +6442,7 @@
 /area/mine/maintenance/service)
 "NX" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Labor Camp External Airlock"
+	name = "LABOR CAMP EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -6692,7 +6692,7 @@
 "PH" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/machinery/door/airlock/external{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -6790,7 +6790,7 @@
 /area/mine/laborcamp/production)
 "Qi" = (
 /obj/machinery/door/airlock/research/glass{
-	name = "Mining Station Mech Bay"
+	name = "MINING STATION MECH BAY"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -6831,7 +6831,7 @@
 "QG" = (
 /obj/machinery/door/airlock/public/glass{
 	id_tag = "gulag2";
-	name = "Cell 2"
+	name = "CELL 2"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -6904,7 +6904,7 @@
 /area/mine/mechbay)
 "Ra" = (
 /obj/machinery/door/airlock/mining/glass{
-	name = "Mining Station EVA"
+	name = "MINING STATION EVA"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -7011,7 +7011,7 @@
 "RG" = (
 /obj/machinery/door/airlock/public/glass{
 	id_tag = "cellblock1";
-	name = "Labor Camp Operations"
+	name = "LABOR CAMP OPERATIONS"
 	},
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -7047,7 +7047,7 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/external/glass{
-	name = "Mining Shuttle Airlock"
+	name = "MINING SHUTTLE AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/iron/dark/smooth_large,
@@ -7144,7 +7144,7 @@
 /area/mine/hydroponics)
 "SA" = (
 /obj/machinery/door/airlock/glass{
-	name = "Arrival Lounge"
+	name = "ARRIVAL LOUNGE"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -7185,7 +7185,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/external/glass{
-	name = "Labor Camp Shuttle Prisoner Airlock"
+	name = "LABOR CAMP SHUTTLE PRISONER AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/iron/large,
@@ -7248,7 +7248,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /obj/machinery/door/airlock/external{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/access/any/engineering/maintenance,
@@ -7323,14 +7323,14 @@
 /area/mine/laborcamp/security)
 "TV" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Mining Station Maintenance"
+	name = "MINING STATION MAINTENANCE"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/engineering/maintenance,
 /turf/open/floor/plating,
 /area/mine/maintenance/service)
 "TW" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Mining Station Storage"
+	name = "MINING STATION STORAGE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -7425,7 +7425,7 @@
 /area/mine/laborcamp)
 "Uu" = (
 /obj/machinery/door/airlock/security{
-	name = "Labor Camp Break Room"
+	name = "LABOR CAMP BREAK ROOM"
 	},
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/access/any/security/brig,
@@ -7489,7 +7489,7 @@
 /area/mine/cafeteria)
 "UV" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Labor Camp External Airlock"
+	name = "LABOR CAMP EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -7539,7 +7539,7 @@
 /area/mine/laborcamp)
 "Vh" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -7573,7 +7573,7 @@
 /area/mine/laborcamp)
 "Vn" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Mining Station Maintenance"
+	name = "MINING STATION MAINTENANCE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -7601,7 +7601,7 @@
 /area/lavaland/surface/outdoors)
 "Vq" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Labor Camp External Airlock"
+	name = "LABOR CAMP EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -7701,7 +7701,7 @@
 /area/mine/lounge)
 "Wl" = (
 /obj/machinery/door/airlock/external/glass{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -7798,7 +7798,7 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/external{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -7809,7 +7809,7 @@
 /area/mine/maintenance/living/south)
 "WX" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Mining Station Storage"
+	name = "MINING STATION STORAGE"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -7895,7 +7895,7 @@
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/highsecurity{
-	name = "Labor Camp Service Gate";
+	name = "LABOR CAMP SERVICE GATE";
 	security_level = 4
 	},
 /obj/effect/mapping_helpers/airlock/access/any/security/brig,
@@ -8282,7 +8282,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/external{
-	name = "Mining External Airlock"
+	name = "MINING EXTERNAL AIRLOCK"
 	},
 /obj/structure/fans/tiny,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,

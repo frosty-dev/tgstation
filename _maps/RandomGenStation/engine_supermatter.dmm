@@ -50,7 +50,7 @@
 /area/station/engineering/main)
 "av" = (
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Supermatter Engine Room"
+	name = "SUPERMATTER ENGINE ROOM"
 	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor/border_only,
@@ -62,7 +62,7 @@
 /area/station/engineering/main)
 "aw" = (
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Supermatter Engine Room"
+	name = "SUPERMATTER ENGINE ROOM"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/firedoor/border_only,
@@ -94,7 +94,7 @@
 /area/station/engineering/main)
 "aH" = (
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Supermatter Engine Room"
+	name = "SUPERMATTER ENGINE ROOM"
 	},
 /obj/effect/turf_decal/stripes/end{
 	dir = 8
@@ -307,7 +307,7 @@
 /obj/machinery/atmospherics/pipe/multiz/supply/visible/layer4{
 	color = "#0000ff";
 	dir = 4;
-	name = "Supply multi deck pipe adapter"
+	name = "SUPPLY MULTI DECK PIPE ADAPTER"
 	},
 /obj/effect/turf_decal/stripes/box,
 /turf/open/floor/plating,
@@ -400,7 +400,7 @@
 /area/station/engineering/main)
 "cu" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Engineering Maintenance"
+	name = "ENGINEERING MAINTENANCE"
 	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor/border_only,
@@ -460,7 +460,7 @@
 /area/station/engineering/main)
 "cO" = (
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Supermatter Engine Room"
+	name = "SUPERMATTER ENGINE ROOM"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
@@ -609,7 +609,7 @@
 /area/station/engineering/main)
 "eb" = (
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Supermatter Engine Room"
+	name = "SUPERMATTER ENGINE ROOM"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
@@ -911,7 +911,7 @@
 /area/station/engineering/main)
 "iq" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Engineering Maintenance"
+	name = "ENGINEERING MAINTENANCE"
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
@@ -1010,7 +1010,7 @@
 /area/space/nearstation)
 "qP" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Engineering Maintenance"
+	name = "ENGINEERING MAINTENANCE"
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 8
@@ -1068,7 +1068,7 @@
 /area/station/engineering/main)
 "uB" = (
 /obj/machinery/door/airlock/external{
-	name = "Engineering External Access"
+	name = "ENGINEERING EXTERNAL ACCESS"
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/general,
@@ -1244,7 +1244,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Supermatter Engine Room"
+	name = "SUPERMATTER ENGINE ROOM"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 1

@@ -70,7 +70,7 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /mob/living/simple_animal/hostile/gorilla{
-	name = "Горилла из Донбасса"
+	name = "ГОРИЛЛА ИЗ ДОНБАССА"
 	},
 /turf/open/floor/plating,
 /area/template_noop)

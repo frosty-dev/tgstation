@@ -142,7 +142,7 @@
 /area/template_noop)
 "z" = (
 /obj/structure/closet/crate/freezer{
-	name = "refreshment cooler"
+	name = "REFRESHMENT COOLER"
 	},
 /obj/item/reagent_containers/cup/glass/bottle/beer/light,
 /obj/item/reagent_containers/cup/soda_cans/sodawater,

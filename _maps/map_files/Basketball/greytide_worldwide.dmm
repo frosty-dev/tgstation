@@ -150,7 +150,7 @@
 /area/centcom/basketball)
 "ju" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Maintenance Hatch"
+	name = "MAINTENANCE HATCH"
 	},
 /obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plating,

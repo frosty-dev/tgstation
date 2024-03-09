@@ -5,7 +5,7 @@
 "b" = (
 /obj/machinery/door/airlock/public/glass,
 /obj/machinery/door/poddoor/shutters/preopen{
-	name = "Privacy Shutter";
+	name = "PRIVACY SHUTTER";
 	id = "supportourtroops"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -21,7 +21,7 @@
 /area/station/maintenance/starboard/greater)
 "p" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Maintenance Hatch"
+	name = "MAINTENANCE HATCH"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /turf/open/floor/iron/smooth,
@@ -31,7 +31,7 @@
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/effect/spawner/random/entertainment/money_small,
 /obj/machinery/door/poddoor/shutters/preopen{
-	name = "Privacy Shutter";
+	name = "PRIVACY SHUTTER";
 	id = "supportourtroops"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -93,7 +93,7 @@
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/effect/spawner/random/engineering/tool,
 /obj/machinery/door/poddoor/shutters/preopen{
-	name = "Privacy Shutter";
+	name = "PRIVACY SHUTTER";
 	id = "supportourtroops"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -109,7 +109,7 @@
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/machinery/door/window/left/directional/east,
 /obj/machinery/door/poddoor/shutters/preopen{
-	name = "Privacy Shutter";
+	name = "PRIVACY SHUTTER";
 	id = "supportourtroops"
 	},
 /obj/effect/decal/cleanable/dirt,

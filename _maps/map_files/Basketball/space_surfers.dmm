@@ -74,7 +74,7 @@
 /obj/machinery/power/solar_control{
 	dir = 1;
 	id = "starboardsolar";
-	name = "Starboard Quarter Solar Control"
+	name = "STARBOARD QUARTER SOLAR CONTROL"
 	},
 /obj/structure/cable,
 /obj/effect/turf_decal/stripes/line{
@@ -198,7 +198,7 @@
 "Se" = (
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/machinery/door/airlock/engineering{
-	name = "Starboard Quarter Solar Access"
+	name = "STARBOARD QUARTER SOLAR ACCESS"
 	},
 /turf/open/floor/plating,
 /area/centcom/basketball)

@@ -15,7 +15,7 @@
 /area/station/maintenance/department/security)
 "f" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Security Storage Maintenance Hatch"
+	name = "SECURITY STORAGE MAINTENANCE HATCH"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/airlock/access/all/security/entrance,

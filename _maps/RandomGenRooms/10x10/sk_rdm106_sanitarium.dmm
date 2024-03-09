@@ -30,7 +30,7 @@
 	},
 /obj/machinery/button/door{
 	id = "sanitarium2";
-	name = "Therapy Room Bolt Control";
+	name = "THERAPY ROOM BOLT CONTROL";
 	normaldoorcontrol = 1;
 	pixel_x = -25;
 	pixel_y = -5;
@@ -190,7 +190,7 @@
 "yQ" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	id_tag = "sanitarium1";
-	name = "sanitarium"
+	name = "SANITARIUM"
 	},
 /obj/structure/disposalpipe/segment,
 /obj/effect/decal/cleanable/blood/tracks,
@@ -239,7 +239,7 @@
 /obj/item/clothing/glasses/blindfold,
 /obj/item/clothing/head/helmet{
 	desc = "A special helmet, to prevent a psychotic individual from injuring their head.";
-	name = "safety helmet"
+	name = "SAFETY HELMET"
 	},
 /obj/item/tape/random,
 /obj/item/tape/random,

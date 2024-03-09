@@ -81,7 +81,7 @@
 "P" = (
 /obj/structure/closet/crate/miningcar{
 	desc = "A mining cart. This one doesn't work on rails, which is good because we never had rails to begin with.";
-	name = "mining cart"
+	name = "MINING CART"
 	},
 /obj/item/stack/ore/glass{
 	amount = 15
