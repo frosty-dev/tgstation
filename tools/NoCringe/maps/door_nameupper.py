@@ -16,10 +16,9 @@ for root, _, files in os.walk(MAPS_DIRECTORY):
         if file.endswith(MAP_FILE_EXTENSION):
             map_files.append(os.path.join(root, file))
 
-map_files = ["_maps/RandomGenStation/bar_neon.dmm"]
 
 for map_file in map_files:
-    file = open(map_file, "r")
+    file = open(map_file, "r", encoding="utf-8")
     print(f"Processing {map_file}")
     file_content = file.readlines()
     file.close()
@@ -53,14 +52,14 @@ for map_file in map_files:
 
     lines = list(set(lines))
     lines.sort()
-    print(lines)
 
-    for line in lines:
-        file_content[line] = re.sub(
-            r"\"(.+?)\"", lambda x: x.group(0).upper(), file_content[line]
-        )
-        print(f"Changed {file_content[line]}")
+    if lines:
+        for line in lines:
+            file_content[line] = re.sub(
+                r"\"(.+?)\"", lambda x: x.group(0).upper(), file_content[line]
+            )
+            print(f"Changed {file_content[line].strip()}")
 
-    with open(map_file, "w") as file:
-        file.write("".join(file_content))
-        print(f"Processed {map_file}")
+        with open(map_file, "w", encoding="utf-8") as file:
+            file.write("".join(file_content))
+            print(f"Processed {map_file}")
