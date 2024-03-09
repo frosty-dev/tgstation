@@ -22,7 +22,7 @@ export const ReconnectButton = () => {
         onClick={() => {
           Byond.command('.reconnect');
         }}>
-        Reconnect
+        Переподключиться
       </Button>
       <Button
         color="white"
@@ -30,7 +30,7 @@ export const ReconnectButton = () => {
           location.href = `byond://${url}`;
           Byond.command('.quit');
         }}>
-        Relaunch game
+        Перезапустить игру
       </Button>
     </>
   );

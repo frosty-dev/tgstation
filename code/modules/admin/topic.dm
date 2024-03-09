@@ -1554,11 +1554,11 @@
 		popup.open(0)
 
 	else if(href_list["pushmetocrawler"])
-			if(!check_rights(R_ADMIN))
-				return
+		if(!check_rights(R_ADMIN))
+			return
 
-			var/client/C = locate(href_list["pushmetocrawler"]) in GLOB.clients
-			usr << link("https://crawler.station13.ru/?ckey=[C.ckey]")
+		var/client/C = locate(href_list["pushmetocrawler"]) in GLOB.clients
+		usr << link("https://crawler.station13.ru/?ckey=[C.ckey]")
 
 	else if(href_list["slowquery"])
 		if(!check_rights(R_ADMIN))

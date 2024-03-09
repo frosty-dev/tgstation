@@ -9,7 +9,7 @@
 
 $color-default: colors.bg(colors.$primary) !default;
 $color-disabled: #999999 !default;
-$color-disabled-text: #000000 !default;
+$color-disabled-text: #111111 !default;
 $color-selected: colors.bg(colors.$green) !default;
 $color-caution: colors.bg(colors.$yellow) !default;
 $color-danger: colors.bg(colors.$red) !default;
@@ -66,7 +66,9 @@ $bg-map: colors.$bg-map !default;
     margin-bottom: 0;
   }
 
-  .fa, .fas, .far {
+  .fa,
+  .fas,
+  .far {
     margin-left: -0.25em;
     margin-right: -0.25em;
     min-width: 1.333em;

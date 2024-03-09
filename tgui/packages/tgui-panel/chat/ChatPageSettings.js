@@ -64,7 +64,7 @@ export const ChatPageSettings = (props, context) => {
             {typeDef.name}
           </Button.Checkbox>
         ))}
-        <Collapsible mt={1} color="transparent" title="Admin stuff">
+        <Collapsible mt={1} color="transparent" title="Педальное">
           {MESSAGE_TYPES.filter(
             (typeDef) => !typeDef.important && typeDef.admin
           ).map((typeDef) => (
