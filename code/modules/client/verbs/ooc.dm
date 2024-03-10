@@ -17,16 +17,16 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 
 	if(!holder)
 		if(!GLOB.ooc_allowed)
-			to_chat(src, span_danger("OOC выключен."))
+			to_chat(src, span_danger("OOC выключен. Приятной игры."))
 			return
 		if(!GLOB.dooc_allowed && (mob.stat == DEAD))
-			to_chat(usr, span_danger("OOC трупам не разрешён."))
+			to_chat(usr, span_danger("OOC трупам не разрешён. Приятной игры."))
 			return
 		if(prefs.muted & MUTE_OOC)
-			to_chat(src, span_danger("Вы не можете использовать ООС (muted)."))
+			to_chat(src, span_danger("Тебе нельзя. Приятной игры."))
 			return
 	if(is_banned_from(ckey, "OOC"))
-		to_chat(src, span_danger("Да вас же забанили с OOC!"))
+		to_chat(src, span_danger("Не-а."))
 		return
 	if(QDELETED(src))
 		return
@@ -55,8 +55,8 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 
 	msg = emoji_parse(msg)
 
-	if(SSticker.HasRoundStarted() && (msg[1] in list(".",";",":","#") || findtext_char(msg, "say", 1, 5)))
-		if(tgui_alert(usr,"Your message \"[raw_msg]\" looks like it was meant for in game communication, say it in OOC?", "Meant for OOC?", list("Yes", "No")) != "Yes")
+	if(SSticker.HasRoundStarted() && (msg[1] in list(".",";",":","#") || findtext_char(msg, "Сказать", 1, 5)))
+		if(tgui_alert(usr, "Похоже \"[raw_msg]\" выглядит как внутриигровое сообщение, написать его в OOC?", "Для OOC?", list("Да", "Нет")) != "Да")
 			return
 
 	if(!holder)
@@ -170,7 +170,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 
 //Checks admin notice
 /client/verb/admin_notice()
-	set name = "📘 Заметки от педалей"
+	set name = "📘 Заметки раунда"
 	set category = "Admin"
 	set desc ="Check the admin notice if it has been set"
 
@@ -443,7 +443,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 			policytext += "<hr>"
 			anything = TRUE
 	if(!anything)
-		policytext += "No related rules found."
+		policytext += "Нет особых правил."
 
 	usr << browse(policytext.Join(""),"window=policy")
 
