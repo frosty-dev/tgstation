@@ -149,7 +149,7 @@
 		power_throw++
 	visible_message(span_danger("<b>[src]</b> кидает [thrown_thing][power_throw ? " невероятно сильно!" : "."]"), \
 					span_danger("Кидаю [thrown_thing][power_throw ? " невероятно сильно!" : "."]"))
-	playsound(get_turf(src), 'white/master/sounds/throw.wav', 50, TRUE)
+	playsound(get_turf(src), 'white/master/sound/throw.wav', 50, TRUE)
 	log_message("has thrown [thrown_thing] [power_throw > 0 ? "really hard" : ""]", LOG_ATTACK)
 	var/extra_throw_range = HAS_TRAIT(src, TRAIT_THROWINGARM) ? 2 : 0
 	newtonian_move(get_dir(target, src))

@@ -142,7 +142,7 @@
 
 	if(!fueljar)//No fuel but we are on, shutdown
 		toggle_power()
-		playsound(src.loc, 'white/master/sounds/error1.ogg', 50, 0)
+		playsound(src.loc, 'white/master/sound/error1.ogg', 50, 0)
 		return
 
 	add_avail(stored_power)

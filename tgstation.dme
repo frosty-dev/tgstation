@@ -2689,6 +2689,7 @@
 #include "code\modules\admin\smites\puzzgrid.dm"
 #include "code\modules\admin\smites\puzzle.dm"
 #include "code\modules\admin\smites\rod.dm"
+#include "code\modules\admin\smites\scare.dm"
 #include "code\modules\admin\smites\scarify.dm"
 #include "code\modules\admin\smites\smite.dm"
 #include "code\modules\admin\smites\supply_pod.dm"

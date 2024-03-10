@@ -484,7 +484,7 @@ GLOBAL_VAR(station_nuke_source)
 	countdown.stop()
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_NUKE_DEVICE_DISARMED, src)
 	update_appearance()
-	playsound(world, "white/master/sounds/nuke_disarmed.ogg", 100, TRUE)
+	playsound(world, "white/master/sound/nuke_disarmed.ogg", 100, TRUE)
 
 /// If the nuke is active, gets how much time is left until it detonates, in seconds.
 /// If the nuke is not active, gets how much time the nuke is set for, in seconds.
