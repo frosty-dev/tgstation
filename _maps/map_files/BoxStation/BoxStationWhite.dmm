@@ -33833,8 +33833,8 @@
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "nka" = (
-/obj/machinery/power/generator,
 /obj/structure/cable,
+/obj/machinery/power/thermoelectric_generator,
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine)
 "nkn" = (
