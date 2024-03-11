@@ -19,8 +19,9 @@
 
 /datum/emote/living/sing_tune
 	key = "tunesing"
+	ru_name = "напевать мелодию"
 	key_third_person = "sings a tune"
-	message = "sings a tune."
+	message = "напевает мелодию."
 
 /datum/emote/living/bow
 	key = "bow"
@@ -77,7 +78,7 @@
 	key = "cough"
 	ru_name = "кашлять"
 	key_third_person = "coughs"
-	message_mime = "изображает кашель!."
+	message_mime = "изображает кашель!"
 	message = "кашляет!"
 	emote_type = EMOTE_VISIBLE | EMOTE_AUDIBLE
 
@@ -445,7 +446,7 @@
 	key = "smug"
 	ru_name = "ухмыляться"
 	key_third_person = "smugs"
-	message = "ухмыляется самодовольно."
+	message = "самодовольно ухмыляеться."
 
 /datum/emote/living/sniff
 	key = "sniff"
@@ -594,7 +595,7 @@
 	ru_name = "зевать"
 	key_third_person = "yawns"
 	message = "зевает."
-	message_mime = "изображает наигранный молчаливыйм зевок."
+	message_mime = "изображает наигранный молчаливый зевок."
 	message_robot = "мелодично зевает." //симпатически звучит плохо, пусть уж будут музыкой
 	message_AI = "мелодично зевает."
 	emote_type = EMOTE_VISIBLE | EMOTE_AUDIBLE
