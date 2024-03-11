@@ -147,7 +147,8 @@
 
 /obj/effect/landmark/stationroom/maintenance/rdm3x3
 	template_names = list(
-		"Random 3x3: 9storage" = 1,
+		// removed cuz ОНО СРЁТ МНЕ В ТЕСТАХ
+		// "Random 3x3: 9storage" = 1,
 		"Random 3x3: 2storage" = 1,
 		"Random 3x3: airstation" = 1,
 		"Random 3x3: banana" = 1,
