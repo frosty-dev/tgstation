@@ -1127,6 +1127,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 1
 	},
+/obj/machinery/computer/department_orders/medical,
 /turf/open/floor/iron/white,
 /area/station/medical/storage)
 "oF" = (

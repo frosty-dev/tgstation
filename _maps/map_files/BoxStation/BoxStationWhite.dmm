@@ -956,6 +956,13 @@
 /obj/effect/mapping_helpers/airlock/access/any/engineering/general,
 /turf/open/floor/iron,
 /area/station/engineering/main)
+"avv" = (
+/obj/effect/turf_decal/tile/dark_green{
+	dir = 4
+	},
+/obj/machinery/computer/department_orders/service,
+/turf/open/floor/iron,
+/area/station/hallway/secondary/service)
 "avR" = (
 /obj/effect/turf_decal/delivery,
 /obj/machinery/portable_atmospherics/canister/plasma,
@@ -1674,6 +1681,7 @@
 /area/station/hallway/secondary/entry)
 "aQk" = (
 /obj/structure/chair/stool/directional/south,
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/maintenance/department/electrical)
 "aQG" = (
@@ -13261,6 +13269,9 @@
 /area/station/maintenance/bottom_station_maints/north)
 "ftd" = (
 /obj/structure/cable,
+/obj/machinery/computer/department_orders/science{
+	dir = 8
+	},
 /turf/open/floor/iron/white/side,
 /area/station/science/lab)
 "fte" = (
@@ -16996,7 +17007,6 @@
 /area/station/maintenance/solars/port/fore)
 "gHX" = (
 /obj/structure/lattice,
-/obj/machinery/light/floor,
 /obj/machinery/light/floor,
 /turf/open/openspace,
 /area/station/service/hydroponics)
@@ -23458,6 +23468,9 @@
 /obj/machinery/airalarm/directional/west{
 	pixel_x = -23
 	},
+/obj/machinery/computer/department_orders/engineering{
+	dir = 4
+	},
 /turf/open/floor/iron,
 /area/station/engineering)
 "jiy" = (
@@ -24240,6 +24253,11 @@
 /obj/machinery/requests_console/auto_name/directional/east,
 /turf/open/floor/iron/white,
 /area/station/medical/zone2)
+"jzG" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/station/maintenance/department/electrical)
 "jzM" = (
 /obj/structure/table,
 /obj/item/razor,
@@ -27394,13 +27412,13 @@
 /turf/open/genturf,
 /area/station/maintenance/bottom_station_maints/south)
 "kHi" = (
-/obj/structure/filingcabinet/chestdrawer,
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
+/obj/machinery/drone_dispenser,
 /turf/open/floor/iron/white,
 /area/station/science/robotics/lab)
 "kHm" = (
@@ -32167,9 +32185,9 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos/upper)
 "mDk" = (
-/obj/effect/landmark/generic_maintenance_landmark,
-/obj/effect/landmark/event_spawn,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
 /area/station/maintenance/department/electrical)
 "mDx" = (
@@ -32224,13 +32242,10 @@
 /turf/open/floor/circuit,
 /area/station/ai_monitored/turret_protected/ai)
 "mEF" = (
-/obj/structure/chair/wood{
-	dir = 1
-	},
-/turf/open/floor/iron/chapel{
-	dir = 4
-	},
-/area/station/service/chapel)
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable,
+/turf/open/floor/iron,
+/area/station/maintenance/department/electrical)
 "mEK" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
@@ -35264,7 +35279,7 @@
 	areastring = "/area/station/service/lawoffice";
 	dir = 4;
 	name = "Law Office APC";
-	pixel_x = 25;
+	pixel_x = 25
 	},
 /obj/structure/cable,
 /turf/open/floor/wood,
@@ -38650,7 +38665,7 @@
 	areastring = "/area/station/commons/locker";
 	dir = 4;
 	name = "Locker Room APC";
-	pixel_x = 25;
+	pixel_x = 25
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -39597,6 +39612,11 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
+"pvj" = (
+/obj/effect/landmark/generic_maintenance_landmark,
+/obj/effect/landmark/event_spawn,
+/turf/open/floor/plating,
+/area/station/maintenance/department/electrical)
 "pvK" = (
 /obj/effect/spawner/xmastree,
 /turf/open/floor/iron/dark/smooth_large,
@@ -47387,10 +47407,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron/large,
 /area/station/security/brig/upper)
-"szn" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/closed/wall/r_wall,
-/area/station/science/explab)
 "szz" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -49468,9 +49484,6 @@
 /turf/open/openspace/airless,
 /area/space/nearstation)
 "tnK" = (
-/obj/machinery/computer/department_orders/science{
-	dir = 1
-	},
 /obj/effect/turf_decal/tile/brown/opposingcorners{
 	dir = 1
 	},
@@ -53615,6 +53628,10 @@
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/iron/large,
 /area/station/hallway/secondary/entry/public)
+"uKA" = (
+/obj/structure/cable,
+/turf/closed/wall/r_wall,
+/area/station/science/xenobiology)
 "uKB" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance{
@@ -57068,6 +57085,12 @@
 	},
 /turf/open/floor/iron,
 /area/station/commons/storage/primary)
+"vZu" = (
+/obj/machinery/computer/department_orders/security{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/station/security/processing)
 "vZy" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -60101,6 +60124,10 @@
 /obj/effect/turf_decal/tile/brown,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/qm)
+"xju" = (
+/obj/structure/cable,
+/turf/closed/wall,
+/area/station/maintenance/department/electrical)
 "xjC" = (
 /obj/structure/cable,
 /obj/structure/railing{
@@ -60917,6 +60944,7 @@
 /area/station/vacant_room/commissary/second)
 "xBh" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/maintenance/department/electrical)
 "xBo" = (
@@ -106269,7 +106297,7 @@ wSW
 wSW
 rAK
 bse
-wSW
+uKA
 nJR
 eDB
 cSr
@@ -153231,7 +153259,7 @@ rdI
 eQT
 cAM
 jnX
-nQf
+vZu
 jWZ
 njW
 pey
@@ -164042,7 +164070,7 @@ aMu
 uic
 sxp
 hjP
-htX
+avv
 bux
 bux
 dUj
@@ -175857,12 +175885,12 @@ qga
 qga
 dvh
 dvh
-qDW
+mEF
 osS
 uFJ
 uFJ
 juy
-dvh
+xju
 dvh
 slq
 aED
@@ -176114,9 +176142,9 @@ nlg
 sgk
 dvh
 mrr
+jzG
 osS
-osS
-uFJ
+pvj
 uFJ
 utf
 vBV
@@ -176134,7 +176162,7 @@ eGp
 dqW
 dqW
 tFo
-mEF
+dqW
 hiS
 otx
 cSf
@@ -176371,7 +176399,7 @@ prK
 vlM
 dvh
 lXa
-qDW
+mEF
 qDW
 uFJ
 uFJ
@@ -176694,7 +176722,7 @@ dMI
 eSz
 qOx
 hwt
-szn
+iez
 oXp
 eyR
 pJF

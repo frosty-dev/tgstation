@@ -115,7 +115,8 @@
 /proc/screen_text(obj/object_to_change, maptext = "", screen_loc = "CENTER-7,CENTER-7", maptext_height = 480, maptext_width = 480)
 	if(!isobj(object_to_change))
 		object_to_change = new /atom/movable/screen/text()
-	object_to_change.maptext = MAPTEXT(maptext)
+	// make it uppercase
+	object_to_change.maptext = MAPTEXT(capitalize(maptext))
 	object_to_change.maptext_height = maptext_height
 	object_to_change.maptext_width = maptext_width
 	object_to_change.screen_loc = screen_loc

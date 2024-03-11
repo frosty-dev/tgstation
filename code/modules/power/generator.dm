@@ -1,7 +1,8 @@
 /obj/machinery/power/generator
-	name = "thermoelectric generator"
-	desc = "It's a high efficiency thermoelectric generator."
-	icon_state = "teg"
+	name = "термоэлектрический генератор"
+	desc = "Высокоэффективный газовый термоэлектрический генератор. Может быть нестабилен, если разогнан слишком сильно."
+	icon = 'white/valtos/icons/teg.dmi'
+	icon_state = "teg-unassembled"
 	density = TRUE
 	use_power = NO_POWER_USE
 
@@ -22,6 +23,7 @@
 	connect_to_network()
 	SSair.start_processing_machine(src)
 	update_appearance()
+	component_parts = list(new /obj/item/circuitboard/machine/generator)
 
 /obj/machinery/power/generator/Destroy()
 	kill_circs()
@@ -30,15 +32,26 @@
 
 /obj/machinery/power/generator/update_overlays()
 	. = ..()
-	if(machine_stat & (NOPOWER|BROKEN))
+	cut_overlays()
+	SSvis_overlays.remove_vis_overlay(src, managed_vis_overlays)
+
+	if(machine_stat & (BROKEN))
+		icon_state = "teg-broken"
+		return
+	if(hot_circ && cold_circ)
+		icon_state = "teg-assembled"
+	else
+		icon_state = "teg-unassembled"
+		if(panel_open)
+			add_overlay("teg-panel")
 		return
 
-	var/L = min(round(lastgenlev / 100000), 11)
-	if(L != 0)
-		. += mutable_appearance('icons/obj/machines/engine/other.dmi', "teg-op[L]")
-	if(hot_circ && cold_circ)
-		. += "teg-oc[lastcirc]"
-
+	if(machine_stat & (NOPOWER))
+		return
+	else
+		var/L = min(round(lastgenlev/500000),11)
+		if(L != 0)
+			SSvis_overlays.add_vis_overlay(src, icon, "teg-op[L]", plane = ABOVE_LIGHTING_PLANE, dir = src.dir)
 
 #define GENRATE 800 // generator output coefficient from Q
 
@@ -83,10 +96,10 @@
 
 		update_appearance()
 
-	var/circ = "[cold_circ?.last_pressure_delta > 0 ? "1" : "0"][hot_circ?.last_pressure_delta > 0 ? "1" : "0"]"
-	if(circ != lastcirc)
-		lastcirc = circ
-		update_appearance()
+	// var/circ = "[cold_circ?.last_pressure_delta > 0 ? "1" : "0"][hot_circ?.last_pressure_delta > 0 ? "1" : "0"]"
+	// if(circ != lastcirc)
+	// 	lastcirc = circ
+	// 	update_appearance()
 
 	src.updateDialog()
 
@@ -101,7 +114,7 @@
 /obj/machinery/power/generator/proc/get_menu(include_link = TRUE)
 	var/t = ""
 	if(!powernet)
-		t += "<span class='bad'>Unable to connect to the power network!</span>"
+		t += span_bad("Нет соединения с энергосетью!")
 	else if(cold_circ && hot_circ)
 		var/datum/gas_mixture/cold_circ_air1 = cold_circ.airs[1]
 		var/datum/gas_mixture/cold_circ_air2 = cold_circ.airs[2]
@@ -110,33 +123,33 @@
 
 		t += "<div class='statusDisplay'>"
 
-		t += "Output: [display_power(lastgenlev)]"
+		t += "Выход: [display_power(lastgenlev)]"
 
 		t += "<BR>"
 
-		t += "<B><font color='blue'>Cold loop</font></B><BR>"
-		t += "Temperature Inlet: [round(cold_circ_air2.temperature, 0.1)] K / Outlet: [round(cold_circ_air1.temperature, 0.1)] K<BR>"
-		t += "Pressure Inlet: [round(cold_circ_air2.return_pressure(), 0.1)] kPa /  Outlet: [round(cold_circ_air1.return_pressure(), 0.1)] kPa<BR>"
+		t += "<B><font color='blue'>Холодная петля</font></B><BR>"
+		t += "Температура: [round(cold_circ_air2.temperature, 0.1)] К / Выход: [round(cold_circ_air1.temperature, 0.1)] К<BR>"
+		t += "Давление: [round(cold_circ_air2.return_pressure(), 0.1)] кПа /  Выход: [round(cold_circ_air1.return_pressure(), 0.1)] кПа<BR>"
 
 		t += "<B><font color='red'>Hot loop</font></B><BR>"
-		t += "Temperature Inlet: [round(hot_circ_air2.temperature, 0.1)] K / Outlet: [round(hot_circ_air1.temperature, 0.1)] K<BR>"
-		t += "Pressure Inlet: [round(hot_circ_air2.return_pressure(), 0.1)] kPa / Outlet: [round(hot_circ_air1.return_pressure(), 0.1)] kPa<BR>"
+		t += "Temperature: [round(hot_circ_air2.temperature, 0.1)] к / Выход: [round(hot_circ_air1.temperature, 0.1)] К<BR>"
+		t += "Давление: [round(hot_circ_air2.return_pressure(), 0.1)] кПа / Выход: [round(hot_circ_air1.return_pressure(), 0.1)] кПа<BR>"
 
 		t += "</div>"
 	else if(!hot_circ && cold_circ)
-		t += "<span class='bad'>Unable to locate hot circulator!</span>"
+		t += span_bad("Не найден циркулятор!")
 	else if(hot_circ && !cold_circ)
-		t += "<span class='bad'>Unable to locate cold circulator!</span>"
+		t += span_bad("Не найден холодный циркулятор!")
 	else
-		t += "<span class='bad'>Unable to locate any parts!</span>"
+		t += span_bad("Не найдены части!")
 	if(include_link)
-		t += "<BR><A href='?src=[REF(src)];close=1'>Close</A>"
+		t += "<BR><A href='?src=[REF(src)];close=1'>Закрыть</A>"
 
 	return t
 
 /obj/machinery/power/generator/ui_interact(mob/user)
 	. = ..()
-	var/datum/browser/popup = new(user, "teg", "Thermo-Electric Generator", 460, 300)
+	var/datum/browser/popup = new(user, "teg", "Термо-Электрический Генератор", 460, 300)
 	popup.set_content(get_menu())
 	popup.open()
 
@@ -192,7 +205,7 @@
 	if(!anchored)
 		kill_circs()
 	connect_to_network()
-	to_chat(user, span_notice("You [anchored?"secure":"unsecure"] [src]."))
+	to_chat(user, span_notice("[anchored?"Прикручиваю":"Откручиваю"] [src]."))
 	return TRUE
 
 /obj/machinery/power/generator/multitool_act(mob/living/user, obj/item/I)
@@ -200,7 +213,7 @@
 	if(!anchored)
 		return
 	find_circs()
-	to_chat(user, span_notice("You update [src]'s circulator links."))
+	to_chat(user, span_notice("Обновляю соединение с циркуляторами."))
 	return TRUE
 
 /obj/machinery/power/generator/screwdriver_act(mob/user, obj/item/I)
@@ -208,7 +221,7 @@
 		return TRUE
 	toggle_panel_open()
 	I.play_tool_sound(src)
-	to_chat(user, span_notice("You [panel_open?"open":"close"] the panel on [src]."))
+	to_chat(user, span_notice("[panel_open?"Открываю":"Закрываю"] панель [src]."))
 	return TRUE
 
 /obj/machinery/power/generator/crowbar_act(mob/user, obj/item/I)

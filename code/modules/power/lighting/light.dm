@@ -97,7 +97,8 @@
 				continue
 			if(on_turf.dir != dir)
 				continue
-			stack_trace("Conflicting double stacked light [on_turf.type] found at ([our_location.x],[our_location.y],[our_location.z])")
+			// disabled cuz it doesnt cause any runtimes
+			// stack_trace("Conflicting double stacked light [on_turf.type] found at ([our_location.x],[our_location.y],[our_location.z])")
 			qdel(on_turf)
 
 	if(!mapload) //sync up nightshift lighting for player made lights

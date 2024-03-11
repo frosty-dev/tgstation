@@ -1,6 +1,6 @@
 /turf/closed/wall/mineral/cult
-	name = "runed metal wall"
-	desc = "A cold metal wall engraved with indecipherable symbols. Studying them causes your head to pound."
+	name = "стена с рунами"
+	desc = "Стена с непонятными рунами на ней, которые вызывают боли в голове, если долго смотреть на них. Холодная на ощупь."
 	icon = 'icons/turf/walls/cult_wall.dmi'
 	icon_state = "cult_wall-0"
 	base_icon_state = "cult_wall"
@@ -19,8 +19,8 @@
 	new sheet_type(get_turf(src), sheet_amount)
 
 /turf/closed/wall/mineral/cult/artificer
-	name = "runed stone wall"
-	desc = "A cold stone wall engraved with indecipherable symbols. Studying them causes your head to pound."
+	name = "стена с рунами"
+	desc = "Стена с непонятными рунами на ней, которые вызывают боли в голове, если долго смотреть на них. Холодная на ощупь."
 
 /turf/closed/wall/mineral/cult/artificer/break_wall()
 	new /obj/effect/temp_visual/cult/turf(get_turf(src))
@@ -33,7 +33,7 @@
 	icon = 'icons/turf/walls/icedmetal_wall.dmi'
 	icon_state = "icedmetal_wall-0"
 	base_icon_state = "icedmetal_wall"
-	desc = "A wall covered in a thick sheet of ice."
+	desc = "Стена покрытая льдом."
 	turf_flags = IS_SOLID
 	smoothing_flags = SMOOTH_BITMASK
 	canSmoothWith = null
@@ -63,8 +63,8 @@
 	AddElement(/datum/element/rust)
 
 /turf/closed/wall/mineral/bronze
-	name = "clockwork wall"
-	desc = "A huge chunk of bronze, decorated like gears and cogs."
+	name = "латунная стена"
+	desc = "Крупная латунная стена. Её украшивают также и латунные шестерни."
 	icon = 'icons/turf/walls/clockwork_wall.dmi'
 	icon_state = "clockwork_wall-0"
 	base_icon_state = "clockwork_wall"

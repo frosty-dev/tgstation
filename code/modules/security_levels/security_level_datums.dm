@@ -10,6 +10,8 @@
 	/// The name of this security level.
 	var/name = "not set"
 	/// The color of our announcement divider.
+	/// Похуй
+	var/ru_name = "не установлен"
 	var/announcement_color = "default"
 	/// The numerical level of this security level, see defines for more information.
 	var/number_level = -1
@@ -43,7 +45,8 @@
  * No threats
  */
 /datum/security_level/green
-	name = "зеленый"
+	name = "green"
+	ru_name = "зелёный"
 	announcement_color = "green"
 	sound = 'sound/misc/notice2.ogg' // Friendly beep
 	number_level = SEC_LEVEL_GREEN
@@ -56,8 +59,8 @@
  * Caution advised
  */
 /datum/security_level/blue
-	name = "синий"
-	announcement_color = "blue"
+	name = "blue"
+	ru_name = "синий"
 	sound = 'sound/misc/notice1.ogg' // Angry alarm
 	number_level = SEC_LEVEL_BLUE
 	lowering_to_configuration_key = /datum/config_entry/string/alert_blue_downto
@@ -70,8 +73,8 @@
  * Hostile threats
  */
 /datum/security_level/red
-	name = "красный"
-	announcement_color = "red"
+	name = "red"
+	ru_name = "красный"
 	sound = 'sound/misc/notice3.ogg' // More angry alarm
 	number_level = SEC_LEVEL_RED
 	lowering_to_configuration_key = /datum/config_entry/string/alert_red_downto
@@ -84,8 +87,8 @@
  * Station destruction is imminent
  */
 /datum/security_level/delta
-	name = "Дельта"
-	announcement_color = "purple"
+	name = "delta"
+	ru_name = "дельта"
 	sound = 'sound/misc/airraid.ogg' // Air alarm to signify importance
 	number_level = SEC_LEVEL_DELTA
 	elevating_to_configuration_key = /datum/config_entry/string/alert_delta

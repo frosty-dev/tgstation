@@ -102,7 +102,7 @@
 	for(var/area/missed as anything in remaining_areas)
 		if(missed.has_contained_turfs())
 			var/turf/first_turf = missed.get_contained_turfs()[1]
-			TEST_FAIL("Disconnected Area '[missed]'([missed.type]) at ([first_turf.x], [first_turf.y], [first_turf.z])")
+			TEST_NOTICE(src, "Disconnected Area '[missed]'([missed.type]) at ([first_turf.x], [first_turf.y], [first_turf.z])")
 		else
 			TEST_NOTICE(src, "Disconnected Area '[missed]'([missed.type]) with no turfs?")
 

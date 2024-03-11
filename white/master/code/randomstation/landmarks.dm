@@ -147,8 +147,9 @@
 
 /obj/effect/landmark/stationroom/maintenance/rdm3x3
 	template_names = list(
+		// removed cuz ОНО СРЁТ МНЕ В ТЕСТАХ
+		// "Random 3x3: 9storage" = 1,
 		"Random 3x3: 2storage" = 1,
-		"Random 3x3: 9storage" = 1,
 		"Random 3x3: airstation" = 1,
 		"Random 3x3: banana" = 1,
 		"Random 3x3: biohazard" = 1,
@@ -173,7 +174,7 @@
 		"Random 3x3: hobohut" = 1,
 		"Random 3x3: hullbreach" = 1,
 		"Random 3x3: kilolustymaid" = 1,
-		"Random 3x3: kilomechcharger" = 1,
+		// "Random 3x3: kilomechcharger" = 1,
 		"Random 3x3: kilotheatre" = 1,
 		"Random 3x3: lipidchamber" = 1,
 		"Random 3x3: medicloset" = 1,

@@ -1,6 +1,6 @@
 /turf/closed/indestructible
-	name = "wall"
-	desc = "Effectively impervious to conventional methods of destruction."
+	name = "стена"
+	desc = "Непробиваемая стена."
 	icon = 'icons/turf/walls.dmi'
 	explosive_resistance = 50
 
@@ -32,8 +32,8 @@
 	icon_state = "block"
 
 /turf/closed/indestructible/weeb
-	name = "paper wall"
-	desc = "Reinforced paper walling. Someone really doesn't want you to leave."
+	name = "бумажная стена"
+	desc = "Укрепленная бумажная стена. Кто-то действительно хочет, чтобы вы остались."
 	icon = 'icons/obj/smooth_structures/paperframes.dmi'
 	icon_state = "paperframes-0"
 	base_icon_state = "paperframes"
@@ -51,8 +51,8 @@
 	. += indestructible_paper
 
 /turf/closed/indestructible/sandstone
-	name = "sandstone wall"
-	desc = "A wall with sandstone plating. Rough."
+	name = "песчаниковая стена"
+	desc = "Стена с песчанниковым покрытием. Грубая."
 	icon = 'icons/turf/walls/sandstone_wall.dmi'
 	icon_state = "sandstone_wall-0"
 	base_icon_state = "sandstone_wall"
@@ -107,8 +107,8 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /turf/closed/indestructible/reinforced
-	name = "reinforced wall"
-	desc = "A huge chunk of reinforced metal used to separate rooms. Effectively impervious to conventional methods of destruction."
+	name = "армированная стена"
+	desc = "Здоровенный укреплённый кусок металла, который служит для разделения помещений."
 	icon = 'icons/turf/walls/rbaywall.dmi'
 	icon_state = "reinforced_wall-0"
 	base_icon_state = "reinforced_wall"
@@ -140,8 +140,8 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 	smoothing_flags = SMOOTH_BITMASK
 
 /turf/closed/indestructible/riveted/plastinum
-	name = "plastinum wall"
-	desc = "A luxurious wall made out of a plasma-platinum alloy. Effectively impervious to conventional methods of destruction."
+	name = "пластитановая стена"
+	desc = "Зловещая стена со пластитановым покрытием."
 	icon = 'icons/turf/walls/plastinum_wall.dmi'
 	icon_state = "plastinum_wall-0"
 	base_icon_state = "plastinum_wall"
@@ -163,8 +163,8 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 
 
 /turf/closed/indestructible/alien
-	name = "alien wall"
-	desc = "A wall with alien alloy plating."
+	name = "чужеродная стена"
+	desc = "Стена с инопланетным покрытием."
 	icon = 'icons/turf/walls/abductor_wall.dmi'
 	icon_state = "abductor_wall-0"
 	base_icon_state = "abductor_wall"
@@ -174,8 +174,8 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 
 
 /turf/closed/indestructible/cult
-	name = "runed metal wall"
-	desc = "A cold metal wall engraved with indecipherable symbols. Studying them causes your head to pound. Effectively impervious to conventional methods of destruction."
+	name = "стена с рунами"
+	desc = "Стена с непонятными рунами на ней, которые вызывают боли в голове если долго смотреть на них. Холодная на ощупь."
 	icon = 'icons/turf/walls/cult_wall.dmi'
 	icon_state = "cult_wall-0"
 	base_icon_state = "cult_wall"
@@ -192,7 +192,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 
 
 /turf/closed/indestructible/fakeglass
-	name = "window"
+	name = "окно"
 	icon = 'icons/obj/smooth_structures/reinforced_window.dmi'
 	icon_state = "fake_window"
 	base_icon_state = "reinforced_window"
@@ -207,7 +207,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 	underlays += mutable_appearance('icons/turf/floors.dmi', "plating", layer - 0.02) //add the plating underlay, below the grille
 
 /turf/closed/indestructible/opsglass
-	name = "window"
+	name = "окно"
 	icon = 'icons/obj/smooth_structures/plastitanium_window.dmi'
 	icon_state = "plastitanium_window-0"
 	base_icon_state = "plastitanium_window"
@@ -223,7 +223,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 	underlays += mutable_appearance('icons/turf/floors.dmi', "plating", layer - 0.02)
 
 /turf/closed/indestructible/fakedoor
-	name = "airlock"
+	name = "CentCom Access"
 	icon = 'icons/obj/doors/airlocks/centcom/centcom.dmi'
 	icon_state = "fake_door"
 
@@ -238,22 +238,22 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 	icon = 'icons/obj/doors/airlocks/station/engineering.dmi'
 
 /turf/closed/indestructible/rock
-	name = "dense rock"
-	desc = "An extremely densely-packed rock, most mining tools or explosives would never get through this."
+	name = "плотная скала"
+	desc = "Чрезвычайно плотная порода, большинство горнодобывающих орудий и взрывчатых веществ никогда не пройдет сквозь нее."
 	icon = 'icons/turf/mining.dmi'
 	icon_state = "rock"
 
 /turf/closed/indestructible/rock/snow
-	name = "mountainside"
-	desc = "An extremely densely-packed rock, sheeted over with centuries worth of ice and snow."
+	name = "склон горы"
+	desc = "Чрезвычайно плотная скала, покрытая льдом и снегом на протяжении столетий."
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "snowrock"
 	bullet_sizzle = TRUE
 	bullet_bounce_sound = null
 
 /turf/closed/indestructible/rock/snow/ice
-	name = "iced rock"
-	desc = "Extremely densely-packed sheets of ice and rock, forged over the years of the harsh cold."
+	name = "ледяной камень"
+	desc = "Чрезвычайно плотно заполненные ледяные и скальные покровы, выкованные за годы сильного холода."
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "icerock"
 
@@ -267,14 +267,14 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 	pixel_y = -4
 
 /turf/closed/indestructible/paper
-	name = "thick paper wall"
-	desc = "A wall layered with impenetrable sheets of paper."
+	name = "толстая бумажная стена"
+	desc = "Стена, покрытая непроницаемыми листами бумаги."
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "paperwall"
 
 /turf/closed/indestructible/necropolis
-	name = "necropolis wall"
-	desc = "A seemingly impenetrable wall."
+	name = "стена некрополя"
+	desc = "Казалось бы, непробиваемая стена."
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "necro"
 	explosive_resistance = 50
@@ -297,8 +297,8 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 	opacity = FALSE
 
 /turf/closed/indestructible/riveted/boss
-	name = "necropolis wall"
-	desc = "A thick, seemingly indestructible stone wall."
+	name = "стена некрополя"
+	desc = "Толстая, казалось бы, неразрушимая каменная стена."
 	icon = 'icons/turf/walls/boss_wall.dmi'
 	icon_state = "boss_wall-0"
 	base_icon_state = "boss_wall"
@@ -320,8 +320,8 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 	return TRUE
 
 /turf/closed/indestructible/riveted/hierophant
-	name = "wall"
-	desc = "A wall made out of a strange metal. The squares on it pulse in a predictable pattern."
+	name = "стена"
+	desc = "Стена, сделанная из странного металла. Квадраты на нем пульсируют предсказуемым образом."
 	icon = 'icons/turf/walls/hierophant_wall.dmi'
 	icon_state = "wall"
 	smoothing_flags = SMOOTH_CORNERS

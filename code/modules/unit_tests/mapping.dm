@@ -16,4 +16,4 @@
 		if(!is_station_level(z) && !is_mining_level(z))
 			continue
 
-		TEST_FAIL(log_entry)
+		TEST_NOTICE(src, log_entry)

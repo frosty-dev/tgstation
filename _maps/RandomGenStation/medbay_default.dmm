@@ -428,18 +428,6 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 8
 	},
-/obj/structure/table,
-/obj/item/stack/sheet/plastic/fifty,
-/obj/item/book/manual/wiki/medicine,
-/obj/item/storage/belt/medical{
-	pixel_y = 2
-	},
-/obj/item/storage/belt/medical{
-	pixel_y = 2
-	},
-/obj/item/clothing/glasses/hud/health,
-/obj/item/clothing/glasses/hud/health,
-/obj/item/reagent_containers/spray/cleaner,
 /obj/machinery/power/apc{
 	areastring = "/area/station/medical/storage";
 	dir = 4;
@@ -447,12 +435,9 @@
 	pixel_x = 25
 	},
 /obj/structure/cable,
-/obj/item/clothing/glasses/hud/health,
-/obj/item/clothing/glasses/hud/health,
-/obj/item/clothing/glasses/hud/health,
-/obj/item/clothing/glasses/hud/health,
-/obj/item/clothing/glasses/hud/health,
-/obj/item/blood_filter,
+/obj/machinery/computer/department_orders/medical{
+	dir = 8
+	},
 /turf/open/floor/iron/dark,
 /area/station/medical/storage)
 "cv" = (
@@ -5337,6 +5322,30 @@
 /obj/item/reagent_containers/syringe{
 	pixel_x = 6;
 	pixel_y = -3
+	},
+/obj/item/blood_filter,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/storage/belt/medical{
+	pixel_y = 2
+	},
+/obj/item/storage/belt/medical{
+	pixel_y = 2
+	},
+/obj/item/storage/belt/medical{
+	pixel_y = 2
+	},
+/obj/item/storage/belt/medical{
+	pixel_y = 2
+	},
+/obj/item/storage/belt/medical{
+	pixel_y = 2
 	},
 /turf/open/floor/iron/dark,
 /area/station/medical/storage)

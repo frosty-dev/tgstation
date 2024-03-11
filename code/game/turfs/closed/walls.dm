@@ -68,8 +68,8 @@
 	animate(src, 0.2 SECONDS, pixel_x = new_x, pixel_y = new_y)
 	add_traits(list(TRAIT_UNDENSE, TRAIT_EXPANDED_FOV), LEANING_TRAIT)
 	visible_message(
-		span_notice("[src] leans against [wall]."),
-		span_notice("You lean against [wall]."),
+		span_notice("[src] облокачивается о [wall]."),
+		span_notice("Облокачиваюсь о [wall]."),
 	)
 	RegisterSignals(src, list(
 		COMSIG_MOB_CLIENT_PRE_MOVE,
@@ -124,7 +124,7 @@
 	. += deconstruction_hints(user)
 
 /turf/closed/wall/proc/deconstruction_hints(mob/user)
-	return span_notice("The outer plating is <b>welded</b> firmly in place.")
+	return span_notice("Внешняя обшивка крепко <b>приварена</b>.")
 
 /turf/closed/wall/attack_tk()
 	return
@@ -200,16 +200,16 @@
 		return
 	if(prob(hardness))
 		playsound(src, 'sound/effects/meteorimpact.ogg', 100, TRUE)
-		user.say(pick(";RAAAAAAAARGH!", ";HNNNNNNNNNGGGGGGH!", ";GWAAAAAAAARRRHHH!", "NNNNNNNNGGGGGGGGHH!", ";AAAAAAARRRGH!" ), forced = "hulk")
+		user.say(pick(";РАААААААААААРГХ!", ";ХАНННННННЕННГГГГГХ!", ";ГВААААААААААААААРРРРРРРРРРР!", "НННННННЕННГГГГГГХХХХХХ!", ";АААААААААРРРГХ!" ), forced = "hulk")
 		hulk_recoil(arm, user)
 		dismantle_wall(1)
 
 	else
 		playsound(src, 'sound/effects/bang.ogg', 50, TRUE)
 		add_dent(WALL_DENT_HIT)
-		user.visible_message(span_danger("[user] smashes  [src]!"), \
-					span_danger("You smash  [src]!"), \
-					span_hear("You hear a booming smash!"))
+		user.visible_message(span_danger("[user] бьёт  [src]!"), \
+					span_danger("Бью [src]!") , \
+					span_hear("Слышу громкий удар по стене!"))
 	return TRUE
 
 /**
@@ -235,14 +235,14 @@
 	if(.)
 		return
 	user.changeNext_move(CLICK_CD_MELEE)
-	to_chat(user, span_notice("You push the wall but nothing happens!"))
+	to_chat(user, span_notice("Толкаю стену, но ничего не происходит!"))
 	playsound(src, 'sound/weapons/genhit.ogg', 25, TRUE)
 	add_fingerprint(user)
 
 /turf/closed/wall/attackby(obj/item/W, mob/user, params)
 	user.changeNext_move(CLICK_CD_MELEE)
 	if (!ISADVANCEDTOOLUSER(user))
-		to_chat(user, span_warning("You don't have the dexterity to do this!"))
+		to_chat(user, span_warning("У меня не хватает ловкости, чтобы сделать это!"))
 		return
 
 	//get the user's location
@@ -265,10 +265,10 @@
 		if(!W.tool_start_check(user, amount=1))
 			return FALSE
 
-		to_chat(user, span_notice("You begin fixing dents on the wall..."))
+		to_chat(user, span_notice("Начинаю чинить стену..."))
 		if(W.use_tool(src, user, 0, volume=100))
 			if(iswallturf(src) && LAZYLEN(dent_decals))
-				to_chat(user, span_notice("You fix some dents on the wall."))
+				to_chat(user, span_notice("Стена починена."))
 				cut_overlay(dent_decals)
 				dent_decals.Cut()
 			return TRUE
@@ -294,10 +294,10 @@
 		if(!I.tool_start_check(user, amount=round(slicing_duration / 50)))
 			return FALSE
 
-		to_chat(user, span_notice("You begin slicing through the outer plating..."))
+		to_chat(user, span_notice("Начинаю разваривать стену..."))
 		if(I.use_tool(src, user, slicing_duration, volume=100))
 			if(iswallturf(src))
-				to_chat(user, span_notice("You remove the outer plating."))
+				to_chat(user, span_notice("После недолгого ожидания удалось снять верхнюю обшивку."))
 				dismantle_wall()
 			return TRUE
 

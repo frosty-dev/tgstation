@@ -3840,9 +3840,6 @@
 /area/station/hallway/primary/central/east)
 "qk" = (
 /obj/machinery/camera/autoname/directional/east,
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/east)
 "ql" = (
@@ -6122,7 +6119,7 @@ xh
 ob
 rd
 qy
-qk
+Si
 ql
 eg
 qz
@@ -6137,7 +6134,7 @@ Si
 KZ
 bW
 Si
-qk
+Si
 qI
 aj
 HH
@@ -6198,7 +6195,7 @@ Zh
 ob
 Ym
 aj
-aj
+qk
 dz
 aj
 HK
@@ -6213,7 +6210,7 @@ Ov
 aj
 aj
 aj
-aj
+qk
 aj
 aj
 aj

@@ -3,7 +3,7 @@
 /**********************Mineral deposits**************************/
 
 /turf/closed/mineral //wall piece
-	name = "rock"
+	name = "камень"
 	icon = MAP_SWITCH('icons/turf/smoothrocks.dmi', 'icons/turf/mining.dmi')
 	icon_state = "rock"
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
@@ -89,7 +89,7 @@
 
 /turf/closed/mineral/attackby(obj/item/I, mob/user, params)
 	if (!ISADVANCEDTOOLUSER(user))
-		to_chat(usr, span_warning("You don't have the dexterity to do this!"))
+		to_chat(usr, span_warning("Маловато у меня сил для такой работы!"))
 		return
 
 	if(I.tool_behaviour != TOOL_MINING)
@@ -103,7 +103,7 @@
 
 	TIMER_COOLDOWN_START(src, REF(user), tool_mine_speed)
 
-	balloon_alert(user, "picking...")
+	to_chat(user, span_notice("Начинаю копать..."))
 
 	if(!I.use_tool(src, user, tool_mine_speed, volume=50))
 		TIMER_COOLDOWN_END(src, REF(user)) //if we fail we can start again immediately
@@ -170,7 +170,7 @@
 	..()
 	if(do_after(H, 50, target = src))
 		playsound(src, 'sound/effects/meteorimpact.ogg', 100, TRUE)
-		H.say(pick(";RAAAAAAAARGH!", ";HNNNNNNNNNGGGGGGH!", ";GWAAAAAAAARRRHHH!", "NNNNNNNNGGGGGGGGHH!", ";AAAAAAARRRGH!" ), forced = "hulk")
+		H.say(pick(";РАААААААААААРГХ!", ";ХАНННННННЕННГГГГГХ!", ";ГВААААААААААААААРРРРРРРРРРР!", "НННННННЕННГГГГГГХХХХХХ!", ";АААААААААРРРГХ!" ), forced = "hulk")
 		gets_drilled(H)
 	return TRUE
 
@@ -341,7 +341,7 @@
 	turf_flags = NO_RUINS
 
 /turf/closed/mineral/random/snow
-	name = "snowy mountainside"
+	name = "заснеженный склон горы"
 	icon = MAP_SWITCH('icons/turf/walls/mountain_wall.dmi', 'icons/turf/mining.dmi')
 	icon_state = "mountainrock"
 	base_icon_state = "mountain_wall"
@@ -448,7 +448,7 @@
 
 // Subtypes for mappers placing ores manually.
 /turf/closed/mineral/random/labormineral/ice
-	name = "snowy mountainside"
+	name = "заснеженный склон горы"
 	icon = MAP_SWITCH('icons/turf/walls/mountain_wall.dmi', 'icons/turf/mining.dmi')
 	icon_state = "mountainrock"
 	base_icon_state = "mountain_wall"
@@ -577,7 +577,7 @@
 	defer_change = TRUE
 
 /turf/closed/mineral/ash_rock //wall piece
-	name = "rock"
+	name = "камень"
 	icon = 'icons/turf/mining.dmi'
 	icon = MAP_SWITCH('icons/turf/walls/rock_wall.dmi', 'icons/turf/mining.dmi')
 	icon_state = "rock2"
@@ -590,7 +590,7 @@
 	defer_change = TRUE
 
 /turf/closed/mineral/snowmountain
-	name = "snowy mountainside"
+	name = "заснеженный склон горы"
 	icon = MAP_SWITCH('icons/turf/walls/mountain_wall.dmi', 'icons/turf/mining.dmi')
 	icon_state = "mountainrock"
 	base_icon_state = "mountain_wall"
@@ -613,7 +613,7 @@
 	baseturfs = /turf/open/misc/asteroid/snow/icemoon/do_not_scrape
 
 /turf/closed/mineral/snowmountain/cavern
-	name = "ice cavern rock"
+	name = "ледяная скала пещеры"
 	icon = MAP_SWITCH('icons/turf/walls/icerock_wall.dmi', 'icons/turf/mining.dmi')
 	icon_state = "icerock"
 	base_icon_state = "icerock_wall"
@@ -687,10 +687,10 @@
 		activated_overlay = mutable_appearance('icons/turf/smoothrocks.dmi', "rock_Gibtonite_inactive", ON_EDGED_TURF_LAYER) //shows in gaps between pulses if there are any
 		SET_PLANE(activated_overlay, WALL_PLANE_UPPER, src)
 		add_overlay(activated_overlay)
-		name = "gibtonite deposit"
-		desc = "An active gibtonite reserve. Run!"
+		name = "месторождение гибтонита"
+		desc = "Активный резерв гибтонита. Беги!"
 		stage = GIBTONITE_ACTIVE
-		visible_message(span_danger("There's gibtonite inside! It's going to explode!"))
+		visible_message(span_danger("ДА ЭТО ЖЕ ГИБТОНИТ! ОН СЕЙЧАС ВЗОРВЁТСЯ!"))
 
 		var/notify_admins = !is_mining_level(z)
 
@@ -719,11 +719,11 @@
 		cut_overlay(activated_overlay)
 		activated_overlay.icon_state = "rock_Gibtonite_inactive"
 		add_overlay(activated_overlay)
-		desc = "An inactive gibtonite reserve. The ore can be extracted."
+		desc = "Неактивный резерв гибтонита. Руду можно добывать."
 		stage = GIBTONITE_STABLE
 		if(det_time < 0)
 			det_time = 0
-		visible_message(span_notice("The chain reaction stopped! The gibtonite had [det_time] reactions left till the explosion!"))
+		visible_message(span_notice("Цепная реакция была остановлена! Гибтонит содержал [det_time] реакций, оставшихся до взрыва!"))
 		if(defuser)
 			SEND_SIGNAL(defuser, COMSIG_LIVING_DEFUSED_GIBTONITE, det_time)
 
@@ -779,8 +779,8 @@
 	initial_gas_mix = ICEMOON_DEFAULT_ATMOS
 
 /turf/closed/mineral/strong
-	name = "Very strong rock"
-	desc = "Seems to be stronger than the other rocks in the area. Only a master of mining techniques could destroy this."
+	name = "очень крепкий камень"
+	desc = "Похоже, что он сильнее других камней в этом районе. Только мастер горного дела сможет уничтожить это."
 	turf_type = /turf/open/misc/asteroid/basalt/lava_land_surface
 	baseturfs = /turf/open/misc/asteroid/basalt/lava_land_surface
 	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
@@ -791,12 +791,12 @@
 
 /turf/closed/mineral/strong/attackby(obj/item/I, mob/user, params)
 	if(!ishuman(user))
-		to_chat(usr, span_warning("Only a more advanced species could break a rock such as this one!"))
+		to_chat(usr, span_warning("Только более продвинутый в своих способностях вид мог бы разбить такую скалу, как эта!"))
 		return FALSE
 	if(user.mind?.get_skill_level(/datum/skill/mining) >= SKILL_LEVEL_MASTER)
 		. = ..()
 	else
-		to_chat(usr, span_warning("The rock seems to be too strong to destroy. Maybe I can break it once I become a master miner."))
+		to_chat(usr, span_warning("Похоже, камень слишком крепок, чтобы его уничтожить. Может быть, я смогу сломать его, когда стану главным шахтёром."))
 
 
 /turf/closed/mineral/strong/gets_drilled(mob/user, give_exp = FALSE)
