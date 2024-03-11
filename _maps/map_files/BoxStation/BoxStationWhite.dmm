@@ -17008,7 +17008,6 @@
 "gHX" = (
 /obj/structure/lattice,
 /obj/machinery/light/floor,
-/obj/machinery/light/floor,
 /turf/open/openspace,
 /area/station/service/hydroponics)
 "gIF" = (
