@@ -1,3 +1,0 @@
-/obj/machinery/light:
-  banned_neighbors:
-  - /obj/machinery/light
