@@ -956,6 +956,13 @@
 /obj/effect/mapping_helpers/airlock/access/any/engineering/general,
 /turf/open/floor/iron,
 /area/station/engineering/main)
+"avv" = (
+/obj/effect/turf_decal/tile/dark_green{
+	dir = 4
+	},
+/obj/machinery/computer/department_orders/service,
+/turf/open/floor/iron,
+/area/station/hallway/secondary/service)
 "avR" = (
 /obj/effect/turf_decal/delivery,
 /obj/machinery/portable_atmospherics/canister/plasma,
@@ -13262,6 +13269,9 @@
 /area/station/maintenance/bottom_station_maints/north)
 "ftd" = (
 /obj/structure/cable,
+/obj/machinery/computer/department_orders/science{
+	dir = 8
+	},
 /turf/open/floor/iron/white/side,
 /area/station/science/lab)
 "fte" = (
@@ -23459,6 +23469,9 @@
 /obj/machinery/airalarm/directional/west{
 	pixel_x = -23
 	},
+/obj/machinery/computer/department_orders/engineering{
+	dir = 4
+	},
 /turf/open/floor/iron,
 /area/station/engineering)
 "jiy" = (
@@ -27400,13 +27413,13 @@
 /turf/open/genturf,
 /area/station/maintenance/bottom_station_maints/south)
 "kHi" = (
-/obj/structure/filingcabinet/chestdrawer,
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
+/obj/machinery/drone_dispenser,
 /turf/open/floor/iron/white,
 /area/station/science/robotics/lab)
 "kHm" = (
@@ -49476,9 +49489,6 @@
 /turf/open/openspace/airless,
 /area/space/nearstation)
 "tnK" = (
-/obj/machinery/computer/department_orders/science{
-	dir = 1
-	},
 /obj/effect/turf_decal/tile/brown/opposingcorners{
 	dir = 1
 	},
@@ -57076,6 +57086,12 @@
 	},
 /turf/open/floor/iron,
 /area/station/commons/storage/primary)
+"vZu" = (
+/obj/machinery/computer/department_orders/security{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/station/security/processing)
 "vZy" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -153240,7 +153256,7 @@ rdI
 eQT
 cAM
 jnX
-nQf
+vZu
 jWZ
 njW
 pey
@@ -164051,7 +164067,7 @@ aMu
 uic
 sxp
 hjP
-htX
+avv
 bux
 bux
 dUj

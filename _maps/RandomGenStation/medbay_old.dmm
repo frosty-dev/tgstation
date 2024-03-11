@@ -568,15 +568,10 @@
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
 "fo" = (
-/obj/structure/table,
-/obj/item/storage/box/bodybags{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/storage/box/rxglasses,
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 1
 	},
+/obj/machinery/computer/department_orders/medical,
 /turf/open/floor/iron/white,
 /area/station/medical/storage)
 "fs" = (
@@ -3686,6 +3681,11 @@
 	pixel_x = 30
 	},
 /obj/effect/turf_decal/tile/blue,
+/obj/item/storage/box/rxglasses,
+/obj/item/storage/box/bodybags{
+	pixel_x = 3;
+	pixel_y = 3
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/storage)
 "IK" = (
