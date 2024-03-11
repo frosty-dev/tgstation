@@ -215,6 +215,9 @@
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_SLUDGE, CELL_VIRUS_TABLE_GENERIC, rand(2,4), 10)
 	dry()
 
+/obj/effect/decal/cleanable/blood/gibs/old/proc/NeverShouldHaveComeHere(turf/here_turf)
+	return isclosedturf(here_turf)
+
 /obj/effect/decal/cleanable/blood/drip
 	name = "капельки крови"
 	desc = "Красненькие."
