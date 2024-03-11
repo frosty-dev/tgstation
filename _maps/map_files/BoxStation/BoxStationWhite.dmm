@@ -53628,6 +53628,10 @@
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/iron/large,
 /area/station/hallway/secondary/entry/public)
+"uKA" = (
+/obj/structure/cable,
+/turf/closed/wall/r_wall,
+/area/station/science/xenobiology)
 "uKB" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance{
@@ -60120,6 +60124,10 @@
 /obj/effect/turf_decal/tile/brown,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/qm)
+"xju" = (
+/obj/structure/cable,
+/turf/closed/wall,
+/area/station/maintenance/department/electrical)
 "xjC" = (
 /obj/structure/cable,
 /obj/structure/railing{
@@ -106289,7 +106297,7 @@ wSW
 wSW
 rAK
 bse
-wSW
+uKA
 nJR
 eDB
 cSr
@@ -175882,7 +175890,7 @@ osS
 uFJ
 uFJ
 juy
-dvh
+xju
 dvh
 slq
 aED
