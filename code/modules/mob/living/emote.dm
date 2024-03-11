@@ -102,8 +102,8 @@
 	message_robot = "сильно дрожит на мгновение, прежде чем замереть неподвижно, глаза медленно темнеют."
 	message_AI = "выбрасывает шквал искр, его экран мерцает, когда его системы медленно останавливаются."
 	message_alien = "издаёт ослабевающий гортанный визг, зеленая кровь течёт из пасти...."
-	message_larva = "издаёт болезненное шипение и падает вяло на пол...."
-	message_monkey = "издаёт слабый звук, затем падает и перестаёт двигаться...."
+	message_larva = "издаёт болезненное шипение и вяло падает на пол...."
+	message_monkey = "издаёт слабый стон, затем падает и перестаёт двигаться...."
 	message_animal_or_basic =  "перестаёт двигаться..."
 	emote_type = EMOTE_VISIBLE | EMOTE_AUDIBLE | EMOTE_IMPORTANT
 	cooldown = (15 SECONDS)
@@ -295,7 +295,7 @@
 		to_chat(user, span_notice("Готовлю свою руку для воздушного поцелуя."))
 	else
 		qdel(kiss_blower)
-		to_chat(user, span_warning("Не могу пока целовать!"))
+		to_chat(user, span_warning("Пока что не могу послать воздушный поцелуй!"))
 
 /datum/emote/living/laugh
 	key = "laugh"
@@ -596,7 +596,7 @@
 	key_third_person = "yawns"
 	message = "зевает."
 	message_mime = "изображает наигранный молчаливый зевок."
-	message_robot = "мелодично зевает." //симпатически звучит плохо, пусть уж будут музыкой
+	message_robot = "мелодично зевает."
 	message_AI = "мелодично зевает."
 	emote_type = EMOTE_VISIBLE | EMOTE_AUDIBLE
 	cooldown = 5 SECONDS
