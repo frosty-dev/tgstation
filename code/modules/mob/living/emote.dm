@@ -35,7 +35,7 @@
 	ru_name = "отрыгивать"
 	key_third_person = "burps"
 	message = "отрыгивает."
-	message_mime = "acts out a burp."
+	message_mime = "изображает отрыжку."
 	emote_type = EMOTE_VISIBLE | EMOTE_AUDIBLE
 
 /datum/emote/living/choke
