@@ -286,7 +286,7 @@
 	static_inventory += zone_select
 
 	if(owner)
-		add_emote_panel(owner) //по хорошему не тут должно создавать кнопку...
+		add_emote_panel(owner)
 
 	combo_display = new /atom/movable/screen/combo(null, src)
 	infodisplay += combo_display

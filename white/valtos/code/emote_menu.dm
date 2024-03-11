@@ -6,7 +6,6 @@
 	using.screen_loc = ui_emotes
 	if(ishuman(owner))
 		using.screen_loc = ui_emotes //не забыть~
-	using.hud = src
 	infodisplay += using
 
 /atom/movable/screen/emote_button
