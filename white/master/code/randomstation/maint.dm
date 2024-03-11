@@ -11,6 +11,11 @@
 	suffix = "sk_rdm001_9storage.dmm"
 	name = "Random 3x3: 9storage"
 
+/datum/map_template/ruin/maint/rdm3x3/storage2
+	id = "rdm_3x3_2storage"
+	suffix = "sk_rdm008_2storage.dmm"
+	name = "Random 3x3: 2storage"
+
 /datum/map_template/ruin/maint/rdm3x3/shrine
 	id = "rdm_3x3_shrine"
 	suffix = "sk_rdm002_shrine.dmm"
@@ -40,11 +45,6 @@
 	id = "rdm_3x3_radspill"
 	suffix = "sk_rdm007_radspill.dmm"
 	name = "Random 3x3: radspill"
-
-/datum/map_template/ruin/maint/rdm3x3/storage2
-	id = "rdm_3x3_2storage"
-	suffix = "sk_rdm008_2storage.dmm"
-	name = "Random 3x3: 2storage"
 
 /datum/map_template/ruin/maint/rdm3x3/airstation
 	id = "rdm_3x3_airstation"
