@@ -12,6 +12,7 @@
 /datum/emote
 	/// What calls the emote.
 	var/key = ""
+	var/ru_name = null
 	/// This will also call the emote.
 	var/key_third_person = ""
 	/// Message displayed when emote is used.

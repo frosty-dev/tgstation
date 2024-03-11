@@ -167,6 +167,8 @@
 	zone_select.update_appearance()
 	static_inventory += zone_select
 
+	if(owner)
+		add_emote_panel(owner)
 
 /datum/hud/proc/toggle_show_robot_modules()
 	if(!iscyborg(mymob))
