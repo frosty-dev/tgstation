@@ -47407,10 +47407,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron/large,
 /area/station/security/brig/upper)
-"szn" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/closed/wall/r_wall,
-/area/station/science/explab)
 "szz" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -176718,7 +176714,7 @@ dMI
 eSz
 qOx
 hwt
-szn
+iez
 oXp
 eyR
 pJF
