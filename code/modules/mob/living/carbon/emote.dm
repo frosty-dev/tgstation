@@ -3,22 +3,26 @@
 
 /datum/emote/living/carbon/airguitar
 	key = "airguitar"
-	message = "is strumming the air and headbanging like a safari chimp."
+	ru_name = "играть на гитаре"
+	message = "делает вид, что играет на гитаре."
 	hands_use_check = TRUE
 
 /datum/emote/living/carbon/blink
 	key = "blink"
-	key_third_person = "blinks"
-	message = "blinks."
+	ru_name = "моргнуть"
+	key_third_person = "моргает"
+	message = "моргает."
 
 /datum/emote/living/carbon/blink_r
 	key = "blink_r"
-	message = "blinks rapidly."
+	ru_name = "быстро моргнуть"
+	message = "быстро моргает."
 
 /datum/emote/living/carbon/clap
 	key = "clap"
-	key_third_person = "claps"
-	message = "claps."
+	ru_name = "хлопать"
+	key_third_person = "хлопает"
+	message = "хлопает."
 	muzzle_ignore = TRUE
 	hands_use_check = TRUE
 	emote_type = EMOTE_AUDIBLE | EMOTE_VISIBLE
@@ -37,8 +41,9 @@
 
 /datum/emote/living/carbon/crack
 	key = "crack"
-	key_third_person = "cracks"
-	message = "cracks their knuckles."
+	ru_name = "хрустеть"
+	key_third_person = "хрустит пальцами"
+	message = "хрустит пальцами."
 	sound = 'sound/misc/knuckles.ogg'
 	cooldown = 6 SECONDS
 
@@ -49,59 +54,48 @@
 
 /datum/emote/living/carbon/circle
 	key = "circle"
+	ru_name = "рука-круг"
 	key_third_person = "circles"
 	hands_use_check = TRUE
 
 /datum/emote/living/carbon/circle/run_emote(mob/user, params, type_override, intentional)
 	. = ..()
 	if(!length(user.get_empty_held_indexes()))
-		to_chat(user, span_warning("You don't have any free hands to make a circle with."))
+		to_chat(user, span_warning("Да у меня и рук свободных нет."))
 		return
 	var/obj/item/hand_item/circlegame/N = new(user)
 	if(user.put_in_hands(N))
-		to_chat(user, span_notice("You make a circle with your hand."))
+		to_chat(user, span_notice("Изображаю круг рукой."))
 
 /datum/emote/living/carbon/moan
 	key = "moan"
-	key_third_person = "moans"
-	message = "moans!"
-	message_mime = "appears to moan!"
+	ru_name = "стонать"
+	key_third_person = "стонет"
+	message = "стонет!"
+	message_mime = "изображает стон!"
 	emote_type = EMOTE_AUDIBLE | EMOTE_VISIBLE
-
-/datum/emote/living/carbon/noogie
-	key = "noogie"
-	key_third_person = "noogies"
-	hands_use_check = TRUE
-
-/datum/emote/living/carbon/noogie/run_emote(mob/user, params, type_override, intentional)
-	. = ..()
-	if(!.)
-		return
-	var/obj/item/hand_item/noogie/noogie = new(user)
-	if(user.put_in_hands(noogie))
-		to_chat(user, span_notice("You ready your noogie'ing hand."))
-	else
-		qdel(noogie)
-		to_chat(user, span_warning("You're incapable of noogie'ing in your current state."))
 
 /datum/emote/living/carbon/roll
 	key = "roll"
-	key_third_person = "rolls"
-	message = "rolls."
+	ru_name = "перекатываться"
+	key_third_person = "перекатывается"
+	message = "перекатывается."
 	mob_type_allowed_typecache = list(/mob/living/carbon/alien)
 	hands_use_check = TRUE
 
 /datum/emote/living/carbon/scratch
 	key = "scratch"
-	key_third_person = "scratches"
-	message = "scratches."
+	ru_name = "чесаться"
+	key_third_person = "чешется"
+	message = "чешется."
 	mob_type_allowed_typecache = list(/mob/living/carbon/alien)
 	hands_use_check = TRUE
 
 /datum/emote/living/carbon/sign
 	key = "sign"
-	key_third_person = "signs"
-	message_param = "signs the number %t."
+	ru_name = "петь"
+	key_third_person = "напевает"
+	message_param = "напевает ноту %t."
 	mob_type_allowed_typecache = list(/mob/living/carbon/alien)
 	hands_use_check = TRUE
 
@@ -112,14 +106,16 @@
 
 /datum/emote/living/carbon/sign/signal
 	key = "signal"
-	key_third_person = "signals"
-	message_param = "raises %t fingers."
+	ru_name = "сигнал"
+	key_third_person = "поднимает палец"
+	message_param = "поднимает %t палец."
 	mob_type_allowed_typecache = list(/mob/living/carbon/human)
 	hands_use_check = TRUE
 
 /datum/emote/living/carbon/slap
 	key = "slap"
-	key_third_person = "slaps"
+	ru_name = "шлёпать"
+	key_third_person = "шлёпает"
 	hands_use_check = TRUE
 	cooldown = 3 SECONDS // to prevent endless table slamming
 
@@ -129,36 +125,17 @@
 		return
 	var/obj/item/hand_item/slapper/N = new(user)
 	if(user.put_in_hands(N))
-		to_chat(user, span_notice("You ready your slapping hand."))
+		to_chat(user, span_notice("Готовлюсь шлёпнуть."))
 	else
 		qdel(N)
-		to_chat(user, span_warning("You're incapable of slapping in your current state."))
-
-
-/datum/emote/living/carbon/hand
-	key = "hand"
-	key_third_person = "hands"
-	hands_use_check = TRUE
-
-
-/datum/emote/living/carbon/hand/run_emote(mob/user, params, type_override, intentional)
-	. = ..()
-	if(!.)
-		return
-
-	var/obj/item/hand_item/hand/hand = new(user)
-	if(user.put_in_hands(hand))
-		to_chat(user, span_notice("You ready your hand."))
-	else
-		qdel(hand)
-		to_chat(user, span_warning("You're incapable of using your hand in your current state."))
-
+		to_chat(user, span_warning("Пока не могу шлёпать."))
 
 /datum/emote/living/carbon/snap
 	key = "snap"
-	key_third_person = "snaps"
-	message = "snaps their fingers."
-	message_param = "snaps their fingers at %t."
+	ru_name = "щёлкать"
+	key_third_person = "щёлкает"
+	message = "щёлкает пальцами."
+	message_param = "щелкает пальцами в сторону %t."
 	emote_type = EMOTE_AUDIBLE
 	hands_use_check = TRUE
 	muzzle_ignore = TRUE
@@ -170,7 +147,8 @@
 
 /datum/emote/living/carbon/shoesteal
 	key = "shoesteal"
-	key_third_person = "shoesteals"
+	ru_name = "украсть обувь"
+	key_third_person = "крадёт обувь"
 	hands_use_check = TRUE
 	cooldown = 3 SECONDS
 
@@ -180,17 +158,19 @@
 		return
 	var/obj/item/hand_item/stealer/stealing_hand = new(user)
 	if (user.put_in_hands(stealing_hand))
-		user.balloon_alert(user, "preparing to steal shoes...")
+		user.balloon_alert(user, "готовлюсь украсть обувь...")
 	else
 		qdel(stealing_hand)
-		user.balloon_alert(user, "you can't steal shoes!")
+		user.balloon_alert(user, "не могу!")
 
 /datum/emote/living/carbon/tail
 	key = "tail"
-	message = "waves their tail."
+	ru_name = "махать"
+	message = "машет хвостом."
 	mob_type_allowed_typecache = list(/mob/living/carbon/alien)
 
 /datum/emote/living/carbon/wink
 	key = "wink"
-	key_third_person = "winks"
-	message = "winks."
+	ru_name = "подмигнуть"
+	key_third_person = "подмигивает"
+	message = "подмигивает."

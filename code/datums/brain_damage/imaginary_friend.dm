@@ -333,9 +333,10 @@
 
 /datum/emote/imaginary_friend/point
 	key = "point"
-	key_third_person = "points"
-	message = "points."
-	message_param = "points at %t."
+	ru_name = "указать"
+	key_third_person = "указывает"
+	message = "указывает."
+	message_param = "указывает на %t."
 
 /datum/emote/imaginary_friend/point/run_emote(mob/camera/imaginary_friend/friend, params, type_override, intentional)
 	message_param = initial(message_param) // reset

@@ -5,7 +5,7 @@
 	using.icon = ui_style
 	using.screen_loc = ui_emotes
 	if(ishuman(owner))
-		using.screen_loc = ui_emotes //не забыть~
+		using.screen_loc = ui_emotes
 	infodisplay += using
 
 /atom/movable/screen/emote_button
@@ -13,6 +13,8 @@
 	icon = 'icons/hud/screen_midnight.dmi'
 	icon_state = "emotes"
 	var/cooldown = 0
+
+	var/banned_emotes = list(/datum/emote/living/custom, /datum/emote/help)
 
 /atom/movable/screen/emote_button/Click()
 	ui_interact(usr)
@@ -38,6 +40,10 @@
 		for(var/datum/emote/P in GLOB.emote_list[key])
 			if(P.key in keys)
 				continue
+
+			if (istype(P, /datum/emote/living/custom) || istype(P, /datum/emote/help))
+				continue
+
 			if(P.can_run_emote(user, status_check = FALSE , intentional = TRUE))
 				keys += P.key
 				L.Add(list(list("name" = P.key, "ru_name" = capitalize(P.ru_name))))

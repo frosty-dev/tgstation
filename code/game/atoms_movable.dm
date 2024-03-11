@@ -427,11 +427,11 @@
 			if(rider)
 				to_chat(rider, span_notice("[src] не умеет летать."))
 			else
-				to_chat(src, span_notice("Не умею летать."))
+				to_chat(src, span_warning("Не умею летать."))
 		return FALSE
 	if((!(z_move_flags & ZMOVE_IGNORE_OBSTACLES) && !(start.zPassOut(direction) && destination.zPassIn(direction))) || (!(z_move_flags & ZMOVE_ALLOW_ANCHORED) && anchored))
 		if(z_move_flags & ZMOVE_FEEDBACK)
-			to_chat(rider || src, span_warning("You couldn't move there!"))
+			to_chat(rider || src, span_warning("Не могу тут пройти!"))
 		return FALSE
 	return destination //used by some child types checks and zMove()
 
