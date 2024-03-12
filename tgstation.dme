@@ -5936,4 +5936,12 @@
 #include "white\master\code\randomstation\station.dm"
 #include "white\master\code\serverside\looc.dm"
 #include "white\valtos\code\emote_menu.dm"
+#include "white\valtos\code\exrp\_dance.dm"
+#include "white\valtos\code\exrp\_interaction.dm"
+#include "white\valtos\code\exrp\dance_code.dm"
+#include "white\valtos\code\exrp\dance_definitions.dm"
+#include "white\valtos\code\exrp\dance_mob.dm"
+#include "white\valtos\code\exrp\interaction_interface.dm"
+#include "white\valtos\code\exrp\interaction_whitelist.dm"
+#include "white\valtos\code\exrp\smetanka.dm"
 // END_INCLUDE
