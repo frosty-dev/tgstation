@@ -20,7 +20,6 @@
 
 	var/message
 	if(gender == MALE)
-
 		if(!istype(partner))
 			target_dancise = null
 

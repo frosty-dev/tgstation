@@ -1,5 +1,3 @@
-///меня часто просят выпилить это говно, но потом просят вернуть, в пизду, боьше не трону
-
 /mob/living/carbon/human
 	var/dancing_potency =  15
 	var/dancing_tolerance = 100

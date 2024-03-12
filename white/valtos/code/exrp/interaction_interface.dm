@@ -16,8 +16,9 @@
 
 /mob/living/carbon/human/proc/try_interaction(mob/partner)
 
-	if (!check_rights_for(client, R_ADMIN) && !check_whitelist_exrp(ckey))
-		return
+	// disabled for now
+	// if (!check_rights_for(client, R_ADMIN) && !check_whitelist_exrp(ckey))
+	// 	return
 
 	var/dat = ""
 

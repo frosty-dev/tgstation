@@ -469,6 +469,7 @@
 #include "code\__HELPERS\logging\debug.dm"
 #include "code\__HELPERS\logging\dynamic.dm"
 #include "code\__HELPERS\logging\economy.dm"
+#include "code\__HELPERS\logging\expr.dm"
 #include "code\__HELPERS\logging\game.dm"
 #include "code\__HELPERS\logging\manifest.dm"
 #include "code\__HELPERS\logging\mecha.dm"
@@ -5936,6 +5937,8 @@
 #include "white\master\code\randomstation\station.dm"
 #include "white\master\code\serverside\looc.dm"
 #include "white\valtos\code\emote_menu.dm"
+#include "white\valtos\code\__DEFINES\dance.dm"
+#include "white\valtos\code\_globalvars\dancing.dm"
 #include "white\valtos\code\exrp\_dance.dm"
 #include "white\valtos\code\exrp\_interaction.dm"
 #include "white\valtos\code\exrp\dance_code.dm"
@@ -5944,4 +5947,5 @@
 #include "white\valtos\code\exrp\interaction_interface.dm"
 #include "white\valtos\code\exrp\interaction_whitelist.dm"
 #include "white\valtos\code\exrp\smetanka.dm"
+#include "white\valtos\code\modules\reagents\chemistry\reagents\food_reagents.dm"
 // END_INCLUDE

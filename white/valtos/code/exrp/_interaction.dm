@@ -18,7 +18,7 @@
 	var/require_target_mouth = FALSE
 	var/needs_physical_contact = FALSE
 
-	var/cooldaun = 0
+	var/cooldown = 0
 
 	var/user_not_tired = FALSE
 	var/target_not_tired = FALSE
@@ -103,7 +103,7 @@
 	return FALSE
 
 /datum/interaction/proc/do_action(mob/living/carbon/human/user, mob/living/carbon/human/target)
-	if(cooldaun)
+	if(cooldown)
 		return
 	if(get_dist(user, target) > max_distance)
 		to_chat(user, span_warning("<b>[target.name]</b> слишком далеко."))
@@ -117,10 +117,11 @@
 		return
 	if(user.stat != CONSCIOUS)
 		return
-	if(!check_rights_for(user.client, R_ADMIN) && !check_whitelist_exrp(user.ckey))
-		return
+	// disabled for now
+	// if(!check_rights_for(user.client, R_ADMIN) && !check_whitelist_exrp(user.ckey))
+		// return
 
-	cooldaun = 3
+	cooldown = 3
 
 	display_interaction(user, target)
 
@@ -140,7 +141,7 @@
 
 /datum/interaction/proc/post_interaction(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	spawn(1)
-		cooldaun = 0
+		cooldown = 0
 	if(user_dancing_cost)
 		user.dancing += user_dancing_cost
 	if(target_dancing_cost)

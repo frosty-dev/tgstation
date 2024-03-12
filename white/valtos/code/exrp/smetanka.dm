@@ -30,10 +30,15 @@
 		H.visible_message(span_alert("[H] слизывает сметанку с пола."))
 		if(reagents)
 			for(var/datum/reagent/R in reagents.reagent_list)
-				if (istype(R, /datum/reagent/consumable))
-					var/datum/reagent/consumable/nutri_check = R
-					if(nutri_check.nutriment_factor >0)
-						H.adjust_nutrition(nutri_check.nutriment_factor * nutri_check.volume)
-						reagents.remove_reagent(nutri_check.type,nutri_check.volume)
-		reagents.trans_to(H, reagents.total_volume, transfered_by = user)
+				if (!istype(R, /datum/reagent/consumable))
+					continue
+
+				var/datum/reagent/consumable/nutri_check = R
+				if(nutri_check.nutriment_factor <= 0)
+					continue
+
+				H.adjust_nutrition(nutri_check.nutriment_factor * nutri_check.volume)
+				reagents.remove_reagent(nutri_check.type,nutri_check.volume)
+
+		reagents.trans_to(H, reagents.total_volume)
 		qdel(src)

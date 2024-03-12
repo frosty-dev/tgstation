@@ -1,5 +1,7 @@
 ###Files and folders specified here will never be tracked.
 
+.vscode/settings.json
+
 # Local overrides--you can use this to change the config for your dev environment (like setting up SQL) without worrying about committing it
 /config/dev_overrides.txt
 
@@ -237,5 +239,3 @@ define_sanity_output.txt
 # ezdb
 /db/
 /config/ezdb.txt
-.vscode/settings.json
-tgstation.dme
