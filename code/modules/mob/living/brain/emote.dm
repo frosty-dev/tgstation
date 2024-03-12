@@ -11,22 +11,28 @@
 
 /datum/emote/brain/alarm
 	key = "alarm"
-	message = "sounds an alarm."
+	ru_name = "тревога"
+	message = "издаёт тревожный сигнал."
 
 /datum/emote/brain/alert
 	key = "alert"
-	message = "lets out a distressed noise."
+	ru_name = "опасность"
+	message = "выпискивает сигнал опасности."
 
 /datum/emote/brain/flash
 	key = "flash"
-	message = "blinks their lights."
+	ru_name = "фонарик"
+	message = "моргает своими фонариками."
 	emote_type = EMOTE_VISIBLE
 
 /datum/emote/brain/notice
 	key = "notice"
-	message = "plays a loud tone."
+	ru_name = "сигнал"
+	message = "проигрывает громкий звук."
 
 /datum/emote/brain/whistle
 	key = "whistle"
-	key_third_person = "whistles"
-	message = "whistles."
+	ru_name = "свисток"
+	key_third_person = "свистит"
+	message = "свистит."
+

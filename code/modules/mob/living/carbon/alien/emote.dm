@@ -3,14 +3,16 @@
 
 /datum/emote/living/alien/gnarl
 	key = "gnarl"
-	key_third_person = "gnarls"
-	message = "gnarls and shows its teeth..."
+	ru_name = "рычать"
+	key_third_person = "рычит и скалит зубы"
+	message = "рычит и скалит зубы..."
 
 /datum/emote/living/alien/hiss
 	key = "hiss"
-	key_third_person = "hisses"
-	message_alien = "hisses."
-	message_larva = "hisses softly."
+	ru_name = "шипеть"
+	key_third_person = "шипит"
+	message_alien = "шипит."
+	message_larva = "мило шипит."
 	emote_type = EMOTE_AUDIBLE | EMOTE_VISIBLE
 
 /datum/emote/living/alien/hiss/get_sound(mob/living/user)
@@ -19,9 +21,10 @@
 
 /datum/emote/living/alien/roar
 	key = "roar"
+	ru_name = "рычать"
 	key_third_person = "roars"
-	message_alien = "roars."
-	message_larva = "softly roars."
+	message_alien = "рычит."
+	message_larva = "мило рычит."
 	emote_type = EMOTE_AUDIBLE | EMOTE_VISIBLE
 	vary = TRUE
 

@@ -22,7 +22,7 @@
 	attack_verb_simple = "kick"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	attack_vis_effect = ATTACK_EFFECT_KICK
-	attacked_sound = 'white/valtos/sounds/pig/oink.ogg'
+	attacked_sound = 'white/valtos/sound/pig/oink.ogg'
 	melee_damage_lower = 1
 	melee_damage_upper = 2
 	health = 500

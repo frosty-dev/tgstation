@@ -164,7 +164,7 @@
 /datum/ai_planning_subtree/random_speech/pig
 	speech_chance = 3
 	speak = list("ХРЮ!", "УИИИИ!", "ХРЮ?")
-	sound = list('white/valtos/sounds/pig/hru.ogg', 'white/valtos/sounds/pig/oink.ogg', 'white/valtos/sounds/pig/squeak.ogg')
+	sound = list('white/valtos/sound/pig/hru.ogg', 'white/valtos/sound/pig/oink.ogg', 'white/valtos/sound/pig/squeak.ogg')
 	emote_hear = list("хрюкает!")
 	emote_see = list("хрюкает гениально")
 

@@ -5935,4 +5935,5 @@
 #include "white\master\code\randomstation\mapping.dm"
 #include "white\master\code\randomstation\station.dm"
 #include "white\master\code\serverside\looc.dm"
+#include "white\valtos\code\emote_menu.dm"
 // END_INCLUDE

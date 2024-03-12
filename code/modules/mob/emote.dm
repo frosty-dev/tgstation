@@ -24,7 +24,7 @@
 
 	if(!length(key_emotes))
 		if(intentional && !force_silence)
-			to_chat(src, span_notice("'[act]' emote does not exist. Say *help for a list."))
+			to_chat(src, span_notice("'[act]' не существует. Напиши <b>*help</b> для вывода списка доступных."))
 		return FALSE
 	var/silenced = FALSE
 	for(var/datum/emote/P in key_emotes)
@@ -36,7 +36,7 @@
 			SEND_SIGNAL(src, COMSIG_MOB_EMOTED(P.key))
 			return TRUE
 	if(intentional && !silenced && !force_silence)
-		to_chat(src, span_notice("Unusable emote '[act]'. Say *help for a list."))
+		to_chat(src, span_notice("Эмоция '[act]' невозможна. Напиши <b>*help</b> для вывода списка доступных."))
 	return FALSE
 
 /datum/emote/help
@@ -46,7 +46,7 @@
 /datum/emote/help/run_emote(mob/user, params, type_override, intentional)
 	. = ..()
 	var/list/keys = list()
-	var/list/message = list("Available emotes, you can use them with say \"*emote\": ")
+	var/list/message = list("Доступный список эмоций. Их можно использовать в поле say \"*emote\": ")
 
 	for(var/key in GLOB.emote_list)
 		for(var/datum/emote/P in GLOB.emote_list[key])
@@ -63,7 +63,8 @@
 
 /datum/emote/flip
 	key = "flip"
-	key_third_person = "flips"
+	ru_name = "сальто"
+	key_third_person = "делает сальто"
 	hands_use_check = TRUE
 	mob_type_allowed_typecache = list(/mob/living, /mob/dead/observer, /mob/camera/imaginary_friend)
 	mob_type_ignore_stat_typecache = list(/mob/dead/observer, /mob/living/silicon/ai, /mob/camera/imaginary_friend)
@@ -97,7 +98,8 @@
 
 /datum/emote/spin
 	key = "spin"
-	key_third_person = "spins"
+	ru_name = "крутиться"
+	key_third_person = "крутится"
 	hands_use_check = TRUE
 	mob_type_allowed_typecache = list(/mob/living, /mob/dead/observer, /mob/camera/imaginary_friend)
 	mob_type_ignore_stat_typecache = list(/mob/dead/observer, /mob/camera/imaginary_friend)
@@ -121,7 +123,7 @@
 		return
 
 	if(prob(BEYBLADE_DIZZINESS_PROBABILITY))
-		to_chat(user, span_warning("You feel woozy from spinning."))
+		to_chat(user, span_warning("Что-то мне плохо."))
 		user.set_dizzy_if_lower(BEYBLADE_DIZZINESS_DURATION)
 		user.adjust_confusion_up_to(BEYBLADE_CONFUSION_INCREMENT, BEYBLADE_CONFUSION_LIMIT)
 
