@@ -6,7 +6,7 @@
 	name = "Scarecrow"
 
 	uniform = /obj/item/clothing/under/costume/scarecrow
-	head = /obj/item/clothing/head/costume/scarecrow_hat
+	head = /obj/item/clothing/head/scarecrow
 	mask = /obj/item/clothing/mask/scarecrow
 	shoes = /obj/item/clothing/shoes/jackboots
 	ears = /obj/item/radio/headset/headset_cent/alt

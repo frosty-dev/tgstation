@@ -23,7 +23,7 @@
 	screen_loc = "CENTER-7,SOUTH"
 	icon_state = ""
 
-/datum/smite/scare/proc/clear_efffects(client/user, mob/living/target)
+/datum/smite/scare/proc/clear_efffects(mob/living/target)
 	if (!target.client)
 		return
 
@@ -52,8 +52,9 @@
 		dude.clear_fullscreen("screamer", rand(15, 60))
 
 	playsound(dude, get_random_sound(), 100)
+	dude.emote("scream")
 
-	addtimer(CALLBACK(src, PROC_REF(clear_efffects), user, dude), 60)
+	addtimer(CALLBACK(src, PROC_REF(clear_efffects), dude), 60)
 
 /obj/item/melee/baton/scare
 	name = "полицейская дубинка"
