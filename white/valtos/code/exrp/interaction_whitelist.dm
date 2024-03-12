@@ -1,5 +1,5 @@
-// /proc/load_whitelist_exrp()
-/*	GLOB.whitelist_exrp = list()
+/proc/load_whitelist_exrp()
+	GLOB.whitelist_exrp = list()
 	for(var/line in world.file2list(WHITELISTEXRPFILE))
 		if(!line)
 			continue
@@ -16,4 +16,3 @@
 	. = (ckey in GLOB.whitelist_exrp)
 
 #undef WHITELISTEXRPFILE
-*/
