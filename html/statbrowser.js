@@ -708,6 +708,9 @@ function set_theme(which) {
 	if (which == "light") {
 		document.body.className = "";
 		set_style_sheet("browserOutput_white");
+	} else if (which == "gruvbox") {
+		document.body.className = "gruvbox";
+		set_style_sheet("browserOutput");
 	} else if (which == "dark") {
 		document.body.className = "dark";
 		set_style_sheet("browserOutput");
