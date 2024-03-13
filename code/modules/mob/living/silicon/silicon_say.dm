@@ -23,7 +23,7 @@
 				to_chat(
 					M,
 					span_binarysay("\
-						Robotic Talk, \
+						Машинная связь, \
 						<a href='?src=[REF(M)];track=[html_encode(name)]'>[span_name("[name] ([designation])")]</a> \
 						<span class='message'>[quoted_message]</span>\
 					"),
@@ -33,7 +33,7 @@
 				to_chat(
 					M,
 					span_binarysay("\
-						Robotic Talk, \
+						Машинная связь, \
 						[span_name("[name]")] <span class='message'>[quoted_message]</span>\
 					"),
 					avoid_highlighting = src == M
@@ -55,7 +55,7 @@
 				M,
 				span_binarysay("\
 					[follow_link] \
-					Robotic Talk, \
+					Машинная связь, \
 					[span_name("[name]")] <span class='message'>[quoted_message]</span>\
 				"),
 				avoid_highlighting = src == M

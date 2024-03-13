@@ -490,7 +490,7 @@
 
 /obj/item/food/meat_calzone
 	name = "meat calzone"
-	desc = "A calzone filled with cheese, meat, and a tomato sauce. Don't burn your tongue!."
+	desc = "A calzone filled with cheese, meat, and a tomato sauce. Don't burn your tongue!"
 	icon_state = "meat_calzone"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 8,

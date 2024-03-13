@@ -1,10 +1,10 @@
 /mob/living/silicon
 	gender = NEUTER
 	has_unlimited_silicon_privilege = TRUE
-	verb_say = "states"
-	verb_ask = "queries"
-	verb_exclaim = "declares"
-	verb_yell = "alarms"
+	verb_say = "констатирует"
+	verb_ask = "запрашивает"
+	verb_exclaim = "объявляет"
+	verb_yell = "тревожит"
 	initial_language_holder = /datum/language_holder/synthetic
 	bubble_icon = "machine"
 	mob_biotypes = MOB_ROBOTIC
@@ -247,7 +247,7 @@
 	var/list/lawcache_hackedcheck = hackedcheck.Copy()
 	var/forced_log_message = "stating laws[force ? ", forced" : ""]"
 	//"radiomod" is inserted before a hardcoded message to change if and how it is handled by an internal radio.
-	say("[radiomod] Current Active Laws:", forced = forced_log_message)
+	say("[radiomod] Текущие законы:", forced = forced_log_message)
 	sleep(1 SECONDS)
 
 	if (lawcache_zeroth)
@@ -296,46 +296,46 @@
 ///Gives you a link-driven interface for deciding what laws the statelaws() proc will share with the crew.
 /mob/living/silicon/proc/checklaws()
 	laws_sanity_check()
-	var/list = "<b>Which laws do you want to include when stating them for the crew?</b><br><br>"
+	var/list = "<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/><b>Какие законы будем озвучивать?</b><br><br>"
 
-	var/law_display = "Yes"
+	var/law_display = "Да"
 	if (laws.zeroth)
 		if (!(laws.zeroth in lawcheck))
-			law_display = "No"
+			law_display = "Нет"
 		list += {"<A href='byond://?src=[REF(src)];lawc=0'>[law_display] 0:</A> <font color='#ff0000'><b>[laws.zeroth]</b></font><BR>"}
 
 	for (var/index in 1 to length(laws.hacked))
-		law_display = "Yes"
+		law_display = "Да"
 		var/law = laws.hacked[index]
 		if (length(law) > 0)
 			if (!(law in hackedcheck))
-				law_display = "No"
+				law_display = "Нет"
 			list += {"<A href='byond://?src=[REF(src)];lawh=[index]'>[law_display] [ion_num()]:</A> <font color='#660000'>[law]</font><BR>"}
 
 	for (var/index in 1 to length(laws.ion))
-		law_display = "Yes"
+		law_display = "Да"
 		var/law = laws.ion[index]
 		if (length(law) > 0)
 			if(!(law in ioncheck))
-				law_display = "No"
+				law_display = "Нет"
 			list += {"<A href='byond://?src=[REF(src)];lawi=[index]'>[law_display] [ion_num()]:</A> <font color='#547DFE'>[law]</font><BR>"}
 
 	var/number = 1
 	for (var/index in 1 to length(laws.inherent))
-		law_display = "Yes"
+		law_display = "Да"
 		var/law = laws.inherent[index]
 		if (length(law) > 0)
 			if (!(law in lawcheck))
-				law_display = "No"
+				law_display = "Нет"
 			list += {"<A href='byond://?src=[REF(src)];lawc=[index]'>[law_display] [number]:</A> [law]<BR>"}
 			number++
 
 	for (var/index in 1 to length(laws.supplied))
-		law_display = "Yes"
+		law_display = "Да"
 		var/law = laws.supplied[index]
 		if (length(law) > 0)
 			if (!(law in lawcheck))
-				law_display = "No"
+				law_display = "Нет"
 			list += {"<A href='byond://?src=[REF(src)];lawc=[number]'>[law_display] [number]:</A> <font color='#990099'>[law]</font><BR>"}
 			number++
 	list += {"<br><br><A href='byond://?src=[REF(src)];laws=1'>State Laws</A>"}

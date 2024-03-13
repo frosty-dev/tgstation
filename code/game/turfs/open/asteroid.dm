@@ -215,7 +215,7 @@ GLOBAL_LIST_EMPTY(dug_up_basalt)
 
 /turf/open/misc/asteroid/snow/burn_tile()
 	if(!burnt)
-		visible_message(span_danger("[src] melts away!."))
+		visible_message(span_danger("[src] melts away!"))
 		slowdown = 0
 		burnt = TRUE
 		update_appearance()

@@ -450,7 +450,7 @@
 
 /obj/item/food/brownie_sheet
 	name = "brownie sheet"
-	desc = "An uncut sheet of cooked brownie, use a knife to cut it!."
+	desc = "An uncut sheet of cooked brownie, use a knife to cut it!"
 	icon = 'icons/obj/food/food.dmi'
 	icon_state = "brownie_sheet"
 	food_reagents = list(

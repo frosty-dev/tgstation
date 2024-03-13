@@ -71,13 +71,13 @@
 	if(isliving(loc))
 		var/mob/living/L = loc
 		if(display_messages)
-			to_chat(L, span_warning("[released_mob] wriggles free!"))
+			to_chat(L, span_warning("[released_mob] вырывается!"))
 		L.dropItemToGround(src)
 	released_mob.forceMove(drop_location())
 	released_mob.reset_perspective()
 	released_mob.setDir(SOUTH)
 	if(display_messages)
-		released_mob.visible_message(span_warning("[released_mob] uncurls!"))
+		held_mob.visible_message(span_warning("[released_mob] вылезает из рук!"))
 	if(del_on_release && !destroying)
 		qdel(src)
 	return TRUE
@@ -95,8 +95,8 @@
 
 /obj/item/clothing/head/mob_holder/on_found(mob/finder)
 	if(held_mob?.will_escape_storage())
-		to_chat(finder, span_warning("\A [held_mob.name] pops out! "))
-		finder.visible_message(span_warning("\A [held_mob.name] pops out of the container [finder] is opening!"), ignored_mobs = finder)
+		to_chat(finder, span_warning("[capitalize(held_mob.name)] вылезает!"))
+		finder.visible_message(span_warning("[capitalize(held_mob.name)] вылезает из контейнера!") , ignored_mobs = finder)
 		release(TRUE, FALSE)
 		return
 
@@ -110,8 +110,8 @@
 	. = ..()
 	if(!isdrone(L))
 		qdel(src)
-	name = "drone (hiding)"
-	desc = "This drone is scared and has curled up into a ball!"
+	name = "дрон (прячется)"
+	desc = "Этот дрон напуган так, что скрутился в шарик!"
 
 /obj/item/clothing/head/mob_holder/drone/update_visuals(mob/living/L)
 	var/mob/living/basic/drone/drone = L

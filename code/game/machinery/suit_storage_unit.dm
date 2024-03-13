@@ -733,7 +733,7 @@
 	if(state_open && is_operational)
 		if(istype(weapon, /obj/item/clothing/suit))
 			if(suit)
-				to_chat(user, span_warning("Блок хранение уже имеет скафандр!."))
+				to_chat(user, span_warning("Блок хранение уже имеет скафандр!"))
 				return
 			if(!user.transferItemToLoc(weapon, src))
 				return

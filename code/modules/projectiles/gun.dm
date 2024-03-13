@@ -4,7 +4,7 @@
 
 /obj/item/gun
 	name = "Револьвер"
-	desc = "Это револьвер. Довольно устращающий, разве нет?."
+	desc = "Это револьвер. Довольно устращающий, разве нет?"
 	icon = 'icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "revolver"
 	inhand_icon_state = "gun"

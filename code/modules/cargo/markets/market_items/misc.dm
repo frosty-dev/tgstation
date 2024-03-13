@@ -3,7 +3,7 @@
 
 /datum/market_item/misc/Clear_PDA
 	name = "Clear PDA"
-	desc = "Show off your style with this limited edition clear PDA!."
+	desc = "Show off your style with this limited edition clear PDA!"
 	item = /obj/item/modular_computer/pda/clear
 
 	price_min = CARGO_CRATE_VALUE * 1.25

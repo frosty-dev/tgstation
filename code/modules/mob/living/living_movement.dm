@@ -143,7 +143,7 @@
 			if(!(z_move_flags & ZMOVE_CAN_FLY_CHECKS) && !buckled.anchored)
 				return buckled.can_z_move(direction, start, destination, z_move_flags, src)
 			if(z_move_flags & ZMOVE_FEEDBACK)
-				to_chat(src, span_warning("Unbuckle from [buckled] first."))
+				to_chat(src, span_warning("Сначала надо отцепиться от [buckled]."))
 			return FALSE
 
 /mob/set_currently_z_moving(value)

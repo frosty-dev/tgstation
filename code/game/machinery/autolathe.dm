@@ -195,7 +195,7 @@
 			materials_used[used_material] = amount_needed
 
 		if(!materials.has_materials(materials_used, coeff, multiplier))
-			say("Недостаточно материалов для этой операции!.")
+			say("Недостаточно материалов для этой операции!")
 			return
 
 		//use power

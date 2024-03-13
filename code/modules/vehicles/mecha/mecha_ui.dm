@@ -198,7 +198,7 @@
 		if("dna_lock")
 			var/mob/living/carbon/user = usr
 			if(!istype(user) || !user.dna)
-				to_chat(user, "[icon2html(src, occupants)][span_notice("You can't create a DNA lock with no DNA!.")]")
+				to_chat(user, "[icon2html(src, occupants)][span_notice("You can't create a DNA lock with no DNA!")]")
 				return
 			dna_lock = user.dna.unique_enzymes
 			to_chat(user, "[icon2html(src, occupants)][span_notice("You feel a prick as the needle takes your DNA sample.")]")

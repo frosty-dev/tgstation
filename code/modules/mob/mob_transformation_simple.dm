@@ -5,7 +5,7 @@
 /mob/proc/change_mob_type(new_type = null, turf/location = null, new_name = null as text, delete_old_mob = FALSE)
 
 	if(isnewplayer(src))
-		to_chat(usr, span_danger("Cannot convert players who have not entered yet."))
+		to_chat(usr, span_danger("Невозможно преобразовать игроков, которые ещё не вошли."))
 		return
 
 	if(!new_type)
@@ -19,7 +19,7 @@
 		return
 
 	if(ispath(new_type, /mob/dead/new_player))
-		to_chat(usr, span_danger("Cannot convert into a new_player mob type."))
+		to_chat(usr, span_danger("Невозможно преобразовать игрока в лобби."))
 		return
 
 	if (SEND_SIGNAL(src, COMSIG_PRE_MOB_CHANGED_TYPE) & COMPONENT_BLOCK_MOB_CHANGE)

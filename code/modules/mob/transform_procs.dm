@@ -29,7 +29,7 @@
 
 /mob/living/carbon/proc/finish_monkeyize()
 	transformation_timer = null
-	to_chat(src, span_boldnotice("You are now a monkey."))
+	to_chat(src, span_boldnotice("Теперь я мартышка."))
 	REMOVE_TRAIT(src, TRAIT_NO_TRANSFORM, TEMPORARY_TRANSFORMATION_TRAIT)
 	icon = initial(icon)
 	RemoveInvisibility(type)
@@ -68,7 +68,7 @@
 
 /mob/living/carbon/proc/finish_humanize(species = /datum/species/human)
 	transformation_timer = null
-	to_chat(src, span_boldnotice("You are now a human."))
+	to_chat(src, span_boldnotice("Теперь я человек."))
 	REMOVE_TRAIT(src, TRAIT_NO_TRANSFORM, TEMPORARY_TRANSFORMATION_TRAIT)
 	icon = initial(icon)
 	RemoveInvisibility(type)
@@ -91,7 +91,7 @@
 				break
 			landmark_loc += sloc.loc
 		if(!length(landmark_loc))
-			to_chat(src, "Oh god sorry we can't find an unoccupied AI spawn location, so we're spawning you on top of someone.")
+			to_chat(src, "Ради бога, простите, мы не можем найти вам незанятую точку появления ИИ, поэтому мы сотворили тебя над кем-то.")
 			for(var/obj/effect/landmark/start/ai/sloc in GLOB.landmarks_list)
 				landmark_loc += sloc.loc
 
@@ -186,7 +186,7 @@
 	return ..()
 
 /mob/living/silicon/robot/proc/replace_banned_cyborg()
-	to_chat(src, "<b>You are job banned from cyborg! Appeal your job ban if you want to avoid this in the future!</b>")
+	to_chat(src, "<b>НЕЛЬЗЯ!</b>")
 	ghostize(FALSE)
 
 	var/list/mob/dead/observer/candidates = poll_candidates_for_mob("Do you want to play as [src]?", "Cyborg", null, 5 SECONDS, src)
@@ -222,7 +222,7 @@
 	new_xeno.set_combat_mode(TRUE)
 	new_xeno.key = key
 
-	to_chat(new_xeno, span_boldnotice("You are now an alien."))
+	to_chat(new_xeno, span_boldnotice("Теперь я чужой."))
 	qdel(src)
 	return new_xeno
 
@@ -254,7 +254,7 @@
 	new_slime.set_combat_mode(TRUE)
 	new_slime.key = key
 
-	to_chat(new_slime, span_boldnotice("You are now a slime. Skreee!"))
+	to_chat(new_slime, span_boldnotice("Теперь я слайм. Блюп!"))
 	qdel(src)
 	return new_slime
 
@@ -282,7 +282,7 @@
 	new_corgi.set_combat_mode(TRUE)
 	new_corgi.key = key
 
-	to_chat(new_corgi, span_boldnotice("You are now a Corgi. Yap Yap!"))
+	to_chat(new_corgi, span_boldnotice("Теперь я Корги!. Гаф гаф!"))
 	qdel(src)
 	return new_corgi
 
@@ -308,7 +308,7 @@
 		mind.transfer_to(new_gorilla)
 	else
 		new_gorilla.key = key
-	to_chat(new_gorilla, span_boldnotice("You are now a gorilla. Ooga ooga!"))
+	to_chat(new_gorilla, span_boldnotice("Теперь я горилла. Уга буга!"))
 	qdel(src)
 	return new_gorilla
 
@@ -342,7 +342,7 @@
 	new_mob.key = key
 	new_mob.set_combat_mode(TRUE)
 
-	to_chat(new_mob, span_boldnotice("You suddenly feel more... animalistic."))
+	to_chat(new_mob, span_boldnotice("Внезапно чувствую себя более ... животным."))
 	qdel(src)
 	return new_mob
 
@@ -360,7 +360,7 @@
 
 	new_mob.key = key
 	new_mob.set_combat_mode(TRUE)
-	to_chat(new_mob, span_boldnotice("You feel more... animalistic."))
+	to_chat(new_mob, span_boldnotice("Чувствую себя более... животным."))
 
 	. = new_mob
 	qdel(src)

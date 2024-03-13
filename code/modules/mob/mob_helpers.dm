@@ -347,31 +347,31 @@
  * Automatic logging and uses poll_candidates_for_mob, how convenient
  */
 /proc/offer_control(mob/M)
-	to_chat(M, "Control of your mob has been offered to dead players.")
+	to_chat(M, "Мертвым игрокам предложен контроль над моим мобом.")
 	if(usr)
 		log_admin("[key_name(usr)] has offered control of ([key_name(M)]) to ghosts.")
 		message_admins("[key_name_admin(usr)] has offered control of ([ADMIN_LOOKUPFLW(M)]) to ghosts")
-	var/poll_message = "Do you want to play as [M.real_name]?"
+	var/poll_message = "Хочешь играть за [M.real_name]?"
 	if(M.mind)
-		poll_message = "[poll_message] Job: [M.mind.assigned_role.title]."
+		poll_message = "[poll_message] Роль: [M.mind.assigned_role.title]."
 		if(M.mind.special_role)
-			poll_message = "[poll_message] Status: [M.mind.special_role]."
+			poll_message = "[poll_message] Статус: [M.mind.special_role]."
 		else
 			var/datum/antagonist/A = M.mind.has_antag_datum(/datum/antagonist/)
 			if(A)
-				poll_message = "[poll_message] Status: [A.name]."
+				poll_message = "[poll_message] Статус: [A.name]."
 	var/list/mob/dead/observer/candidates = poll_candidates_for_mob(poll_message, ROLE_PAI, FALSE, 10 SECONDS, M)
 
 	if(LAZYLEN(candidates))
 		var/mob/dead/observer/C = pick(candidates)
-		to_chat(M, "Your mob has been taken over by a ghost!")
+		to_chat(M, "В моего моба вселился призрак!")
 		message_admins("[key_name_admin(C)] has taken control of ([ADMIN_LOOKUPFLW(M)])")
 		M.ghostize(FALSE)
 		M.key = C.key
 		M.client?.init_verbs()
 		return TRUE
 	else
-		to_chat(M, "There were no ghosts willing to take control.")
+		to_chat(M, "Призраков, готовых взять кого-либо под контроль, не было.")
 		message_admins("No ghosts were willing to take control of [ADMIN_LOOKUPFLW(M)])")
 		return FALSE
 
@@ -396,7 +396,7 @@
  */
 /mob/proc/common_trait_examine()
 	if(HAS_TRAIT(src,TRAIT_HUSK))
-		. += span_warning("This body has been reduced to a grotesque husk.")
+		. += span_warning("Это тело деградировало до состояния хаска.")
 
 /**
  * Get the list of keywords for policy config

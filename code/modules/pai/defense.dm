@@ -46,7 +46,7 @@
 		return
 	user.do_attack_animation(src)
 	if(user.name != master_name)
-		visible_message(span_danger("[user] stomps on [src]!."))
+		visible_message(span_danger("[user] stomps on [src]!"))
 		take_holo_damage(2)
 		return
 	visible_message(span_notice("Responding to its master's touch, [src] disengages its holochassis emitter, rapidly losing coherence."))

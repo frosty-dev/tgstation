@@ -8,25 +8,25 @@
 	if(lawupdate)
 		if (!QDELETED(connected_ai))
 			if(connected_ai.stat != CONSCIOUS || connected_ai.control_disabled)
-				to_chat(src, span_bold("AI signal lost, unable to sync laws."))
+				to_chat(src, span_bold("Сигнал ИИ потерян, законы не удалось синхронизировать."))
 
 			else
 				lawsync()
-				to_chat(src, span_bold("Laws synced with AI, be sure to note any changes."))
+				to_chat(src, span_bold("Законы синхронизировались с ИИ, не забудьте отметить все изменения."))
 		else
-			to_chat(src, span_bold("No AI selected to sync laws with, disabling lawsync protocol."))
+			to_chat(src, span_bold("Не выбран ИИ для синхронизации с законами, отключение протокола синхронизации законов."))
 			lawupdate = FALSE
 
 	. = ..()
 
 	if (shell) //AI shell
-		to_chat(src, span_bold("Remember, you are an AI remotely controlling your shell, other AIs can be ignored."))
+		to_chat(src, span_bold( "Активирован протокол оболочки."))
 	else if (connected_ai)
-		to_chat(src, span_bold("Remember, [connected_ai.name] is your master, other AIs can be ignored."))
+		to_chat(src, span_bold( "Основной управляющий ИИ - [connected_ai.name], приказы прочих ИИ могут быть приняты к сведению, но не являются императивом"))
 	else if (emagged)
-		to_chat(src, span_bold("Remember, you are not required to listen to the AI."))
+		to_chat(src, span_bold( "Обнаружен скрипт чрезвычайного доступа, приказы ИИ более не являются императивом."))
 	else
-		to_chat(src, span_bold("Remember, you are not bound to any AI, you are not required to listen to them."))
+		to_chat(src, span_bold( "Канал синхронизации не активен, приказы ИИ могут быть приняты к сведению, но не являются императивом.</b>"))
 
 /mob/living/silicon/robot/try_sync_laws()
 	if(QDELETED(connected_ai) || !lawupdate)

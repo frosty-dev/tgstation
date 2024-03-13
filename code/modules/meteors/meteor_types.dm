@@ -91,7 +91,7 @@
 /obj/effect/meteor/proc/ram_turf(turf/T)
 	//first yell at mobs about them dying horribly
 	for(var/mob/living/thing in T)
-		thing.visible_message(span_warning("[src] slams into [thing]."), span_userdanger("[src] slams into you!."))
+		thing.visible_message(span_warning("[src] slams into [thing]."), span_userdanger("[src] slams into you!"))
 
 	//then, ram the turf
 	switch(hitpwr)

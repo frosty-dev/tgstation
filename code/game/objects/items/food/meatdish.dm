@@ -194,7 +194,7 @@
 
 /obj/item/food/spicyfiletsushislice
 	name = "spicy filet sushi slice"
-	desc = "A slice of tasty, spicy sushi made with fish and vegetables. Don't eat it too fast!."
+	desc = "A slice of tasty, spicy sushi made with fish and vegetables. Don't eat it too fast!"
 	icon_state = "spicyfiletslice"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 3,

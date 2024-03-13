@@ -227,7 +227,7 @@
 
 /obj/item/clothing/head/hats/coordinator
 	name = "coordinator cap"
-	desc = "A cap for a party coordinator, stylish!."
+	desc = "A cap for a party coordinator, stylish!"
 	icon_state = "capcap"
 	inhand_icon_state = "that"
 	armor_type = /datum/armor/hats_coordinator
