@@ -2023,9 +2023,9 @@ GLOBAL_LIST_EMPTY(fire_appearances)
 	var/turf/ceiling = get_step_multiz(src, UP)
 	if(!ceiling) //We are at the highest z-level.
 		if (prob(0.1))
-				to_chat(src, span_warning("Вы вглядываетесь в бесконечную безбрежность глубокого космоса, на мгновение у вас возникает импульс продолжить путешествие, туда, вглубь, прежде чем ваше сознание снова заявит о себе, и вы решите остаться на расстоянии путешествия от станции."))
-				return
-			to_chat(src, span_warning("А как смотреть через потолок?"))
+			to_chat(src, span_warning("Вы вглядываетесь в бесконечную безбрежность глубокого космоса, на мгновение у вас возникает импульс продолжить путешествие, туда, вглубь, прежде чем ваше сознание снова заявит о себе, и вы решите остаться на расстоянии путешествия от станции."))
+			return
+		to_chat(src, span_warning("А как смотреть через потолок?"))
 		return
 	else if(!istransparentturf(ceiling)) //There is no turf we can look through above us
 		var/turf/front_hole = get_step(ceiling, dir)
