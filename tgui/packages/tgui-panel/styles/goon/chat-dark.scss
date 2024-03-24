@@ -282,7 +282,9 @@ em {
   font-weight: bold;
 }
 
-.adminooc .prefix, .ooc .prefix, .adminobserverooc .prefix {
+.adminooc .prefix,
+.ooc .prefix,
+.adminobserverooc .prefix {
   background: #cca300;
   padding: 1px 3px;
   color: #000000;
@@ -449,7 +451,7 @@ em {
 }
 
 .userdanger::before {
-  content: "!";
+  content: '!';
   background: #d82020;
   color: #000000;
   padding-left: 6px;
