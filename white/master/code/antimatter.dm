@@ -52,14 +52,14 @@
 	throw_range = 2
 
 	var/fuel = 10000
-	var/fuel_max = 10000//Lets try this for now
-	var/stability = 100//TODO: add all the stability things to this so its not very safe if you keep hitting in on things
+	var/fuel_max = 10000 //Lets try this for now
+	var/stability = 100 //TODO: add all the stability things to this so its not very safe if you keep hitting in on things
 
 
 /obj/item/am_containment/ex_act(severity, target)
 	switch(severity)
 		if(1)
-			explosion(get_turf(src), 1, 2, 3, 5)//Should likely be larger but this works fine for now I guess
+			explosion(get_turf(src), 1, 2, 3, 5) //Should likely be larger but this works fine for now I guess
 			if(src)
 				qdel(src)
 		if(2)
@@ -100,17 +100,17 @@
 	var/stability = 100
 	var/exploding = 0
 
-	var/active = 0//On or not
-	var/fuel_injection = 2//How much fuel to inject
-	var/shield_icon_delay = 0//delays resetting for a short time
+	var/active = 0 //On or not
+	var/fuel_injection = 2 //How much fuel to inject
+	var/shield_icon_delay = 0 //delays resetting for a short time
 	var/reported_core_efficiency = 0
 
 	var/power_cycle = 0
-	var/power_cycle_delay = 4//How many ticks till produce_power is called
+	var/power_cycle_delay = 4 //How many ticks till produce_power is called
 	var/stored_core_stability = 0
 	var/stored_core_stability_delay = 0
 
-	var/stored_power = 0//Power to deploy per tick
+	var/stored_power = 0 //Power to deploy per tick
 
 
 /obj/machinery/power/am_control_unit/Initialize()
@@ -119,7 +119,7 @@
 	linked_cores = list()
 
 
-/obj/machinery/power/am_control_unit/Destroy()//Perhaps damage and run stability checks rather than just del on the others
+/obj/machinery/power/am_control_unit/Destroy() //Perhaps damage and run stability checks rather than just del on the others
 	for(var/obj/machinery/am_shielding/AMS in linked_shielding)
 		AMS.control_unit = null
 		qdel(AMS)
@@ -137,10 +137,10 @@
 		check_shield_icons()
 		update_shield_icons = 0
 
-	if((machine_stat & BROKEN) || !active)//can update the icons even without power
+	if((machine_stat & BROKEN) || !active) //can update the icons even without power
 		return
 
-	if(!fueljar)//No fuel but we are on, shutdown
+	if(!fueljar) //No fuel but we are on, shutdown
 		toggle_power()
 		playsound(src.loc, 'white/master/sound/error1.ogg', 50, 0)
 		return
@@ -157,21 +157,21 @@
 
 /obj/machinery/power/am_control_unit/proc/produce_power()
 	playsound(src.loc, 'sound/effects/bang.ogg', 25, 1)
-	var/core_power = reported_core_efficiency//Effectively how much fuel we can safely deal with
+	var/core_power = reported_core_efficiency //Effectively how much fuel we can safely deal with
 	if(core_power <= 0)
-		return 0//Something is wrong
+		return 0 //Something is wrong
 	var/core_damage = 0
 	var/fuel = fueljar.usefuel(fuel_injection)
 
-	stored_power = (fuel/core_power)*fuel*200000
+	stored_power = (fuel / core_power) * fuel * 200000
 	//Now check if the cores could deal with it safely, this is done after so you can overload for more power if needed, still a bad idea
 	if(fuel > (2*core_power))//More fuel has been put in than the current cores can deal with
 		if(prob(50))
-			core_damage = 1//Small chance of damage
+			core_damage = 1 //Small chance of damage
 		if((fuel-core_power) > 5)
-			core_damage = 5//Now its really starting to overload the cores
+			core_damage = 5 //Now its really starting to overload the cores
 		if((fuel-core_power) > 10)
-			core_damage = 20//Welp now you did it, they wont stand much of this
+			core_damage = 20 //Welp now you did it, they wont stand much of this
 		if(core_damage == 0)
 			return
 		for(var/obj/machinery/am_shielding/AMS in linked_cores)
@@ -197,7 +197,7 @@
 
 /obj/machinery/power/am_control_unit/blob_act()
 	stability -= 20
-	if(prob(100-stability))//Might infect the rest of the machine
+	if(prob(100-stability)) //Might infect the rest of the machine
 		for(var/obj/machinery/am_shielding/AMS in linked_shielding)
 			AMS.blob_act()
 		qdel(src)
@@ -309,7 +309,7 @@
 	return 1
 
 
-/obj/machinery/power/am_control_unit/proc/check_stability()//TODO: make it break when low also might want to add a way to fix it like a part or such that can be replaced
+/obj/machinery/power/am_control_unit/proc/check_stability() //TODO: make it break when low also might want to add a way to fix it like a part or such that can be replaced
 	if(stability <= 0)
 		qdel(src)
 	return
@@ -327,11 +327,11 @@
 	return
 
 
-/obj/machinery/power/am_control_unit/proc/check_shield_icons()//Forces icon_update for all shields
+/obj/machinery/power/am_control_unit/proc/check_shield_icons() //Forces icon_update for all shields
 	if(shield_icon_delay)
 		return
 	shield_icon_delay = 1
-	if(update_shield_icons == 2)//2 means to clear everything and rebuild
+	if(update_shield_icons == 2) //2 means to clear everything and rebuild
 		for(var/obj/machinery/am_shielding/AMS in linked_shielding)
 			if(AMS.processing)
 				AMS.shutdown_core()
@@ -427,14 +427,14 @@
 	icon_state = "shield"
 	density = TRUE
 	dir = NORTH
-	use_power = NO_POWER_USE//Living things generally dont use power
+	use_power = NO_POWER_USE //Living things generally dont use power
 	idle_power_usage = 0
 	active_power_usage = 0
 
 	var/obj/machinery/power/am_control_unit/control_unit = null
-	var/processing = FALSE//To track if we are in the update list or not, we need to be when we are damaged and if we ever
-	var/stability = 100//If this gets low bad things tend to happen
-	var/efficiency = 1//How many cores this core counts for when doing power processing, plasma in the air and stability could affect this
+	var/processing = FALSE //To track if we are in the update list or not, we need to be when we are damaged and if we ever
+	var/stability = 100 //If this gets low bad things tend to happen
+	var/efficiency = 1 //How many cores this core counts for when doing power processing, plasma in the air and stability could affect this
 	var/coredirs = 0
 	var/dirs = 0
 
@@ -469,7 +469,7 @@
 		if(AMS && AMS.control_unit && link_control(AMS.control_unit))
 			break
 
-	if(!control_unit)//No other guys nearby look for a control unit
+	if(!control_unit) //No other guys nearby look for a control unit
 		for(var/direction in GLOB.cardinals)
 		for(var/obj/machinery/power/am_control_unit/AMC in cardinalrange(src))
 			if(AMC.add_shielding(src))
@@ -580,7 +580,7 @@
 	if(!istype(AMC))
 		return 0
 	if(control_unit && control_unit != AMC)
-		return 0//Already have one
+		return 0 //Already have one
 	control_unit = AMC
 	control_unit.add_shielding(src,1)
 	return 1
@@ -592,7 +592,7 @@
 		var/found_am_device=0
 		for(var/obj/machinery/machine in get_step(loc, direction))
 			if(!machine)
-				continue//Need all for a core
+				continue //Need all for a core
 			if(istype(machine, /obj/machinery/am_shielding) || istype(machine, /obj/machinery/power/am_control_unit))
 				found_am_device = 1
 				break
@@ -631,7 +631,7 @@
 	return
 
 
-/obj/machinery/am_shielding/proc/recalc_efficiency(new_efficiency)//tbh still not 100% sure how I want to deal with efficiency so this is likely temp
+/obj/machinery/am_shielding/proc/recalc_efficiency(new_efficiency) //tbh still not 100% sure how I want to deal with efficiency so this is likely temp
 	if(!control_unit || !processing)
 		return
 	if(stability < 50)
@@ -639,7 +639,6 @@
 	control_unit.reported_core_efficiency += (new_efficiency - efficiency)
 	efficiency = new_efficiency
 	return
-
 
 
 /obj/item/am_shielding_container
@@ -656,6 +655,7 @@
 	throw_speed = 1
 	throw_range = 2
 	custom_materials = list(/datum/material/iron=100)
+
 
 /obj/item/am_shielding_container/multitool_act(mob/living/user, obj/item/I)
 	if(isturf(loc))
