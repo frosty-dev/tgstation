@@ -186,7 +186,7 @@
 		return FALSE
 	if((check_flags & AB_CHECK_PHASED) && HAS_TRAIT(owner, TRAIT_MAGICALLY_PHASED))
 		if (feedback)
-			owner.balloon_alert(owner, "incorporeal!")
+			owner.balloon_alert(owner, "нет тела!")
 		return FALSE
 	return TRUE
 

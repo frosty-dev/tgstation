@@ -553,7 +553,7 @@
 /mob/proc/run_examinate(atom/examinify)
 
 	if(isturf(examinify) && !(sight & SEE_TURFS) && !(examinify in view(client ? client.view : world.view, src)))
-		// shift-click catcher may issue examinate() calls for out-of-sight turfs
+		// Shift-клик catcher may issue examinate() calls for out-of-sight turfs
 		return
 
 	var/turf/examine_turf = get_turf(examinify)

@@ -297,7 +297,7 @@
 	if(!target || !isliving(owner))
 		return
 	to_chat(owner, "<b>Click shortcuts:</b>")
-	to_chat(owner, "Shift-click a slime to pick it up, or the floor to drop all held slimes.")
+	to_chat(owner, "Shift-клик a slime to pick it up, or the floor to drop all held slimes.")
 	to_chat(owner, "Ctrl-клик a slime to scan it.")
 	to_chat(owner, "Alt-клик a slime to feed it a potion.")
 	to_chat(owner, "Ctrl-клик or a dead monkey to recycle it, or the floor to place a new monkey.")

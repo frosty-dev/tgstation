@@ -241,7 +241,7 @@
 	action.HideFrom(src)
 
 /atom/movable/screen/button_palette
-	desc = "<b>Drag</b> buttons to move them<br><b>Shift-click</b> any button to reset it<br><b>Alt-клик</b> this to reset all buttons"
+	desc = "<b>Drag</b> buttons to move them<br><b>Shift-клик</b> any button to reset it<br><b>Alt-клик</b> this to reset all buttons"
 	icon = 'icons/hud/64x16_actions.dmi'
 	icon_state = "screen_gen_palette"
 	screen_loc = ui_action_palette
@@ -268,9 +268,9 @@
 /atom/movable/screen/button_palette/update_name(updates)
 	. = ..()
 	if(expanded)
-		name = "Hide Buttons"
+		name = "Скрыть кнопки"
 	else
-		name = "Show Buttons"
+		name = "Показать кнопки"
 
 /atom/movable/screen/button_palette/proc/refresh_owner()
 	var/mob/viewer = our_hud.mymob
