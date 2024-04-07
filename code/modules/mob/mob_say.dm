@@ -40,7 +40,7 @@
 
 ///The me emote verb
 /mob/verb/me_verb(message as text)
-	set name = "Действия"
+	set name = "Действие"
 	set category = "IC"
 
 	if(GLOB.say_disabled) //This is here to try to identify lag problems
