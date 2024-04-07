@@ -1,8 +1,8 @@
 //Engineering Mesons
 
 #define MODE_NONE ""
-#define MODE_MESON "meson"
-#define MODE_TRAY "t-ray"
+#define MODE_MESON "Мезонный сканер"
+#define MODE_TRAY "Терагерцовый сканер"
 #define MODE_SHUTTLE "shuttle"
 #define MODE_PIPE_CONNECTABLE "connectable"
 #define MODE_ATMOS_THERMAL "atmospheric-thermal"
@@ -12,8 +12,8 @@
 #define TEMP_SHADE_RED 500
 
 /obj/item/clothing/glasses/meson/engine
-	name = "engineering scanner goggles"
-	desc = "Goggles used by engineers. The Meson Scanner mode lets you see basic structural and terrain layouts through walls and the T-ray Scanner mode lets you see underfloor objects such as cables and pipes."
+	name = "многофункциональные инженерные очки"
+	desc = "Очки, используемые инженерами. Режим <b>Мезонного сканера</b> позволяет просматривать основные структурные и рельефные ландшафты сквозь стены, режим <b>Терагерцового сканера</b> позволяет видеть объекты под полом, такие как кабели и трубы, а режим <b>Радиационного сканера</b> позволяет видеть объекты, загрязненные излучением."
 	icon_state = "trayson-meson"
 	inhand_icon_state = "trayson-meson"
 	actions_types = list(/datum/action/item_action/toggle_mode)
@@ -40,7 +40,7 @@
 
 /obj/item/clothing/glasses/meson/engine/proc/toggle_mode(mob/user, voluntary)
 	mode = modes[mode]
-	to_chat(user, "<span class='[voluntary ? "notice":"warning"]'>[voluntary ? "You turn the goggles":"The goggles turn"] [mode ? "to [mode] mode":"off"][voluntary ? ".":"!"]</span>")
+	to_chat(user, "<span class='[voluntary ? "notice":"warning"]'>[voluntary ? "Переключаю очки":"Очки переключаются"] [mode ? "to [mode] mode":"off"][voluntary ? ".":"!"]</span>")
 	if(connection_images.len)
 		connection_images.Cut()
 	switch(mode)
@@ -136,10 +136,10 @@
 	return ..()
 
 /obj/item/clothing/glasses/meson/engine/tray //atmos techs have lived far too long without tray goggles while those damned engineers get their dual-purpose gogles all to themselves
-	name = "optical t-ray scanner"
+	name = "Терагерцовые очки"
 	icon_state = "trayson-t-ray"
 	inhand_icon_state = "trayson-t-ray"
-	desc = "Used by engineering staff to see underfloor objects such as cables and pipes."
+	desc = "Используется инженерным персоналом для наблюдения за объектами под полом, такими как кабели и трубы."
 	range = 2
 
 
@@ -151,10 +151,10 @@
 		connection_images.Cut()
 
 /obj/item/clothing/glasses/meson/engine/shuttle
-	name = "shuttle region scanner"
+	name = "сканер зоны для шаттла"
 	icon_state = "trayson-shuttle"
 	inhand_icon_state = "trayson-shuttle"
-	desc = "Used to see the boundaries of shuttle regions."
+	desc = "Используется для определения границ зоны прилета шаттла."
 
 	modes = list(MODE_NONE = MODE_SHUTTLE, MODE_SHUTTLE = MODE_NONE)
 

@@ -1,7 +1,7 @@
 /// Belt which can turn you into a beast, once an anomaly core is inserted
 /obj/item/polymorph_belt
-	name = "polymorphic field inverter"
-	desc = "This device can scan and store DNA from other life forms."
+	name = "инвертер полиморфного поля"
+	desc = "Это устройство способно сканировать и хранить ДНК других живых существ."
 	slot_flags = ITEM_SLOT_BELT
 	icon = 'icons/obj/clothing/belts.dmi'
 	icon_state = "polybelt_inactive"
@@ -27,7 +27,7 @@
 	. = ..()
 	if (stored_mob_type)
 		var/mob/living/will_become = stored_mob_type
-		. += span_notice("It contains digitised [initial(will_become.name)] DNA.")
+		. += span_notice("Он содержит оцифрованные ДНК [initial(will_become.name)].")
 	if (!active)
 		. += span_warning("It requires a Bioscrambler Anomaly Core in order to function.")
 
@@ -42,7 +42,7 @@
 /obj/item/polymorph_belt/attackby(obj/item/weapon, mob/user, params)
 	if (!istype(weapon, /obj/item/assembly/signaler/anomaly/bioscrambler))
 		return ..()
-	balloon_alert(user, "inserting...")
+	balloon_alert(user, "вставляю...")
 	if (!do_after(user, delay = 3 SECONDS, target = src))
 		return
 	qdel(weapon)
@@ -58,26 +58,26 @@
 	if (!isliving(target_mob))
 		return
 	if (!isanimal_or_basicmob(target_mob))
-		balloon_alert(user, "target too complex!")
+		balloon_alert(user, "цель слишком сложная!")
 		return TRUE
 	if (target_mob.mob_biotypes & (MOB_HUMANOID|MOB_ROBOTIC|MOB_SPECIAL|MOB_SPIRIT|MOB_UNDEAD))
-		balloon_alert(user, "incompatible!")
+		balloon_alert(user, "несовместимо!")
 		return TRUE
 	if (isanimal_or_basicmob(target_mob))
 		if (!target_mob.compare_sentience_type(SENTIENCE_ORGANIC))
-			balloon_alert(user, "target too intelligent!")
+			balloon_alert(user, "цель слишком разумная!")
 			return TRUE
 	if (stored_mob_type == target_mob.type)
-		balloon_alert(user, "already scanned!")
+		balloon_alert(user, "уже просканирован!")
 		return TRUE
 	if (DOING_INTERACTION_WITH_TARGET(user, target_mob))
-		balloon_alert(user, "busy!")
+		balloon_alert(user, "занят!")
 		return TRUE
-	balloon_alert(user, "scanning...")
-	visible_message(span_notice("[user] begins scanning [target_mob] with [src]."))
+	balloon_alert(user, "сканирую...")
+	visible_message(span_notice("[user] начинает сканировать [target_mob] используя [src]."))
 	if (!do_after(user, delay = 5 SECONDS, target = target_mob))
 		return TRUE
-	visible_message(span_notice("[user] scans [target_mob] with [src]."))
+	visible_message(span_notice("[user] сканирует [target_mob] используя [src]."))
 	stored_mob_type = target_mob.type
 	update_transform_action()
 	playsound(src, 'sound/machines/ping.ogg', 50, FALSE)
@@ -99,7 +99,7 @@
 
 /// Ability provided by the polymorph belt
 /datum/action/cooldown/spell/shapeshift/polymorph_belt
-	name = "Invert Polymorphic Field"
+	name = "Инвертировать Полиморфное Поле"
 	cooldown_time = 30 SECONDS
 	school = SCHOOL_UNSET
 	invocation_type = INVOCATION_NONE
@@ -134,12 +134,12 @@
 	animate(transform = matrix() * 1.3, time = animate_step, easing = SINE_EASING)
 	animate(transform = matrix() * 0.1, time = animate_step, easing = SINE_EASING)
 
-	cast_on.balloon_alert(cast_on, "transforming...")
+	cast_on.balloon_alert(cast_on, "трансформируюсь...")
 	if (!do_after(cast_on, delay = channel_time, target = cast_on))
 		animate(cast_on, transform = matrix(), time = 0, easing = SINE_EASING)
 		cast_on.transform = old_transform
 		return . | SPELL_CANCEL_CAST
-	cast_on.visible_message(span_warning("[cast_on]'s body rearranges itself with a horrible crunching sound!"))
+	cast_on.visible_message(span_warning("Тело [cast_on] с ужасающим хрустом меняет форму!"))
 	playsound(cast_on, 'sound/magic/demon_consume.ogg', 50, TRUE)
 
 /datum/action/cooldown/spell/shapeshift/polymorph_belt/after_cast(atom/cast_on)

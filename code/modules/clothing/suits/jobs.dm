@@ -354,8 +354,8 @@
 
 //Robotocist
 /obj/item/clothing/suit/hooded/techpriest
-	name = "techpriest robes"
-	desc = "For those who REALLY love their toasters."
+	name = "одежда техножреца"
+	desc = "Для тех, кто ДЕЙСТВИТЕЛЬНО любит свои тостеры."
 	icon_state = "techpriest"
 	icon = 'icons/obj/clothing/suits/costume.dmi'
 	worn_icon = 'icons/mob/clothing/suits/costume.dmi'
@@ -364,10 +364,10 @@
 	hoodtype = /obj/item/clothing/head/hooded/techpriest
 
 /obj/item/clothing/head/hooded/techpriest
-	name = "techpriest's hood"
+	name = "капюшон техножреца"
 	icon = 'icons/obj/clothing/head/costume.dmi'
 	worn_icon = 'icons/mob/clothing/head/costume.dmi'
-	desc = "A hood for those who REALLY love their toasters."
+	desc = "Капюшон для тех, кто ДЕЙСТВИТЕЛЬНО любит свои тостеры."
 	icon_state = "techpriesthood"
 	inhand_icon_state = null
 	body_parts_covered = HEAD
