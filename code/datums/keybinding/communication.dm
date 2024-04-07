@@ -43,7 +43,7 @@
 /datum/keybinding/client/communication/me
 	hotkey_keys = list("F4", "M")
 	name = ME_CHANNEL
-	full_name = "Эмоция (/Действия)"
+	full_name = "Эмоция (/Действие)"
 	keybind_signal = COMSIG_KB_CLIENT_ME_DOWN
 
 /datum/keybinding/client/communication/me/down(client/user)
