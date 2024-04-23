@@ -1,6 +1,6 @@
 //Head surgery to fix the ears organ
 /datum/surgery/ear_surgery
-	name = "Ear surgery"
+	name = "Ушная хирургия"
 	requires_bodypart_type = NONE
 	organ_to_manipulate = ORGAN_SLOT_EARS
 	possible_locs = list(BODY_ZONE_HEAD)
@@ -15,7 +15,7 @@
 
 //fix ears
 /datum/surgery_step/fix_ears
-	name = "fix ears (hemostat)"
+	name = "исправьте уши (зажим)"
 	implements = list(
 		TOOL_HEMOSTAT = 100,
 		TOOL_SCREWDRIVER = 45,

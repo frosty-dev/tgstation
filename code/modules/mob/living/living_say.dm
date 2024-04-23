@@ -466,6 +466,10 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 	var/list/data = list(message, tts_message, tts_filter)
 	SEND_SIGNAL(src, COMSIG_LIVING_TREAT_MESSAGE, data)
 	message = data[TREAT_MESSAGE_ARG]
+
+	if(hydration <= HYDRATION_LEVEL_DEHYDRATED)
+		message = thirstymessage(message)
+
 	tts_message = data[TREAT_TTS_MESSAGE_ARG]
 	tts_filter = data[TREAT_TTS_FILTER_ARG]
 

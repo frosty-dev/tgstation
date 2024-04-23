@@ -241,7 +241,7 @@
 		user.dropItemToGround(src, TRUE)
 	else
 		user.visible_message(
-			span_notice("[user] вращает [src] на своём пальце за спусковой крючок. Жесть он крут."),
+			span_notice("[user] вращает [src] на своем пальце за спусковой крючок. Жесть он крут."),
 			span_notice("Вращаю [src] вокруг пальца за спусковой крючок. Жесть я крут."),
 		)
 		playsound(src, 'sound/items/handling/ammobox_pickup.ogg', 20, FALSE)

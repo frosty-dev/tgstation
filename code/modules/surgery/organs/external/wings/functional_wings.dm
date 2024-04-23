@@ -1,6 +1,6 @@
 ///hud action for starting and stopping flight
 /datum/action/innate/flight
-	name = "Toggle Flight"
+	name = "Переключить полёт"
 	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_IMMOBILE|AB_CHECK_INCAPACITATED
 	button_icon = 'icons/mob/actions/actions_items.dmi'
 	button_icon_state = "flight"
@@ -11,9 +11,9 @@
 	if(wings && wings.can_fly(human))
 		wings.toggle_flight(human)
 		if(!(human.movement_type & FLYING))
-			to_chat(human, span_notice("You settle gently back onto the ground..."))
+			to_chat(human, span_notice("Мягко сажусь обратно на пол..."))
 		else
-			to_chat(human, span_notice("You beat your wings and begin to hover gently above the ground..."))
+			to_chat(human, span_notice("Начинаю взмахивать крыльями и плавно парить над полом..."))
 			human.set_resting(FALSE, TRUE)
 
 ///The true wings that you can use to fly and shit (you cant actually shit with them)

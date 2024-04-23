@@ -1,5 +1,5 @@
 /datum/surgery/blood_filter
-	name = "Filter blood"
+	name = "Фильтрация крови (Химикаты)"
 	possible_locs = list(BODY_ZONE_CHEST)
 	steps = list(
 		/datum/surgery_step/incise,
@@ -45,7 +45,7 @@
 	return FALSE
 
 /datum/surgery_step/filter_blood
-	name = "Filter blood (blood filter)"
+	name = "Фильтрация крови (Фильтр крови)"
 	implements = list(/obj/item/blood_filter = 95)
 	repeatable = TRUE
 	time = 2.5 SECONDS
@@ -55,11 +55,9 @@
 	display_results(
 		user,
 		target,
-		span_notice("You begin filtering [target]'s blood..."),
-		span_notice("[user] uses [tool] to filter [target]'s blood."),
-		span_notice("[user] uses [tool] on [target]'s chest."),
-	)
-	display_pain(target, "You feel a throbbing pain in your chest!")
+		span_notice("Начинаю фильтрацию крови [skloname(target.name, RODITELNI, target.gender)]...") ,
+		span_notice("[user] использует [tool] для фильтрации моей крови.") ,
+		span_notice("[user] использует [tool] на груди [skloname(target.name, RODITELNI, target.gender)]."))
 
 /datum/surgery_step/filter_blood/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results = FALSE)
 	var/obj/item/blood_filter/bloodfilter = tool
@@ -70,10 +68,10 @@
 	display_results(
 		user,
 		target,
-		span_notice(" [tool] pings as it finishes filtering [target]'s blood."),
-		span_notice(" [tool] pings as it stops pumping [target]'s blood."),
-		span_notice(" [tool] pings as it stops pumping."),
-	)
+		span_notice("Закончив фильтрацию крови [skloname(target.name, RODITELNI, target.gender)] [tool] издает короткий звон.") ,
+		span_notice("Закончив качать мою кровь [tool] издает короткий звон.") ,
+		span_notice("Закончив качать [tool] издает короткий звон.") ,
+		playsound(get_turf(target), 'sound/machines/ping.ogg', 25, TRUE, falloff_exponent = 12, falloff_distance = 1))
 
 	if(locate(/obj/item/healthanalyzer) in user.held_items)
 		chemscan(user, target)
@@ -84,8 +82,7 @@
 	display_results(
 		user,
 		target,
-		span_warning("You screw up, bruising [target]'s chest!"),
-		span_warning("[user] screws up, brusing [target]'s chest!"),
-		span_warning("[user] screws up!"),
-	)
+		span_warning("[gvorno(TRUE)], но [gvorno(TRUE)], но я облажался, оставив синяк на груди [skloname(target.name, RODITELNI, target.gender)]!") ,
+		span_warning("[user] облажался, оставив синяк на груди [skloname(target.name, RODITELNI, target.gender)]!") ,
+		span_warning("[user] облажался!"))
 	target.adjustBruteLoss(5)

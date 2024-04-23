@@ -12,9 +12,9 @@
 		temp_age = H.age
 
 	if (gender == FEMALE && temp_age < 30)
-		playsound(get_turf(src), "white/valtos/sounds/love/shot[rand(1, 8)].ogg", 90, 1, 0)
+		playsound(get_turf(src), "white/valtos/sound/love/shot[rand(1, 8)].ogg", 90, 1, 0)
 	else
-		playsound(get_turf(src), "white/valtos/sounds/exrp/interactions/moan_[gender == FEMALE ? "f" : "m"][rand(1, 7)].ogg", 70, 1, 0)
+		playsound(get_turf(src), "white/valtos/sound/exrp/interactions/moan_[gender == FEMALE ? "f" : "m"][rand(1, 7)].ogg", 70, 1, 0)
 
 /mob/living/carbon/human/proc/end_dance(mob/living/carbon/human/partner, target_dancise)
 
@@ -84,18 +84,18 @@
 
 	if(gender == MALE)
 		if (prob(75))
-			playsound(loc, "white/valtos/sounds/exrp/interactions/final_m[rand(1, 3)].ogg", 90, 1, 0)
+			playsound(loc, "white/valtos/sound/exrp/interactions/final_m[rand(1, 3)].ogg", 90, 1, 0)
 		else
-			playsound(loc, "white/valtos/sounds/gachi/penetration_[rand(1, 2)].ogg", 90, 1, 0)
+			playsound(loc, "white/valtos/sound/gachi/penetration_[rand(1, 2)].ogg", 90, 1, 0)
 	else if(gender == FEMALE)
 		var/temp_age = 0
 		if(ishuman(src))
 			var/mob/living/carbon/human/H = src
 			temp_age = H.age
 		if (temp_age > 30)
-			playsound(loc, "white/valtos/sounds/exrp/interactions/final_f[rand(1, 5)].ogg", 70, 1, 0)
+			playsound(loc, "white/valtos/sound/exrp/interactions/final_f[rand(1, 5)].ogg", 70, 1, 0)
 		else
-			playsound(loc, "white/valtos/sounds/love/shot9.ogg", 90, 1, 0)
+			playsound(loc, "white/valtos/sound/love/shot9.ogg", 90, 1, 0)
 
 	visible_message(span_purple("<b>[capitalize(src)]</b> [message]."))
 
@@ -149,7 +149,7 @@
 			dancing_increase = 10
 			dancing_target = DANCE_TARGET_MOUTH
 			dancing_which = VICTIM_DANCER
-			sound_to_play = "white/valtos/sounds/exrp/interactions/bj[rand(1, 11)].ogg"
+			sound_to_play = "white/valtos/sound/exrp/interactions/bj[rand(1, 11)].ogg"
 			if(partner.is_dancing(src, DANCE_TARGET_MOUTH))
 				if(prob(partner.dancing_potency))
 					message = "зарывается языком в пельмешек [partner]"
@@ -174,7 +174,7 @@
 			dancing_increase = 10
 			dancing_target = DANCE_TARGET_MOUTH
 			dancing_which = ACTOR_DANCER
-			sound_to_play = "white/valtos/sounds/exrp/interactions/oral[rand(1, 2)].ogg"
+			sound_to_play = "white/valtos/sound/exrp/interactions/oral[rand(1, 2)].ogg"
 			if(is_dancing(partner, DANCE_TARGET_MOUTH))
 				if(gender == FEMALE)
 					message = "елозит своим пельмешком по лицу [partner]"
@@ -199,7 +199,7 @@
 			dancing_increase = 10
 			dancing_target = DANCE_TARGET_MOUTH
 			dancing_which = ACTOR_DANCER
-			sound_to_play = "white/valtos/sounds/exrp/interactions/oral[rand(1, 2)].ogg"
+			sound_to_play = "white/valtos/sound/exrp/interactions/oral[rand(1, 2)].ogg"
 			if(is_dancing(partner, DANCE_TARGET_THROAT))
 				message = pick(
 					"невероятно сильно ловит клёв в проруби [partner]",
@@ -219,7 +219,7 @@
 		if ("do_dancor")
 			dancing_increase = 10
 			dancing_target = DANCE_TARGET_DANCOR
-			sound_to_play = "white/valtos/sounds/exrp/interactions/dance[rand(1, 3)].ogg"
+			sound_to_play = "white/valtos/sound/exrp/interactions/dance[rand(1, 3)].ogg"
 			if(is_dancing(partner, DANCE_TARGET_DANCOR))
 				message = pick(
 					"исследует [partner] в шоколадницу",
@@ -234,7 +234,7 @@
 		if ("do_dance")
 			dancing_increase = 10
 			dancing_target = DANCE_TARGET_DANCERESS
-			sound_to_play = "white/valtos/sounds/exrp/interactions/dance[rand(1, 2)].ogg"
+			sound_to_play = "white/valtos/sound/exrp/interactions/dance[rand(1, 2)].ogg"
 			if(is_dancing(partner, DANCE_TARGET_DANCERESS))
 				message = "проникает в пельмешек [partner]"
 			else
@@ -244,7 +244,7 @@
 		if ("do_mount")
 			dancing_increase = 10
 			dancing_target = DANCE_TARGET_DANCERESS
-			sound_to_play = "white/valtos/sounds/exrp/interactions/dance[rand(1, 3)].ogg"
+			sound_to_play = "white/valtos/sound/exrp/interactions/dance[rand(1, 3)].ogg"
 			if(partner.is_dancing(src, DANCE_TARGET_DANCERESS))
 				message = "скачет на стан-батоне [partner]"
 			else
@@ -254,7 +254,7 @@
 		if ("do_assdance")
 			dancing_increase = 10
 			dancing_target = DANCE_TARGET_DANCOR
-			sound_to_play = "white/valtos/sounds/exrp/interactions/dance[rand(1, 3)].ogg"
+			sound_to_play = "white/valtos/sound/exrp/interactions/dance[rand(1, 3)].ogg"
 			if(partner.is_dancing(src, DANCE_TARGET_DANCOR))
 				message = "по-сербски прыгает на стан-батоне [partner]"
 			else
@@ -265,7 +265,7 @@
 			dancing_increase = 10
 			dancing_target = null
 			dancing_which = VICTIM_DANCER
-			sound_to_play = "white/valtos/sounds/exrp/interactions/champ_fingering.ogg"
+			sound_to_play = "white/valtos/sound/exrp/interactions/champ_fingering.ogg"
 			message = pick(
 				"анализирует пельмешек [partner]",
 				"измеряет глубину пельмешка [partner]",
@@ -276,7 +276,7 @@
 			dancing_increase = 10
 			dancing_target = null
 			dancing_which = VICTIM_DANCER
-			sound_to_play = "white/valtos/sounds/exrp/interactions/champ_fingering.ogg"
+			sound_to_play = "white/valtos/sound/exrp/interactions/champ_fingering.ogg"
 			message = pick(
 				"анализирует шоколадницу [partner]",
 				"измеряет глубину скважины [partner]",
@@ -287,14 +287,14 @@
 			dancing_increase = 10
 			dancing_target = null
 			dancing_which = VICTIM_DANCER
-			sound_to_play = "white/valtos/sounds/exrp/interactions/champ_fingering.ogg"
+			sound_to_play = "white/valtos/sound/exrp/interactions/champ_fingering.ogg"
 			message = "<b>[src]</b> вынюхивает след на заднем дворе [partner]"
 
 		if ("do_handdance")
 			dancing_increase = 10
 			dancing_target = DANCE_TARGET_HAND
 			dancing_which = VICTIM_DANCER
-			sound_to_play = "white/valtos/sounds/exrp/interactions/bang[rand(1, 3)].ogg"
+			sound_to_play = "white/valtos/sound/exrp/interactions/bang[rand(1, 3)].ogg"
 			if(partner.is_dancing(src, DANCE_TARGET_HAND))
 				message = pick(
 					"шакалит [partner]",
@@ -309,7 +309,7 @@
 			dancing_increase = 10
 			dancing_target = DANCE_TARGET_CHEST
 			dancing_which = ACTOR_DANCER
-			sound_to_play = "white/valtos/sounds/exrp/interactions/dance[rand(1, 3)].ogg"
+			sound_to_play = "white/valtos/sound/exrp/interactions/dance[rand(1, 3)].ogg"
 			if(is_dancing(partner, DANCE_TARGET_CHEST))
 				message = pick(
 					"исследует [partner] между горок",
@@ -323,7 +323,7 @@
 			dancing_increase = 1
 			dancing_target = null
 			dancing_which = ACTOR_DANCER
-			sound_to_play = "white/valtos/sounds/exrp/interactions/squelch[rand(1, 3)].ogg"
+			sound_to_play = "white/valtos/sound/exrp/interactions/squelch[rand(1, 3)].ogg"
 			if(is_dancing(partner, DANCING_FACE_WITH_DANCOR))
 				message = pick(
 					"кормит булочками [partner]",
@@ -340,7 +340,7 @@
 			dancing_increase = 1
 			dancing_target = null
 			dancing_which = ACTOR_DANCER
-			sound_to_play = "white/valtos/sounds/exrp/interactions/foot_dry[rand(1, 4)].ogg"
+			sound_to_play = "white/valtos/sound/exrp/interactions/foot_dry[rand(1, 4)].ogg"
 			if(src.get_item_by_slot(ITEM_SLOT_FEET) != null)
 				message = pick(
 					"поставил [get_shoes()] подошвой на лицо [partner]",
@@ -359,7 +359,7 @@
 			dancing_increase = 1
 			dancing_target = null
 			dancing_which = ACTOR_DANCER
-			sound_to_play = "white/valtos/sounds/exrp/interactions/foot_wet[rand(1, 3)].ogg"
+			sound_to_play = "white/valtos/sound/exrp/interactions/foot_wet[rand(1, 3)].ogg"
 			if(src.get_item_by_slot(ITEM_SLOT_FEET) != null)
 				message = pick(
 					"заставляет [partner] попробовать [get_shoes()]",
@@ -377,7 +377,7 @@
 			dancing_increase = 1
 			dancing_target = DANCE_TARGET_MOUTH
 			dancing_which = ACTOR_DANCER
-			sound_to_play = "white/valtos/sounds/exrp/interactions/nuts[rand(1, 4)].ogg"
+			sound_to_play = "white/valtos/sound/exrp/interactions/nuts[rand(1, 4)].ogg"
 			if(is_dancing(partner, DANCE_TO_FACE))
 				message = pick(
 					"хватает [partner] за голову и принуждает вкусить яишницы",
@@ -396,7 +396,7 @@
 			dancing_increase = 10
 			dancing_target = THIGH_DANCE
 			var file = pick("bj10", "bj3", "foot_wet1", "foot_dry3")
-			sound_to_play = "white/valtos/sounds/exrp/interactions/[file].ogg"
+			sound_to_play = "white/valtos/sound/exrp/interactions/[file].ogg"
 			if(is_dancing(partner, THIGH_DANCE))
 				if(gender == FEMALE)
 					message = pick(

@@ -219,6 +219,8 @@ GLOBAL_LIST_INIT(turfs_pass_meteor, typecacheof(list(
 
 #define isstack(A) (istype(A, /obj/item/stack))
 
+#define isstacksheet(A) (istype(A, /obj/item/stack/sheet))
+
 #define isgrenade(A) (istype(A, /obj/item/grenade))
 
 #define islandmine(A) (istype(A, /obj/effect/mine))

@@ -694,11 +694,11 @@
 	if(is_zero_amount(delete_if_zero = TRUE))
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	var/max = get_amount()
-	var/stackmaterial = tgui_input_number(user, "How many sheets do you wish to take out of this stack?", "Stack Split", max_value = max)
-	if(!stackmaterial || QDELETED(user) || QDELETED(src) || !usr.can_perform_action(src, FORBID_TELEKINESIS_REACH))
+	var/amount = tgui_input_number(user, "Сколько будем брать листов?", "Stack Split", max_value = max)
+	if(!amount || QDELETED(user) || QDELETED(src) || !usr.can_perform_action(src, FORBID_TELEKINESIS_REACH))
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
-	split_stack(user, stackmaterial)
-	to_chat(user, span_notice("Достаю [stackmaterial] листов из кучи."))
+	split_stack(user, amount)
+	to_chat(user, span_notice("Достаю [amount] лист[get_ending(amount, list("", "а", "ов"))] из кучи."))
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 /** Splits the stack into two stacks.

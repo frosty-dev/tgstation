@@ -35,7 +35,7 @@
 /obj/item/gps/mining
 	icon_state = "gps-m"
 	gpstag = "MINE0"
-	desc = "GPS поисковая система для поиска пропавших шахтеров и объектов повышенного интереса."
+	desc = "GPS поисковая система для поиска пропавших шахтёров и объектов повышенного интереса."
 
 /obj/item/gps/cyborg
 	icon_state = "gps-b"

@@ -201,7 +201,7 @@ GLOBAL_VAR(basketball_game)
 		else
 			to_chat(baller, span_notice("You are a basketball player for the [team_name]. Score as much as you can before time runs out."))
 			to_chat(baller, span_info("LMB to pass the ball while on help intent (zero stamina cost/) - accuracy penalty when scoring)"))
-			to_chat(baller, span_info("RMB to shoot the ball ([STAMINA_COST_SHOOTING] stamina cost) - this goes over players heads"))
+			to_chat(baller, span_info("ПКМ to shoot the ball ([STAMINA_COST_SHOOTING] stamina cost) - this goes over players heads"))
 			to_chat(baller, span_info("Click directly on hoop while adjacent to dunk ([STAMINA_COST_DUNKING] stamina cost)"))
 			to_chat(baller, span_info("Spinning decreases other players disarm chance against you but reduces shooting accuracy ([STAMINA_COST_SPINNING] stamina cost)"))
 

@@ -1,5 +1,6 @@
 /obj/item/stack/sheet/hot_ice
 	name = "горячий лёд"
+	skloname = "горячего льда"
 	icon_state = "hot-ice"
 	inhand_icon_state = "hot-ice"
 	singular_name = "горячий лёд"

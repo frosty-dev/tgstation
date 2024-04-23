@@ -42,6 +42,7 @@
 		/obj/item/extinguisher/mini,
 		/obj/item/reagent_containers/hypospray,
 		/obj/item/sensor_device,
+		/obj/item/breathing_bag,
 		/obj/item/radio,
 		/obj/item/clothing/gloves,
 		/obj/item/lazarus_injector,
@@ -144,6 +145,7 @@
 		/obj/item/scalpel = 1,
 		/obj/item/hemostat = 1,
 		/obj/item/cautery = 1,
+		/obj/item/breathing_bag = 1,
 	)
 	generate_items_inside(items_inside,src)
 

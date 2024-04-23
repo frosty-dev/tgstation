@@ -153,7 +153,7 @@
 				for (var/trait in ULTRA_TRAIT_LIST)
 					ADD_TRAIT(D, trait, source)
 			else
-				ADD_TRAIT(D,chosen_trait,source)
+				ADD_TRAIT(D, chosen_trait, source)
 		if("Remove")
 			var/specific = input("All or specific source ?", "Trait Remove/Add") as null|anything in list("All","Specific")
 			if(!specific)

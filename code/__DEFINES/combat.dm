@@ -355,7 +355,7 @@ GLOBAL_LIST_INIT(arm_zones, list(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM))
 // Defines for combo attack component
 /// LMB Attack
 #define LEFT_ATTACK "Left Attack"
-/// RMB Attack
+/// ПКМ Attack
 #define RIGHT_ATTACK "Right Attack"
 /// Steps for the combo
 #define COMBO_STEPS "steps"

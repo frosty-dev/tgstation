@@ -155,6 +155,7 @@
 
 ///Returns a list of chemical_reaction datums that have the input STRING as a product
 /proc/get_reagent_type_from_product_string(string)
+	var/input = lowertext(string)
 	var/input_reagent = replacetext(lowertext(string), " ", "") //95% of the time, the reagent id is a lowercase/no spaces version of the name
 	if (isnull(input_reagent))
 		return
@@ -164,6 +165,13 @@
 		input_reagent = shortcuts[input_reagent]
 	else
 		input_reagent = find_reagent(input_reagent)
+
+		if (!input_reagent)
+			input_reagent = find_reagent_object_from_type(input)
+
+	if (!input_reagent)
+		return
+
 	return input_reagent
 
 ///Returns reagent datum from typepath

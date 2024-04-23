@@ -1,6 +1,6 @@
 /obj/item/bodypart
-	name = "limb"
-	desc = "Why is it detached..."
+	name = "конечность"
+	desc = "Почему так получилось?"
 	force = 3
 	throwforce = 3
 	w_class = WEIGHT_CLASS_SMALL
@@ -293,7 +293,6 @@
 			status = "не имеет повреждений"
 		else
 			status = "ФИЗИЧЕСКИЙ: [shown_brute]</span>] И \[<span class='warning'ОЖОГИ: [shown_burn] "
-			// status = "[shown_brute] физического урона и [shown_burn] ожогового урона"
 
 	else
 		if(shown_brute > (max_damage * 0.8))
@@ -302,6 +301,9 @@
 			status += medium_brute_msg
 		else if(shown_brute > DAMAGE_PRECISION)
 			status += light_brute_msg
+
+		if (shown_brute > 0 && shown_burn > 0)
+			status += "</span\] \[<span class='warning'>"
 
 		if(shown_brute > DAMAGE_PRECISION && shown_burn > DAMAGE_PRECISION)
 			status += " и "
@@ -334,16 +336,12 @@
 		switch(wound.severity)
 			if(WOUND_SEVERITY_TRIVIAL)
 				check_list += "[span_danger(uppertext(wound.name))]"
-				// check_list += "\t [span_danger("Моя [name] имеет [wound.a_or_from] [lowertext(wound.name)].")]"
 			if(WOUND_SEVERITY_MODERATE)
 				check_list += "[span_warning(uppertext(wound.name))]"
-				// check_list += "\t [span_warning("Моя [name] имеет [wound.a_or_from] [lowertext(wound.name)]!")]"
 			if(WOUND_SEVERITY_SEVERE)
 				check_list += "[span_boldwarning(uppertext(wound.name))]"
-				// check_list += "\t [span_boldwarning("Моя [name] имеет [wound.a_or_from] [lowertext(wound.name)]!!")]"
 			if(WOUND_SEVERITY_CRITICAL)
 				check_list += "[span_boldwarning(uppertext(wound.name))]"
-				// check_list += "\t [span_boldwarning("Моя [name] имеет [wound.a_or_from] [lowertext(wound.name)]!!!")]"
 
 
 

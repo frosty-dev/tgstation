@@ -1,11 +1,11 @@
 /obj/item/disk/surgery/brainwashing
-	name = "Brainwashing Surgery Disk"
-	desc = "The disk provides instructions on how to impress an order on a brain, making it the primary objective of the patient."
+	name = "Хирургический диск для промывания мозгов"
+	desc = "На диске содержатся инструкции по тому, как запечатлеть приказ в мозгу, делая его основной директивой пациента."
 	surgeries = list(/datum/surgery/advanced/brainwashing)
 
 /datum/surgery/advanced/brainwashing
-	name = "Brainwashing"
-	desc = "A surgical procedure which directly implants a directive into the patient's brain, making it their absolute priority. It can be cleared using a mindshield implant."
+	name = "Операция на мозге: Промывка мозгов"
+	desc = "Хирургическая процедура, которая запечатляет приказ в мозге пациента, делая его основной директивой. Эту директиву можно отменить используя имплант защиты разума."
 	possible_locs = list(BODY_ZONE_HEAD)
 	steps = list(
 		/datum/surgery_step/incise,
@@ -25,7 +25,7 @@
 	return TRUE
 
 /datum/surgery_step/brainwash
-	name = "brainwash (hemostat)"
+	name = "промывание мозга"
 	implements = list(
 		TOOL_HEMOSTAT = 85,
 		TOOL_WIRECUTTER = 50,
@@ -38,33 +38,31 @@
 	var/objective
 
 /datum/surgery_step/brainwash/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
-	objective = tgui_input_text(user, "Choose the objective to imprint on your victim's brain", "Brainwashing")
+	objective = tgui_input_text(user, "Выберите директиву, которую хотите запечатлеть в мозге вашей жертвы", "Промывание мозгов")
 	if(!objective)
 		return SURGERY_STEP_FAIL
 	display_results(
 		user,
 		target,
-		span_notice("You begin to brainwash [target]..."),
-		span_notice("[user] begins to fix [target]'s brain."),
-		span_notice("[user] begins to perform surgery on [target]'s brain."),
-	)
-	display_pain(target, "Your head pounds with unimaginable pain!") // Same message as other brain surgeries
+		span_notice("Начинаю промывать мозги [skloname(target.name, RODITELNI, target.gender)]...") ,
+		span_notice("[user] начинает исправлять мозг [skloname(target.name, RODITELNI, target.gender)].") ,
+		span_notice("[user] начинает проводить операцию на мозге [skloname(target.name, RODITELNI, target.gender)]."))
 
 /datum/surgery_step/brainwash/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results = FALSE)
 	if(!target.mind)
-		to_chat(user, span_warning("[target] doesn't respond to the brainwashing, as if [target.p_they()] lacked a mind..."))
+		to_chat(user, span_warning("[target] не реагирует на промывание мозга, кажется, что [target.ru_who()] лишился ума..."))
 		return FALSE
 	if(HAS_TRAIT(target, TRAIT_MINDSHIELD))
-		to_chat(user, span_warning("You hear a faint buzzing from a device inside [target]'s brain, and the brainwashing is erased."))
+		to_chat(user, span_warning("Слышу слабое жужание устройства в мозгу [skloname(target.name, RODITELNI, target.gender)] и новая директива стирается."))
 		return FALSE
 	display_results(
 		user,
 		target,
-		span_notice("You succeed in brainwashing [target]."),
-		span_notice("[user] successfully fixes [target]'s brain!"),
-		span_notice("[user] completes the surgery on [target]'s brain."),
-	)
-	to_chat(target, span_userdanger("A new compulsion fills your mind... you feel forced to obey it!"))
+		span_notice("Успешно промыл[user.ru_a()] мозг [skloname(target.name, RODITELNI, target.gender)].") ,
+		span_notice("[user] успешно исправил[user.ru_a()] мозг [skloname(target.name, RODITELNI, target.gender)]!") ,
+		span_notice("[user] завершил[user.ru_a()] операцию на мозге [skloname(target.name, RODITELNI, target.gender)]."))
+	to_chat(target, span_userdanger("Что-то заполняет мой разум, принуждая... подчиниться!"))
+
 	brainwash(target, objective)
 	message_admins("[ADMIN_LOOKUPFLW(user)] surgically brainwashed [ADMIN_LOOKUPFLW(target)] with the objective '[objective]'.")
 	user.log_message("has brainwashed [key_name(target)] with the objective '[objective]' using brainwashing surgery.", LOG_ATTACK)
@@ -74,15 +72,12 @@
 
 /datum/surgery_step/brainwash/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	if(target.get_organ_slot(ORGAN_SLOT_BRAIN))
-		display_results(
-			user,
+		display_results(user,
 			target,
-			span_warning("You screw up, bruising the brain tissue!"),
-			span_warning("[user] screws up, causing brain damage!"),
-			span_notice("[user] completes the surgery on [target]'s brain."),
-		)
-		display_pain(target, "Your head throbs with horrible pain!")
+			span_warning("Облажалися, повредив мозговую ткань!") ,
+			span_warning("[user] облажался, нанеся урон мозгу!") ,
+			span_notice("[user] завершил[user.ru_a()] операцию на мозге [target]."))
 		target.adjustOrganLoss(ORGAN_SLOT_BRAIN, 40)
 	else
-		user.visible_message(span_warning("[user] suddenly notices that the brain [user.p_they()] [user.p_were()] working on is not there anymore."), span_warning("You suddenly notice that the brain you were working on is not there anymore."))
+		user.visible_message(span_warning("[user] внезапно замечает что мозг над которым [user.ru_who()] работал[user.ru_a()] исчез.") , span_warning("Внезапно обнаруживаю что мозг, над которым я работал[user.ru_a()], исчез."))
 	return FALSE

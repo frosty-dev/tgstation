@@ -1,6 +1,6 @@
 /*****************Pickaxes & Drills & Shovels****************/
 /obj/item/pickaxe
-	name = "pickaxe"
+	name = "кирка"
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "pickaxe"
 	inhand_icon_state = "pickaxe"
@@ -16,8 +16,8 @@
 	tool_behaviour = TOOL_MINING
 	toolspeed = 1
 	usesound = list('sound/effects/picaxe1.ogg', 'sound/effects/picaxe2.ogg', 'sound/effects/picaxe3.ogg')
-	attack_verb_continuous = list("hits", "pierces", "slices", "attacks")
-	attack_verb_simple = list("hit", "pierce", "slice", "attack")
+	attack_verb_continuous = list("бьёт", "протыкает", "рубит", "атакует")
+	attack_verb_simple = list("бьёт", "протыкает", "рубит", "атакует")
 
 /obj/item/pickaxe/suicide_act(mob/living/user)
 	user.visible_message(span_suicide("[user] begins digging into [user.p_their()] chest! It looks like [user.p_theyre()] trying to commit suicide!"))
@@ -27,16 +27,16 @@
 	return SHAME
 
 /obj/item/pickaxe/rusted
-	name = "rusty pickaxe"
-	desc = "A pickaxe that's been left to rust."
-	attack_verb_continuous = list("ineffectively hits")
-	attack_verb_simple = list("ineffectively hit")
+	name = "ржавая кирка"
+	desc = "Кирка, оставленная ржаветь."
+	attack_verb_continuous = list("тыкает")
+	attack_verb_simple = list("тыкает")
 	force = 1
 	throwforce = 1
 
 /obj/item/pickaxe/mini
-	name = "compact pickaxe"
-	desc = "A smaller, compact version of the standard pickaxe."
+	name = "компактная кирка"
+	desc = "Меньшая, компактная версия стандартной кирки."
 	icon_state = "minipick"
 	worn_icon_state = "pickaxe"
 	force = 10
@@ -46,34 +46,34 @@
 	custom_materials = list(/datum/material/iron=HALF_SHEET_MATERIAL_AMOUNT)
 
 /obj/item/pickaxe/silver
-	name = "silver-plated pickaxe"
+	name = "посеребренная кирка"
+	desc = "Посеребренная кирка, которая добывает немного быстрее, чем стандартная."
 	icon_state = "spickaxe"
 	inhand_icon_state = "spickaxe"
 	toolspeed = 0.5 //mines faster than a normal pickaxe, bought from mining vendor
-	desc = "A silver-plated pickaxe that mines slightly faster than standard-issue."
 	force = 17
 
 /obj/item/pickaxe/diamond
-	name = "diamond-tipped pickaxe"
+	name = "кирка с алмазным наконечником"
+	desc = "Кирка с алмазной головкой. Чрезвычайно устойчива к растрескиванию каменных стен и выкапыванию грязи."
 	icon_state = "dpickaxe"
 	inhand_icon_state = "dpickaxe"
 	toolspeed = 0.3
-	desc = "A pickaxe with a diamond pick head. Extremely robust at cracking rock walls and digging up dirt."
 	force = 19
 
 /obj/item/pickaxe/drill
-	name = "mining drill"
+	name = "шахтёрский бур"
+	desc = "Тяжелая буровая установка для особо крепкой породы."
 	icon_state = "handdrill"
 	inhand_icon_state = "handdrill"
 	slot_flags = ITEM_SLOT_BELT
 	toolspeed = 0.6 //available from roundstart, faster than a pickaxe.
 	usesound = 'sound/weapons/drill.ogg'
 	hitsound = 'sound/weapons/drill.ogg'
-	desc = "An electric mining drill for the especially scrawny."
 
 /obj/item/pickaxe/drill/cyborg
-	name = "cyborg mining drill"
-	desc = "An integrated electric mining drill."
+	name = "шахтёрский бур киборга"
+	desc = "Интегрированная электрическая буровая установка."
 	flags_1 = NONE
 
 /obj/item/pickaxe/drill/cyborg/Initialize(mapload)
@@ -81,30 +81,30 @@
 	ADD_TRAIT(src, TRAIT_NODROP, CYBORG_ITEM_TRAIT)
 
 /obj/item/pickaxe/drill/diamonddrill
-	name = "diamond-tipped mining drill"
+	name = "бур с алмазным напылением"
+	desc = "Мой бур создан, чтобы пронзить небеса!"
 	icon_state = "diamonddrill"
 	inhand_icon_state = "diamonddrill"
 	toolspeed = 0.2
-	desc = "Yours is the drill that will pierce the heavens!"
 
 /obj/item/pickaxe/drill/cyborg/diamond //This is the BORG version!
-	name = "diamond-tipped cyborg mining drill" //To inherit the NODROP_1 flag, and easier to change borg specific drill mechanics.
+	name = "бур с алмазным напылением киборга" //To inherit the NODROP_1 flag, and easier to change borg specific drill mechanics.
 	icon_state = "diamonddrill"
 	inhand_icon_state = "diamonddrill"
 	toolspeed = 0.2
 
 /obj/item/pickaxe/drill/jackhammer
-	name = "sonic jackhammer"
+	name = "ультразвуковой пневмоперфоратор"
+	desc = "Крошит породу в пыль высокочастотными звуковыми импульсами."
 	icon_state = "jackhammer"
 	inhand_icon_state = "jackhammer"
 	toolspeed = 0.1 //the epitome of powertools. extremely fast mining
 	usesound = 'sound/weapons/sonic_jackhammer.ogg'
 	hitsound = 'sound/weapons/sonic_jackhammer.ogg'
-	desc = "Cracks rocks with sonic blasts."
 
 /obj/item/pickaxe/improvised
-	name = "improvised pickaxe"
-	desc = "A pickaxe made with a knife and crowbar taped together, how does it not break?"
+	name = "импровизированная кирка"
+	desc = "Кирка, сделанная из ножа и лома, склеенных вместе, как она не ломается?"
 	icon_state = "ipickaxe"
 	inhand_icon_state = "ipickaxe"
 	worn_icon_state = "pickaxe"
@@ -116,8 +116,8 @@
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*6) //This number used to be insane and I'm just going to save your sanity and not tell you what it was.
 
 /obj/item/shovel
-	name = "shovel"
-	desc = "A large tool for digging and moving dirt."
+	name = "лопата"
+	desc = "Большой инструмент для копания и перемещения грязи."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "shovel"
 	inhand_icon_state = "shovel"
@@ -132,8 +132,8 @@
 	usesound = 'sound/effects/shovel_dig.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.5)
-	attack_verb_continuous = list("bashes", "bludgeons", "thrashes", "whacks")
-	attack_verb_simple = list("bash", "bludgeon", "thrash", "whack")
+	attack_verb_continuous = list("колотит", "ударяет", "колошматит", "вмазывает")
+	attack_verb_simple = list("колотит", "ударяет", "колошматит", "вмазывает")
 	sharpness = SHARP_EDGED
 
 /obj/item/shovel/Initialize(mapload)
@@ -163,9 +163,8 @@
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/shovel/serrated
-	name = "serrated bone shovel"
-	desc = "A wicked tool that cleaves through dirt just as easily as it does flesh. The design was styled after ancient lavaland tribal designs. \
-		It seems less capable of harming inorganic creatures. Who knows why."
+	name = "зубчатая костяная лопата"
+	desc = "Коварный инструмент, который пробивает грязь так же легко, как и плоть. Дизайн был выполнен в стиле древних племен Лаваленда."
 	icon_state = "shovel_bone"
 	worn_icon_state = "shovel_serr"
 	lefthand_file = 'icons/mob/inhands/equipment/mining_lefthand.dmi'
@@ -175,8 +174,8 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	tool_behaviour = TOOL_SHOVEL // hey, it's serrated.
 	toolspeed = 0.3
-	attack_verb_continuous = list("slashes", "impales", "stabs", "slices")
-	attack_verb_simple = list("slash", "impale", "stab", "slice")
+	attack_verb_continuous = list("колотит", "ударяет", "колошматит", "вмазывает")
+	attack_verb_simple = list("колотит", "ударяет", "колошматит", "вмазывает")
 	sharpness = SHARP_EDGED
 	item_flags = CRUEL_IMPLEMENT
 
@@ -188,19 +187,19 @@
 	. = ..()
 	if( !(user.mind && HAS_TRAIT(user.mind, TRAIT_MORBID)) )
 		return
-	. += span_deadsay("You feel an intense, strange craving to 'dig' straight through living flesh with this shovel. Why else would it be serrated? The thought is mesmerizing...")
+	. += span_deadsay("Чувствую странное желание пронзить живую плоть этой лопатой. Почему она зубчатая? Мысль завораживает...")
 
 // Coroner mail version
 /obj/item/shovel/serrated/dull
-	name = "dull bone shovel"
-	desc = "An ancient, dull bone shovel with a strange design and markings. Visually, it seems pretty weak, but you get the feeling there's more to it than meets the eye..."
+	name = "тупая костяная лопата"
+	desc = "Древняя тупая костяная лопата с странным дизайном и маркировкой. Визуально она кажется довольно слабой, но вы чувствуете, что в ней есть что-то большее, чем кажется на первый взгляд..."
 	force = 8
 	throwforce = 10
 	toolspeed = 0.8
 
 /obj/item/trench_tool
-	name = "entrenching tool"
-	desc = "The multi-purpose tool you always needed."
+	name = "инструмент для рытья траншей"
+	desc = "Многоцелевой инструмент, который всегда вам нужен."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "trench_tool"
 	inhand_icon_state = "trench_tool"
@@ -213,8 +212,8 @@
 	tool_behaviour = TOOL_WRENCH
 	toolspeed = 0.75
 	usesound = 'sound/items/ratchet.ogg'
-	attack_verb_continuous = list("bashes", "bludgeons", "thrashes", "whacks")
-	attack_verb_simple = list("bash", "bludgeon", "thrash", "whack")
+	attack_verb_continuous = list("колотит", "бьёт", "ударяет", "вмазывает")
+	attack_verb_simple = list("колотит", "бьёт", "ударяет", "вмазывает")
 	wound_bonus = 10
 
 /obj/item/trench_tool/get_all_tool_behaviours()
@@ -226,9 +225,8 @@
 
 /obj/item/trench_tool/examine(mob/user)
 	. = ..()
-	. += span_notice("Use in hand to switch configuration.")
-	. += span_notice("It functions as a [tool_behaviour] tool.")
-	. += span_danger("<i>This weapon has no random critical hits.</i>")
+	. += span_danger("Используйте в руке, чтобы переключить конфигурацию.")
+	. += span_danger("Он функционирует как [uncapitalize(tool_behaviour)].")
 
 /obj/item/trench_tool/update_icon_state()
 	. = ..()
@@ -245,38 +243,38 @@
 	if(!user)
 		return
 	var/list/tool_list = list(
-		"Wrench" = image(icon = icon, icon_state = "trench_tool"),
-		"Shovel" = image(icon = icon, icon_state = "trench_tool_shovel"),
-		"Pick" = image(icon = icon, icon_state = "trench_tool_pick"),
+		"Гаечный ключ" = image(icon = icon, icon_state = "trench_tool"),
+		"Лопата" = image(icon = icon, icon_state = "trench_tool_shovel"),
+		"Кирка" = image(icon = icon, icon_state = "trench_tool_pick"),
 		)
 	var/tool_result = show_radial_menu(user, src, tool_list, custom_check = CALLBACK(src, PROC_REF(check_menu), user), require_near = TRUE, tooltips = TRUE)
 	if(!check_menu(user) || !tool_result)
 		return
 	switch(tool_result)
-		if("Wrench")
+		if("Гаечный ключ")
 			tool_behaviour = TOOL_WRENCH
 			sharpness = NONE
 			toolspeed = 0.75
 			w_class = WEIGHT_CLASS_SMALL
 			usesound = 'sound/items/ratchet.ogg'
-			attack_verb_continuous = list("bashes", "bludgeons", "thrashes", "whacks")
-			attack_verb_simple = list("bash", "bludgeon", "thrash", "whack")
-		if("Shovel")
+			attack_verb_continuous = list("колотит", "бьёт", "ударяет", "вмазывает")
+			attack_verb_simple = list("колотит", "бьёт", "ударяет", "вмазывает")
+		if("Лопата")
 			tool_behaviour = TOOL_SHOVEL
 			sharpness = SHARP_EDGED
 			toolspeed = 0.25
 			w_class = WEIGHT_CLASS_NORMAL
 			usesound = 'sound/effects/shovel_dig.ogg'
-			attack_verb_continuous = list("slashes", "impales", "stabs", "slices")
-			attack_verb_simple = list("slash", "impale", "stab", "slice")
-		if("Pick")
+			attack_verb_continuous = list("колотит", "ударяет", "колошматит", "вмазывает")
+			attack_verb_simple = list("колотит", "ударяет", "колошматит", "вмазывает")
+		if("Кирка")
 			tool_behaviour = TOOL_MINING
 			sharpness = SHARP_POINTY
 			toolspeed = 0.5
 			w_class = WEIGHT_CLASS_NORMAL
 			usesound = 'sound/effects/picaxe1.ogg'
-			attack_verb_continuous = list("hits", "pierces", "slices", "attacks")
-			attack_verb_simple = list("hit", "pierce", "slice", "attack")
+			attack_verb_continuous = list("бьёт", "протыкает", "рубит", "атакует")
+			attack_verb_simple = list("бьёт", "протыкает", "рубит", "атакует")
 	playsound(src, 'sound/items/ratchet.ogg', 50, vary = TRUE)
 	update_appearance(UPDATE_ICON)
 
@@ -289,7 +287,7 @@
 
 /obj/item/shovel/giant_wrench
 	name = "Big Slappy"
-	desc = "A gigantic wrench made illegal because of its many incidents involving this tool."
+	desc = "Гигантский гаечный ключ. Признан незаконным из-за множества инцидентов, связанных с этим инструментом."
 	icon_state = "giant_wrench"
 	icon = 'icons/obj/weapons/giant_wrench.dmi'
 	inhand_icon_state = null
@@ -308,8 +306,8 @@
 	armor_type = /datum/armor/giant_wrench
 	resistance_flags = FIRE_PROOF
 	wound_bonus = -10
-	attack_verb_continuous = list("bonks", "bludgeons", "pounds")
-	attack_verb_simple = list("bonk", "bludgeon", "pound")
+	attack_verb_continuous = list("бьёт", "протыкает", "рубит", "атакует")
+	attack_verb_simple = list("бьёт", "протыкает", "рубит", "атакует")
 	drop_sound = 'sound/weapons/sonic_jackhammer.ogg'
 	pickup_sound = 'sound/items/handling/crowbar_pickup.ogg'
 	hitsound = 'sound/weapons/sonic_jackhammer.ogg'
@@ -361,7 +359,7 @@
 	tool_behaviour = (active ? TOOL_WRENCH : initial(tool_behaviour))
 	armour_penetration = (active ? 30 : initial(armour_penetration))
 	if(user)
-		balloon_alert(user, "folded Big Slappy [active ? "open" : "closed"]")
+		balloon_alert(user, "[active ? "открываю" : "закрываю"] Big Slappy")
 	playsound(src, 'sound/items/ratchet.ogg', 50, TRUE)
 	return COMPONENT_NO_DEFAULT_MESSAGE
 
@@ -375,5 +373,4 @@
 		target_mob.Knockdown(2 SECONDS)
 	var/body_zone = pick(BODY_ZONE_HEAD, BODY_ZONE_CHEST, BODY_ZONE_R_ARM, BODY_ZONE_L_ARM, BODY_ZONE_R_LEG, BODY_ZONE_L_LEG)
 	user.apply_damage(force / recoil_factor, BRUTE, body_zone, user.run_armor_check(body_zone, MELEE))
-	to_chat(user, span_danger("The weight of the Big Slappy recoils!"))
 	log_combat(user, user, "recoiled Big Slappy into")

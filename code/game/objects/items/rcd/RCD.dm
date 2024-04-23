@@ -371,7 +371,6 @@
 			construction_mode = mode
 			rcd_design_path = design["[RCD_DESIGN_PATH]"]
 			design_title = initial(rcd_design_path.name)
-
 		else
 			airlock_electronics.do_action(action, params)
 

@@ -1,6 +1,6 @@
 /obj/item/retractor
-	name = "retractor"
-	desc = "Retracts stuff."
+	name = "расширитель"
+	desc = "Позволяет получить оперативный простор в зоне проведения операции."
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "retractor"
 	inhand_icon_state = "retractor"
@@ -19,13 +19,16 @@
 	return surgical_tray_overlay
 
 /obj/item/retractor/augment
-	desc = "Micro-mechanical manipulator for retracting stuff."
+	name = "кибернетический расширитель"
+	icon = 'white/Feline/icons/cyber_arm_surgery.dmi'
+	icon_state = "retractor"
+	desc = "Позволяет получить оперативный простор в зоне проведения операции."
 	toolspeed = 0.5
 
 
 /obj/item/hemostat
-	name = "hemostat"
-	desc = "You think you have seen this before."
+	name = "зажим"
+	desc = "Используется для манипуляций в рабочей области и остановки внутренних кровотечений."
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "hemostat"
 	inhand_icon_state = "hemostat"
@@ -35,8 +38,8 @@
 	flags_1 = CONDUCT_1
 	item_flags = SURGICAL_TOOL
 	w_class = WEIGHT_CLASS_TINY
-	attack_verb_continuous = list("attacks", "pinches")
-	attack_verb_simple = list("attack", "pinch")
+	attack_verb_continuous = list("атакует", "прокусывает")
+	attack_verb_simple = list("атакует", "прокусывает")
 	tool_behaviour = TOOL_HEMOSTAT
 	toolspeed = 1
 	/// How this looks when placed in a surgical tray
@@ -46,13 +49,16 @@
 	return surgical_tray_overlay
 
 /obj/item/hemostat/augment
-	desc = "Tiny servos power a pair of pincers to stop bleeding."
+	name = "кибернетический зажим"
+	icon = 'white/Feline/icons/cyber_arm_surgery.dmi'
+	icon_state = "hemostat"
+	desc = "Крошечные сервоприводы приводят пару зажимов в действие, чтобы остановить кровотечение."
 	toolspeed = 0.5
 
 
 /obj/item/cautery
-	name = "cautery"
-	desc = "This stops bleeding."
+	name = "прижигатель"
+	desc = "Останавливает кровотечения и дезинфецирует рабочую зону после завершения операции."
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "cautery"
 	inhand_icon_state = "cautery"
@@ -62,8 +68,8 @@
 	flags_1 = CONDUCT_1
 	item_flags = SURGICAL_TOOL
 	w_class = WEIGHT_CLASS_TINY
-	attack_verb_continuous = list("burns")
-	attack_verb_simple = list("burn")
+	attack_verb_continuous = list("прожигает")
+	attack_verb_simple = list("прожигает")
 	tool_behaviour = TOOL_CAUTERY
 	toolspeed = 1
 	heat = 500
@@ -74,15 +80,18 @@
 	return surgical_tray_overlay
 
 /obj/item/cautery/ignition_effect(atom/ignitable_atom, mob/user)
-	. = span_notice("[user] touches the end of [src] to  [ignitable_atom], igniting it with a puff of smoke.")
+	. = span_notice("[user] притрагивается раскалённым концом [src.name] к [ignitable_atom.name].")
 
 /obj/item/cautery/augment
-	desc = "A heated element that cauterizes wounds."
+	name = "кибернетический прижигатель"
+	icon = 'white/Feline/icons/cyber_arm_surgery.dmi'
+	icon_state = "cautery"
+	desc = "Нагревательный элемент, который прижигает раны."
 	toolspeed = 0.5
 
 /obj/item/cautery/advanced
-	name = "searing tool"
-	desc = "It projects a high power laser used for medical applications."
+	name = "лазерный прижигатель"
+	desc = "Устройство, используемое для дезинфекции и прижигания раны за счёт излучения низкочастотного лазерного луча. Так же можно сфокусирувать луч до мощности небольшого зубного сверла."
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "e_cautery"
 	inhand_icon_state = "e_cautery"
@@ -121,17 +130,17 @@
 	SIGNAL_HANDLER
 
 	tool_behaviour = (active ? TOOL_DRILL : TOOL_CAUTERY)
-	balloon_alert(user, "lenses set to [active ? "drill" : "mend"]")
+	balloon_alert(user, "Линза [active ? "сфокусирована" : "расфокусирована"]")
 	playsound(user ? user : src, 'sound/weapons/tap.ogg', 50, TRUE)
 	return COMPONENT_NO_DEFAULT_MESSAGE
 
 /obj/item/cautery/advanced/examine()
 	. = ..()
-	. += span_notice("It's set to [tool_behaviour == TOOL_CAUTERY ? "mending" : "drilling"] mode.")
+	. += span_notice("Переключатель установлен на режиме [tool_behaviour == TOOL_CAUTERY ? "прижигателя" : "сверла"].")
 
 /obj/item/surgicaldrill
-	name = "surgical drill"
-	desc = "You can drill using this item. You dig?"
+	name = "хирургическая дрель"
+	desc = "Можно просверлить с помощью этого что-то. Или пробурить?"
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "drill"
 	inhand_icon_state = "drill"
@@ -144,8 +153,8 @@
 	force = 15
 	demolition_mod = 0.5
 	w_class = WEIGHT_CLASS_NORMAL
-	attack_verb_continuous = list("drills")
-	attack_verb_simple = list("drill")
+	attack_verb_continuous = list("дырявит")
+	attack_verb_simple = list("дырявит")
 	tool_behaviour = TOOL_DRILL
 	toolspeed = 1
 	sharpness = SHARP_POINTY
@@ -169,14 +178,17 @@
 	return MANUAL_SUICIDE
 
 /obj/item/surgicaldrill/augment
-	desc = "Effectively a small power drill contained within your arm. May or may not pierce the heavens."
+	name = "кибернетическая дрель"
+	icon = 'white/Feline/icons/cyber_arm_surgery.dmi'
+	icon_state = "surgicaldrill"
+	desc = "По сути, небольшая электрическая дрель, содержащаяся в руке, края притуплены, чтобы предотвратить повреждение тканей. Может или не может пронзить небеса."
 	hitsound = 'sound/weapons/circsawhit.ogg'
 	w_class = WEIGHT_CLASS_SMALL
 	toolspeed = 0.5
 
 /obj/item/scalpel
-	name = "scalpel"
-	desc = "Cut, cut, and once more cut."
+	name = "скальпель"
+	desc = "Очень острое лезвие с микронной заточкой."
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "scalpel"
 	inhand_icon_state = "scalpel"
@@ -191,8 +203,8 @@
 	throw_speed = 3
 	throw_range = 5
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*2, /datum/material/glass =HALF_SHEET_MATERIAL_AMOUNT)
-	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "cuts")
-	attack_verb_simple = list("attack", "slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "cut")
+	attack_verb_continuous = list("атакует", "рубит", "втыкает", "разрезает", "кромсает", "разрывает", "нарезает", "режет")
+	attack_verb_simple = list("атакует", "рубит", "втыкает", "разрезает", "кромсает", "разрывает", "нарезает", "режет")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	sharpness = SHARP_EDGED
 	tool_behaviour = TOOL_SCALPEL
@@ -219,12 +231,15 @@
 	return BRUTELOSS
 
 /obj/item/scalpel/augment
-	desc = "Ultra-sharp blade attached directly to your bone for extra-accuracy."
+	name = "кибернетический скальпель"
+	icon = 'white/Feline/icons/cyber_arm_surgery.dmi'
+	icon_state = "scalpel"
+	desc = "Ультра-острое лезвие прикреплено непосредственно к кости для дополнительной точности."
 	toolspeed = 0.5
 
 /obj/item/circular_saw
-	name = "circular saw"
-	desc = "For heavy duty cutting."
+	name = "циркулярная пила"
+	desc = "Для работы с костью при полостных операциях."
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "saw"
 	inhand_icon_state = "saw"
@@ -240,8 +255,8 @@
 	throw_speed = 2
 	throw_range = 5
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*5, /datum/material/glass = SHEET_MATERIAL_AMOUNT*3)
-	attack_verb_continuous = list("attacks", "slashes", "saws", "cuts")
-	attack_verb_simple = list("attack", "slash", "saw", "cut")
+	attack_verb_continuous = list("атакует", "рубит", "пилит", "режет")
+	attack_verb_simple = list("атакует", "рубит", "пилит", "режет")
 	sharpness = SHARP_EDGED
 	tool_behaviour = TOOL_SAW
 	toolspeed = 1
@@ -270,30 +285,33 @@
 	return surgical_tray_overlay
 
 /obj/item/circular_saw/augment
-	desc = "A small but very fast spinning saw. It rips and tears until it is done."
+	name = "кибернетическая пила"
+	icon = 'white/Feline/icons/cyber_arm_surgery.dmi'
+	icon_state = "circular_saw"
+	desc = "Маленькая, но очень быстро вращающаяся пила."
 	w_class = WEIGHT_CLASS_SMALL
 	toolspeed = 0.5
 
 
 /obj/item/surgical_drapes
-	name = "surgical drapes"
-	desc = "Nanotrasen brand surgical drapes provide optimal safety and infection control."
+	name = "хирургическая простыня"
+	desc = "Хирургические простыни марки NanoTrasen обеспечивают оптимальную безопасность и защиту от инфекций."
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "surgical_drapes"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
 	inhand_icon_state = "drapes"
 	w_class = WEIGHT_CLASS_TINY
-	attack_verb_continuous = list("slaps")
-	attack_verb_simple = list("slap")
+	attack_verb_continuous = list("шлёпает")
+	attack_verb_simple = list("шлёпает")
 
 /obj/item/surgical_drapes/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/surgery_initiator)
 
 /obj/item/surgical_processor //allows medical cyborgs to scan and initiate advanced surgeries
-	name = "surgical processor"
-	desc = "A device for scanning and initiating surgeries from a disk or operating computer."
+	name = "хирургический процессор"
+	desc = "Устройство для сканирования и запуска операций с диска или операционного компьютера."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "surgical_processor"
 	item_flags = NOBLUDGEON
@@ -338,7 +356,7 @@
 		return ..()
 	if(!istype(design_holder, /obj/item/disk/surgery) && !istype(design_holder, /obj/machinery/computer/operating))
 		return ..()
-	balloon_alert(user, "copying designs...")
+	balloon_alert(user, "копирую хирургические протоколы...")
 	playsound(src, 'sound/machines/terminal_processing.ogg', 25, TRUE)
 	if(do_after(user, 1 SECONDS, target = design_holder))
 		if(istype(design_holder, /obj/item/disk/surgery))
@@ -366,8 +384,8 @@
 		return COMPONENT_FORCE_SURGERY
 
 /obj/item/scalpel/advanced
-	name = "laser scalpel"
-	desc = "An advanced scalpel which uses laser technology to cut."
+	name = "лазерный скальпель"
+	desc = "Усовершенствованный скальпель, который использует лазерную технологию для резки. Переключателем можно увеличить мощность излучателя для работы с костью."
 	icon_state = "e_scalpel"
 	inhand_icon_state = "e_scalpel"
 	surgical_tray_overlay = "scalpel_advanced"
@@ -415,17 +433,17 @@
 		tool_behaviour = TOOL_SCALPEL
 		set_light_range(1)
 
-	balloon_alert(user, "[active ? "enabled" : "disabled"] bone-cutting mode")
+	balloon_alert(user, "[active ? "увеличиваю" : "уменьшаю"] мощность")
 	playsound(user ? user : src, 'sound/machines/click.ogg', 50, TRUE)
 	return COMPONENT_NO_DEFAULT_MESSAGE
 
 /obj/item/scalpel/advanced/examine()
 	. = ..()
-	. += span_notice("It's set to [tool_behaviour == TOOL_SCALPEL ? "scalpel" : "saw"] mode.")
+	. += span_notice("Переключатель мощности установлен на режиме [tool_behaviour == TOOL_SCALPEL ? "скальпеля" : "пилы"].")
 
 /obj/item/retractor/advanced
-	name = "mechanical pinches"
-	desc = "An agglomerate of rods and gears."
+	name = "механический зажим"
+	desc = "Сложный инструмент состоящий из шестеренок и манипуляторов."
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*6, /datum/material/glass = SHEET_MATERIAL_AMOUNT*2, /datum/material/silver = SHEET_MATERIAL_AMOUNT*2, /datum/material/titanium =SHEET_MATERIAL_AMOUNT * 2.5)
 	icon_state = "adv_retractor"
@@ -460,17 +478,17 @@
 	SIGNAL_HANDLER
 
 	tool_behaviour = (active ? TOOL_HEMOSTAT : TOOL_RETRACTOR)
-	balloon_alert(user, "gears set to [active ? "clamp" : "retract"]")
+	balloon_alert(user, "шестерни установлены в положении [active ? "зажима" : "расширителя"]")
 	playsound(user ? user : src, 'sound/items/change_drill.ogg', 50, TRUE)
 	return COMPONENT_NO_DEFAULT_MESSAGE
 
 /obj/item/retractor/advanced/examine()
 	. = ..()
-	. += span_notice("It resembles a [tool_behaviour == TOOL_RETRACTOR ? "retractor" : "hemostat"].")
+	. += span_notice("Шестерни установлены в положении  [tool_behaviour == TOOL_RETRACTOR ? "расширителя" : "зажима"].")
 
 /obj/item/shears
-	name = "amputation shears"
-	desc = "A type of heavy duty surgical shears used for achieving a clean separation between limb and patient. Keeping the patient still is imperative to be able to secure and align the shears."
+	name = "ножницы для ампутации"
+	desc = "Тип тяжелых хирургических ножниц, используемых для достижения чистого разделения между конечностью и пациентом. Держать пациента по-прежнему необходимо, чтобы иметь возможность закрепить и выровнять ножницы."
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "shears"
 	flags_1 = CONDUCT_1
@@ -482,8 +500,8 @@
 	throw_speed = 2
 	throw_range = 5
 	custom_materials = list(/datum/material/iron=SHEET_MATERIAL_AMOUNT*4, /datum/material/titanium=SHEET_MATERIAL_AMOUNT*3)
-	attack_verb_continuous = list("shears", "snips")
-	attack_verb_simple = list("shear", "snip")
+	attack_verb_continuous = list("стрижёт", "режет")
+	attack_verb_simple = list("стрижёт", "режет")
 	sharpness = SHARP_EDGED
 	custom_premium_price = PAYCHECK_CREW * 14
 
@@ -497,7 +515,7 @@
 	var/mob/living/carbon/patient = amputee
 
 	if(HAS_TRAIT(patient, TRAIT_NODISMEMBER))
-		to_chat(user, span_warning("The patient's limbs look too sturdy to amputate."))
+		to_chat(user, span_warning("Конечности пациента выглядят слишком крепкими для ампутации."))
 		return
 
 	var/candidate_name
@@ -507,20 +525,20 @@
 	if(user.zone_selected == BODY_ZONE_PRECISE_GROIN)
 		tail_snip_candidate = patient.get_organ_slot(ORGAN_SLOT_EXTERNAL_TAIL)
 		if(!tail_snip_candidate)
-			to_chat(user, span_warning("[patient] does not have a tail."))
+			to_chat(user, span_warning("[patient] не имеет хвоста."))
 			return
 		candidate_name = tail_snip_candidate.name
 
 	else
 		limb_snip_candidate = patient.get_bodypart(check_zone(user.zone_selected))
 		if(!limb_snip_candidate)
-			to_chat(user, span_warning("[patient] is already missing that limb, what more do you want?"))
+			to_chat(user, span_warning("[patient] не имеет здесь конечности."))
 			return
 		candidate_name = limb_snip_candidate.name
 
 	var/amputation_speed_mod = 1
 
-	patient.visible_message(span_danger("[user] begins to secure [src] around [patient]'s [candidate_name]."), span_userdanger("[user] begins to secure [src] around your [candidate_name]!"))
+	patient.visible_message(span_danger("[user] начинает устанавливать [src] вокруг [candidate_name] [patient].") , span_userdanger("[user] начинает закреплять [src] вокруг моей [candidate_name]!"))
 	playsound(get_turf(patient), 'sound/items/ratchet.ogg', 20, TRUE)
 	if(patient.stat >= UNCONSCIOUS || HAS_TRAIT(patient, TRAIT_INCAPACITATED)) //if you're incapacitated (due to paralysis, a stun, being in staminacrit, etc.), critted, unconscious, or dead, it's much easier to properly line up a snip
 		amputation_speed_mod *= 0.5
@@ -534,7 +552,7 @@
 			tail_snip_candidate.forceMove(get_turf(patient))
 		else
 			limb_snip_candidate.dismember()
-		user.visible_message(span_danger("[src] violently slams shut, amputating [patient]'s [candidate_name]."), span_notice("You amputate [patient]'s [candidate_name] with [src]."))
+		user.visible_message(span_danger("[capitalize(src.name)] яростно захлопывается, ампутируя [candidate_name] [patient].") , span_notice("Ампутирую [candidate_name] [patient] используя [src]."))
 
 	if(HAS_MIND_TRAIT(user, TRAIT_MORBID)) //Freak
 		user.add_mood_event("morbid_dismemberment", /datum/mood_event/morbid_dismemberment)
@@ -552,8 +570,8 @@
 	return BRUTELOSS
 
 /obj/item/bonesetter
-	name = "bonesetter"
-	desc = "For setting things right."
+	name = "костоправ"
+	desc = "Для правильной ориентации костей при вывихах и переломах."
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "bonesetter"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
@@ -562,17 +580,24 @@
 	flags_1 = CONDUCT_1
 	item_flags = SURGICAL_TOOL
 	w_class = WEIGHT_CLASS_SMALL
-	attack_verb_continuous = list("corrects", "properly sets")
-	attack_verb_simple = list("correct", "properly set")
+	attack_verb_continuous = list("корректирует", "правильно устанавливает")
+	attack_verb_simple = list("корректирует", "правильно устанавливает")
 	tool_behaviour = TOOL_BONESET
 	toolspeed = 1
 
 /obj/item/bonesetter/get_surgery_tool_overlay(tray_extended)
 	return "bonesetter" + (tray_extended ? "" : "_out")
 
+/obj/item/bonesetter/augment
+	name = "кибернетический костоправ"
+	icon = 'white/Feline/icons/cyber_arm_surgery.dmi'
+	icon_state = "bone_setter"
+	desc = "Для правильной ориентации костей при вывихах и переломах."
+	toolspeed = 0.5
+
 /obj/item/blood_filter
-	name = "blood filter"
-	desc = "For filtering the blood."
+	name = "фильтр крови"
+	desc = "Для фильтрации крови и лимфы."
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "bloodfilter"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
@@ -611,7 +636,7 @@
 	. = TRUE
 	switch(action)
 		if("add")
-			var/selected_reagent = tgui_input_list(usr, "Select reagent to filter", "Whitelist reagent", GLOB.chemical_name_list)
+			var/selected_reagent = tgui_input_list(usr, "Выбор реагента для фильтрации", "Белый список реагентов", GLOB.chemical_name_list)
 			if(!selected_reagent)
 				return TRUE
 
@@ -642,29 +667,29 @@
  */
 
 /obj/item/retractor/cruel
-	name = "twisted retractor"
-	desc = "Helps reveal secrets that would rather stay buried."
+	name = "расширитель"
+	desc = "Помогает раскрыть секреты, которые лучше бы остались скрытыми."
 	icon_state = "cruelretractor"
 	surgical_tray_overlay = "retractor_cruel"
 	item_flags = SURGICAL_TOOL | CRUEL_IMPLEMENT
 
 /obj/item/hemostat/cruel
-	name = "cruel hemostat"
-	desc = "Clamping bleeders, but not so good at fixing breathers."
+	name = "зажим"
+	desc = "Зажимает, но не очень хорошо останавливает внутренние кровотечения."
 	icon_state = "cruelhemostat"
 	surgical_tray_overlay = "hemostat_cruel"
 	item_flags = SURGICAL_TOOL | CRUEL_IMPLEMENT
 
 /obj/item/cautery/cruel
-	name = "savage cautery"
-	desc = "Chalk this one up as another successful vivisection."
+	name = "прижигатель"
+	desc = "Запишем как еще одну успешную вивисекцию."
 	icon_state = "cruelcautery"
 	surgical_tray_overlay = "cautery_cruel"
 	item_flags = SURGICAL_TOOL | CRUEL_IMPLEMENT
 
 /obj/item/scalpel/cruel
-	name = "hungry scalpel"
-	desc = "I remember every time I hold you. My born companion..."
+	name = "скальпель"
+	desc = "Я помню каждый раз, как брал тебя в руки, мой дорогой друг..."
 	icon_state = "cruelscalpel"
 	surgical_tray_overlay = "scalpel_cruel"
 	item_flags = SURGICAL_TOOL | CRUEL_IMPLEMENT

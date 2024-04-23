@@ -1,14 +1,14 @@
 /obj/machinery/computer/shuttle/labor
-	name = "labor shuttle console"
-	desc = "Used to call and send the labor camp shuttle."
+	name = "консоль лагерного шаттла"
+	desc = "Используется для вызова и отправки шаттла в лагерь заключенных."
 	circuit = /obj/item/circuitboard/computer/labor_shuttle
 	shuttleId = "laborcamp"
 	possible_destinations = "laborcamp_home;laborcamp_away"
 	req_access = list(ACCESS_BRIG)
 
 /obj/machinery/computer/shuttle/labor/one_way
-	name = "prisoner shuttle console"
-	desc = "A one-way shuttle console, used to summon the shuttle to the labor camp."
+	name = "консоль шаттла заключенных"
+	desc = "Консоль однонаправленного шаттла, используется для отправки шаттла в лагерь заключенных."
 	possible_destinations = "laborcamp_away"
 	circuit = /obj/item/circuitboard/computer/labor_shuttle/one_way
 	req_access = list( )
@@ -19,11 +19,11 @@
 		return FALSE
 	var/obj/docking_port/mobile/M = SSshuttle.getShuttle("laborcamp")
 	if(!M)
-		to_chat(user, span_warning("Cannot locate shuttle!"))
+		to_chat(user, span_warning("Шаттл не найден!"))
 		return FALSE
 	var/obj/docking_port/stationary/S = M.get_docked()
 	if(S?.name == "laborcamp_away")
-		to_chat(user, span_warning("Shuttle is already at the outpost!"))
+		to_chat(user, span_warning("Шаттл уже в лагере!"))
 		return FALSE
 	return TRUE
 

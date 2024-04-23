@@ -49,6 +49,9 @@
 	smoke_type = /datum/effect_system/fluid_spread/smoke
 	smoke_amt = 4
 
+/datum/action/cooldown/spell/smoke/scarecrow/Grant(mob/grant_to)
+	RegisterSignals(owner, list(COMSIG_HOSTILE_PRE_ATTACKINGTARGET, COMSIG_MOB_ENTER_JAUNT, COMSIG_MOB_AFTER_EXIT_JAUNT), PROC_REF(update_status_on_signal), override = TRUE)
+
 /datum/action/cooldown/spell/smoke/scarecrow/proc/turn_off_thermal()
 	REMOVE_TRAIT(owner, TRAIT_THERMAL_VISION, HELMET_TRAIT)
 	owner.update_sight()

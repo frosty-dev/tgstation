@@ -336,6 +336,11 @@
 
 		//insert the item
 		var/item_name = target.name
+		var/item_skloname
+		if (isstacksheet(target))
+			var/obj/item/stack/sheet/target_ = target
+			item_skloname = target_.skloname
+
 		var/inserted = insert_item(target, 1, mat_container_flags, context)
 		if(inserted > 0)
 			. += inserted
@@ -354,11 +359,10 @@
 				//was this the original item in the players hand? put what's left back in the player's hand
 				if(!isnull(original_item))
 					user.put_in_active_hand(original_item)
-					message = "Only [inserted] sheets of [item_name] was consumed by [parent]."
-
+					message = "Всего [inserted] лист[get_ending(inserted, list("", "а", "ов"))] [(isstacksheet(target)) ? item_skloname : item_name] было поглощено [parent]."
 			//collect all messages to print later
 			if(!message)
-				message = "[item_name] worth [inserted] sheets of material was consumed by [parent]."
+				message = "[inserted] лист[get_ending(inserted, list("", "а", "ов"))] [(isstacksheet(target)) ? item_skloname : item_name] был[inserted == 1 ? "" : "о"] поглощено [parent]."
 			if(inserts[message])
 				inserts[message] += 1
 			else

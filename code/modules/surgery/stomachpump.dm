@@ -1,5 +1,5 @@
 /datum/surgery/stomach_pump
-	name = "Stomach Pump"
+	name = "Фильтрация желудка (Химикаты)"
 	possible_locs = list(BODY_ZONE_CHEST)
 	steps = list(
 		/datum/surgery_step/incise,
@@ -20,44 +20,32 @@
 
 //Working the stomach by hand in such a way that you induce vomiting.
 /datum/surgery_step/stomach_pump
-	name = "pump stomach (hand)"
+	name = "надавить на живот (рука)"
 	accept_hand = TRUE
 	repeatable = TRUE
 	time = 20
 	success_sound = 'sound/surgery/organ2.ogg'
 
 /datum/surgery_step/stomach_pump/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
-	display_results(
-		user,
-		target,
-		span_notice("You begin pumping [target]'s stomach..."),
-		span_notice("[user] begins to pump [target]'s stomach."),
-		span_notice("[user] begins to press on [target]'s chest."),
-	)
-	display_pain(target, "You feel a horrible sloshing feeling in your gut! You're going to be sick!")
+	display_results(user, target, span_notice("Вы начинаете надавливать на живот [skloname(target.name, RODITELNI, target.gender)]...") ,
+		span_notice("[user] начинает надавливать на живот [skloname(target.name, RODITELNI, target.gender)].") ,
+		span_notice("[user] начинает надавливать на живот [skloname(target.name, RODITELNI, target.gender)]."))
+	display_pain(target, "Живот болит!")
 
 /datum/surgery_step/stomach_pump/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results = FALSE)
 	if(ishuman(target))
 		var/mob/living/carbon/human/target_human = target
-		display_results(
-			user,
-			target,
-			span_notice("[user] forces [target_human] to vomit, cleansing their stomach of some chemicals!"),
-			span_notice("[user] forces [target_human] to vomit, cleansing their stomach of some chemicals!"),
-			span_notice("[user] forces [target_human] to vomit!"),
-		)
+		display_results(user, target, span_notice("[user] принуждает [skloname(target.name, RODITELNI, target.gender)] блевать, тем самым очищая желудок от химикатов!") ,
+				span_notice("[user] принуждает [skloname(target.name, RODITELNI, target.gender)] блевать, тем самым очищая желудок от химикатов!") ,
+				"[user] принуждает [skloname(target.name, RODITELNI, target.gender)] блевать, тем самым очищая желудок от химикатов!")
 		target_human.vomit(20, FALSE, TRUE, 1, TRUE, FALSE, purge_ratio = 0.67) //higher purge ratio than regular vomiting
 	return ..()
 
 /datum/surgery_step/stomach_pump/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	if(ishuman(target))
 		var/mob/living/carbon/human/target_human = target
-		display_results(
-			user,
-			target,
-			span_warning("You screw up, brusing [target_human]'s chest!"),
-			span_warning("[user] screws up, brusing [target_human]'s chest!"),
-			span_warning("[user] screws up!"),
-		)
+		display_results(user, target, span_warning("Вы надавили слишком сильно на живот [skloname(target.name, RODITELNI, target.gender)] и оставили синяк!") ,
+			span_warning("[user] надавил слишком сильно на живот [skloname(target.name, RODITELNI, target.gender)] и оставил синяк!") ,
+			span_warning("[user] ошибся!"))
 		target_human.adjustOrganLoss(ORGAN_SLOT_STOMACH, 5)
 		target_human.adjustBruteLoss(5)

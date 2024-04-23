@@ -36,7 +36,7 @@
 
 /obj/item/ai_module/core/full/custom
 	name = "основной модуль - \"Стандарт НТ\""
-	desc = "Устанавливает свод законов основанных на стандартах компании НаноТрейзен."
+	desc = "Устанавливает свод законов основанных на стандартах компании Нанотрейзен."
 
 // this lawset uses the config for the server to add custom AI laws (defaults to asimov)
 /obj/item/ai_module/core/full/custom/Initialize(mapload)

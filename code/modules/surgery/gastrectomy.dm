@@ -1,5 +1,5 @@
 /datum/surgery/gastrectomy
-	name = "Gastrectomy"
+	name = "Реконструкция: Гастрэктомия"
 	surgery_flags = SURGERY_REQUIRE_RESTING | SURGERY_REQUIRE_LIMB | SURGERY_REQUIRES_REAL_LIMB
 	organ_to_manipulate = ORGAN_SLOT_STOMACH
 	possible_locs = list(BODY_ZONE_CHEST)
@@ -24,7 +24,7 @@
 ////Gastrectomy, because we truly needed a way to repair stomachs.
 //95% chance of success to be consistent with most organ-repairing surgeries.
 /datum/surgery_step/gastrectomy
-	name = "remove lower duodenum (scalpel)"
+	name = "удалить нижнюю часть двенадцатиперстной кишки (скальпель)"
 	implements = list(
 		TOOL_SCALPEL = 95,
 		/obj/item/melee/energy/sword = 65,
@@ -36,14 +36,10 @@
 	failure_sound = 'sound/surgery/organ2.ogg'
 
 /datum/surgery_step/gastrectomy/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
-	display_results(
-		user,
-		target,
-		span_notice("You begin to cut out a damaged piece of [target]'s stomach..."),
-		span_notice("[user] begins to make an incision in [target]."),
-		span_notice("[user] begins to make an incision in [target]."),
-	)
-	display_pain(target, "You feel a horrible stab in your gut!")
+	display_results(user, target, span_notice("Начинаю вырезать часть поврежденного желудка [skloname(target.name, RODITELNI, target.gender)]...") ,
+		span_notice("[user] делает надрез желудка [skloname(target.name, RODITELNI, target.gender)].") ,
+		span_notice("[user] делает надрез желудка [skloname(target.name, RODITELNI, target.gender)]."))
+	display_pain(target, "Чувствую резкую боль в животе!")
 
 /datum/surgery_step/gastrectomy/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results = FALSE)
 	var/mob/living/carbon/human/target_human = target
@@ -51,25 +47,17 @@
 	target_human.setOrganLoss(ORGAN_SLOT_STOMACH, 20) // Stomachs have a threshold for being able to even digest food, so I might tweak this number
 	if(target_stomach)
 		target_stomach.operated = TRUE
-	display_results(
-		user,
-		target,
-		span_notice("You successfully remove the damaged part of [target]'s stomach."),
-		span_notice("[user] successfully removes the damaged part of [target]'s stomach."),
-		span_notice("[user] successfully removes the damaged part of [target]'s stomach."),
-	)
-	display_pain(target, "The pain in your gut ebbs and fades somewhat.")
+	display_results(user, target, span_notice("Успешно извлекаю поврежденную часть желудка [skloname(target.name, RODITELNI, target.gender)].") ,
+		span_notice("[user] успешно извлекает поврежденную часть желудка [skloname(target.name, RODITELNI, target.gender)].") ,
+		span_notice("[user] успешно извлекает поврежденную часть желудка [skloname(target.name, RODITELNI, target.gender)]."))
+	display_pain(target, "Боль в животе ослабевает и немного утихает.")
 	return ..()
 
 /datum/surgery_step/gastrectomy/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery)
 	var/mob/living/carbon/human/target_human = target
 	target_human.adjustOrganLoss(ORGAN_SLOT_STOMACH, 15)
-	display_results(
-		user,
-		target,
-		span_warning("You cut the wrong part of [target]'s stomach!"),
-		span_warning("[user] cuts the wrong part of [target]'s stomach!"),
-		span_warning("[user] cuts the wrong part of [target]'s stomach!"),
-	)
-	display_pain(target, "Your stomach throbs with pain; it's not getting any better!")
-
+	display_results(user, target, span_warning("Вырезал[user.ru_a()] неверную часть желудка [skloname(target.name, RODITELNI, target.gender)]!") ,
+		span_warning("[user] вырезал[user.ru_a()] неверную часть желудка [skloname(target.name, RODITELNI, target.gender)]!") ,
+		span_warning("[user] вырезал[user.ru_a()] неверную часть желудка [skloname(target.name, RODITELNI, target.gender)]!") ,
+		playsound(get_turf(target), 'sound/surgery/organ2.ogg', 75, TRUE, falloff_exponent = 12, falloff_distance = 1))
+	display_pain(target, "Больно! Дьявол, это очень больно!")

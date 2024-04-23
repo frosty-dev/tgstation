@@ -66,8 +66,8 @@
 
 //Rod of Asclepius
 /obj/item/rod_of_asclepius
-	name = "\improper Rod of Asclepius"
-	desc = "A wooden rod about the size of your forearm with a snake carved around it, winding its way up the sides of the rod. Something about it seems to inspire in you the responsibilty and duty to help others."
+	name = "жезл асклепия"
+	desc = "Небольшой деревянный жезл с обвившейся вокруг него змеей. Весь его вид внушает вам чувство долга и нужду помогать страждущим."
 	icon = 'icons/obj/mining_zones/artefacts.dmi'
 	lefthand_file = 'icons/mob/inhands/weapons/staves_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
@@ -81,7 +81,7 @@
 
 /obj/item/rod_of_asclepius/update_desc(updates)
 	. = ..()
-	desc = activated ? "A short wooden rod with a mystical snake inseparably gripping itself and the rod to your forearm. It flows with a healing energy that disperses amongst yourself and those around you." : initial(desc)
+	desc = activated ? "Небольшой деревянный жезл с мистической змеей, обвившей жезл и мою руку. Он источает целительную энергию, которая окутывает меня и всех окружающих. Я чувствую, что способен одним только касанием поднять мертвеца!" : initial(desc)
 
 /obj/item/rod_of_asclepius/update_icon_state()
 	. = ..()
@@ -96,37 +96,52 @@
 	if(activated)
 		return
 	if(!iscarbon(user))
-		to_chat(user, span_warning("The snake carving seems to come alive, if only for a moment, before returning to its dormant state, almost as if it finds you incapable of holding its oath."))
+		to_chat(user, span_warning("Змея на жезле на мгновение оживает и смотрит на меня, но через мгновение разочаровано отворачивается и снова замирает, как будто она знает, что я неспособен сдержать свою клятву."))
 		return
-	var/mob/living/carbon/itemUser = user
-	var/usedHand = itemUser.get_held_index_of_item(src)
-	if(itemUser.has_status_effect(/datum/status_effect/hippocratic_oath))
-		to_chat(user, span_warning("You can't possibly handle the responsibility of more than one rod!"))
+	var/mob/living/carbon/item_user = user
+	var/usedHand = item_user.get_held_index_of_item(src)
+	if(item_user.has_status_effect(/datum/status_effect/hippocratic_oath))
+		to_chat(user, span_warning("Не в моих силах нести больше ответственности, чем я могу на себя принять!"))
 		return
-	var/failText = span_warning("The snake seems unsatisfied with your incomplete oath and returns to its previous place on the rod, returning to its dormant, wooden state. You must stand still while completing your oath!")
-	to_chat(itemUser, span_notice("The wooden snake that was carved into the rod seems to suddenly come alive and begins to slither down your arm! The compulsion to help others grows abnormally strong..."))
-	if(do_after(itemUser, 40, target = itemUser))
-		itemUser.say("I swear to fulfill, to the best of my ability and judgment, this covenant:", forced = "hippocratic oath")
+	var/fail_text = span_warning("Змея, похоже, недовольна моей неполной клятвой и вновь замирает, возвращаясь в свое спящее, деревянное состояние. Я должен подойти к этому дело ответственно и стоять неподвижно во время принесения торжественной клятвы!")
+	to_chat(item_user, span_notice("Деревянная змея, вырезанная на жезле, внезапно оживает и обвивает мою руку! У меня проявляется необычайно сильное желание помогать другим..."))
+	if(do_after(item_user, 40, target = item_user))
+		item_user.say("Получая высокое звание врача и приступая к профессиональной деятельности, я торжественно клянусь:", forced = "hippocratic oath")
 	else
-		to_chat(itemUser, failText)
+		to_chat(item_user, fail_text)
 		return
-	if(do_after(itemUser, 20, target = itemUser))
-		itemUser.say("I will apply, for the benefit of the sick, all measures that are required, avoiding those twin traps of overtreatment and therapeutic nihilism.", forced = "hippocratic oath")
+	if(do_after(item_user, 30, target = item_user))
+		item_user.say("Честно исполнять свой врачебный долг, посвятить свои знания и умения предупреждению и лечению заболеваний, сохранению и укреплению здоровья человека", forced = "hippocratic oath")
 	else
-		to_chat(itemUser, failText)
+		to_chat(item_user, fail_text)
 		return
-	if(do_after(itemUser, 30, target = itemUser))
-		itemUser.say("I will remember that I remain a member of society, with special obligations to all my fellow human beings, those sound of mind and body as well as the infirm.", forced = "hippocratic oath")
+	if(do_after(item_user, 50, target = item_user))
+		item_user.say("Быть всегда готовым оказать медицинскую помощь, хранить врачебную тайну, внимательно и заботливо относиться к пациенту, действовать исключительно в его интересах независимо от пола, расы, национальности, языка, происхождения, имущественного и должностного положения, места жительства, отношения к религии, убеждений, принадлежности к общественным объединениям, а также других обстоятельств", forced = "hippocratic oath")
 	else
-		to_chat(itemUser, failText)
+		to_chat(item_user, fail_text)
 		return
-	if(do_after(itemUser, 30, target = itemUser))
-		itemUser.say("If I do not violate this oath, may I enjoy life and art, respected while I live and remembered with affection thereafter. May I always act so as to preserve the finest traditions of my calling and may I long experience the joy of healing those who seek my help.", forced = "hippocratic oath")
+	if(do_after(item_user, 20, target = item_user))
+		item_user.say("Проявлять высочайшее уважение к жизни человека, никогда не прибегать к осуществлению эвтаназии", forced = "hippocratic oath")
 	else
-		to_chat(itemUser, failText)
+		to_chat(item_user, fail_text)
 		return
-	to_chat(itemUser, span_notice("The snake, satisfied with your oath, attaches itself and the rod to your forearm with an inseparable grip. Your thoughts seem to only revolve around the core idea of helping others, and harm is nothing more than a distant, wicked memory..."))
-	var/datum/status_effect/hippocratic_oath/effect = itemUser.apply_status_effect(/datum/status_effect/hippocratic_oath)
+	if(do_after(item_user, 20, target = item_user))
+		item_user.say("Хранить благодарность и уважение к своим учителям, быть требовательным и справедливым к своим ученикам, способствовать их профессиональному росту", forced = "hippocratic oath")
+	else
+		to_chat(item_user, fail_text)
+		return
+	if(do_after(item_user, 30, target = item_user))
+		item_user.say("Доброжелательно относиться к коллегам, обращаться к ним за помощью и советом, если этого требуют интересы пациента, и самому никогда не отказывать коллегам в помощи и совете", forced = "hippocratic oath")
+	else
+		to_chat(item_user, fail_text)
+		return
+	if(do_after(item_user, 20, target = item_user))
+		item_user.say("Постоянно совершенствовать свое профессиональное мастерство, беречь и развивать благородные традиции медицины.", forced = "hippocratic oath")
+	else
+		to_chat(item_user, fail_text)
+		return
+	to_chat(item_user, span_notice("Змея, удовлетворенная моей клятвой, обвивает мою руку и жезл, теперь я не смогу отпустить его, даже если захочу. Мои мысли, сконцентрированы исключительно на помощи страждущим, а в голове запечетлелась фраза: \"Не навреди\"..."))
+	var/datum/status_effect/hippocratic_oath/effect = item_user.apply_status_effect(/datum/status_effect/hippocratic_oath)
 	effect.hand = usedHand
 	activated()
 
@@ -138,8 +153,8 @@
 
 //Memento Mori
 /obj/item/clothing/neck/necklace/memento_mori
-	name = "Memento Mori"
-	desc = "A mysterious pendant. An inscription on it says: \"Certain death tomorrow means certain life today.\""
+	name = "память о смерти"
+	desc = "Мистический талисман. На нем выгравирована надпись: \"Memento mori - Верная смерть завтра означает верную жизнь сегодня.\""
 	icon = 'icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "memento_mori"
 	worn_icon_state = "memento"
@@ -162,9 +177,9 @@
 	return ..()
 
 /obj/item/clothing/neck/necklace/memento_mori/proc/memento(mob/living/carbon/human/user)
-	to_chat(user, span_warning("You feel your life being drained by the pendant..."))
+	to_chat(user, span_warning("Чувствую, как кулон высасывает мою жизнь..."))
 	if(do_after(user, 40, target = user))
-		to_chat(user, span_notice("Your lifeforce is now linked to the pendant! You feel like removing it would kill you, and yet you instinctively know that until then, you won't die."))
+		to_chat(user, span_notice("Моя жизненная сила теперь связана с кулоном! Чувствую, что не стоит его снимать..."))
 		user.add_traits(list(TRAIT_NODEATH, TRAIT_NOHARDCRIT, TRAIT_NOCRITDAMAGE), CLOTHING_TRAIT)
 		RegisterSignal(user, COMSIG_LIVING_HEALTH_UPDATE, PROC_REF(check_health))
 		icon_state = "memento_mori_active"
@@ -177,7 +192,7 @@
 	UnregisterSignal(active_owner, COMSIG_LIVING_HEALTH_UPDATE)
 	var/mob/living/carbon/human/H = active_owner //to avoid infinite looping when dust unequips the pendant
 	active_owner = null
-	to_chat(H, span_userdanger("You feel your life rapidly slipping away from you!"))
+	to_chat(H, span_userdanger("Чувствую, как жизненная сила стремительно ускользает!"))
 	H.dust(TRUE, TRUE)
 
 /obj/item/clothing/neck/necklace/memento_mori/proc/check_health(mob/living/source)
@@ -201,19 +216,19 @@
 	new /obj/effect/temp_visual/guardian/phase/out(get_turf(guardian))
 	guardian.locked = TRUE
 	guardian.forceMove(src)
-	to_chat(guardian, span_userdanger("You have been locked away in your summoner's pendant!"))
+	to_chat(guardian, span_userdanger("Заперт в кулоне хозяина!"))
 	guardian.playsound_local(get_turf(guardian), 'sound/magic/summonitems_generic.ogg', 50, TRUE)
 
 /obj/item/clothing/neck/necklace/memento_mori/proc/regurgitate_guardian(mob/living/simple_animal/hostile/guardian/guardian)
 	guardian.locked = FALSE
 	guardian.recall(forced = TRUE)
-	to_chat(guardian, span_notice("You have been returned back from your summoner's pendant!"))
+	to_chat(guardian, span_notice("Высвобождаюсь из кулона хозяина!"))
 	guardian.playsound_local(get_turf(guardian), 'sound/magic/repulse.ogg', 50, TRUE)
 
 /datum/action/item_action/hands_free/memento_mori
 	check_flags = NONE
 	name = "Memento Mori"
-	desc = "Bind your life to the pendant."
+	desc = "Свяжи свою жизнь с кулоном."
 
 /datum/action/item_action/hands_free/memento_mori/Trigger(trigger_flags)
 	var/obj/item/clothing/neck/necklace/memento_mori/MM = target
@@ -224,8 +239,8 @@
 
 //Wisp Lantern
 /obj/item/wisp_lantern
-	name = "spooky lantern"
-	desc = "This lantern gives off no light, but is home to a friendly wisp."
+	name = "жуткий фонарь"
+	desc = "Этот фонарь не излучает света, но является домом для дружелюбного огонька."
 	icon = 'icons/obj/lighting.dmi'
 	icon_state = "lantern-blue-on"
 	inhand_icon_state = "lantern-blue-on"
@@ -235,20 +250,20 @@
 
 /obj/item/wisp_lantern/attack_self(mob/user)
 	if(!wisp)
-		to_chat(user, span_warning("The wisp has gone missing!"))
+		to_chat(user, span_warning("Огонёк пропал!"))
 		icon_state = "lantern-blue"
 		inhand_icon_state = "lantern-blue"
 		return
 
 	if(wisp.loc == src)
-		to_chat(user, span_notice("You release the wisp. It begins to bob around your head."))
+		to_chat(user, span_notice("Выпускаю огонёк. Он начинает кружиться вокруг моей головы."))
 		icon_state = "lantern-blue"
 		inhand_icon_state = "lantern-blue"
 		wisp.orbit(user, 20)
 		SSblackbox.record_feedback("tally", "wisp_lantern", 1, "Freed")
 
 	else
-		to_chat(user, span_notice("You return the wisp to the lantern."))
+		to_chat(user, span_notice("Возвращаю огонёк в лампу."))
 		icon_state = "lantern-blue-on"
 		inhand_icon_state = "lantern-blue-on"
 		wisp.forceMove(src)
@@ -263,12 +278,12 @@
 		if(wisp.loc == src)
 			qdel(wisp)
 		else
-			wisp.visible_message(span_notice("[wisp] has a sad feeling for a moment, then it passes."))
+			wisp.visible_message(span_notice("На мгновение огонёк выглядит грустным."))
 	return ..()
 
 /obj/effect/wisp
-	name = "friendly wisp"
-	desc = "Happy to light your way."
+	name = "дружелюбный огонёк"
+	desc = "Рад помочь вам осветить путь."
 	icon = 'icons/obj/lighting.dmi'
 	icon_state = "orb"
 	light_system = MOVABLE_LIGHT
@@ -285,13 +300,13 @@
 		RegisterSignal(thing, COMSIG_MOB_UPDATE_SIGHT, PROC_REF(update_user_sight))
 		var/mob/being = thing
 		being.update_sight()
-		to_chat(thing, span_notice("The wisp enhances your vision."))
+		to_chat(thing, span_notice("Огонёк светится!"))
 
 /obj/effect/wisp/stop_orbit(datum/component/orbiter/orbits)
 	. = ..()
 	if(ismob(orbits.parent))
 		UnregisterSignal(orbits.parent, COMSIG_MOB_UPDATE_SIGHT)
-		to_chat(orbits.parent, span_notice("Your vision returns to normal."))
+		to_chat(orbits.parent, span_notice("Зрение возвращается к норме."))
 
 /obj/effect/wisp/proc/update_user_sight(mob/user)
 	SIGNAL_HANDLER
@@ -301,8 +316,8 @@
 
 //Red/Blue Cubes
 /obj/item/warp_cube
-	name = "blue cube"
-	desc = "A mysterious blue cube."
+	name = "синий куб"
+	desc = "Мистический синий куб."
 	icon = 'icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "blue_cube"
 	var/teleport_color = "#3FBAFD"
@@ -319,7 +334,7 @@
 	var/turf/current_location = get_turf(user)
 	var/area/current_area = current_location.loc
 	if(!linked || (current_area.area_flags & NOTELEPORT))
-		to_chat(user, span_warning("[src] fizzles uselessly."))
+		to_chat(user, span_warning("[src] не реагирует."))
 		return
 	if(teleporting)
 		return
@@ -351,8 +366,8 @@
 	qdel(link_holder)
 
 /obj/item/warp_cube/red
-	name = "red cube"
-	desc = "A mysterious red cube."
+	name = "красный куб"
+	desc = "Мистический красный куб."
 	icon_state = "red_cube"
 	teleport_color = "#FD3F48"
 
@@ -369,8 +384,8 @@
 
 //Immortality Talisman
 /obj/item/immortality_talisman
-	name = "\improper Immortality Talisman"
-	desc = "A dread talisman that can render you completely invulnerable."
+	name = "талисман бессмертия"
+	desc = "Жуткий талисман, который может сделать вас совершенно неуязвимым."
 	icon = 'icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "talisman"
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
@@ -390,14 +405,14 @@
 		cooldown = world.time + 600
 		new /obj/effect/immortality_talisman(get_turf(user), user)
 	else
-		to_chat(user, span_warning("[src] is not ready yet!"))
+		to_chat(user, span_warning("[src] не готов!"))
 
 /obj/effect/immortality_talisman
-	name = "hole in reality"
-	desc = "It's shaped an awful lot like a person."
+	name = "разрыв пространства"
+	desc = "Своей формой удивительно похож на человека."
 	icon_state = "blank"
 	icon = 'icons/effects/effects.dmi'
-	var/vanish_description = "vanishes from reality"
+	var/vanish_description = "исчезает"
 	// Weakref to the user who we're "acting" on
 	var/datum/weakref/user_ref
 
@@ -422,12 +437,11 @@
 	user.status_flags &= ~GODMODE
 	REMOVE_TRAIT(user, TRAIT_NO_TRANSFORM, REF(src))
 	user.forceMove(get_turf(src))
-	user.visible_message(span_danger("[user] pops back into reality!"))
+	user.visible_message(span_danger("[user] возвращается в реальность!"))
 
 /obj/effect/immortality_talisman/proc/vanish(mob/user)
-	user.visible_message(span_danger("[user] [vanish_description], leaving a hole in [user.p_their()] place!"))
-
-	desc = "It's shaped an awful lot like [user.name]."
+	user.visible_message(span_danger("[user] [vanish_description], оставляя дыру на своем месте!"))
+	desc = "Своей формой удивительно похож на [user.name]."
 	setDir(user.dir)
 
 	user.forceMove(src)
@@ -453,13 +467,13 @@
 	return
 
 /obj/effect/immortality_talisman/void
-	vanish_description = "is dragged into the void"
+	vanish_description = "исчезает"
 
 //Shared Bag
 
 /obj/item/shared_storage
-	name = "paradox bag"
-	desc = "Somehow, it's in two places at once."
+	name = "сумка-парадокс"
+	desc = "Каким-то образом находится в двух местах одновременно."
 	icon = 'icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "paradox_bag"
 	worn_icon_state = "paradoxbag"
@@ -467,8 +481,8 @@
 	resistance_flags = INDESTRUCTIBLE
 
 /obj/item/shared_storage/red
-	name = "paradox bag"
-	desc = "Somehow, it's in two places at once."
+	name = "сумка-парадокс"
+	desc = "Каким-то образом находится в двух местах одновременно."
 
 /obj/item/shared_storage/red/Initialize(mapload)
 	. = ..()
@@ -488,19 +502,19 @@
 //Book of Babel
 
 /obj/item/book_of_babel
-	name = "Book of Babel"
-	desc = "An ancient tome written in countless tongues."
+	name = "книга Вавилона"
+	desc = "Древний фолиант, написанный на бесчисленных языках."
 	icon = 'icons/obj/service/library.dmi'
 	icon_state = "book1"
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/book_of_babel/attack_self(mob/user)
 	if(user.is_blind())
-		to_chat(user, span_warning("You are blind and can't read anything!"))
+		to_chat(user, span_warning("Не могу ничего разглядеть!"))
 		return FALSE
 	if(!user.can_read(src))
 		return FALSE
-	to_chat(user, span_notice("You flip through the pages of the book, quickly and conveniently learning every language in existence. Somewhat less conveniently, the aging book crumbles to dust in the process. Whoops."))
+	to_chat(user, span_notice("Листаю страницы книги. Кажется, теперь я могу говорить на всех языках!"))
 	cure_curse_of_babel(user) // removes tower of babel if we have it
 	user.grant_all_languages(source = LANGUAGE_BABEL)
 	user.remove_blocked_language(GLOB.all_languages, source = LANGUAGE_ALL)
@@ -524,13 +538,13 @@
 		. += "potionflask_cap"
 
 /obj/item/reagent_containers/cup/bottle/potion/flight
-	name = "strange elixir"
-	desc = "A flask with an almost-holy aura emitting from it. The label on the bottle says: 'erqo'hyy tvi'rf lbh jv'atf'."
+	name = "странный эликсир"
+	desc = "Флакон, от которого исходит почти священная аура. На этикетке бутылки написано: من يقرأها سيموت."
 	list_reagents = list(/datum/reagent/flightpotion = 5)
 
 /datum/reagent/flightpotion
-	name = "Flight Potion"
-	description = "Strange mutagenic compound of unknown origins."
+	name = "Зелье полёта"
+	description = "Странная жидкость неизвестного происхождения."
 	reagent_state = LIQUID
 	color = "#976230"
 
@@ -544,12 +558,12 @@
 	var/obj/item/bodypart/chest/chest = exposed_human.get_bodypart(BODY_ZONE_CHEST)
 	if(!chest.wing_types || reac_volume < 5 || !exposed_human.dna)
 		if((methods & INGEST) && show_message)
-			to_chat(exposed_human, span_notice("<i>You feel nothing but a terrible aftertaste.</i>"))
+			to_chat(exposed_human, span_notice("<i>Чувствую лишь ужасное послевкусие.</i>"))
 		return
 	if(exposed_human.get_organ_slot(ORGAN_SLOT_EXTERNAL_WINGS))
-		to_chat(exposed_human, span_userdanger("A terrible pain travels down your back as your wings change shape!"))
+		to_chat(exposed_human, span_userdanger("Мои крылья меняют свою форму с ужасающей болью!"))
 	else
-		to_chat(exposed_human, span_userdanger("A terrible pain travels down your back as wings burst out!"))
+		to_chat(exposed_human, span_userdanger("Ужасающая боль пронзает мою спину!"))
 	var/obj/item/organ/external/wings/functional/wings = get_wing_choice(exposed_human, chest)
 	wings = new wings()
 	wings.Insert(exposed_human)
@@ -582,8 +596,8 @@
 	return wing_type
 
 /obj/item/jacobs_ladder
-	name = "jacob's ladder"
-	desc = "A celestial ladder that violates the laws of physics."
+	name = "лестница Иакова"
+	desc = "Небесная лестница, нарушающая законы физики."
 	icon = 'icons/obj/structures.dmi'
 	icon_state = "ladder00"
 
@@ -591,7 +605,7 @@
 	var/turf/T = get_turf(src)
 	var/ladder_x = T.x
 	var/ladder_y = T.y
-	to_chat(user, span_notice("You unfold the ladder. It extends much farther than you were expecting."))
+	to_chat(user, span_notice("Разворачиваю лестницу. Она простирается гораздо дальше, чем я ожидал"))
 	var/last_ladder = null
 	for(var/i in 1 to world.maxz)
 		if(is_centcom_level(i) || is_reserved_level(i) || is_away_level(i))
@@ -602,13 +616,13 @@
 
 // Inherit from unbreakable but don't set ID, to suppress the default Z linkage
 /obj/structure/ladder/unbreakable/jacob
-	name = "jacob's ladder"
-	desc = "An indestructible celestial ladder that violates the laws of physics."
+	name = "лестница Иакова"
+	desc = "Неразрушимая небесная лестница, нарушающая законы физики."
 
 //Concussive Gauntlets
 /obj/item/clothing/gloves/gauntlets
-	name = "concussive gauntlets"
-	desc = "Pickaxes... for your hands!"
+	name = "сотрясающие перчатки"
+	desc = "Отбойный молоток в форме перчаток для быстрой добычи полезных ископаемых без необходимости держать в руках инструменты."
 	icon_state = "concussive_gauntlets"
 	inhand_icon_state = null
 	toolspeed = 0.1
@@ -658,8 +672,8 @@
 	return COMPONENT_CANCEL_ATTACK_CHAIN
 
 /obj/item/clothing/suit/hooded/berserker
-	name = "berserker armor"
-	desc = "Voices echo from the armor, driving the user insane. Is not space-proof."
+	name = "броня берсерка"
+	desc = "Голоса исходящие от скафандра, способны свести пользователя с ума, вогнав в кровавое безумие."
 	icon_state = "berserker"
 	icon = 'icons/obj/clothing/suits/armor.dmi'
 	worn_icon = 'icons/mob/clothing/suits/armor.dmi'
@@ -705,8 +719,8 @@
 #define BERSERK_ATTACK_SPEED_MODIFIER 0.25
 
 /obj/item/clothing/head/hooded/berserker
-	name = "berserker helmet"
-	desc = "Peering into the eyes of the helmet is enough to seal damnation."
+	name = "шлем берсерка"
+	desc = "Даже если смотреть в глаза этому шлему, быстро начинаешь осознавать свою ничтожность."
 	icon_state = "berserker"
 	icon = 'icons/obj/clothing/head/helmet.dmi'
 	worn_icon = 'icons/mob/clothing/head/helmet.dmi'
@@ -729,7 +743,7 @@
 
 /obj/item/clothing/head/hooded/berserker/examine()
 	. = ..()
-	. += span_notice("Berserk mode is [berserk_charge]% charged.")
+	. += span_notice("<hr>Заряд берсерка [berserk_charge]%.")
 
 /obj/item/clothing/head/hooded/berserker/process(seconds_per_tick)
 	if(berserk_active)
@@ -750,8 +764,8 @@
 		berserk_value *= PROJECTILE_HIT_MULTIPLIER
 	berserk_charge = clamp(round(berserk_charge + berserk_value), 0, MAX_BERSERK_CHARGE)
 	if(berserk_charge >= MAX_BERSERK_CHARGE)
-		to_chat(owner, span_notice("Berserk mode is fully charged."))
-		balloon_alert(owner, "berserk charged")
+		to_chat(owner, span_notice("Режим берсерка заряжен."))
+		balloon_alert(owner, "берсерк готов")
 
 /obj/item/clothing/head/hooded/berserker/IsReflect()
 	if(berserk_active)
@@ -759,7 +773,7 @@
 
 /// Starts berserk, giving the wearer 50 melee armor, doubled attacking speed, NOGUNS trait, adding a color and giving them the berserk movespeed modifier
 /obj/item/clothing/head/hooded/berserker/proc/berserk_mode(mob/living/carbon/human/user)
-	to_chat(user, span_warning("You enter berserk mode."))
+	to_chat(user, span_warning("ВХОЖУ В РЕЖИМ БЕРСЕРКА!"))
 	playsound(user, 'sound/magic/staff_healing.ogg', 50)
 	user.add_movespeed_modifier(/datum/movespeed_modifier/berserk)
 	user.physiology.armor = user.physiology.armor.generate_new_with_modifiers(list(MELEE = BERSERK_MELEE_ARMOR_ADDED))
@@ -777,7 +791,7 @@
 	berserk_active = FALSE
 	if(QDELETED(user))
 		return
-	to_chat(user, span_warning("You exit berserk mode."))
+	to_chat(user, span_warning("Выхожу из режима берсерка."))
 	playsound(user, 'sound/magic/summonitems_generic.ogg', 50)
 	user.remove_movespeed_modifier(/datum/movespeed_modifier/berserk)
 	user.physiology.armor = user.physiology.armor.generate_new_with_modifiers(list(MELEE = -BERSERK_MELEE_ARMOR_ADDED))
@@ -795,8 +809,8 @@
 #undef BERSERK_ATTACK_SPEED_MODIFIER
 
 /obj/item/clothing/glasses/godeye
-	name = "eye of god"
-	desc = "A strange eye, said to have been torn from an omniscient creature that used to roam the wastes."
+	name = "глаз бога"
+	desc = "Странное око. Говорят, что оно было вырвано из всеведущего существа, которое когда-то бродило по пустоши."
 	icon_state = "godeye"
 	inhand_icon_state = null
 	vision_flags = SEE_TURFS
@@ -831,13 +845,13 @@
 	scan_ability?.Remove(user)
 
 /obj/item/clothing/glasses/godeye/proc/pain(mob/living/victim)
-	to_chat(victim, span_userdanger("You experience blinding pain, as [src] burrows into your skull."))
+	to_chat(victim, span_userdanger("Чувствую острую боль, когда [src] врывается в мой череп."))
 	victim.emote("scream")
 	victim.flash_act()
 
 /datum/action/cooldown/scan
-	name = "Scan"
-	desc = "Scan an enemy, to get their location and stagger them, increasing their time between attacks."
+	name = "Сканировать"
+	desc = "Просканируйте противника, чтобы получить его местоположение и ошеломить его, увеличив время между атаками."
 	background_icon_state = "bg_clock"
 	overlay_icon_state = "bg_clock_border"
 	button_icon = 'icons/mob/actions/actions_items.dmi'
@@ -856,7 +870,7 @@
 	if(owner.stat != CONSCIOUS)
 		return FALSE
 	if(!isliving(scanned) || scanned == owner)
-		owner.balloon_alert(owner, "invalid scanned!")
+		owner.balloon_alert(owner, "неверная цель!")
 		return FALSE
 
 	var/mob/living/living_owner = owner
@@ -866,19 +880,19 @@
 	scan_pinpointer.scan_target = living_scanned
 
 	living_scanned.set_jitter_if_lower(100 SECONDS)
-	to_chat(living_scanned, span_warning("You've been staggered!"))
+	to_chat(living_scanned, span_warning("Меня трясёт!"))
 	living_scanned.add_filter("scan", 2, list("type" = "outline", "color" = COLOR_YELLOW, "size" = 1))
 	addtimer(CALLBACK(living_scanned, TYPE_PROC_REF(/datum, remove_filter), "scan"), 30 SECONDS)
 
 	owner.playsound_local(get_turf(owner), 'sound/magic/smoke.ogg', 50, TRUE)
-	owner.balloon_alert(owner, "[living_scanned] scanned")
+	owner.balloon_alert(owner, "сканирую [living_scanned]")
 	addtimer(CALLBACK(src, PROC_REF(send_cooldown_end_message), cooldown_time))
 
 	StartCooldown()
 	return TRUE
 
 /datum/action/cooldown/scan/proc/send_cooldown_end_message()
-	owner?.balloon_alert(owner, "scan recharged")
+	owner?.balloon_alert(owner, "сканирование готово")
 
 /datum/status_effect/agent_pinpointer/scan
 	duration = 15 SECONDS
@@ -893,8 +907,7 @@
 	return
 
 /atom/movable/screen/alert/status_effect/agent_pinpointer/scan
-	name = "Scan Target"
-	desc = "Contact may or may not be close."
+	name = "Сканировать цель"
 
 /obj/item/organ/internal/cyberimp/arm/shard
 	name = "dark spoon shard"
@@ -920,8 +933,8 @@
 	return
 
 /obj/item/organ/internal/cyberimp/arm/shard/katana
-	name = "dark shard"
-	desc = "An eerie metal shard surrounded by dark energies."
+	name = "проклятый осколок"
+	desc = "Жуткий металлический осколок."
 	items_to_create = list(/obj/item/cursed_katana)
 
 /obj/item/organ/internal/cyberimp/arm/shard/katana/Retract()
@@ -929,7 +942,7 @@
 	if(!katana || katana.shattered)
 		return FALSE
 	if(!katana.drew_blood)
-		to_chat(owner, span_userdanger("[katana] lashes out at you in hunger!"))
+		to_chat(owner, span_userdanger("[katana] вырывается из моей плоти!"))
 		playsound(owner, 'sound/magic/demon_attack1.ogg', 50, TRUE)
 		var/obj/item/bodypart/part = owner.get_holding_bodypart_of_item(katana)
 		if(part)
@@ -946,9 +959,9 @@
 #define ATTACK_SHATTER "Shatter"
 
 /obj/item/cursed_katana
-	name = "cursed katana"
-	desc = "A katana used to seal something vile away long ago. \
-	Even with the weapon destroyed, all the pieces containing the creature have coagulated back together to find a new host."
+	name = "проклятая катана"
+	desc = "Катана, использованная для запечатывания чего-то зловещего давным-давно. \
+	Даже после уничтожения оружия все части, содержащие существо, снова собрались вместе, чтобы найти нового хозяина."
 	icon = 'icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "cursed_katana"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
@@ -959,8 +972,8 @@
 	block_sound = 'sound/weapons/parry.ogg'
 	sharpness = SHARP_EDGED
 	w_class = WEIGHT_CLASS_HUGE
-	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "cuts")
-	attack_verb_simple = list("attack", "slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "cut")
+	attack_verb_continuous = list("атакует", "разрезает", "колет", "режет", "рвет", "разрывает", "нарезает")
+	attack_verb_simple = list("атакует", "разрезает", "колет", "режет", "рвет", "разрывает", "нарезает")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | UNACIDABLE | FREEZE_PROOF
 	var/shattered = FALSE
@@ -980,7 +993,7 @@
 		/datum/component/combo_attacks, \
 		combos = combo_list, \
 		max_combo_length = 4, \
-		examine_message = span_notice("<i>There seem to be inscriptions on it... you could examine them closer?</i>"), \
+		examine_message = span_notice("<i>Кажется, на ней есть надписи... надо рассмотреть получше...</i>"), \
 		reset_message = "you return to neutral stance", \
 		can_attack_callback = CALLBACK(src, PROC_REF(can_combo_attack)) \
 	)

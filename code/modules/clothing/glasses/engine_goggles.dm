@@ -1,8 +1,10 @@
 //Engineering Mesons
 
 #define MODE_NONE ""
-#define MODE_MESON "Мезонный сканер"
-#define MODE_TRAY "Терагерцовый сканер"
+#define MODE_MESON "meson"
+#define MODE_TRAY "t-ray"
+#define MODE_MESON_RU "Мезонный сканер"
+#define MODE_TRAY_RU "Терагерцовый сканер"
 #define MODE_SHUTTLE "shuttle"
 #define MODE_PIPE_CONNECTABLE "connectable"
 #define MODE_ATMOS_THERMAL "atmospheric-thermal"
@@ -24,7 +26,9 @@
 	color_cutoffs = null
 
 	var/list/modes = list(MODE_NONE = MODE_MESON, MODE_MESON = MODE_TRAY, MODE_TRAY = MODE_NONE)
+	var/list/modes_ru = list(MODE_NONE = MODE_MESON_RU, MODE_MESON = MODE_TRAY_RU, MODE_TRAY = MODE_NONE)
 	var/mode = MODE_NONE
+	var/mode_ru = MODE_NONE
 	var/range = 1
 	var/list/connection_images = list()
 
@@ -40,7 +44,8 @@
 
 /obj/item/clothing/glasses/meson/engine/proc/toggle_mode(mob/user, voluntary)
 	mode = modes[mode]
-	to_chat(user, "<span class='[voluntary ? "notice":"warning"]'>[voluntary ? "Переключаю очки":"Очки переключаются"] [mode ? "to [mode] mode":"off"][voluntary ? ".":"!"]</span>")
+	mode_ru = modes_ru[mode]
+	to_chat(user, "<span class='[voluntary ? "notice":"warning"]'>[voluntary ? "Переключаю очки":"Очки переключаются"] [mode_ru ? "в режим [mode_ru]":"в режим ВЫКЛ."][voluntary ? ".":"!"]</span>")
 	if(connection_images.len)
 		connection_images.Cut()
 	switch(mode)
@@ -207,6 +212,8 @@
 #undef MODE_NONE
 #undef MODE_MESON
 #undef MODE_TRAY
+#undef MODE_MESON_RU
+#undef MODE_TRAY_RU
 #undef MODE_SHUTTLE
 #undef MODE_PIPE_CONNECTABLE
 #undef MODE_ATMOS_THERMAL

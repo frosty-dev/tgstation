@@ -1,52 +1,48 @@
 {
-    "spirit_type": [
-        "Essence",
-        "Ghost",
-        "Phantom",
-        "Revenant",
-        "Soul",
-        "Spectre",
-        "Spirit"
-    ],
-
-    "adverb": [
+	"spirit_type": [
+		"Дух",
+		"Душа",
+		"Меценат",
+		"Призрак",
+		"Призрак",
+		"Спектр",
+		"Суть"
+	],
+	"adverb": [
 		"",
-		"brutal ",
-		"fiery ",
-		"hideous ",
-		"indifferent ",
-		"malevolent ",
-		"peaceful ",
-		"silent ",
-		"violent ",
-		"abysmal ",
-		"abyssal ",
-		"dark ",
-		"endless ",
-		"eternal ",
-		"hateful ",
-		"searing ",
-		"vicious "
-    ],
-
-    "theme": [
-		"despair",
-		"agony",
-		"screams",
-		"vengeance",
-		"hellfire",
-		"anger",
-		"suffering",
-		"death",
-		"destruction",
-		"hate",
-		"misery",
-		"disease",
-		"desperation",
-		"sorrow",
-		"ruin",
-		"salt",
-		"grief",
-		"laughter"
-    ]
+		"бездонного",
+		"бесконечного",
+		"вечного",
+		"жгучего",
+		"жестокого",
+		"жестокого",
+		"злобного",
+		"злобного",
+		"молчаливого",
+		"огненного",
+		"отвратительного",
+		"равнодушного",
+		"спокойного",
+		"тёмного",
+		"ужасного"
+	],
+	"theme": [
+		"агонии",
+		"болезни",
+		"горя",
+		"горя",
+		"злости",
+		"крика",
+		"мести",
+		"ненависти",
+		"отчаяния",
+		"отчаяния",
+		"разрушения",
+		"разрушения",
+		"смерти",
+		"смеха",
+		"страдания",
+		"страдания",
+		"чертова огня"
+	]
 }

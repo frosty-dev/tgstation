@@ -879,6 +879,8 @@
 	if(heal_flags & HEAL_STAM)
 		setStaminaLoss(0, updating_stamina = FALSE, forced = TRUE)
 
+	hydration = HYDRATION_LEVEL_START_MAX
+
 	// I don't really care to keep this under a flag
 	set_nutrition(NUTRITION_LEVEL_FED + 50)
 
@@ -2282,6 +2284,7 @@ GLOBAL_LIST_EMPTY(fire_appearances)
 /mob/living/proc/set_safe_hunger_level()
 	// Nutrition reset and alert clearing.
 	nutrition = NUTRITION_LEVEL_FED
+	hydration = HYDRATION_LEVEL_NORMAL + 15
 	clear_alert(ALERT_NUTRITION)
 	satiety = 0
 

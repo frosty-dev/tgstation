@@ -72,7 +72,7 @@ class SurgeryInitiatorInner extends Component<
     const { selected_zone, surgeries, target_name } = this.props;
 
     return (
-      <Window width={400} height={350} title={`Surgery on ${target_name}`}>
+      <Window width={400} height={350} title={`Операция над ${target_name}`}>
         <Window.Content>
           <Stack fill height="100%">
             <Stack.Item width="30%">
@@ -94,7 +94,7 @@ class SurgeryInitiatorInner extends Component<
                     disabled={surgery.blocked}
                     selected={index === this.state.selectedSurgeryIndex}
                     tooltip={
-                      surgery.blocked ? 'Their body is covered!' : undefined
+                      surgery.blocked ? 'Необходимо оголить тело!' : undefined
                     }
                     key={surgery.name}
                     fluid

@@ -1,6 +1,6 @@
 /datum/surgery/advanced/bioware/nerve_splicing
-	name = "Nerve Splicing"
-	desc = "A surgical procedure which splices the patient's nerves, making them more resistant to stuns."
+	name = "Модифицирование: Сращивание нервов"
+	desc = "Хирургическая процедура при которой нервы пациента сращиваются, что увеличивает сопротивление оглушению."
 	possible_locs = list(BODY_ZONE_CHEST)
 	steps = list(
 		/datum/surgery_step/incise,
@@ -15,7 +15,7 @@
 	bioware_target = BIOWARE_NERVES
 
 /datum/surgery_step/splice_nerves
-	name = "splice nerves (hand)"
+	name = "сращивание нервов (рука)"
 	accept_hand = TRUE
 	time = 155
 
@@ -23,29 +23,25 @@
 	display_results(
 		user,
 		target,
-		span_notice("You start splicing together [target]'s nerves."),
-		span_notice("[user] starts splicing together [target]'s nerves."),
-		span_notice("[user] starts manipulating [target]'s nervous system."),
-	)
-	display_pain(target, "Your entire body goes numb!")
+		span_notice("Начинаю соединять между собой нервы [skloname(target.name, RODITELNI, target.gender)].") ,
+		span_notice("[user] начал[user.ru_a()] соединять между собой нервы [skloname(target.name, RODITELNI, target.gender)].") ,
+		span_notice("[user] начал[user.ru_a()] работать с нервной системой [skloname(target.name, RODITELNI, target.gender)]."))
 
 /datum/surgery_step/splice_nerves/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results = FALSE)
 	display_results(
 		user,
 		target,
-		span_notice("You successfully splice [target]'s nervous system!"),
-		span_notice("[user] successfully splices [target]'s nervous system!"),
-		span_notice("[user] finishes manipulating [target]'s nervous system."),
-	)
-	display_pain(target, "You regain feeling in your body; It feels like everything's happening around you in slow motion!")
+		span_notice("Успешно срастил[user.ru_a()] нервную систему [skloname(target.name, RODITELNI, target.gender)]!") ,
+		span_notice("[user] успешно переплел[user.ru_a()] нервную систему [skloname(target.name, RODITELNI, target.gender)]!") ,
+		span_notice("[user] закончил[user.ru_a()] работать с нервной системой [skloname(target.name, RODITELNI, target.gender)]."))
 	new /datum/bioware/spliced_nerves(target)
 	if(target.ckey)
-		SSblackbox.record_feedback("nested tally", "nerve_splicing", 1, list("[target.ckey]", "got")) 
+		SSblackbox.record_feedback("nested tally", "nerve_splicing", 1, list("[target.ckey]", "got"))
 	return ..()
 
 /datum/bioware/spliced_nerves
-	name = "Spliced Nerves"
-	desc = "Nerves are connected to each other multiple times, greatly reducing the impact of stunning effects."
+	name = "Сращенные нервы"
+	desc = "Нервы соединены друг с другом по нескольку раз, значительно снижая эффективность оглущающих эффектов."
 	mod_type = BIOWARE_NERVES
 
 /datum/bioware/spliced_nerves/on_gain()

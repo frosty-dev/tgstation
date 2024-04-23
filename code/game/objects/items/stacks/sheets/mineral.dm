@@ -29,7 +29,8 @@ GLOBAL_LIST_INIT(sandstone_recipes, list ( \
 	))
 
 /obj/item/stack/sheet/mineral/sandstone
-	name = "Кирпич из песчаника"
+	name = "кирпич из песчаника"
+	skloname = "кирпича из песчаника"
 	desc = "Кажется, это комбинация из песка и камня."
 	singular_name = "sandstone brick"
 	icon_state = "sheet-sandstone"
@@ -54,7 +55,8 @@ GLOBAL_LIST_INIT(sandstone_recipes, list ( \
  */
 
 /obj/item/stack/sheet/mineral/sandbags
-	name = "Мешки с песком"
+	name = "кешки с песком"
+	skloname = "мешков с песком"
 	icon_state = "sandbags"
 	singular_name = "Мешок с песком"
 	layer = LOW_ITEM_LAYER
@@ -93,6 +95,7 @@ GLOBAL_LIST_INIT(sandbag_recipes, list ( \
  */
 /obj/item/stack/sheet/mineral/diamond
 	name = "алмаз"
+	skloname = "алмаза"
 	icon_state = "sheet-diamond"
 	inhand_icon_state = "sheet-diamond"
 	singular_name = "алмаз"
@@ -118,6 +121,7 @@ GLOBAL_LIST_INIT(diamond_recipes, list ( \
  */
 /obj/item/stack/sheet/mineral/uranium
 	name = "уран"
+	skloname = "урана"
 	icon_state = "sheet-uranium"
 	inhand_icon_state = "sheet-uranium"
 	singular_name = "урановый лист"
@@ -149,6 +153,7 @@ GLOBAL_LIST_INIT(uranium_recipes, list ( \
  */
 /obj/item/stack/sheet/mineral/plasma
 	name = "твердая плазма"
+	skloname = "твердой плазмы"
 	icon_state = "sheet-plasma"
 	inhand_icon_state = "sheet-plasma"
 	singular_name = "лист плазмы"
@@ -186,6 +191,7 @@ GLOBAL_LIST_INIT(plasma_recipes, list ( \
  */
 /obj/item/stack/sheet/mineral/gold
 	name = "золото"
+	skloname = "золота"
 	icon_state = "sheet-gold"
 	inhand_icon_state = "sheet-gold"
 	singular_name = "золотой слиток"
@@ -213,6 +219,7 @@ GLOBAL_LIST_INIT(gold_recipes, list ( \
  */
 /obj/item/stack/sheet/mineral/silver
 	name = "серебро"
+	skloname = "серебра"
 	icon_state = "sheet-silver"
 	inhand_icon_state = "sheet-silver"
 	singular_name = "серебряный слиток"
@@ -239,6 +246,7 @@ GLOBAL_LIST_INIT(silver_recipes, list ( \
  */
 /obj/item/stack/sheet/mineral/bananium
 	name = "бананиум"
+	skloname = "бананиума"
 	icon_state = "sheet-bananium"
 	inhand_icon_state = null
 	singular_name = "лист бананиума"
@@ -266,6 +274,7 @@ GLOBAL_LIST_INIT(bananium_recipes, list ( \
  */
 /obj/item/stack/sheet/mineral/titanium
 	name = "титан"
+	skloname = "титана"
 	icon_state = "sheet-titanium"
 	inhand_icon_state = "sheet-titanium"
 	singular_name = "лист титана"
@@ -298,6 +307,7 @@ GLOBAL_LIST_INIT(titanium_recipes, list ( \
  */
 /obj/item/stack/sheet/mineral/plastitanium
 	name = "пластитан"
+	skloname = "пластитана"
 	desc = "Пластитан является сплавом титана и плазмы. Довольно крепкий, однако из за новизны ученые еще не спроектировали основные производственные чертежи."
 	icon_state = "sheet-plastitanium"
 	inhand_icon_state = "sheet-plastitanium"
@@ -330,6 +340,7 @@ GLOBAL_LIST_INIT(plastitanium_recipes, list ( \
 
 /obj/item/stack/sheet/mineral/snow
 	name = "снег"
+	skloname = "снега"
 	icon_state = "sheet-snow"
 	inhand_icon_state = null
 	mats_per_unit = list(/datum/material/snow = SHEET_MATERIAL_AMOUNT)
@@ -369,6 +380,7 @@ GLOBAL_LIST_INIT(adamantine_recipes, list(
 
 /obj/item/stack/sheet/mineral/adamantine
 	name = "адамантий"
+	skloname = "адамантия"
 	icon_state = "sheet-adamantine"
 	inhand_icon_state = "sheet-adamantine"
 	singular_name = "лист адамантия"
@@ -385,6 +397,7 @@ GLOBAL_LIST_INIT(adamantine_recipes, list(
 
 /obj/item/stack/sheet/mineral/runite
 	name = "Рунит"
+	skloname = "рунита"
 	desc = "Редкий материал найденный в далеких краях."
 	singular_name = "рунитовый слиток"
 	icon_state = "sheet-runite"
@@ -399,6 +412,7 @@ GLOBAL_LIST_INIT(adamantine_recipes, list(
  */
 /obj/item/stack/sheet/mineral/mythril
 	name = "мифрил"
+	skloname = "мифрила"
 	icon_state = "sheet-mythril"
 	inhand_icon_state = "sheet-mythril"
 	singular_name = "лист мифрила"
@@ -411,6 +425,7 @@ GLOBAL_LIST_INIT(adamantine_recipes, list(
  */
 /obj/item/stack/sheet/mineral/abductor
 	name = "инопланетный сплав"
+	skloname = "инопланетного сплава"
 	desc = "Загадочный материал с неизведанными свойствами."
 	icon = 'icons/obj/antags/abductor.dmi'
 	icon_state = "sheet-abductor"
@@ -441,6 +456,7 @@ GLOBAL_LIST_INIT(abductor_recipes, list ( \
 
 /obj/item/stack/sheet/mineral/coal
 	name = "уголь"
+	skloname = "угля"
 	desc = "Черный как негр."
 	icon = 'icons/obj/ore.dmi'
 	icon_state = "slag"
@@ -479,6 +495,7 @@ GLOBAL_LIST_INIT(metalhydrogen_recipes, list(
 
 /obj/item/stack/sheet/mineral/metal_hydrogen
 	name = "металлический водород"
+	skloname = "металлического водорода"
 	icon_state = "sheet-metalhydrogen"
 	inhand_icon_state = null
 	singular_name = "лист металлического водорода"
@@ -495,6 +512,7 @@ GLOBAL_LIST_INIT(metalhydrogen_recipes, list(
 
 /obj/item/stack/sheet/mineral/zaukerite
 	name = "Заукерит"
+	skloname = "Заукерита"
 	icon_state = "zaukerite"
 	inhand_icon_state = "sheet-zaukerite"
 	singular_name = "заукерит"

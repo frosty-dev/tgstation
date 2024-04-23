@@ -3,8 +3,8 @@ GLOBAL_LIST(labor_sheet_values)
 /**********************Prisoners' Console**************************/
 
 /obj/machinery/mineral/labor_claim_console
-	name = "point claim console"
-	desc = "A stacking console with an electromagnetic writer, used to track ore mined by prisoners."
+	name = "консоль для получения очков"
+	desc = "Используется для отслеживания количества руды, добытой заключенными."
 	icon = 'icons/obj/machines/mining_machines.dmi'
 	icon_state = "console"
 	density = FALSE
@@ -65,14 +65,14 @@ GLOBAL_LIST(labor_sheet_values)
 		var/obj/item/card/id/advanced/prisoner/worn_prisoner_id = worn_id
 		data["id_points"] = worn_prisoner_id.points
 		if(!worn_prisoner_id.goal)
-			data["status_info"] = "No goal set!"
+			data["status_info"] = "Цель не выставлена!"
 		else if(worn_prisoner_id.points >= worn_prisoner_id.goal)
 			can_go_home = TRUE
-			data["status_info"] = "Goal met!"
+			data["status_info"] = "Всё соблюдено!"
 		else
-			data["status_info"] = "You are [(worn_prisoner_id.goal - worn_prisoner_id.points)] points away."
+			data["status_info"] = "Осталось [(worn_prisoner_id.goal - worn_prisoner_id.points)] очков."
 	else
-		data["status_info"] = "No Prisoner ID detected."
+		data["status_info"] = "Не обнаружена ID-карта."
 		data["id_points"] = 0
 
 	if(stacking_machine)

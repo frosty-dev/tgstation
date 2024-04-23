@@ -460,6 +460,8 @@
 	else if(infected_mob.reagents.has_reagent(/datum/reagent/water, needs_metabolizing = FALSE))
 		infected_mob.reagents.remove_reagent(/datum/reagent/water, 0.5 * absorption_coeff)
 		. += power * 0.5
+	else if(infected_mob.hydration)
+		. += power * 0.25
 
 /datum/symptom/heal/water/Heal(mob/living/carbon/M, datum/disease/advance/A, actual_power)
 	var/heal_amt = 2 * actual_power

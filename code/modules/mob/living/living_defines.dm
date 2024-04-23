@@ -214,6 +214,8 @@
 	///The height offset of a mob's maptext due to their current size.
 	var/body_maptext_height_offset = 0
 
+	var/list/known_reagent_sounds = list()
+
 	/// FOV view that is applied from either nativeness or traits
 	var/fov_view
 	/// Lazy list of FOV traits that will apply a FOV view when handled.

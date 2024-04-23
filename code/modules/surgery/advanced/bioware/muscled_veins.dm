@@ -1,6 +1,6 @@
 /datum/surgery/advanced/bioware/muscled_veins
-	name = "Vein Muscle Membrane"
-	desc = "A surgical procedure which adds a muscled membrane to blood vessels, allowing them to pump blood without a heart."
+	name = "Модифицирование: Венозные мышцы"
+	desc = "Хирургическая процедура которая добавляет к кровеносным сосудам мышечные мембраны, позволяя им перекачивать кровь без участия сердца."
 	possible_locs = list(BODY_ZONE_CHEST)
 	steps = list(
 		/datum/surgery_step/incise,
@@ -15,7 +15,7 @@
 	bioware_target = BIOWARE_CIRCULATION
 
 /datum/surgery_step/muscled_veins
-	name = "shape vein muscles (hand)"
+	name = "формирование венозных мышц (рука)"
 	accept_hand = TRUE
 	time = 125
 
@@ -23,27 +23,24 @@
 	display_results(
 		user,
 		target,
-		span_notice("You start wrapping muscles around [target]'s circulatory system."),
-		span_notice("[user] starts wrapping muscles around [target]'s circulatory system."),
-		span_notice("[user] starts manipulating [target]'s circulatory system."),
-	)
-	display_pain(target, "Your entire body burns in agony!")
+		span_notice("Начинаю накручивать мышцы вокруг кровеносной системы [skloname(target.name, RODITELNI, target.gender)].") ,
+		span_notice("[user] начал[user.ru_a()] накручивать мышцы вокруг кровеносной системы [skloname(target.name, RODITELNI, target.gender)].") ,
+		span_notice("[user] начал[user.ru_a()] работать с кровеносной системой [skloname(target.name, RODITELNI, target.gender)]."))
 
 /datum/surgery_step/muscled_veins/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results = FALSE)
 	display_results(
 		user,
 		target,
-		span_notice("You reshape [target]'s circulatory system, adding a muscled membrane!"),
-		span_notice("[user] reshapes [target]'s circulatory system, adding a muscled membrane!"),
-		span_notice("[user] finishes manipulating [target]'s circulatory system."),
-	)
-	display_pain(target, "You can feel your heartbeat's powerful pulses ripple through your body!")
+		span_notice("Изменил кровеносную систему [skloname(target.name, RODITELNI, target.gender)], добавив мышечные мембраны!") ,
+		span_notice("[user] изменил[user.ru_a()] кровеносную систему [skloname(target.name, RODITELNI, target.gender)], добавив мышечные мембраны!") ,
+		span_notice("[user] закончил[user.ru_a()] работать с кровеносной системой [skloname(target.name, RODITELNI, target.gender)]."))
+
 	new /datum/bioware/muscled_veins(target)
 	return ..()
 
 /datum/bioware/muscled_veins
-	name = "Muscled Veins"
-	desc = "The circulatory system is affixed with a muscled membrane, allowing the veins to pump blood without the need for a heart."
+	name = "Венозные Мышцы"
+	desc = "Добавляет к кровеносным сосудам мышечные мембраны, позволяя им перекачивать кровь без участия сердца."
 	mod_type = BIOWARE_CIRCULATION
 
 /datum/bioware/muscled_veins/on_gain()

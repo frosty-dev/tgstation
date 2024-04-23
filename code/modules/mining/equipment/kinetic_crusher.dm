@@ -1,13 +1,12 @@
 /*********************Mining Hammer****************/
 /obj/item/kinetic_crusher
+	name = "прото-кинетический крашер"
+	desc = "Ранний прототип протокинетического ускорителя, он представляет собой комбинацию различных горнодобывающих инструментов, причудливо собранных вместе в здоровенный топор. Весьма сложный в использованнии, крашер является выбором самых опытных и отчаянных шахтёров."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "crusher"
 	inhand_icon_state = "crusher0"
 	lefthand_file = 'icons/mob/inhands/weapons/hammers_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/hammers_righthand.dmi'
-	name = "proto-kinetic crusher"
-	desc = "An early design of the proto-kinetic accelerator, it is little more than a combination of various mining tools cobbled together, forming a high-tech club. \
-	While it is an effective mining tool, it did little to aid any but the most skilled and/or suicidal miners against local fauna."
 	force = 0 //You can't hit stuff unless wielded
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
@@ -16,8 +15,8 @@
 	armour_penetration = 10
 	custom_materials = list(/datum/material/iron=HALF_SHEET_MATERIAL_AMOUNT*1.15, /datum/material/glass=HALF_SHEET_MATERIAL_AMOUNT*2.075)
 	hitsound = 'sound/weapons/bladeslice.ogg'
-	attack_verb_continuous = list("smashes", "crushes", "cleaves", "chops", "pulps")
-	attack_verb_simple = list("smash", "crush", "cleave", "chop", "pulp")
+	attack_verb_continuous = list("размазывает", "уничтожает", "разрубает", "рубит", "ударяет")
+	attack_verb_simple = list("размазывает", "уничтожает", "разрубает", "рубит", "ударяет")
 	sharpness = SHARP_EDGED
 	actions_types = list(/datum/action/item_action/toggle_light)
 	obj_flags = UNIQUE_RENAME
@@ -50,22 +49,22 @@
 
 /obj/item/kinetic_crusher/examine(mob/living/user)
 	. = ..()
-	. += span_notice("Mark a large creature with a destabilizing force with right-click, then hit them in melee to do <b>[force + detonation_damage]</b> damage.")
-	. += span_notice("Does <b>[force + detonation_damage + backstab_bonus]</b> damage if the target is backstabbed, instead of <b>[force + detonation_damage]</b>.")
+	. += span_notice("Вы можете выстрелить в большое существо дестабилизирующим зарядом, после чего ударить его в ближнем бою, чтобы нанести <b>[force + detonation_damage]</b> урона.")
+	. += span_notice("Наносит <b>[force + detonation_damage + backstab_bonus]</b>, если цель атакована в спину, иначе <b>[force + detonation_damage]</b>.")
 	for(var/t in trophies)
 		var/obj/item/crusher_trophy/T = t
-		. += span_notice("It has \a [T] attached, which causes [T.effect_desc()].")
+		. += span_notice("К нему прикреплено [T], которое вызывает [T.effect_desc()].")
 
 /obj/item/kinetic_crusher/attackby(obj/item/I, mob/living/user)
 	if(I.tool_behaviour == TOOL_CROWBAR)
 		if(LAZYLEN(trophies))
-			to_chat(user, span_notice("You remove [src]'s trophies."))
+			to_chat(user, span_notice("Вынимаю улучшения из [src]."))
 			I.play_tool_sound(src)
 			for(var/t in trophies)
 				var/obj/item/crusher_trophy/T = t
 				T.remove_from(src, user)
 		else
-			to_chat(user, span_warning("There are no trophies on [src]."))
+			to_chat(user, span_warning("В [src] нет улучшений."))
 	else if(istype(I, /obj/item/crusher_trophy))
 		var/obj/item/crusher_trophy/T = I
 		T.add_to(src, user)
@@ -74,7 +73,7 @@
 
 /obj/item/kinetic_crusher/attack(mob/living/target, mob/living/carbon/user)
 	if(!HAS_TRAIT(src, TRAIT_WIELDED))
-		to_chat(user, span_warning("[src] is too heavy to use with one hand! You fumble and drop everything."))
+		to_chat(user, span_warning("[src] слишком тяжелый, чтобы использовать одной рукой!"))
 		user.drop_all_held_items()
 		return
 	var/datum/status_effect/crusher_damage/C = target.has_status_effect(/datum/status_effect/crusher_damage)
@@ -127,10 +126,10 @@
 
 /obj/item/kinetic_crusher/afterattack_secondary(atom/target, mob/living/user, proximity_flag, click_parameters)
 	if(!HAS_TRAIT(src, TRAIT_WIELDED))
-		balloon_alert(user, "wield it first!")
+		balloon_alert(user, "надо взять в обе руки!")
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	if(target == user)
-		balloon_alert(user, "can't aim at yourself!")
+		balloon_alert(user, "не могу целиться в себя!")
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	fire_kinetic_blast(target, user, click_parameters)
 	user.changeNext_move(CLICK_CD_MELEE)
@@ -183,12 +182,12 @@
 		. += "[icon_state]_lit"
 
 /obj/item/kinetic_crusher/compact //for admins
-	name = "compact kinetic crusher"
+	name = "компактный прото-кинетический крашер"
 	w_class = WEIGHT_CLASS_NORMAL
 
 //destablizing force
 /obj/projectile/destabilizer
-	name = "destabilizing force"
+	name = "дестабилизирующее поле"
 	icon_state = "pulse1"
 	damage = 0 //We're just here to mark people. This is still a melee weapon.
 	damage_type = BRUTE

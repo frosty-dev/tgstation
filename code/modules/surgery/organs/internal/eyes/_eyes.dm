@@ -1,7 +1,7 @@
 /obj/item/organ/internal/eyes
-	name = BODY_ZONE_PRECISE_EYES
+	name = "глаза"
 	icon_state = "eyes"
-	desc = "I see you!"
+	desc = "Я тебя вижу!"
 	visual = TRUE
 	zone = BODY_ZONE_PRECISE_EYES
 	slot = ORGAN_SLOT_EYES
@@ -13,12 +13,12 @@
 	high_threshold = 0.3 * STANDARD_ORGAN_THRESHOLD //threshold at 30
 	low_threshold = 0.2 * STANDARD_ORGAN_THRESHOLD //threshold at 20
 
-	low_threshold_passed = "<span class='info'>Distant objects become somewhat less tangible.</span>"
-	high_threshold_passed = "<span class='info'>Everything starts to look a lot less clear.</span>"
-	now_failing = "<span class='warning'>Darkness envelopes you, as your eyes go blind!</span>"
-	now_fixed = "<span class='info'>Color and shapes are once again perceivable.</span>"
-	high_threshold_cleared = "<span class='info'>Your vision functions passably once more.</span>"
-	low_threshold_cleared = "<span class='info'>Your vision is cleared of any ailment.</span>"
+	low_threshold_passed = span_info("Далекие объекты становятся менее ощутимыми.")
+	high_threshold_passed = span_info("Все становится менее ясным.")
+	now_failing = span_warning("Тьма окутывает меня, глаза слепнут!")
+	now_fixed = span_info("Цвет и формы снова ощутимы.")
+	high_threshold_cleared = span_info("Зрение снова функционирует нормально.")
+	low_threshold_cleared = span_info("Зрение очищено от недугов.")
 
 	/// Sight flags this eye pair imparts on its user.
 	var/sight_flags = NONE
@@ -244,25 +244,25 @@
 #undef NIGHTVISION_LIGHT_HIG
 
 /obj/item/organ/internal/eyes/night_vision/mushroom
-	name = "fung-eye"
-	desc = "While on the outside they look inert and dead, the eyes of mushroom people are actually very advanced."
+	name = "грибоглаза"
+	desc = "Хотя снаружи они выглядят инертными и мертвыми, глаза грибных людей на самом деле очень развиты."
 	low_light_cutoff = list(0, 15, 20)
 	medium_light_cutoff = list(0, 20, 35)
 	high_light_cutoff = list(0, 40, 50)
 
 /obj/item/organ/internal/eyes/zombie
-	name = "undead eyes"
-	desc = "Somewhat counterintuitively, these half-rotten eyes actually have superior vision to those of a living human."
+	name = "глаза нежити"
+	desc = "Как ни странно, у этих полусгнивших глаз на самом деле зрение лучше, чем у живого человека."
 	color_cutoffs = list(25, 35, 5)
 
 /obj/item/organ/internal/eyes/alien
-	name = "alien eyes"
-	desc = "It turned out they had them after all!"
+	name = "чужеродные глаза"
+	desc = "Оказалось, они все-таки были!"
 	sight_flags = SEE_MOBS
 	color_cutoffs = list(25, 5, 42)
 
 /obj/item/organ/internal/eyes/golem
-	name = "resonating crystal"
+	name = "резонирующий кристалл"
 	icon_state = "adamantine_cords"
 	eye_icon_state = null
 	desc = "Golems somehow measure external light levels and detect nearby ore using this sensitive mineral lattice."
@@ -288,9 +288,9 @@
 ///Robotic
 
 /obj/item/organ/internal/eyes/robotic
-	name = "robotic eyes"
+	name = "глаза робота"
 	icon_state = "cybernetic_eyeballs"
-	desc = "Your vision is augmented."
+	desc = "Моё зрение аугментировано."
 	organ_flags = ORGAN_ROBOTIC
 	failing_desc = "seems to be broken."
 
@@ -300,12 +300,12 @@
 		return
 	if(prob(10 * severity))
 		return
-	to_chat(owner, span_warning("Static obfuscates your vision!"))
+	to_chat(owner, span_warning("Статика затуманивает моё зрение!"))
 	owner.flash_act(visual = 1)
 
 /obj/item/organ/internal/eyes/robotic/basic
-	name = "basic robotic eyes"
-	desc = "A pair of basic cybernetic eyes that restore vision, but at some vulnerability to light."
+	name = "базовые кибернетические глаза"
+	desc = "Примитивный прототип протеза глаз способный видеть мир лишь в черно-белых оттенках, однако люди полностью лишенные зрения будут рады и такому."
 	eye_color_left = "5500ff"
 	eye_color_right = "5500ff"
 	flash_protect = FLASH_PROTECTION_SENSITIVE
@@ -321,8 +321,8 @@
 		owner.emote("scream")
 
 /obj/item/organ/internal/eyes/robotic/xray
-	name = "\improper X-ray eyes"
-	desc = "These cybernetic eyes will give you X-ray vision. Blinking is futile."
+	name = "рентгеновские глаза"
+	desc = "Эти кибернетические глаза дадут вам рентгеновское зрение. Моргать бесполезно."
 	eye_color_left = "000"
 	eye_color_right = "000"
 	sight_flags = SEE_MOBS | SEE_OBJS | SEE_TURFS
@@ -336,8 +336,8 @@
 	REMOVE_TRAIT(eye_owner, TRAIT_XRAY_VISION, ORGAN_TRAIT)
 
 /obj/item/organ/internal/eyes/robotic/thermals
-	name = "thermal eyes"
-	desc = "These cybernetic eye implants will give you thermal vision. Vertical slit pupil included."
+	name = "термальные глаза"
+	desc = "Эти кибернетические глазные имплантаты дадут вам тепловое зрение. Зрачок с вертикальной щелью включен."
 	eye_color_left = "FC0"
 	eye_color_right = "FC0"
 	// We're gonna downshift green and blue a bit so darkness looks yellow
@@ -377,8 +377,8 @@
 
 // Welding shield implant
 /obj/item/organ/internal/eyes/robotic/shield
-	name = "shielded robotic eyes"
-	desc = "These reactive micro-shields will protect you from welders and flashes without obscuring your vision."
+	name = "кибернетические глаза"
+	desc = "Встроенные светофильтры защитят вас от сварки и вспышек, не ограничивая обзор."
 	flash_protect = FLASH_PROTECTION_WELDER
 
 /obj/item/organ/internal/eyes/robotic/shield/emp_act(severity)
@@ -391,8 +391,8 @@
 #define UPDATE_EYES_RIGHT 2
 
 /obj/item/organ/internal/eyes/robotic/glow
-	name = "High Luminosity Eyes"
-	desc = "Special glowing eyes, used by snowflakes who want to be special."
+	name = "люминесцирующие глаза"
+	desc = "Особые светящиеся глаза, так же играют роль фонариков, однако не могут быть выключены. Цвет свечения можно изменять."
 	eye_color_left = "000"
 	eye_color_right = "000"
 	actions_types = list(/datum/action/item_action/organ_action/use, /datum/action/item_action/organ_action/toggle)
@@ -488,8 +488,8 @@
 		if("pick_color")
 			var/new_color = input(
 				usr,
-				"Choose eye color color:",
-				"High Luminosity Eyes Menu",
+				"Цвет",
+				"Цвет?",
 				current_color_string
 			) as color|null
 			if(new_color)
@@ -651,8 +651,8 @@
 #undef UPDATE_EYES_RIGHT
 
 /obj/item/organ/internal/eyes/moth
-	name = "moth eyes"
-	desc = "These eyes seem to have increased sensitivity to bright light, with no improvement to low light vision."
+	name = "глаза мотылька"
+	desc = "Эти глаза, кажется, имеют повышенную чувствительность к яркому свету без улучшения зрения при слабом освещении."
 	eye_icon_state = "motheyes"
 	icon_state = "eyeballs-moth"
 	flash_protect = FLASH_PROTECTION_SENSITIVE
@@ -696,8 +696,8 @@
 	icon_state = "eyeballs-cybermoth"
 
 /obj/item/organ/internal/eyes/snail
-	name = "snail eyes"
-	desc = "These eyes seem to have a large range, but might be cumbersome with glasses."
+	name = "глаза улитки"
+	desc = "Кажется, что эти глаза имеют большой диапазон, но могут быть громоздкими с очками."
 	eye_icon_state = "snail_eyes"
 	icon_state = "snail_eyeballs"
 

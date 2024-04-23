@@ -1,13 +1,13 @@
 /**********************Resonator**********************/
 
 /obj/item/resonator
-	name = "resonator"
+	name = "резонатор"
+	desc = "Портативное устройство, создающее небольшие нестабильные энергетические поля, что создают резонансный взрыв при активации, нанося урон и дробя породу. Сила взрыва заметно выше при низком давлении. Имеет два режима детонации: двухсекундный таймер и ручной подрыв."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "resonator"
 	inhand_icon_state = "resonator"
 	lefthand_file = 'icons/mob/inhands/equipment/mining_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/mining_righthand.dmi'
-	desc = "A handheld device that creates small fields of energy that resonate until they detonate, crushing rock. It does increased damage in low pressure. It has two modes: Automatic and manual detonation."
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 15
 	throwforce = 10
@@ -25,10 +25,10 @@
 
 /obj/item/resonator/attack_self(mob/user)
 	if(mode == RESONATOR_MODE_AUTO)
-		to_chat(user, span_info("You set the resonator's fields to detonate only after you hit one with it."))
+		to_chat(user, span_info("Устанавливаю резонатор на ручной подрыв."))
 		mode = RESONATOR_MODE_MANUAL
 	else
-		to_chat(user, span_info("You set the resonator's fields to automatically detonate after 2 seconds."))
+		to_chat(user, span_info("Устанавливаю резонатор на двухсекундный таймер."))
 		mode = RESONATOR_MODE_AUTO
 
 /obj/item/resonator/proc/create_resonance(target, mob/user)
@@ -49,8 +49,8 @@
 
 //resonance field, crushes rock, damages mobs
 /obj/effect/temp_visual/resonance
-	name = "resonance field"
-	desc = "A resonating field that significantly damages anything inside of it when the field eventually ruptures. More damaging in low pressure environments."
+	name = "резонирующее поле"
+	desc = "Резонирующее поле, вызывающее серьезные травмы любым объектам оказавшимся внутри него в момент дестабилизации. Эффект значительно разрушительнее в условиях низкого давления."
 	icon_state = "shield1"
 	layer = ABOVE_ALL_MOB_LAYER
 	plane = ABOVE_GAME_PLANE
@@ -75,7 +75,7 @@
 		duration = 2 SECONDS
 	if(mode == RESONATOR_MODE_MATRIX)
 		icon_state = "shield2"
-		name = "resonance matrix"
+		name = "резонансная мина"
 		RegisterSignal(src, COMSIG_ATOM_ENTERED, PROC_REF(burst))
 		var/static/list/loc_connections = list(
 			COMSIG_ATOM_ENTERED = PROC_REF(burst),
@@ -106,7 +106,7 @@
 		proj_turf = get_turf(src)
 	resonance_damage = initial(resonance_damage)
 	if(lavaland_equipment_pressure_check(proj_turf))
-		name = "strong [initial(name)]"
+		name = "[initial(name)] низкого давления"
 		resonance_damage *= 3
 	else
 		name = initial(name)
@@ -128,7 +128,7 @@
 		if(creator)
 			log_combat(creator, attacked_living, "used a resonator field on", "resonator")
 			SEND_SIGNAL(creator, COMSIG_LIVING_RESONATOR_BURST, creator, attacked_living)
-		to_chat(attacked_living, span_userdanger("[src] ruptured with you in it!"))
+		to_chat(attacked_living, span_userdanger("[src] схлопывается на мне!"))
 		attacked_living.apply_damage(resonance_damage, BRUTE)
 		attacked_living.add_movespeed_modifier(/datum/movespeed_modifier/resonance)
 		addtimer(CALLBACK(attacked_living, TYPE_PROC_REF(/mob, remove_movespeed_modifier), /datum/movespeed_modifier/resonance), 10 SECONDS, TIMER_UNIQUE | TIMER_OVERRIDE)
@@ -156,8 +156,8 @@
 	animate(src, transform = matrix() * 0.1, alpha = 50, time = 4)
 
 /obj/item/resonator/upgraded
-	name = "upgraded resonator"
-	desc = "An upgraded version of the resonator that can produce more fields at once, as well as having no damage penalty for bursting a resonance field early. It also allows you to set 'Resonance matrixes', that detonate after someone(or something) walks over it."
+	name = "продвинутый резонатор"
+	desc = "Модернизированная версия резонатора, которая может создавать больше полей одновременно, а также не имеет штрафа к урону при раннем разрыве резонансного поля. Продвинутая модель так же может устанавливать \"резонансные мины\", которые взрываются после того, как кто-то (или что-то) наступает на них."
 	icon_state = "resonator_u"
 	inhand_icon_state = "resonator_u"
 	fieldlimit = 6
@@ -166,11 +166,11 @@
 
 /obj/item/resonator/upgraded/attack_self(mob/user)
 	if(mode == RESONATOR_MODE_AUTO)
-		to_chat(user, span_info("You set the resonator's fields to detonate only after you hit one with it."))
+		to_chat(user, span_info("Устанавливаю резонатор на ручной подрыв."))
 		mode = RESONATOR_MODE_MANUAL
 	else if(mode == RESONATOR_MODE_MANUAL)
-		to_chat(user, span_info("You set the resonator's fields to work as matrix traps."))
+		to_chat(user, span_info("Устанавливаю резонатор в режим миноукладчика."))
 		mode = RESONATOR_MODE_MATRIX
 	else
-		to_chat(user, span_info("You set the resonator's fields to automatically detonate after 2 seconds."))
+		to_chat(user, span_info("Устанавливаю резонатор на двухсекундный таймер."))
 		mode = RESONATOR_MODE_AUTO

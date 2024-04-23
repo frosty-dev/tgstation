@@ -4,8 +4,8 @@
 #define MAX_TOXIN_LIVER_DAMAGE 2 //the max damage the liver can recieve per second (~1 min at max damage will destroy liver)
 
 /obj/item/organ/internal/liver
-	name = "liver"
-	desc = "Pairing suggestion: chianti and fava beans."
+	name = "печень"
+	desc = "Предложение по сочетанию: кьянти и бобы."
 	icon_state = "liver"
 	visual = FALSE
 	w_class = WEIGHT_CLASS_SMALL
@@ -85,27 +85,27 @@
 
 	if(HAS_MIND_TRAIT(user, TRAIT_ENTRAILS_READER) || isobserver(user))
 		if(HAS_TRAIT(src, TRAIT_LAW_ENFORCEMENT_METABOLISM))
-			. += span_info("Fatty deposits and sprinkle residue, imply that this is the liver of someone in <em>security</em>.")
+			. += span_info("Жировые отложения и остатки опрыскивания предполагают, что это печень кого-то из <em>охраны</em>.")
 		if(HAS_TRAIT(src, TRAIT_CULINARY_METABOLISM))
-			. += span_info("The high iron content and slight smell of garlic, implies that this is the liver of a <em>cook</em>.")
+			. += span_info("Высокое содержание железа и легкий запах чеснока указывают на то, что это печень <em>повара</em>.")
 		if(HAS_TRAIT(src, TRAIT_COMEDY_METABOLISM))
-			. += span_info("A smell of bananas, a slippery sheen and [span_clown("honking")] when depressed, implies that this is the liver of a <em>clown</em>.")
+			. += span_info("Запах бананов, скользкий блеск и <span class='clown'>хонканье</span> при расстройстве, означает, что это печень <em>клоуна</em>.")
 		if(HAS_TRAIT(src, TRAIT_MEDICAL_METABOLISM))
-			. += span_info("Marks of stress and a faint whiff of medicinal alcohol, imply that this is the liver of a <em>medical worker</em>.")
+			. += span_info("Следы стресса и слабый запах лекарственного алкоголя указывают на то, что это печень <em>медицинского работника</em>.")
 		if(HAS_TRAIT(src, TRAIT_ENGINEER_METABOLISM))
-			. += span_info("Signs of radiation exposure and space adaption, implies that this is the liver of an <em>engineer</em>.")
+			. += span_info("Признаки радиационного облучения и космической адаптации, подразумевают, что это печень <em>инженера</em>.")
 		if(HAS_TRAIT(src, TRAIT_BALLMER_SCIENTIST))
 			. += span_info("Strange glowing residues, sprinklings of congealed solid plasma, and what seem to be tumors indicate this is the radiated liver of a <em>scientist</em>.")
 		if(HAS_TRAIT(src, TRAIT_MAINTENANCE_METABOLISM))
-			. += span_info("A half-digested rat's tail (somehow), disgusting sludge, and the faint smell of Grey Bull imply this is what remains of an <em>assistant</em>'s liver.")
+			. += span_info("Эта печень более серая, чем многие другие, и со следами электрических ожогов. Она явно принадлежит <em>ассистенту</em>.")
 		if(HAS_TRAIT(src, TRAIT_CORONER_METABOLISM))
 			. += span_info("An aroma of pickles and sea water, along with being remarkably well-preserved, imply this is what remains of a <em>coroner</em>'s liver.")
 
 		// royal trumps pretender royal
 		if(HAS_TRAIT(src, TRAIT_ROYAL_METABOLISM))
-			. += span_info("A rich diet of luxury food, suppleness from soft beds, implies that this is the liver of a <em>head of staff</em>.")
+			. += span_info("Богатая диета, состоящая из роскошной пищи и мягких кроватей подразумевает, что это печень <em>главы</em>.")
 		else if(HAS_TRAIT(src, TRAIT_PRETENDER_ROYAL_METABOLISM))
-			. += span_info("A diet of imitation caviar, and signs of insomnia, implies that this is the liver of <em>someone who wants to be a head of staff</em>.")
+			. += span_info("Диета, состоящая из имитации икры и признаков бессонницы, подразумевает, что это печень <em>того, кто хочет быть главой</em>.")
 
 /obj/item/organ/internal/liver/before_organ_replacement(obj/item/organ/replacement)
 	. = ..()
@@ -158,7 +158,7 @@
 		apply_organ_damage(min(liver_damage * seconds_per_tick , MAX_TOXIN_LIVER_DAMAGE * seconds_per_tick))
 
 	if(provide_pain_message && damage > 10 && SPT_PROB(damage/6, seconds_per_tick)) //the higher the damage the higher the probability
-		to_chat(owner, span_warning("You feel a dull pain in your abdomen."))
+		to_chat(owner, span_warning("Ощущаю тупую боль в животе."))
 
 
 /obj/item/organ/internal/liver/handle_failing_organs(seconds_per_tick)
@@ -169,20 +169,20 @@
 /obj/item/organ/internal/liver/organ_failure(seconds_per_tick)
 	switch(failure_time/LIVER_FAILURE_STAGE_SECONDS)
 		if(1)
-			to_chat(owner, span_userdanger("You feel stabbing pain in your abdomen!"))
+			to_chat(owner, span_userdanger("Ощущаю острую боль в области живота!"))
 		if(2)
-			to_chat(owner, span_userdanger("You feel a burning sensation in your gut!"))
+			to_chat(owner, span_userdanger("Ощущаю как мои кишки горят!"))
 			owner.vomit(VOMIT_CATEGORY_DEFAULT)
 		if(3)
-			to_chat(owner, span_userdanger("You feel painful acid in your throat!"))
+			to_chat(owner, span_userdanger("Кислота прибывает к глотке!"))
 			owner.vomit(VOMIT_CATEGORY_BLOOD)
 		if(4)
-			to_chat(owner, span_userdanger("Overwhelming pain knocks you out!"))
+			to_chat(owner, span_userdanger("КАК БОЛЬНО! АХ!"))
 			owner.vomit(VOMIT_CATEGORY_BLOOD, distance = rand(1,2))
 			owner.emote("Scream")
 			owner.AdjustUnconscious(2.5 SECONDS)
 		if(5)
-			to_chat(owner, span_userdanger("You feel as if your guts are about to melt!"))
+			to_chat(owner, span_userdanger("КИШКИ ХОТЯТ РАСПЛАВИТЬСЯ!"))
 			owner.vomit(VOMIT_CATEGORY_BLOOD, distance = rand(1,3))
 			owner.emote("Scream")
 			owner.AdjustUnconscious(5 SECONDS)
@@ -225,26 +225,26 @@
 		return
 	switch(failure_time)
 		if(0 to 3 * LIVER_FAILURE_STAGE_SECONDS - 1)
-			examine_list += span_notice("[owner]'s eyes are slightly yellow.")
+			examine_list += span_notice("\nГлаза [owner] желтоватые.")
 		if(3 * LIVER_FAILURE_STAGE_SECONDS to 4 * LIVER_FAILURE_STAGE_SECONDS - 1)
-			examine_list += span_notice("[owner]'s eyes are completely yellow, and [owner.p_they()] [owner.p_are()] visibly suffering.")
+			examine_list += span_notice("\nГлаза [owner] жёлтые и похоже пациенту плохо.")
 		if(4 * LIVER_FAILURE_STAGE_SECONDS to INFINITY)
-			examine_list += span_danger("[owner]'s eyes are completely yellow and swelling with pus. [owner.p_They()] [owner.p_do()]n't look like [owner.p_they()] will be alive for much longer.")
+			examine_list += span_danger("\nГлаза [owner] полностью жёлтые и из них сочится гадкая слизь. [owner.ru_who(TRUE)] не проживёт долго с этим.")
 
 /obj/item/organ/internal/liver/get_availability(datum/species/owner_species, mob/living/owner_mob)
 	return owner_species.mutantliver
 
 // alien livers can ignore up to 15u of toxins, but they take x3 liver damage
 /obj/item/organ/internal/liver/alien
-	name = "alien liver" // doesnt matter for actual aliens because they dont take toxin damage
-	desc = "A liver that used to belong to a killer alien, who knows what it used to eat."
+	name = "чужеродная печень" // doesnt matter for actual aliens because they dont take toxin damage
+	desc = "Печень, которая раньше принадлежала инопланетянину-убийце, который знает, чем она раньше ела."
 	icon_state = "liver-x" // Same sprite as fly-person liver.
 	liver_resistance = 0.333 * LIVER_DEFAULT_TOX_RESISTANCE // -66%
 	toxTolerance = 15 // complete toxin immunity like xenos have would be too powerful
 
 /obj/item/organ/internal/liver/cybernetic
-	name = "basic cybernetic liver"
-	desc = "A very basic device designed to mimic the functions of a human liver. Handles toxins slightly worse than an organic liver."
+	name = "базовая кибернетическая печень"
+	desc = "Очень простое устройство, имитирующее функции печени человека. Переносит токсины несколько хуже, чем органическая печень."
 	failing_desc = "seems to be broken."
 	icon_state = "liver-c"
 	organ_flags = ORGAN_ROBOTIC
@@ -264,8 +264,8 @@
 		organ_flags |= ORGAN_EMP //Starts organ faliure - gonna need replacing soon.
 
 /obj/item/organ/internal/liver/cybernetic/tier2
-	name = "cybernetic liver"
-	desc = "An electronic device designed to mimic the functions of a human liver. Handles toxins slightly better than an organic liver."
+	name = "кибернетическая печень"
+	desc = "Электронное устройство, имитирующее функции печени человека. Справляется с токсинами немного лучше, чем органическая печень."
 	icon_state = "liver-c-u"
 	maxHealth = 1.5 * STANDARD_ORGAN_THRESHOLD
 	toxTolerance = 5 //can shrug off up to 5u of toxins
@@ -273,8 +273,8 @@
 	emp_vulnerability = 40
 
 /obj/item/organ/internal/liver/cybernetic/tier3
-	name = "upgraded cybernetic liver"
-	desc = "An upgraded version of the cybernetic liver, designed to improve further upon organic livers. It is resistant to alcohol poisoning and is very robust at filtering toxins."
+	name = "продвинутая кибернетическая печень"
+	desc = "Усовершенствованная версия кибернетической печени, предназначенная для дальнейшего улучшения органической печени. Он устойчив к отравлению алкоголем и превосходно фильтрует токсины."
 	icon_state = "liver-c-u2"
 	alcohol_tolerance = ALCOHOL_RATE * 0.2
 	maxHealth = 2 * STANDARD_ORGAN_THRESHOLD

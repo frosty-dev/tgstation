@@ -12,10 +12,11 @@
 //Failure to follow this pattern will cause the hand's icons to be missing due to the way get_limb_icon() works to generate the mob's icons using the aux_zone var.
 
 /obj/item/bodypart/arm/left/robot
-	name = "cyborg left arm"
-	desc = "A skeletal limb wrapped in pseudomuscles, with a low-conductivity case."
+	name = "левая рука киборга"
+	desc = "Скелетная конечность, обернутая в псевдомышцы с низкопроводимостью."
 	limb_id = BODYPART_ID_ROBOTIC
-	attack_verb_simple = list("slapped", "punched")
+	attack_verb_continuous = list("шлёпает", "бьёт")
+	attack_verb_simple = list("шлёпает", "бьёт")
 	inhand_icon_state = "buildpipe"
 	icon = 'icons/mob/augmentation/augments.dmi'
 	icon_static = 'icons/mob/augmentation/augments.dmi'
@@ -44,9 +45,10 @@
 	disabling_threshold_percentage = 1
 
 /obj/item/bodypart/arm/right/robot
-	name = "cyborg right arm"
-	desc = "A skeletal limb wrapped in pseudomuscles, with a low-conductivity case."
-	attack_verb_simple = list("slapped", "punched")
+	name = "правая рука киборга"
+	desc = "Скелетная конечность, обернутая в псевдомышцы с низкопроводимостью."
+	attack_verb_continuous = list("шлёпает", "бьёт")
+	attack_verb_simple = list("шлёпает", "бьёт")
 	inhand_icon_state = "buildpipe"
 	icon_static = 'icons/mob/augmentation/augments.dmi'
 	icon = 'icons/mob/augmentation/augments.dmi'
@@ -77,9 +79,10 @@
 	damage_examines = list(BRUTE = ROBOTIC_BRUTE_EXAMINE_TEXT, BURN = ROBOTIC_BURN_EXAMINE_TEXT, CLONE = DEFAULT_CLONE_EXAMINE_TEXT)
 
 /obj/item/bodypart/leg/left/robot
-	name = "cyborg left leg"
-	desc = "A skeletal limb wrapped in pseudomuscles, with a low-conductivity case."
-	attack_verb_simple = list("kicked", "stomped")
+	name = "левая нога киборга"
+	desc = "Скелетная конечность, обернутая в псевдомышцы с низкопроводимостью."
+	attack_verb_continuous = list("пинает", "давит")
+	attack_verb_simple = list("пинает", "давит")
 	inhand_icon_state = "buildpipe"
 	icon_static = 'icons/mob/augmentation/augments.dmi'
 	icon = 'icons/mob/augmentation/augments.dmi'
@@ -123,9 +126,10 @@
 	to_chat(owner, span_danger("As your [plaintext_zone] unexpectedly malfunctions, it causes you to fall to the ground!"))
 
 /obj/item/bodypart/leg/right/robot
-	name = "cyborg right leg"
-	desc = "A skeletal limb wrapped in pseudomuscles, with a low-conductivity case."
-	attack_verb_simple = list("kicked", "stomped")
+	name = "правая нога киборга"
+	desc = "Скелетная конечность, обернутая в псевдомышцы с низкопроводимостью."
+	attack_verb_continuous = list("пинает", "давит")
+	attack_verb_simple = list("пинает", "давит")
 	inhand_icon_state = "buildpipe"
 	icon_static =  'icons/mob/augmentation/augments.dmi'
 	icon = 'icons/mob/augmentation/augments.dmi'
@@ -169,8 +173,8 @@
 	to_chat(owner, span_danger("As your [plaintext_zone] unexpectedly malfunctions, it causes you to fall to the ground!"))
 
 /obj/item/bodypart/chest/robot
-	name = "cyborg torso"
-	desc = "A heavily reinforced case containing cyborg logic boards, with space for a standard power cell."
+	name = "туловище киборга"
+	desc = "Тяжело укрепленный корпус, содержащий логические платы киборга, с отверстием под стандартную ячейку питания."
 	inhand_icon_state = "buildpipe"
 	icon_static =  'icons/mob/augmentation/augments.dmi'
 	icon = 'icons/mob/augmentation/augments.dmi'
@@ -280,23 +284,23 @@
 /obj/item/bodypart/chest/robot/attackby(obj/item/weapon, mob/user, params)
 	if(istype(weapon, /obj/item/stock_parts/cell))
 		if(cell)
-			to_chat(user, span_warning("You have already inserted a cell!"))
+			to_chat(user, span_warning("Уже вставил[user.ru_a()] ячейку питания!"))
 			return
 		else
 			if(!user.transferItemToLoc(weapon, src))
 				return
 			cell = weapon
-			to_chat(user, span_notice("You insert the cell."))
+			to_chat(user, span_notice("Вставил[user.ru_a()] ячейку питания."))
 	else if(istype(weapon, /obj/item/stack/cable_coil))
 		if(wired)
-			to_chat(user, span_warning("You have already inserted wire!"))
+			to_chat(user, span_warning("Уже вставил[user.ru_a()] провод!"))
 			return
 		var/obj/item/stack/cable_coil/coil = weapon
 		if (coil.use(1))
 			wired = TRUE
-			to_chat(user, span_notice("You insert the wire."))
+			to_chat(user, span_notice("Вставил[user.ru_a()] провод."))
 		else
-			to_chat(user, span_warning("You need one length of coil to wire it!"))
+			to_chat(user, span_warning("Мне нужен 1 кусок провода, чтобы присоединить его сюда!"))
 	else
 		return ..()
 
@@ -306,7 +310,7 @@
 		return
 	. = TRUE
 	cutter.play_tool_sound(src)
-	to_chat(user, span_notice("You cut the wires out of [src]."))
+	to_chat(user, span_notice("Отрезаю провода в [src]."))
 	new /obj/item/stack/cable_coil(drop_location(), 1)
 	wired = FALSE
 
@@ -314,24 +318,24 @@
 	..()
 	. = TRUE
 	if(!cell)
-		to_chat(user, span_warning("There's no power cell installed in [src]!"))
+		to_chat(user, span_warning("В [src] не установлен источник питания!"))
 		return
 	screwtool.play_tool_sound(src)
-	to_chat(user, span_notice("Remove [cell] from [src]."))
+	to_chat(user, span_notice("Извлекаю [cell] из [src]."))
 	cell.forceMove(drop_location())
 
 /obj/item/bodypart/chest/robot/examine(mob/user)
 	. = ..()
 	if(cell)
-		. += {"It has a [cell] inserted.\n
-		[span_info("You can use a <b>screwdriver</b> to remove [cell].")]"}
+		. += {"Имеет вставленную [cell].\n
+		[span_info("Можно использовать <b>отвертку</b>, чтобы извлечь [cell].")]"}
 	else
-		. += span_info("It has an empty port for a <b>power cell</b>.")
+		. += span_info("Имеет пустой слот для <b>ячейки питания</b>.")
 	if(wired)
-		. += "Its all wired up[cell ? " and ready for usage" : ""].\n"+\
-		span_info("You can use <b>wirecutters</b> to remove the wiring.")
+		. += "Всё подключено [cell ? " и готово для использования" : ""].\n"+\
+		span_info("Можно использовать <b>кусачки</b>, чтобы извлечь проводку.")
 	else
-		. += span_info("It has a couple spots that still need to be <b>wired</b>.")
+		. += span_info("Имеет пару гнезд, которые необходимо <b>подключить</b>.")
 
 /obj/item/bodypart/chest/robot/drop_organs(mob/user, violent_removal)
 	var/atom/drop_loc = drop_location()
@@ -342,8 +346,8 @@
 	return ..()
 
 /obj/item/bodypart/head/robot
-	name = "cyborg head"
-	desc = "A standard reinforced braincase, with spine-plugged neural socket and sensor gimbals."
+	name = "голова киборга"
+	desc = "Стандартная укрепленная черепная коробка, с подключаемой к позвоночнику нейронным сокетом и сенсорными стыковочными узлами."
 	inhand_icon_state = "buildpipe"
 	icon_static = 'icons/mob/augmentation/augments.dmi'
 	icon = 'icons/mob/augmentation/augments.dmi'
@@ -410,25 +414,25 @@
 /obj/item/bodypart/head/robot/examine(mob/user)
 	. = ..()
 	if(!flash1 && !flash2)
-		. += span_info("It has two empty eye sockets for <b>flashes</b>.")
+		. += span_info("Имеет два свободных слота для <b>вспышек</b>.")
 	else
 		var/single_flash = FALSE
 		if(!flash1 || !flash2)
 			single_flash = TRUE
-			. += {"One of its eye sockets is currently occupied by a flash.\n
-			[span_info("It has an empty eye socket for another <b>flash</b>.")]"}
+			. += {"Один из слотов на данный момент занят вспышкой.\n
+			[span_info("В ней есть еще один свободный слот под <b>вспышку</b>.")]"}
 		else
-			. += "It has two eye sockets occupied by flashes."
-		. += span_notice("You can remove the seated flash[single_flash ? "":"es"] with a <b>crowbar</b>.")
+			. += "Оба слота заняты вспышками."
+		. += span_notice("Можно извлечь [single_flash ? "установленную вспышку":"установленные вспышки"] при помощи <b>ломика</b>.")
 
 /obj/item/bodypart/head/robot/attackby(obj/item/weapon, mob/user, params)
 	if(istype(weapon, /obj/item/assembly/flash/handheld))
 		var/obj/item/assembly/flash/handheld/flash = weapon
 		if(flash1 && flash2)
-			to_chat(user, span_warning("You have already inserted the eyes!"))
+			to_chat(user, span_warning("Уже вставил[user.ru_a()] глаза!"))
 			return
 		else if(flash.burnt_out)
-			to_chat(user, span_warning("You can't use a broken flash!"))
+			to_chat(user, span_warning("Не могу использовать сломанную вспышку!"))
 			return
 		else
 			if(!user.transferItemToLoc(flash, src))
@@ -437,7 +441,7 @@
 				flash2 = flash
 			else
 				flash1 = flash
-			to_chat(user, span_notice("You insert the flash into the eye socket."))
+			to_chat(user, span_notice("Вставил[user.ru_a()] вспышку в соответствующий слот."))
 			return
 	return ..()
 
@@ -445,11 +449,11 @@
 	..()
 	if(flash1 || flash2)
 		prytool.play_tool_sound(src)
-		to_chat(user, span_notice("You remove the flash from [src]."))
+		to_chat(user, span_notice("Извлекаю вспышку из [src]."))
 		flash1?.forceMove(drop_location())
 		flash2?.forceMove(drop_location())
 	else
-		to_chat(user, span_warning("There is no flash to remove from [src]."))
+		to_chat(user, span_warning("В [src] нет вспышки которую можно извлечь."))
 	return TRUE
 
 /obj/item/bodypart/head/robot/drop_organs(mob/user, violent_removal)
@@ -465,8 +469,8 @@
 // HP is also reduced just in case this isnt enough
 
 /obj/item/bodypart/arm/left/robot/surplus
-	name = "surplus prosthetic left arm"
-	desc = "A skeletal, robotic limb. Outdated and fragile, but it's still better than nothing."
+	name = "бюджетный протез левой руки"
+	desc = "Скелетообразная кибер-конечность. Устаревшая и хрупкая, но всё же лучше чем ничего."
 	icon_static = 'icons/mob/augmentation/surplus_augments.dmi'
 	icon = 'icons/mob/augmentation/surplus_augments.dmi'
 	burn_modifier = 1
@@ -476,8 +480,8 @@
 	biological_state = (BIO_METAL|BIO_JOINTED)
 
 /obj/item/bodypart/arm/right/robot/surplus
-	name = "surplus prosthetic right arm"
-	desc = "A skeletal, robotic limb. Outdated and fragile, but it's still better than nothing."
+	name = "бюджетный протез правой руки"
+	desc = "Скелетообразная кибер-конечность. Устаревшая и хрупкая, но всё же лучше чем ничего."
 	icon_static = 'icons/mob/augmentation/surplus_augments.dmi'
 	icon = 'icons/mob/augmentation/surplus_augments.dmi'
 	burn_modifier = 1
@@ -487,8 +491,8 @@
 	biological_state = (BIO_METAL|BIO_JOINTED)
 
 /obj/item/bodypart/leg/left/robot/surplus
-	name = "surplus prosthetic left leg"
-	desc = "A skeletal, robotic limb. Outdated and fragile, but it's still better than nothing."
+	name = "бюджетный протез левой ноги"
+	desc = "Скелетообразная кибер-конечность. Устаревшая и хрупкая, но всё же лучше чем ничего."
 	icon_static = 'icons/mob/augmentation/surplus_augments.dmi'
 	icon = 'icons/mob/augmentation/surplus_augments.dmi'
 	brute_modifier = 1
@@ -498,8 +502,8 @@
 	biological_state = (BIO_METAL|BIO_JOINTED)
 
 /obj/item/bodypart/leg/right/robot/surplus
-	name = "surplus prosthetic right leg"
-	desc = "A skeletal, robotic limb. Outdated and fragile, but it's still better than nothing."
+	name = "бюджетный протез правой ноги"
+	desc = "Скелетообразная кибер-конечность. Устаревшая и хрупкая, но всё же лучше чем ничего."
 	icon_static = 'icons/mob/augmentation/surplus_augments.dmi'
 	icon = 'icons/mob/augmentation/surplus_augments.dmi'
 	brute_modifier = 1

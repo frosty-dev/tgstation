@@ -1,6 +1,6 @@
 /datum/quirk/item_quirk/photographer
 	name = "Фотограф"
-	desc = "Знаю как обращаться с камерой, и умею сокращать задержку между каждым снимком."
+	desc = "Знаю как обращаться с камерой и умею сокращать задержку между каждым снимком."
 	icon = FA_ICON_CAMERA
 	value = 0
 	mob_trait = TRAIT_PHOTOGRAPHER

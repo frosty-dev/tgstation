@@ -1,7 +1,7 @@
 /datum/action/chameleon_outfit
 	name = "Select Chameleon Outfit"
 	desc = "LMB: Select a job to update all of your chameleon items to.<br>\
-		RMB: Save your current chameleon setup as a custom outfit."
+		ПКМ: Save your current chameleon setup as a custom outfit."
 	button_icon_state = "chameleon_outfit"
 	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_INCAPACITATED|AB_CHECK_HANDS_BLOCKED
 

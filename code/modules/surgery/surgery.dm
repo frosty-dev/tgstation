@@ -44,13 +44,18 @@
 	. = ..()
 	if(!surgery_target)
 		return
+
 	target = surgery_target
 	target.surgeries += src
+
 	if(surgery_location)
 		location = surgery_location
+
 	if(!surgery_bodypart)
 		return
+
 	operated_bodypart = surgery_bodypart
+
 	if(targetable_wound)
 		operated_wound = operated_bodypart.get_wound_type(targetable_wound)
 		operated_wound.attached_surgery = src
@@ -61,8 +66,10 @@
 	if(operated_wound)
 		operated_wound.attached_surgery = null
 		operated_wound = null
+
 	if(target)
 		target.surgeries -= src
+
 	target = null
 	operated_bodypart = null
 	return ..()
@@ -122,7 +129,7 @@
 	if(step.try_op(user, target, user.zone_selected, tool, src, try_to_fail))
 		return TRUE
 	if(tool && tool.item_flags & SURGICAL_TOOL) //Just because you used the wrong tool it doesn't mean you meant to whack the patient with it
-		to_chat(user, span_warning("This step requires a different tool!"))
+		to_chat(user, span_warning("Для этого шага требуется другой инструмент!"))
 		return TRUE
 
 	return FALSE
@@ -159,12 +166,12 @@
 	return operating_computer
 
 /datum/surgery/advanced
-	name = "advanced surgery"
+	name = "Продвинутая хирургия"
 	requires_tech = TRUE
 
 /obj/item/disk/surgery
-	name = "Surgery Procedure Disk"
-	desc = "A disk that contains advanced surgery procedures, must be loaded into an Operating Console."
+	name = "Диск с хирургическими процедурами"
+	desc = "Диск, который содержит продвинутые хирургические процедуры, и должен быть загружен в операционный компьютер."
 	icon_state = "datadisk1"
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT * 3, /datum/material/glass=SMALL_MATERIAL_AMOUNT)
 	var/list/surgeries

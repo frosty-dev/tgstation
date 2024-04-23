@@ -1,6 +1,6 @@
 
 /obj/item/organ
-	name = "organ"
+	name = "орган"
 	icon = 'icons/obj/medical/organs/organs.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	throwforce = 0

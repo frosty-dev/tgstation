@@ -1,5 +1,5 @@
 /obj/item/organ/internal/heart/ethereal
-	name = "crystal core"
+	name = "Кристаллическое ядро"
 	icon_state = "ethereal_heart" //Welp. At least it's more unique in functionaliy.
 	visual = TRUE //This is used by the ethereal species for color
 	desc = "A crystal-like organ that functions similarly to a heart for Ethereals. It can revive its owner."

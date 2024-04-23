@@ -3,7 +3,7 @@
 
 ///// Repair Hairline Fracture (Severe)
 /datum/surgery/repair_bone_hairline
-	name = "Repair bone fracture (hairline)"
+	name = "Травматология: Лечение трещины"
 	surgery_flags = SURGERY_REQUIRE_RESTING | SURGERY_REQUIRE_LIMB | SURGERY_REQUIRES_REAL_LIMB
 	targetable_wound = /datum/wound/blunt/bone/severe
 	possible_locs = list(
@@ -29,7 +29,7 @@
 
 ///// Repair Compound Fracture (Critical)
 /datum/surgery/repair_bone_compound
-	name = "Repair Compound Fracture"
+	name = "Травматология: Лечение перелома"
 	surgery_flags = SURGERY_REQUIRE_RESTING | SURGERY_REQUIRE_LIMB | SURGERY_REQUIRES_REAL_LIMB
 	targetable_wound = /datum/wound/blunt/bone/critical
 	possible_locs = list(
@@ -59,7 +59,7 @@
 
 ///// Repair Hairline Fracture (Severe)
 /datum/surgery_step/repair_bone_hairline
-	name = "repair hairline fracture (bonesetter/bone gel/tape)"
+	name = "восстановите костную структуру (костоправ/костный гель/лента)"
 	implements = list(
 		/obj/item/bonesetter = 100,
 		/obj/item/stack/medical/bone_gel = 100,
@@ -73,13 +73,12 @@
 		display_results(
 			user,
 			target,
-			span_notice("You begin to repair the fracture in [target]'s [parse_zone(user.zone_selected)]..."),
-			span_notice("[user] begins to repair the fracture in [target]'s [parse_zone(user.zone_selected)] with [tool]."),
-			span_notice("[user] begins to repair the fracture in [target]'s [parse_zone(user.zone_selected)]."),
-		)
-		display_pain(target, "Your [parse_zone(user.zone_selected)] aches with pain!")
+			span_notice("Начинаю восстанавливать костную структуру в [ru_gde_zone(parse_zone(user.zone_selected))] [skloname(target.name, RODITELNI, target.gender)]...") ,
+			span_notice("[user] начинает восстанавливать костную структуру в [ru_gde_zone(parse_zone(user.zone_selected))] [skloname(target.name, RODITELNI, target.gender)] используя [tool].") ,
+			span_notice("[user] начинает восстанавливать костную структуру в [ru_gde_zone(parse_zone(user.zone_selected))] [skloname(target.name, RODITELNI, target.gender)]."))
+		display_pain(target, "Моя [parse_zone(user.zone_selected)] болезненно ноет!")
 	else
-		user.visible_message(span_notice("[user] looks for [target]'s [parse_zone(user.zone_selected)]."), span_notice("You look for [target]'s [parse_zone(user.zone_selected)]..."))
+		user.visible_message(span_notice("[user] пытается найти [parse_zone(user.zone_selected)] у [skloname(target.name, RODITELNI, target.gender)].") , span_notice("Пытаюсь найти [parse_zone(user.zone_selected)] у [skloname(target.name, RODITELNI, target.gender)]..."))
 
 /datum/surgery_step/repair_bone_hairline/success(mob/living/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results = FALSE)
 	if(surgery.operated_wound)
@@ -89,14 +88,14 @@
 		display_results(
 			user,
 			target,
-			span_notice("You successfully repair the fracture in [target]'s [parse_zone(target_zone)]."),
-			span_notice("[user] successfully repairs the fracture in [target]'s [parse_zone(target_zone)] with [tool]!"),
-			span_notice("[user] successfully repairs the fracture in [target]'s [parse_zone(target_zone)]!"),
-		)
+			span_notice("Успешно восстанавливаю костную структуру в [ru_gde_zone(parse_zone(user.zone_selected))] [skloname(target.name, RODITELNI, target.gender)].") ,
+			span_notice("[user] успешно восстановил[user.ru_a()] костную структуру в [ru_gde_zone(parse_zone(user.zone_selected))] [skloname(target.name, RODITELNI, target.gender)] используя [tool]!") ,
+			span_notice("[user] успешно восстановил[user.ru_a()] костную структуру в [ru_gde_zone(parse_zone(user.zone_selected))] [skloname(target.name, RODITELNI, target.gender)]!"))
+
 		log_combat(user, target, "repaired a hairline fracture in", addition="COMBAT_MODE: [uppertext(user.combat_mode)]")
 		qdel(surgery.operated_wound)
 	else
-		to_chat(user, span_warning("[target] has no hairline fracture there!"))
+		to_chat(user, span_warning("[target] не имеет травм!"))
 	return ..()
 
 /datum/surgery_step/repair_bone_hairline/failure(mob/user, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery, fail_prob = 0)
@@ -109,7 +108,7 @@
 
 ///// Reset Compound Fracture (Crticial)
 /datum/surgery_step/reset_compound_fracture
-	name = "reset bone (bonesetter)"
+	name = "вправьте кость (костоправ)"
 	implements = list(
 		/obj/item/bonesetter = 100,
 		/obj/item/stack/sticky_tape/surgical = 60,
@@ -122,13 +121,12 @@
 		display_results(
 			user,
 			target,
-			span_notice("You begin to reset the bone in [target]'s [parse_zone(user.zone_selected)]..."),
-			span_notice("[user] begins to reset the bone in [target]'s [parse_zone(user.zone_selected)] with [tool]."),
-			span_notice("[user] begins to reset the bone in [target]'s [parse_zone(user.zone_selected)]."),
-		)
-		display_pain(target, "The aching pain in your [parse_zone(user.zone_selected)] is overwhelming!")
+			span_notice("Начинаю вправлять кость в [ru_gde_zone(parse_zone(user.zone_selected))] [skloname(target.name, RODITELNI, target.gender)]...") ,
+			span_notice("[user] начинает вправлять кость в [ru_gde_zone(parse_zone(user.zone_selected))] [skloname(target.name, RODITELNI, target.gender)] при помощи [tool].") ,
+			span_notice("[user] начинает вправлять кость в [ru_gde_zone(parse_zone(user.zone_selected))] [skloname(target.name, RODITELNI, target.gender)]."))
+		display_pain(target, "Ноющая боль в моей [ru_gde_zone(parse_zone(user.zone_selected))] невыносима!")
 	else
-		user.visible_message(span_notice("[user] looks for [target]'s [parse_zone(user.zone_selected)]."), span_notice("You look for [target]'s [parse_zone(user.zone_selected)]..."))
+		user.visible_message(span_notice("[user] пытается найти [parse_zone(user.zone_selected)] у [skloname(target.name, RODITELNI, target.gender)].") , span_notice("Пытаюсь найти [parse_zone(user.zone_selected)] у [skloname(target.name, RODITELNI, target.gender)]..."))
 
 /datum/surgery_step/reset_compound_fracture/success(mob/living/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results = FALSE)
 	if(surgery.operated_wound)
@@ -138,13 +136,13 @@
 		display_results(
 			user,
 			target,
-			span_notice("You successfully reset the bone in [target]'s [parse_zone(target_zone)]."),
-			span_notice("[user] successfully resets the bone in [target]'s [parse_zone(target_zone)] with [tool]!"),
-			span_notice("[user] successfully resets the bone in [target]'s [parse_zone(target_zone)]!"),
-		)
+			span_notice("Успешно вправляю кость в [parse_zone(user.zone_selected)] [skloname(target.name, RODITELNI, target.gender)].") ,
+			span_notice("[user] успешно вправил[user.ru_a()] кость в [parse_zone(user.zone_selected)] [skloname(target.name, RODITELNI, target.gender)] при помощи [tool]!") ,
+			span_notice("[user] успешно вправил[user.ru_a()] кость в [parse_zone(user.zone_selected)] [skloname(target.name, RODITELNI, target.gender)]!"))
+
 		log_combat(user, target, "reset a compound fracture in", addition="COMBAT MODE: [uppertext(user.combat_mode)]")
 	else
-		to_chat(user, span_warning("[target] has no compound fracture there!"))
+		to_chat(user, span_warning("[target] не имеет травм!"))
 	return ..()
 
 /datum/surgery_step/reset_compound_fracture/failure(mob/user, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery, fail_prob = 0)
@@ -156,7 +154,7 @@
 
 ///// Repair Compound Fracture (Crticial)
 /datum/surgery_step/repair_bone_compound
-	name = "repair compound fracture (bone gel/tape)"
+	name = "восстановите костную структуру (костный гель/лента)"
 	implements = list(
 		/obj/item/stack/medical/bone_gel = 100,
 		/obj/item/stack/sticky_tape/surgical = 100,
@@ -169,30 +167,26 @@
 		display_results(
 			user,
 			target,
-			span_notice("You begin to repair the fracture in [target]'s [parse_zone(user.zone_selected)]..."),
-			span_notice("[user] begins to repair the fracture in [target]'s [parse_zone(user.zone_selected)] with [tool]."),
-			span_notice("[user] begins to repair the fracture in [target]'s [parse_zone(user.zone_selected)]."),
-		)
-		display_pain(target, "The aching pain in your [parse_zone(user.zone_selected)] is overwhelming!")
+			span_notice("Вы начинаете восстанавливать костную структуру в [parse_zone(user.zone_selected)] [skloname(target.name, RODITELNI, target.gender)]...") ,
+			span_notice("[user] начинает восстанавливать костную структуру в [parse_zone(user.zone_selected)] [skloname(target.name, RODITELNI, target.gender)] при помощи [tool].") ,
+			span_notice("[user] начинает восстанавливать костную структуру в [parse_zone(user.zone_selected)] [skloname(target.name, RODITELNI, target.gender)]."))
+		display_pain(target, "Ноющая боль в моей [parse_zone(user.zone_selected)] невыносима!!")
 	else
-		user.visible_message(span_notice("[user] looks for [target]'s [parse_zone(user.zone_selected)]."), span_notice("You look for [target]'s [parse_zone(user.zone_selected)]..."))
+		user.visible_message(span_notice("[user] пытается найти [parse_zone(user.zone_selected)] у [skloname(target.name, RODITELNI, target.gender)].") , span_notice("Пытаюсь найти [parse_zone(user.zone_selected)] у [skloname(target.name, RODITELNI, target.gender)]..."))
 
 /datum/surgery_step/repair_bone_compound/success(mob/living/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results = FALSE)
 	if(surgery.operated_wound)
 		if(isstack(tool))
 			var/obj/item/stack/used_stack = tool
 			used_stack.use(1)
-		display_results(
-			user,
-			target,
-			span_notice("You successfully repair the fracture in [target]'s [parse_zone(target_zone)]."),
-			span_notice("[user] successfully repairs the fracture in [target]'s [parse_zone(target_zone)] with [tool]!"),
-			span_notice("[user] successfully repairs the fracture in [target]'s [parse_zone(target_zone)]!"),
-		)
+		display_results(user, target, span_notice("Успешно восстанавливаю костную структуру в [parse_zone(user.zone_selected)] [skloname(target.name, RODITELNI, target.gender)].") ,
+			span_notice("[user] успешно восстановил[user.ru_a()] костную структуру в [parse_zone(user.zone_selected)] [skloname(target.name, RODITELNI, target.gender)] при помощи [tool]!") ,
+			span_notice("[user] успешно восстановил[user.ru_a()] костную структуру в [parse_zone(user.zone_selected)] [skloname(target.name, RODITELNI, target.gender)]!"))
+
 		log_combat(user, target, "repaired a compound fracture in", addition="COMBAT MODE: [uppertext(user.combat_mode)]")
 		qdel(surgery.operated_wound)
 	else
-		to_chat(user, span_warning("[target] has no compound fracture there!"))
+		to_chat(user, span_warning("[target] не имеет травм!"))
 	return ..()
 
 /datum/surgery_step/repair_bone_compound/failure(mob/user, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery, fail_prob = 0)

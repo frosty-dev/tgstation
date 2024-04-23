@@ -22,7 +22,7 @@ GLOBAL_LIST_INIT_TYPED(screentip_context_icons, /image, prepare_screentip_contex
 		return ""
 	// Splits key combinations from mouse buttons. e.g. `Ctrl-Shift-LMB` goes in, `Ctrl-Shift-` goes out. Will be empty for single button actions.
 	var/key_combo = length(key) > 3 ? "[copytext(key, 1, -3)]" : ""
-	// Grab the mouse button, LMB/RMB
+	// Grab the mouse button, LMB/ПКМ
 	var/button = copytext(key, -3)
 	if(allow_image)
 		// Compile into image, if allowed

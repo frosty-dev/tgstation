@@ -3,7 +3,7 @@
 #define INFLAMATION_ADVANCEMENT_PROB 2
 
 /obj/item/organ/internal/appendix
-	name = "appendix"
+	name = "аппендикс"
 	icon_state = "appendix"
 	base_icon_state = "appendix"
 	visual = FALSE
@@ -14,14 +14,14 @@
 	healing_factor = STANDARD_ORGAN_HEALING
 	decay_factor = STANDARD_ORGAN_DECAY
 
-	now_failing = "<span class='warning'>An explosion of pain erupts in your lower right abdomen!</span>"
-	now_fixed = "<span class='info'>The pain in your abdomen has subsided.</span>"
+	now_failing = span_warning("Взрывная боль заполнила правый нижний угол живота!")
+	now_fixed = span_info("Боль в животе утихла.")
 
 	var/inflamation_stage = 0
 
 /obj/item/organ/internal/appendix/update_name()
 	. = ..()
-	name = "[inflamation_stage ? "inflamed " : null][initial(name)]"
+	name = "[inflamation_stage ? "воспаленный " : null][initial(name)]"
 
 /obj/item/organ/internal/appendix/update_icon_state()
 	icon_state = "[base_icon_state][inflamation_stage ? "inflamed" : ""]"
@@ -59,7 +59,7 @@
 				organ_owner.emote("cough")
 		if(2)
 			if(SPT_PROB(1.5, seconds_per_tick))
-				to_chat(organ_owner, span_warning("You feel a stabbing pain in your abdomen!"))
+				to_chat(organ_owner, span_warning("Чувствую острую боль в животе!"))
 				organ_owner.adjustOrganLoss(ORGAN_SLOT_APPENDIX, 5)
 				organ_owner.Stun(rand(40, 60))
 				organ_owner.adjustToxLoss(1, forced = TRUE)
@@ -85,7 +85,7 @@
 
 /obj/item/organ/internal/appendix/get_status_text()
 	if((!(organ_flags & ORGAN_FAILING)) && inflamation_stage)
-		return "<font color='#ff9933'>Inflamed</font>"
+		return "<font color='#ff9933'>Воспалена</font>"
 	else
 		return ..()
 

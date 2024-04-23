@@ -1,7 +1,7 @@
 /****************Explorer's Suit and Mask****************/
 /obj/item/clothing/suit/hooded/explorer
-	name = "explorer suit"
-	desc = "An armoured suit for exploring harsh environments."
+	name = "костюм исследователя"
+	desc = "Бронированный костюм для общения с весьма недружелюбными созданиями."
 	icon_state = "explorer"
 	icon = 'icons/obj/clothing/suits/utility.dmi'
 	worn_icon = 'icons/mob/clothing/suits/utility.dmi'
@@ -35,8 +35,8 @@
 	acid = 50
 
 /obj/item/clothing/head/hooded/explorer
-	name = "explorer hood"
-	desc = "An armoured hood for exploring harsh environments."
+	name = "капюшон исследователя"
+	desc = "Бронированный капюшон для общения с весьма недружелюбными созданиями."
 	icon = 'icons/obj/clothing/head/utility.dmi'
 	worn_icon = 'icons/mob/clothing/head/utility.dmi'
 	icon_state = "explorer"
@@ -58,8 +58,8 @@
 	AddComponent(/datum/component/armor_plate)
 
 /obj/item/clothing/mask/gas/explorer
-	name = "explorer gas mask"
-	desc = "A military-grade gas mask that can be connected to an air supply."
+	name = "противогаз исследователя"
+	desc = "Маска военного образца, которая может быть подключена к баллону."
 	icon_state = "gas_mining"
 	inhand_icon_state = "explorer_gasmask"
 	flags_cover = MASKCOVERSEYES | MASKCOVERSMOUTH
@@ -100,7 +100,7 @@
 	. = ..()
 	if(mask_adjusted || w_class == WEIGHT_CLASS_SMALL)
 		return
-	. += span_notice("You could fit this into a box if you adjusted it.")
+	. += span_notice("Могу поместить в коробку, если сложу её.")
 
 /obj/item/clothing/mask/gas/explorer/folded
 	w_class = WEIGHT_CLASS_SMALL
@@ -114,9 +114,9 @@
 	worn_icon = 'icons/mob/clothing/suits/armor.dmi'
 
 /obj/item/clothing/suit/hooded/cloak/goliath
-	name = "goliath cloak"
+	name = "накидка из голиафа"
 	icon_state = "goliath_cloak"
-	desc = "A staunch, practical cape made out of numerous monster materials, it is coveted amongst exiles & hermits."
+	desc = "Прочный практичный плащ из многочисленных кусков монстров, он востребован среди ссыльных и отшельников."
 	allowed = list(
 		/obj/item/flashlight,
 		/obj/item/knife/combat/bone,
@@ -136,19 +136,19 @@
 	if(iscarbon(user))
 		var/mob/living/carbon/char = user
 		if((char.get_item_by_slot(ITEM_SLOT_NECK) == src) || (char.get_item_by_slot(ITEM_SLOT_OCLOTHING) == src))
-			to_chat(user, span_warning("You can't adjust [src] while wearing it!"))
+			to_chat(user, span_warning("Надо снять [src], что его поправить!"))
 			return
 		if(!user.is_holding(src))
-			to_chat(user, span_warning("You must be holding [src] in order to adjust it!"))
+			to_chat(user, span_warning("Надо держать [src], что его поправить!"))
 			return
 		if(slot_flags & ITEM_SLOT_OCLOTHING)
 			slot_flags = ITEM_SLOT_NECK
 			set_armor(/datum/armor/none)
-			user.visible_message(span_notice("[user] adjusts their [src] for ceremonial use."), span_notice("You adjust your [src] for ceremonial use."))
+			user.visible_message(span_notice("[user] поправляет свой [src]."), span_notice("Вы поправляете свой [src], готовя его к бою."))
 		else
 			slot_flags = initial(slot_flags)
 			set_armor(initial(armor_type))
-			user.visible_message(span_notice("[user] adjusts their [src] for defensive use."), span_notice("You adjust your [src] for defensive use."))
+			user.visible_message(span_notice("[user] поправляет свой [src]."), span_notice("Вы поправляете свой [src]."))
 
 /datum/armor/cloak_goliath
 	melee = 35
@@ -160,11 +160,11 @@
 	acid = 60
 
 /obj/item/clothing/head/hooded/cloakhood/goliath
-	name = "goliath cloak hood"
+	name = "капюшон плаща голиафа"
 	icon = 'icons/obj/clothing/head/helmet.dmi'
 	worn_icon = 'icons/mob/clothing/head/helmet.dmi'
 	icon_state = "golhood"
-	desc = "A protective & concealing hood."
+	desc = "Защитный и скрывающий капюшон."
 	armor_type = /datum/armor/cloakhood_goliath
 	clothing_flags = SNUG_FIT
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
@@ -181,9 +181,9 @@
 	acid = 60
 
 /obj/item/clothing/suit/hooded/cloak/drake
-	name = "drake armour"
+	name = "доспехи дракона"
 	icon_state = "dragon"
-	desc = "A suit of armour fashioned from the remains of an ash drake."
+	desc = "Доспехи, сделанные из останков дракона."
 	allowed = list(
 		/obj/item/flashlight,
 		/obj/item/gun/energy/recharge/kinetic_accelerator,
@@ -215,11 +215,11 @@
 	acid = 100
 
 /obj/item/clothing/head/hooded/cloakhood/drake
-	name = "drake helm"
+	name = "шлем из черепа дракона"
 	icon = 'icons/obj/clothing/head/helmet.dmi'
 	worn_icon = 'icons/mob/clothing/head/helmet.dmi'
 	icon_state = "dragon"
-	desc = "The skull of a dragon."
+	desc = "Череп дракона."
 	armor_type = /datum/armor/cloakhood_drake
 	clothing_flags = SNUG_FIT
 	cold_protection = HEAD
@@ -239,9 +239,9 @@
 	acid = 100
 
 /obj/item/clothing/suit/hooded/cloak/godslayer
-	name = "godslayer armour"
+	name = "доспехи убийцы богов"
+	desc = "Доспехи, созданные из того, что осталось от рыцарских доспехов и останков вендиго."
 	icon_state = "godslayer"
-	desc = "A suit of armour fashioned from the remnants of a knight's armor, and parts of a wendigo."
 	allowed = list(
 		/obj/item/flashlight,
 		/obj/item/gun/energy/recharge/kinetic_accelerator,
@@ -281,11 +281,11 @@
 	acid = 100
 
 /obj/item/clothing/head/hooded/cloakhood/godslayer
-	name = "godslayer helm"
+	name = "шлем убийцы богов"
+	desc = "Рога и череп вендиго, скреплённые оставшейся ледяной энергией демонического шахтёра."
 	icon = 'icons/obj/clothing/head/helmet.dmi'
 	worn_icon = 'icons/mob/clothing/head/helmet.dmi'
 	icon_state = "godslayer"
-	desc = "The horns and skull of a wendigo, held together by the remaining icey energy of a demonic miner."
 	armor_type = /datum/armor/cloakhood_godslayer
 	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL | SNUG_FIT
 	cold_protection = HEAD
@@ -309,7 +309,7 @@
 /obj/item/clothing/suit/hooded/cloak/godslayer/examine(mob/user)
 	. = ..()
 	if(loc == user && !COOLDOWN_FINISHED(src, effect_cooldown))
-		. += "You feel like the revival effect will be able to occur again in [COOLDOWN_TIMELEFT(src, effect_cooldown) / 10] seconds."
+		. += "Чувствую, что способность к воскрешению снова будет доступна через [COOLDOWN_TIMELEFT(src, effect_cooldown) / 10] секунд."
 
 /obj/item/clothing/suit/hooded/cloak/godslayer/equipped(mob/user, slot)
 	. = ..()
@@ -327,12 +327,12 @@
 	if(new_stat > CONSCIOUS && new_stat < DEAD && COOLDOWN_FINISHED(src, effect_cooldown))
 		COOLDOWN_START(src, effect_cooldown, effect_cooldown_time) //This needs to happen first, otherwise there's an infinite loop
 		user.heal_ordered_damage(heal_amount, damage_heal_order)
-		user.visible_message(span_notice("[user] suddenly revives, as their armor swirls with demonic energy!"), span_notice("You suddenly feel invigorated!"))
+		user.visible_message(span_notice("[user] внезапно воскрешается, когда его доспехи окутываются демонической энергией!"), span_notice("Вы внезапно чувствуете себя бодрым!"))
 		playsound(user.loc, 'sound/magic/clockwork/ratvar_attack.ogg', 50)
 
 /obj/item/clothing/suit/hooded/explorer/syndicate
-	name = "syndicate explorer suit"
-	desc = "An armoured suit for exploring harsh environments, dyed in the sinister red and black of the Syndicate. This one seems better armored than the ones Nanotrasen gives out."
+	name = "костюм исследователя Синдиката"
+	desc = "Бронированный костюм для общения с весьма недружелюбными созданиями, окрашенный в зловещий красно-черный цвет Синдиката. Этот костюм кажется более бронированным, чем те, что выдаёт Нанотрейзен."
 	icon_state = "explorer_syndicate"
 	icon = 'icons/obj/clothing/suits/utility.dmi'
 	worn_icon = 'icons/mob/clothing/suits/utility.dmi'
@@ -349,8 +349,8 @@
 	acid = 60
 
 /obj/item/clothing/head/hooded/explorer/syndicate
-	name = "syndicate explorer hood"
-	desc = "An armoured hood for exploring harsh environments."
+	name = "капюшон исследователя Синдиката"
+	desc = "Бронированный капюшон для общения с весьма недружелюбными созданиями, окрашенный в зловещий красно-черный цвет Синдиката."
 	icon_state = "explorer_syndicate"
 	armor_type = /datum/armor/hooded_explorer_syndicate
 

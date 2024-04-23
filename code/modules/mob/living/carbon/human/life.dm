@@ -37,6 +37,19 @@
 			handle_heart(seconds_per_tick, times_fired)
 			//handles liver failure effects, if we lack a liver
 			handle_liver(seconds_per_tick, times_fired)
+			if(!client && !ai_controller)
+				PermaSleeping()
+			else if(IsPermaSleeping())
+				SetSleeping(rand(10, 30))
+			if(dancing_period)
+				dancing_period--
+			if(prob(2))
+				if(nutrition < NUTRITION_LEVEL_STARVING)
+					to_chat(src, span_warning("[pick("Голодно...", "Кушать хочу...", "Вот бы что-нибудь съесть...", "Мой живот урчит...")]"))
+					take_overall_damage(stamina = 60)
+				if(hydration <= HYDRATION_LEVEL_DEHYDRATED)
+					to_chat(src, span_warning("[pick("Пить хочется...", "В горле пересохло...", "Водички бы сейчас...")]"))
+					take_overall_damage(stamina = 60)
 
 		// for special species interactions
 		dna.species.spec_life(src, seconds_per_tick, times_fired)

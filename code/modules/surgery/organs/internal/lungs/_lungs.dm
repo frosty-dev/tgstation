@@ -1,5 +1,5 @@
 /obj/item/organ/internal/lungs
-	name = "lungs"
+	name = "лёгкие"
 	icon_state = "lungs"
 	visual = FALSE
 	zone = BODY_ZONE_CHEST
@@ -12,11 +12,11 @@
 	healing_factor = STANDARD_ORGAN_HEALING
 	decay_factor = STANDARD_ORGAN_DECAY * 0.9 // fails around 16.5 minutes, lungs are one of the last organs to die (of the ones we have)
 
-	low_threshold_passed = "<span class='warning'>You feel short of breath.</span>"
-	high_threshold_passed = "<span class='warning'>You feel some sort of constriction around your chest as your breathing becomes shallow and rapid.</span>"
-	now_fixed = "<span class='warning'>Your lungs seem to once again be able to hold air.</span>"
-	low_threshold_cleared = "<span class='info'>You can breathe normally again.</span>"
-	high_threshold_cleared = "<span class='info'>The constriction around your chest loosens as your breathing calms down.</span>"
+	low_threshold_passed = span_warning("Трудно дышать...")
+	high_threshold_passed = span_warning("Ощущаю какое-то сжатие вокруг груди, моё дыхание становится поверхностным и быстрым.")
+	now_fixed = span_warning("Моим лёгким, похоже, стало легче.")
+	low_threshold_cleared = span_info("Воздух начинает поступать в мои лёгкие. Благодать.")
+	high_threshold_cleared = span_info("Давление вокруг моей груди ослабевает, дышать стало легче.")
 
 	var/failed = FALSE
 	var/operated = FALSE //whether we can still have our damages fixed through surgery
@@ -83,7 +83,7 @@
 	var/tritium_irradiation_probability_min = 10
 	var/tritium_irradiation_probability_max = 60
 
-	var/cold_message = "your face freezing and an icicle forming"
+	var/cold_message = "как моё лицо мёрзнет и ледяной воздух поступает"
 	var/cold_level_1_threshold = 260
 	var/cold_level_2_threshold = 200
 	var/cold_level_3_threshold = 120
@@ -92,7 +92,7 @@
 	var/cold_level_3_damage = COLD_GAS_DAMAGE_LEVEL_3
 	var/cold_damage_type = BURN
 
-	var/hot_message = "your face burning and a searing heat"
+	var/hot_message = "как моё лицо горит и горячий воздух поступает"
 	var/heat_level_1_threshold = 360
 	var/heat_level_2_threshold = 400
 	var/heat_level_3_threshold = 1000
@@ -385,12 +385,12 @@
 	if (freon_pp > gas_stimulation_min)
 		breather.reagents.add_reagent(/datum/reagent/freon, 1)
 	if (prob(freon_pp))
-		to_chat(breather, span_alert("Your mouth feels like it's burning!"))
+		to_chat(breather, span_alert("Мои губы горят!"))
 	if (freon_pp > 40)
 		breather.emote("gasp")
 		breather.adjustFireLoss(15)
 		if (prob(freon_pp / 2))
-			to_chat(breather, span_alert("Your throat closes up!"))
+			to_chat(breather, span_alert("Моя глотка смыкается!"))
 			breather.set_silence_if_lower(6 SECONDS)
 	else
 		breather.adjustFireLoss(freon_pp / 4)
@@ -410,7 +410,7 @@
 	// Euphoria side-effect.
 	if(healium_pp > gas_stimulation_min)
 		if(prob(15))
-			to_chat(breather, span_alert("Your head starts spinning and your lungs burn!"))
+			to_chat(breather, span_alert("Голова кружится и лёгкие горят!"))
 			healium_euphoria = EUPHORIA_ACTIVE
 			breather.emote("gasp")
 	else
@@ -462,7 +462,7 @@
 		// tl;dr the first argument chooses the smaller of miasma_pp/2 or 6(typical max virus symptoms), the second chooses the smaller of miasma_pp or 8(max virus symptom level)
 		// Each argument has a minimum of 1 and rounds to the nearest value. Feel free to change the pp scaling I couldn't decide on good numbers for it.
 		if(breather.CanContractDisease(miasma_disease))
-			miasma_disease.name = "Unknown"
+			miasma_disease.name = "Неизвестный"
 			breather.AirborneContractDisease(miasma_disease, TRUE)
 	// Miasma side effects
 	switch(miasma_pp)
@@ -470,22 +470,22 @@
 			// At lower pp, give out a little warning
 			breather.clear_mood_event("smell")
 			if(prob(5))
-				to_chat(breather, span_notice("There is an unpleasant smell in the air."))
+				to_chat(breather, span_notice("Тошнотворный запах."))
 		if(5 to 15)
 			//At somewhat higher pp, warning becomes more obvious
 			if(prob(15))
-				to_chat(breather, span_warning("You smell something horribly decayed inside this room."))
+				to_chat(breather, span_warning("Здесь кто-то умер? Воняет ужасно..."))
 				breather.add_mood_event("smell", /datum/mood_event/disgust/bad_smell)
 		if(15 to 30)
 			//Small chance to vomit. By now, people have internals on anyway
 			if(prob(5))
-				to_chat(breather, span_warning("The stench of rotting carcasses is unbearable!"))
+				to_chat(breather, span_warning("Вонь гниющих туш невыносима! Тошнит..."))
 				breather.add_mood_event("smell", /datum/mood_event/disgust/nauseating_stench)
 				breather.vomit(VOMIT_CATEGORY_DEFAULT)
 		if(30 to INFINITY)
 			//Higher chance to vomit. Let the horror start
 			if(prob(15))
-				to_chat(breather, span_warning("The stench of rotting carcasses is unbearable!"))
+				to_chat(breather, span_warning("Вонь гниющих туш невыносима! Сейчас блевану..."))
 				breather.add_mood_event("smell", /datum/mood_event/disgust/nauseating_stench)
 				breather.vomit(VOMIT_CATEGORY_DEFAULT)
 		else
@@ -543,7 +543,7 @@
 	if((prob(nitrium_pp) && (nitrium_pp > 15)))
 		// Nitrium side-effect.
 		breather.adjustOrganLoss(ORGAN_SLOT_LUNGS, nitrium_pp * 0.1)
-		to_chat(breather, "<span class='notice'>You feel a burning sensation in your chest</span>")
+		to_chat(breather, span_notice("Мои лёгкие горят!"))
 	// Metabolize to reagents.
 	if (nitrium_pp > 5)
 		var/existing = breather.reagents.get_reagent_amount(/datum/reagent/nitrium_low_metabolization)
@@ -761,7 +761,7 @@
 			breather.apply_damage(cold_level_1_damage*cold_modifier, cold_damage_type, spread_damage = TRUE)
 		if(breath_temperature < cold_level_1_threshold)
 			if(prob(20))
-				to_chat(breather, span_warning("You feel [cold_message] in your [name]!"))
+				to_chat(breather, span_warning("Ощущаю [cold_message] в мои лёгкие!"))
 
 	if(!HAS_TRAIT(breather, TRAIT_RESISTHEAT)) // HEAT DAMAGE
 		var/heat_modifier = breather.dna.species.heatmod
@@ -773,7 +773,7 @@
 			breather.apply_damage(heat_level_3_damage*heat_modifier, heat_damage_type, spread_damage = TRUE)
 		if(breath_temperature > heat_level_1_threshold)
 			if(prob(20))
-				to_chat(breather, span_warning("You feel [hot_message] in your [name]!"))
+				to_chat(breather, span_warning("Ощущаю [hot_message] в мои лёгкие!"))
 
 	// The air you breathe out should match your body temperature
 	breath.temperature = breather.bodytemperature
@@ -798,8 +798,8 @@
 #define SMOKER_LUNG_HEALING (STANDARD_ORGAN_HEALING * 0.75)
 
 /obj/item/organ/internal/lungs/plasmaman
-	name = "plasma filter"
-	desc = "A spongy rib-shaped mass for filtering plasma from the air."
+	name = "плазма-фильтр"
+	desc = "Губчатая масса в форме ребра для фильтрации плазмы из дыхания."
 	icon_state = "lungs-plasma"
 	organ_traits = list(TRAIT_NOHUNGER) // A fresh breakfast of plasma is a great start to any morning.
 
@@ -816,8 +816,8 @@
 	healing_factor = SMOKER_LUNG_HEALING
 
 /obj/item/organ/internal/lungs/slime
-	name = "vacuole"
-	desc = "A large organelle designed to store oxygen and other important gasses."
+	name = "вакуоль"
+	desc = "Большая органелла, предназначенная для хранения кислорода и других важных газов."
 
 	safe_plasma_max = 0 //We breathe this to gain POWER.
 
@@ -828,7 +828,7 @@
 		breather_slime.blood_volume += (0.2 * plasma_pp) // 10/s when breathing literally nothing but plasma, which will suffocate you.
 
 /obj/item/organ/internal/lungs/smoker_lungs
-	name = "smoker lungs"
+	name = "лёгкие курильщика"
 	desc = "A pair of lungs that look sickly, a result from smoking a lot."
 	icon_state = "lungs_smoker"
 
@@ -836,8 +836,8 @@
 	healing_factor = SMOKER_LUNG_HEALING
 
 /obj/item/organ/internal/lungs/cybernetic
-	name = "basic cybernetic lungs"
-	desc = "A basic cybernetic version of the lungs found in traditional humanoid entities."
+	name = "базовые кибернетические лёгкие"
+	desc = "Базовая кибернетическая версия легких, встречающаяся у традиционных гуманоидных существ."
 	failing_desc = "seems to be broken."
 	icon_state = "lungs-c"
 	organ_flags = ORGAN_ROBOTIC
@@ -855,16 +855,16 @@
 		organ_flags |= ORGAN_EMP //Starts organ faliure - gonna need replacing soon.
 
 /obj/item/organ/internal/lungs/cybernetic/tier2
-	name = "cybernetic lungs"
-	desc = "A cybernetic version of the lungs found in traditional humanoid entities. Allows for greater intakes of oxygen than organic lungs, requiring slightly less pressure."
+	name = "кибернетические лёгкие"
+	desc = "Кибернетическая версия легких традиционных гуманоидных существ. Позволяет потреблять больше кислорода, чем органические легкие, требуя немного меньшего давления."
 	icon_state = "lungs-c-u"
 	maxHealth = 1.5 * STANDARD_ORGAN_THRESHOLD
 	safe_oxygen_min = 13
 	emp_vulnerability = 40
 
 /obj/item/organ/internal/lungs/cybernetic/tier3
-	name = "upgraded cybernetic lungs"
-	desc = "A more advanced version of the stock cybernetic lungs. Features the ability to filter out lower levels of plasma and carbon dioxide."
+	name = "продвинутые кибернетические лёгкие"
+	desc = "Более продвинутая версия штатных кибернетических легких. Отличается способностью отфильтровывать более низкие уровни токсинов и углекислого газа."
 	icon_state = "lungs-c-u2"
 	safe_plasma_max = 20
 	safe_co2_max = 20

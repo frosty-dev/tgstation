@@ -212,6 +212,21 @@
 	desc = "СОВЕРШЕННО ОТВРАТИТЕЛЬНО'"
 	icon_state = "gross3"
 
+/atom/movable/screen/alert/overhydrated
+	name = "Перепил"
+	desc = "Слишком много воды!"
+	icon_state = "overhydrated"
+
+/atom/movable/screen/alert/thirsty
+	name = "Жажда"
+	desc = "Хочется пить."
+	icon_state = "thirsty"
+
+/atom/movable/screen/alert/dehydrated
+	name = "Иссушение"
+	desc = "Надо срочно найти воды."
+	icon_state = "dehydrated"
+
 /atom/movable/screen/alert/hot
 	name = "Слишком жарко"
 	desc = "Я почти горю от жара! Стоит перейти в более прохладное место и снять любую изолирующую одежду, например, пожарный костюм."

@@ -1,6 +1,6 @@
 /datum/surgery/advanced/bioware/cortex_imprint
-	name = "Cortex Imprint"
-	desc = "A surgical procedure which modifies the cerebral cortex into a redundant neural pattern, making the brain able to bypass impediments caused by minor brain traumas."
+	name = "Модифицирование: Импринтинг мозга"
+	desc = "Хирургическая процедура, которая модифицирует кору большого мозга в повторяющийся нейронный паттерн, позволяющая могзу справляться с трудностями, вызванными небольшими повреждениями мозга."
 	possible_locs = list(BODY_ZONE_HEAD)
 	steps = list(
 		/datum/surgery_step/incise,
@@ -21,7 +21,7 @@
 	return ..()
 
 /datum/surgery_step/imprint_cortex
-	name = "imprint cortex (hand)"
+	name = "распрямление коры (рука)"
 	accept_hand = TRUE
 	time = 125
 
@@ -29,21 +29,19 @@
 	display_results(
 		user,
 		target,
-		span_notice("You start carving [target]'s outer cerebral cortex into a self-imprinting pattern."),
-		span_notice("[user] starts carving [target]'s outer cerebral cortex into a self-imprinting pattern."),
-		span_notice("[user] begins to perform surgery on [target]'s brain."),
+		span_notice("Начинаю вырезать на коре большого мозга [skloname(target.name, RODITELNI, target.gender)] само-импринтирующий паттерн.") ,
+		span_notice("[user] начинает вырезать на коре большого мозга [skloname(target.name, RODITELNI, target.gender)] само-импринтирующий паттерн.") ,
+		span_notice("[user] начинает проводить операцию на мозге [skloname(target.name, RODITELNI, target.gender)]."),
 	)
-	display_pain(target, "Your head throbs with gruesome pain, it's nearly too much to handle!")
 
 /datum/surgery_step/imprint_cortex/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results = FALSE)
 	display_results(
 		user,
 		target,
-		span_notice("You reshape [target]'s outer cerebral cortex into a self-imprinting pattern!"),
-		span_notice("[user] reshapes [target]'s outer cerebral cortex into a self-imprinting pattern!"),
-		span_notice("[user] completes the surgery on [target]'s brain."),
+		span_notice("Изменил форму коры большого мозга [skloname(target.name, RODITELNI, target.gender)] на само-импринтирующий паттерн!") ,
+		span_notice("[user] изменил форму коры большого мозга [skloname(target.name, RODITELNI, target.gender)] на само-импринтирующий паттерн!") ,
+		span_notice("[user] завершил[user.ru_a()] операцию на мозге [skloname(target.name, RODITELNI, target.gender)]."),
 	)
-	display_pain(target, "Your brain feels stronger... more resillient!")
 	new /datum/bioware/cortex_imprint(target)
 	return ..()
 
@@ -52,20 +50,19 @@
 		display_results(
 			user,
 			target,
-			span_warning("You screw up, damaging the brain!"),
-			span_warning("[user] screws up, damaging the brain!"),
-			span_notice("[user] completes the surgery on [target]'s brain."),
-		)
-		display_pain(target, "Your brain throbs with intense pain; Thinking hurts!")
+			span_warning("[gvorno(TRUE)], но я облажался, повредив мозг!") ,
+			span_warning("[user] облажался, повредив мозг!") ,
+			span_notice("[user] завершил[user.ru_a()] операцию на мозге [skloname(target.name, RODITELNI, target.gender)]"),
+			)
 		target.adjustOrganLoss(ORGAN_SLOT_BRAIN, 60)
 		target.gain_trauma_type(BRAIN_TRAUMA_SEVERE, TRAUMA_RESILIENCE_LOBOTOMY)
 	else
-		user.visible_message(span_warning("[user] suddenly notices that the brain [user.p_they()] [user.p_were()] working on is not there anymore."), span_warning("You suddenly notice that the brain you were working on is not there anymore."))
+		user.visible_message(span_warning("[user] внезапно замечает что мозг над которым [user.ru_who()] работал[user.ru_a()] исчез.") , span_warning("Внезапно обнаруживаю что мозг, над которым работал[user.ru_a()], исчез."))
 	return FALSE
 
 /datum/bioware/cortex_imprint
-	name = "Cortex Imprint"
-	desc = "The cerebral cortex has been reshaped into a redundant neural pattern, making the brain able to bypass impediments caused by minor brain traumas."
+	name = "Распрямленная кора"
+	desc = "Кора большого мозга была переделана в повторяющийся нейронный паттерн, позволяющая могзу справляться с трудностями, вызванными небольшими повреждениями мозга.."
 	mod_type = BIOWARE_CORTEX
 	can_process = TRUE
 

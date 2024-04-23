@@ -369,6 +369,26 @@
 	. = copytext_char(t, 1, 2)
 	return uppertext(.) + copytext_char(t, 2)
 
+/proc/uncapitalize(t)
+	. = t
+	if(isatom(t))
+		var/atom/A = t
+		t = A.name
+	. = copytext_char(t, 1, 2)
+	return lowertext(.) + copytext_char(t, 2)
+
+/proc/get_ending(amount, list/endings)
+	if (length(endings) != 3)
+		throw("get_ending requires a list of 3 endings")
+
+	if (amount % 10 == 1 && amount % 100 != 11)
+		return endings[1]
+
+	if (amount % 10 >= 2 && amount % 10 <= 4 && (amount % 100 < 10 || amount % 100 >= 20))
+		return endings[2]
+
+	return endings[3]
+
 ///Returns a string with the first letter of each word capitialized
 /proc/full_capitalize(input)
 	var/regex/first_letter = new(@"[^A-z]*?([A-z]*)", "g")

@@ -29,7 +29,7 @@
 /**********************Miner Lockers**************************/
 
 /obj/structure/closet/wardrobe/miner
-	name = "mining wardrobe"
+	name = "шахтёрский шкаф"
 	icon_door = "mixed"
 
 /obj/structure/closet/wardrobe/miner/PopulateContents()
@@ -51,7 +51,7 @@
 	new /obj/item/clothing/suit/hooded/wintercoat/miner(src)
 
 /obj/structure/closet/secure_closet/miner
-	name = "miner's equipment locker"
+	name = "шахтёрский шкаф с замком"
 	icon_state = "mining"
 	req_access = list(ACCESS_MINING)
 
@@ -86,8 +86,8 @@
 /**********************Shuttle Computer**************************/
 
 /obj/machinery/computer/shuttle/mining
-	name = "mining shuttle console"
-	desc = "Used to call and send the mining shuttle."
+	name = "консоль шахтёрского шаттла"
+	desc = "Используется для вызова и отправки шахтёрского шаттла."
 	circuit = /obj/item/circuitboard/computer/mining_shuttle
 	shuttleId = "mining"
 	possible_destinations = "mining_home;mining_away;landing_zone_dock;mining_public"
@@ -106,14 +106,14 @@
 	return ..()
 
 /obj/machinery/computer/shuttle/mining/common
-	name = "lavaland shuttle console"
-	desc = "Used to call and send the lavaland shuttle."
+	name = "консоль публичного шаттла"
+	desc = "Используется для вызова и отправки публичного шаттла."
 	circuit = /obj/item/circuitboard/computer/mining_shuttle/common
 	shuttleId = "mining_common"
 	possible_destinations = "commonmining_home;lavaland_common_away;landing_zone_dock;mining_public"
 
 /obj/docking_port/stationary/mining_home
-	name = "SS13: Mining Dock"
+	name = "SS13: Зона шахтёров"
 	shuttle_id = "mining_home"
 	roundstart_template = /datum/map_template/shuttle/mining/delta
 	width = 7
@@ -129,7 +129,7 @@
 	height = 6
 
 /obj/docking_port/stationary/mining_home/common
-	name = "SS13: Common Mining Dock"
+	name = "SS13: Публичная зона"
 	shuttle_id = "commonmining_home"
 	roundstart_template = /datum/map_template/shuttle/mining_common/meta
 

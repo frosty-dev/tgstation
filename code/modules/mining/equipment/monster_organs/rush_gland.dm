@@ -6,13 +6,13 @@
  * On use when implanted, run for longer and ignore all negative movement. Automatically triggers if health is low (to escape).
  */
 /obj/item/organ/internal/monster_core/rush_gland
-	name = "rush gland"
+	name = "гланды ускорения"
+	desc = "Набухшие надпочечники лобстера. Вы можете сжать их, чтобы получить всплеск энергии."
+	desc_preserved = "Набухшие надпочечники лобстера. Они сохранены, позволяя вам использовать их для ускорения, когда вам это нужно."
+	desc_inert = "Сморщенные надпочечники лобстера."
 	icon_state = "lobster_gland"
 	icon_state_preserved = "lobster_gland_stable"
 	icon_state_inert = "lobster_gland_decayed"
-	desc = "A lobstrosity's engorged adrenal gland. You can squeeze it to get a rush of energy on demand."
-	desc_preserved = "A lobstrosity's engorged adrenal gland. It is preserved, allowing you to use it for a burst of speed whenever you need it."
-	desc_inert = "A lobstrosity's adrenal gland. It is all shrivelled up."
 	user_status = /datum/status_effect/lobster_rush
 	actions_types = list(/datum/action/cooldown/monster_core_action/adrenal_boost)
 
@@ -44,8 +44,8 @@
 	var/spawned_last_move = FALSE
 
 /atom/movable/screen/alert/status_effect/lobster_rush
-	name = "Lobster Rush"
-	desc = "Adrenaline is surging through you!"
+	name = "Скорость лобстера"
+	desc = "Чувствую адреналин!"
 	icon_state = "lobster"
 
 /datum/status_effect/lobster_rush/on_apply()
@@ -54,14 +54,14 @@
 	RegisterSignal(owner, COMSIG_MOVABLE_BUMP, PROC_REF(on_bump))
 	owner.add_traits(list(TRAIT_IGNORESLOWDOWN, TRAIT_TENTACLE_IMMUNE), TRAIT_STATUS_EFFECT(id))
 	owner.add_movespeed_modifier(/datum/movespeed_modifier/status_effect/lobster_rush)
-	to_chat(owner, span_notice("You feel your blood pumping!"))
+	to_chat(owner, span_notice("Чувствую, как сердце бьется быстрее!"))
 
 /datum/status_effect/lobster_rush/on_remove()
 	. = ..()
 	UnregisterSignal(owner, list(COMSIG_MOVABLE_PRE_MOVE, COMSIG_MOVABLE_BUMP))
 	owner.remove_traits(list(TRAIT_IGNORESLOWDOWN, TRAIT_TENTACLE_IMMUNE), TRAIT_STATUS_EFFECT(id))
 	owner.remove_movespeed_modifier(/datum/movespeed_modifier/status_effect/lobster_rush)
-	to_chat(owner, span_notice("Your pulse returns to normal."))
+	to_chat(owner, span_notice("Пульс возвращается к норме."))
 
 /// Spawn an afterimage every other step, because every step was too many
 /datum/status_effect/lobster_rush/proc/on_move()
@@ -75,7 +75,7 @@
 	if (!target.density)
 		return
 	if (isliving(target))
-		source.visible_message(span_warning("[source] crashes into [target]!"))
+		source.visible_message(span_warning("[source] врезается в [target]!"))
 		smack_into(source)
 		smack_into(target)
 		qdel(src)
@@ -83,7 +83,7 @@
 	if (lavaland_equipment_pressure_check(get_turf(source)))
 		return
 	smack_into(source)
-	source.visible_message(span_warning("[source] crashes into [target]!"))
+	source.visible_message(span_warning("[source] врезается в [target]!"))
 	qdel(src)
 
 /datum/status_effect/lobster_rush/proc/smack_into(mob/living/target)
@@ -97,9 +97,9 @@
 
 /// Action used by the rush gland
 /datum/action/cooldown/monster_core_action/adrenal_boost
-	name = "Adrenal Boost"
-	desc = "Pump your rush gland to give yourself a boost of speed. \
-		Impacts with objects can be dangerous under atmospheric pressure."
+	name = "Адреналиновый удар"
+	desc = "Активируйте вашу железу ускорения, чтобы получить всплеск скорости. \
+		Столкновения с объектами могут быть опасными."
 	button_icon_state = "lobster_gland_stable"
 	cooldown_time = 90 SECONDS
 

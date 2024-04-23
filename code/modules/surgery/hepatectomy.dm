@@ -1,5 +1,5 @@
 /datum/surgery/hepatectomy
-	name = "Hepatectomy"
+	name = "Реконструкция: Гепатэктомия"
 	surgery_flags = SURGERY_REQUIRE_RESTING | SURGERY_REQUIRE_LIMB | SURGERY_REQUIRES_REAL_LIMB
 	organ_to_manipulate = ORGAN_SLOT_LIVER
 	possible_locs = list(BODY_ZONE_CHEST)
@@ -23,7 +23,7 @@
 ////hepatectomy, removes damaged parts of the liver so that the liver may regenerate properly
 //95% chance of success, not 100 because organs are delicate
 /datum/surgery_step/hepatectomy
-	name = "remove damaged liver section (scalpel)"
+	name = "удалите поврежденную долю печени (скальпель)"
 	implements = list(
 		TOOL_SCALPEL = 95,
 		/obj/item/melee/energy/sword = 65,
@@ -35,14 +35,11 @@
 	failure_sound = 'sound/surgery/organ2.ogg'
 
 /datum/surgery_step/hepatectomy/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
-	display_results(
-		user,
-		target,
-		span_notice("You begin to cut out a damaged piece of [target]'s liver..."),
-		span_notice("[user] begins to make an incision in [target]."),
-		span_notice("[user] begins to make an incision in [target]."),
-	)
-	display_pain(target, "Your abdomen burns in horrific stabbing pain!")
+	display_results(user, target, span_notice("Начинаю удалять поврежденную долю печени [skloname(target.name, RODITELNI, target.gender)]...") ,
+		span_notice("[user] начинает удалять поврежденную долю печени [skloname(target.name, RODITELNI, target.gender)].") ,
+		span_notice("[user] начинает удалять поврежденную долю печени [skloname(target.name, RODITELNI, target.gender)]."))
+
+	display_pain(target, "Моя печень горит ужасной, колющей болью!")
 
 /datum/surgery_step/hepatectomy/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results = FALSE)
 	var/mob/living/carbon/human/human_target = target
@@ -50,24 +47,16 @@
 	human_target.setOrganLoss(ORGAN_SLOT_LIVER, 10) //not bad, not great
 	if(target_liver)
 		target_liver.operated = TRUE
-	display_results(
-		user,
-		target,
-		span_notice("You successfully remove the damaged part of [target]'s liver."),
-		span_notice("[user] successfully removes the damaged part of [target]'s liver."),
-		span_notice("[user] successfully removes the damaged part of [target]'s liver."),
-	)
-	display_pain(target, "The pain receeds slightly.")
+	display_results(user, target, span_notice("Успешно удаляю поврежденную долю печени [skloname(target.name, RODITELNI, target.gender)].") ,
+		span_notice("[user] успешно удалил[user.ru_a()] поврежденную долю печени [skloname(target.name, RODITELNI, target.gender)].") ,
+		span_notice("[user] успешно удалил[user.ru_a()] поврежденную долю печени [skloname(target.name, RODITELNI, target.gender)]."))
+	display_pain(target, "Боль медленно утихает.")
 	return ..()
 
 /datum/surgery_step/hepatectomy/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery)
 	var/mob/living/carbon/human/human_target = target
 	human_target.adjustOrganLoss(ORGAN_SLOT_LIVER, 15)
-	display_results(
-		user,
-		target,
-		span_warning("You cut the wrong part of [target]'s liver!"),
-		span_warning("[user] cuts the wrong part of [target]'s liver!"),
-		span_warning("[user] cuts the wrong part of [target]'s liver!"),
-	)
-	display_pain(target, "You feel a sharp stab inside your abdomen!")
+	display_results(user, target, span_warning("Случайно удаляю здоровую часть печени [skloname(target.name, RODITELNI, target.gender)]!") ,
+		span_warning("[user] случайно удалил[user.ru_a()] здоровую часть печени [skloname(target.name, RODITELNI, target.gender)]!") ,
+		span_warning("[user] случайно удалил[user.ru_a()] здоровую часть печени [skloname(target.name, RODITELNI, target.gender)]!"))
+	display_pain(target, "Чувствую острую боль от надреза в своей печени!")

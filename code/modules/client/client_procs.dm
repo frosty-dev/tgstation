@@ -1194,7 +1194,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Stop Self Sounds"))
 
 /client/verb/toggle_fullscreen()
-	set name = "Полный экран"
+	set name = "ПОЛНЫЙ ЭКРАН"
 	set category = "OOC"
 
 	fullscreen = !fullscreen

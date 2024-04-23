@@ -248,7 +248,7 @@
 
 /obj/item/clothing/glasses/material/mining
 	name = "сканер оптических материалов"
-	desc = "Используется шахтерами для обнаружения руд глубоко в скале."
+	desc = "Используется шахтёрами для обнаружения руд глубоко в скале."
 	icon_state = "material"
 	inhand_icon_state = "glasses"
 

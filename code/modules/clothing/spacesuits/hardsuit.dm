@@ -386,7 +386,7 @@
 
 	//Mining hardsuit
 /obj/item/clothing/head/helmet/space/hardsuit/mining
-	name = "шахтерский герметичный шлем"
+	name = "шахтёрский герметичный шлем"
 	desc = "Разработан для работы в условиях космоса, имеет два фонарика для подсветки."
 	icon_state = "hardsuit0-mining"
 	inhand_icon_state = "mining_helm"
@@ -418,7 +418,7 @@
 			wearer.update_worn_head()
 
 /obj/item/clothing/suit/space/hardsuit/mining
-	name = "шахтерский скафандр"
+	name = "шахтёрский скафандр"
 	desc = "Специальный скафандр для работы в космосе. Должен защищать от тварей на Лаваленде."
 	icon_state = "hardsuit-mining"
 	inhand_icon_state = "mining_hardsuit"

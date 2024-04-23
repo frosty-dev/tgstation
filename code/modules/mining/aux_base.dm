@@ -8,7 +8,7 @@
 #define BAD_LAYER 5
 
 /area/shuttle/auxiliary_base
-	name = "Auxiliary Base"
+	name = "Дроппод станция"
 	luminosity = 0 //Lighting gets lost when it lands anyway
 
 /obj/machinery/computer/auxiliary_base

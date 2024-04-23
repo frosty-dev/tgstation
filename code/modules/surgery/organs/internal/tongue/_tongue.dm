@@ -1,12 +1,12 @@
 /obj/item/organ/internal/tongue
-	name = "tongue"
-	desc = "A fleshy muscle mostly used for lying."
+	name = "язык"
+	desc = "Мышца из плоти, в основном используется для того чтобы врать."
 	icon_state = "tongue"
 	visual = FALSE
 	zone = BODY_ZONE_PRECISE_MOUTH
 	slot = ORGAN_SLOT_TONGUE
-	attack_verb_continuous = list("licks", "slobbers", "slaps", "frenches", "tongues")
-	attack_verb_simple = list("lick", "slobber", "slap", "french", "tongue")
+	attack_verb_continuous = list("лижет", "нализывает", "шлёпает", "французит", "язычит")
+	attack_verb_simple = list("лижет", "нализывает", "шлёпает", "французит", "язычит")
 	voice_filter = ""
 	/**
 	 * A cached list of paths of all the languages this tongue is capable of speaking
@@ -172,31 +172,28 @@
 	return owner_species.mutanttongue
 
 /obj/item/organ/internal/tongue/lizard
-	name = "forked tongue"
-	desc = "A thin and long muscle typically found in reptilian races, apparently moonlights as a nose."
+	name = "раздвоенный язык"
+	desc = "Тонкая и длинная мышца, обычно такая есть у чешуйчатых рас. Так же выполняет роль носа."
 	icon_state = "tonguelizard"
-	say_mod = "hisses"
+	say_mod = "шипит"
 	taste_sensitivity = 10 // combined nose + tongue, extra sensitive
 	modifies_speech = TRUE
 	languages_native = list(/datum/language/draconic)
 	liked_foodtypes = GORE | MEAT | SEAFOOD | NUTS | BUGS
 	disliked_foodtypes = GRAIN | DAIRY | CLOTH | GROSS
 	voice_filter = @{"[0:a] asplit [out0][out2]; [out0] asetrate=%SAMPLE_RATE%*0.9,aresample=%SAMPLE_RATE%,atempo=1/0.9,aformat=channel_layouts=mono,volume=0.2 [p0]; [out2] asetrate=%SAMPLE_RATE%*1.1,aresample=%SAMPLE_RATE%,atempo=1/1.1,aformat=channel_layouts=mono,volume=0.2[p2]; [p0][0][p2] amix=inputs=3"}
+
 /obj/item/organ/internal/tongue/lizard/modify_speech(datum/source, list/speech_args)
-	var/static/regex/lizard_hiss = new("s+", "g")
-	var/static/regex/lizard_hiSS = new("S+", "g")
-	var/static/regex/lizard_kss = new(@"(\w)x", "g")
-	var/static/regex/lizard_kSS = new(@"(\w)X", "g")
-	var/static/regex/lizard_ecks = new(@"\bx([\-|r|R]|\b)", "g")
-	var/static/regex/lizard_eckS = new(@"\bX([\-|r|R]|\b)", "g")
+	var/static/regex/lizard_hiss = new("с+", "g")
+	var/static/regex/lizard_hiSS = new("С+", "g")
+	var/static/regex/lizard_kss = new("ш+", "g")
+	var/static/regex/lizard_kSS = new("Ш+", "g")
 	var/message = speech_args[SPEECH_MESSAGE]
 	if(message[1] != "*")
-		message = lizard_hiss.Replace(message, "sss")
-		message = lizard_hiSS.Replace(message, "SSS")
-		message = lizard_kss.Replace(message, "$1kss")
-		message = lizard_kSS.Replace(message, "$1KSS")
-		message = lizard_ecks.Replace(message, "ecks$1")
-		message = lizard_eckS.Replace(message, "ECKS$1")
+		message = lizard_hiss.Replace_char(message, "ссс")
+		message = lizard_hiSS.Replace_char(message, "ССС")
+		message = lizard_kss.Replace_char(message, "шшш")
+		message = lizard_kSS.Replace_char(message, "ШШШ")
 	speech_args[SPEECH_MESSAGE] = message
 
 /obj/item/organ/internal/tongue/lizard/silver
@@ -349,8 +346,8 @@
 	fire = 100
 
 /obj/item/organ/internal/tongue/abductor
-	name = "superlingual matrix"
-	desc = "A mysterious structure that allows for instant communication between users. Pretty impressive until you need to eat something."
+	name = "суперязыковая матрица"
+	desc = "Таинственная структура, которая позволяет мгновенно общаться с другими пользователями. Довольно интересная вещь, только есть не удобно."
 	icon_state = "tongueayylmao"
 	say_mod = "gibbers"
 	sense_of_taste = FALSE
@@ -366,21 +363,20 @@
 		return
 
 	if(tongue.mothership == mothership)
-		to_chat(tongue_holder, span_notice("[src] is already attuned to the same channel as your own."))
+		to_chat(tongue_holder, span_notice("[capitalize(src.name)] уже настроен на твой канал."))
 
-	tongue_holder.visible_message(span_notice("[tongue_holder] holds [src] in their hands, and concentrates for a moment."), span_notice("You attempt to modify the attenuation of [src]."))
+	tongue_holder.visible_message(span_notice("[tongue_holder] держит [src] в руках и сосредотачивается на мгновение") , span_notice("Ты пытаешься модифицировать связи [src]."))
 	if(do_after(tongue_holder, delay=15, target=src))
-		to_chat(tongue_holder, span_notice("You attune [src] to your own channel."))
+		to_chat(tongue_holder, span_notice("Настраиваю [src] на свой канал."))
 		mothership = tongue.mothership
 
 /obj/item/organ/internal/tongue/abductor/examine(mob/examining_mob)
 	. = ..()
 	if(HAS_MIND_TRAIT(examining_mob, TRAIT_ABDUCTOR_TRAINING) || isobserver(examining_mob))
-		. += span_notice("It can be attuned to a different channel by using it inhand.")
 		if(!mothership)
-			. += span_notice("It is not attuned to a specific mothership.")
+			. += span_notice("Он не подключен к кораблю.")
 		else
-			. += span_notice("It is attuned to [mothership].")
+			. += span_notice("Он подключен к [mothership].")
 
 /obj/item/organ/internal/tongue/abductor/modify_speech(datum/source, list/speech_args)
 	//Hacks
@@ -402,10 +398,10 @@
 	speech_args[SPEECH_MESSAGE] = ""
 
 /obj/item/organ/internal/tongue/zombie
-	name = "rotting tongue"
-	desc = "Between the decay and the fact that it's just lying there you doubt a tongue has ever seemed less sexy."
+	name = "гнилой язык"
+	desc = "Благодаря разложению и тому факту, что он тут просто лежит вы задумываетесь о том, может ли язык выглядеть еще менее сексуально."
 	icon_state = "tonguezombie"
-	say_mod = "moans"
+	say_mod = "мычит"
 	modifies_speech = TRUE
 	taste_sensitivity = 32
 	liked_foodtypes = GROSS | MEAT | RAW | GORE
@@ -431,48 +427,26 @@ GLOBAL_LIST_INIT(english_to_zombie, list())
 	GLOB.english_to_zombie = sort_list(GLOB.english_to_zombie) // Alphabetizes the list (for debugging)
 
 /obj/item/organ/internal/tongue/zombie/modify_speech(datum/source, list/speech_args)
-	var/message = speech_args[SPEECH_MESSAGE]
-	if(message[1] != "*")
-		// setup the global list for translation if it hasn't already been done
-		if(!length(GLOB.english_to_zombie))
-			load_zombie_translations()
+	var/list/message_list = splittext(speech_args[SPEECH_MESSAGE], " ")
+	var/maxchanges = max(round(message_list.len / 1.5), 2)
 
-		// make a list of all words that can be translated
-		var/list/message_word_list = splittext(message, " ")
-		var/list/translated_word_list = list()
-		for(var/word in message_word_list)
-			word = GLOB.english_to_zombie[lowertext(word)]
-			translated_word_list += word ? word : FALSE
+	for(var/i = rand(maxchanges / 2, maxchanges), i > 0, i--)
+		var/insertpos = rand(1, message_list.len - 1)
+		var/inserttext = message_list[insertpos]
 
-		// all occurrences of characters "eiou" (case-insensitive) are replaced with "r"
-		message = replacetext(message, regex(@"[eiou]", "ig"), "r")
-		// all characters other than "zhrgbmna .!?-" (case-insensitive) are stripped
-		message = replacetext(message, regex(@"[^zhrgbmna.!?-\s]", "ig"), "")
-		// multiple spaces are replaced with a single (whitespace is trimmed)
-		message = replacetext(message, regex(@"(\s+)", "g"), " ")
+		if(!(copytext(inserttext, -3) == "..."))//3 == length("...")
+			message_list[insertpos] = inserttext + "..."
 
-		var/list/old_words = splittext(message, " ")
-		var/list/new_words = list()
-		for(var/word in old_words)
-			// lower-case "r" at the end of words replaced with "rh"
-			word = replacetext(word, regex(@"\lr\b"), "rh")
-			// an "a" or "A" by itself will be replaced with "hra"
-			word = replacetext(word, regex(@"\b[Aa]\b"), "hra")
-			new_words += word
+		if(prob(20) && message_list.len > 3)
+			message_list.Insert(insertpos, "[pick("МОЗГИ", "Мозги", "Мооозгиииии", "МОООЗГИИИИИ")]...")
 
-		// if words were not translated, then we apply our zombie speech patterns
-		for(var/i in 1 to length(new_words))
-			new_words[i] = translated_word_list[i] ? translated_word_list[i] : new_words[i]
-
-		message = new_words.Join(" ")
-		message = capitalize(message)
-		speech_args[SPEECH_MESSAGE] = message
+	speech_args[SPEECH_MESSAGE] = jointext(message_list, " ")
 
 /obj/item/organ/internal/tongue/alien
-	name = "alien tongue"
-	desc = "According to leading xenobiologists the evolutionary benefit of having a second mouth in your mouth is \"that it looks badass\"."
+	name = "язык чужого"
+	desc = "По мнению ведущих ксенобиологов, эволюционное преимущество от второго рта в том \"что это выглядит круто\"."
 	icon_state = "tonguexeno"
-	say_mod = "hisses"
+	say_mod = "шипит"
 	taste_sensitivity = 10 // LIZARDS ARE ALIENS CONFIRMED
 	modifies_speech = TRUE // not really, they just hiss
 	voice_filter = @{"[0:a] asplit [out0][out2]; [out0] asetrate=%SAMPLE_RATE%*0.8,aresample=%SAMPLE_RATE%,atempo=1/0.8,aformat=channel_layouts=mono [p0]; [out2] asetrate=%SAMPLE_RATE%*1.2,aresample=%SAMPLE_RATE%,atempo=1/1.2,aformat=channel_layouts=mono[p2]; [p0][0][p2] amix=inputs=3"}
@@ -494,12 +468,12 @@ GLOBAL_LIST_INIT(english_to_zombie, list())
 	playsound(owner, SFX_HISS, 25, TRUE, TRUE)
 
 /obj/item/organ/internal/tongue/bone
-	name = "bone \"tongue\""
-	desc = "Apparently skeletons alter the sounds they produce through oscillation of their teeth, hence their characteristic rattling."
+	name = "костяной \"язык\""
+	desc = "Выяснилось, что скелеты используют вместо языка скрежет своих зубов, отсюда и постоянное дребезжание."
 	icon_state = "tonguebone"
 	say_mod = "rattles"
-	attack_verb_continuous = list("bites", "chatters", "chomps", "enamelles", "bones")
-	attack_verb_simple = list("bite", "chatter", "chomp", "enamel", "bone")
+	attack_verb_continuous = list("кусает", "прокусывает", "откусывает", "шутит", "костирует")
+	attack_verb_simple = list("кусает", "прокусывает", "откусывает", "шутит", "костирует")
 	sense_of_taste = FALSE
 	liked_foodtypes = GROSS | MEAT | RAW | GORE | DAIRY //skeletons eat spooky shit... and dairy, of course
 	disliked_foodtypes = NONE
@@ -526,22 +500,22 @@ GLOBAL_LIST_INIT(english_to_zombie, list())
 			speech_args[SPEECH_SPANS] |= SPAN_PAPYRUS
 
 /obj/item/organ/internal/tongue/bone/plasmaman
-	name = "plasma bone \"tongue\""
-	desc = "Like animated skeletons, Plasmamen vibrate their teeth in order to produce speech."
+	name = "плазменная кость \"языка\""
+	desc = "Как и у скелетов, плазмалюди используют вместо языка скрежет зубов чтобы общаться."
 	icon_state = "tongueplasma"
 	modifies_speech = FALSE
 	liked_foodtypes = VEGETABLES
 	disliked_foodtypes = FRUIT | CLOTH
 
 /obj/item/organ/internal/tongue/robot
-	name = "robotic voicebox"
-	desc = "A voice synthesizer that can interface with organic lifeforms."
+	name = "синтезатор голоса"
+	desc = "Синтезатор голоса используемый для взаимодействия с органическими формами жизни."
 	failing_desc = "seems to be broken."
 	organ_flags = ORGAN_ROBOTIC
 	icon_state = "tonguerobot"
-	say_mod = "states"
-	attack_verb_continuous = list("beeps", "boops")
-	attack_verb_simple = list("beep", "boop")
+	say_mod = "констатирует"
+	attack_verb_continuous = list("бипает", "бупает")
+	attack_verb_simple = list("бипает", "бупает")
 	modifies_speech = TRUE
 	taste_sensitivity = 25 // not as good as an organic tongue
 	voice_filter = "alimiter=0.9,acompressor=threshold=0.2:ratio=20:attack=10:release=50:makeup=2,highpass=f=1000"
@@ -553,7 +527,7 @@ GLOBAL_LIST_INIT(english_to_zombie, list())
 	speech_args[SPEECH_SPANS] |= SPAN_ROBOT
 
 /obj/item/organ/internal/tongue/snail
-	name = "radula"
+	name = "радула"
 	desc = "A minutely toothed, chitious ribbon, which as a side effect, makes all snails talk IINNCCRREEDDIIBBLLYY SSLLOOWWLLYY."
 	color = "#96DB00" // TODO proper sprite, rather than recoloured pink tongue
 	modifies_speech = TRUE
@@ -563,23 +537,23 @@ GLOBAL_LIST_INIT(english_to_zombie, list())
 	var/new_message
 	var/message = speech_args[SPEECH_MESSAGE]
 	for(var/i in 1 to length(message))
-		if(findtext("ABCDEFGHIJKLMNOPWRSTUVWXYZabcdefghijklmnopqrstuvwxyz", message[i])) //Im open to suggestions
+		if(findtext("АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюяABCDEFGHIJKLMNOPWRSTUVWXYZabcdefghijklmnopqrstuvwxyz", message[i])) //Im open to suggestions
 			new_message += message[i] + message[i] + message[i] //aaalllsssooo ooopppeeennn tttooo sssuuuggggggeeessstttiiiooonsss
 		else
 			new_message += message[i]
 	speech_args[SPEECH_MESSAGE] = new_message
 
 /obj/item/organ/internal/tongue/ethereal
-	name = "electric discharger"
-	desc = "A sophisticated ethereal organ, capable of synthesising speech via electrical discharge."
+	name = "электрический разрядник"
+	desc = "Сложный эфирный орган, способный синтезировать речь с помощью электрических разрядов."
 	icon_state = "electrotongue"
-	say_mod = "crackles"
+	say_mod = "искрит"
 	taste_sensitivity = 10 // ethereal tongues function (very loosely) like a gas spectrometer: vaporising a small amount of the food and allowing it to pass to the nose, resulting in more sensitive taste
 	liked_foodtypes = NONE //no food is particularly liked by ethereals
 	disliked_foodtypes = GROSS
 	toxic_foodtypes = NONE //no food is particularly toxic to ethereals
-	attack_verb_continuous = list("shocks", "jolts", "zaps")
-	attack_verb_simple = list("shock", "jolt", "zap")
+	attack_verb_continuous = list("шокирует", "жалит", "ебошит током")
+	attack_verb_simple = list("шокирует", "жалит", "ебошит током")
 	voice_filter = @{"[0:a] asplit [out0][out2]; [out0] asetrate=%SAMPLE_RATE%*0.99,aresample=%SAMPLE_RATE%,volume=0.3 [p0]; [p0][out2] amix=inputs=2"}
 
 // Ethereal tongues can speak all default + voltaic
@@ -587,9 +561,9 @@ GLOBAL_LIST_INIT(english_to_zombie, list())
 	return ..() + /datum/language/voltaic
 
 /obj/item/organ/internal/tongue/cat
-	name = "felinid tongue"
+	name = "язык фелинида"
 	desc = "A fleshy muscle mostly used for meowing."
-	say_mod = "meows"
+	say_mod = "мяукает"
 	liked_foodtypes = SEAFOOD | ORANGES | BUGS | GORE
 	disliked_foodtypes = GROSS | CLOTH | RAW
 

@@ -1,7 +1,7 @@
 /obj/item/organ/internal/stomach/ethereal
-	name = "biological battery"
+	name = "биохимическая батарея"
 	icon_state = "stomach-p" //Welp. At least it's more unique in functionaliy.
-	desc = "A crystal-like organ that stores the electric charge of ethereals."
+	desc = "Кристаллический орган, хранящий электрический заряд эфирных существ."
 	organ_traits = list(TRAIT_NOHUNGER) // We have our own hunger mechanic.
 	///basically satiety but electrical
 	var/crystal_charge = ETHEREAL_CHARGE_FULL
@@ -38,7 +38,7 @@
 	if(flags & SHOCK_ILLUSION)
 		return
 	adjust_charge(shock_damage * siemens_coeff * 2)
-	to_chat(owner, span_notice("You absorb some of the shock into your body!"))
+	to_chat(owner, span_notice("Поглощаю часть удара током своим телом!"))
 
 /obj/item/organ/internal/stomach/ethereal/proc/adjust_charge(amount)
 	crystal_charge = clamp(crystal_charge + amount, ETHEREAL_CHARGE_NONE, ETHEREAL_CHARGE_DANGEROUS)

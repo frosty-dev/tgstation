@@ -31,8 +31,8 @@ export const MatterItem = (props, context) => {
   const { data } = useBackend<Data>(context);
   const { matterLeft } = data;
   return (
-    <LabeledList.Item label="Units Left">
-      &nbsp;{matterLeft} Units
+    <LabeledList.Item label="Осталось юнитов">
+      &nbsp;{matterLeft} Юнитов
     </LabeledList.Item>
   );
 };
@@ -56,7 +56,7 @@ const CategoryItem = (props, context) => {
   const { act, data } = useBackend<Data>(context);
   const { root_categories = [], selected_root } = data;
   return (
-    <LabeledList.Item label="Category">
+    <LabeledList.Item label="Категория">
       {root_categories.map((root) => (
         <Button
           key={root}

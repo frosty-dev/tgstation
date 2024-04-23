@@ -118,11 +118,10 @@
 		patient.surgeries -= the_surgery
 		REMOVE_TRAIT(patient, TRAIT_ALLOWED_HONORBOUND_ATTACK, type)
 		user.visible_message(
-			span_notice("[user] removes [parent] from [patient]'s [parse_zone(selected_zone)]."),
-			span_notice("You remove [parent] from [patient]'s [parse_zone(selected_zone)]."),
-		)
+			span_notice("[user] убирает [parent] с [ru_otkuda_zone(parse_zone(selected_zone))] [skloname(patient.name, RODITELNI, patient.gender)]."),
+			span_notice("Убираю [parent] с [ru_otkuda_zone(parse_zone(selected_zone))] [skloname(patient.name, RODITELNI, patient.gender)]."))
 
-		patient.balloon_alert(user, "stopped work on [parse_zone(selected_zone)]")
+		patient.balloon_alert(user, "заканчивает работать над [ru_chem_zone(parse_zone(selected_zone))]")
 
 		qdel(the_surgery)
 		return
@@ -136,10 +135,10 @@
 	if(iscyborg(user))
 		close_tool = locate(/obj/item/cautery) in user.held_items
 		if(!close_tool)
-			patient.balloon_alert(user, "need a cautery in an inactive slot to stop the surgery!")
+			to_chat(user, span_warning("Необходимо экипировать прижигатель в неактивный слот для завершения операции на [skloname(patient.name, RODITELNI, patient.gender)]!"))
 			return
 	else if(!close_tool || close_tool.tool_behaviour != required_tool_type)
-		patient.balloon_alert(user, "need a [is_robotic ? "screwdriver": "cautery"] in your inactive hand to stop the surgery!")
+		to_chat(user, span_warning("Необходимо экипировать [is_robotic ? "отвертку" : "прижигатель"] в неактивный слот для завершения операции на [skloname(patient.name, RODITELNI, patient.gender)]!"))
 		return
 
 	if(the_surgery.operated_bodypart)
@@ -148,12 +147,11 @@
 	patient.surgeries -= the_surgery
 	REMOVE_TRAIT(patient, TRAIT_ALLOWED_HONORBOUND_ATTACK, ELEMENT_TRAIT(type))
 
-	user.visible_message(
-		span_notice("[user] closes [patient]'s [parse_zone(selected_zone)] with [close_tool] and removes [parent]."),
-		span_notice("You close [patient]'s [parse_zone(selected_zone)] with [close_tool] and remove [parent]."),
-	)
+	user.visible_message(span_notice("[user] завершает операцию на [ru_gde_zone(parse_zone(selected_zone))] [skloname(patient.name, RODITELNI, patient.gender)] при помощи [close_tool] и убирает [parent]."), \
+		span_notice("Завершаю операцию на [ru_gde_zone(parse_zone(selected_zone))] [skloname(patient.name, RODITELNI, patient.gender)] при помощи [close_tool] и убираю [parent]."))
 
-	patient.balloon_alert(user, "closed up [parse_zone(selected_zone)]")
+
+	patient.balloon_alert(user, "закрывает [ru_parse_zone(parse_zone(selected_zone))]")
 
 	qdel(the_surgery)
 
@@ -281,7 +279,7 @@
 	if (!can_start_surgery(user, target))
 		// This could have a more detailed message, but the UI closes when this is true anyway, so
 		// if it ever comes up, it'll be because of lag.
-		target.balloon_alert(user, "can't start the surgery!")
+		target.balloon_alert(user, "не могу начать операцию!")
 		return
 
 	var/obj/item/bodypart/affecting_limb
@@ -294,25 +292,25 @@
 
 	if ((surgery.surgery_flags & SURGERY_REQUIRE_LIMB) == isnull(affecting_limb))
 		if (surgery.surgery_flags & SURGERY_REQUIRE_LIMB)
-			target.balloon_alert(user, "patient has no [parse_zone(selected_zone)]!")
+			target.balloon_alert(user, "у пациента нет [ru_otkuda_zone(parse_zone(selected_zone))]!")
 		else
-			target.balloon_alert(user, "patient has \a [parse_zone(selected_zone)]!")
+			target.balloon_alert(user, "у пациента есть [parse_zone(selected_zone)]!")
 		return
 
 	if (!isnull(affecting_limb) && surgery.requires_bodypart_type && !(affecting_limb.bodytype & surgery.requires_bodypart_type))
-		target.balloon_alert(user, "not the right type of limb!")
+		target.balloon_alert(user, "не та конечность!")
 		return
 
 	if (IS_IN_INVALID_SURGICAL_POSITION(target, surgery))
-		target.balloon_alert(user, "patient is not lying down!")
+		target.balloon_alert(user, "пациент должен лежать!")
 		return
 
 	if (!surgery.can_start(user, target))
-		target.balloon_alert(user, "can't start the surgery!")
+		target.balloon_alert(user, "не могу начать операцию!")
 		return
 
 	if (surgery_needs_exposure(surgery, target))
-		target.balloon_alert(user, "expose [target.p_their()] [parse_zone(selected_zone)]!")
+		target.balloon_alert(user, "необходимо оголить [target.ru_ego()] [ru_parse_zone(parse_zone(selected_zone))]!")
 		return
 
 	ui_close()
@@ -320,12 +318,10 @@
 	var/datum/surgery/procedure = new surgery.type(target, selected_zone, affecting_limb)
 	ADD_TRAIT(target, TRAIT_ALLOWED_HONORBOUND_ATTACK, type)
 
-	target.balloon_alert(user, "starting \"[lowertext(procedure.name)]\"")
+	target.balloon_alert(user, "начинает \"[lowertext(procedure.name)]\"")
 
-	user.visible_message(
-		span_notice("[user] drapes [parent] over [target]'s [parse_zone(selected_zone)] to prepare for surgery."),
-		span_notice("You drape [parent] over [target]'s [parse_zone(selected_zone)] to prepare for \an [procedure.name]."),
-	)
+	user.visible_message(span_notice("[user] накладывает [parent] на [ru_parse_zone(parse_zone(selected_zone))] [skloname(target.name, RODITELNI, target.gender)] для подготовки к операции."), \
+		span_notice("Накладываю [parent] на [ru_parse_zone(parse_zone(selected_zone))] [skloname(target.name, RODITELNI, target.gender)] для подготовки к операции - \an [procedure.name]."))
 
 	log_combat(user, target, "operated on", null, "(OPERATION TYPE: [procedure.name]) (TARGET AREA: [selected_zone])")
 
@@ -352,5 +348,5 @@
 	if(!isliving(target))
 		return NONE
 
-	context[SCREENTIP_CONTEXT_LMB] = "Prepare Surgery"
+	context[SCREENTIP_CONTEXT_LMB] = "Подготовка к операции"
 	return CONTEXTUAL_SCREENTIP_SET

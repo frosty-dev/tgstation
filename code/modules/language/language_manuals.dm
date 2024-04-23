@@ -13,10 +13,10 @@
 		return
 
 	if(user.has_language(language))
-		to_chat(user, span_boldwarning("You start skimming through [src], but you already know [initial(language.name)]."))
+		to_chat(user, span_boldwarning("Начинаю изучать [src.name], но я уже знаю [initial(language.name)]."))
 		return
 
-	to_chat(user, span_boldannounce("You start skimming through [src], and [flavour_text]."))
+	to_chat(user, span_boldannounce("Начинаю изучать [src.name] и [flavour_text]."))
 
 	user.grant_language(language)
 	user.remove_blocked_language(language, source=LANGUAGE_ALL)

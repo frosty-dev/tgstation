@@ -1,5 +1,5 @@
 /obj/item/organ/internal
-	name = "organ"
+	name = "орган"
 
 /obj/item/organ/internal/Initialize(mapload)
 	. = ..()

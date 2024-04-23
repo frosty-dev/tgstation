@@ -1,30 +1,30 @@
-Alligator
-Anaconda
-Armorhead
-Baby Seal
-Black Eel
-Blackfish
-Eagle Ray
-Electric Eel
-Fangtooth Moray
-Featherback
-Flathead
-Goblin Shark
-Grass Carp
-Hagfish
-Hammerhead
-Icefish
-Koi
-Ladyfish
-Lamprey
-Lungfish
-Man o’ War
-Manta Ray
-Noodlefish
-Pejeray
-Round River Bat Ray
-Salmon Shark
-Sleeper Shark
-Sprat
-Sting Ray
-Yellow-edged Moray
+Айсфиш
+Акула Гоблин
+Аллигатор
+Анаконда
+Бронеголовка
+Детский Тюлень
+Желто-красный Морай.
+Килька
+Кои
+Круглая Река Летучая Мышь Рэй
+Легкорыба
+Леди-рыба
+Лососевая Акула
+Манта Рэй
+Минога
+Орлиный Луч
+Петербек
+Пиджерэй
+Плоская Голова
+Рыба-лапша
+Рыба-мигрица
+Спящая Акула
+Стинг Рэй
+Трава Карп
+Фангтут Морай.
+Хаммерхед
+Человек Войны
+Черная Рыба
+Черный Угорь
+Электрический Угорь

@@ -43,11 +43,11 @@
 	icon_state = "mining_dock"
 
 /area/station/cargo/miningdock/cafeteria
-	name = "Снабжение: Шахтерское кафе"
+	name = "Снабжение: Шахтёрское кафе"
 	icon_state = "mining_cafe"
 
 /area/station/cargo/miningdock/oresilo
-	name = "Снабжение: Шахтерское сило"
+	name = "Снабжение: Шахтёрское сило"
 	icon_state = "mining_silo"
 
 /area/station/cargo/miningoffice

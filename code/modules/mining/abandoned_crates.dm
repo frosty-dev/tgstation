@@ -1,8 +1,8 @@
 //Originally coded by ISaidNo, later modified by Kelenius. Ported from Baystation12.
 
 /obj/structure/closet/crate/secure/loot
-	name = "abandoned crate"
-	desc = "What could be inside?"
+	name = "брошеный ящик"
+	desc = "Что же может быть внутри?"
 	icon_state = "securecrate"
 	base_icon_state = "securecrate"
 	integrity_failure = 0 //no breaking open the crate
@@ -29,8 +29,8 @@
 //ATTACK HAND IGNORING PARENT RETURN VALUE
 /obj/structure/closet/crate/secure/loot/attack_hand(mob/user, list/modifiers)
 	if(locked)
-		to_chat(user, span_notice("The crate is locked with a Deca-code lock."))
-		var/input = input(usr, "Enter [codelen] digits. All digits must be unique.", "Deca-Code Lock", "") as text|null
+		to_chat(user, span_notice("Нужно ввести четырехзначный код, чтобы открыть этот ящик."))
+		var/input = input(usr, "Введите [codelen] цифры. Все цифры должны быть уникальными.", "Deca-Code Lock", "") as text|null
 		if(user.can_perform_action(src) && locked)
 			var/list/sanitised = list()
 			var/sanitycheck = TRUE
@@ -49,9 +49,9 @@
 				tamperproof = 0 // set explosion chance to zero, so we dont accidently hit it with a multitool and instantly die
 				togglelock(user)
 			else if(!input || !sanitycheck || length(sanitised) != codelen)
-				to_chat(user, span_notice("You leave the crate alone."))
+				to_chat(user, span_notice("Оставляю ящик в покое."))
 			else
-				to_chat(user, span_warning("A red light flashes."))
+				to_chat(user, span_warning("На ящике мигает красная лампочка."))
 				lastattempt = input
 				attempts--
 				if(attempts == 0)
@@ -70,9 +70,9 @@
 		if(W.tool_behaviour == TOOL_MULTITOOL)
 			to_chat(user, span_notice("DECA-CODE LOCK REPORT:"))
 			if(attempts == 1)
-				to_chat(user, span_warning("* Anti-Tamper Bomb will activate on next failed access attempt."))
+				to_chat(user, span_warning("* Противосаботажная бомба активируется после следующей неудачной попытки ввода кода."))
 			else
-				to_chat(user, span_notice("* Anti-Tamper Bomb will activate after [attempts] failed access attempts."))
+				to_chat(user, span_notice("* Число оставшихся попыток - [attempts]."))
 			if(lastattempt != null)
 				var/bulls = 0 //right position, right number
 				var/cows = 0 //wrong position but in the puzzle
@@ -96,7 +96,7 @@
 					lastattempt_it += length(lastattempt_char)
 					code_it += length(code_char)
 
-				to_chat(user, span_notice("Last code attempt, [lastattempt], had [bulls] correct digits at correct positions and [cows] correct digits at incorrect positions."))
+				to_chat(user, span_notice("Последний введенный код: \[[lastattempt]\]. [bulls] цифр[bulls == 1 ? "а" : "ы"] на правильн[bulls == 1 ? "ой" : "ых"] позици[bulls == 1 ? "и" : "ях"], [cows] цифр[cows == 1 ? "а" : "ы"] на неправильн[cows == 1 ? "ой" : "ых"]."))
 			return
 	return ..()
 

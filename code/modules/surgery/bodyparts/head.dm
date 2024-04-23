@@ -1,6 +1,6 @@
 /obj/item/bodypart/head
-	name = BODY_ZONE_HEAD
-	desc = "Didn't make sense not to live for fun, your brain gets smart but your head gets dumb."
+	name = "голова"
+	desc = "Круглая. Можно в футбик погонять."
 	icon = 'icons/mob/human/bodyparts.dmi'
 	icon_state = "default_human_head"
 	max_damage = 200
@@ -128,29 +128,29 @@
 	. = ..()
 	if(show_organs_on_examine && IS_ORGANIC_LIMB(src))
 		if(!brain)
-			. += span_info("The brain has been removed from [src].")
+			. += span_info("Здесь нет мозга.")
 		else if(brain.suicided || (brainmob && HAS_TRAIT(brainmob, TRAIT_SUICIDED)))
-			. += span_info("There's a miserable expression on [real_name]'s face; they must have really hated life. There's no hope of recovery.")
+			. += span_info("Странная гримасса на лице [real_name]; похоже эта голова и правда не любила свою жизнь. Это можно выбросить.")
 		else if(brainmob?.health <= HEALTH_THRESHOLD_DEAD)
-			. += span_info("It's leaking some kind of... clear fluid? The brain inside must be in pretty bad shape.")
+			. += span_info("Из этой штуки что-то... вытекает? Похоже мозгу внутри придали неестественную форму.")
 		else if(brainmob)
 			if(brainmob.key || brainmob.get_ghost(FALSE, TRUE))
-				. += span_info("Its muscles are twitching slightly... It seems to have some life still in it.")
+				. += span_info("Эта штука немного шевелится... Похоже внутрии неё что-то очень хочет жить.")
 			else
-				. += span_info("It's completely lifeless. Perhaps there'll be a chance for them later.")
+				. += span_info("Эта штука неподвижна. Возможно есть шанс сделать из этого что-то полезное.")
 		else if(brain?.decoy_override)
-			. += span_info("It's completely lifeless. Perhaps there'll be a chance for them later.")
+			. += span_info("Эта штука неподвижна. Возможно есть шанс сделать из этого что-то полезное.")
 		else
-			. += span_info("It's completely lifeless.")
+			. += span_info("Эта штука неподвижна.")
 
 		if(!eyes)
-			. += span_info("[real_name]'s eyes have been removed.")
+			. += span_info("\nГлаза [real_name] отсутствуют.")
 
 		if(!ears)
-			. += span_info("[real_name]'s ears have been removed.")
+			. += span_info("\nУши [real_name] отсутствуют.")
 
 		if(!tongue)
-			. += span_info("[real_name]'s tongue has been removed.")
+			. += span_info("\nЯзык [real_name] отсутствует.")
 
 /obj/item/bodypart/head/can_dismember(obj/item/item)
 	if(owner.stat < HARD_CRIT)
@@ -162,13 +162,13 @@
 	for(var/obj/item/head_item in src)
 		if(head_item == brain)
 			if(user)
-				user.visible_message(span_warning("[user] saws [src] open and pulls out a brain!"), span_notice("You saw [src] open and pull out a brain."))
+				user.visible_message(span_warning("[user] распиливает [src] и вырывает мозг!") , span_notice("Распиливаю [src] и вырываю оттуда мозг."))
 			if(brainmob)
 				brainmob.container = null
 				brain.brainmob = brainmob
 				brainmob = null
 			if(violent_removal && prob(rand(80, 100))) //ghetto surgery can damage the brain.
-				to_chat(user, span_warning("[brain] was damaged in the process!"))
+				to_chat(user, span_warning("[brain] был повреждён в процессе!"))
 				brain.set_organ_damage(brain.maxHealth)
 			brain.forceMove(drop_loc)
 			brain = null
@@ -192,7 +192,10 @@
 	. = ..()
 	if(!isnull(owner))
 		if(HAS_TRAIT(owner, TRAIT_HUSK))
-			real_name = "Unknown"
+			real_name = "Неизвестный"
+			hairstyle = "Bald"
+			facial_hairstyle = "Shaved"
+			lip_style = null
 		else
 			real_name = owner.real_name
 	update_hair_and_lips(dropping_limb, is_creating)
@@ -242,7 +245,7 @@
 	return NOPASS
 
 /obj/item/bodypart/head/GetVoice()
-	return "The head of [real_name]"
+	return "Голова [real_name]"
 
 /obj/item/bodypart/head/monkey
 	icon = 'icons/mob/human/species/monkey/bodyparts.dmi'

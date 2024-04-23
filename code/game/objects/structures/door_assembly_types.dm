@@ -27,7 +27,7 @@
 	airlock_type = /obj/machinery/door/airlock/engineering
 
 /obj/structure/door_assembly/door_assembly_min
-	name = "каркас шлюза шахтеров"
+	name = "каркас шлюза шахтёров"
 	icon = 'icons/obj/doors/airlocks/station/mining.dmi'
 	base_name = "mining airlock"
 	glass_type = /obj/machinery/door/airlock/mining/glass

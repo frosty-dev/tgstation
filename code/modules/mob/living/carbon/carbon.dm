@@ -419,6 +419,7 @@
 	var/turf/location = get_turf(src)
 	if(!blood)
 		adjust_nutrition(-lost_nutrition)
+		hydration -= lost_nutrition
 		need_mob_update += adjustToxLoss(-3, updating_health = FALSE)
 
 	for(var/i = 0 to distance)

@@ -91,7 +91,7 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 		new /datum/stack_recipe("каркас командного шлюза", /obj/structure/door_assembly/door_assembly_com, 4, time = 50, one_per_turf = 1, on_solid_ground = 1, category = CAT_DOORS), \
 		new /datum/stack_recipe("каркас шлюза службы безопасности", /obj/structure/door_assembly/door_assembly_sec, 4, time = 50, one_per_turf = 1, on_solid_ground = 1, category = CAT_DOORS), \
 		new /datum/stack_recipe("каркас инженерного шлюза", /obj/structure/door_assembly/door_assembly_eng, 4, time = 50, one_per_turf = 1, on_solid_ground = 1, category = CAT_DOORS), \
-		new /datum/stack_recipe("каркас шахтерского шлюза", /obj/structure/door_assembly/door_assembly_min, 4, time = 50, one_per_turf = 1, on_solid_ground = 1, category = CAT_DOORS), \
+		new /datum/stack_recipe("каркас шахтёрского шлюза", /obj/structure/door_assembly/door_assembly_min, 4, time = 50, one_per_turf = 1, on_solid_ground = 1, category = CAT_DOORS), \
 		new /datum/stack_recipe("каркас атмосферного шлюза", /obj/structure/door_assembly/door_assembly_atmo, 4, time = 50, one_per_turf = 1, on_solid_ground = 1, category = CAT_DOORS), \
 		new /datum/stack_recipe("каркас шлюза отдела исследований", /obj/structure/door_assembly/door_assembly_research, 4, time = 50, one_per_turf = 1, on_solid_ground = 1, category = CAT_DOORS), \
 		new /datum/stack_recipe("каркас морозильного шлюза ", /obj/structure/door_assembly/door_assembly_fre, 4, time = 50, one_per_turf = 1, on_solid_ground = 1, category = CAT_DOORS), \

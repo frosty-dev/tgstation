@@ -618,7 +618,7 @@
 
 /obj/item/circuitboard/computer/mining
 	name = "консоль камер шахты"
-	desc = "Используется для доступа к различным камерам на шахтерском аванпосте."
+	desc = "Используется для доступа к различным камерам на шахтёрском аванпосте."
 	greyscale_colors = CIRCUIT_COLOR_SUPPLY
 	build_path = /obj/machinery/computer/security/mining
 

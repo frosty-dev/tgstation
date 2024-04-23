@@ -163,7 +163,7 @@ handles linking back and forth.
 		silo.updateUsrDialog()
 		mat_container = new_container
 		RegisterSignal(parent, COMSIG_ATOM_ATTACKBY, TYPE_PROC_REF(/datum/component/remote_materials, SiloAttackBy))
-		to_chat(user, span_notice("Подключаю [parent] к [silo] используя буффер мультитула."))
+		to_chat(user, span_notice("Подключаю [parent] к [silo] используя буфер мультитула."))
 		return COMPONENT_BLOCK_TOOL_ATTACK
 
 /// returns TRUE if this connection put on hold by the silo

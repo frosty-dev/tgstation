@@ -10,11 +10,6 @@ Cruz
 Culebra
 Cullen
 Czimisce
-de Jund
-de Lioncourt
-de Ministry
-de Spingbabble
-der Catwalk
 Derosso
 Dimetrescu
 Dimir
@@ -52,9 +47,14 @@ Valvatorez
 Ventrue
 Victoria
 Voermann
+Yakshi
+de Jund
+de Lioncourt
+de Ministry
+de Spingbabble
+der Catwalk
 von Block
 von Count
 von Ghoulist
 von Grout
 von Sport
-Yakshi

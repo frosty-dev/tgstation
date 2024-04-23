@@ -1,7 +1,7 @@
 
 /obj/item/bodypart/chest
-	name = BODY_ZONE_CHEST
-	desc = "It's impolite to stare at a person's chest."
+	name = "грудь"
+	desc = "Неправильно смотреть на чью-то грудь."
 	icon_state = "default_human_chest"
 	max_damage = 200
 	body_zone = BODY_ZONE_CHEST
@@ -100,7 +100,7 @@
 
 /// Parent Type for arms, should not appear in game.
 /obj/item/bodypart/arm
-	name = "arm"
+	name = "рука"
 	desc = "Hey buddy give me a HAND and report this to the github because you shouldn't be seeing this."
 	attack_verb_continuous = list("slaps", "punches")
 	attack_verb_simple = list("slap", "punch")
@@ -128,11 +128,8 @@
 	return ..()
 
 /obj/item/bodypart/arm/left
-	name = "left arm"
-	desc = "Did you know that the word 'sinister' stems originally from the \
-		Latin 'sinestra' (left hand), because the left hand was supposed to \
-		be possessed by the devil? This arm appears to be possessed by no \
-		one though."
+	name = "левая рука"
+	desc = "Этой штукой можно пощекотать свою жопу."
 	icon_state = "default_human_l_arm"
 	body_zone = BODY_ZONE_L_ARM
 	body_part = ARM_LEFT
@@ -190,7 +187,7 @@
 		if(bodypart_disabled)
 			owner.set_usable_hands(owner.usable_hands - 1)
 			if(owner.stat < UNCONSCIOUS)
-				to_chat(owner, span_userdanger("You lose control of your [name]!"))
+				to_chat(owner, span_userdanger("Не чувствую свою [skloname(name, VINITELNI, FEMALE)]!"))
 			if(held_index)
 				owner.dropItemToGround(owner.get_item_for_held_index(held_index))
 	else if(!bodypart_disabled)
@@ -235,9 +232,8 @@
 
 
 /obj/item/bodypart/arm/right
-	name = "right arm"
-	desc = "Over 87% of humans are right handed. That figure is much lower \
-		among humans missing their right arm."
+	name = "правая рука"
+	desc = "А вот этой вот дрочу."
 	body_zone = BODY_ZONE_R_ARM
 	body_part = ARM_RIGHT
 	icon_state = "default_human_r_arm"
@@ -295,7 +291,7 @@
 		if(bodypart_disabled)
 			owner.set_usable_hands(owner.usable_hands - 1)
 			if(owner.stat < UNCONSCIOUS)
-				to_chat(owner, span_userdanger("You lose control of your [name]!"))
+				to_chat(owner, span_userdanger("Не чувствую свою [skloname(name, VINITELNI, FEMALE)]!"))
 			if(held_index)
 				owner.dropItemToGround(owner.get_item_for_held_index(held_index))
 	else if(!bodypart_disabled)
@@ -340,7 +336,7 @@
 
 /// Parent Type for legs, should not appear in game.
 /obj/item/bodypart/leg
-	name = "leg"
+	name = "нога"
 	desc = "This item shouldn't exist. Talk about breaking a leg. Badum-Tss!"
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
@@ -363,9 +359,8 @@
 	return ..()
 
 /obj/item/bodypart/leg/left
-	name = "left leg"
-	desc = "Some athletes prefer to tie their left shoelaces first for good \
-		luck. In this instance, it probably would not have helped."
+	name = "левая нога"
+	desc = "Вставать с этой ноги не круто."
 	icon_state = "default_human_l_leg"
 	body_zone = BODY_ZONE_L_LEG
 	body_part = LEG_LEFT
@@ -421,7 +416,7 @@
 		if(bodypart_disabled)
 			owner.set_usable_legs(owner.usable_legs - 1)
 			if(owner.stat < UNCONSCIOUS)
-				to_chat(owner, span_userdanger("You lose control of your [name]!"))
+				to_chat(owner, span_userdanger("Не чувствую свою [skloname(name, VINITELNI, FEMALE)]!"))
 	else if(!bodypart_disabled)
 		owner.set_usable_legs(owner.usable_legs + 1)
 
@@ -456,11 +451,8 @@
 	should_draw_greyscale = FALSE
 
 /obj/item/bodypart/leg/right
-	name = "right leg"
-	desc = "You put your right leg in, your right leg out. In, out, in, out, \
-		shake it all about. And apparently then it detaches.\n\
-		The hokey pokey has certainly changed a lot since space colonisation."
-	// alternative spellings of 'pokey' are available
+	name = "правая нога"
+	desc = "А вот с этой ноги стоит вставать."
 	icon_state = "default_human_r_leg"
 	body_zone = BODY_ZONE_R_LEG
 	body_part = LEG_RIGHT
@@ -515,7 +507,7 @@
 		if(bodypart_disabled)
 			owner.set_usable_legs(owner.usable_legs - 1)
 			if(owner.stat < UNCONSCIOUS)
-				to_chat(owner, span_userdanger("You lose control of your [name]!"))
+				to_chat(owner, span_userdanger("Не чувствую свою [skloname(name, VINITELNI, FEMALE)]!"))
 	else if(!bodypart_disabled)
 		owner.set_usable_legs(owner.usable_legs + 1)
 

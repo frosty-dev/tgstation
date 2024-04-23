@@ -1,6 +1,6 @@
 /obj/item/organ/internal/cyberimp/eyes
-	name = "cybernetic eye implant"
-	desc = "Implants for your eyes."
+	name = "кибернетические импланты глаз"
+	desc = "Импланты для ваших глаз."
 	icon_state = "eye_implant"
 	implant_overlay = "eye_implant_overlay"
 	slot = ORGAN_SLOT_EYES
@@ -9,8 +9,8 @@
 
 // HUD implants
 /obj/item/organ/internal/cyberimp/eyes/hud
-	name = "HUD implant"
-	desc = "These cybernetic eyes will display a HUD over everything you see. Maybe."
+	name = "имплант интерфейса"
+	desc = "Эти кибернетические глаза выведут интерфейс поверх всего что вы видите. Наверное."
 	slot = ORGAN_SLOT_HUD
 	var/HUD_type = 0
 	var/HUD_trait = null
@@ -34,23 +34,23 @@
 		REMOVE_TRAIT(eye_owner, HUD_trait, ORGAN_TRAIT)
 
 /obj/item/organ/internal/cyberimp/eyes/hud/medical
-	name = "Medical HUD implant"
-	desc = "These cybernetic eye implants will display a medical HUD over everything you see."
+	name = "имплант медицинского интерфейса"
+	desc = "Эти кибернетические глаза выведут медицинский интерфейс поверх всего что вы видите."
 	HUD_type = DATA_HUD_MEDICAL_ADVANCED
 	HUD_trait = TRAIT_MEDICAL_HUD
 
 /obj/item/organ/internal/cyberimp/eyes/hud/security
-	name = "Security HUD implant"
-	desc = "These cybernetic eye implants will display a security HUD over everything you see."
+	name = "имплант интерфейса службы безопасности"
+	desc = "Эти кибернетические глаза выведут интерфейс службы безопасности поверх всего что вы видите."
 	HUD_type = DATA_HUD_SECURITY_ADVANCED
 	HUD_trait = TRAIT_SECURITY_HUD
 
 /obj/item/organ/internal/cyberimp/eyes/hud/diagnostic
-	name = "Diagnostic HUD implant"
-	desc = "These cybernetic eye implants will display a diagnostic HUD over everything you see."
+	name = "имплант интерфейса диагностики"
+	desc = "Эти кибернетические глаза выведут интерфейс диагностики поверх всего что вы видите."
 	HUD_type = DATA_HUD_DIAGNOSTIC_ADVANCED
 
 /obj/item/organ/internal/cyberimp/eyes/hud/security/syndicate
-	name = "Contraband Security HUD Implant"
-	desc = "A Cybersun Industries brand Security HUD Implant. These illicit cybernetic eye implants will display a security HUD over everything you see."
+	name = "контрабандный имплант интерфейса службы безопасности"
+	desc = "Интерфейс службы безопасности от КиберСан Индастриз. Эти нелегальные кибернетические глаза выведут интерфейс службы безопасности поверх всего что вы видите"
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN

@@ -155,7 +155,7 @@
 
 ///Action to pump your heart. Cooldown will always be set to 1 second less than the pump delay.
 /datum/action/cooldown/manual_heart
-	name = "Pump your blood"
+	name = "Качать кровь"
 	cooldown_time = 2 SECONDS
 	check_flags = NONE
 	button_icon = 'icons/obj/medical/organs/organs.dmi'

@@ -192,7 +192,7 @@
 
 /obj/machinery/computer/security/mining
 	name = "консоль камер шахты"
-	desc = "Используется для доступа к различным камерам на шахтерском аванпосте."
+	desc = "Используется для доступа к различным камерам на шахтёрском аванпосте."
 	icon_screen = "mining"
 	icon_keyboard = "mining_key"
 	network = list("mine", "auxbase")

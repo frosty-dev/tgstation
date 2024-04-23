@@ -71,6 +71,10 @@
 		return
 
 	if(target_mob != user)
+		if(target_mob.hydration >= HYDRATION_LEVEL_OVERHYDRATED)
+			target_mob.visible_message(span_danger("[user] не может больше напоить [target_mob] содержимым [src.name]."), \
+			span_userdanger("[user] больше не может напоить меня содержимым [src.name]."))
+			return
 		target_mob.visible_message(span_danger("[user] пытается напоить [target_mob] из [src]."), \
 					span_userdanger("[user] пытается напоить меня из [src]."))
 		if(!do_after(user, 3 SECONDS, target_mob))
@@ -81,7 +85,20 @@
 					span_userdanger("[user] поит меня чем-то из [src]."))
 		log_combat(user, target_mob, "fed", reagents.get_reagent_log_string())
 	else
-		to_chat(user, span_notice("Делаю глоток из [src]."))
+		if(user.hydration >= HYDRATION_LEVEL_OVERHYDRATED)
+			to_chat(target_mob, span_warning("В меня больше не лезет содержимое [src.name]!"))
+			return
+		user.visible_message(span_notice("[user] делает глоток из [src.name].") , \
+			span_notice("Делаю глоток из [src.name]."))
+		if(HAS_TRAIT(user, TRAIT_VORACIOUS))
+			target_mob.changeNext_move(CLICK_CD_MELEE * 0.5) //chug! chug! chug!
+
+	for(var/datum/reagent/R in reagents.reagent_list)
+		if(R.type in target_mob.known_reagent_sounds)
+			continue
+		LAZYADD(target_mob.known_reagent_sounds, R.type)
+		SEND_SOUND(target_mob, R.special_sound)
+		break
 
 	SEND_SIGNAL(src, COMSIG_GLASS_DRANK, target_mob, user)
 	var/fraction = min(gulp_size/reagents.total_volume, 1)

@@ -12,6 +12,9 @@
 	/// What medipen should be present in this box?
 	var/medipen_type = /obj/item/reagent_containers/hypospray/medipen
 	/// Are we crafted?
+	var/bottle_type = /obj/item/reagent_containers/cup/glass/waterbottle/large
+
+
 	var/crafted = FALSE
 
 /obj/item/storage/box/survival/Initialize(mapload)
@@ -41,9 +44,10 @@
 		new /obj/item/flashlight/flare(src)
 		new /obj/item/radio/off(src)
 
-
 	if(SSmapping.is_planetary() && LAZYLEN(SSmapping.multiz_levels))
 		new /obj/item/climbing_hook/emergency(src)
+
+	new bottle_type(src)
 
 /obj/item/storage/box/survival/radio/PopulateContents()
 	..() // we want the survival stuff too.
@@ -211,6 +215,7 @@
 			/obj/item/tank/internals/emergency_oxygen/engi/clown/bz,
 			/obj/item/tank/internals/emergency_oxygen/engi/clown/helium,
 			)
+
 	return ..()
 
 //Mime survival box

@@ -1,54 +1,54 @@
-﻿Angel Shark
-Asteroid Shark
-Baby Gargantuan Shark
-Bloodhound Shark
-Buffalo Shark
-Cat Shark
-Chaos Shark
-Chomper Shark
-Cow Shark
-Derelict Shark
-Dog Shark
-Flipper Shark
-Flying Shark
-Freon Shark
-Frog Shark
-Ghast Shark
-Ghost Shark
-Goblin Shark
-Great White Shark
-Guru Shark
-Hammerhead Shark
-Incinerator Shark
-Judicator Shark
-Laser Shark
-Lava Shark
-Lizard Shark
-Mackerel Shark
-Magishark
-Megalodon
-Megalomaniac Shark
-Meteor Shark
-Minilodon
-Moby Dick
-Nightmare Shark
-Plasma Shark
-Pulse Shark
-Sand Shark
-Sawshark
-Sharkling
-Sharknado
-Shawshark
-Shredder Shark
-Smooth-Hound Shark
-Snapjaw Shark
-Space Kraken
-Space Shark
-Spacetime Shark
-Spider Shark
-Thresher Shark
-Toxic Shark
-Traitor Shark
-Vermin Shark
-Whale Shark
-Wobbegong Shark
+Акула
+Акула
+Акула Буффало
+Акула Гаргантуанская Малышка
+Акула Гоблин
+Акула Гуру
+Акула Метеорита
+Акула Судья Акула
+Акула Хаммерхед
+Акула-бледяная Пса
+Акула-гаст
+Акула-импульс
+Акула-кошка
+Акула-мегаломаньяк
+Акула-паразит
+Акула-предательница
+Акула-призрак
+Акула-флиппер
+Акула-ящерица
+Ангельская Акула
+Астероид "акула"
+Брошенная Акула
+Великая Белая Акула
+Гладкошерстная Акула
+Китовая Акула
+Коровья Акула
+Космическая Акула
+Космический Кракен
+Кошмарная Акула
+Лавовая Акула
+Летающая Акула
+Лягушачья Акула
+Магишарк
+Мегалодон
+Минилодон
+Моби Дик
+Мусоросжигательная Акула
+Пауковая Акула
+Песчаная Акула
+Плазменная Акула
+Скумбрия Акула
+Собачья Акула
+Токсичная Акула
+Трёхъярусная Акула
+Фреонская Акула
+Хаосская Акула
+Шарк Молниеносная Челюсть
+Шарк Пространства-времени
+Шарк Уоббогонг
+Шаркнадо
+Шомперская Акула
+Шоушарк
+Шредер Акула Шредер
+﻿Лазерная Акула

@@ -16,6 +16,12 @@
 			if(move_intent == MOVE_INTENT_RUN)
 				adjust_nutrition(-(HUNGER_FACTOR/10))
 
+		if(HAS_TRAIT(src, TRAIT_NOHYDRATION))
+			hydration = HYDRATION_LEVEL_START_MIN
+		else if(hydration && stat != DEAD)
+			hydration -= HYDRATION_LOSS_PER_MOVE
+			if(move_intent == MOVE_INTENT_RUN)
+				hydration -= HYDRATION_LOSS_PER_MOVE
 
 /mob/living/carbon/set_usable_legs(new_value)
 	. = ..()

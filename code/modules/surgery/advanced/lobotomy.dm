@@ -1,6 +1,6 @@
 /datum/surgery/advanced/lobotomy
-	name = "Lobotomy"
-	desc = "An invasive surgical procedure which guarantees removal of almost all brain traumas, but might cause another permanent trauma in return."
+	name = "Операция на мозге: Лоботомия"
+	desc = "Инвазивная хирургическая процедура, которая гарантированно устраняет большинство травм мозга, но может привести к другому постоянному повреждению."
 	possible_locs = list(BODY_ZONE_HEAD)
 	requires_bodypart_type = NONE
 	steps = list(
@@ -22,7 +22,7 @@
 	return TRUE
 
 /datum/surgery_step/lobotomize
-	name = "perform lobotomy (scalpel)"
+	name = "выполнить лоботомию"
 	implements = list(
 		TOOL_SCALPEL = 85,
 		/obj/item/melee/energy/sword = 55,
@@ -44,21 +44,17 @@
 	display_results(
 		user,
 		target,
-		span_notice("You begin to perform a lobotomy on [target]'s brain..."),
-		span_notice("[user] begins to perform a lobotomy on [target]'s brain."),
-		span_notice("[user] begins to perform surgery on [target]'s brain."),
-	)
-	display_pain(target, "Your head pounds with unimaginable pain!")
+		span_notice("Начинаю проведение лоботомии на мозге [skloname(target.name, RODITELNI, target.gender)]...") ,
+		span_notice("[user] начинает проведение лоботомии на мозге [skloname(target.name, RODITELNI, target.gender)].") ,
+		span_notice("[user] начинает операцию на мозге [skloname(target.name, RODITELNI, target.gender)]."))
 
 /datum/surgery_step/lobotomize/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results = FALSE)
 	display_results(
 		user,
 		target,
-		span_notice("You succeed in lobotomizing [target]."),
-		span_notice("[user] successfully lobotomizes [target]!"),
-		span_notice("[user] completes the surgery on [target]'s brain."),
-	)
-	display_pain(target, "Your head goes totally numb for a moment, the pain is overwhelming!")
+		span_notice("Успешно выполнил[user.ru_a()] лоботомию [skloname(target.name, RODITELNI, target.gender)].") ,
+		span_notice("[user] успешно выполнил[user.ru_a()] лоботомию [skloname(target.name, RODITELNI, target.gender)]!") ,
+		span_notice("[user] завершает операцию [skloname(target.name, RODITELNI, target.gender)]."))
 
 	target.cure_all_traumas(TRAUMA_RESILIENCE_LOBOTOMY)
 	if(target.mind && target.mind.has_antag_datum(/datum/antagonist/brainwashed))
@@ -82,11 +78,10 @@
 		display_results(
 			user,
 			target,
-			span_warning("You remove the wrong part, causing more damage!"),
-			span_notice("[user] successfully lobotomizes [target]!"),
-			span_notice("[user] completes the surgery on [target]'s brain."),
-		)
-		display_pain(target, "The pain in your head only seems to get worse!")
+			span_warning("Извлек неверную часть, что привело к большим повреждениям!") ,
+			span_notice("[user] успешно выполнил[user.ru_a()] лоботомию [skloname(target.name, RODITELNI, target.gender)]!") ,
+			span_notice("[user] завершает операцию на мозге [skloname(target.name, RODITELNI, target.gender)]."))
+
 		target_brain.apply_organ_damage(80)
 		switch(rand(1,3))
 			if(1)
@@ -99,5 +94,5 @@
 			if(3)
 				target.gain_trauma_type(BRAIN_TRAUMA_SPECIAL, TRAUMA_RESILIENCE_MAGIC)
 	else
-		user.visible_message(span_warning("[user] suddenly notices that the brain [user.p_they()] [user.p_were()] working on is not there anymore."), span_warning("You suddenly notice that the brain you were working on is not there anymore."))
+		user.visible_message(span_warning("[user] внезапно замечает что мозг над которым [user.ru_who()] работал[user.ru_a()] исчез.") , span_warning("Внезапно обнаруживаю что мозг, над которым я работал, исчез."))
 	return FALSE

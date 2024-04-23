@@ -61,7 +61,7 @@
 /obj/item/organ/internal/cyberimp/arm/examine(mob/user)
 	. = ..()
 	if(IS_ROBOTIC_ORGAN(src))
-		. += span_info("[src] is assembled in the [zone == BODY_ZONE_R_ARM ? "right" : "left"] arm configuration. You can use a screwdriver to reassemble it.")
+		. += span_info("[capitalize(src.name)] собран в [zone == BODY_ZONE_R_ARM ? "правой" : "левой"] зоне рук. Можно использовать отвертку для его пересборки.")
 
 /obj/item/organ/internal/cyberimp/arm/screwdriver_act(mob/living/user, obj/item/screwtool)
 	. = ..()
@@ -73,7 +73,7 @@
 	else
 		zone = BODY_ZONE_R_ARM
 	SetSlotFromZone()
-	to_chat(user, span_notice("You modify [src] to be installed on the [zone == BODY_ZONE_R_ARM ? "right" : "left"] arm."))
+	to_chat(user, span_notice("Изменяю положение [src] и пересобираю его в [zone == BODY_ZONE_R_ARM ? "правой" : "левой"] руке."))
 	update_appearance()
 
 /obj/item/organ/internal/cyberimp/arm/on_insert(mob/living/carbon/arm_owner)
@@ -101,7 +101,7 @@
 	if(. & EMP_PROTECT_SELF || !IS_ROBOTIC_ORGAN(src))
 		return
 	if(prob(15/severity) && owner)
-		to_chat(owner, span_warning("The electromagnetic pulse causes [src] to malfunction!"))
+		to_chat(owner, span_warning("Электромагнитный импульс вызвал неисправность [src]!"))
 		// give the owner an idea about why his implant is glitching
 		Retract()
 
@@ -126,10 +126,9 @@
 		return FALSE
 	if(owner)
 		owner.visible_message(
-			span_notice("[owner] retracts [active_item] back into [owner.p_their()] [zone == BODY_ZONE_R_ARM ? "right" : "left"] arm."),
-			span_notice("[active_item] snaps back into your [zone == BODY_ZONE_R_ARM ? "right" : "left"] arm."),
-			span_hear("You hear a short mechanical noise."),
-		)
+			span_notice("[owner] втягивает [active_item] обратно в [owner.ru_ego()] [zone == BODY_ZONE_R_ARM ? "правую" : "левую"] руку."),
+			span_notice("[capitalize(active_item)] возвращается в мою [zone == BODY_ZONE_R_ARM ? "правую" : "левую"] руку."),
+			span_hear("Слышу короткий механический шелчок."))
 
 		owner.transferItemToLoc(active_item, src, TRUE)
 	else
@@ -162,18 +161,18 @@
 		for(var/i in 1 to hand_items.len) //Can't just use *in* here.
 			var/hand_item = hand_items[i]
 			if(!owner.dropItemToGround(hand_item))
-				failure_message += span_warning("Your [hand_item] interferes with [src]!")
+				failure_message += span_warning("Мой [hand_item] мешает [src]!")
 				continue
-			to_chat(owner, span_notice("You drop [hand_item] to activate [src]!"))
+			to_chat(owner, span_notice("Бросаю [hand_item] чтобы активировать [src]!"))
 			success = owner.put_in_hand(active_item, owner.get_empty_held_index_for_side(side))
 			break
 		if(!success)
 			for(var/i in failure_message)
 				to_chat(owner, i)
 			return
-	owner.visible_message(span_notice("[owner] extends [active_item] from [owner.p_their()] [zone == BODY_ZONE_R_ARM ? "right" : "left"] arm."),
-		span_notice("You extend [active_item] from your [zone == BODY_ZONE_R_ARM ? "right" : "left"] arm."),
-		span_hear("You hear a short mechanical noise."))
+	owner.visible_message(span_notice("[owner] вытягивает [active_item] из [owner.ru_ego()] [zone == BODY_ZONE_R_ARM ? "правой" : "левой"] руки."),
+		span_notice("Вытягиваю [active_item] из моей [zone == BODY_ZONE_R_ARM ? "правой" : "левой"] руки."),
+		span_hear("Слышу короткий механический шелчок."))
 	playsound(get_turf(owner), extend_sound, 50, TRUE)
 
 	if(length(items_list) > 1)
@@ -186,7 +185,7 @@
 
 /obj/item/organ/internal/cyberimp/arm/ui_action_click()
 	if((organ_flags & ORGAN_FAILING) || (!active_item && !contents.len))
-		to_chat(owner, span_warning("The implant doesn't respond. It seems to be broken..."))
+		to_chat(owner, span_warning("Имплант не отвечает. Похоже, что он сломался..."))
 		return
 
 	if(!active_item || (active_item in src))
@@ -215,9 +214,9 @@
 		return
 	if(prob(30/severity) && owner && !(organ_flags & ORGAN_FAILING))
 		Retract()
-		owner.visible_message(span_danger("A loud bang comes from [owner]\'s [zone == BODY_ZONE_R_ARM ? "right" : "left"] arm!"))
+		owner.visible_message(span_danger("Из [owner] [zone == BODY_ZONE_R_ARM ? "правой" : "левой"] руки [owner] раздался громкий хлопок!"))
 		playsound(get_turf(owner), 'sound/weapons/flashbang.ogg', 100, TRUE)
-		to_chat(owner, span_userdanger("You feel an explosion erupt inside your [zone == BODY_ZONE_R_ARM ? "right" : "left"] arm as your implant breaks!"))
+		to_chat(owner, span_userdanger("Чувствую взрыв в моей [zone == BODY_ZONE_R_ARM ? "правой" : "левой"] руке, сломался имплант!"))
 		owner.adjust_fire_stacks(20)
 		owner.ignite_mob()
 		owner.adjustFireLoss(25)
@@ -225,8 +224,8 @@
 
 
 /obj/item/organ/internal/cyberimp/arm/gun/laser
-	name = "arm-mounted laser implant"
-	desc = "A variant of the arm cannon implant that fires lethal laser beams. The cannon emerges from the subject's arm and remains inside when not in use."
+	name = "встроенный в руку лазерный имплант"
+	desc = "Вариация импланта ручной пушки которая стреляет смертоносными лазернами лучами. Если не используется то пушка остается внутри руки, при стрельбе высовывается из неё."
 	icon_state = "arm_laser"
 	items_to_create = list(/obj/item/gun/energy/laser/mounted/augment)
 
@@ -234,8 +233,8 @@
 	zone = BODY_ZONE_L_ARM
 
 /obj/item/organ/internal/cyberimp/arm/gun/taser
-	name = "arm-mounted taser implant"
-	desc = "A variant of the arm cannon implant that fires electrodes and disabler shots. The cannon emerges from the subject's arm and remains inside when not in use."
+	name = "встроенный в руку тазер"
+	desc = "Вариация импланта ручной пушки, которая стреляет электродами и вырубающими снарядами. Если не используется то пушка остается внутри руки, при стрельбе высовывается из неё."
 	icon_state = "arm_taser"
 	items_to_create = list(/obj/item/gun/energy/e_gun/advtaser/mounted)
 
@@ -243,8 +242,8 @@
 	zone = BODY_ZONE_L_ARM
 
 /obj/item/organ/internal/cyberimp/arm/toolset
-	name = "integrated toolset implant"
-	desc = "A stripped-down version of the engineering cyborg toolset, designed to be installed on subject's arm. Contain advanced versions of every tool."
+	name = "имплант встроенного набора инструментов"
+	desc = "Урезанная версия набора инструментов инженерного киборга, сконструированная для установки в руку. Содержит улучшенные версии всех инструментов."
 	actions_types = list(/datum/action/item_action/organ_action/toggle/toolkit)
 	items_to_create = list(
 		/obj/item/screwdriver/cyborg,
@@ -269,13 +268,13 @@
 	return TRUE
 
 /obj/item/organ/internal/cyberimp/arm/esword
-	name = "arm-mounted energy blade"
-	desc = "An illegal and highly dangerous cybernetic implant that can project a deadly blade of concentrated energy."
+	name = "встроенный в руку энергетический клинок"
+	desc = "Незаконный и крайне опасный кибернетический имплант способный выпустить смертоносный клинок из концетрированной энергии."
 	items_to_create = list(/obj/item/melee/energy/blade/hardlight)
 
 /obj/item/organ/internal/cyberimp/arm/medibeam
-	name = "integrated medical beamgun"
-	desc = "A cybernetic implant that allows the user to project a healing beam from their hand."
+	name = "встроенная медицинская лучевая пушка"
+	desc = "Кибернетический имплант позволяющий пользователю излучать исцеляющие лучи из своей руки."
 	items_to_create = list(/obj/item/gun/medbeam)
 
 
@@ -304,13 +303,13 @@
 	return ..()
 
 /obj/item/organ/internal/cyberimp/arm/baton
-	name = "arm electrification implant"
-	desc = "An illegal combat implant that allows the user to administer disabling shocks from their arm."
+	name = "имплант электрификации руки"
+	desc = "Незаконный боевой имплант позволяющий пользователю контролировать обезвреживающие электричество из своей руки."
 	items_to_create = list(/obj/item/borg/stun)
 
 /obj/item/organ/internal/cyberimp/arm/combat
-	name = "combat cybernetics implant"
-	desc = "A powerful cybernetic implant that contains combat modules built into the user's arm."
+	name = "боевой кибернетический имплант"
+	desc = "Мощный кибернетический имплант встроенный в руку пользователя и содержащий боевые модули."
 	items_to_create = list(
 		/obj/item/melee/energy/blade/hardlight,
 		/obj/item/gun/medbeam,
@@ -328,30 +327,32 @@
 		flash.arm = WEAKREF(src) // Todo: wipe single letter vars out of assembly code
 
 /obj/item/organ/internal/cyberimp/arm/surgery
-	name = "surgical toolset implant"
-	desc = "A set of surgical tools hidden behind a concealed panel on the user's arm."
+	name = "имплант хирургических инструментов"
+	desc = "Набор хирургических инструментов скрывающийся за скрытой панелью на руке пользователя."
 	actions_types = list(/datum/action/item_action/organ_action/toggle/toolkit)
 	items_to_create = list(
+		/obj/item/surgical_drapes,
 		/obj/item/retractor/augment,
 		/obj/item/hemostat/augment,
 		/obj/item/cautery/augment,
 		/obj/item/surgicaldrill/augment,
 		/obj/item/scalpel/augment,
 		/obj/item/circular_saw/augment,
-		/obj/item/surgical_drapes,
+		/obj/item/bonesetter/augment,
 	)
 
 /obj/item/organ/internal/cyberimp/arm/surgery/emagged
-	name = "hacked surgical toolset implant"
-	desc = "A set of surgical tools hidden behind a concealed panel on the user's arm. This one seems to have been tampered with."
+	name = "взломанный имплант хирургических инструментов"
+	desc = "Набор хирургических инструментов скрывающийся за скрытой панелью на руке пользователя."
 	items_to_create = list(
+		/obj/item/surgical_drapes,
 		/obj/item/retractor/augment,
 		/obj/item/hemostat/augment,
 		/obj/item/cautery/augment,
 		/obj/item/surgicaldrill/augment,
 		/obj/item/scalpel/augment,
 		/obj/item/circular_saw/augment,
-		/obj/item/surgical_drapes,
+		/obj/item/bonesetter/augment,
 		/obj/item/knife/combat/cyborg,
 	)
 

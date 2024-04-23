@@ -17,6 +17,7 @@ GLOBAL_LIST_INIT(glass_recipes, list ( \
 
 /obj/item/stack/sheet/glass
 	name = "стекло"
+	skloname = "стекла"
 	desc = "HOLY SHEET! Здесь много стекла."
 	singular_name = "лист стекла"
 	icon_state = "sheet-glass"
@@ -90,6 +91,7 @@ GLOBAL_LIST_INIT(pglass_recipes, list ( \
 
 /obj/item/stack/sheet/plasmaglass
 	name = "плазмастекло"
+	skloname = "плазмастекла"
 	desc = "Стеклянный лист из плазмосиликатного сплава. Обладает отличной огнестойкостью и повышенной прочностью."
 	singular_name = "лист плазмастекла"
 	icon_state = "sheet-pglass"
@@ -149,6 +151,7 @@ GLOBAL_LIST_INIT(reinforced_glass_recipes, list ( \
 
 /obj/item/stack/sheet/rglass
 	name = "армированное стекло"
+	skloname = "армированного стекла"
 	desc = "Стекло, укрепленное металлической арморешеткой."
 	singular_name = "лист армированного стекла"
 	icon_state = "sheet-rglass"
@@ -185,6 +188,7 @@ GLOBAL_LIST_INIT(prglass_recipes, list ( \
 
 /obj/item/stack/sheet/plasmarglass
 	name = "армированное плазмастекло"
+	skloname = "армированного плазмастекла"
 	desc = "Стеклянный лист из плазмосиликатного сплава укрепленный металлической армосеткой. Обладает невероятной огнестойкостью и хорошей прочностью."
 	singular_name = "лист армированного плазмастекла"
 	icon_state = "sheet-prglass"
@@ -218,6 +222,7 @@ GLOBAL_LIST_INIT(titaniumglass_recipes, list(
 
 /obj/item/stack/sheet/titaniumglass
 	name = "титановое стекло"
+	skloname = "титанового стекла"
 	desc = "Стеклянный лист из титаносиликатного сплава."
 	singular_name = "лист титанового стекла"
 	icon_state = "sheet-titaniumglass"
@@ -247,6 +252,7 @@ GLOBAL_LIST_INIT(plastitaniumglass_recipes, list(
 
 /obj/item/stack/sheet/plastitaniumglass
 	name = "пластитановое стекло"
+	skloname = "пластитанового стекла"
 	desc = "Стеклянный лист из плазмотитано-силикатного сплава."
 	singular_name = "лист пластитанового стекла"
 	icon_state = "sheet-plastitaniumglass"
@@ -415,7 +421,7 @@ GLOBAL_LIST_INIT(plastitaniumglass_recipes, list(
 	craft_time = 7 SECONDS
 
 /obj/item/shard/plastitanium
-	name = "тёмный"
+	name = "тёмный осколок"
 	desc = "Гадкий осколок пластитанового стекла."
 	force = 7
 	throwforce = 12

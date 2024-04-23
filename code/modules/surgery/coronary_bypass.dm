@@ -1,5 +1,5 @@
 /datum/surgery/coronary_bypass
-	name = "Coronary Bypass"
+	name = "Реконструкция: Коронарное шунтирование"
 	organ_to_manipulate = ORGAN_SLOT_HEART
 	possible_locs = list(BODY_ZONE_CHEST)
 	steps = list(
@@ -22,7 +22,7 @@
 
 //an incision but with greater bleed, and a 90% base success chance
 /datum/surgery_step/incise_heart
-	name = "incise heart (scalpel)"
+	name = "надрежьте сердце (скальпель)"
 	implements = list(
 		TOOL_SCALPEL = 90,
 		/obj/item/melee/energy/sword = 45,
@@ -37,11 +37,10 @@
 	display_results(
 		user,
 		target,
-		span_notice("You begin to make an incision in [target]'s heart..."),
-		span_notice("[user] begins to make an incision in [target]'s heart."),
-		span_notice("[user] begins to make an incision in [target]'s heart."),
-	)
-	display_pain(target, "You feel a horrendous pain in your heart, it's almost enough to make you pass out!")
+		span_notice("Начинаю делать надрез в сердце [skloname(target.name, RODITELNI, target.gender)]...") ,
+		span_notice("[user] начинает делать надрез в [target.ru_who()] сердце."),
+		span_notice("[user] начинает делать надрез в [target.ru_who()] сердце."))
+	display_pain(target, "Мое сердце! Почему так больно? Эй! А можно наркоз?!")
 
 /datum/surgery_step/incise_heart/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results = FALSE)
 	if(ishuman(target))
@@ -50,10 +49,10 @@
 			display_results(
 				user,
 				target,
-				span_notice("Blood pools around the incision in [target_human]'s heart."),
-				span_notice("Blood pools around the incision in [target_human]'s heart."),
-				span_notice("Blood pools around the incision in [target_human]'s heart."),
-			)
+				span_notice("Кровь брызгает вокруг надреза в сердце [target_human].") ,
+				span_notice("Кровь брызгает вокруг надреза в сердце [target_human]"),
+				span_notice("Кровь брызгает вокруг надреза в сердце [target_human]"))
+
 			var/obj/item/bodypart/target_bodypart = target_human.get_bodypart(target_zone)
 			target_bodypart.adjustBleedStacks(10)
 			target_human.adjustBruteLoss(10)
@@ -65,10 +64,9 @@
 		display_results(
 			user,
 			target,
-			span_warning("You screw up, cutting too deeply into the heart!"),
-			span_warning("[user] screws up, causing blood to spurt out of [target_human]'s chest!"),
-			span_warning("[user] screws up, causing blood to spurt out of [target_human]'s chest!"),
-		)
+			span_warning("[gvorno(TRUE)], но я облажался, сделав слишком глубокий надрез в сердце!") ,
+			span_warning("[user] облажался, из-за чего из груди [target_human] брызгает кровь!") ,
+			span_warning("[user] облажался, из-за чего из груди [target_human] брызгает кровь!"))
 		var/obj/item/bodypart/target_bodypart = target_human.get_bodypart(target_zone)
 		target_bodypart.adjustBleedStacks(10)
 		target_human.adjustOrganLoss(ORGAN_SLOT_HEART, 10)
@@ -76,7 +74,7 @@
 
 //grafts a coronary bypass onto the individual's heart, success chance is 90% base again
 /datum/surgery_step/coronary_bypass
-	name = "graft coronary bypass (hemostat)"
+	name = "выполните аортокоронарное штунирование (зажим)"
 	implements = list(
 		TOOL_HEMOSTAT = 90,
 		TOOL_WIRECUTTER = 35,
@@ -91,11 +89,10 @@
 	display_results(
 		user,
 		target,
-		span_notice("You begin to graft a bypass onto [target]'s heart..."),
-		span_notice("[user] begins to graft something onto [target]'s heart!"),
-		span_notice("[user] begins to graft something onto [target]'s heart!"),
-	)
-	display_pain(target, "The pain in your chest is unbearable! You can barely take it anymore!")
+		span_notice("Начинаю делать обходное штунирование сердца [skloname(target.name, RODITELNI, target.gender)]...") ,
+		span_notice("[user] начинает делать обходное штунирование [target.ru_who()] сердца!") ,
+		span_notice("[user] начинает делать обходное штунирование [target.ru_who()] сердца!"))
+	display_pain(target, "Дьявол! Боль в груди невыносима! Я едва могу терпеть её!")
 
 /datum/surgery_step/coronary_bypass/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results = FALSE)
 	target.setOrganLoss(ORGAN_SLOT_HEART, 60)
@@ -105,11 +102,10 @@
 	display_results(
 		user,
 		target,
-		span_notice("You successfully graft a bypass onto [target]'s heart."),
-		span_notice("[user] finishes grafting something onto [target]'s heart."),
-		span_notice("[user] finishes grafting something onto [target]'s heart."),
-	)
-	display_pain(target, "The pain in your chest throbs, but your heart feels better than ever!")
+		span_notice("Успешно выполняю обходное штунирование на сердце [skloname(target.name, RODITELNI, target.gender)].") ,
+		span_notice("[user] успешно выполняет обходное штунирование на [target.ru_who()] сердце.") ,
+		span_notice("[user] успешно выполняет обходное штунирование на [target.ru_who()] сердце."))
+	display_pain(target, "Господи! Наконец то это закончилось...")
 	return ..()
 
 /datum/surgery_step/coronary_bypass/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
@@ -118,11 +114,11 @@
 		display_results(
 			user,
 			target,
-			span_warning("You screw up in attaching the graft, and it tears off, tearing part of the heart!"),
-			span_warning("[user] screws up, causing blood to spurt out of [target_human]'s chest profusely!"),
-			span_warning("[user] screws up, causing blood to spurt out of [target_human]'s chest profusely!"),
-		)
-		display_pain(target, "Your chest burns; you feel like you're going insane!")
+			span_warning("[gvorno(TRUE)], но я облажался, выполняя штунирование, разорвав часть сердца!") ,
+			span_warning("[user] облажался, из-за чего из груди [target_human] обильно льётся кровь!") ,
+			span_warning("[user] облажался, из-за чего из груди [target_human] обильно льётся кровь!") ,
+			playsound(get_turf(target), 'sound/surgery/organ2.ogg', 75, TRUE, falloff_exponent = 12, falloff_distance = 1))
+		display_pain(target, "Грудь буквально горит болью! Кажется, будто я схожу с ума!")
 		target_human.adjustOrganLoss(ORGAN_SLOT_HEART, 20)
 		var/obj/item/bodypart/target_bodypart = target_human.get_bodypart(target_zone)
 		target_bodypart.adjustBleedStacks(30)

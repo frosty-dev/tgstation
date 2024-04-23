@@ -190,4 +190,4 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagentlist())
 	for (var/datum/reagent/R as anything in subtypesof(/datum/reagent))
 		var/name = initial(R.name)
 		if (length(name))
-			.[ckey(name)] = R
+			.[lowertext(name)] = R

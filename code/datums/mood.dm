@@ -1,6 +1,7 @@
 #define MINOR_INSANITY_PEN 5
 #define MAJOR_INSANITY_PEN 10
 #define MOOD_CATEGORY_NUTRITION "nutrition"
+#define MOOD_CATEGORY_HYDRATION "hydration"
 #define MOOD_CATEGORY_AREA_BEAUTY "area_beauty"
 
 /**
@@ -93,6 +94,7 @@
 		if(MOOD_LEVEL_HAPPY4)
 			set_sanity(sanity + 0.6 * seconds_per_tick, SANITY_NEUTRAL, SANITY_MAXIMUM)
 	handle_nutrition()
+	handle_hydration()
 
 	// 0.416% is 15 successes / 3600 seconds. Calculated with 2 minute
 	// mood runtime, so 50% average uptime across the hour.
@@ -132,6 +134,21 @@
 			add_mood_event(MOOD_CATEGORY_NUTRITION, /datum/mood_event/hungry)
 		if(0 to NUTRITION_LEVEL_STARVING)
 			add_mood_event(MOOD_CATEGORY_NUTRITION, /datum/mood_event/starving)
+
+/datum/mood/proc/handle_hydration()
+	if(HAS_TRAIT(mob_parent, TRAIT_NOHYDRATION))
+		clear_mood_event(MOOD_CATEGORY_HYDRATION)
+	switch(mob_parent.hydration)
+		if(HYDRATION_LEVEL_OVERHYDRATED to INFINITY)
+			add_mood_event(MOOD_CATEGORY_HYDRATION, /datum/mood_event/overhydrated)
+		if(HYDRATION_LEVEL_NORMAL to HYDRATION_LEVEL_OVERHYDRATED)
+			add_mood_event(MOOD_CATEGORY_HYDRATION, /datum/mood_event/hydrated)
+		if(HYDRATION_LEVEL_THIRSTY to HYDRATION_LEVEL_NORMAL)
+			add_mood_event(MOOD_CATEGORY_HYDRATION)
+		if(HYDRATION_LEVEL_DEHYDRATED to HYDRATION_LEVEL_THIRSTY)
+			add_mood_event(MOOD_CATEGORY_HYDRATION, /datum/mood_event/thirsty)
+		if(-INFINITY to HYDRATION_LEVEL_DEHYDRATED)
+			add_mood_event(MOOD_CATEGORY_HYDRATION, /datum/mood_event/dehydrated)
 
 /**
  * Adds a mood event to the mob
@@ -498,4 +515,5 @@
 #undef MINOR_INSANITY_PEN
 #undef MAJOR_INSANITY_PEN
 #undef MOOD_CATEGORY_NUTRITION
+#undef MOOD_CATEGORY_HYDRATION
 #undef MOOD_CATEGORY_AREA_BEAUTY

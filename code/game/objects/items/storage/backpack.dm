@@ -543,6 +543,7 @@
 	new /obj/item/clothing/mask/surgical(src)
 	new /obj/item/razor(src)
 	new /obj/item/blood_filter(src)
+	new /obj/item/breathing_bag(src)
 
 /obj/item/storage/backpack/duffelbag/coroner
 	name = "вещмешок коронера"
@@ -600,6 +601,8 @@
 	new /obj/item/surgical_drapes(src)
 	new /obj/item/clothing/mask/surgical(src)
 	new /obj/item/blood_filter(src)
+	new /obj/item/breathing_bag(src)
+
 
 /obj/item/storage/backpack/duffelbag/engineering
 	name = "промышленный  вещмешок"
@@ -691,6 +694,7 @@
 	new /obj/item/clothing/suit/jacket/straight_jacket(src)
 	new /obj/item/clothing/mask/muzzle(src)
 	new /obj/item/mmi/syndie(src)
+	new /obj/item/breathing_bag(src)
 
 /obj/item/storage/backpack/duffelbag/syndie/ammo
 	name = "вещмешок с аммуницией"
@@ -789,8 +793,8 @@
 	desc = "A large duffel bag for holding extra police gear."
 
 /obj/item/storage/backpack/duffelbag/mining_conscript
-	name = "mining conscription kit"
-	desc = "A duffel bag containing everything a crewmember needs to support a shaft miner in the field."
+	name = "комплект шахтёра"
+	desc = "Все шахтёры умерли слишком быстро? Ассистент хочет почувствовать вкус жизни за пределами станции? В любом случае, этот набор - лучший способ превратить обычного члена экипажа в машину для добычи руды и уничтожения монстров. Содержит мезонные очки, кирку, усовершенствованный шахтёрский сканер, грузовую гарнитуру, подушку безопасности, противогаз, костюм исследователя и обновление удостоверения шахтёра. Для открытия требуется доступ Квартермействера."
 	icon_state = "duffel-explorer"
 	inhand_icon_state = "duffel-explorer"
 

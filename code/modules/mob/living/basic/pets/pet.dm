@@ -34,7 +34,7 @@
 		return TRUE
 
 	if(istype(thing, /obj/item/newspaper) && !stat)
-		user.visible_message(span_notice("[user] baps [name] on the nose with the rolled up [thing]."))
+		user.visible_message(span_notice("[user] бьет [name] по носу свернутой газетой."))
 		dance_rotate(src)
 		return TRUE
 
@@ -111,9 +111,9 @@
 	if(collar_icon_state)
 		update_icon(UPDATE_OVERLAYS)
 
-	to_chat(user, span_notice("You put [new_collar] around [src]'s neck."))
+	to_chat(user, span_notice("Надеваю [new_collar] на шею [src]."))
 	if(new_collar.tagname && !unique_pet)
-		fully_replace_character_name(null, "\proper [new_collar.tagname]")
+		fully_replace_character_name(null, "[new_collar.tagname]")
 
 /**
  * Remove the collar from the pet.

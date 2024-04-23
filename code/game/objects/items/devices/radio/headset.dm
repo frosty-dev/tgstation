@@ -290,7 +290,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 
 /obj/item/radio/headset/headset_cargo/mining
 	name = "шахтёрская гарнитура"
-	desc = "Гарнитура, используемая шахтерами."
+	desc = "Гарнитура, используемая шахтёрами."
 	icon_state = "mine_headset"
 	worn_icon_state = "mine_headset"
 	// "puts the antenna down" while the headset is off

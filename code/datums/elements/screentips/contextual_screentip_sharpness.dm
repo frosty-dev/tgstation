@@ -8,7 +8,7 @@
 	/// If set, the text to show for LMB
 	var/lmb_text
 
-	/// If set, the text to show for RMB
+	/// If set, the text to show for ПКМ
 	var/rmb_text
 
 /datum/element/contextual_screentip_sharpness/Attach(datum/target, lmb_text, rmb_text)

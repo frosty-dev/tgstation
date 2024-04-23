@@ -1515,17 +1515,17 @@
 				var/percent = tastes[taste_desc]/total_taste * 100
 				if(percent < minimum_percent)
 					continue
-				var/intensity_desc = "a hint of"
+				var/intensity_desc = "намёк на"
 				if(percent > minimum_percent * 2 || percent == 100)
 					intensity_desc = ""
 				else if(percent > minimum_percent * 3)
-					intensity_desc = "the strong flavor of"
+					intensity_desc = "острый привкус"
 				if(intensity_desc != "")
 					out += "[intensity_desc] [taste_desc]"
 				else
 					out += "[taste_desc]"
 
-	return english_list(out, "something indescribable")
+	return english_list(out, "что-то неописуемое")
 
 
 /// Returns the total heat capacity for all of the reagents currently in this holder.
@@ -1622,9 +1622,18 @@
 
 	var/list/data = list()
 
-	for(var/reagent_type in external_list)
-		var/list/qualities = external_list[reagent_type]
-		data += "[reagent_type] ([FLOOR(qualities[REAGENT_TRANSFER_AMOUNT], CHEMICAL_QUANTISATION_LEVEL)]u, [qualities[REAGENT_PURITY]] purity)"
+	// DONT FORGET TO DELETE THIS IF ALL IS WORKING WELL
+	// for(var/reagent_type in external_list)
+	// 	var/list/qualities = external_list[reagent_type]
+	// 	data += "[reagent_type] ([FLOOR(qualities[REAGENT_TRANSFER_AMOUNT], CHEMICAL_QUANTISATION_LEVEL)]u, [qualities[REAGENT_PURITY]] purity)"
+
+	if (external_list)
+		for (var/reagent_type in external_list)
+			var/list/qualities = external_list[reagent_type]
+			data += "[reagent_type] ([FLOOR(qualities[REAGENT_TRANSFER_AMOUNT], CHEMICAL_QUANTISATION_LEVEL)]u, [qualities[REAGENT_PURITY]] purity)"
+	else
+		for (var/datum/reagent/reagent as anything in reagent_list)
+			data += "[reagent.type] ([FLOOR(reagent.volume, CHEMICAL_QUANTISATION_LEVEL)]u, [reagent.purity] purity)"
 
 	return english_list(data)
 
@@ -1965,7 +1974,7 @@
 		ui_reaction_index = index
 	var/list/sub_reactions = get_recipe_from_reagent_product(path)
 	if(!length(sub_reactions))
-		to_chat(usr, "There is no recipe associated with this product.")
+		to_chat(usr, "Не существует рецептов для этого реагента.")
 		return FALSE
 	if(ui_reaction_index > length(sub_reactions))
 		ui_reaction_index = 1
@@ -1987,20 +1996,20 @@
 			ui_reaction_id = text2path(params["id"])
 			return TRUE
 		if("search_reagents")
-			var/input_reagent = tgui_input_list(usr, "Select reagent", "Reagent", GLOB.name2reagent)
+			var/input_reagent = tgui_input_list(usr, "Введите имя реагента", "Ввод", GLOB.name2reagent)
 			input_reagent = get_reagent_type_from_product_string(input_reagent) //from string to type
 			var/datum/reagent/reagent = find_reagent_object_from_type(input_reagent)
 			if(!reagent)
-				to_chat(usr, "Could not find reagent!")
+				to_chat(usr, "Невозможно найти реагент!")
 				return FALSE
 			ui_reagent_id = reagent.type
 			return TRUE
 		if("search_recipe")
-			var/input_reagent = (input("Enter the name of product reagent", "Input") as text|null)
+			var/input_reagent = (input("Введите имя реагента", "Ввод") as text|null)
 			input_reagent = get_reagent_type_from_product_string(input_reagent) //from string to type
 			var/datum/reagent/reagent = find_reagent_object_from_type(input_reagent)
 			if(!reagent)
-				to_chat(usr, "Could not find product reagent!")
+				to_chat(usr, "Невозможно найти реагент!")
 				return
 			ui_reaction_id = get_reaction_from_indexed_possibilities(reagent.type)
 			return TRUE

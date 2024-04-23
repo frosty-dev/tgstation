@@ -240,5 +240,5 @@
 /obj/item/toy/singlecard/AltClick(mob/living/carbon/human/user)
 	if(user.can_perform_action(src, NEED_DEXTERITY|FORBID_TELEKINESIS_REACH))
 		transform = turn(transform, 90)
-		// use the simple_rotation component to make this turn with Alt+RMB & Alt+LMB at some point in the future - TimT
+		// use the simple_rotation component to make this turn with Alt+ПКМ & Alt+LMB at some point in the future - TimT
 	return ..()

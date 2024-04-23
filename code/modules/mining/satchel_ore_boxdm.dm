@@ -2,27 +2,27 @@
 /**********************Ore box**************************/
 
 /obj/structure/ore_box
+	name = "ящик для руды"
+	desc = "Тяжелый деревянный ящик, который можно наполнить большим количеством руды."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "orebox"
-	name = "ore box"
-	desc = "A heavy wooden box, which can be filled with a lot of ores."
 	density = TRUE
 	pressure_resistance = 5*ONE_ATMOSPHERE
 
-/obj/structure/ore_box/attackby(obj/item/W, mob/user, params)
-	if (istype(W, /obj/item/stack/ore))
-		user.transferItemToLoc(W, src)
-	else if(W.atom_storage)
-		W.atom_storage.remove_type(/obj/item/stack/ore, src, INFINITY, TRUE, FALSE, user, null)
-		to_chat(user, span_notice("You empty the ore in [W] into  [src]."))
+/obj/structure/ore_box/attackby(obj/item/holder, mob/user, params)
+	if (istype(holder, /obj/item/stack/ore))
+		user.transferItemToLoc(holder, src)
+	else if(holder.atom_storage)
+		holder.atom_storage.remove_type(/obj/item/stack/ore, src, INFINITY, TRUE, FALSE, user, null)
+		to_chat(user, span_notice("Опустошаю содержимое [holder.name] в [src.name]."))
 	else
 		return ..()
 
 /obj/structure/ore_box/crowbar_act(mob/living/user, obj/item/I)
 	if(I.use_tool(src, user, 50, volume=50))
-		user.visible_message(span_notice("[user] pries  [src] apart."),
-			span_notice("You pry apart  [src]."),
-			span_hear("You hear splitting wood."))
+		user.visible_message(span_notice("[user] разбирает [src.name]."),
+			span_notice("Разбираю [src.name]."),
+			span_hear("Слышу звук раскалывающегося дерева."))
 		deconstruct(TRUE, user)
 	return TRUE
 
@@ -88,8 +88,7 @@
 	switch(action)
 		if("removeall")
 			dump_box_contents()
-			to_chat(usr, span_notice("You open the release hatch on the box.."))
-
+			to_chat(usr, span_notice("Открываю дно ящика."))
 /obj/structure/ore_box/deconstruct(disassembled = TRUE, mob/user)
 	var/obj/item/stack/sheet/mineral/wood/WD = new (loc, 4)
 	if(user && !QDELETED(WD))

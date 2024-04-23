@@ -82,12 +82,12 @@
 	if(!can_harvest(user, used_item))
 		return ..()
 
-	user.visible_message(span_notice("[user] starts to [harvest_verb] [src]..."),
-		span_notice("You start to [harvest_verb] [src] with [used_item]..."))
+	user.visible_message(span_notice("[user] начинает [harvest_verb] [src]..."),
+		span_notice("Начинаю [harvest_verb] [src], используя [used_item]..."))
 	play_attack_sound(used_item.force)
 	if(!do_after(user, harvest_time * used_item.toolspeed, src))
 		return
-	visible_message(span_notice("[user] [harvest_verb][harvest_verb_suffix] [src]."),
+	visible_message(span_notice("[user] [harvest_verb] [src]."),
 		ignored_mobs = list(user))
 	play_attack_sound(used_item.force)
 
@@ -101,8 +101,8 @@
 	if(!can_harvest(user))
 		return
 
-	user.visible_message(span_notice("[user] starts to [harvest_verb] [src]..."),
-		span_notice("You start to [harvest_verb] [src]..."))
+	user.visible_message(span_notice("[user] начинает [harvest_verb] [src]..."),
+		span_notice("Начинаю [harvest_verb] [src]..."))
 	play_attack_sound()
 	if(!do_after(user, harvest_time, src))
 		return
@@ -290,8 +290,7 @@
 	harvest_message_low = "You manage to gather a few logs from the tree."
 	harvest_message_med = "You manage to gather some logs from the tree."
 	harvest_message_high = "You manage to get most of the wood from the tree."
-	harvest_verb = "chop"
-	harvest_verb_suffix = "s down"
+	harvest_verb = "рубить"
 	delete_on_harvest = TRUE
 	flora_flags = FLORA_HERBAL | FLORA_WOODEN
 
@@ -1001,7 +1000,7 @@
 	harvest_amount_low = 10
 	harvest_amount_high = 20
 	harvest_message_med = "You finish mining the rock."
-	harvest_verb = "mine"
+	harvest_verb = "копать"
 	flora_flags = FLORA_STONE
 	can_uproot = FALSE
 	delete_on_harvest = TRUE

@@ -6,6 +6,6 @@
 	mob_trait = TRAIT_GRABWEAKNESS
 	gain_text = span_danger("Чувствую себя неуверенно.")
 	lose_text = span_notice("Теперь-то я смогу защитить себя!")
-	medical_record_text = "Пациент представляет собой неуверенную и наивную личность, и им легко манипулировать."
+	medical_record_text = "Пациент демонстрирует признаки неуверенной и наивной личности, легко подверженной чужому влиянию."
 	hardcore_value = 4
 	mail_goodies = list(/obj/item/clothing/gloves/cargo_gauntlet)

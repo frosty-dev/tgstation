@@ -2,10 +2,10 @@
  * Stabilising serum prevents monster organs from decaying before you can use them.
  */
 /obj/item/mining_stabilizer
-	name = "stabilizing serum"
+	name = "стабилизирующая сывортка"
 	icon = 'icons/obj/medical/chemical.dmi'
 	icon_state = "bottle19"
-	desc = "Inject certain types of monster organs with this stabilizer to prevent their rapid decay."
+	desc = "Используйте эту сыворотку на некоторых органах монстров, чтобы предотвратить их быстрое разложение."
 	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/mining_stabilizer/afterattack(obj/item/organ/target_organ, mob/user, proximity)
@@ -16,14 +16,14 @@
 
 	var/obj/item/organ/internal/monster_core/target_core = target_organ
 	if (!istype(target_core, /obj/item/organ/internal/monster_core))
-		balloon_alert(user, "invalid target!")
+		balloon_alert(user, "неверная цель!")
 		return .
 
 	if (!target_core.preserve())
-		balloon_alert(user, "organ decayed!")
+		balloon_alert(user, "орган уже разложился!")
 		return .
 
-	balloon_alert(user, "organ stabilized")
+	balloon_alert(user, "орган стабилизирован!")
 	qdel(src)
 	return .
 
@@ -33,9 +33,9 @@
  * These should usually do something both when used in-hand, or when implanted into someone.
  */
 /obj/item/organ/internal/monster_core
-	name = "monster core"
-	desc = "All that remains of a monster. This abstract item should not spawn. \
-		It will rapidly decay into uselessness. but don't worry because it's already useless."
+	name = "ядро монстра"
+	desc = "Всё, что осталось от монстра. Этот абстрактный предмет не должен появляться. \
+		Он быстро разложится в бесполезность, но не волнуйтесь, потому что он уже бесполезен."
 	icon = 'icons/obj/medical/organs/mining_organs.dmi'
 	icon_state = "hivelord_core"
 	actions_types = list(/datum/action/cooldown/monster_core_action)
@@ -74,18 +74,18 @@
 	if(!.)
 		return
 	if (inert)
-		to_chat(target_carbon, span_notice("[src] breaks down as you try to insert it."))
+		to_chat(target_carbon, span_notice("[src] разлагается, когда вы пытаетесь вставить его."))
 		qdel(src)
 		return FALSE
 	if (!decay_timer)
 		return TRUE
 	preserve(TRUE)
-	target_carbon.visible_message(span_notice("[src] stabilizes as it's inserted."))
+	target_carbon.visible_message(span_notice("[src] стабилизируется."))
 	return TRUE
 
 /obj/item/organ/internal/monster_core/Remove(mob/living/carbon/target_carbon, special = 0)
 	if (!inert && !special)
-		owner.visible_message(span_notice("[src] rapidly decays as it's removed."))
+		owner.visible_message(span_notice("[src] быстро разлагается."))
 		go_inert()
 	return ..()
 
@@ -111,7 +111,7 @@
 	inert = TRUE
 	deltimer(decay_timer)
 	decay_timer = null
-	name = "decayed [name]"
+	name = "разложившийся [name]"
 	update_appearance()
 	return TRUE
 
@@ -156,16 +156,15 @@
  */
 /obj/item/organ/internal/monster_core/proc/try_apply(atom/target, mob/user)
 	if (!isliving(target))
-		balloon_alert(user, "invalid target!")
+		balloon_alert(user, "неверная цель!")
 		return
 	if (inert)
-		balloon_alert(user, "organ decayed!")
+		balloon_alert(user, "орган уже разложился!")
 		return
 	var/mob/living/live_target = target
 	if (live_target.stat == DEAD)
-		balloon_alert(user, "they're dead!")
+		balloon_alert(user, "цель мертва!")
 		return
-	balloon_alert(user, "applied organ")
 	apply_to(target, user)
 
 /**

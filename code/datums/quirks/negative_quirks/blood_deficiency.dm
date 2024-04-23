@@ -6,7 +6,7 @@
 	mob_trait = TRAIT_BLOOD_DEFICIENCY
 	gain_text = span_danger("Чувствую онемение.")
 	lose_text = span_notice("Чувствую себя бодрым!")
-	medical_record_text = " Пациенту необходима дополнительная помощь для переливания крови из-за её дефицита в организме."
+	medical_record_text = " Пациенту необходима помощь в виде дополнительного вливания крови из-за её дефицита в организме."
 	hardcore_value = 8
 	mail_goodies = list(/obj/item/reagent_containers/blood/o_minus) // universal blood type that is safe for all
 	var/min_blood = BLOOD_VOLUME_SAFE - 25 // just barely survivable without treatment

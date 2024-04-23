@@ -1,5 +1,6 @@
 /obj/item/stack/sheet
 	name = "лист"
+	var/skloname = "листа"
 	lefthand_file = 'icons/mob/inhands/items/sheets_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items/sheets_righthand.dmi'
 	icon_state = "sheet-metal_3"

@@ -69,6 +69,7 @@ GLOBAL_LIST_INIT(runed_metal_recipes, list( \
 
 /obj/item/stack/sheet/runed_metal
 	name = "рунический металл"
+	skloname = "рунического металла"
 	desc = "Листы холодного, покрытого меняющимися надписями, металла."
 	singular_name = "лист рунического металла"
 	icon_state = "sheet-runed"

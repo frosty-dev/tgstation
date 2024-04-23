@@ -1,7 +1,7 @@
 ///Tail parent, it doesn't do very much.
 /obj/item/organ/external/tail
-	name = "tail"
-	desc = "A severed tail. What did you cut this off of?"
+	name = "хвост"
+	desc = "Отрезанный хвост. От чего ты это отрезал?"
 	icon_state = "severedtail"
 
 	zone = BODY_ZONE_PRECISE_GROIN
@@ -86,7 +86,8 @@
 	return TRUE
 
 /obj/item/organ/external/tail/cat
-	name = "tail"
+	name = "кошачий хвост"
+	desc = "Отрезанный кошачий хвост. Кто сейчас виляет?"
 	preference = "feature_human_tail"
 
 	bodypart_overlay = /datum/bodypart_overlay/mutant/tail/cat
@@ -113,8 +114,8 @@
 	return GLOB.tails_list_monkey
 
 /obj/item/organ/external/tail/lizard
-	name = "lizard tail"
-	desc = "A severed lizard tail. Somewhere, no doubt, a lizard hater is very pleased with themselves."
+	name = "хвост ящерицы"
+	desc = "Отрезанный хвост ящерицы. Где-то, без сомнения, ненавистник ящериц очень доволен собой."
 	preference = "feature_lizard_tail"
 
 	bodypart_overlay = /datum/bodypart_overlay/mutant/tail/lizard

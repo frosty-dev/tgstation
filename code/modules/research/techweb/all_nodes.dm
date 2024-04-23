@@ -308,6 +308,7 @@
 		"swab",
 		"syringe",
 		"xlarge_beaker",
+		"breathing_bag",
 	)
 
 /datum/techweb_node/basic_circuitry

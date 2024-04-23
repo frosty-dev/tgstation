@@ -19,11 +19,11 @@
 /datum/action/innate/dash/hierophant/teleport(mob/user, atom/target)
 	var/dist = get_dist(user, target)
 	if(dist > HIEROPHANT_BLINK_RANGE)
-		user.balloon_alert(user, "destination out of range!")
+		user.balloon_alert(user, "слишком далеко!")
 		return FALSE
 	var/turf/target_turf = get_turf(target)
 	if(target_turf.is_blocked_turf_ignore_climbable())
-		user.balloon_alert(user, "destination blocked!")
+		user.balloon_alert(user, "не могу туда попасть!")
 		return FALSE
 
 	. = ..()
@@ -42,8 +42,8 @@
 	club.update_appearance(UPDATE_ICON_STATE)
 
 /obj/item/hierophant_club
-	name = "hierophant club"
-	desc = "The strange technology of this large club allows various nigh-magical teleportation feats. It used to beat you, but now you can set the beat."
+	name = "посох иерофанта"
+	desc = "Странная технология этого посоха позволяет совершать практически магические трюки с телепортацией."
 	icon_state = "hierophant_club_ready_beacon"
 	inhand_icon_state = "hierophant_club_ready_beacon"
 	icon = 'icons/obj/mining_zones/artefacts.dmi'
@@ -54,8 +54,8 @@
 	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 15
-	attack_verb_continuous = list("clubs", "beats", "pummels")
-	attack_verb_simple = list("club", "beat", "pummel")
+	attack_verb_continuous = list("бьёт", "ударяет", "колотит")
+	attack_verb_simple = list("бьёт", "ударяет", "колотит")
 	hitsound = 'sound/weapons/sonic_jackhammer.ogg'
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	actions_types = list(/datum/action/item_action/vortex_recall)
@@ -236,22 +236,22 @@
 //Bubblegum: Mayhem in a Bottle, H.E.C.K. Suit, Soulscythe
 
 /obj/item/mayhem
-	name = "mayhem in a bottle"
-	desc = "A magically infused bottle of blood, the scent of which will drive anyone nearby into a murderous frenzy."
+	name = "бутылированный хаос"
+	desc = "Зачарованная бутылка с кровью, запах которой приведёт всех вокруг в кровавое бешенство."
 	icon = 'icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "vial"
 
 /obj/item/mayhem/attack_self(mob/user)
 	for(var/mob/living/carbon/human/target in range(7,user))
 		target.apply_status_effect(/datum/status_effect/mayhem)
-	to_chat(user, span_notice("You shatter the bottle!"))
+	to_chat(user, span_notice("Разбиваю бутылку!"))
 	playsound(user.loc, 'sound/effects/glassbr1.ogg', 100, TRUE)
 	message_admins(span_adminnotice("[ADMIN_LOOKUPFLW(user)] has activated a bottle of mayhem!"))
 	user.log_message("activated a bottle of mayhem", LOG_ATTACK)
 	qdel(src)
 
 /obj/item/clothing/suit/hooded/hostile_environment
-	name = "H.E.C.K. suit"
+	name = "H.E.C.K. костюм"
 	desc = "Hostile Environment Cross-Kinetic Suit: A suit designed to withstand the wide variety of hazards from Lavaland. It wasn't enough for its last owner."
 	icon_state = "hostile_env"
 	hoodtype = /obj/item/clothing/head/hooded/hostile_environment
@@ -294,7 +294,7 @@
 			to_chat(wearer, span_warning("[pick("You hear faint whispers.","You smell ash.","You feel hot.","You hear a roar in the distance.")]"))
 
 /obj/item/clothing/head/hooded/hostile_environment
-	name = "H.E.C.K. helmet"
+	name = "H.E.C.K. шлем"
 	icon = 'icons/obj/clothing/head/helmet.dmi'
 	worn_icon = 'icons/mob/clothing/head/helmet.dmi'
 	desc = "Hostile Environment Cross-Kinetic Helmet: A helmet designed to withstand the wide variety of hazards from Lavaland. It wasn't enough for its last owner."
@@ -350,15 +350,15 @@
 #define MAX_BLOOD_LEVEL 100
 
 /obj/item/soulscythe
-	name = "soulscythe"
-	desc = "An old relic of hell created by devils to establish themselves as the leadership of hell over the demons. It grows stronger while it possesses a powerful soul."
+	name = "коса жнеца душ"
+	desc = "Древний артефакт, созданный дьяволами для установления себя в качестве лидеров ада над демонами. Сила косы увеличится, если в неё вселится мощная душа."
 	icon = 'icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "soulscythe"
 	inhand_icon_state = "soulscythe"
 	lefthand_file = 'icons/mob/inhands/64x64_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/64x64_righthand.dmi'
-	attack_verb_continuous = list("chops", "slices", "cuts", "reaps")
-	attack_verb_simple = list("chop", "slice", "cut", "reap")
+	attack_verb_continuous = list("рубит", "режет")
+	attack_verb_simple = list("рубит", "режет")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
@@ -391,7 +391,7 @@
 
 /obj/item/soulscythe/examine(mob/user)
 	. = ..()
-	. += soul.ckey ? span_nicegreen("There is a soul inhabiting it.") : span_danger("It's dormant.")
+	. += soul.ckey ? span_nicegreen("В ней находится душа.") : span_danger("Она дремлет в ожидании души.")
 
 /obj/item/soulscythe/attack(mob/living/attacked, mob/living/user, params)
 	. = ..()
@@ -400,7 +400,7 @@
 
 /obj/item/soulscythe/attack_hand(mob/user, list/modifiers)
 	if(soul.ckey && !soul.faction_check_atom(user))
-		to_chat(user, span_warning("You can't pick up [src]!"))
+		to_chat(user, span_warning("Не могу поднять косу!"))
 		return
 	return ..()
 
@@ -418,10 +418,10 @@
 	if(using || soul.ckey || soul.stat)
 		return
 	if(!(GLOB.ghost_role_flags & GHOSTROLE_STATION_SENTIENCE))
-		balloon_alert(user, "you can't awaken the scythe!")
+		balloon_alert(user, "не могу пробудить косу")
 		return
 	using = TRUE
-	balloon_alert(user, "you hold the scythe up...")
+	balloon_alert(user, "поднимаю косу вверх..")
 	ADD_TRAIT(src, TRAIT_NODROP, type)
 
 	var/datum/callback/to_call = CALLBACK(src, PROC_REF(on_poll_concluded), user)
@@ -434,7 +434,7 @@
 /// Ghost poll has concluded and a candidate has been chosen.
 /obj/item/soulscythe/proc/on_poll_concluded(mob/living/master, mob/dead/observer/ghost)
 	if(isnull(ghost))
-		balloon_alert(master, "the scythe is dormant!")
+		balloon_alert(master, "коса дремлет!")
 		REMOVE_TRAIT(src, TRAIT_NODROP, type)
 		using = FALSE
 		return
@@ -442,7 +442,7 @@
 	soul.ckey = ghost.ckey
 	soul.copy_languages(master, LANGUAGE_MASTER) //Make sure the sword can understand and communicate with the master.
 	soul.faction = list("[REF(master)]")
-	balloon_alert(master, "the scythe glows")
+	balloon_alert(master, "коса мерцает")
 	add_overlay("soulscythe_gem")
 	density = TRUE
 	if(!ismob(loc))
@@ -455,7 +455,7 @@
 	if(!COOLDOWN_FINISHED(src, move_cooldown) || charging)
 		return
 	if(!isturf(loc))
-		balloon_alert(user, "resist out!")
+		balloon_alert(user, "сопротивляется!")
 		COOLDOWN_START(src, move_cooldown, 1 SECONDS)
 		return
 	if(!use_blood(1, FALSE))
@@ -486,7 +486,7 @@
 /obj/item/soulscythe/proc/use_blood(amount = 0, message = TRUE)
 	if(amount > soul.blood_level)
 		if(message)
-			to_chat(soul, span_warning("Not enough blood!"))
+			to_chat(soul, span_warning("Нужно больше крови!"))
 		return FALSE
 	soul.blood_level -= amount
 	return TRUE
@@ -504,11 +504,11 @@
 /obj/item/soulscythe/proc/break_out()
 	if(!use_blood(10))
 		return
-	balloon_alert(soul, "you resist...")
+	balloon_alert(soul, "сопротивляюсь...")
 	if(!do_after(soul, 5 SECONDS, target = src, timed_action_flags = IGNORE_TARGET_LOC_CHANGE))
-		balloon_alert(soul, "interrupted!")
+		balloon_alert(soul, "прервали!")
 		return
-	balloon_alert(soul, "you break out")
+	balloon_alert(soul, "вырываюсь")
 	if(ismob(loc))
 		var/mob/holder = loc
 		holder.temporarilyRemoveItemFromInventory(src)
@@ -544,7 +544,7 @@
 	projectile.preparePixelProjectile(attacked_atom, src)
 	projectile.firer = src
 	projectile.fire(null, attacked_atom)
-	visible_message(span_danger("[src] fires at [attacked_atom]!"), span_notice("You fire at [attacked_atom]!"))
+	visible_message(span_danger("[src] стреляет в [attacked_atom]!"), span_notice("Стреляю в [attacked_atom]!"))
 	playsound(src, 'sound/magic/fireball.ogg', 50, TRUE)
 
 /obj/item/soulscythe/proc/slash_target(atom/attacked_atom)
@@ -553,7 +553,7 @@
 		if(attacked_mob.stat != DEAD)
 			give_blood(15)
 		attacked_mob.apply_damage(damage = force * (ishostile(attacked_mob) ? 2 : 1), sharpness = SHARP_EDGED, bare_wound_bonus = 5)
-		to_chat(attacked_mob, span_userdanger("You're slashed by [src]!"))
+		to_chat(attacked_mob, span_userdanger("[capitalize(src)] режет меня!"))
 	else if((ismachinery(attacked_atom) || isstructure(attacked_atom)) && use_blood(5))
 		var/obj/attacked_obj = attacked_atom
 		attacked_obj.take_damage(force, BRUTE, MELEE, FALSE)
@@ -563,7 +563,7 @@
 	animate(src)
 	SpinAnimation(5)
 	addtimer(CALLBACK(src, PROC_REF(reset_spin)), 1 SECONDS)
-	visible_message(span_danger("[src] slashes [attacked_atom]!"), span_notice("You slash [attacked_atom]!"))
+	visible_message(span_danger("[capitalize(src)] режет [attacked_atom]!"), span_notice("Режу [attacked_atom]!"))
 	playsound(src, 'sound/weapons/bladeslice.ogg', 50, TRUE)
 	do_attack_animation(attacked_atom, ATTACK_EFFECT_SLASH)
 
@@ -590,7 +590,7 @@
 	SpinAnimation(15)
 
 /mob/living/simple_animal/soulscythe
-	name = "mysterious spirit"
+	name = "таинственный дух"
 	maxHealth = 200
 	health = 200
 	gender = NEUTER
@@ -602,7 +602,7 @@
 
 /mob/living/simple_animal/soulscythe/get_status_tab_items()
 	. = ..()
-	. += "Blood: [blood_level]/[MAX_BLOOD_LEVEL]"
+	. += "Кровь: [blood_level]/[MAX_BLOOD_LEVEL]"
 
 /mob/living/simple_animal/soulscythe/Life(seconds_per_tick, times_fired)
 	. = ..()
@@ -628,7 +628,7 @@
 //Ash Drake: Spectral Blade, Lava Staff, Dragon's Blood
 
 /obj/item/melee/ghost_sword
-	name = "\improper spectral blade"
+	name = "спектральный клинок"
 	desc = "A rusted and dulled blade. It doesn't look like it'd do much damage. It glows weakly."
 	icon = 'icons/obj/weapons/sword.dmi'
 	icon_state = "spectral"
@@ -642,8 +642,8 @@
 	throwforce = 1
 	hitsound = 'sound/effects/ghost2.ogg'
 	block_sound = 'sound/weapons/parry.ogg'
-	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "rends")
-	attack_verb_simple = list("attack", "slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "rend")
+	attack_verb_continuous = list("атакует", "разрезает", "колет", "режет", "рвет", "разрывает", "нарезает")
+	attack_verb_simple = list("атакует", "разрезает", "колет", "режет", "рвет", "разрывает", "нарезает")
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	var/summon_cooldown = 0
 	var/list/mob/dead/observer/spirits
@@ -668,13 +668,13 @@
 
 /obj/item/melee/ghost_sword/attack_self(mob/user)
 	if(summon_cooldown > world.time)
-		to_chat(user, span_warning("You just recently called out for aid. You don't want to annoy the spirits!"))
+		to_chat(user, span_warning("Не хочу раздражать духов!"))
 		return
-	to_chat(user, span_notice("You call out for aid, attempting to summon spirits to your side."))
+	to_chat(user, span_notice("Взываю к духам о помощи."))
 
-	notify_ghosts("[user] is raising [user.p_their()] [name], calling for your help!",
+	notify_ghosts("[user] поднимает свой [name], взывая к вам о помощи!",
 		enter_link="<a href=?src=[REF(src)];orbit=1>(Click to help)</a>",
-		source = user, ignore_key = POLL_IGNORE_SPECTRAL_BLADE, header = "Spectral blade")
+		source = user, ignore_key = POLL_IGNORE_SPECTRAL_BLADE, header = "Спектральный клинок")
 
 	summon_cooldown = world.time + 600
 
@@ -711,18 +711,18 @@
 	force = 0
 	var/ghost_counter = ghost_check()
 	force = clamp((ghost_counter * 4), 0, 75)
-	user.visible_message(span_danger("[user] strikes with the force of [ghost_counter] vengeful spirits!"))
+	user.visible_message(span_danger("[user] ударяет с силой [ghost_counter] мстительных духов!"))
 	..()
 
 /obj/item/melee/ghost_sword/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK, damage_type = BRUTE)
 	var/ghost_counter = ghost_check()
 	final_block_chance += clamp((ghost_counter * 5), 0, 75)
-	owner.visible_message(span_danger("[owner] is protected by a ring of [ghost_counter] ghosts!"))
+	owner.visible_message(span_danger("[owner] защищен кольцом из [ghost_counter] духов!"))
 	return ..()
 
 /obj/item/dragons_blood
-	name = "bottle of dragons blood"
-	desc = "You're not actually going to drink this, are you?"
+	name = "бутылка с кровью дракона"
+	desc = "Ты же не собираешься это пить, правда?"
 	icon = 'icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "vial"
 
@@ -735,7 +735,7 @@
 
 	switch(random)
 		if(1)
-			to_chat(user, span_danger("Your appearance morphs to that of a very small humanoid ash dragon! You get to look like a freak without the cool abilities."))
+			to_chat(user, span_danger("Теперь я похож на маленького пепельного дракона!"))
 			consumer.dna.features = list(
 				"mcolor" = "#A02720",
 				"tail_lizard" = "Dark Tiger",
@@ -753,22 +753,22 @@
 			consumer.eye_color_right = "#FEE5A3"
 			consumer.set_species(/datum/species/lizard)
 		if(2)
-			to_chat(user, span_danger("Your flesh begins to melt! Miraculously, you seem fine otherwise."))
+			to_chat(user, span_danger("С меня сходит кожа! Каким-то чудом я всё ещё живу."))
 			consumer.set_species(/datum/species/skeleton)
 		if(3)
-			to_chat(user, span_danger("Power courses through you! You can now shift your form at will."))
+			to_chat(user, span_danger("Чувствую силу! Теперь я могу менять свою форму по желанию."))
 			var/datum/action/cooldown/spell/shapeshift/dragon/dragon_shapeshift = new(user.mind || user)
 			dragon_shapeshift.Grant(user)
 		if(4)
-			to_chat(user, span_danger("You feel like you could walk straight through lava now."))
+			to_chat(user, span_danger("Кажется, что теперь я могу ходить по лаве."))
 			ADD_TRAIT(user, TRAIT_LAVA_IMMUNE, type)
 
 	playsound(user,'sound/items/drink.ogg', 30, TRUE)
 	qdel(src)
 
 /obj/item/lava_staff
-	name = "staff of lava"
-	desc = "The ability to fill the emergency shuttle with lava. What more could you want out of life?"
+	name = "посох лавы"
+	desc = "Дарует способность залить шаттл лавой. Чего ещё ты хочешь от жизни?"
 	icon_state = "lavastaff"
 	inhand_icon_state = "lavastaff"
 	lefthand_file = 'icons/mob/inhands/weapons/staves_lefthand.dmi'
@@ -779,13 +779,13 @@
 	force = 18
 	damtype = BURN
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
-	attack_verb_continuous = list("sears", "clubs", "burn")
-	attack_verb_simple = list("sear", "club", "burn")
+	attack_verb_continuous = list("бьёт")
+	attack_verb_simple = list("бьёт")
 	hitsound = 'sound/weapons/sear.ogg'
 	var/turf_type = /turf/open/lava/smooth/weak
-	var/transform_string = "lava"
+	var/transform_string = "лаву"
 	var/reset_turf_type = /turf/open/misc/asteroid/basalt
-	var/reset_string = "basalt"
+	var/reset_string = "базальт"
 	var/create_cooldown = 10 SECONDS
 	var/create_delay = 3 SECONDS
 	var/reset_cooldown = 5 SECONDS
@@ -807,12 +807,12 @@
 			var/obj/effect/temp_visual/lavastaff/L = new /obj/effect/temp_visual/lavastaff(T)
 			L.alpha = 0
 			animate(L, alpha = 255, time = create_delay)
-			user.visible_message(span_danger("[user] points [src] at [T]!"))
+			user.visible_message(span_danger("[user] направляет [src] на [T]!"))
 			timer = world.time + create_delay + 1
 			if(do_after(user, create_delay, target = T))
 				var/old_name = T.name
 				if(T.TerraformTurf(turf_type, flags = CHANGETURF_INHERIT_AIR))
-					user.visible_message(span_danger("[user] turns  [old_name] into [transform_string]!"))
+					user.visible_message(span_danger("[user] превращает [old_name] в [transform_string]!"))
 					message_admins("[ADMIN_LOOKUPFLW(user)] fired the lava staff at [ADMIN_VERBOSEJMP(T)]")
 					user.log_message("fired the lava staff at [AREACOORD(T)].", LOG_ATTACK)
 					timer = world.time + create_cooldown
@@ -823,7 +823,7 @@
 		else
 			var/old_name = T.name
 			if(T.TerraformTurf(reset_turf_type, flags = CHANGETURF_INHERIT_AIR))
-				user.visible_message(span_danger("[user] turns  [old_name] into [reset_string]!"))
+				user.visible_message(span_danger("[user] превращает [old_name] в [reset_string]!"))
 				timer = world.time + reset_cooldown
 				playsound(T,'sound/magic/fireball.ogg', 200, TRUE)
 
@@ -956,7 +956,7 @@
 
 	user.changeNext_move(CLICK_CD_MELEE * 0.25)
 	if(user)
-		balloon_alert(user, "[active ? "opened" : "closed"] [src]")
+		balloon_alert(user, "[active ? "разворачиваю" : "сворачиваю"] пилу")
 	playsound(src, 'sound/magic/clockwork/fellowship_armory.ogg', 35, TRUE, frequency = 90000 - (active * 30000))
 	return COMPONENT_NO_DEFAULT_MESSAGE
 

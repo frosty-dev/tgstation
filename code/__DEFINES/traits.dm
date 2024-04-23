@@ -274,6 +274,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_NO_AUGMENTS "no_augments"
 /// This carbon doesn't get hungry
 #define TRAIT_NOHUNGER "no_hunger"
+/// This carbon doesn't get thirsty
+#define TRAIT_NOHYDRATION "no_hydration"
 /// This carbon doesn't bleed
 #define TRAIT_NOBLOOD "noblood"
 /// This just means that the carbon will always have functional liverless metabolism
@@ -1347,4 +1349,4 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 
 /// Adminabuse
 #define TRAIT_ULTRA "trait_ultra"
-#define ULTRA_TRAIT_LIST list(TRAIT_ULTRA, TRAIT_NO_SLIP_ALL, TRAIT_RESISTHEAT, TRAIT_RESISTCOLD, TRAIT_RESISTHEATHANDS, TRAIT_RESISTHIGHPRESSURE, TRAIT_RESISTLOWPRESSURE, TRAIT_NOHUNGER, TRAIT_NOBREATH, TRAIT_NOFIRE, TRAIT_RADIMMUNE)
+#define ULTRA_TRAIT_LIST list(TRAIT_ULTRA, TRAIT_NO_SLIP_ALL, TRAIT_LAVA_IMMUNE, TRAIT_RESISTHEAT, TRAIT_RESISTCOLD, TRAIT_RESISTHEATHANDS, TRAIT_RESISTHIGHPRESSURE, TRAIT_RESISTLOWPRESSURE, TRAIT_NOHUNGER, TRAIT_NOHYDRATION, TRAIT_NOBREATH, TRAIT_NOFIRE, TRAIT_RADIMMUNE)

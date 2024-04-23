@@ -1,6 +1,6 @@
 /datum/surgery/advanced/bioware/nerve_grounding
-	name = "Nerve Grounding"
-	desc = "A surgical procedure which makes the patient's nerves act as grounding rods, protecting them from electrical shocks."
+	name = "Модифицирование: Заземление нервов"
+	desc = "Хирургическая процедура, позволяющая нервам пациента выступать в качестве заземляющих стержней, защищая их от поражения электрическим током."
 	possible_locs = list(BODY_ZONE_CHEST)
 	steps = list(
 		/datum/surgery_step/incise,
@@ -15,7 +15,7 @@
 	bioware_target = BIOWARE_NERVES
 
 /datum/surgery_step/ground_nerves
-	name = "ground nerves (hand)"
+	name = "заземление нервов (рука)"
 	accept_hand = TRUE
 	time = 155
 
@@ -23,27 +23,24 @@
 	display_results(
 		user,
 		target,
-		span_notice("You start rerouting [target]'s nerves."),
-		span_notice("[user] starts rerouting [target]'s nerves."),
-		span_notice("[user] starts manipulating [target]'s nervous system."),
-	)
-	display_pain(target, "Your entire body goes numb!")
+		span_notice("Начинаю перенаправлять нервы [skloname(target.name, RODITELNI, target.gender)].") ,
+		span_notice("[user] начал[user.ru_a()] перенаправлять нервы [skloname(target.name, RODITELNI, target.gender)].") ,
+		span_notice("[user] начал[user.ru_a()] работать с нервной системой [skloname(target.name, RODITELNI, target.gender)]."))
+
 
 /datum/surgery_step/ground_nerves/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results = FALSE)
 	display_results(
 		user,
 		target,
-		span_notice("You successfully reroute [target]'s nervous system!"),
-		span_notice("[user] successfully reroutes [target]'s nervous system!"),
-		span_notice("[user] finishes manipulating [target]'s nervous system."),
-	)
-	display_pain(target, "You regain feeling in your body! You feel energzed!")
+		span_notice("Успешно перенаправил[user.ru_a()] нервную систему [skloname(target.name, RODITELNI, target.gender)]!") ,
+		span_notice("[user] успешно перенаправил[user.ru_a()] нервную систему [skloname(target.name, RODITELNI, target.gender)]!") ,
+		span_notice("[user] закончил[user.ru_a()] работать с нервной системой [skloname(target.name, RODITELNI, target.gender)]."))
 	new /datum/bioware/grounded_nerves(target)
 	return ..()
 
 /datum/bioware/grounded_nerves
-	name = "Grounded Nerves"
-	desc = "Nerves form a safe path for electricity to traverse, protecting the body from electric shocks."
+	name = "Заземленные Нервы"
+	desc = "Нервы образуют безопасный путь для прохождения электричества, защищая тело от поражения электрическим током."
 	mod_type = BIOWARE_NERVES
 
 /datum/bioware/grounded_nerves/on_gain()

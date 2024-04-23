@@ -1,6 +1,6 @@
 /datum/surgery/advanced/wing_reconstruction
-	name = "Wing Reconstruction"
-	desc = "An experimental surgical procedure that reconstructs the damaged wings of moth people. Requires Synthflesh."
+	name = "Восстановление крыльев"
+	desc = "Экспериментальная хирургическая процедура, которая восстанавливает поврежденные крылья мотыльков. Требует Синтплоть."
 	possible_locs = list(BODY_ZONE_CHEST)
 	steps = list(
 		/datum/surgery_step/incise,
@@ -18,7 +18,7 @@
 	return ..() && wings?.burnt
 
 /datum/surgery_step/wing_reconstruction
-	name = "start wing reconstruction (hemostat)"
+	name = "начать восстановление крыльев (зажим)"
 	implements = list(
 		TOOL_HEMOSTAT = 85,
 		TOOL_SCREWDRIVER = 35,
@@ -31,11 +31,9 @@
 	display_results(
 		user,
 		target,
-		span_notice("You begin to fix [target]'s charred wing membranes..."),
-		span_notice("[user] begins to fix [target]'s charred wing membranes."),
-		span_notice("[user] begins to perform surgery on [target]'s charred wing membranes."),
-	)
-	display_pain(target, "Your wings sting like hell!")
+		span_notice("Начинаю восстанавливать обугленные мембраны крыльев [skloname(target.name, VINITELNI, target.gender)]...") ,
+		span_notice("[user] начал восстанавливать обугленные мембраны крыльев [skloname(target.name, VINITELNI, target.gender)].") ,
+		span_notice("[user] начал проведение операции на обугленных мембранах крыльев [skloname(target.name, VINITELNI, target.gender)]."))
 
 /datum/surgery_step/wing_reconstruction/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results = FALSE)
 	if(ishuman(target))
@@ -43,11 +41,10 @@
 		display_results(
 			user,
 			target,
-			span_notice("You succeed in reconstructing [target]'s wings."),
-			span_notice("[user] successfully reconstructs [target]'s wings!"),
-			span_notice("[user] completes the surgery on [target]'s wings."),
-		)
-		display_pain(target, "You can feel your wings again!")
+			span_notice("Успешно восстановил[user.ru_a()] крылья [skloname(target.name, VINITELNI, target.gender)].") ,
+			span_notice("[user] успешно восстановил[user.ru_a()] крылья [skloname(target.name, VINITELNI, target.gender)]!") ,
+			span_notice("[user] завершил[user.ru_a()] операцию на крыльях [skloname(target.name, VINITELNI, target.gender)]."))
+
 		var/obj/item/organ/external/wings/moth/wings = target.get_organ_slot(ORGAN_SLOT_EXTERNAL_WINGS)
 		if(istype(wings, /obj/item/organ/external/wings/moth)) //make sure we only heal moth wings.
 			wings.heal_wings(user, ALL)

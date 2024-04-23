@@ -16,7 +16,7 @@
 /datum/surgery_step/proc/try_op(mob/user, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery, try_to_fail = FALSE)
 	var/success = FALSE
 	if(surgery.organ_to_manipulate && !target.get_organ_slot(surgery.organ_to_manipulate))
-		to_chat(user, span_warning("[target] seems to be missing the organ necessary to complete this surgery!"))
+		to_chat(user, span_warning("У [skloname(target.name, RODITELNI, target.gender)] нет органа, необходимого для выполнения этой операции!"))
 		return FALSE
 
 	if(accept_hand)
@@ -49,7 +49,7 @@
 			if(get_location_accessible(target, target_zone) || (surgery.surgery_flags & SURGERY_IGNORE_CLOTHES))
 				initiate(user, target, target_zone, tool, surgery, try_to_fail)
 			else
-				to_chat(user, span_warning("You need to expose [target]'s [parse_zone(target_zone)] to perform surgery on it!"))
+				to_chat(user, span_warning("Мне нужно иметь доступ к [parse_zone(target_zone)] <b>[skloname(target.name, DATELNI, target.gender)]</b> для проведения хирургической операции!"))
 			return TRUE //returns TRUE so we don't stab the guy in the dick or wherever.
 
 	if(repeatable)
@@ -138,9 +138,9 @@
 	display_results(
 		user,
 		target,
-		span_notice("You begin to perform surgery on [target]..."),
-		span_notice("[user] begins to perform surgery on [target]."),
-		span_notice("[user] begins to perform surgery on [target]."),
+		span_notice("Начинаю выполнять операцию на <b>[skloname(target.name, PREDLOZHNI, target.gender)]</b>...") ,
+		span_notice("<b>[user]</b> начинает выполнять операцию на <b>[skloname(target.name, PREDLOZHNI, target.gender)]</b>.") ,
+		span_notice("<b>[user]</b> начинает выполнять операцию на <b>[skloname(target.name, PREDLOZHNI, target.gender)]</b>.")
 	)
 
 /datum/surgery_step/proc/play_preop_sound(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
@@ -162,9 +162,9 @@
 		display_results(
 			user,
 			target,
-			span_notice("You succeed."),
-			span_notice("[user] succeeds!"),
-			span_notice("[user] finishes."),
+			span_notice("Успех.") ,
+			span_notice("<b>[user]</b> имеет успех!") ,
+			span_notice("<b>[user]</b> заканчивает.")
 		)
 	return TRUE
 
@@ -177,18 +177,18 @@
 	var/screwedmessage = ""
 	switch(fail_prob)
 		if(0 to 24)
-			screwedmessage = " You almost had it, though."
+			screwedmessage = " Почти получилось."
 		if(50 to 74)//25 to 49 = no extra text
-			screwedmessage = " This is hard to get right in these conditions..."
+			screwedmessage = " Будет сложновато в данных условиях..."
 		if(75 to 99)
-			screwedmessage = " This is practically impossible in these conditions..."
+			screwedmessage = " Это практически невозможно в данных условиях..."
 
 	display_results(
 		user,
 		target,
-		span_warning("You screw up![screwedmessage]"),
-		span_warning("[user] screws up!"),
-		span_notice("[user] finishes."), TRUE) //By default the patient will notice if the wrong thing has been cut
+		span_warning("Не вышло![screwedmessage]") ,
+		span_warning("<b>[user]</b> делает неправильно!") ,
+		span_notice("<b>[user]</b> заканчивает.") , TRUE) //By default the patient will notice if the wrong thing has been cut
 	return FALSE
 
 /datum/surgery_step/proc/play_failure_sound(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
@@ -223,7 +223,7 @@
 		if(temp)
 			var/chemname = temp.name
 			chems += chemname
-	return english_list(chems, and_text = require_all_chems ? " and " : " or ")
+	return english_list(chems, and_text = require_all_chems ? " и " : " или ")
 
 // Check if we are entitled to morbid bonuses
 /datum/surgery_step/proc/check_morbid_curiosity(mob/user, obj/item/tool, datum/surgery/surgery)

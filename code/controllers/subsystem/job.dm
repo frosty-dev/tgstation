@@ -660,7 +660,7 @@ SUBSYSTEM_DEF(job)
 	JobDebug("Player rejected :[player]")
 	unassigned -= player
 	if(!run_divide_occupation_pure)
-		to_chat(player, "<span class='infoplain'><b>You have failed to qualify for any job you desired.</b></span>")
+		to_chat(player, "<b>Вас не приняли ни на одну должность, которую вы хотели занять.</b>")
 		player.ready = PLAYER_NOT_READY
 
 
@@ -792,12 +792,12 @@ SUBSYSTEM_DEF(job)
 	)
 
 /obj/item/paper/paperslip/corporate/fluff/spare_id_safe_code
-	name = "Nanotrasen-Approved Spare ID Safe Code"
-	desc = "Proof that you have been approved for Captaincy, with all its glory and all its horror."
+	name = "Запасные коды от сейфа"
+	desc = "Доказательство того, что вы точно заслужили должность Капитана этой станции."
 
 /obj/item/paper/paperslip/corporate/fluff/spare_id_safe_code/Initialize(mapload)
 	var/safe_code = SSid_access.spare_id_safe_code
-	default_raw_text = "Captain's Spare ID safe code combination: [safe_code ? safe_code : "\[REDACTED\]"]<br><br>The spare ID can be found in its dedicated safe on the bridge.<br><br>If your job would not ordinarily have Head of Staff access, your ID card has been specially modified to possess it."
+	default_raw_text = "Комбинацией является: [safe_code ? safe_code : "\[ДАННЫЕ УДАЛЕНЫ\]"]<br><br>Сейф может быть обнаружен на мостике, либо в каюте капитана.<br><br>Если должность не позволяет пройти туда, будет добавлен специальный доступ."
 	return ..()
 
 /obj/item/paper/paperslip/corporate/fluff/emergency_spare_id_safe_code
@@ -825,9 +825,9 @@ SUBSYSTEM_DEF(job)
 	var/where = new_captain.equip_in_one_of_slots(paper, slots, FALSE, indirect_action = TRUE) || "at your feet"
 
 	if(acting_captain)
-		to_chat(new_captain, span_notice("Due to your position in the chain of command, you have been promoted to Acting Captain. You can find in important note about this [where]."))
+		to_chat(new_captain, span_notice("Учитывая мою должность на станции, меня назначили её Капитаном. Важный документ подкинули в [ru_parse_zone(where)]."))
 	else
-		to_chat(new_captain, span_notice("You can find the code to obtain your spare ID from the secure safe on the Bridge [where]."))
+		to_chat(new_captain, span_notice("Сейф можно найти в капитанской каюте, либо на мостике. Важный документ положили в [ru_parse_zone(where)]."))
 		new_captain.add_mob_memory(/datum/memory/key/captains_spare_code, safe_code = SSid_access.spare_id_safe_code)
 
 	// Force-give their ID card bridge access.

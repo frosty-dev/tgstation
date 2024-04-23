@@ -1,6 +1,6 @@
 /datum/surgery/advanced/viral_bonding
-	name = "Viral Bonding"
-	desc = "A surgical procedure that forces a symbiotic relationship between a virus and its host. The patient must be dosed with spaceacillin, virus food, and formaldehyde."
+	name = "Вирусный симбиоз"
+	desc = "Хирургическая процедура которая устанавливает симбиотические отношения между вирусом и носителем. Пациенту должен быть введен Космоцелин, пища для вирусов и формальдегид."
 	possible_locs = list(BODY_ZONE_CHEST)
 	steps = list(
 		/datum/surgery_step/incise,
@@ -20,7 +20,7 @@
 	return TRUE
 
 /datum/surgery_step/viral_bond
-	name = "viral bond (cautery)"
+	name = "установите связь (прижигатель)"
 	implements = list(
 		TOOL_CAUTERY = 100,
 		TOOL_WELDER = 50,
@@ -38,21 +38,18 @@
 	display_results(
 		user,
 		target,
-		span_notice("You start heating [target]'s bone marrow with [tool]..."),
-		span_notice("[user] starts heating [target]'s bone marrow with [tool]..."),
-		span_notice("[user] starts heating something in [target]'s chest with [tool]..."),
-	)
-	display_pain(target, "You feel a searing heat spread through your chest!")
+		span_notice("Начинаю нагревать спинной мозг [skloname(target.name, VINITELNI, target.gender)], используя [tool]...") ,
+		span_notice("[user] начинает нагревать спинной мозг [skloname(target.name, VINITELNI, target.gender)], используя [tool]...") ,
+		span_notice("[user] начинает нагревать что-то в туловище [skloname(target.name, VINITELNI, target.gender)], используя [tool]..."))
 
 /datum/surgery_step/viral_bond/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results)
 	display_results(
 		user,
 		target,
-		span_notice("[target]'s bone marrow begins pulsing slowly. The viral bonding is complete."),
-		span_notice("[target]'s bone marrow begins pulsing slowly."),
-		span_notice("[user] finishes the operation."),
-	)
-	display_pain(target, "You feel a faint throbbing in your chest.")
+		span_notice("Костный мозг [skloname(target.name, VINITELNI, target.gender)] начинает медленно пульсировать. Вирусный симбиоз установлен.") ,
+		span_notice("Костный мозг [skloname(target.name, VINITELNI, target.gender)] начинает медленно пульсировать.") ,
+		span_notice("[user] завершает операцию."))
+
 	for(var/datum/disease/infected_disease as anything in target.diseases)
 		if(infected_disease.severity != DISEASE_SEVERITY_UNCURABLE) //no curing quirks, sweaty
 			infected_disease.carrier = TRUE

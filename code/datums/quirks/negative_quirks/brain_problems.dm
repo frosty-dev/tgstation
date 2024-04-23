@@ -24,7 +24,7 @@
 			LOCATION_BACKPACK = ITEM_SLOT_BACKPACK,
 			LOCATION_HANDS = ITEM_SLOT_HANDS,
 		),
-		flavour_text = "У вас имеется пачка маннитола, которая будет помогать вам остаться в живых. Не стоит слишком сильно надеяться на него!",
+		flavour_text = "У вас имеется пачка маннитола, которая будет помогать вам остаться в живых. Не стоит слишком сильно надеяться на неё!",
 	)
 
 /datum/quirk/item_quirk/brainproblems/process(seconds_per_tick)

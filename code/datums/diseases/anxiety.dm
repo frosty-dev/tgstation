@@ -31,7 +31,7 @@
 				affected_mob.adjust_confusion(rand(2 SECONDS, 3 SECONDS))
 		if(4)
 			if(SPT_PROB(5, seconds_per_tick))
-				to_chat(affected_mob, span_danger("Ощущаю бабочек в своём животе."))
+				to_chat(affected_mob, span_danger("Ощущаю бабочек в своем животе."))
 			if(SPT_PROB(2.5, seconds_per_tick))
 				affected_mob.visible_message(span_danger("[affected_mob] спотыкается в панике.") , \
 												span_userdanger("ПАНИЧЕСКАЯ АТАКА!"))

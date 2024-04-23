@@ -395,7 +395,7 @@
 
 /obj/item/toy/plush/bubbleplush
 	name = "плюшевый Буббльгум"
-	desc = "Дружелюбный красный демон, который дарит добрым шахтерам подарки."
+	desc = "Дружелюбный красный демон, который дарит добрым шахтёрам подарки."
 	icon_state = "bubbleplush"
 	attack_verb_continuous = list("арендует")
 	attack_verb_simple = list("арендует")

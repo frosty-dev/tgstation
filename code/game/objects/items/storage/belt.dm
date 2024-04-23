@@ -234,6 +234,7 @@
 		/obj/item/healthanalyzer,
 		/obj/item/hemostat,
 		/obj/item/holosign_creator/medical,
+		/obj/item/breathing_bag,
 		/obj/item/implant,
 		/obj/item/implantcase,
 		/obj/item/implanter,
@@ -309,6 +310,7 @@
 	SSwardrobe.provide_type(/obj/item/stack/medical/bone_gel, src)
 	SSwardrobe.provide_type(/obj/item/cautery/advanced, src)
 	SSwardrobe.provide_type(/obj/item/surgical_drapes, src)
+	SSwardrobe.provide_type(/obj/item/breathing_bag, src)
 	update_appearance()
 
 /obj/item/storage/belt/medical/ert/get_types_to_preload()
@@ -320,6 +322,7 @@
 	to_preload += /obj/item/stack/medical/bone_gel
 	to_preload += /obj/item/cautery/advanced
 	to_preload += /obj/item/surgical_drapes
+	to_preload += /obj/item/breathing_bag
 	return to_preload
 
 /obj/item/storage/belt/security
@@ -376,7 +379,7 @@
 
 /obj/item/storage/belt/mining
 	name = "разгрузка исследователя"
-	desc = "Универсальная вместительная разгрузка, которую ценят как шахтеры, так и охотники."
+	desc = "Универсальная вместительная разгрузка, которую ценят как шахтёры, так и охотники."
 	icon_state = "explorer1"
 	inhand_icon_state = "explorer1"
 	worn_icon_state = "explorer1"
@@ -400,6 +403,7 @@
 		/obj/item/knife,
 		/obj/item/lighter,
 		/obj/item/mining_scanner,
+		/obj/item/breathing_bag,
 		/obj/item/multitool,
 		/obj/item/organ/internal/monster_core,
 		/obj/item/pickaxe,
@@ -427,7 +431,6 @@
 		/obj/item/wirecutters,
 		/obj/item/wrench,
 		/obj/item/wormhole_jaunter,
-		/obj/item/skeleton_key,
 	))
 
 

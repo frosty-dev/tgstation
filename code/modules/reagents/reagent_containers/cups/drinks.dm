@@ -211,9 +211,9 @@
 	icon = 'icons/obj/drinks/bottles.dmi'
 	icon_state = "smallbottle"
 	inhand_icon_state = null
-	list_reagents = list(/datum/reagent/water = 49.5, /datum/reagent/fluorine = 0.5)//see desc, don't think about it too hard
+	list_reagents = list(/datum/reagent/water = 99.5, /datum/reagent/fluorine = 0.5)//see desc, don't think about it too hard
 	custom_materials = list(/datum/material/plastic=HALF_SHEET_MATERIAL_AMOUNT)
-	volume = 50
+	volume = 100
 	amount_per_transfer_from_this = 10
 	fill_icon_thresholds = list(0, 10, 25, 50, 75, 80, 90)
 	isGlass = FALSE
@@ -262,12 +262,12 @@
 			to_chat(user, span_warning("You fumble with [src]'s cap! The cap falls onto the ground and simply vanishes. Where the hell did it go?"))
 			cap_lost = TRUE
 		else
-			to_chat(user, span_notice("You remove the cap from [src]."))
+			to_chat(user, span_notice("Открываю [skloname(src, VINITELNI, "female")]."))
 			playsound(loc, 'sound/effects/can_open1.ogg', 50, TRUE)
 	else
 		cap_on = TRUE
 		spillable = FALSE
-		to_chat(user, span_notice("You put the cap on [src]."))
+		to_chat(user, span_notice("Закрываю [skloname(src, VINITELNI, "female")]."))
 	update_appearance()
 
 /obj/item/reagent_containers/cup/glass/waterbottle/is_refillable()
@@ -332,8 +332,8 @@
 	desc = "Свежая бутылка воды коммерческого размера."
 	icon_state = "largebottle"
 	custom_materials = list(/datum/material/plastic=SHEET_MATERIAL_AMOUNT * 1.5)
-	list_reagents = list(/datum/reagent/water = 100)
-	volume = 100
+	list_reagents = list(/datum/reagent/water = 150)
+	volume = 150
 	amount_per_transfer_from_this = 10
 	possible_transfer_amounts = list(5,10,15,20,25,30,50,100)
 	cap_icon_state = "bottle_cap"

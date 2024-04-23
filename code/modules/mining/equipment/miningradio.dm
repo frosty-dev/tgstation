@@ -1,9 +1,9 @@
 /// Portable mining radio purchasable by miners
 /obj/item/radio/weather_monitor
 	icon = 'icons/obj/miningradio.dmi'
-	name = "mining weather radio"
+	name = "шахтёрское погодное радио"
+	desc = "Погодное радио, разработанное для использования в негостеприимных условиях. Издает звуковые предупреждения, когда приближаются бури. Имеет доступ к каналу карго."
 	icon_state = "miningradio"
-	desc = "A weather radio designed for use in inhospitable environments. Gives audible warnings when storms approach. Has access to cargo channel."
 	freqlock = RADIO_FREQENCY_LOCKED
 	luminosity = 1
 	light_power = 1

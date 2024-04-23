@@ -2,23 +2,23 @@
 #define STOMACH_METABOLISM_CONSTANT 0.25
 
 /obj/item/organ/internal/stomach
-	name = "stomach"
+	name = "желудок"
 	desc = "Onaka ga suite imasu."
 	icon_state = "stomach"
 	visual = FALSE
 	w_class = WEIGHT_CLASS_SMALL
 	zone = BODY_ZONE_CHEST
 	slot = ORGAN_SLOT_STOMACH
-	attack_verb_continuous = list("gores", "squishes", "slaps", "digests")
-	attack_verb_simple = list("gore", "squish", "slap", "digest")
+	attack_verb_continuous = list("выжимает", "выдавливает", "шлёпает", "кормит")
+	attack_verb_simple = list("выжимает", "выдавливает", "шлёпает", "кормит")
 
 	healing_factor = STANDARD_ORGAN_HEALING
 	decay_factor = STANDARD_ORGAN_DECAY * 1.15 // ~13 minutes, the stomach is one of the first organs to die
 
-	low_threshold_passed = "<span class='info'>Your stomach flashes with pain before subsiding. Food doesn't seem like a good idea right now.</span>"
-	high_threshold_passed = "<span class='warning'>Your stomach flares up with constant pain- you can hardly stomach the idea of food right now!</span>"
-	high_threshold_cleared = "<span class='info'>The pain in your stomach dies down for now, but food still seems unappealing.</span>"
-	low_threshold_cleared = "<span class='info'>The last bouts of pain in your stomach have died out.</span>"
+	low_threshold_passed = span_info("Перед тем как утихнуть, в животе вспыхивает боль. Еда сейчас не кажется разумной идеей.")
+	high_threshold_passed = span_warning("Желудок горит от постоянной боли - с трудом могу переварить идею еды прямо сейчас!")
+	high_threshold_cleared = span_info("Боль в животе пока утихает, но еда все еще кажется непривлекательной.")
+	low_threshold_cleared = span_info("Последние приступы боли в животе утихли.")
 
 	food_reagents = list(/datum/reagent/consumable/nutriment/organ_tissue = 5)
 	//This is a reagent user and needs more then the 10u from edible component
@@ -111,13 +111,13 @@
 	//The stomach is damage has nutriment but low on theshhold, lo prob of vomit
 	if(SPT_PROB(0.0125 * damage * nutri_vol * nutri_vol, seconds_per_tick))
 		body.vomit(VOMIT_CATEGORY_DEFAULT, lost_nutrition = damage)
-		to_chat(body, span_warning("Your stomach reels in pain as you're incapable of holding down all that food!"))
+		to_chat(body, span_warning("Живот крутит от боли, потому что я не могу сдерживать эту еду!"))
 		return
 
 	// the change of vomit is now high
 	if(damage > high_threshold && SPT_PROB(0.05 * damage * nutri_vol * nutri_vol, seconds_per_tick))
 		body.vomit(VOMIT_CATEGORY_DEFAULT, lost_nutrition = damage)
-		to_chat(body, span_warning("Your stomach reels in pain as you're incapable of holding down all that food!"))
+		to_chat(body, span_warning("Живот крутит от боли, потому что я не могу сдерживать эту еду!"))
 
 /obj/item/organ/internal/stomach/proc/handle_hunger(mob/living/carbon/human/human, seconds_per_tick, times_fired)
 	if(HAS_TRAIT(human, TRAIT_NOHUNGER))
@@ -126,14 +126,14 @@
 	//The fucking TRAIT_FAT mutation is the dumbest shit ever. It makes the code so difficult to work with
 	if(HAS_TRAIT_FROM(human, TRAIT_FAT, OBESITY))//I share your pain, past coder.
 		if(human.overeatduration < (200 SECONDS))
-			to_chat(human, span_notice("You feel fit again!"))
+			to_chat(human, span_notice("Возвращаю свою стройную форму!"))
 			REMOVE_TRAIT(human, TRAIT_FAT, OBESITY)
 			human.remove_movespeed_modifier(/datum/movespeed_modifier/obesity)
 			human.update_worn_undersuit()
 			human.update_worn_oversuit()
 	else
 		if(human.overeatduration >= (200 SECONDS))
-			to_chat(human, span_danger("You suddenly feel blubbery!"))
+			to_chat(human, span_danger("Мне удалось разжиреть!"))
 			ADD_TRAIT(human, TRAIT_FAT, OBESITY)
 			human.add_movespeed_modifier(/datum/movespeed_modifier/obesity)
 			human.update_worn_undersuit()
@@ -162,6 +162,7 @@
 		human.adjust_nutrition(-hunger_rate * seconds_per_tick)
 
 	var/nutrition = human.nutrition
+	var/hydration = human.hydration
 	if(nutrition > NUTRITION_LEVEL_FULL && !HAS_TRAIT(human, TRAIT_NOFAT))
 		if(human.overeatduration < 20 MINUTES) //capped so people don't take forever to unfat
 			human.overeatduration = min(human.overeatduration + (1 SECONDS * seconds_per_tick), 20 MINUTES)
@@ -174,15 +175,15 @@
 		human.metabolism_efficiency = 1
 	else if(nutrition > NUTRITION_LEVEL_FED && human.satiety > 80)
 		if(human.metabolism_efficiency != 1.25)
-			to_chat(human, span_notice("You feel vigorous."))
+			to_chat(human, span_notice("Ощущаю сытость."))
 			human.metabolism_efficiency = 1.25
 	else if(nutrition < NUTRITION_LEVEL_STARVING + 50)
 		if(human.metabolism_efficiency != 0.8)
-			to_chat(human, span_notice("You feel sluggish."))
+			to_chat(human, span_notice("Снова хочется кушать."))
 		human.metabolism_efficiency = 0.8
 	else
 		if(human.metabolism_efficiency == 1.25)
-			to_chat(human, span_notice("You no longer feel vigorous."))
+			to_chat(human, span_notice("Похоже надо покушать."))
 		human.metabolism_efficiency = 1
 
 	//Hunger slowdown for if mood isn't enabled
@@ -200,6 +201,16 @@
 			human.throw_alert(ALERT_NUTRITION, /atom/movable/screen/alert/hungry)
 		if(0 to NUTRITION_LEVEL_STARVING)
 			human.throw_alert(ALERT_NUTRITION, /atom/movable/screen/alert/starving)
+
+	switch(hydration)
+		if(HYDRATION_LEVEL_OVERHYDRATED to INFINITY)
+			human.throw_alert("thirsty", /atom/movable/screen/alert/overhydrated)
+		if(HYDRATION_LEVEL_NORMAL to HYDRATION_LEVEL_OVERHYDRATED)
+			human.clear_alert("thirsty")
+		if(HYDRATION_LEVEL_THIRSTY to HYDRATION_LEVEL_NORMAL)
+			human.throw_alert("thirsty", /atom/movable/screen/alert/thirsty)
+		if(-INFINITY to HYDRATION_LEVEL_DEHYDRATED)
+			human.throw_alert("thirsty", /atom/movable/screen/alert/dehydrated)
 
 ///for when mood is disabled and hunger should handle slowdowns
 /obj/item/organ/internal/stomach/proc/handle_hunger_slowdown(mob/living/carbon/human/human)
@@ -227,7 +238,7 @@
 				disgusted.adjust_stutter(2 SECONDS)
 				disgusted.adjust_confusion(2 SECONDS)
 			if(SPT_PROB(5, seconds_per_tick) && !disgusted.stat)
-				to_chat(disgusted, span_warning("You feel kind of iffy..."))
+				to_chat(disgusted, span_warning("Чувствую себя немного неуверенно..."))
 			disgusted.adjust_jitter(-6 SECONDS)
 		if(disgust >= DISGUST_LEVEL_VERYGROSS)
 			if(SPT_PROB(pukeprob, seconds_per_tick)) //iT hAndLeS mOrE ThaN PukInG
@@ -272,22 +283,21 @@
 	return ..()
 
 /obj/item/organ/internal/stomach/bone
-	name = "mass of bones"
-	desc = "You have no idea what this strange ball of bones does."
+	desc = "Вы не представляете, что делает этот странный шар из костей."
 	icon_state = "stomach-bone"
 	metabolism_efficiency = 0.025 //very bad
 	organ_traits = list(TRAIT_NOHUNGER)
 
 /obj/item/organ/internal/stomach/bone/plasmaman
-	name = "digestive crystal"
-	desc = "A strange crystal that is responsible for metabolizing the unseen energy force that feeds plasmamen."
+	name = "пищеварительный кристалл"
+	desc = "Странный кристалл, отвечающий за метаболизм невидимой энергии, питающей плазмамена."
 	icon_state = "stomach-p"
 	metabolism_efficiency = 0.06
 	organ_traits = null
 
 /obj/item/organ/internal/stomach/cybernetic
-	name = "basic cybernetic stomach"
-	desc = "A basic device designed to mimic the functions of a human stomach"
+	name = "базовый кибернетический желудок"
+	desc = "Базовое устройство, имитирующее функции человеческого желудка."
 	failing_desc = "seems to be broken."
 	icon_state = "stomach-c"
 	organ_flags = ORGAN_ROBOTIC
@@ -306,8 +316,8 @@
 		organ_flags |= ORGAN_EMP //Starts organ faliure - gonna need replacing soon.
 
 /obj/item/organ/internal/stomach/cybernetic/tier2
-	name = "cybernetic stomach"
-	desc = "An electronic device designed to mimic the functions of a human stomach. Handles disgusting food a bit better."
+	name = "кибернетический желудок"
+	desc = "Электронное устройство, имитирующее функции человеческого желудка. Немного лучше справляется с отвратительной едой."
 	icon_state = "stomach-c-u"
 	maxHealth = 1.5 * STANDARD_ORGAN_THRESHOLD
 	disgust_metabolism = 2
@@ -315,8 +325,8 @@
 	metabolism_efficiency = 0.07
 
 /obj/item/organ/internal/stomach/cybernetic/tier3
-	name = "upgraded cybernetic stomach"
-	desc = "An upgraded version of the cybernetic stomach, designed to improve further upon organic stomachs. Handles disgusting food very well."
+	name = "продвинутый кибернетический желудок"
+	desc = "Усовершенствованная версия кибернетического желудка, предназначенная для дальнейшего улучшения органических желудков. Отлично справляется с отвратительной едой."
 	icon_state = "stomach-c-u2"
 	maxHealth = 2 * STANDARD_ORGAN_THRESHOLD
 	disgust_metabolism = 3

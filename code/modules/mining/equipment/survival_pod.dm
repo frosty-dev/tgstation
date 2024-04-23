@@ -10,8 +10,8 @@
 
 //Survival Capsule
 /obj/item/survivalcapsule
-	name = "bluespace shelter capsule"
-	desc = "An emergency shelter stored within a pocket of bluespace."
+	name = "блюспейс капсула-убежище"
+	desc = "Аварийное убежище, находящееся внутри блюспейся."
 	icon_state = "capsule"
 	icon = 'icons/obj/mining.dmi'
 	w_class = WEIGHT_CLASS_TINY
@@ -34,25 +34,25 @@
 /obj/item/survivalcapsule/examine(mob/user)
 	. = ..()
 	get_template()
-	. += "This capsule has the [template.name] stored."
+	. += "В капсуле находится [template.name]."
 	. += template.description
 
 /obj/item/survivalcapsule/attack_self()
 	//Can't grab when capsule is New() because templates aren't loaded then
 	get_template()
 	if(!used)
-		loc.visible_message(span_warning(" [src] begins to shake. Stand back!"))
+		loc.visible_message(span_warning(" [src] начинает вибрировать. Отойдите!"))
 		used = TRUE
 		sleep(5 SECONDS)
 		var/turf/deploy_location = get_turf(src)
 		var/status = template.check_deploy(deploy_location)
 		switch(status)
 			if(SHELTER_DEPLOY_BAD_AREA)
-				src.loc.visible_message(span_warning(" [src] will not function in this area."))
+				src.loc.visible_message(span_warning(" [src] не будет работать в этой области."))
 			if(SHELTER_DEPLOY_BAD_TURFS, SHELTER_DEPLOY_ANCHORED_OBJECTS, SHELTER_DEPLOY_OUTSIDE_MAP)
 				var/width = template.width
 				var/height = template.height
-				src.loc.visible_message(span_warning(" [src] doesn't have room to deploy! You need to clear a [width]x[height] area!"))
+				src.loc.visible_message(span_warning(" [src] не может быть развернута! Необходимо освободить площадь [width]x[height]!"))
 		if(status != SHELTER_DEPLOY_ALLOWED)
 			used = FALSE
 			return
@@ -70,17 +70,17 @@
 //Non-default pods
 
 /obj/item/survivalcapsule/luxury
-	name = "luxury bluespace shelter capsule"
+	name = "роскошная капсула-убежище"
 	desc = "An exorbitantly expensive luxury suite stored within a pocket of bluespace."
 	template_id = "shelter_beta"
 
 /obj/item/survivalcapsule/luxuryelite
-	name = "luxury elite bar capsule"
+	name = "элитная капсула-бар класса люкс"
 	desc = "A luxury bar in a capsule. Bartender required and not included."
 	template_id = "shelter_charlie"
 
 /obj/item/survivalcapsule/bathroom
-	name = "emergency relief capsule"
+	name = "капсула-убежище с туалетом"
 	desc = "Provides vital emergency support to employees who are caught short in the field."
 	template_id = "shelter_toilet"
 
@@ -209,6 +209,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/survival_pod/spawne
 
 /obj/machinery/smartfridge/survival_pod/preloaded/Initialize(mapload)
 	. = ..()
+	var/obj/item/reagent_containers/cup/glass/waterbottle/A = new(src)
+	load(A)
 	for(var/i in 1 to 5)
 		var/obj/item/food/donkpocket/warm/W = new(src)
 		load(W)

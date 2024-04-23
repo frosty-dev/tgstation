@@ -373,6 +373,12 @@
 	if(!HAS_TRAIT(src, TRAIT_SLEEPIMMUNE))
 		return has_status_effect(/datum/status_effect/incapacitating/sleeping)
 
+/mob/living/proc/IsPermaSleeping()
+	var/datum/status_effect/incapacitating/sleeping/S = IsSleeping()
+	if(S && S.duration == -1)
+		return TRUE
+	return FALSE
+
 /mob/living/proc/AmountSleeping() //How many deciseconds remain in our sleep
 	var/datum/status_effect/incapacitating/sleeping/S = IsSleeping()
 	if(S)

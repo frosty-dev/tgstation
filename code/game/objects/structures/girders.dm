@@ -25,7 +25,7 @@
 	. = ..()
 	switch(state)
 		if(GIRDER_REINF)
-			. += span_notice("Ребра жесткости <b>закреплены</b> винтами на своем месте.")
+			. += span_notice("Ребра жесткости <b>закреплены</b> винтами.")
 		if(GIRDER_REINF_STRUTS)
 			. += span_notice("Ребра жесткости <i>откручены</i> и могут быть <b>перекушены</b> для демонтажа.")
 		if(GIRDER_NORMAL)

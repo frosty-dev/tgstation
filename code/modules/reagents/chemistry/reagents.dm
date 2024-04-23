@@ -89,6 +89,10 @@
 	var/fallback_icon_state
 	/// When ordered in a restaurant, what custom order do we create?
 	var/restaurant_order = /datum/custom_order/reagent/drink
+	///A sound. Yes.
+	var/sound/special_sound = null
+	///hydration factor to restore thirst
+	var/hydration_factor = 0
 
 /datum/reagent/New()
 	SHOULD_CALL_PARENT(TRUE)
@@ -123,6 +127,8 @@
 		var/amount = round(reac_volume*clamp((1 - touch_protection), 0, 1), 0.1)
 		if(amount >= 0.5)
 			exposed_mob.reagents.add_reagent(type, amount, added_purity = purity)
+	if(methods & INGEST)
+		exposed_mob.hydration += reac_volume * hydration_factor
 
 /// Applies this reagent to an [/obj]
 /datum/reagent/proc/expose_obj(obj/exposed_obj, reac_volume)

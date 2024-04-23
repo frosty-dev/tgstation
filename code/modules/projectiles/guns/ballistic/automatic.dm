@@ -35,11 +35,11 @@
 	if(!select)
 		burst_size = 1
 		fire_delay = 0
-		balloon_alert(user, "переключил на полуавтомат")
+		balloon_alert(user, "переключено на полуавтомат")
 	else
 		burst_size = initial(burst_size)
 		fire_delay = initial(fire_delay)
-		balloon_alert(user, "переключил на [burst_size]-зарядную очередь")
+		balloon_alert(user, "переключено на [burst_size]-зарядную очередь")
 
 	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
 	update_appearance()

@@ -32,14 +32,14 @@
 	if(obj_flags & EMAGGED || . & EMP_PROTECT_SELF)
 		return
 	obj_flags |= EMAGGED
-	desc = "[desc] Дисплей слегка мигает."
+	desc = "[desc] Дисплей слегка мерцает."
 
 /obj/item/clothing/glasses/hud/emag_act(mob/user, obj/item/card/emag/emag_card)
 	if(obj_flags & EMAGGED)
 		return FALSE
 	obj_flags |= EMAGGED
 	balloon_alert(user, "ПЗЗЗЗЗ")
-	desc = "[desc] Дисплей слегка мигает."
+	desc = "[desc] Дисплей слегка мерцает."
 	return TRUE
 
 /obj/item/clothing/glasses/hud/suicide_act(mob/living/user)
@@ -139,14 +139,14 @@
 
 /obj/item/clothing/glasses/hud/security
 	name = "HUD офицера"
-	desc = "Главный дисплей, который сканирует гуманоидов в поле зрения и предоставляет точные данные о состоянии их идентификатора и записях безопасности."
+	desc = "Головной дисплей, который сканирует гуманоидов в поле зрения и предоставляет точные данные о состоянии их идентификатора и записях безопасности."
 	icon_state = "securityhud"
 	hud_type = DATA_HUD_SECURITY_ADVANCED
 	hud_trait = TRAIT_SECURITY_HUD
 	glass_colour_type = /datum/client_colour/glass_colour/red
 
 /obj/item/clothing/glasses/hud/security/chameleon
-	name = "хамелеонный HUD офицера"
+	name = "HUD офицера"
 	desc = "Украденный HUD офицера, интегрированный с технологией хамелеона Синдиката. Обеспечивает защиту от вспышек."
 	flash_protect = FLASH_PROTECTION_FLASH
 	actions_types = list(/datum/action/item_action/chameleon/change/glasses/no_preset)

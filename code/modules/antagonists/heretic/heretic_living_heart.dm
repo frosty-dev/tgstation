@@ -67,7 +67,7 @@
  */
 /datum/action/cooldown/track_target
 	name = "Living Heartbeat"
-	desc = "LMB: Chose one of your sacrifice targets to track. RMB: Repeats last target you chose to track."
+	desc = "LMB: Chose one of your sacrifice targets to track. ПКМ: Repeats last target you chose to track."
 	check_flags = AB_CHECK_CONSCIOUS
 	background_icon_state = "bg_heretic"
 	button_icon = 'icons/obj/antags/eldritch.dmi'

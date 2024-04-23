@@ -2,8 +2,8 @@ GLOBAL_DATUM(ore_silo_default, /obj/machinery/ore_silo)
 GLOBAL_LIST_EMPTY(silo_access_logs)
 
 /obj/machinery/ore_silo
-	name = "ore silo"
-	desc = "An all-in-one bluespace storage and transmission system for the station's mineral distribution needs."
+	name = "ресурсный бункер"
+	desc = "Универсальная блюспейс система хранения и передачи ресурсов на нужды станции."
 	icon = 'icons/obj/machines/ore_silo.dmi'
 	icon_state = "silo"
 	density = TRUE
@@ -81,7 +81,7 @@ GLOBAL_LIST_EMPTY(silo_access_logs)
 	popup.open()
 
 /obj/machinery/ore_silo/proc/generate_ui()
-	var/list/ui = list("<head><title>Ore Silo</title></head><body><div class='statusDisplay'><h2>Stored Material:</h2>")
+	var/list/ui = list("<head><title>Ресурсный бункер</title></head><body><div class='statusDisplay'><h2>Хранимые материалы:</h2>")
 	var/any = FALSE
 	for(var/M in materials.materials)
 		var/datum/material/mat = M
@@ -90,28 +90,28 @@ GLOBAL_LIST_EMPTY(silo_access_logs)
 		var/ref = REF(M)
 		if (sheets)
 			if (sheets >= 1)
-				ui += "<a href='?src=[REF(src)];ejectsheet=[ref];eject_amt=1'>Eject</a>"
+				ui += "<a href='?src=[REF(src)];ejectsheet=[ref];eject_amt=1'>Изъять</a>"
 			else
-				ui += "<span class='linkOff'>Eject</span>"
+				ui += "<span class='linkOff'>Изъять</span>"
 			if (sheets >= 20)
 				ui += "<a href='?src=[REF(src)];ejectsheet=[ref];eject_amt=20'>20x</a>"
 			else
 				ui += "<span class='linkOff'>20x</span>"
-			ui += "<b>[mat.name]</b>: [sheets] sheets<br>"
+			ui += "<b>[mat.name]</b>: [sheets] лист[get_ending(sheets, list("", "а", "ов"))]<br>"
 			any = TRUE
 	if(!any)
-		ui += "Nothing!"
+		ui += "Пусто!"
 
-	ui += "</div><div class='statusDisplay'><h2>Connected Machines:</h2>"
+	ui += "</div><div class='statusDisplay'><h2>Подключенные машины:</h2>"
 	for(var/datum/component/remote_materials/mats as anything in ore_connected_machines)
 		var/atom/parent = mats.parent
-		ui += "<a href='?src=[REF(src)];remove=[REF(mats)]'>Remove</a>"
-		ui += "<a href='?src=[REF(src)];hold=[REF(mats)]'>[holds[mats] ? "Allow" : "Hold"]</a>"
+		ui += "<a href='?src=[REF(src)];remove=[REF(mats)]'>Отключить</a>"
+		ui += "<a href='?src=[REF(src)];hold=[REF(mats)]'>[holds[mats] ? "Разрешить" : "Запретить"]</a>"
 		ui += " <b>[parent.name]</b> in [get_area_name(parent, TRUE)]<br>"
 	if(!ore_connected_machines.len)
-		ui += "Nothing!"
+		ui += "Ничего!"
 
-	ui += "</div><div class='statusDisplay'><h2>Access Logs:</h2>"
+	ui += "</div><div class='statusDisplay'><h2>Логи:</h2>"
 	var/list/logs = GLOB.silo_access_logs[REF(src)]
 	var/len = LAZYLEN(logs)
 	var/num_pages = 1 + round((len - 1) / 30)
@@ -130,7 +130,7 @@ GLOBAL_LIST_EMPTY(silo_access_logs)
 		ui += "<li value=[len + 1 - i]>[entry.formatted]</li>"
 		any = TRUE
 	if (!any)
-		ui += "<li>Nothing!</li>"
+		ui += "<li>Пусто!</li>"
 
 	ui += "</ol></div>"
 	return ui.Join()
@@ -166,7 +166,7 @@ GLOBAL_LIST_EMPTY(silo_access_logs)
 	. = ..()
 	if (istype(I))
 		I.set_buffer(src)
-		balloon_alert(user, "saved to multitool buffer")
+		balloon_alert(user, "сохранено в буфер мультитула")
 		return TRUE
 
 /**
@@ -194,8 +194,7 @@ GLOBAL_LIST_EMPTY(silo_access_logs)
 
 /obj/machinery/ore_silo/examine(mob/user)
 	. = ..()
-	. += span_notice("[src] can be linked to techfabs, circuit printers and protolathes with a multitool.")
-
+	. += span_notice("[src] может быть подключен к техфабам, печатным платам и протолатам с помощью мультитула.")
 /datum/ore_silo_log
 	var/name  // for VV
 	var/formatted  // for display

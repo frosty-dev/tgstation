@@ -2074,7 +2074,7 @@
 
 			if (contextual_screentip_returns & CONTEXTUAL_SCREENTIP_SET)
 				var/screentip_images = active_hud.screentip_images
-				// LMB and RMB on one line...
+				// LMB and ПКМ on one line...
 				var/lmb_text = build_context(context, SCREENTIP_CONTEXT_LMB, screentip_images)
 				var/rmb_text = build_context(context, SCREENTIP_CONTEXT_RMB, screentip_images)
 
@@ -2085,7 +2085,7 @@
 				else if (rmb_text != "")
 					lmb_rmb_line = rmb_text
 
-				// Ctrl-LMB, Ctrl-RMB on one line...
+				// Ctrl-LMB, Ctrl-ПКМ on one line...
 				if (lmb_rmb_line != "")
 					lmb_rmb_line += "<br>"
 					extra_lines++
@@ -2097,7 +2097,7 @@
 						ctrl_lmb_ctrl_rmb_line += " | "
 					ctrl_lmb_ctrl_rmb_line += build_context(context, SCREENTIP_CONTEXT_CTRL_RMB, screentip_images)
 
-				// Alt-LMB, Alt-RMB on one line...
+				// Alt-LMB, Alt-ПКМ on one line...
 				if (ctrl_lmb_ctrl_rmb_line != "")
 					ctrl_lmb_ctrl_rmb_line += "<br>"
 					extra_lines++

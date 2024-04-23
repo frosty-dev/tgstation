@@ -4,7 +4,7 @@
 	lefthand_file = 'icons/mob/inhands/weapons/bows_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/bows_righthand.dmi'
 	name = "лук"
-	desc = "Кажется что это оружие находится не на своём месте и не в своё время, но оно, хотя бы, надёжно."
+	desc = "Кажется что это оружие находится не на своем месте и не в своё время, но оно, хотя бы, надёжно."
 	icon_state = "bow"
 	inhand_icon_state = "bow"
 	base_icon_state = "bow"

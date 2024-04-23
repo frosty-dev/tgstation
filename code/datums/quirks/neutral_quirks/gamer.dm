@@ -81,7 +81,7 @@
 /datum/quirk/gamer/proc/gamer_moment()
 	// It was a heated gamer moment...
 	var/mob/living/carbon/human/human_holder = quirk_holder
-	human_holder.say(";[pick("БЛЯТЬ", "СУКА", "ДЕРЬМО", "ПИЗДЕЦ", "ХУЕСОС", "МУДИЛА", "ПИДОРАС")]!!", forced = name)
+	human_holder.say(";[pick("БЛЯТЬ", "РАК ЕБАНЫЙ!", "СУКА", "ПИЗДЕЦ", "ДЕРЬМО", "ТВОЯ МАТЬ У МЕНЯ В ПОДВАЛЕ", "ХУЕСОС", "МУДИЛА", "НУБ, СУКА", "ПИДОРАС")]!!", forced = name)
 /datum/quirk/gamer/proc/enter_withdrawal()
 	var/mob/living/carbon/human/human_holder = quirk_holder
 	human_holder.add_mood_event("gamer_withdrawal", /datum/mood_event/gamer_withdrawal)

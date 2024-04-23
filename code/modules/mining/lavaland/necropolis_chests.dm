@@ -1,8 +1,8 @@
 //The chests dropped by tendrils and megafauna.
 
 /obj/structure/closet/crate/necropolis
-	name = "necropolis chest"
-	desc = "It's watching you closely."
+	name = "сундук некрополиса"
+	desc = "Кажется, что он за мной наблюдает."
 	icon_state = "necrocrate"
 	base_icon_state = "necrocrate"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
@@ -10,14 +10,12 @@
 	paint_jobs = null
 
 /obj/structure/closet/crate/necropolis/tendril
-	desc = "It's watching you suspiciously. You need a skeleton key to open it."
+	desc = "Он с подозрением наблюдает за вами."
 	integrity_failure = 0 //prevents bust_open from firing
 	/// var to check if it got opened by a key
 	var/spawned_loot = FALSE
 
 /obj/structure/closet/crate/necropolis/tendril/attackby(obj/item/item, mob/user, params)
-	if(!istype(item, /obj/item/skeleton_key) || spawned_loot)
-		return ..()
 	var/loot = rand(1,20)
 	var/mod
 	switch(loot)
@@ -76,7 +74,6 @@
 		CRASH("Failed to generate loot. loot number: [loot][mod ? "subloot: [mod]" : null]")
 	spawned_loot = TRUE
 	qdel(item)
-	to_chat(user, span_notice("You disable the magic lock, revealing the loot."))
 
 /obj/structure/closet/crate/necropolis/tendril/before_open(mob/living/user, force)
 	. = ..()
@@ -84,7 +81,7 @@
 		return FALSE
 
 	if(!broken && !force && !spawned_loot)
-		balloon_alert(user, "its locked!")
+		balloon_alert(user, "закрыт!")
 		return FALSE
 
 	return TRUE
@@ -92,7 +89,7 @@
 //Megafauna chests
 
 /obj/structure/closet/crate/necropolis/dragon
-	name = "dragon chest"
+	name = "сундук дракона"
 
 /obj/structure/closet/crate/necropolis/dragon/PopulateContents()
 	var/loot = rand(1,4)
@@ -107,15 +104,15 @@
 			new /obj/item/dragons_blood(src)
 
 /obj/structure/closet/crate/necropolis/dragon/crusher
-	name = "firey dragon chest"
+	name = "сундук огненного дракона"
 
 /obj/structure/closet/crate/necropolis/dragon/crusher/PopulateContents()
 	..()
 	new /obj/item/crusher_trophy/tail_spike(src)
 
 /obj/structure/closet/crate/necropolis/bubblegum
-	name = "\improper Ancient Sarcophagus"
-	desc = "Once guarded by the King of Demons, this sarcophagus contains the relics of an ancient soldier."
+	name = "древний саркофаг"
+	desc = "Этот саркофаг, некогда охраняемый королем ада, содержит реликвии древнего воина."
 	icon_state = "necro_bubblegum"
 	base_icon_state = "necro_bubblegum"
 	lid_icon_state = "necro_bubblegum_lid"
@@ -132,14 +129,14 @@
 			new /obj/item/soulscythe(src)
 
 /obj/structure/closet/crate/necropolis/bubblegum/crusher
-	name = "bloody bubblegum chest"
+	name = "кровавый древний саркофаг"
 
 /obj/structure/closet/crate/necropolis/bubblegum/crusher/PopulateContents()
 	..()
 	new /obj/item/crusher_trophy/demon_claws(src)
 
 /obj/structure/closet/crate/necropolis/colossus
-	name = "colossus chest"
+	name = "сундук колосса"
 
 /obj/structure/closet/crate/necropolis/colossus/bullet_act(obj/projectile/P)
 	if(istype(P, /obj/projectile/colossus))
@@ -153,7 +150,7 @@
 	new /obj/item/organ/internal/vocal_cords/colossus(src)
 
 /obj/structure/closet/crate/necropolis/colossus/crusher
-	name = "angelic colossus chest"
+	name = "сундук колосса"
 
 /obj/structure/closet/crate/necropolis/colossus/crusher/PopulateContents()
 	..()
@@ -162,7 +159,7 @@
 //Other chests and minor stuff
 
 /obj/structure/closet/crate/necropolis/puzzle
-	name = "puzzling chest"
+	name = "сундук некрополиса"
 
 /obj/structure/closet/crate/necropolis/puzzle/PopulateContents()
 	var/loot = rand(1,3)
@@ -173,10 +170,3 @@
 			new /obj/item/wisp_lantern(src)
 		if(3)
 			new /obj/item/prisoncube(src)
-
-/obj/item/skeleton_key
-	name = "skeleton key"
-	desc = "An artifact usually found in the hands of the natives of lavaland, which NT now holds a monopoly on."
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
-	icon_state = "skeleton_key"
-	w_class = WEIGHT_CLASS_SMALL

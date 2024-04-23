@@ -1,6 +1,6 @@
 /datum/quirk/mute
 	name = "Немой"
-	desc = "По какой-то причине вы можете разговаривать."
+	desc = "По неведомой причине не могу говорить."
 	icon = FA_ICON_VOLUME_XMARK
 	value = -4
 	mob_trait = TRAIT_MUTE

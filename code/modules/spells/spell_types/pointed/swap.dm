@@ -1,8 +1,8 @@
 /datum/action/cooldown/spell/pointed/swap
 	name = "Swap"
 	desc = "This spell allows you to swap locations with any living being. \
-		RMB: Mark a secondary swap target. This secondary swap target will be discarded once you swap, \
-		or else you can click yourself with the RMB to discard your secondary target."
+		ПКМ: Mark a secondary swap target. This secondary swap target will be discarded once you swap, \
+		or else you can click yourself with the ПКМ to discard your secondary target."
 	button_icon_state = "swap"
 	ranged_mousepointer = 'icons/effects/mouse_pointers/swap_target.dmi'
 	active_overlay_icon_state = "bg_spell_border_active_blue"

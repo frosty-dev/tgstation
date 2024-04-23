@@ -165,7 +165,7 @@
 		message = replacetext(message," сб "," мусора ")
 		message = replacetext(message," глава "," бугор ")
 		message = replacetext(message," завхоз "," жид ")
-		message = replacetext(message," шахтер "," мужик ")
+		message = replacetext(message," шахтёр "," мужик ")
 		message = replacetext(message," грузчик "," батрак ")
 		message = replacetext(message," оружие "," валына ")
 		message = replacetext(message," лазер "," весло ")

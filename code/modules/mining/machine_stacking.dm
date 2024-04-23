@@ -1,10 +1,10 @@
 /**********************Mineral stacking unit console**************************/
 
 /obj/machinery/mineral/stacking_unit_console
-	name = "stacking machine console"
+	name = "консоль штабелирующей машины"
+	desc = "Управляет штабелирующей машиной... в теории."
 	icon = 'icons/obj/machines/mining_machines.dmi'
 	icon_state = "console"
-	desc = "Controls a stacking machine... in theory."
 	density = FALSE
 	circuit = /obj/item/circuitboard/machine/stacking_unit_console
 	/// Connected stacking machine
@@ -80,10 +80,10 @@
 
 
 /obj/machinery/mineral/stacking_machine
-	name = "stacking machine"
+	name = "штабелирующая машина"
+	desc = "Машина, которая автоматически упаковывает проезжающие мимо материалы. Управляется консолью."
 	icon = 'icons/obj/machines/mining_machines.dmi'
 	icon_state = "stacker"
-	desc = "A machine that automatically stacks acquired materials. Controlled by a nearby console."
 	density = TRUE
 	circuit = /obj/item/circuitboard/machine/stacking_machine
 	input_dir = EAST
@@ -126,7 +126,7 @@
 		if(istype(M.buffer, /obj/machinery/mineral/stacking_unit_console))
 			console = M.buffer
 			console.machine = src
-			to_chat(user, span_notice("You link [src] to the console in [M]'s buffer."))
+			to_chat(user, span_notice("Подключаю [src] к консоли в буфере [M]."))
 			return TRUE
 
 /obj/machinery/mineral/stacking_machine/proc/rotate(input)

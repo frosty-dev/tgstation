@@ -1,7 +1,7 @@
 
 /obj/item/organ/internal/cyberimp
-	name = "cybernetic implant"
-	desc = "A state-of-the-art implant that improves a baseline's functionality."
+	name = "кибернетический имплант"
+	desc = "Ультрасовременный имплант, улучшающий функциональность базовой линии."
 	visual = FALSE
 	organ_flags = ORGAN_ROBOTIC
 	failing_desc = "seems to be broken."
@@ -20,8 +20,8 @@
 //[[[[BRAIN]]]]
 
 /obj/item/organ/internal/cyberimp/brain
-	name = "cybernetic brain implant"
-	desc = "Injectors of extra sub-routines for the brain."
+	name = "кибернетический мозговой имплант"
+	desc = "Инжекторы дополнительных подпрограмм для мозга."
 	icon_state = "brain_implant"
 	implant_overlay = "brain_implant_overlay"
 	zone = BODY_ZONE_HEAD
@@ -33,12 +33,12 @@
 		return
 	var/stun_amount = 200/severity
 	owner.Stun(stun_amount)
-	to_chat(owner, span_warning("Your body seizes up!"))
+	to_chat(owner, span_warning("Моё тело обездвижено!"))
 
 
 /obj/item/organ/internal/cyberimp/brain/anti_drop
-	name = "anti-drop implant"
-	desc = "This cybernetic brain implant will allow you to force your hand muscles to contract, preventing item dropping. Twitch ear to toggle."
+	name = "имплант крепкого хвата"
+	desc = "Этот кибернетический мозговой имплант заставит мышцы ваших рук сократиться, предотвращая падение предметов. Подергайте ухом, чтобы переключиться."
 	var/active = FALSE
 	var/list/stored_items = list()
 	implant_color = "#DE7E00"
@@ -50,19 +50,19 @@
 	if(active)
 		var/list/hold_list = owner.get_empty_held_indexes()
 		if(LAZYLEN(hold_list) == owner.held_items.len)
-			to_chat(owner, span_notice("You are not holding any items, your hands relax..."))
+			to_chat(owner, span_notice("Ничего не держу, руки расслаблены..."))
 			active = FALSE
 			return
 		for(var/obj/item/held_item as anything in owner.held_items)
 			if(!held_item)
 				continue
 			stored_items += held_item
-			to_chat(owner, span_notice("Your [owner.get_held_index_name(owner.get_held_index_of_item(held_item))]'s grip tightens."))
+			to_chat(owner, span_notice("Моя [owner.get_held_index_name(owner.get_held_index_of_item(held_item))] усиливает захват."))
 			ADD_TRAIT(held_item, TRAIT_NODROP, IMPLANT_TRAIT)
 			RegisterSignal(held_item, COMSIG_ITEM_DROPPED, PROC_REF(on_held_item_dropped))
 	else
 		release_items()
-		to_chat(owner, span_notice("Your hands relax..."))
+		to_chat(owner, span_notice("Руки расслабляются..."))
 
 
 /obj/item/organ/internal/cyberimp/brain/anti_drop/emp_act(severity)
@@ -76,7 +76,7 @@
 	for(var/obj/item/stored_item as anything in stored_items)
 		throw_target = pick(oview(range))
 		stored_item.throw_at(throw_target, range, 2)
-		to_chat(owner, span_warning("Your [owner.get_held_index_name(owner.get_held_index_of_item(stored_item))] spasms and throws the [stored_item.name]!"))
+		to_chat(owner, span_warning("Моя [owner.get_held_index_name(owner.get_held_index_of_item(stored_item))] спазмирует и [stored_item.name] вылетает из неё!"))
 	stored_items = list()
 
 
@@ -99,8 +99,8 @@
 	stored_items -= source
 
 /obj/item/organ/internal/cyberimp/brain/anti_stun
-	name = "CNS Rebooter implant"
-	desc = "This implant will automatically give you back control over your central nervous system, reducing downtime when stunned."
+	name = "имплант перезагрузки ЦНС"
+	desc = "Этот имплант автоматически вернет вам контроль над центральной нервной системой, сократив время паралича при оглушении."
 	implant_color = "#FFFF00"
 	slot = ORGAN_SLOT_BRAIN_ANTISTUN
 
@@ -148,8 +148,8 @@
 	zone = BODY_ZONE_PRECISE_MOUTH
 
 /obj/item/organ/internal/cyberimp/mouth/breathing_tube
-	name = "breathing tube implant"
-	desc = "This simple implant adds an internals connector to your back, allowing you to use internals without a mask and protecting you from being choked."
+	name = "имплант дыхательной трубки"
+	desc = "Этот простой имплант добавляет к вашей спине внутренний соединитель, позволяющий использовать внутренние компоненты без маски и защищающий вас от удушья."
 	icon_state = "implant_mask"
 	slot = ORGAN_SLOT_BREATHING_TUBE
 	w_class = WEIGHT_CLASS_TINY
@@ -159,14 +159,14 @@
 	if(!owner || . & EMP_PROTECT_SELF)
 		return
 	if(prob(60/severity))
-		to_chat(owner, span_warning("Your breathing tube suddenly closes!"))
+		to_chat(owner, span_warning("НЕ МОГУ ДЫШАТЬ!"))
 		owner.losebreath += 2
 
 //BOX O' IMPLANTS
 
 /obj/item/storage/box/cyber_implants
-	name = "boxed cybernetic implants"
-	desc = "A sleek, sturdy box."
+	name = "кибернетические импланты"
+	desc = "Элегантная и прочная коробка."
 	icon_state = "cyber_implants"
 
 /obj/item/storage/box/cyber_implants/PopulateContents()

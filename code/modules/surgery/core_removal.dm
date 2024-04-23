@@ -1,5 +1,5 @@
 /datum/surgery/core_removal
-	name = "Core removal"
+	name = "Извлечь ядро"
 	target_mobtypes = list(/mob/living/simple_animal/slime)
 	surgery_flags = SURGERY_IGNORE_CLOTHES
 	possible_locs = list(
@@ -22,7 +22,7 @@
 
 //extract brain
 /datum/surgery_step/extract_core
-	name = "extract core (hemostat/crowbar)"
+	name = "извлеките ядро (зажим/лом)"
 	implements = list(
 		TOOL_HEMOSTAT = 100,
 		TOOL_CROWBAR = 100)

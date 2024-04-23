@@ -20,6 +20,7 @@
 
 		if(.) //not dead
 			handle_blood(seconds_per_tick, times_fired)
+			handle_hydration(seconds_per_tick, times_fired)
 
 		if(stat != DEAD)
 			handle_brain_damage(seconds_per_tick, times_fired)
@@ -447,6 +448,19 @@
 
 /mob/living/carbon/proc/handle_blood(seconds_per_tick, times_fired)
 	return
+
+/mob/living/carbon/proc/handle_hydration(delta_time, times_fired)
+	return
+
+/mob/living/carbon/human/handle_hydration(delta_time, times_fired)
+
+	if(HAS_TRAIT(src, TRAIT_NOHYDRATION))
+		hydration = HYDRATION_LEVEL_START_MIN
+		return
+	if(hydration < HYDRATION_LEVEL_MIN_CAP)
+		hydration = HYDRATION_LEVEL_MIN_CAP
+	hydration -= HYDRATION_LOSS_PER_LIFE
+
 
 /mob/living/carbon/proc/handle_bodyparts(seconds_per_tick, times_fired)
 	for(var/obj/item/bodypart/limb as anything in bodyparts)
