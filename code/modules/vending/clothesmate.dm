@@ -208,6 +208,9 @@
 		/obj/item/clothing/under/costume/swagoutfit = 1,
 		/obj/item/clothing/shoes/swagshoes = 1,
 		/obj/item/instrument/piano_synth/headphones/spacepods = 1,
+		/obj/item/clothing/under/chronos = 3,
+		/obj/item/clothing/head/beret/chronos = 3,
+		/obj/item/clothing/neck/cape/chronos = 3,
 	)
 	refill_canister = /obj/item/vending_refill/clothing
 	default_price = PAYCHECK_CREW * 0.7 //Default of
