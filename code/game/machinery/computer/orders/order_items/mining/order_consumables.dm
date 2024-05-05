@@ -46,3 +46,15 @@
 	item_path = /obj/item/stack/spacecash/c1000
 	desc = "A stack of space cash worth 1000 credits."
 	cost_per_order = 2000
+
+/datum/orderable_item/consumables/mre
+	item_path = /obj/item/storage/mre
+	cost_per_order = 500
+
+/datum/orderable_item/consumables/mre_vegan
+	item_path = /obj/item/storage/mre/vegan
+	cost_per_order = 500
+
+/datum/orderable_item/consumables/mre_protein
+	item_path = /obj/item/storage/mre/protein
+	cost_per_order = 500

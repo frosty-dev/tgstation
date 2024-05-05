@@ -5950,4 +5950,5 @@
 #include "white\valtos\code\exrp\interaction_whitelist.dm"
 #include "white\valtos\code\exrp\smetanka.dm"
 #include "white\valtos\code\modules\reagents\chemistry\reagents\food_reagents.dm"
+#include "white\valtos\code\unsorted\mre.dm"
 // END_INCLUDE
