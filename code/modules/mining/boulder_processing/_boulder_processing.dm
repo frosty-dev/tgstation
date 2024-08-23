@@ -101,25 +101,22 @@
 	icon_state ="[initial(icon_state)][suffix]"
 
 /obj/machinery/bouldertech/wrench_act(mob/living/user, obj/item/tool)
-	. = ITEM_INTERACT_BLOCKING
 	if(default_unfasten_wrench(user, tool, time = 1.5 SECONDS) == SUCCESSFUL_UNFASTEN)
 		if(anchored)
 			begin_processing()
 		else
 			end_processing()
 		update_appearance(UPDATE_ICON_STATE)
-		return ITEM_INTERACT_SUCCESS
+		return
 
 /obj/machinery/bouldertech/screwdriver_act(mob/living/user, obj/item/tool)
-	. = ITEM_INTERACT_BLOCKING
 	if(default_deconstruction_screwdriver(user, "[initial(icon_state)]-off", initial(icon_state), tool))
 		update_appearance(UPDATE_ICON_STATE)
-		return ITEM_INTERACT_SUCCESS
+		return
 
 /obj/machinery/bouldertech/crowbar_act(mob/living/user, obj/item/tool)
-	. = ITEM_INTERACT_BLOCKING
 	if(default_deconstruction_crowbar(tool))
-		return ITEM_INTERACT_SUCCESS
+		return
 
 /obj/machinery/bouldertech/CanAllowThrough(atom/movable/mover, border_dir)
 	if(!anchored)

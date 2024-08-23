@@ -52,7 +52,6 @@
 	name = "boulder smelter"
 	desc = "BS for short. Accept boulders and refines metallic ores into sheets. Can be upgraded with stock parts or through gas inputs."
 	icon_state = "smelter"
-	light_system = OVERLAY_LIGHT
 	light_range = 2
 	light_power = 3
 	light_color = "#ffaf55"

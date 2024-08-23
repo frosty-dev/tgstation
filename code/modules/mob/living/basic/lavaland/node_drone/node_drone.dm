@@ -115,7 +115,7 @@
 	blackboard = list(
 		BB_BASIC_MOB_FLEEING = FALSE, // Will flee when the vent lies undefended.
 		BB_CURRENT_HUNTING_TARGET = null, // Hunts for vents.
-		BB_TARGETING_STRATEGY = /datum/targeting_strategy/basic, // Use this to find vents to run away from
+		BB_TARGETTING_DATUM = /datum/targetting_datum/basic, // Use this to find vents to run away from
 	)
 
 	ai_traits = STOP_MOVING_WHEN_PULLED

@@ -170,7 +170,7 @@
 			CRASH("No minerals left to pick from! We may have spawned too many ore vents in init, or added too many ores to the existing vents.")
 		var/datum/material/material
 		if(map_loading)
-			material = pick_weight(SSore_generation.ore_vent_minerals)
+			material = pick(GLOB.ore_vent_minerals_lavaland)
 		if(is_type_in_list(mineral_breakdown, material))
 			continue
 		if(map_loading)
@@ -178,7 +178,7 @@
 			if(SSore_generation.ore_vent_minerals[material] <= 0)
 				SSore_generation.ore_vent_minerals -= material
 		else
-			material = pick_weight(SSore_generation.ore_vent_minerals_default)
+			material = pick(GLOB.ore_vent_minerals_lavaland)
 		mineral_breakdown[material] = rand(1, 4)
 
 

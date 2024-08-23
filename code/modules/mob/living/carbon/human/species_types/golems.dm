@@ -16,7 +16,6 @@
 		TRAIT_PIERCEIMMUNE,
 		TRAIT_RADIMMUNE,
 		TRAIT_SNOWSTORM_IMMUNE, // Shared with plasma river... but I guess if you can survive a plasma river a blizzard isn't a big deal
-		TRAIT_UNHUSKABLE,
 		TRAIT_BOULDER_BREAKER,
 	)
 	mutantheart = null
